@@ -1,0 +1,15 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.321332'
+date: '2025-02-26T13:55:56.519675'
+key: IG-TI22824X01
+modified: '2025-02-26T13:55:56.519674'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS für Requests und Responses an den Schnittstellen
+  den Content-Type <code>application/fhir+json</code> unterstützen.
+title: Unterstützung von JSON-Content-Types für FHIR-Data-Schnittstellen
+version: 1

@@ -1,0 +1,18 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.321344'
+date: '2025-03-12T12:47:19.484186'
+key: IG-TI90315JPK
+modified: '2025-03-12T12:47:19.484185'
+release_status: MODIFIED
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Beim Erzeugen von FHIR-Ressourcen im FHIR Data Service MUSS dieser jede zu speichernde
+  Ressource gegen das dazugehörige aktuelle Profil validieren. Die Information, gegen
+  welches Profil in welcher Version geprüft wurde, MUSS der FHIR Data Service in der
+  jeweiligen Ressource in <i>Meta.profile</i> speichern.
+title: Speichern der Profilversion
+version: 2

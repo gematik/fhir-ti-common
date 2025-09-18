@@ -1,0 +1,37 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.318535'
+date: '2025-02-26T13:55:56.516500'
+key: IG-TI07252NTV
+modified: '2025-02-26T13:55:56.516495'
+release_status: NEW
+source: input/pagecontent/query-api-paging.md
+status: ACTIVE
+text: "Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und in\
+  \ seiner Antwort Navigationsinformationen in Ergebnisseiten zur Verfügung stellen.\
+  \ Um die Paginierungsfunktion zu implementieren, werden die URL-Parameter <code>_count</code>\
+  \ und <code>_offset</code> verwendet. Der Parameter <code>_count</code> bestimmt\
+  \ die Anzahl der Einträge pro <i>Seite</i> (page), während <code>_offset</code>\
+  \ das Startelement der Seite angibt. Zusätzlich entscheidet der <code>_total</code>-Parameter,\
+  \ ob die Gesamtanzahl der Einträge in der Antwort enthalten sein soll.\n  <br/><br/>\n\
+  <figure>\n<table style=\"width: 100%\">\n<thead>\n<tr>\n<th>URL-Parameter</th>\n\
+  <th>Beschreibung</th>\n<th>Standardwert</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>_count</code></td>\n\
+  <td>Das Client-System KANN die maximale Anzahl von Elementen festlegen, die auf\
+  \ einer <i>Seite</i> (page) der Antwort enthalten sein soll. Das bedeutet, dass\
+  \ der Audit Event Service die Ergebnismenge auf diese maximal angegebene Anzahl\
+  \ beschränkt.</td>\n<td>25</td>\n</tr>\n<tr>\n<td><code>_offset</code></td>\n<td>Dieser\
+  \ Parameter gibt den (zero-based) Offset des ersten zurückgegebenen Elements in\
+  \ der Sammlung an.</td>\n<td>0</td>\n</tr>\n<tr>\n<td><code>_total</code></td>\n\
+  <td>Dieser Parameter steuert, ob und wie der Audit Event Service die Gesamtanzahl\
+  \ der Suchergebnisse zurückgibt. Folgende Werte können eingestellt werden: <code>none</code>,\
+  \ <code>estimate</code>, <code>accurate</code>.</td>\n<td>-</td>\n</tr>\n</tbody>\n\
+  </table>\n<figcaption><strong>Tabelle:</strong> URL-Parameter für Paginierungsfunktion</figcaption>\n\
+  </figure>\n<br/>\n  Werte für <code>_total</code>:\n  <br/><br/>\n<ul>\n<li><code>none</code>\
+  \ (Standardwert): Die Gesamtanzahl der Suchtreffer wird nicht angezeigt.</li>\n\
+  <li><code>estimate</code>: Die ungefähre Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n\
+  <li><code>accurate</code>: Die genaue Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n\
+  </ul>"
+title: Unterstützung URL-Parameter für Paginierungsfunktion
+version: 1

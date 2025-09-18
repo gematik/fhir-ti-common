@@ -1,0 +1,14 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-07T10:35:21.322061'
+date: '2025-03-07T10:35:21.322064'
+key: IG-TI17755AMW
+modified: '2025-03-07T10:35:21.322062'
+release_status: STABLE
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS alle iterativ verknüpften rückreferenzierenden Ressourcen
+  zurückgeben, wenn <i>_revinclude:iterate</i> verwendet wird.
+title: Unterstützung von _revinclude:iterate
+version: 1

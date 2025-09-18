@@ -1,0 +1,16 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-12T14:30:33.929154'
+date: '2025-09-10T06:49:35.494683'
+deleted: '2025-09-10T06:49:35.494682'
+key: IG-TI82011VRG
+modified: '2025-03-12T14:30:33.929156'
+release_status: DELETED
+source: input/pagecontent/operation-api.md
+status: RETIRED
+text: Der FHIR Data Service MUSS Schreiboperationen ablehnen, wenn die Versionsnummer
+  der zu aktualisierenden Ressourceninstanz von der Versionsnummer abweicht, mit der
+  die Ressourceninstanz im Operationsaufruf adressiert wird.
+title: Versionsprüfung bei Schreiboperationen im FHIR Data Service
+version: 1

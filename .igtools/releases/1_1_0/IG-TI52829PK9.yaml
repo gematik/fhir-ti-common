@@ -1,0 +1,16 @@
+actor:
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+created: '2025-03-10T12:54:11.421388'
+date: '2025-03-12T12:47:19.481886'
+key: IG-TI52829PK9
+modified: '2025-03-12T12:47:19.481885'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS sicherstellen, dass das Element <i>Resource.meta.versionId</i>
+  ausschließlich numerische Werte enthält. Alphanumerische Zeichen, Symbole oder Sonderzeichen
+  dürfen nicht verwendet werden.
+title: Numerisches Format der Resource.meta.versionId
+version: 1

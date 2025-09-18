@@ -1,0 +1,17 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-07T10:54:47.698334'
+date: '2025-03-07T10:54:47.698337'
+key: IG-TI08134XQ4
+modified: '2025-03-07T10:54:47.698336'
+release_status: STABLE
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS für jede zurückgegebene Ressource die zugehörigen
+  Ressourcen gemäß den Verknüpfungskriterien ermitteln und mit <i>entry.search.mode
+  = "include"</i> in die Antwort aufnehmen. Falls eine referenzierte Ressource nicht
+  existiert, nicht gefunden wird oder nicht abrufbar ist, darf kein Fehler zurückgegeben
+  werden.
+title: Verarbeitung von referenzierten Ressourcen in Include-Suchen
+version: 1

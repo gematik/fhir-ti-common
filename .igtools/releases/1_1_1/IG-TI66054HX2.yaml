@@ -1,0 +1,14 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-10T12:54:11.422849'
+date: '2025-03-10T12:54:11.422850'
+key: IG-TI66054HX2
+modified: '2025-03-10T12:54:11.422850'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS eine als gelöscht markierte Instanz weiterhin in
+  der Versionshistorie speichern, anstatt sie physisch zu entfernen.
+title: Kennzeichnung gelöschter Instanzen statt physischer Entfernung
+version: 1

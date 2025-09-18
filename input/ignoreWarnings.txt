@@ -1,0 +1,51 @@
+== Suppressed Messages ==
+
+# We only want to use narratives if needed
+Unable to find ImplementationGuide.definition.resource.description for the resource Patient/ExampleTIPatient. Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+%Patient/ExampleTIPatient%
+Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+%dom-6%
+
+The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+
+An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+
+The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+
+The html source does not contain the publish box; this is recommended for publishing support (see note at http://wiki.hl7.org/index.php?title=FHIR_Implementation_Guide_Publishing_Requirements#HL7_HTML_Standards_considerations). Note that this is mandatory for HL7 specifications, and on the ci-build, but in other cases it's still recommended (this is only reported once, but applies for all pages)
+
+# Ignoring Warnings:
+%http://hl7.org/fhir/StructureDefinition/humanname-own-name%
+%http://hl7.org/fhir/StructureDefinition/humanname-own-prefix%
+%http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier%
+%http://hl7.org/fhir/ValueSet/name-part-qualifier%
+%http://terminology.hl7.org/CodeSystem/operation-outcome%
+%Implementation Guide contains no examples%
+%Bundle/example-history-bundle%
+%draft CodeSystem http://terminology.hl7.org/CodeSystem/operation-outcome%
+%sollte nicht mit Leerzeichen%
+
+# Ignoring Warnings: We are using a custom template of our own
+%publish box%
+
+# Deprecated information
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+%http://hl7.org/fhir/StructureDefinition/regex%
+%'pattern' is deprecated in R5%
+
+# Ignore Notice: Potential Embedded HTML Warning
+The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+%HTML-Tags%
+
+
+# Not resolvable
+%epa4all/epa/audit/%
+%/epa/audit/api/v1/fhir/%
+%epa4all/epa/patient/%
+%/epa/patient/api/v1/fhir/%
+%https://gematik.de/fhir/epa-medication/sid/%
+%https://gematik.de/fhir/sid/%
+%https://gematik.de/fhir/sid/telematik-id%
+%de.basisprofil.r4%
+%Patient/e6442a99-521b-482c-b62b-b0f809d4e951/_history/%
+

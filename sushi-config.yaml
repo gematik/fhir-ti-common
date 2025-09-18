@@ -1,0 +1,121 @@
+id: de.gematik.ti
+canonical: https://gematik.de/fhir/ti
+
+name: TI_Common
+title: "Telematikinfrastruktur (TI) Common"
+jurisdiction: "urn:iso:std:iso:3166#DE"
+license: Apache-2.0
+
+experimental: false
+status: active # draft | active | retired | unknown
+version: 1.1.1
+date: 2025-09-12
+
+copyrightYear: 2025+
+#Flip releaseLabel to 'release' for publication. Flip to 'ci-build' for CI
+releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+
+fhirVersion: 4.0.1
+
+publisher:
+  name: gematik GmbH
+  url: https://www.gematik.de
+  email: patientteam [ at ] gematik.de
+
+dependencies:
+  de.basisprofil.r4: 1.5.4
+  de.gematik.terminology: 1.0.7
+
+# FSHOnly: true
+
+pages:
+  index.md:
+    title: Home
+  general-principles.md:
+    title: "Generelle Prinzipien"
+  query-api-search.md:
+    title: "Query API: Allgemeine Anforderungen Suche und Sortierung"
+  query-api-paging.md:
+    title: "Query API: Allgemeine Anforderungen Paginierung"
+  fhir-format.md:
+    title: "FHIR-Formatserialisierung"
+  artifacts.md:
+    title: "FHIR-Artefakte"
+  referenced.md:
+    title: "Referenzen"
+  downloads.md:
+    title: "Downloads"
+  release-notes.md:
+    title: "Release Notes"
+  spec-sheet.md:
+    title: "Steckbriefe"
+    actor-epa-medication.md:
+      title: "Steckbrief: ePA Medication Service"
+    actor-epa-audit.md:
+      title: "Steckbrief: ePA Audit Event Service"
+    actor-epa-patient.md:
+      title: "Steckbrief: ePA Patient Service"
+    actor-epa-mhd.md:
+      title: "Steckbrief: ePA MHD Service"
+    actor-epa-client.md:
+      title: "Steckbrief: ePA PS / ePA-Client-Systeme / ePA-FdV"
+    actor-vsdm.md:
+      title: "Steckbrief: VSDM 2.0"
+  license.md:
+    title: "Apache License"
+
+
+menu:
+  Home: index.html
+  Generelle Prinzipien: general-principles.html
+  Schnittstellen:
+    "Query API: Paginierung": query-api-paging.html
+    "Query API: Suche / Sortierung": query-api-search.html
+    FHIR-Formatserialisierung: fhir-format.html
+  FHIR-Artefakte: artifacts.html
+  Anhänge:
+    Referenzen: referenced.html
+    Downloads: downloads.html
+    Release Notes: release-notes.html
+    Steckbriefe: spec-sheet.html
+
+# https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
+parameters:
+  shownav: true
+  apply-version: false
+  default-version: true
+  apply-publisher: false
+  default-publisher: true
+  apply-contact: false
+  default-contact: true
+  no-usage-check: true
+  excludettl: true
+  bundle-references-resolve: false
+  no-narrative:
+    # "StructureDefinition/*" doesn't seem to work anymore
+    # - "StructureDefinition/*"
+    - AuditEvent/*
+    - Bundle/*
+    - OperationOutcome/*
+    - Patient/*
+  path-resource:
+    - fsh-generated/resources
+    - extracted/resources
+  path-pages:
+    - input/intro-notes
+  no-validate:
+    - MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43
+    - Bundle/example-history-bundle
+
+instanceOptions:
+  # When set to true, slices must be referred to by name and not only by a numeric index in order to be used
+  # in an Instance's assignment rule. All slices appear in the order in which they are specified in FSH rules.
+  # While SUSHI defaults to false for legacy reasons, manualSliceOrding is recommended for new projects.
+  manualSliceOrdering: true # true | false
+  # Determines for which types of Instances SUSHI will automatically set meta.profile
+  # if InstanceOf references a profile:
+  # setMetaProfile: always # always | never | inline-only | standalone-only
+  #
+  # Determines for which types of Instances SUSHI will automatically set id
+  # if InstanceOf references a profile:
+  # setId: always # always | standalone-only

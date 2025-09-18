@@ -1,0 +1,20 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-10T12:54:11.423477'
+date: '2025-03-10T12:54:11.423479'
+key: IG-TI23978E7A
+modified: '2025-03-10T12:54:11.423479'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gelöschte\
+  \ Versionen einer FHIR-Instanz dokumentieren.\n    <br/><br/>\n    <ul>\n      \
+  \  <li>Das <i>entry.request</i>-Element MUSS die Methode (<i>method = DELETE</i>)\
+  \ und die URL (<i>url</i>) enthalten.</li>\n        <li>Das <i>entry.response</i>-Element\
+  \ MUSS den Status (status = 200 OK) sowie das Löschdatum (<i>lastModified</i>) enthalten.</li>\n\
+  \        <li>Das <i>entry.resource</i>-Element DARF für die gelöschte Version NICHT\
+  \ enthalten sein</li>\n    </ul>"
+title: Bundle.entry.request und Bundle.entry.response innerhalb des _history-Bundles
+  bei gelöschten FHIR-Instanzen
+version: 1

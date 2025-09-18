@@ -1,0 +1,21 @@
+actor:
+- EPA-PS
+- EPA-FdV
+- EPA-CS-KTR
+- EPA-CS-Ombudsstelle
+conformance: SHALL
+created: '2025-02-26T10:59:21.321313'
+date: '2025-03-17T13:35:52.637536'
+key: IG-TI06089XAH
+modified: '2025-03-17T13:35:52.637533'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer
+  Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System
+  implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für
+  die menschliche Nutzung anzeigen. Es muss dabei nicht jeden Wert genauso darstellen,
+  wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen
+  ausblenden.
+title: Anzeige für Must Support
+version: 1

@@ -1,0 +1,14 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.321321'
+date: '2025-02-26T13:55:56.519663'
+key: IG-TI59271UPX
+modified: '2025-02-26T13:55:56.519662'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS das FHIR-Format in [FHIR JSON] verarbeiten können.
+title: FHIR-Formatunterstützung JSON
+version: 1

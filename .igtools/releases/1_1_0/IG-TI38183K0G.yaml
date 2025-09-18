@@ -1,0 +1,15 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.315216'
+date: '2025-05-27T09:33:08.776797'
+key: IG-TI38183K0G
+modified: '2025-05-27T09:33:08.776795'
+release_status: MODIFIED
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS die <i>_include</i>-Suche gemäß der [FHIR Search
+  Include] unterstützen, sodass referenzierte Ressourcen innerhalb der Suchergebnisse
+  automatisch mit einbezogen werden können.
+title: Unterstützung der _include-Suche im FHIR Data Service gemäß FHIR
+version: 2

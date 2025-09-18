@@ -1,0 +1,19 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+- EPA-MHD-Service
+- EPA-Patient-Service
+conformance: SHALL
+created: '2025-08-19T11:56:04.108952'
+date: '2025-08-19T11:56:04.108962'
+key: IG-TI97619U65
+modified: '2025-08-19T11:56:04.108960'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS das Registrieren und Speichern von neuen Daten ablehnen
+  und mit dem Fehler <i>SVC_INACTIVE_CODE</i> quittieren, falls ein Code den Status
+  <i>inactive</i> besitzt. Unter <i>OperationOutcome.issue.diagnostics</i> MUSS der
+  FHIR Data Service angeben, welcher Code nicht mehr unterstützt wird.
+title: Keine Registrierung bei Nutzung inaktiver Codes
+version: 1

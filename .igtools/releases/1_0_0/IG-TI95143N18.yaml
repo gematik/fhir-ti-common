@@ -1,0 +1,17 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.315207'
+date: '2025-02-26T13:55:56.513463'
+key: IG-TI95143N18
+modified: '2025-02-26T13:55:56.513461'
+release_status: NEW
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen wie "literal"
+  Referenzen in der Form [Resourcetyp]/[ResourceId] NICHT im Feld <i>Bundle.entry.fullUrl</i>
+  verwendet werden. Alle Verweise auf Ressourcen innerhalb des Aktensystems MÜSSEN
+  entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.
+title: Formatierung von Referenzen im fullUrl-Feld
+version: 1

@@ -1,0 +1,24 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "468ca07b-7d63-453d-a738-0c35cb9402aa",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+    ]
+  },
+  "issue": [
+    {
+      "severity": "information",
+      "code": "informational",
+      "details": {
+        "coding": [
+          {
+            "code": "OPERATION_SUCCESS",
+            "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
+            "display": "Operation Successfully Completed"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+#by default, everything is included
+#if some include statements are added, we will exclude everything by default
+#Simplifier imports only xml, json, images, css, yaml and markdown file types
+
+src/de.gematik.ti/fsh-generated/resources/**
+!src/de.gematik.ti/fsh-generated/resources/ImplementationGuide*
+src/de.gematik.ti/package.json
+
+# guides/patient-information-service/**
+# guides/audit-event-service/**

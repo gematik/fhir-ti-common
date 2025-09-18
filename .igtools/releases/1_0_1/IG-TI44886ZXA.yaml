@@ -1,0 +1,15 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.315223'
+date: '2025-02-26T13:55:56.513504'
+key: IG-TI44886ZXA
+modified: '2025-02-26T13:55:56.513503'
+release_status: STABLE
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Servic MUSS die _revinclude-Suche gemäß der [FHIR Search Revinclude]
+  unterstützen, sodass Ressourcen, die auf die gesuchten Ressourcen verweisen, innerhalb
+  der Suchergebnisse automatisch mit einbezogen werden können.
+title: Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR
+version: 1

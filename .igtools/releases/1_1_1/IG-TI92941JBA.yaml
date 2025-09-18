@@ -1,0 +1,16 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-07T11:05:29.317204'
+date: '2025-03-07T11:05:29.317211'
+key: IG-TI92941JBA
+modified: '2025-03-07T11:05:29.317210'
+release_status: STABLE
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS sicherstellen, dass Ressourcen, die durch <i>_include</i>
+  oder <i>_revinclude</i> in das Suchergebnis aufgenommen werden, stets auf derselben
+  Ergebnisseite wie die zugehörigen Suchtreffer (<i>entry.search.mode = "match"</i>)
+  enthalten sind.
+title: Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite
+version: 1

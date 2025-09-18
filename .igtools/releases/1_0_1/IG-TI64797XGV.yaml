@@ -1,0 +1,18 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.315189'
+date: '2025-02-26T13:55:56.513384'
+key: IG-TI64797XGV
+modified: '2025-02-26T13:55:56.513382'
+release_status: STABLE
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem
+  <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der Standard HL7 FHIR Spezifikation
+  als absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative
+  Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich,
+  dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.
+title: Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles
+version: 1

@@ -1,0 +1,121 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ti-operationdefinition",
+  "url": "https://gematik.de/fhir/ti/StructureDefinition/ti-operationdefinition",
+  "version": "1.1.1",
+  "name": "TIOperationDefinition",
+  "title": "OperationDefinition Profil für TI FHIR Data Service",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-12",
+  "publisher": "gematik GmbH",
+  "description": "Dieses Profil beschreibt FHIR Operationen des FHIR Data Service innerhalb der Telematikinfrastruktur (TI).\nEs stellt sicher, dass zustandsverändernde Operationen (`affectsState = true`) nicht über HTTP GET ausgeführt werden dürfen.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "OperationDefinition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/OperationDefinition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "OperationDefinition",
+        "path": "OperationDefinition",
+        "constraint": [
+          {
+            "key": "op-affectsState-vs-method",
+            "severity": "error",
+            "human": "Wenn affectsState = true, darf keine http-method Extension GET enthalten.",
+            "expression": "affectsState != true or extension.where(url = 'https://gematik.de/fhir/ti/StructureDefinition/http-method').all(value != 'GET')",
+            "source": "https://gematik.de/fhir/ti/StructureDefinition/ti-operationdefinition"
+          }
+        ]
+      },
+      {
+        "id": "OperationDefinition.meta",
+        "path": "OperationDefinition.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.meta.versionId",
+        "path": "OperationDefinition.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.meta.lastUpdated",
+        "path": "OperationDefinition.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.extension",
+        "path": "OperationDefinition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "OperationDefinition.extension:method",
+        "path": "OperationDefinition.extension",
+        "sliceName": "method",
+        "min": 0,
+        "max": "2",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/ti/StructureDefinition/extension-http-method"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.kind",
+        "path": "OperationDefinition.kind",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.affectsState",
+        "path": "OperationDefinition.affectsState",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.code",
+        "path": "OperationDefinition.code",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.system",
+        "path": "OperationDefinition.system",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.type",
+        "path": "OperationDefinition.type",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.instance",
+        "path": "OperationDefinition.instance",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.inputProfile",
+        "path": "OperationDefinition.inputProfile",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationDefinition.outputProfile",
+        "path": "OperationDefinition.outputProfile",
+        "mustSupport": true
+      }
+    ]
+  }
+}

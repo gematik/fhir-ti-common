@@ -1,0 +1,5 @@
+Multiple profiles present on element AuditEvent.agent:user.who.identifier. Base element type will be used instead of any profiles.
+Multiple profiles present on element Observation.performer.identifier. Base element type will be used instead of any profiles.
+Multiple profiles present on element Observation.note.author[x]:authorReference.identifier. Base element type will be used instead of any profiles.
+Multiple profiles present on element Provenance.agent.who.identifier. Base element type will be used instead of any profiles.
+Files not in the supported file types (.md and .xml) were detected. These files will be included without any processing.

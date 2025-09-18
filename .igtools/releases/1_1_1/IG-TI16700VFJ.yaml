@@ -1,0 +1,14 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-10T12:54:11.422911'
+date: '2025-03-10T12:54:11.422912'
+key: IG-TI16700VFJ
+modified: '2025-03-10T12:54:11.422912'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS sicherstellen, dass frühere Versionen einer gelöschten
+  Instanz weiterhin über versionsspezifische Endpunkte abrufbar sind.
+title: Abruf früherer Versionen einer gelöschten Instanz
+version: 1

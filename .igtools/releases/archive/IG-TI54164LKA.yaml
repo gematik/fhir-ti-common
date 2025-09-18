@@ -1,0 +1,16 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.315104'
+date: '2025-05-06T08:21:23.302693'
+deleted: '2025-05-06T08:21:23.302688'
+key: IG-TI54164LKA
+modified: '2025-02-26T13:55:56.513313'
+release_status: DELETED
+source: input/pagecontent/query-api-search.md
+status: RETIRED
+text: Der FHIR Data Service MUSS unbekannte Suchparameter ignorieren. Siehe [FHIR
+  Search Handling Errors].
+title: Ignorieren unbekannter Suchparameter
+version: 1

@@ -1,0 +1,16 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-12T14:30:33.929089'
+date: '2025-09-10T06:49:35.494674'
+deleted: '2025-09-10T06:49:35.494662'
+key: IG-TI35915ZJ8
+modified: '2025-03-12T14:30:33.929091'
+release_status: DELETED
+source: input/pagecontent/operation-api.md
+status: RETIRED
+text: Der FHIR Data Service MUSS transaktional ("transaction") gekennzeichnete Bereiche
+  "serialisiert" ausführen, d.h. das Ergebnis muss einer isolierten sequentiellen
+  Ausführung beider Operationen entsprechen.
+title: Serielle Ausführung transaktionaler Bereiche im FHIR Data Service
+version: 1

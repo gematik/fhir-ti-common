@@ -1,0 +1,406 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "de.gematik.ti",
+  "url": "https://gematik.de/fhir/ti/ImplementationGuide/de.gematik.ti",
+  "version": "1.1.1",
+  "name": "TI_Common",
+  "title": "Telematikinfrastruktur (TI) Common",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-12",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.gematik.de"
+        },
+        {
+          "system": "email",
+          "value": "patientteam [ at ] gematik.de"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "packageId": "de.gematik.ti",
+  "license": "Apache-2.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "de.basisprofil.r4",
+      "version": "1.5.4",
+      "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
+      "id": "de_basisprofil_r4"
+    },
+    {
+      "packageId": "de.gematik.terminology",
+      "version": "1.0.7",
+      "uri": "https://gematik.de/fhir/terminology/ImplementationGuide/de.gematik.terminology",
+      "id": "de_gematik_terminology"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-base-url"
+        },
+        "name": "Base URL der FHIR-API",
+        "description": "Gibt die Basis-URL des FHIR-Servers als Zeichenkette an. Beispiel: http://epa4all/epa/medication/api/v1/fhir",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-capability-statement"
+        },
+        "name": "Capability Statement Profil für TI FHIR Data Service",
+        "description": "Dieses Profil beschreibt die Fähigkeiten eines FHIR Data Service innerhalb der Telematikinfrastruktur (TI) spezifiziert ist.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/example-history-bundle"
+        },
+        "name": "Example History Bundle",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/ExampleTIPatient"
+        },
+        "name": "Example Patient",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/ti-patient"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/0dc58d79-1b2e-4c6f-afe0-0a5b721661a2"
+        },
+        "name": "ExpTIOperationDeleted",
+        "description": "This resource has been deleted",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ad48bf90-a664-44f4-af14-ee6e81db3df4"
+        },
+        "name": "ExpTIOperationOutcomeIdentityMismatch",
+        "description": "Identity Mismatch",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/468ca07b-7d63-453d-a738-0c35cb9402aa"
+        },
+        "name": "ExpTIOperationOutcomeSuccess",
+        "description": "Operation Successfully Completed",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-http-header"
+        },
+        "name": "HTTP Header",
+        "description": "Ermöglicht die Angabe global oder spezifisch geforderter HTTP Header in einem CapabilityStatement oder einer Resource-Interaktion.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-http-method"
+        },
+        "name": "HTTP Method for FHIR Operation",
+        "description": "Gibt an, ob eine FHIR Operation mit GET, POST oder beidem verwendet werden darf.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-http-response-info"
+        },
+        "name": "HTTP-Antwortinformationen",
+        "description": "Definiert Informationen zu HTTP-Antworten für FHIR-Interaktionen, inklusive Statuscode, Beschreibung, Beispiel und Response-Schema.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/e-prescription-id"
+        },
+        "name": "Identifikator Profil für E-Rezept-IDs",
+        "description": "Die E-Rezept-ID ist eine generierte und nicht veränderbare Zahlenfolge, die durch Punkte getrennt ist. Die ersten drei Ziffern definieren die Art der Verordnung. Die nächsten zwölf Ziffern stellen die generierte, eindeutige und fortlaufende Sequenz der Verordnung dar. Die letzten beiden Ziffern sind Prüfziffern gemäß ISO 7064.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ncpeh-country-extension"
+        },
+        "name": "National Contact Point of Health (NCPeH) Country Extension",
+        "description": "The country extension for  National Contact Point of Health (NCPeH) Organizations, representing the country in which the NCPeH is located.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-operationdefinition"
+        },
+        "name": "OperationDefinition Profil für TI FHIR Data Service",
+        "description": "Dieses Profil beschreibt FHIR Operationen des FHIR Data Service innerhalb der Telematikinfrastruktur (TI).\nEs stellt sicher, dass zustandsverändernde Operationen (`affectsState = true`) nicht über HTTP GET ausgeführt werden dürfen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/medication-plan-identifier"
+        },
+        "name": "Profil für den Identifikator eines eMP-Eintrags",
+        "description": "Definiert die Struktur des Identifikators für einen Eintrag im elektronischen Medikationsplan (eMP). Der Identifikator ermöglicht die eindeutige technische Referenzierung einzelner eMP-Einträge.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/operation-outcome"
+        },
+        "name": "TI Operation Outcome",
+        "description": "Das Operation Outcome-Profil für die Telematikinfrastruktur (TI) FHIR Data Services",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/operation-outcome-details-codes"
+        },
+        "name": "TI Operation Outcome Details CodeSystem",
+        "description": "Telematikinfrastruktur (TI) Operation Outcome Details CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/operation-outcome-details-vs"
+        },
+        "name": "TI Operation Outcome Details Value Set",
+        "description": "Enthält alle Codes für das Operation Outcome der Telematikinfrastruktur (TI) sowie die in FHIR definierten Operation-Outcome-Codes.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-organization"
+        },
+        "name": "TI Organization",
+        "description": "Definiert die Datenstruktur für medizinische, regulatorische und technische Organisationen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-patient"
+        },
+        "name": "TI Patient",
+        "description": "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data Services",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-practitioner"
+        },
+        "name": "TI Practitioner",
+        "description": "Dieses Profil beschreibt die Verwendung der FHIR-Ressource Practitioner im Kontext der Telematikinfrastruktur (TI). Es dient der strukturierten Darstellung von Gesundheitsfachpersonen, wie z.B. Ärzt:innen, Zahnärzt:innen, Psychotherapeut:innen oder Apotheker:innen, innerhalb TI-konformer Anwendungen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-practitioner-role"
+        },
+        "name": "TI PractitionerRole",
+        "description": "Dieses Profil beschreibt die Verwendung der FHIR-Ressource PractitionerRole in der Telematikinfrastruktur (TI). Es wird verwendet, um die Rolle und Funktion einer Gesundheitsfachperson innerhalb einer Organisation zu definieren.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "general-principles.html",
+          "title": "Generelle Prinzipien",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "query-api-search.html",
+          "title": "Query API: Allgemeine Anforderungen Suche und Sortierung",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "query-api-paging.html",
+          "title": "Query API: Allgemeine Anforderungen Paginierung",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "fhir-format.html",
+          "title": "FHIR-Formatserialisierung",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "artifacts.html",
+          "title": "FHIR-Artefakte",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "referenced.html",
+          "title": "Referenzen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "release-notes.html",
+          "title": "Release Notes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "spec-sheet.html",
+          "title": "Steckbriefe",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "actor-epa-medication.html",
+              "title": "Steckbrief: ePA Medication Service",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "actor-epa-audit.html",
+              "title": "Steckbrief: ePA Audit Event Service",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "actor-epa-patient.html",
+              "title": "Steckbrief: ePA Patient Service",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "actor-epa-mhd.html",
+              "title": "Steckbrief: ePA MHD Service",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "actor-epa-client.html",
+              "title": "Steckbrief: ePA PS / ePA-Client-Systeme / ePA-FdV",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "actor-vsdm.html",
+              "title": "Steckbrief: VSDM 2.0",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "license.html",
+          "title": "Apache License",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2025+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "release"
+      },
+      {
+        "code": "shownav",
+        "value": "true"
+      },
+      {
+        "code": "apply-version",
+        "value": "false"
+      },
+      {
+        "code": "default-version",
+        "value": "true"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "false"
+      },
+      {
+        "code": "default-publisher",
+        "value": "true"
+      },
+      {
+        "code": "apply-contact",
+        "value": "false"
+      },
+      {
+        "code": "default-contact",
+        "value": "true"
+      },
+      {
+        "code": "no-usage-check",
+        "value": "true"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "bundle-references-resolve",
+        "value": "false"
+      },
+      {
+        "code": "no-narrative",
+        "value": "AuditEvent/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "Bundle/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "OperationOutcome/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "Patient/*"
+      },
+      {
+        "code": "path-resource",
+        "value": "fsh-generated/resources"
+      },
+      {
+        "code": "path-resource",
+        "value": "extracted/resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/intro-notes"
+      },
+      {
+        "code": "no-validate",
+        "value": "MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43"
+      },
+      {
+        "code": "no-validate",
+        "value": "Bundle/example-history-bundle"
+      }
+    ]
+  }
+}

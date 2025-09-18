@@ -1,0 +1,16 @@
+actor:
+- EPA-PS
+- EPA-FdV
+conformance: SHOULD
+created: '2025-02-26T10:59:21.315396'
+date: '2025-02-27T11:10:37.038022'
+key: IG-TI27170FRR
+modified: '2025-02-27T11:10:37.038016'
+release_status: NEW
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Das Client-System KANN die Reihenfolge der zurückgegebenen Ergebnisse durch
+  den Parameter <code>_sort</code> angeben, der eine durch Kommas getrennte Liste
+  von Sortierregeln in Prioritätsreihenfolge enthalten kann.
+title: Sortierung der Suchergebnisse durch _sort
+version: 1

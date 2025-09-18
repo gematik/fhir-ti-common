@@ -1,0 +1,17 @@
+actor:
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+created: '2025-03-10T12:54:11.422458'
+date: '2025-03-12T12:47:19.482834'
+key: IG-TI66923Q9F
+modified: '2025-03-12T12:47:19.482833'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS sicherstellen, dass eine spezifische Version einer
+  Ressource über die <i>Meta.versionId</i> eindeutig identifiziert und abgerufen werden
+  kann. Die <i>versionId</i> dient dabei zur referenzgenauen Anforderung einer bestimmten
+  historischen Version einer Ressource.
+title: Identifikation der Ressourcenversion durch Meta.versionId
+version: 1

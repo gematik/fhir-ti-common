@@ -1,0 +1,69 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "medication-plan-identifier",
+  "url": "https://gematik.de/fhir/ti/StructureDefinition/medication-plan-identifier",
+  "version": "1.1.1",
+  "name": "MedicationPlanIdentifier",
+  "title": "Profil für den Identifikator eines eMP-Eintrags",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-12",
+  "publisher": "gematik GmbH",
+  "description": "Definiert die Struktur des Identifikators für einen Eintrag im elektronischen Medikationsplan (eMP). Der Identifikator ermöglicht die eindeutige technische Referenzierung einzelner eMP-Einträge.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier.id",
+        "path": "Identifier.id",
+        "max": "0"
+      },
+      {
+        "id": "Identifier.extension",
+        "path": "Identifier.extension",
+        "max": "0"
+      },
+      {
+        "id": "Identifier.use",
+        "path": "Identifier.use",
+        "short": "official",
+        "fixedCode": "official"
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "patternUri": "https://gematik.de/fhir/sid/emp-identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "Der eindeutige Identifikationswert",
+        "min": 1,
+        "example": [
+          {
+            "label": "General",
+            "valueString": "687512ce-744c-8001-83c3-238227110dd6"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Identifier.period",
+        "path": "Identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Identifier.assigner",
+        "path": "Identifier.assigner",
+        "max": "0"
+      }
+    ]
+  }
+}

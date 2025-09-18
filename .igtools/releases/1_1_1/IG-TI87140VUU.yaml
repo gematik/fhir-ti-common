@@ -1,0 +1,19 @@
+actor:
+- EPA-PS
+- EPA-FdV
+- EPA-CS-KTR
+conformance: SHALL
+created: '2025-02-26T10:59:21.321299'
+date: '2025-05-27T09:33:08.789775'
+key: IG-TI87140VUU
+modified: '2025-05-27T09:33:08.789772'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service implementiert,
+  MUSS jedes als Must Support gekennzeichnete Element gemäß der dazugehörigen Kardinalitätsangabe
+  befüllen. Das heißt auch, dass in optionalen Elementen (z. B. Kardinalität "0..1",
+  "0..*") der Elementwert leer bleiben darf, sofern dem Client-System kein Wert zur
+  Verfügung steht.
+title: Befüllungspflicht für Must Support
+version: 2

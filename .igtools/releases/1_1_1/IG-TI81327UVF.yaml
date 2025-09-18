@@ -1,0 +1,15 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+- EPA-MHD-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.315403'
+date: '2025-02-26T13:55:56.513680'
+key: IG-TI81327UVF
+modified: '2025-02-26T13:55:56.513679'
+release_status: STABLE
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS die Sortierfunktion nach [FHIR Sorting] implementieren.
+title: Umsetzung der Sortierfunktion gemäß FHIR
+version: 1

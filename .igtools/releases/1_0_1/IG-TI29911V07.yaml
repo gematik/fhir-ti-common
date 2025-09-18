@@ -1,0 +1,18 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-02-26T12:59:25.679584'
+date: '2025-02-26T13:55:56.513430'
+key: IG-TI29911V07
+modified: '2025-02-26T13:55:56.513428'
+release_status: STABLE
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS sicherstellen, dass, wenn im <i>Bundle.entry.fullUrl</i>
+  eine UUID-basierte URI (<i>urn:uuid</i>) verwendet wird, alle Referenzen innerhalb
+  desselben Bundles ebenfalls in der Form <i>urn:uuid:[UUID]</i> angegeben werden.
+  Eine Mischung aus absoluten URLs, UUID-basierten URIs und relativen Referenzen innerhalb
+  eines Bundles DARF NICHT verwendet werden.
+title: Konsistente Referenzierung innerhalb eines Bundles
+version: 1

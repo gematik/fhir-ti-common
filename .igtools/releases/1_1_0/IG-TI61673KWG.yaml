@@ -1,0 +1,16 @@
+actor:
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+created: '2025-03-10T12:54:11.423707'
+date: '2025-03-12T12:47:19.483956'
+key: IG-TI61673KWG
+modified: '2025-03-12T12:47:19.483955'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS versionierte Referenzen unterstützen, um es zu ermöglichen,
+  innerhalb einer FHIR-Instanz auf eine spezifische Version einer anderen Instanz
+  zu verweisen.
+title: Unterstützung versionierter Referenzen im FHIR Data Service
+version: 1

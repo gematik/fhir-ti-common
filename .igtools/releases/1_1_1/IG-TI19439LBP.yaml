@@ -1,0 +1,15 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-12T14:30:33.928999'
+date: '2025-09-10T06:49:35.494686'
+deleted: '2025-09-10T06:49:35.494685'
+key: IG-TI19439LBP
+modified: '2025-03-12T14:30:33.929008'
+release_status: DELETED
+source: input/pagecontent/operation-api.md
+status: RETIRED
+text: Der FHIR Data Service MUSS die transaktional ("transaction") gekennzeichneten
+  Bereiche nach dem ACID-Prinzip ausführen.
+title: Transaktionale Verarbeitung nach dem ACID-Prinzip im FHIR Data Service
+version: 1

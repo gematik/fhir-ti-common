@@ -1,0 +1,14 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-07T08:14:24.654983'
+date: '2025-03-28T11:10:43.517013'
+key: IG-TI87465NYV
+modified: '2025-03-28T11:10:43.517011'
+release_status: NEW
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS die umgekehrte verkettete Parametersuche gemäß der
+  Spezifikation unter [FHIR Reverse Chaining] implementieren und unterstützen.
+title: Unterstützung der umgekehrten verketteten Parametersuche
+version: 1

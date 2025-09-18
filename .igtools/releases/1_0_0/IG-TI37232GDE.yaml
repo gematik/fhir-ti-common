@@ -1,0 +1,36 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-02-26T10:59:21.318707'
+date: '2025-02-26T13:55:56.516717'
+key: IG-TI37232GDE
+modified: '2025-02-26T13:55:56.516715'
+release_status: NEW
+source: input/pagecontent/query-api-paging.md
+status: ACTIVE
+text: "Der FHIR Data Service MUSS in einem FHIR Search Set Bundle das FHIR-Element\
+  \ <code>link</code> belegen, welches eine Liste von Link-Elementen beinhaltet, welche\
+  \ jeweils einem spezifischen Navigationszweck innerhalb des FHIR Bundles dienen.<br/><br/>Die\
+  \ folgenden Beziehungen werden gemäß den [Link Relation Types] bereitgestellt.\n\
+  \  <br/><br/>\n<figure>\n<table style=\"width: 100%\">\n<thead>\n<tr>\n<th>Link\
+  \ Relation</th>\n<th>Beschreibung</th>\n<th>Anforderung</th>\n</tr>\n</thead>\n\
+  <tbody>\n<tr>\n<td><code>self</code></td>\n<td>Ein Link zur aktuellen Seite der\
+  \ Ergebnisse, der die Abfrage repräsentiert, die diese Ergebnisse generiert hat.</td>\n\
+  <td>MUSS</td>\n</tr>\n<tr>\n<td><code>next</code></td>\n<td>Wird verwendet, um zur\
+  \ nächsten Seite der Ergebnisse zu navigieren, entsprechend der festgelegten Paginierung.</td>\n\
+  <td>MUSS</td>\n</tr>\n<tr>\n<td><code>previous</code></td>\n<td>Ermöglicht die Rückkehr\
+  \ zur vorherigen Ergebnismenge und erleichtert die rückwärtige Navigation durch\
+  \ die Seiten.</td>\n<td>MUSS</td>\n</tr>\n<tr>\n<td><code>first</code></td>\n<td>Navigiert\
+  \ zur ersten Seite der Suchergebnisse und ermöglicht eine schnelle Navigation zum\
+  \ Anfang der Ergebnisliste.</td>\n<td>KANN</td>\n</tr>\n<tr>\n<td><code>last</code></td>\n\
+  <td>Navigiert zur letzten Seite der Suchergebnisse, um ans Ende der Ergebnisliste\
+  \ zu gelangen.</td>\n<td>KANN</td>\n</tr>\n</tbody>\n</table>\n<figcaption><strong>Tabelle:</strong>\
+  \ Seitennavigationslinks für Paginierungsfunktion</figcaption>\n</figure>\n<br/>\n\
+  \  Jeder Link MUSS eine URL enthalten, um das entsprechende Ergebnis-Set abzurufen,\
+  \ das dynamisch basierend auf der Suchanfrage und den Paginierungsparametern wie\
+  \ <code>_count</code> und <code>_offset</code> generiert wird. Diese Links vereinfachen\
+  \ die Navigation eines Client-Systems durch große Suchergebnisse, indem sie die\
+  \ Notwendigkeit manueller Anpassungen der Abfrageparameter ausräumt."
+title: Unterstützung Seitennavigationslinks für Paginierungsfunktion
+version: 1

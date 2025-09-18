@@ -1,0 +1,14 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+created: '2025-03-07T08:14:24.654914'
+date: '2025-03-28T11:10:43.516961'
+key: IG-TI06315TQ1
+modified: '2025-03-28T11:10:43.516953'
+release_status: NEW
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+text: Der FHIR Data Service MUSS die Suche von verketteten Parametern gemäß der Spezifikation
+  unter [FHIR Chained parameters] implementieren und unterstützen.
+title: Unterstützung verketteter Suchparameter
+version: 1
