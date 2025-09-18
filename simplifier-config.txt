@@ -1,0 +1,6 @@
+#by default, everything is included
+#if some include statements are added, we will exclude everything by default
+#Simplifier imports only xml, json, images, css, yaml and markdown file types
+
+fsh-generated/resources/**
+package.json
