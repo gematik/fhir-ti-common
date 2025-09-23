@@ -8,7 +8,7 @@
     "introduction": "Implementation Guide Telematikinfrastruktur (TI) Common",
     "first": true,
     "mode": "milestone",
-    "sequence": "Release",
+    "sequence": "TI",
     "desc": "TI Common IG 1.1.1",
     "ci-build": "https://gematik.de/fhir/ti/build/1.1.1"
   }

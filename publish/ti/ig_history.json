@@ -7,7 +7,7 @@
     "ci-build": "https://gematik.de/fhir/ti/build/1.1.1",
     "editions": [
         {
-            "name": "ePA 3.0.5",
+            "name": "TI",
             "ig-version": "1.0.0",
             "package": "de.gematik.ti#1.0.0",
             "fhir-version": [
@@ -17,7 +17,7 @@
             "description": "TI Common IG 1.0.0"
         },
         {
-            "name": "ePA 3.0.5-1",
+            "name": "TI",
             "ig-version": "1.0.1",
             "package": "de.gematik.ti#1.0.1",
             "fhir-version": [
@@ -27,7 +27,7 @@
             "description": "TI Common IG 1.0.1."
         },
         {
-            "name": "ePA 3.1.2",
+            "name": "TI",
             "ig-version": "1.1.0",
             "package": "de.gematik.ti#1.1.0",
             "fhir-version": [
@@ -37,7 +37,7 @@
             "description": "TI Common IG 1.1.0"
         },
         {
-            "name": "ePA 3.1.3",
+            "name": "TI-Ballot",
             "ig-version": "1.1.1-ballot.1",
             "package": "de.gematik.ti#1.1.1-ballot.1",
             "fhir-version": [
@@ -47,7 +47,7 @@
             "description": "TI Common IG 1.1.1-ballot.1"
         },
         {
-            "name": "Release",
+            "name": "TI",
             "ig-version": "1.1.1",
             "package": "de.gematik.ti#1.1.1",
             "fhir-version": [
