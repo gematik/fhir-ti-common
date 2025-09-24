@@ -37,7 +37,7 @@
             "description": "TI Common IG 1.1.0"
         },
         {
-            "name": "TI-Ballot",
+            "name": "TI Vorabveröffentlichung",
             "ig-version": "1.1.1-ballot.1",
             "package": "de.gematik.ti#1.1.1-ballot.1",
             "fhir-version": [
