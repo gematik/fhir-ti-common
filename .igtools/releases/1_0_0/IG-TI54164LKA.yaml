@@ -12,4 +12,4 @@ status: ACTIVE
 text: Der FHIR Data Service MUSS unbekannte Suchparameter ignorieren. Siehe [FHIR
   Search Handling Errors].
 title: Ignorieren unbekannter Suchparameter
-version: 1
+version: 0

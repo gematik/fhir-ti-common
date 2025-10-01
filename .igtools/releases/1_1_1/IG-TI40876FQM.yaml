@@ -10,7 +10,11 @@ modified: '2025-02-26T13:55:56.513560'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
 text: Falls kein Vergleichspräfix angegeben wird, MUSS der FHIR Data Service standardmäßig
   das Präfix <i>eq</i> verwenden.
 title: Standardpräfix für Vergleiche
-version: 1
+version: 0

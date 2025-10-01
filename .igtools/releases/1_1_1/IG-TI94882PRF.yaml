@@ -9,8 +9,11 @@ modified: '2025-03-12T12:47:19.481709'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer
   FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. <i>Meta.lastUpdated</i> MUSS
   auf den Zeitpunkt der Aktualisierung gesetzt werden.
 title: Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung
-version: 1
+version: 0

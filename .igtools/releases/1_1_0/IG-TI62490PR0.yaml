@@ -15,4 +15,4 @@ text: Der FHIR Data Service MUSS das Format <i>application/fhir+json</i> verwend
   wenn in der Anfragenachricht kein <i>Accept</i> Header oder <i>_format</i>-Parameter
   angegeben ist.
 title: Standardformat für den FHIR Data Service
-version: 1
+version: 0

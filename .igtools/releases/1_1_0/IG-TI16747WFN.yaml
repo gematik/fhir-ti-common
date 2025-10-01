@@ -13,4 +13,4 @@ text: Der FHIR Data Service MUSS die <i>_history</i>-Abfrage gemäß der HL7 FHI
   [FHIR History Interaction] implementieren, um die Versionshistorie einer FHIR-Instanz
   abrufbar zu machen.
 title: Implementierung der _history-Abfrage gemäß HL7 FHIR Spezifikation
-version: 1
+version: 0

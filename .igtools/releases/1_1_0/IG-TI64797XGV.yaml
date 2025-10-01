@@ -17,4 +17,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in 
   Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich,
   dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.
 title: Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles
-version: 1
+version: 0

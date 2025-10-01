@@ -9,10 +9,13 @@ modified: '2025-05-27T09:33:08.790205'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Der FHIR Data Service MUSS sicherstellen, dass bei einer Aktualisierung einer
   FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt,
   die aktuelle Version unverändert bleibt. In diesem Fall wird keine neue Version
   erstellt und die bestehende <i>Meta.versionId</i> sowie das <i>Meta.lastUpdated-Datum</i>
   bleiben erhalten.
 title: Keine neue Version bei inhaltsgleichen Aktualisierungen
-version: 1
+version: 0

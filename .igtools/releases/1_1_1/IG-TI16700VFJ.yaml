@@ -8,7 +8,9 @@ modified: '2025-03-10T12:54:11.422912'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
 text: Der FHIR Data Service MUSS sicherstellen, dass frühere Versionen einer gelöschten
   Instanz weiterhin über versionsspezifische Endpunkte abrufbar sind.
 title: Abruf früherer Versionen einer gelöschten Instanz
-version: 1
+version: 0

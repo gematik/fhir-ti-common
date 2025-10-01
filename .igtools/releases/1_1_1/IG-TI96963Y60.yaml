@@ -11,6 +11,11 @@ modified: '2025-03-12T12:47:19.474564'
 release_status: STABLE
 source: input/pagecontent/fhir-format.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: "Der FHIR Data Service MUSS den <i>Accept</i>-Header in eingehenden HTTP-Anfragen\
   \ auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service\
   \ MUSS die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i>\
@@ -20,4 +25,4 @@ text: "Der FHIR Data Service MUSS den <i>Accept</i>-Header in eingehenden HTTP-A
   \ in diesem Format erfolgen.</li>\n        <li>Wenn der Accept Header auf <i>application/fhir+xml</i>\
   \ gesetzt ist, MUSS die Antwort in diesem Format erfolgen.</li>\n    </ul>"
 title: Unterstützung des Accept Header für Formatwahl im FHIR Data Service
-version: 1
+version: 0

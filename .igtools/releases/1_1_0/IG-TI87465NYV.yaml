@@ -11,4 +11,4 @@ status: ACTIVE
 text: Der FHIR Data Service MUSS die umgekehrte verkettete Parametersuche gemäß der
   Spezifikation unter [FHIR Reverse Chaining] implementieren und unterstützen.
 title: Unterstützung der umgekehrten verketteten Parametersuche
-version: 1
+version: 0

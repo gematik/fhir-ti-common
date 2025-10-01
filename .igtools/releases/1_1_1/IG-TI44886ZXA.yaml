@@ -8,6 +8,8 @@ modified: '2025-05-27T09:33:08.776875'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
 text: Der FHIR Data Servic MUSS die <i>_revinclude</i>-Suche gemäß der [FHIR Search
   Revinclude] unterstützen, sodass Ressourcen, die auf die gesuchten Ressourcen verweisen,
   innerhalb der Suchergebnisse automatisch mit einbezogen werden können.

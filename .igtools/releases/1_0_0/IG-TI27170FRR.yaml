@@ -13,4 +13,4 @@ text: Das Client-System KANN die Reihenfolge der zurückgegebenen Ergebnisse dur
   den Parameter <code>_sort</code> angeben, der eine durch Kommas getrennte Liste
   von Sortierregeln in Prioritätsreihenfolge enthalten kann.
 title: Sortierung der Suchergebnisse durch _sort
-version: 1
+version: 0

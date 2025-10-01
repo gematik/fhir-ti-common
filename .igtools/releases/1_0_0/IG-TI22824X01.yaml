@@ -12,4 +12,4 @@ status: ACTIVE
 text: Der FHIR Data Service MUSS für Requests und Responses an den Schnittstellen
   den Content-Type <code>application/fhir+json</code> unterstützen.
 title: Unterstützung von JSON-Content-Types für FHIR-Data-Schnittstellen
-version: 1
+version: 0

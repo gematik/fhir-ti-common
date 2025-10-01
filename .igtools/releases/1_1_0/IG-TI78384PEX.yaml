@@ -12,4 +12,4 @@ status: ACTIVE
 text: 'Der FHIR Data Service MUSS ermöglichen, die Versionshistorie einer FHIR-Instanz
   über eine HTTP <i>GET</i>-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/[id]/_history</i>.'
 title: Abruf der Versionshistorie einer FHIR-Instanz
-version: 1
+version: 0

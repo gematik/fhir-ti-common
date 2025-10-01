@@ -8,8 +8,10 @@ modified: '2025-03-07T10:35:21.321838'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
 text: Der FHIR Data Service MUSS den <i>:iterate</i>-Modifikator für <i>_include</i>
   und <i>_revinclude</i> unterstützen, um rekursive Einschlussabfragen gemäß der FHIR-Spezifikation
   zu ermöglichen.
 title: Unterstützung des :iterate-Modifikators
-version: 1
+version: 0

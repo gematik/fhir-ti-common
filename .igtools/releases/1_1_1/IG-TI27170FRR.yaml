@@ -10,6 +10,10 @@ modified: '2025-05-27T09:33:08.778111'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-CS-Ombudsstelle: []
+  EPA-FdV: []
+  EPA-PS: []
 text: Das Client-System KANN die Reihenfolge der zurückgegebenen Ergebnisse durch
   den Parameter <i>_sort</i> angeben, der eine durch Kommas getrennte Liste von Sortierregeln
   in Prioritätsreihenfolge enthalten kann.

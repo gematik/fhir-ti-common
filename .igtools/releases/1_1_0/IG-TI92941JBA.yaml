@@ -13,4 +13,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass Ressourcen, die durch <i>_i
   Ergebnisseite wie die zugehörigen Suchtreffer (<i>entry.search.mode = "match"</i>)
   enthalten sind.
 title: Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite
-version: 1
+version: 0

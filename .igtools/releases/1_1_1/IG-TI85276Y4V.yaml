@@ -10,8 +10,12 @@ modified: '2025-02-26T13:55:56.513636'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
 text: 'Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für Datumswerte
   (date, Range, Period) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>,
   <i>ge</i>, <i>le</i>, <i>sa</i>, <i>eb</i>'
 title: Vergleichspräfixe für Datumswerte
-version: 1
+version: 0

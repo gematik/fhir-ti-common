@@ -15,4 +15,4 @@ text: Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service im
   der Elementwert leer bleiben darf, sofern dem Client-System kein Wert zur Verfügung
   steht.
 title: Befüllungspflicht für Must Support
-version: 1
+version: 0

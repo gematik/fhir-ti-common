@@ -11,6 +11,11 @@ modified: '2025-05-06T09:42:18.932801'
 release_status: STABLE
 source: input/pagecontent/fhir-format.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Der FHIR Data Service MUSS für Anfragenachrichten und Antwortnachrichten an
   den Schnittstellen den Content Type <code>application/fhir+json</code> unterstützen.
 title: Unterstützung von JSON Content Type für FHIR-Data-Schnittstellen

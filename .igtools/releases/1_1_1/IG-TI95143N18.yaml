@@ -11,6 +11,11 @@ modified: '2025-05-27T09:33:08.776699'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen wie <i>literal</i>-Referenzen
   in der Form [Resourcetyp]/[ResourceId] nicht im Feld <i>Bundle.entry.fullUrl</i>
   verwendet werden. Alle Verweise auf Ressourcen innerhalb des FHIR Data Service MÜSSEN

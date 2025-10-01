@@ -11,4 +11,4 @@ status: ACTIVE
 text: Der FHIR Data Service MUSS eine als gelöscht markierte Instanz weiterhin in
   der Versionshistorie speichern, anstatt sie physisch zu entfernen.
 title: Kennzeichnung gelöschter Instanzen statt physischer Entfernung
-version: 1
+version: 0

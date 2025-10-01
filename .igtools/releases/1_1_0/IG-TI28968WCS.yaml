@@ -14,4 +14,4 @@ text: Der FHIR Data Service MUSS die in der [FHIR Search Prefixes] definierten V
   für numerische (<i>number</i>, <i>quantity</i>) und Datumsparameter (<i>date</i>,
   <i>Range</i>, <i>Period</i>) unterstützen.
 title: Unterstützung von Präfixen für numerische und Datumsvergleiche
-version: 1
+version: 0

@@ -11,8 +11,13 @@ modified: '2025-03-12T12:47:19.475060'
 release_status: STABLE
 source: input/pagecontent/fhir-format.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Der FHIR Data Service MUSS sicherstellen, dass der <i>_format</i>-Parameter
   den Content Type Header für den Formattyp des Bodys einer POST-Nachricht nicht überschreibt.
 title: ' Keine Überschreibung des Content Type Header durch den _format-Parameter
   bei POST-Nachrichten'
-version: 1
+version: 0

@@ -6,18 +6,18 @@ Diese Seite beschreibt Standard-API-Zugriffe für eine clientseitige Suche und B
 Die FHIR-Schnittstellen des FHIR Data Service unterstützen standardmäßige [FHIR-Suchoperationen] gemäß den Vorgaben der FHIR-Spezifikation. Bei einer Suche wird ein _Search Set Bundle_ zurückgegeben.
 
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service" conformance="SHALL" key="IG-TI43409LRQ" title="Verwendung von entry.search.mode = match" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service" conformance="SHALL" key="IG-TI43409LRQ" title="Verwendung von entry.search.mode = match" version="0">
     Der FHIR Data Service MUSS sicherstellen, dass für jede Ressource, die direkt den in der Suchanfrage angegebenen Kriterien entspricht, das Attribut <i>entry.search.mode</i> auf <i>match</i> gesetzt wird.
 </requirement>
 
 
 #### fullUrl in FHIR Bundles
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI64797XGV" title="Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI64797XGV" title="Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles" version="0">
     Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der Standard HL7 FHIR Spezifikation als absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich, dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.
 </requirement>
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI29911V07" title="Konsistente Referenzierung innerhalb eines Bundles" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI29911V07" title="Konsistente Referenzierung innerhalb eines Bundles" version="0">
     Der FHIR Data Service MUSS sicherstellen, dass, wenn im <i>Bundle.entry.fullUrl</i> eine UUID-basierte URI (<i>urn:uuid</i>) verwendet wird, alle Referenzen innerhalb desselben Bundles ebenfalls in der Form <i>urn:uuid:[UUID]</i> angegeben werden. Eine Mischung aus absoluten URLs, UUID-basierten URIs und relativen Referenzen innerhalb eines Bundles darf nicht verwendet werden.
 </requirement>
 
@@ -97,11 +97,11 @@ In dieser Abfrage bedeutet:
 
 Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welche <i>MedicationRequest</i>-Instanzen zusammen mit den <i>MedicationDispense</i>-Instanzen enthält.
 
-<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI08134XQ4" title="Verarbeitung von referenzierten Ressourcen in Include-Suchen" version="1">
+<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI08134XQ4" title="Verarbeitung von referenzierten Ressourcen in Include-Suchen" version="0">
     Der FHIR Data Service MUSS für jede zurückgegebene Ressource die zugehörigen Ressourcen gemäß den Verknüpfungskriterien ermitteln und mit <i>entry.search.mode = "include"</i> in die Antwort aufnehmen. Falls eine referenzierte Ressource nicht existiert, nicht gefunden wird oder nicht abrufbar ist, darf kein Fehler zurückgegeben werden.
 </requirement>
 
-<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI92941JBA" title="Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite" version="1">
+<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI92941JBA" title="Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite" version="0">
     Der FHIR Data Service MUSS sicherstellen, dass Ressourcen, die durch <i>_include</i> oder <i>_revinclude</i> in das Suchergebnis aufgenommen werden, stets auf derselben Ergebnisseite wie die zugehörigen Suchtreffer (<i>entry.search.mode = "match"</i>) enthalten sind.
 </requirement>
 
@@ -110,15 +110,15 @@ Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welche <i>MedicationReq
 
 Der <i>:iterate</i>-Modifikator ermöglicht es, bei der Verwendung von <i>_include</i> und <i>_revinclude</i> die Einschlusslogik rekursiv anzuwenden. Dadurch werden nicht nur direkt referenzierte Ressourcen in das Suchergebnis aufgenommen, sondern auch alle Ressourcen, die durch die eingeschlossenen Ressourcen weiter referenziert werden. Dies ist besonders nützlich für mehrstufige Abhängigkeiten und zirkuläre Beziehungen.
 
-<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI97020UTC" title="Unterstützung des :iterate-Modifikators" version="1">
+<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI97020UTC" title="Unterstützung des :iterate-Modifikators" version="0">
     Der FHIR Data Service MUSS den <i>:iterate</i>-Modifikator für <i>_include</i> und <i>_revinclude</i> unterstützen, um rekursive Einschlussabfragen gemäß der FHIR-Spezifikation zu ermöglichen.
 </requirement>
 
-<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI00242W49" title="Unterstützung von _include:iterate" version="1">
+<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI00242W49" title="Unterstützung von _include:iterate" version="0">
     Der FHIR Data Service MUSS alle weiter referenzierten Ressourcen gemäß der angegebenen Referenzpfade iterativ in die Antwort aufnehmen, wenn <i>_include:iterate</i> verwendet wird.
 </requirement>
 
-<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI17755AMW" title="Unterstützung von _revinclude:iterate" version="1">
+<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI17755AMW" title="Unterstützung von _revinclude:iterate" version="0">
     Der FHIR Data Service MUSS alle iterativ verknüpften rückreferenzierenden Ressourcen zurückgeben, wenn <i>_revinclude:iterate</i> verwendet wird.
 </requirement>
 
@@ -258,31 +258,31 @@ Datumsangaben haben einen Bereich, der auf ihrer Präzision (Jahr, Monat, Tag) b
 
 <br/>
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI31988JEY" title="Unterstützung der Präzision bei numerischen und Datums-Suchparametern" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI31988JEY" title="Unterstützung der Präzision bei numerischen und Datums-Suchparametern" version="0">
     Der FHIR Data Service MUSS numerische und Datums-Suchparameter so verarbeiten, dass die Suchwerte entsprechend ihrer Präzision interpretiert werden. Beispielsweise muss eine Suche nach 2025-02-11 den Bereich von 2025-02-11T00:00:00 (inklusive) bis 2025-02-12T00:00:00 (exklusive) abdecken.
 </requirement>
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI28968WCS" title="Unterstützung von Präfixen für numerische und Datumsvergleiche" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI28968WCS" title="Unterstützung von Präfixen für numerische und Datumsvergleiche" version="0">
   Der FHIR Data Service MUSS die in der [FHIR Search Prefixes] definierten Vergleichspräfixe für numerische (<i>number</i>, <i>quantity</i>) und Datumsparameter (<i>date</i>, <i>Range</i>, <i>Period</i>) unterstützen.
 </requirement>
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI40876FQM" title="Standardpräfix für Vergleiche" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI40876FQM" title="Standardpräfix für Vergleiche" version="0">
   Falls kein Vergleichspräfix angegeben wird, MUSS der FHIR Data Service standardmäßig das Präfix <i>eq</i> verwenden.
 </requirement>
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI36297YXJ" title="Vergleichspräfixe für numerische Werte" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI36297YXJ" title="Vergleichspräfixe für numerische Werte" version="0">
   Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für numerische Werte (number, quantity) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>, <i>ge</i>, <i>le</i>
 </requirement>
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI85276Y4V" title="Vergleichspräfixe für Datumswerte" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI85276Y4V" title="Vergleichspräfixe für Datumswerte" version="0">
   Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für Datumswerte (date, Range, Period) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>, <i>ge</i>, <i>le</i>, <i>sa</i>, <i>eb</i>
 </requirement>
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI14253RWM" title="Exakte Übereinstimmungen bei Ganzzahlen" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI14253RWM" title="Exakte Übereinstimmungen bei Ganzzahlen" version="0">
   Der FHIR Data Service MUSS sicherstellen, dass Suchoperationen für Felder mit Ganzzahlen (<i>integer</i>) nur exakte numerische Übereinstimmungen liefern und keine Präzisionsanpassungen wie bei Gleitkommazahlen (<i>decimal</i>, <i>quantity</i>) vornehmen.
 </requirement>
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI61163GRT" title="Bereichsprüfung für Range- und Period-Typen" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI61163GRT" title="Bereichsprüfung für Range- und Period-Typen" version="0">
   Der FHIR Data Service MUSS für Suchanfragen, die Range- oder Period-Werte betreffen, sicherstellen, dass obere und untere Grenzen des Bereichs korrekt berücksichtigt werden und mit den definierten Vergleichspräfixen korrekt verarbeitet werden.
 </requirement>
 
@@ -346,7 +346,7 @@ Wenn der Referenzparameter nur auf einen einzelnen Ressourcentyp verweist, kann 
 
 <br/>
 
-<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI06315TQ1" title="Unterstützung verketteter Suchparameter" version="1">
+<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI06315TQ1" title="Unterstützung verketteter Suchparameter" version="0">
     Der FHIR Data Service MUSS die Suche von verketteten Parametern gemäß der Spezifikation unter [FHIR Chained parameters] implementieren und unterstützen.
 </requirement>
 
@@ -370,7 +370,7 @@ _has:[Ressourcentyp]:[Referenzparameter]:[Suchparameter]=[Wert]
 
 <br/>
 
-<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI87465NYV" title="Unterstützung der umgekehrten verketteten Parametersuche" version="1">
+<requirement actor="EPA-Medication-Service" conformance="SHALL" key="IG-TI87465NYV" title="Unterstützung der umgekehrten verketteten Parametersuche" version="0">
     Der FHIR Data Service MUSS die umgekehrte verkettete Parametersuche gemäß der Spezifikation unter [FHIR Reverse Chaining] implementieren und unterstützen.
 </requirement>
 
@@ -401,7 +401,7 @@ GET [base]/Medication?_has:MedicationStatement:medication:status=stopped&_revinc
     Das Client-System KANN die Reihenfolge der zurückgegebenen Ergebnisse durch den Parameter <i>_sort</i> angeben, der eine durch Kommas getrennte Liste von Sortierregeln in Prioritätsreihenfolge enthalten kann.
 </requirement>
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI81327UVF" title="Umsetzung der Sortierfunktion gemäß FHIR" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI81327UVF" title="Umsetzung der Sortierfunktion gemäß FHIR" version="0">
     Der FHIR Data Service MUSS die Sortierfunktion nach [FHIR Sorting] implementieren.
 </requirement>
 

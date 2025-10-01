@@ -10,6 +10,10 @@ modified: '2025-05-27T09:33:08.784708'
 release_status: STABLE
 source: input/pagecontent/query-api-paging.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
 text: Der FHIR Data Service KANN beim Paginieren von FHIR Bundles das Feld <i>Bundle.link.url</i>
   mit relativen URLs befüllen, sofern diese sich auf die Basis-URL beziehen.
 title: Verwendung relativer URLs bei der Paginierung von FHIR-Bundles

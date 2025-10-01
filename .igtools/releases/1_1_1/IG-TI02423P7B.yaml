@@ -9,8 +9,11 @@ modified: '2025-05-27T09:33:08.792200'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Der FHIR Data Service MUSS sicherstellen, dass eine FHIR-Instanz eine andere
   Instanz nicht nur über Ressourcentyp und ID, sondern auch mit einer spezifischen
   <i>Meta.versionId</i> referenzieren kann.
 title: Referenzierung einer spezifischen Version einer FHIR-Instanz
-version: 1
+version: 0

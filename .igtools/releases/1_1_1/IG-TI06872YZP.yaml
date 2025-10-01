@@ -9,6 +9,9 @@ modified: '2025-03-17T14:32:05.768193'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: "Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine spezifische\
   \ Version einer FHIR-Instanz den HTTP Status Code <i>404 (Not Found)</i> zurückgeben,\
   \ wenn die angeforderte Version nicht existiert.\n    <br/><br/>\n    Die Response\
@@ -17,4 +20,4 @@ text: "Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine spezifis
   \        <li><i>OperationOutcome.issue.diagnostics</i> mit einer Meldung, dass die\
   \ angeforderte Version nicht existiert.</li>\n    </ul>"
 title: 404 Not Found Antwort für nicht existierende spezifische Versionen
-version: 1
+version: 0

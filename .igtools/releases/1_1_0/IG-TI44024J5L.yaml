@@ -14,4 +14,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass die <i>Resource.meta.versio
   nicht zurückgesetzt oder übersprungen werden. Jede Instanz besitzt eine eigene fortlaufende
   Versionsnummer, die bei jeder Änderung der FHIR-Instanz aufsteigt.
 title: Eindeutigkeit der Resource.meta.versionId pro FHIR-Instanz
-version: 1
+version: 0

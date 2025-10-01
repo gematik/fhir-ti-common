@@ -12,4 +12,4 @@ text: Der FHIR Data Service MUSS den <i>:iterate</i>-Modifikator für <i>_includ
   und <i>_revinclude</i> unterstützen, um rekursive Einschlussabfragen gemäß der FHIR-Spezifikation
   zu ermöglichen.
 title: Unterstützung des :iterate-Modifikators
-version: 1
+version: 0

@@ -14,4 +14,4 @@ text: Der FHIR Data Service MUSS für Suchanfragen, die Range- oder Period-Werte
   sicherstellen, dass obere und untere Grenzen des Bereichs korrekt berücksichtigt
   werden und mit den definierten Vergleichspräfixen korrekt verarbeitet werden.
 title: Bereichsprüfung für Range- und Period-Typen
-version: 1
+version: 0

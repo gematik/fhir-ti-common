@@ -12,6 +12,12 @@ modified: '2025-03-17T13:35:52.637533'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-CS-KTR: []
+  EPA-CS-Ombudsstelle: []
+  EPA-FdV: []
+  EPA-PS: []
+  VSDM-Client: []
 text: Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer
   Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System
   implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für
@@ -19,4 +25,4 @@ text: Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehre
   wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen
   ausblenden.
 title: Anzeige für Must Support
-version: 1
+version: 0

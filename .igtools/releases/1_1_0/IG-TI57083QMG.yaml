@@ -14,4 +14,4 @@ status: ACTIVE
 text: Der FHIR Data Service MUSS für Anfragenachrichten und Antwortnachrichten an
   den Schnittstellen den Content Type <code>application/fhir+xml</code> unterstützen.
 title: Unterstützung von XML Content Type für FHIR-Data-Schnittstellen
-version: 1
+version: 0

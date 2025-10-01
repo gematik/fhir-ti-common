@@ -11,4 +11,4 @@ status: ACTIVE
 text: Der FHIR Data Service MUSS die Suche von verketteten Parametern gemäß der Spezifikation
   unter [FHIR Chained parameters] implementieren und unterstützen.
 title: Unterstützung verketteter Suchparameter
-version: 1
+version: 0

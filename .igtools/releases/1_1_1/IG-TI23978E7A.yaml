@@ -8,6 +8,8 @@ modified: '2025-03-10T12:54:11.423479'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
 text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gelöschte\
   \ Versionen einer FHIR-Instanz dokumentieren.\n    <br/><br/>\n    <ul>\n      \
   \  <li>Das <i>entry.request</i>-Element MUSS die Methode (<i>method = DELETE</i>)\
@@ -17,4 +19,4 @@ text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gel�
   \ enthalten sein</li>\n    </ul>"
 title: Bundle.entry.request und Bundle.entry.response innerhalb des _history-Bundles
   bei gelöschten FHIR-Instanzen
-version: 1
+version: 0

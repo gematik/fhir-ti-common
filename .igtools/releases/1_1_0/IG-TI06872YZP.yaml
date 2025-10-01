@@ -17,4 +17,4 @@ text: "Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine spezifis
   \        <li><i>OperationOutcome.issue.diagnostics</i> mit einer Meldung, dass die\
   \ angeforderte Version nicht existiert.</li>\n    </ul>"
 title: 404 Not Found Antwort für nicht existierende spezifische Versionen
-version: 1
+version: 0

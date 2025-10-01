@@ -11,6 +11,11 @@ modified: '2025-05-23T10:04:38.887401'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Ein FHIR Data Service MUSS an dem Endpunkt /metadata gemäß der [Capabilities-Interaktion]
   ein Capability Statement Typ <i>kind = instance</i> bereitstellen. Dieses Capability
   Statement muss im Element <i>software</i> den Namen und die Versionsnummer der eingesetzten
@@ -18,4 +23,4 @@ text: Ein FHIR Data Service MUSS an dem Endpunkt /metadata gemäß der [Capabili
   FHIR Data Service aus dem Capability Statement vom Typ <i>kind = requirements</i>
   der zugrundeliegenden Spezifikation erfüllen.
 title: Bereitstellung des /metadata-Endpunkts durch FHIR Data Service
-version: 1
+version: 0

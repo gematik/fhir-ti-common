@@ -13,4 +13,4 @@ text: 'Der FHIR Data Service MUSS ermöglichen, die Versionshistorie aller Insta
   eines bestimmten Ressourcentyps über eine HTTP GET-Anfrage an folgende URL abzurufen:
   <i>[base]/[ResourceType]/_history</i>.'
 title: Abruf der Versionshistorie aller Instanzen eines ResourceType
-version: 1
+version: 0

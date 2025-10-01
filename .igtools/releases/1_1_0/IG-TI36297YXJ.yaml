@@ -14,4 +14,4 @@ text: 'Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für numerisc
   (number, quantity) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>, <i>ge</i>,
   <i>le</i>'
 title: Vergleichspräfixe für numerische Werte
-version: 1
+version: 0

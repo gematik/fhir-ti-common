@@ -11,6 +11,11 @@ modified: '2025-05-06T10:10:09.639137'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Der FHIR Data Service MUSS ausschließlich zeitbasierte Universally Unique IDentifier
   (UUID) gemäß [RFC9562] für logische IDs (d.h. FHIR-Element <i>Resource.id</i>) verwenden.
 title: UUID für Resource.id

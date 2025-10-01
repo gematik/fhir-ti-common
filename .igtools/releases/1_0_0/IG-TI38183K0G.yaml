@@ -12,4 +12,4 @@ text: Der FHIR Data Service MUSS die _include-Suche gemäß der [FHIR Search Inc
   unterstützen, sodass referenzierte Ressourcen innerhalb der Suchergebnisse automatisch
   mit einbezogen werden können.
 title: Unterstützung der _include-Suche im FHIR Data Service gemäß FHIR
-version: 1
+version: 0

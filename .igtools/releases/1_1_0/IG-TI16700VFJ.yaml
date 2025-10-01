@@ -11,4 +11,4 @@ status: ACTIVE
 text: Der FHIR Data Service MUSS sicherstellen, dass frühere Versionen einer gelöschten
   Instanz weiterhin über versionsspezifische Endpunkte abrufbar sind.
 title: Abruf früherer Versionen einer gelöschten Instanz
-version: 1
+version: 0

@@ -1,7 +1,7 @@
 
 Bei einer Suche im FHIR Data Service über die FHIR Query API stellt der Service dem Client-System in seiner Antwort ggf. Links zu weiteren Ergebnissen zur Verfügung, die es dem Client erlauben, bequem durch die Ergebnismenge zu navigieren.
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI07252NTV" title="Unterstützung URL-Parameter für Paginierungsfunktion" version="1">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI07252NTV" title="Unterstützung URL-Parameter für Paginierungsfunktion" version="0">
   Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und in seiner Antwort Navigationsinformationen in Ergebnisseiten zur Verfügung stellen. Um die Paginierungsfunktion zu implementieren, werden die URL-Parameter <code>_count</code> und <code>_offset</code> verwendet. Der Parameter <code>_count</code> bestimmt die Anzahl der Einträge pro <i>Seite</i> (page), während <code>_offset</code> das Startelement der Seite angibt. Zusätzlich entscheidet der <code>_total</code>-Parameter, ob die Gesamtanzahl der Einträge in der Antwort enthalten sein soll.
   <br/><br/>
   <figure>

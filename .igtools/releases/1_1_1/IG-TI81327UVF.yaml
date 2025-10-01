@@ -10,6 +10,10 @@ modified: '2025-02-26T13:55:56.513679'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
 text: Der FHIR Data Service MUSS die Sortierfunktion nach [FHIR Sorting] implementieren.
 title: Umsetzung der Sortierfunktion gemäß FHIR
-version: 1
+version: 0

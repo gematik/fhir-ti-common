@@ -36,4 +36,4 @@ text: "Der FHIR Data Service MUSS in einem FHIR Search Set Bundle das FHIR-Eleme
   \ die Navigation eines Client-Systems durch große Suchergebnisse, indem sie die\
   \ Notwendigkeit manueller Anpassungen der Abfrageparameter ausräumt."
 title: Unterstützung Seitennavigationslinks für Paginierungsfunktion
-version: 1
+version: 0

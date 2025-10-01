@@ -17,4 +17,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass, wenn im <i>Bundle.entry.fu
   Eine Mischung aus absoluten URLs, UUID-basierten URIs und relativen Referenzen innerhalb
   eines Bundles darf nicht verwendet werden.
 title: Konsistente Referenzierung innerhalb eines Bundles
-version: 1
+version: 0

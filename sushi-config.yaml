@@ -101,6 +101,7 @@ parameters:
   path-resource:
     - fsh-generated/resources
     - extracted/resources
+    - input/content
   path-pages:
     - input/intro-notes
   no-validate:

@@ -14,4 +14,4 @@ text: Der FHIR Data Service MUSS für jede zurückgegebene Ressource die zugehö
   existiert, nicht gefunden wird oder nicht abrufbar ist, darf kein Fehler zurückgegeben
   werden.
 title: Verarbeitung von referenzierten Ressourcen in Include-Suchen
-version: 1
+version: 0

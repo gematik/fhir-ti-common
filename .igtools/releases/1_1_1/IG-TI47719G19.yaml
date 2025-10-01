@@ -9,7 +9,10 @@ modified: '2025-03-12T12:47:19.483901'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Der FHIR Data Service MUSS die Versionierte Referenzen nach [FHIR References
   and Versions] implementieren.
 title: Umsetzung der Versionierte Referenzen gemäß FHIR
-version: 1
+version: 0

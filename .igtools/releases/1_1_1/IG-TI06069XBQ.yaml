@@ -9,9 +9,12 @@ modified: '2025-03-12T12:47:19.482020'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: 'Der FHIR Data Service MUSS sicherstellen, dass die <i>versionId</i> einer FHIR-Instanz
   bei jeder neuen Version um genau 1 erhöht wird. Die erste Version einer FHIR-Instanz
   erhält die <i>versionId</i> 1, die nächste Version 2, und so weiter. Beispiel: 1
   → 2 → 3 →'
 title: Aufsteigende Sequenz der Resource.meta.versionId
-version: 1
+version: 0

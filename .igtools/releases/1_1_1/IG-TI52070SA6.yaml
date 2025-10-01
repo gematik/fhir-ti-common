@@ -9,6 +9,9 @@ modified: '2025-03-12T12:47:19.482583'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> für\
   \ jede Version einer FHIR-Instanz die zugehörigen <i>entry.request</i>- und <i>entry.response</i>-Elemente\
   \ bereitstellen.\n    <br/><br/>\n    <ul>\n        <li>Das <i>entry.request</i>-Element\
@@ -17,4 +20,4 @@ text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> f�
   \ MUSS den Status (<i>status</i>) sowie das Datum der letzten Änderung (<i>lastModified</i>)\
   \ enthalten.</li>\n    </ul>"
 title: Bundle.entry.request und Bundle.entry.esponse innerhalb des _history Bundles
-version: 1
+version: 0

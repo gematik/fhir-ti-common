@@ -11,6 +11,11 @@ modified: '2025-05-27T09:33:08.773270'
 release_status: STABLE
 source: input/pagecontent/fhir-format.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: "Der FHIR Data Service MUSS gemäß der [FHIR General parameters] den <i>_format</i>-Parameter\
   \ in Anfragenachricht auswerten, um das gewünschte Antwortformat zu bestimmen.\n\
   \    <br/>\n    Der FHIR Data Service MUSS folgende Werte für den <i>_format</i>-Parameter\
@@ -18,4 +23,4 @@ text: "Der FHIR Data Service MUSS gemäß der [FHIR General parameters] den <i>_
   \ <i>application/xml</i>, <i>application/fhir+xml</i></li>\n        <li>JSON-Formate:\
   \ <i>json</i>, <i>application/json</i>, <i>application/fhir+json</i></li>\n    </ul>"
 title: Unterstützung des _format-Parameters im FHIR Data Service
-version: 1
+version: 0

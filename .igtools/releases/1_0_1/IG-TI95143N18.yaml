@@ -14,4 +14,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen wie "li
   verwendet werden. Alle Verweise auf Ressourcen innerhalb des Aktensystems MÜSSEN
   entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.
 title: Formatierung von Referenzen im fullUrl-Feld
-version: 1
+version: 0

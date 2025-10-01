@@ -8,6 +8,8 @@ modified: '2025-05-27T09:33:08.776795'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
 text: Der FHIR Data Service MUSS die <i>_include</i>-Suche gemäß der [FHIR Search
   Include] unterstützen, sodass referenzierte Ressourcen innerhalb der Suchergebnisse
   automatisch mit einbezogen werden können.

@@ -8,7 +8,9 @@ modified: '2025-03-10T12:54:11.422850'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
 text: Der FHIR Data Service MUSS eine als gelöscht markierte Instanz weiterhin in
   der Versionshistorie speichern, anstatt sie physisch zu entfernen.
 title: Kennzeichnung gelöschter Instanzen statt physischer Entfernung
-version: 1
+version: 0

@@ -12,4 +12,4 @@ status: ACTIVE
 text: Der FHIR Data Service KANN beim Paginieren von FHIR-Bundles das Feld Bundle.link.url
   mit relativen URLs befüllen, sofern diese sich auf die Basis-URL beziehen.
 title: Verwendung relativer URLs bei der Paginierung von FHIR-Bundles
-version: 1
+version: 0

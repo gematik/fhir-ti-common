@@ -8,7 +8,9 @@ modified: '2025-03-28T11:10:43.516953'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
 text: Der FHIR Data Service MUSS die Suche von verketteten Parametern gemäß der Spezifikation
   unter [FHIR Chained parameters] implementieren und unterstützen.
 title: Unterstützung verketteter Suchparameter
-version: 1
+version: 0
