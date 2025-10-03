@@ -2,6 +2,7 @@ actor:
 - EPA-Medication-Service
 - EPA-Patient-Service
 conformance: SHALL
+content_hash: e09458d073976f228d32635c8d36d3edfc3048bbcb88e492d46b4839880651e3
 created: '2025-03-10T12:54:11.421936'
 date: '2025-03-12T12:47:19.482338'
 key: IG-TI94321ZRC

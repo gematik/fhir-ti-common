@@ -1,6 +1,7 @@
 current: 1.1.1
 directory: input
-final: 1.1.1
+frozen_hash: 96ca950ccebcd0b1e2ed044ee252da3c4c201027e999ced92b940f7fae4021f8
+frozen_version: 1.1.1
 name: Telematikinfrastruktur (TI) Common
 prefix: IG
 releases:
