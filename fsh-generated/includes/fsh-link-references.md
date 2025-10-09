@@ -1,4 +1,3 @@
-[BaseUrl]: StructureDefinition-extension-base-url.html
 [TICapabilityStatement]: StructureDefinition-ti-capability-statement.html
 [example-history-bundle]: Bundle-example-history-bundle.html
 [ExampleTIPatient]: Patient-ExampleTIPatient.html

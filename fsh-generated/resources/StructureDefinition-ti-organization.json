@@ -39,6 +39,20 @@
         "mustSupport": true
       },
       {
+        "id": "Organization.extension",
+        "path": "Organization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
         "id": "Organization.extension:ncpehCountryEx",
         "path": "Organization.extension",
         "sliceName": "ncpehCountryEx",
