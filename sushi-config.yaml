@@ -1,7 +1,7 @@
 id: de.gematik.ti
 canonical: https://gematik.de/fhir/ti
 
-name: TI_Common
+name: gemIG_TI_Common
 title: "Telematikinfrastruktur (TI) Common"
 jurisdiction: "urn:iso:std:iso:3166#DE"
 license: Apache-2.0
