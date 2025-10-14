@@ -3,13 +3,20 @@
         "key": "IG-TI06089XAH",
         "title": "Anzeige für Must Support",
         "actor": [
-            "EPA-PS",
-            "EPA-FdV",
             "EPA-CS-KTR",
             "EPA-CS-Ombudsstelle",
+            "EPA-FdV",
+            "EPA-PS",
             "VSDM-Client"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-CS-KTR": [],
+            "EPA-CS-Ombudsstelle": [],
+            "EPA-FdV": [],
+            "EPA-PS": [],
+            "VSDM-Client": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -18,6 +25,7 @@
         "created": "2025-02-26T10:59:21.321313",
         "modified": "2025-03-17T13:35:52.637533",
         "date": "2025-03-17T13:35:52.637536",
+        "content_hash": "c942c94ab5117dc9e13daa0abf64314e8ab5ab5d6f218b5f4b7f4f4bfa8dd63b",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -28,7 +36,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -37,6 +49,7 @@
         "created": "2025-03-10T12:54:11.422187",
         "modified": "2025-03-12T12:47:19.482583",
         "date": "2025-03-12T12:47:19.482584",
+        "content_hash": "765a24a9d8a9a7f0d89d678d124446ce245eef156cb5565a4b6a07c4646fb7ac",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -46,6 +59,9 @@
         "actor": [
             "EPA-Medication-Service"
         ],
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
         "version": 2,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -55,6 +71,7 @@
         "created": "2025-02-26T10:59:21.315223",
         "modified": "2025-05-27T09:33:08.776875",
         "date": "2025-05-27T09:33:08.776876",
+        "content_hash": "9499787881ee330ce50c34addab0164b7189d0daffac75c655b7418b9fe20b31",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -63,10 +80,15 @@
         "title": "Exakte Übereinstimmungen bei Ganzzahlen",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -75,6 +97,7 @@
         "created": "2025-02-26T10:59:21.315377",
         "modified": "2025-02-26T13:55:56.513657",
         "date": "2025-02-26T13:55:56.513658",
+        "content_hash": "782f9f0de604e33f45f71b213ab7669e911ac2c4fc36ef3c8e2720f19735dc71",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -85,7 +108,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -94,6 +121,7 @@
         "created": "2025-03-10T12:54:11.423707",
         "modified": "2025-03-12T12:47:19.483955",
         "date": "2025-03-12T12:47:19.483956",
+        "content_hash": "d392fcaf44095e2f4d676df7203138453644ffebe0fe4d25078327027c558a8f",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -102,11 +130,17 @@
         "title": "FHIR-Formatunterstützung XML",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
@@ -115,6 +149,7 @@
         "created": "2025-03-06T13:30:46.537743",
         "modified": "2025-03-12T12:47:19.474257",
         "date": "2025-03-12T12:47:19.474259",
+        "content_hash": "cc02bda006b22bf3859f8e912161393e7fba780ebecc06047afba1805eb625f3",
         "path": "fhir-format.html",
         "release": "1.1.1"
     },
@@ -123,11 +158,17 @@
         "title": "Bereitstellung des /metadata-Endpunkts durch FHIR Data Service",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
             "EPA-MHD-Service",
+            "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -136,6 +177,7 @@
         "created": "2025-05-07T20:31:11.882185",
         "modified": "2025-05-23T10:04:38.887401",
         "date": "2025-05-23T10:04:38.887411",
+        "content_hash": "bd797e4fb92def7b93068706a6964a2f016114276a2957ea24ddb9f8d8500a1c",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -144,10 +186,15 @@
         "title": "Unterstützung von Präfixen für numerische und Datumsvergleiche",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -156,6 +203,7 @@
         "created": "2025-02-26T10:59:21.315262",
         "modified": "2025-02-26T13:55:56.513547",
         "date": "2025-02-26T13:55:56.513548",
+        "content_hash": "0968c9791e15305c386b6c771a5492b2c71b2d66acfff21398631a6ad278810d",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -164,11 +212,17 @@
         "title": "Unterstützung des _format-Parameters im FHIR Data Service",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
@@ -177,6 +231,7 @@
         "created": "2025-03-06T13:30:46.537921",
         "modified": "2025-05-27T09:33:08.773270",
         "date": "2025-05-27T09:33:08.773276",
+        "content_hash": "4c12446d2ff0c31fd7c7913f0f722791707d19431912c7ed8fe8a64c708db907",
         "path": "fhir-format.html",
         "release": "1.1.1"
     },
@@ -187,7 +242,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -196,6 +255,7 @@
         "created": "2025-03-10T12:54:11.421936",
         "modified": "2025-03-12T12:47:19.482337",
         "date": "2025-03-12T12:47:19.482338",
+        "content_hash": "e09458d073976f228d32635c8d36d3edfc3048bbcb88e492d46b4839880651e3",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -203,10 +263,15 @@
         "key": "IG-TI87140VUU",
         "title": "Befüllungspflicht für Must Support",
         "actor": [
-            "EPA-PS",
+            "EPA-CS-KTR",
             "EPA-FdV",
-            "EPA-CS-KTR"
+            "EPA-PS"
         ],
+        "test_procedures": {
+            "EPA-CS-KTR": [],
+            "EPA-FdV": [],
+            "EPA-PS": []
+        },
         "version": 2,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -216,6 +281,7 @@
         "created": "2025-02-26T10:59:21.321299",
         "modified": "2025-05-27T09:33:08.789772",
         "date": "2025-05-27T09:33:08.789775",
+        "content_hash": "0119413a95a061391bff31ff293ab65663e2e4a42b5be04b5de48a568f742678",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -224,11 +290,17 @@
         "title": "Standardformat für den FHIR Data Service",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
@@ -237,6 +309,7 @@
         "created": "2025-03-06T13:30:46.537950",
         "modified": "2025-03-12T12:47:19.474964",
         "date": "2025-03-12T12:47:19.474966",
+        "content_hash": "cd26c8e0d394ceb0fafe2211eda37390ab5f5ef8e231057d83946909eb6c7caf",
         "path": "fhir-format.html",
         "release": "1.1.1"
     },
@@ -245,11 +318,17 @@
         "title": "Vorrang des _format-Parameters gegenüber dem Accept Header",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
@@ -258,6 +337,7 @@
         "created": "2025-03-06T13:37:59.523187",
         "modified": "2025-03-12T12:47:19.475179",
         "date": "2025-03-12T12:47:19.475181",
+        "content_hash": "aea75d59e6f92d5b5c2ff5ef0840ad8c44996ff55790198e76e4eef23e8edb50",
         "path": "fhir-format.html",
         "release": "1.1.1"
     },
@@ -266,11 +346,17 @@
         "title": "Keine Registrierung bei Nutzung inaktiver Codes",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
             "EPA-MHD-Service",
+            "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "NEW",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -279,6 +365,7 @@
         "created": "2025-08-19T11:56:04.108952",
         "modified": "2025-08-19T11:56:04.108960",
         "date": "2025-08-19T11:56:04.108962",
+        "content_hash": "4110dfe8f4afd8b4e9a4e8c80035dba952e77414d163f74f42ba758118b0c1d0",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -287,10 +374,15 @@
         "title": "Vergleichspräfixe für numerische Werte",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -299,6 +391,7 @@
         "created": "2025-02-26T10:59:21.315312",
         "modified": "2025-02-26T13:55:56.513594",
         "date": "2025-02-26T13:55:56.513595",
+        "content_hash": "ca29d0d2ebd29a99bf389025616a23ab5bceb9cd8183ee632b8ca7e23cda310e",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -307,10 +400,16 @@
         "title": "Speichern der Profilversion",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
         "version": 2,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -320,6 +419,7 @@
         "created": "2025-02-26T10:59:21.321344",
         "modified": "2025-03-12T12:47:19.484185",
         "date": "2025-03-12T12:47:19.484186",
+        "content_hash": "3af972d8eb83c14944c6c23418e2597cd7797168d1149dcf3625a05c6d55c9d7",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -328,10 +428,15 @@
         "title": "Umsetzung der Sortierfunktion gemäß FHIR",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -340,6 +445,7 @@
         "created": "2025-02-26T10:59:21.315403",
         "modified": "2025-02-26T13:55:56.513679",
         "date": "2025-02-26T13:55:56.513680",
+        "content_hash": "fd518b715c72d9f59f880b1d23eabc0f00e2bb499af13fe44c6848ed1cf224d4",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -348,11 +454,17 @@
         "title": "Unterstützung von XML Content Type für FHIR-Data-Schnittstellen",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
@@ -361,6 +473,7 @@
         "created": "2025-03-06T13:30:46.537770",
         "modified": "2025-03-12T12:47:19.474335",
         "date": "2025-03-12T12:47:19.474337",
+        "content_hash": "99ca41c818f7257049fef9bf7c079fe84f09957372af044a57cf87b0e6562efc",
         "path": "fhir-format.html",
         "release": "1.1.1"
     },
@@ -369,10 +482,15 @@
         "title": "Bereichsprüfung für Range- und Period-Typen",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -381,6 +499,7 @@
         "created": "2025-02-26T10:59:21.315384",
         "modified": "2025-02-26T13:55:56.513664",
         "date": "2025-02-26T13:55:56.513665",
+        "content_hash": "13d629bc8d1465ed0478c1790a9d4f00254caf96e91ea20e0f6975d7535b2fe6",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -389,10 +508,16 @@
         "title": "Unterstützung von JSON Content Type für FHIR-Data-Schnittstellen",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
         "version": 2,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -402,6 +527,7 @@
         "created": "2025-02-26T10:59:21.321332",
         "modified": "2025-05-06T09:42:18.932801",
         "date": "2025-05-06T09:42:18.932802",
+        "content_hash": "dafef73f32db3c28c9a86e124c5a09e049d2d443a595531c0036172092424ad8",
         "path": "fhir-format.html",
         "release": "1.1.1"
     },
@@ -412,7 +538,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "NEW",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -421,6 +551,7 @@
         "created": "2025-07-22T09:44:40.103842",
         "modified": "2025-07-22T09:44:40.103865",
         "date": "2025-07-22T09:44:40.103867",
+        "content_hash": "89017053c40dca4f8efe87b21416bb82c032124d1c2052fcc65eb8f99a9a2fd0",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -431,7 +562,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -440,6 +575,7 @@
         "created": "2025-03-10T12:54:11.421680",
         "modified": "2025-03-12T12:47:19.482104",
         "date": "2025-03-12T12:47:19.482105",
+        "content_hash": "e23b1b5995d709d4a0c74f8e180163b9ab99c32b681c080d7f0b5fbbf77bd13c",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -449,6 +585,9 @@
         "actor": [
             "EPA-Medication-Service"
         ],
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
         "version": 2,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -458,6 +597,7 @@
         "created": "2025-02-26T10:59:21.315216",
         "modified": "2025-05-27T09:33:08.776795",
         "date": "2025-05-27T09:33:08.776797",
+        "content_hash": "c0b84d3d614a9ce5dfc80b24f3a0fad8d0e252f428eeb62c2dcfb35d5c5e03e8",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -467,7 +607,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -476,6 +619,7 @@
         "created": "2025-03-07T10:35:21.321969",
         "modified": "2025-03-07T10:35:21.321972",
         "date": "2025-03-07T10:35:21.321973",
+        "content_hash": "f43f27203726962abf83833037a008ac4f8ecccc8e90633e91cb6de8b0590067",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -486,7 +630,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -495,6 +643,7 @@
         "created": "2025-03-10T12:54:11.422356",
         "modified": "2025-05-27T09:33:08.791114",
         "date": "2025-05-27T09:33:08.791116",
+        "content_hash": "613b941d83c7a3e59374501d0b6f6069bc7f9f7c99b1734cb088a95a7ef9fb64",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -504,7 +653,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -513,6 +665,7 @@
         "created": "2025-03-10T12:54:11.423477",
         "modified": "2025-03-10T12:54:11.423479",
         "date": "2025-03-10T12:54:11.423479",
+        "content_hash": "576196b051923710d3ef0a7a40195ba1015c5a05bf07d86843e214eb9a2ef3e3",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -524,7 +677,12 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -533,6 +691,7 @@
         "created": "2025-03-07T10:54:47.697675",
         "modified": "2025-03-12T12:47:19.475983",
         "date": "2025-03-12T12:47:19.475986",
+        "content_hash": "0074934f57b5f4387f1787a64b83ce090e3e04a380f331292fa67c30cf4ef8fc",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -543,7 +702,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -552,6 +715,7 @@
         "created": "2025-03-10T12:54:11.423868",
         "modified": "2025-03-14T10:33:08.469446",
         "date": "2025-03-14T10:33:08.469448",
+        "content_hash": "758c5b103c8a8413b3d25700923093b9572a30317e719f5a57544573bfb42105",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -561,7 +725,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -570,6 +737,7 @@
         "created": "2025-03-10T12:54:11.422786",
         "modified": "2025-03-10T12:54:11.422787",
         "date": "2025-03-10T12:54:11.422788",
+        "content_hash": "4ee74f172993f95a2cf381a506b2c6d240809f02444fa1eb7ac2a50ac96e211e",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -578,10 +746,15 @@
         "title": "Unterstützung der Präzision bei numerischen und Datums-Suchparametern",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -590,6 +763,7 @@
         "created": "2025-02-26T10:59:21.315231",
         "modified": "2025-02-26T13:55:56.513515",
         "date": "2025-02-26T13:55:56.513516",
+        "content_hash": "bb9c6d765db79dbdec357d64f3b2faaf1789f41defe400e47a4b338b6b8e3cf6",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -598,11 +772,17 @@
         "title": "Verhalten bei nicht unterstützten Formaten",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
@@ -611,6 +791,7 @@
         "created": "2025-03-06T13:30:46.537999",
         "modified": "2025-03-12T12:47:19.475280",
         "date": "2025-03-12T12:47:19.475281",
+        "content_hash": "fbab29fe641bf136301b8449c78412d4dd57dd50b7403914e4c50d04c924225f",
         "path": "fhir-format.html",
         "release": "1.1.1"
     },
@@ -619,10 +800,16 @@
         "title": "Formatierung von Referenzen im fullUrl-Feld",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
         "version": 2,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -632,6 +819,7 @@
         "created": "2025-02-26T10:59:21.315207",
         "modified": "2025-05-27T09:33:08.776699",
         "date": "2025-05-27T09:33:08.776703",
+        "content_hash": "6e841cfcfef30ba89fb94db4a5e08adedb655b5499e7fa0f28dfced452b51e8e",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -641,7 +829,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -650,6 +841,7 @@
         "created": "2025-03-07T08:14:24.654983",
         "modified": "2025-03-28T11:10:43.517011",
         "date": "2025-03-28T11:10:43.517013",
+        "content_hash": "a70fb5fd2ffb0360fada7c47d655dab2af6a76a24927f523f0321f79fc5c780d",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -658,10 +850,15 @@
         "title": "Vergleichspräfixe für Datumswerte",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -670,6 +867,7 @@
         "created": "2025-02-26T10:59:21.315356",
         "modified": "2025-02-26T13:55:56.513636",
         "date": "2025-02-26T13:55:56.513637",
+        "content_hash": "d01692d1851c62a8d681bb5a35d5d02d5595da1c8c3df0e9defafea299643461",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -678,10 +876,15 @@
         "title": "Unterstützung URL-Parameter für Paginierungsfunktion",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-paging.md",
@@ -690,6 +893,7 @@
         "created": "2025-02-26T10:59:21.318535",
         "modified": "2025-02-26T13:55:56.516495",
         "date": "2025-02-26T13:55:56.516500",
+        "content_hash": "aad1227a23cd1e6ebbf4b4218e16adba867ef75eebf8dba4895d3cbacd5f33ce",
         "path": "query-api-paging.html",
         "release": "1.1.1"
     },
@@ -697,10 +901,15 @@
         "key": "IG-TI27170FRR",
         "title": "Sortierung der Suchergebnisse durch _sort",
         "actor": [
-            "EPA-PS",
+            "EPA-CS-Ombudsstelle",
             "EPA-FdV",
-            "EPA-CS-Ombudsstelle"
+            "EPA-PS"
         ],
+        "test_procedures": {
+            "EPA-CS-Ombudsstelle": [],
+            "EPA-FdV": [],
+            "EPA-PS": []
+        },
         "version": 3,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -710,6 +919,7 @@
         "created": "2025-02-26T10:59:21.315396",
         "modified": "2025-05-27T09:33:08.778111",
         "date": "2025-05-27T09:33:08.778114",
+        "content_hash": "cf3c233b63944fdeb8ffbdf7682b4447476da56faf2331aacebd8cc16430d0ad",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -718,11 +928,17 @@
         "title": "Unterstützung des Accept Header für Formatwahl im FHIR Data Service",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
@@ -731,6 +947,7 @@
         "created": "2025-03-06T13:30:46.537848",
         "modified": "2025-03-12T12:47:19.474564",
         "date": "2025-03-12T12:47:19.474566",
+        "content_hash": "56854ab3cb2e86d7ffea87c80a620aeb32b01cec8c9e976750ffc574ffd4ea88",
         "path": "fhir-format.html",
         "release": "1.1.1"
     },
@@ -741,7 +958,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -750,6 +971,7 @@
         "created": "2025-03-10T12:54:11.421523",
         "modified": "2025-03-12T12:47:19.482020",
         "date": "2025-03-12T12:47:19.482022",
+        "content_hash": "cc938ad8802d9a6360b946279e9bfaba3f9f288ff50a686a80b87d89d4f3d9f4",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -759,7 +981,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -768,6 +993,7 @@
         "created": "2025-03-07T10:54:47.698334",
         "modified": "2025-03-07T10:54:47.698336",
         "date": "2025-03-07T10:54:47.698337",
+        "content_hash": "29a7977d9bc5a211ffbf3bbbe2e2567d8ab9aae28ebc75999d1503d4780637f5",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -778,7 +1004,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -787,6 +1017,7 @@
         "created": "2025-03-10T12:54:11.421747",
         "modified": "2025-05-27T09:33:08.790570",
         "date": "2025-05-27T09:33:08.790572",
+        "content_hash": "797753c73ffb3417f1c4a76fffac47f06a44d84470f2a7610c80362683351448",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -796,7 +1027,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -805,6 +1039,7 @@
         "created": "2025-03-10T12:54:11.422849",
         "modified": "2025-03-10T12:54:11.422850",
         "date": "2025-03-10T12:54:11.422850",
+        "content_hash": "e5e42d1703fbc1b94423bd7c8bacc86cd204d312c12162574576d45c2434453e",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -813,10 +1048,15 @@
         "title": "Standardpräfix für Vergleiche",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -825,6 +1065,7 @@
         "created": "2025-02-26T10:59:21.315278",
         "modified": "2025-02-26T13:55:56.513560",
         "date": "2025-02-26T13:55:56.513561",
+        "content_hash": "2b3850b9939ff440c0fd64705fdf3bd824eeb39fee6089ec831beaf1e186c69c",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -835,7 +1076,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -844,6 +1089,7 @@
         "created": "2025-03-10T17:01:48.083983",
         "modified": "2025-03-12T12:47:19.481709",
         "date": "2025-03-12T12:47:19.481710",
+        "content_hash": "9ef4fd4380f0e583b88b667f71ae4184c54fb0e7d7ce7d25a399ba1e9e7d1270",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -852,11 +1098,17 @@
         "title": "Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -865,6 +1117,7 @@
         "created": "2025-02-26T10:59:21.315189",
         "modified": "2025-03-12T12:47:19.476134",
         "date": "2025-03-12T12:47:19.476136",
+        "content_hash": "5357e301403d4c03564478b8d26882f967f5e00530544881d570bd5f477ebf30",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -875,7 +1128,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -884,6 +1141,7 @@
         "created": "2025-03-10T12:54:11.421232",
         "modified": "2025-03-12T12:47:19.481614",
         "date": "2025-03-12T12:47:19.481616",
+        "content_hash": "b1323c1d8b0c536458617bc19fd44413aaf39c22bda4f5e8d90152b8195e6379",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -894,7 +1152,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -903,6 +1165,7 @@
         "created": "2025-03-10T12:54:11.421388",
         "modified": "2025-03-12T12:47:19.481885",
         "date": "2025-03-12T12:47:19.481886",
+        "content_hash": "cb82e6f4b63fdfa34e8c10677c1b827c1851efa1998144bea66718ab98932a22",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -913,7 +1176,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -922,6 +1189,7 @@
         "created": "2025-03-10T12:54:11.421311",
         "modified": "2025-05-27T09:33:08.790205",
         "date": "2025-05-27T09:33:08.790207",
+        "content_hash": "17cc6523bd2af0d60b77cf0a67d1ea414f19f81bba0e7f234826768c5c7a6fd2",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -931,7 +1199,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -940,6 +1211,7 @@
         "created": "2025-03-07T10:29:08.689615",
         "modified": "2025-03-07T10:35:21.321838",
         "date": "2025-03-07T10:35:21.321843",
+        "content_hash": "88868683d5219548dd1c515a71727b2754d4ef8c0413958243fcbddf4149d8e8",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -948,9 +1220,14 @@
         "title": "Unterstützung Seitennavigationslinks für Paginierungsfunktion",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
         "version": 2,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -960,6 +1237,7 @@
         "created": "2025-02-26T10:59:21.318707",
         "modified": "2025-05-27T09:33:08.784484",
         "date": "2025-05-27T09:33:08.784487",
+        "content_hash": "43f8f0cccad30c37cf64999b4b125c701629e7bab0df3083d963f685d3e37ed2",
         "path": "query-api-paging.html",
         "release": "1.1.1"
     },
@@ -967,9 +1245,13 @@
         "key": "IG-TI09377BM6",
         "title": "Verarbeitung für Must Support",
         "actor": [
-            "EPA-PS",
-            "EPA-FdV"
+            "EPA-FdV",
+            "EPA-PS"
         ],
+        "test_procedures": {
+            "EPA-FdV": [],
+            "EPA-PS": []
+        },
         "version": 2,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -979,6 +1261,7 @@
         "created": "2025-02-26T10:59:21.321306",
         "modified": "2025-05-27T09:33:08.789868",
         "date": "2025-05-27T09:33:08.789870",
+        "content_hash": "81acf85729f7bae29dba6f2c18d31fa8a2ea209feef35d8c0b704e3645fd0ff1",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -987,9 +1270,14 @@
         "title": "Verwendung relativer URLs bei der Paginierung von FHIR-Bundles",
         "actor": [
             "EPA-Audit-Service",
-            "EPA-Medication-Service",
-            "EPA-MHD-Service"
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
         ],
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": []
+        },
         "version": 3,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -999,6 +1287,7 @@
         "created": "2025-02-26T10:59:21.318715",
         "modified": "2025-05-27T09:33:08.784708",
         "date": "2025-05-27T09:33:08.784710",
+        "content_hash": "52ec460ce0fa00273b647a986387ee15a0ff2989aea5f57e32e9ca8e1f6a2835",
         "path": "query-api-paging.html",
         "release": "1.1.1"
     },
@@ -1009,7 +1298,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -1018,6 +1311,7 @@
         "created": "2025-03-14T10:33:08.467442",
         "modified": "2025-03-14T10:33:08.467447",
         "date": "2025-03-14T10:33:08.467448",
+        "content_hash": "c54a51ac7f2f9b83e447c0d90d11b4c205e496d9a322978cdaf69b247d77250d",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -1026,10 +1320,16 @@
         "title": "UUID für Resource.id",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
         "version": 2,
         "release_status": "STABLE",
         "status": "ACTIVE",
@@ -1039,6 +1339,7 @@
         "created": "2025-02-26T10:59:21.321291",
         "modified": "2025-05-06T10:10:09.639137",
         "date": "2025-05-06T10:10:09.639142",
+        "content_hash": "d5dc0b51ea0e73d6d6b2861f8a81f64bcfe2c619819defe5fd9da05e73e66758",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -1048,7 +1349,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -1057,6 +1361,7 @@
         "created": "2025-03-07T08:14:24.654914",
         "modified": "2025-03-28T11:10:43.516953",
         "date": "2025-03-28T11:10:43.516961",
+        "content_hash": "0435142a64b58428e6564d9add06e9beeb1fc0120cbd240f2486d1eeb1a471c9",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -1066,7 +1371,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -1075,6 +1383,7 @@
         "created": "2025-03-07T11:05:29.317204",
         "modified": "2025-03-07T11:05:29.317210",
         "date": "2025-03-07T11:05:29.317211",
+        "content_hash": "07278df7e0fb754a06552d2bdfa0c8203e70d5cd977e06b0c9fc945c187818b5",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -1084,7 +1393,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -1093,6 +1405,7 @@
         "created": "2025-03-07T10:35:21.322061",
         "modified": "2025-03-07T10:35:21.322062",
         "date": "2025-03-07T10:35:21.322064",
+        "content_hash": "1bd27e89ea82dcca5db50c361c7d7f13ef00df0f49c7c17a93812cc4d84722d3",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -1103,7 +1416,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -1112,6 +1429,7 @@
         "created": "2025-03-10T12:54:11.423766",
         "modified": "2025-05-27T09:33:08.792200",
         "date": "2025-05-27T09:33:08.792201",
+        "content_hash": "0380f776f72dad6e8ffee31ed116a57e22c7660d658715e112bb827177927f3f",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -1122,7 +1440,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -1131,6 +1453,7 @@
         "created": "2025-03-10T12:54:11.423602",
         "modified": "2025-03-12T12:47:19.483901",
         "date": "2025-03-12T12:47:19.483903",
+        "content_hash": "70756c7a93d146eb8d43322fc61007f39515f9e8b5397ff170e13d5ab870491f",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -1140,6 +1463,9 @@
         "actor": [
             "EPA-Medication-Service"
         ],
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
         "version": 2,
         "release_status": "MODIFIED",
         "status": "ACTIVE",
@@ -1149,6 +1475,7 @@
         "created": "2025-03-10T12:54:11.423196",
         "modified": "2025-09-08T11:58:42.118690",
         "date": "2025-09-08T11:58:42.118701",
+        "content_hash": "ed0a4583033936a72ea01f5b87e37d41f91acaa82d31ed66ae22e7e98ba2d6ca",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -1157,11 +1484,17 @@
         "title": "Konsistente Referenzierung innerhalb eines Bundles",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
@@ -1170,6 +1503,7 @@
         "created": "2025-02-26T12:59:25.679584",
         "modified": "2025-03-12T12:47:19.476263",
         "date": "2025-03-12T12:47:19.476265",
+        "content_hash": "3d6af5e07d5d730a15f67d86efca13539d2124062882dd67422c59efab336c33",
         "path": "query-api-search.html",
         "release": "1.1.1"
     },
@@ -1180,7 +1514,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -1189,6 +1527,7 @@
         "created": "2025-03-10T12:54:11.421837",
         "modified": "2025-03-17T14:32:05.767307",
         "date": "2025-03-17T14:32:05.767318",
+        "content_hash": "74f1edd862c5bbe95218248427fc77e4151efbbf10044c3c760aa2503bb18522",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -1197,11 +1536,17 @@
         "title": "FHIR-Formatunterstützung JSON",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
@@ -1210,6 +1555,7 @@
         "created": "2025-02-26T10:59:21.321321",
         "modified": "2025-05-06T09:42:18.932688",
         "date": "2025-05-06T09:42:18.932694",
+        "content_hash": "e31d506ed85fa22bfd76ff4c2f8c9328b125ef6d16c54f2c63186ccda5581967",
         "path": "fhir-format.html",
         "release": "1.1.1"
     },
@@ -1218,11 +1564,17 @@
         "title": " Keine Überschreibung des Content Type Header durch den _format-Parameter bei POST-Nachrichten",
         "actor": [
             "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
-            "EPA-Patient-Service",
-            "EPA-MHD-Service"
+            "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Audit-Service": [],
+            "EPA-MHD-Service": [],
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
@@ -1231,6 +1583,7 @@
         "created": "2025-03-06T13:30:46.537971",
         "modified": "2025-03-12T12:47:19.475060",
         "date": "2025-03-12T12:47:19.475061",
+        "content_hash": "8b18e63e573e9a127c81b4b46ce61fa2f58ea02857f24ad343a775ed66c0d4de",
         "path": "fhir-format.html",
         "release": "1.1.1"
     },
@@ -1240,7 +1593,10 @@
         "actor": [
             "EPA-Medication-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -1249,6 +1605,7 @@
         "created": "2025-03-10T12:54:11.422911",
         "modified": "2025-03-10T12:54:11.422912",
         "date": "2025-03-10T12:54:11.422912",
+        "content_hash": "d3065560b49cd74e757381f4c2d63261a63974daf7862a9a9090a8b7241efa69",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -1259,7 +1616,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -1268,6 +1629,7 @@
         "created": "2025-03-10T12:54:11.422458",
         "modified": "2025-03-12T12:47:19.482833",
         "date": "2025-03-12T12:47:19.482834",
+        "content_hash": "0de7f32151246a1e8e31027dd4e813f124d717b1769851f12b6de65eb0670e4c",
         "path": "general-principles.html",
         "release": "1.1.1"
     },
@@ -1278,7 +1640,11 @@
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
-        "version": 1,
+        "test_procedures": {
+            "EPA-Medication-Service": [],
+            "EPA-Patient-Service": []
+        },
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
@@ -1287,6 +1653,7 @@
         "created": "2025-03-10T12:54:11.422662",
         "modified": "2025-03-17T14:32:05.768193",
         "date": "2025-03-17T14:32:05.768196",
+        "content_hash": "223f0193b3ae5b46b513b0104af5f29d75c817ac7d1b2d7b3c2260e58be5d3d1",
         "path": "general-principles.html",
         "release": "1.1.1"
     }

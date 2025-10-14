@@ -8,8 +8,8 @@ license: Apache-2.0
 
 experimental: false
 status: active # draft | active | retired | unknown
-version: 1.1.1
-date: 2025-09-12
+version: 1.2.0
+date: 2025-11-03
 
 copyrightYear: 2025+
 #Flip releaseLabel to 'release' for publication. Flip to 'ci-build' for CI
@@ -25,6 +25,7 @@ publisher:
 dependencies:
   de.basisprofil.r4: 1.5.4
   de.gematik.terminology: 1.0.7
+  # de.gematik.terminology: 1.0.8
 
 # FSHOnly: true
 

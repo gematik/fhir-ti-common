@@ -5,6 +5,11 @@ Title: "TI Patient"
 Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data Services"
 * insert Meta
 
+// preserve the version of this resource
+* ^version = "1.2.0"
+* ^date = "2025-11-03"
+* ^status = #active
+
 * obeys pat-de-1
 
 * identifier 0.. MS
@@ -30,11 +35,11 @@ Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data 
 * name[Name] only HumannameDeBasis
   * ^patternHumanName.use = #official
   * use 1.. MS
-  * family 1.. MS
+  * family 0.. MS
     * extension[namenszusatz] 0..1 MS
     * extension[nachname] 0..1 MS
     * extension[vorsatzwort] 0..1 MS
-  * given 1.. MS
+  * given 0.. MS
   * prefix MS
     * extension[prefix-qualifier] 0..1 MS
     * extension[prefix-qualifier].value[x] = #AC (exactly)

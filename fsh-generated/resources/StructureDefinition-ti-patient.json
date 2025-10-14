@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "ti-patient",
   "url": "https://gematik.de/fhir/ti/StructureDefinition/ti-patient",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "name": "TIPatient",
   "title": "TI Patient",
   "status": "active",
   "experimental": false,
-  "date": "2025-09-12",
+  "date": "2025-11-03",
   "publisher": "gematik GmbH",
   "description": "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data Services",
   "fhirVersion": "4.0.1",
@@ -108,7 +108,6 @@
       {
         "id": "Patient.name:Name.family",
         "path": "Patient.name.family",
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -132,7 +131,6 @@
       {
         "id": "Patient.name:Name.given",
         "path": "Patient.name.given",
-        "min": 1,
         "mustSupport": true
       },
       {

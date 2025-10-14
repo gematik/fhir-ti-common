@@ -2,12 +2,12 @@
   "resourceType": "ImplementationGuide",
   "id": "de.gematik.ti",
   "url": "https://gematik.de/fhir/ti/ImplementationGuide/de.gematik.ti",
-  "version": "1.1.1",
-  "name": "TI_Common",
+  "version": "1.2.0",
+  "name": "gemIG_TI_Common",
   "title": "Telematikinfrastruktur (TI) Common",
   "status": "active",
   "experimental": false,
-  "date": "2025-09-12",
+  "date": "2025-11-03",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -388,6 +388,10 @@
       {
         "code": "path-resource",
         "value": "extracted/resources"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/content"
       },
       {
         "code": "path-pages",

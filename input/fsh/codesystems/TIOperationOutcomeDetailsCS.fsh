@@ -3,6 +3,12 @@ Id: operation-outcome-details-codes
 Title: "TI Operation Outcome Details CodeSystem"
 Description: "Telematikinfrastruktur (TI) Operation Outcome Details CodeSystem"
 * insert MetaCS
+
+// preserve the version of this resource
+* ^version = "1.1.1"
+* ^date = "2025-09-12"
+* ^status = #active
+
 * ^caseSensitive = true
 
 * #OPERATION_SUCCESS "Operation Successfully Completed"

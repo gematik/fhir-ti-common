@@ -9,7 +9,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "DELETED",
                     "status": "RETIRED",
                     "conformance": "SHALL",
@@ -20,11 +20,11 @@
                     "key": "IG-TI97619U65",
                     "actor": [
                         "EPA-Audit-Service",
-                        "EPA-Medication-Service",
                         "EPA-MHD-Service",
+                        "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -37,7 +37,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -49,7 +49,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "DELETED",
                     "status": "RETIRED",
                     "conformance": "SHALL",
@@ -61,7 +61,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "DELETED",
                     "status": "RETIRED",
                     "conformance": "SHALL",
@@ -91,7 +91,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -116,7 +116,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "DELETED",
                     "status": "RETIRED",
                     "conformance": "SHALL",
@@ -129,7 +129,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -140,11 +140,11 @@
                     "key": "IG-TI62717R2P",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -155,11 +155,11 @@
                     "key": "IG-TI38467S3Q",
                     "actor": [
                         "EPA-Audit-Service",
-                        "EPA-Medication-Service",
                         "EPA-MHD-Service",
+                        "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -170,11 +170,11 @@
                     "key": "IG-TI18063SU7",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -187,7 +187,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -197,9 +197,9 @@
                     "title": "Befüllungspflicht für Must Support",
                     "key": "IG-TI87140VUU",
                     "actor": [
-                        "EPA-PS",
+                        "EPA-CS-KTR",
                         "EPA-FdV",
-                        "EPA-CS-KTR"
+                        "EPA-PS"
                     ],
                     "version": 2,
                     "release_status": "MODIFIED",
@@ -212,11 +212,11 @@
                     "key": "IG-TI62490PR0",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -227,11 +227,11 @@
                     "key": "IG-TI94558MGC",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -243,7 +243,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -268,11 +268,11 @@
                     "key": "IG-TI57083QMG",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -283,9 +283,9 @@
                     "key": "IG-TI22824X01",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
                     "version": 2,
                     "release_status": "MODIFIED",
@@ -300,7 +300,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -324,7 +324,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -337,7 +337,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -349,7 +349,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -363,7 +363,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -376,7 +376,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -388,7 +388,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -399,11 +399,11 @@
                     "key": "IG-TI44797PGD",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -414,9 +414,9 @@
                     "key": "IG-TI95143N18",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
                     "version": 2,
                     "release_status": "MODIFIED",
@@ -430,7 +430,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -440,9 +440,9 @@
                     "title": "Sortierung der Suchergebnisse durch _sort",
                     "key": "IG-TI27170FRR",
                     "actor": [
-                        "EPA-PS",
+                        "EPA-CS-Ombudsstelle",
                         "EPA-FdV",
-                        "EPA-CS-Ombudsstelle"
+                        "EPA-PS"
                     ],
                     "version": 3,
                     "release_status": "MODIFIED",
@@ -455,11 +455,11 @@
                     "key": "IG-TI96963Y60",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -472,7 +472,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -484,7 +484,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -497,7 +497,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -509,7 +509,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -521,7 +521,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -534,7 +534,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -546,7 +546,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -559,7 +559,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -572,7 +572,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -585,7 +585,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -597,7 +597,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -608,8 +608,8 @@
                     "key": "IG-TI37232GDE",
                     "actor": [
                         "EPA-Audit-Service",
-                        "EPA-Medication-Service",
-                        "EPA-MHD-Service"
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service"
                     ],
                     "version": 2,
                     "release_status": "MODIFIED",
@@ -621,8 +621,8 @@
                     "title": "Verarbeitung für Must Support",
                     "key": "IG-TI09377BM6",
                     "actor": [
-                        "EPA-PS",
-                        "EPA-FdV"
+                        "EPA-FdV",
+                        "EPA-PS"
                     ],
                     "version": 2,
                     "release_status": "MODIFIED",
@@ -635,8 +635,8 @@
                     "key": "IG-TI78112H2T",
                     "actor": [
                         "EPA-Audit-Service",
-                        "EPA-Medication-Service",
-                        "EPA-MHD-Service"
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service"
                     ],
                     "version": 3,
                     "release_status": "MODIFIED",
@@ -651,7 +651,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -663,7 +663,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -675,7 +675,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -687,7 +687,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -700,7 +700,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -713,7 +713,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -725,7 +725,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -738,7 +738,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -749,11 +749,11 @@
                     "key": "IG-TI59271UPX",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "MOVED",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -764,11 +764,11 @@
                     "key": "IG-TI19904KM0",
                     "actor": [
                         "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
-                        "EPA-Patient-Service",
-                        "EPA-MHD-Service"
+                        "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -780,7 +780,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -793,7 +793,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -806,7 +806,7 @@
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -824,7 +824,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "DELETED",
                     "status": "RETIRED",
                     "conformance": "SHALL",
@@ -836,7 +836,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -861,7 +861,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -876,10 +876,10 @@
                     "title": "Anzeige für Must Support",
                     "key": "IG-TI06089XAH",
                     "actor": [
-                        "EPA-PS",
-                        "EPA-FdV"
+                        "EPA-FdV",
+                        "EPA-PS"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -891,7 +891,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -904,7 +904,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -917,7 +917,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -930,7 +930,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -940,10 +940,10 @@
                     "title": "Befüllungspflicht für Must Support",
                     "key": "IG-TI87140VUU",
                     "actor": [
-                        "EPA-PS",
-                        "EPA-FdV"
+                        "EPA-FdV",
+                        "EPA-PS"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -956,7 +956,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -969,7 +969,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -982,7 +982,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -995,7 +995,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1008,7 +1008,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1021,7 +1021,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1033,7 +1033,7 @@
                     "actor": [
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1046,7 +1046,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1059,7 +1059,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1072,7 +1072,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1085,7 +1085,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1095,10 +1095,10 @@
                     "title": "Sortierung der Suchergebnisse durch _sort",
                     "key": "IG-TI27170FRR",
                     "actor": [
-                        "EPA-PS",
-                        "EPA-FdV"
+                        "EPA-FdV",
+                        "EPA-PS"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHOULD",
@@ -1111,7 +1111,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1124,7 +1124,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1137,7 +1137,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1147,10 +1147,10 @@
                     "title": "Verarbeitung für Must Support",
                     "key": "IG-TI09377BM6",
                     "actor": [
-                        "EPA-PS",
-                        "EPA-FdV"
+                        "EPA-FdV",
+                        "EPA-PS"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1163,7 +1163,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHOULD",
@@ -1176,7 +1176,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1189,7 +1189,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
@@ -1202,7 +1202,7 @@
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
                     ],
-                    "version": 1,
+                    "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
