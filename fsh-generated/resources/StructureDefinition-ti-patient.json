@@ -108,6 +108,7 @@
       {
         "id": "Patient.name:Name.family",
         "path": "Patient.name.family",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -131,6 +132,7 @@
       {
         "id": "Patient.name:Name.given",
         "path": "Patient.name.given",
+        "min": 1,
         "mustSupport": true
       },
       {

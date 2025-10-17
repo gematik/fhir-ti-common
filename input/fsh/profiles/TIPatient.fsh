@@ -35,11 +35,11 @@ Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data 
 * name[Name] only HumannameDeBasis
   * ^patternHumanName.use = #official
   * use 1.. MS
-  * family 0.. MS
+  * family 1.. MS
     * extension[namenszusatz] 0..1 MS
     * extension[nachname] 0..1 MS
     * extension[vorsatzwort] 0..1 MS
-  * given 0.. MS
+  * given 1.. MS
   * prefix MS
     * extension[prefix-qualifier] 0..1 MS
     * extension[prefix-qualifier].value[x] = #AC (exactly)

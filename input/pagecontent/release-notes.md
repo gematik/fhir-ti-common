@@ -2,7 +2,6 @@
 
 #### TI Patient
 - Die Kardinalität des FHIR-Elements _active_ wurde auf 0..0 gesetzt.
-- Die Kardinalitäten für _.name:Name.family_ und _.name:Name.given_ werden optional gesetzt.
 
 
 ### Version 1.1.1
