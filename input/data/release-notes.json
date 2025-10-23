@@ -16,25 +16,16 @@
                     "path": "operation-api.html"
                 },
                 {
-                    "title": "Serielle Ausführung transaktionaler Bereiche im FHIR Data Service",
-                    "key": "IG-TI35915ZJ8",
+                    "title": "Keine Registrierung bei Nutzung inaktiver Codes",
+                    "key": "IG-TI97619U65",
                     "actor": [
-                        "EPA-Medication-Service"
+                        "EPA-Audit-Service",
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
                     ],
                     "version": 0,
-                    "release_status": "DELETED",
-                    "status": "RETIRED",
-                    "conformance": "SHALL",
-                    "path": "operation-api.html"
-                },
-                {
-                    "title": "HTTP 410 Gone für den Abruf einer gelöschten FHIR-Instanz",
-                    "key": "IG-TI36210TD1",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 2,
-                    "release_status": "MODIFIED",
+                    "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
                     "path": "general-principles.html"
@@ -65,8 +56,103 @@
                     "path": "operation-api.html"
                 },
                 {
-                    "title": "Keine Registrierung bei Nutzung inaktiver Codes",
-                    "key": "IG-TI97619U65",
+                    "title": "Serielle Ausführung transaktionaler Bereiche im FHIR Data Service",
+                    "key": "IG-TI35915ZJ8",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "DELETED",
+                    "status": "RETIRED",
+                    "conformance": "SHALL",
+                    "path": "operation-api.html"
+                },
+                {
+                    "title": "HTTP 410 Gone für den Abruf einer gelöschten FHIR-Instanz",
+                    "key": "IG-TI36210TD1",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 2,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                }
+            ]
+        },
+        {
+            "version": "1.1.0",
+            "requirements": [
+                {
+                    "title": "Bundle.entry.request und Bundle.entry.esponse innerhalb des _history Bundles",
+                    "key": "IG-TI52070SA6",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR",
+                    "key": "IG-TI44886ZXA",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 2,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Hostname in Bundle.entry.fullUrl für die ePA",
+                    "key": "IG-TI28940QKS",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "DELETED",
+                    "status": "RETIRED",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Unterstützung versionierter Referenzen im FHIR Data Service",
+                    "key": "IG-TI61673KWG",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "FHIR-Formatunterstützung XML",
+                    "key": "IG-TI62717R2P",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "fhir-format.html"
+                },
+                {
+                    "title": "Bereitstellung des /metadata-Endpunkts durch FHIR Data Service",
+                    "key": "IG-TI38467S3Q",
                     "actor": [
                         "EPA-Audit-Service",
                         "EPA-MHD-Service",
@@ -78,27 +164,25 @@
                     "status": "ACTIVE",
                     "conformance": "SHALL",
                     "path": "general-principles.html"
-                }
-            ]
-        },
-        {
-            "version": "1.1.0",
-            "requirements": [
+                },
                 {
-                    "title": "Unterstützung von _include:iterate",
-                    "key": "IG-TI00242W49",
+                    "title": "Unterstützung des _format-Parameters im FHIR Data Service",
+                    "key": "IG-TI18063SU7",
                     "actor": [
-                        "EPA-Medication-Service"
+                        "EPA-Audit-Service",
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
                     ],
                     "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
-                    "path": "query-api-search.html"
+                    "path": "fhir-format.html"
                 },
                 {
-                    "title": "Referenzierung einer spezifischen Version einer FHIR-Instanz",
-                    "key": "IG-TI02423P7B",
+                    "title": "Bereitstellung eines Bundles mit dem Typ history als Antwort",
+                    "key": "IG-TI94321ZRC",
                     "actor": [
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
@@ -110,72 +194,10 @@
                     "path": "general-principles.html"
                 },
                 {
-                    "title": "Abruf einer spezifischen Ressourcenversion über die FHIR API",
-                    "key": "IG-TI06008V22",
+                    "title": "Befüllungspflicht für Must Support",
+                    "key": "IG-TI87140VUU",
                     "actor": [
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Aufsteigende Sequenz der Resource.meta.versionId",
-                    "key": "IG-TI06069XBQ",
-                    "actor": [
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Unterstützung verketteter Suchparameter",
-                    "key": "IG-TI06315TQ1",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "404 Not Found Antwort für nicht existierende spezifische Versionen",
-                    "key": "IG-TI06872YZP",
-                    "actor": [
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Verarbeitung von referenzierten Ressourcen in Include-Suchen",
-                    "key": "IG-TI08134XQ4",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Verarbeitung für Must Support",
-                    "key": "IG-TI09377BM6",
-                    "actor": [
+                        "EPA-CS-KTR",
                         "EPA-FdV",
                         "EPA-PS"
                     ],
@@ -186,33 +208,11 @@
                     "path": "general-principles.html"
                 },
                 {
-                    "title": "Behandlung des Löschvorgangs als versioniertes Ereignis",
-                    "key": "IG-TI11342RSA",
+                    "title": "Standardformat für den FHIR Data Service",
+                    "key": "IG-TI62490PR0",
                     "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Abruf früherer Versionen einer gelöschten Instanz",
-                    "key": "IG-TI16700VFJ",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Implementierung der _history-Abfrage gemäß HL7 FHIR Spezifikation",
-                    "key": "IG-TI16747WFN",
-                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-MHD-Service",
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
@@ -220,23 +220,11 @@
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
-                    "path": "general-principles.html"
+                    "path": "fhir-format.html"
                 },
                 {
-                    "title": "Unterstützung von _revinclude:iterate",
-                    "key": "IG-TI17755AMW",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Unterstützung des _format-Parameters im FHIR Data Service",
-                    "key": "IG-TI18063SU7",
+                    "title": "Vorrang des _format-Parameters gegenüber dem Accept Header",
+                    "key": "IG-TI94558MGC",
                     "actor": [
                         "EPA-Audit-Service",
                         "EPA-MHD-Service",
@@ -262,8 +250,22 @@
                     "path": "operation-api.html"
                 },
                 {
-                    "title": " Keine Überschreibung des Content Type Header durch den _format-Parameter bei POST-Nachrichten",
-                    "key": "IG-TI19904KM0",
+                    "title": "Speichern der Profilversion",
+                    "key": "IG-TI90315JPK",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 2,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Unterstützung von XML Content Type für FHIR-Data-Schnittstellen",
+                    "key": "IG-TI57083QMG",
                     "actor": [
                         "EPA-Audit-Service",
                         "EPA-MHD-Service",
@@ -292,81 +294,17 @@
                     "path": "fhir-format.html"
                 },
                 {
-                    "title": "Bundle.entry.request und Bundle.entry.response innerhalb des _history-Bundles bei gelöschten FHIR-Instanzen",
-                    "key": "IG-TI23978E7A",
+                    "title": "Eindeutigkeit der Resource.meta.versionId pro FHIR-Instanz",
+                    "key": "IG-TI44024J5L",
                     "actor": [
-                        "EPA-Medication-Service"
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
                     ],
                     "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
                     "path": "general-principles.html"
-                },
-                {
-                    "title": "Sortierung der Suchergebnisse durch _sort",
-                    "key": "IG-TI27170FRR",
-                    "actor": [
-                        "EPA-CS-Ombudsstelle",
-                        "EPA-FdV",
-                        "EPA-PS"
-                    ],
-                    "version": 3,
-                    "release_status": "MODIFIED",
-                    "status": "ACTIVE",
-                    "conformance": "MAY",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Hostname in Bundle.entry.fullUrl für die ePA",
-                    "key": "IG-TI28940QKS",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "DELETED",
-                    "status": "RETIRED",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Serielle Ausführung transaktionaler Bereiche im FHIR Data Service",
-                    "key": "IG-TI35915ZJ8",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "operation-api.html"
-                },
-                {
-                    "title": "HTTP 410 Gone für den Abruf einer gelöschten FHIR-Instanz",
-                    "key": "IG-TI36210TD1",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Unterstützung Seitennavigationslinks für Paginierungsfunktion",
-                    "key": "IG-TI37232GDE",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-MHD-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 2,
-                    "release_status": "MODIFIED",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-paging.html"
                 },
                 {
                     "title": "Unterstützung der _include-Suche im FHIR Data Service gemäß FHIR",
@@ -381,13 +319,35 @@
                     "path": "query-api-search.html"
                 },
                 {
-                    "title": "Bereitstellung des /metadata-Endpunkts durch FHIR Data Service",
-                    "key": "IG-TI38467S3Q",
+                    "title": "Unterstützung von _include:iterate",
+                    "key": "IG-TI00242W49",
                     "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-MHD-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Abruf einer spezifischen Ressourcenversion über die FHIR API",
+                    "key": "IG-TI06008V22",
+                    "actor": [
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Bundle.entry.request und Bundle.entry.response innerhalb des _history-Bundles bei gelöschten FHIR-Instanzen",
+                    "key": "IG-TI23978E7A",
+                    "actor": [
+                        "EPA-Medication-Service"
                     ],
                     "version": 0,
                     "release_status": "NEW",
@@ -410,11 +370,23 @@
                     "path": "query-api-search.html"
                 },
                 {
-                    "title": "Eindeutigkeit der Resource.meta.versionId pro FHIR-Instanz",
-                    "key": "IG-TI44024J5L",
+                    "title": "Format für versionierte Referenzen",
+                    "key": "IG-TI72725KAW",
                     "actor": [
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Behandlung des Löschvorgangs als versioniertes Ereignis",
+                    "key": "IG-TI11342RSA",
+                    "actor": [
+                        "EPA-Medication-Service"
                     ],
                     "version": 0,
                     "release_status": "NEW",
@@ -438,10 +410,13 @@
                     "path": "fhir-format.html"
                 },
                 {
-                    "title": "Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR",
-                    "key": "IG-TI44886ZXA",
+                    "title": "Formatierung von Referenzen im fullUrl-Feld",
+                    "key": "IG-TI95143N18",
                     "actor": [
-                        "EPA-Medication-Service"
+                        "EPA-Audit-Service",
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
                     ],
                     "version": 2,
                     "release_status": "MODIFIED",
@@ -450,8 +425,49 @@
                     "path": "query-api-search.html"
                 },
                 {
-                    "title": "Umsetzung der Versionierte Referenzen gemäß FHIR",
-                    "key": "IG-TI47719G19",
+                    "title": "Unterstützung der umgekehrten verketteten Parametersuche",
+                    "key": "IG-TI87465NYV",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Sortierung der Suchergebnisse durch _sort",
+                    "key": "IG-TI27170FRR",
+                    "actor": [
+                        "EPA-CS-Ombudsstelle",
+                        "EPA-FdV",
+                        "EPA-PS"
+                    ],
+                    "version": 3,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "MAY",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Unterstützung des Accept Header für Formatwahl im FHIR Data Service",
+                    "key": "IG-TI96963Y60",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "fhir-format.html"
+                },
+                {
+                    "title": "Aufsteigende Sequenz der Resource.meta.versionId",
+                    "key": "IG-TI06069XBQ",
                     "actor": [
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
@@ -463,8 +479,82 @@
                     "path": "general-principles.html"
                 },
                 {
-                    "title": "Bundle.entry.request und Bundle.entry.esponse innerhalb des _history Bundles",
-                    "key": "IG-TI52070SA6",
+                    "title": "Verarbeitung von referenzierten Ressourcen in Include-Suchen",
+                    "key": "IG-TI08134XQ4",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Implementierung der _history-Abfrage gemäß HL7 FHIR Spezifikation",
+                    "key": "IG-TI16747WFN",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Kennzeichnung gelöschter Instanzen statt physischer Entfernung",
+                    "key": "IG-TI66054HX2",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Versionsprüfung bei Schreiboperationen im FHIR Data Service",
+                    "key": "IG-TI82011VRG",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "operation-api.html"
+                },
+                {
+                    "title": "Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung",
+                    "key": "IG-TI94882PRF",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Serielle Ausführung transaktionaler Bereiche im FHIR Data Service",
+                    "key": "IG-TI35915ZJ8",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "operation-api.html"
+                },
+                {
+                    "title": "Initiale Versionierung neu erstellter oder hinzugefügter FHIR-Instanzen",
+                    "key": "IG-TI59347HCY",
                     "actor": [
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
@@ -502,11 +592,62 @@
                     "path": "general-principles.html"
                 },
                 {
-                    "title": "Unterstützung von XML Content Type für FHIR-Data-Schnittstellen",
-                    "key": "IG-TI57083QMG",
+                    "title": "Unterstützung des :iterate-Modifikators",
+                    "key": "IG-TI97020UTC",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Unterstützung Seitennavigationslinks für Paginierungsfunktion",
+                    "key": "IG-TI37232GDE",
                     "actor": [
                         "EPA-Audit-Service",
                         "EPA-MHD-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 2,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-paging.html"
+                },
+                {
+                    "title": "Verarbeitung für Must Support",
+                    "key": "IG-TI09377BM6",
+                    "actor": [
+                        "EPA-FdV",
+                        "EPA-PS"
+                    ],
+                    "version": 2,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Verwendung relativer URLs bei der Paginierung von FHIR-Bundles",
+                    "key": "IG-TI78112H2T",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 3,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "MAY",
+                    "path": "query-api-paging.html"
+                },
+                {
+                    "title": "Abruf der Versionshistorie aller Instanzen eines ResourceType",
+                    "key": "IG-TI60515LXY",
+                    "actor": [
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
                     ],
@@ -514,7 +655,94 @@
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
-                    "path": "fhir-format.html"
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Unterstützung verketteter Suchparameter",
+                    "key": "IG-TI06315TQ1",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite",
+                    "key": "IG-TI92941JBA",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Unterstützung von _revinclude:iterate",
+                    "key": "IG-TI17755AMW",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Referenzierung einer spezifischen Version einer FHIR-Instanz",
+                    "key": "IG-TI02423P7B",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Umsetzung der Versionierte Referenzen gemäß FHIR",
+                    "key": "IG-TI47719G19",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "HTTP 410 Gone für den Abruf einer gelöschten FHIR-Instanz",
+                    "key": "IG-TI36210TD1",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Abruf der Versionshistorie einer FHIR-Instanz",
+                    "key": "IG-TI78384PEX",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
                 },
                 {
                     "title": "FHIR-Formatunterstützung JSON",
@@ -532,47 +760,8 @@
                     "path": "fhir-format.html"
                 },
                 {
-                    "title": "Initiale Versionierung neu erstellter oder hinzugefügter FHIR-Instanzen",
-                    "key": "IG-TI59347HCY",
-                    "actor": [
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Abruf der Versionshistorie aller Instanzen eines ResourceType",
-                    "key": "IG-TI60515LXY",
-                    "actor": [
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Unterstützung versionierter Referenzen im FHIR Data Service",
-                    "key": "IG-TI61673KWG",
-                    "actor": [
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Standardformat für den FHIR Data Service",
-                    "key": "IG-TI62490PR0",
+                    "title": " Keine Überschreibung des Content Type Header durch den _format-Parameter bei POST-Nachrichten",
+                    "key": "IG-TI19904KM0",
                     "actor": [
                         "EPA-Audit-Service",
                         "EPA-MHD-Service",
@@ -586,23 +775,8 @@
                     "path": "fhir-format.html"
                 },
                 {
-                    "title": "FHIR-Formatunterstützung XML",
-                    "key": "IG-TI62717R2P",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-MHD-Service",
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "fhir-format.html"
-                },
-                {
-                    "title": "Kennzeichnung gelöschter Instanzen statt physischer Entfernung",
-                    "key": "IG-TI66054HX2",
+                    "title": "Abruf früherer Versionen einer gelöschten Instanz",
+                    "key": "IG-TI16700VFJ",
                     "actor": [
                         "EPA-Medication-Service"
                     ],
@@ -626,8 +800,8 @@
                     "path": "general-principles.html"
                 },
                 {
-                    "title": "Format für versionierte Referenzen",
-                    "key": "IG-TI72725KAW",
+                    "title": "404 Not Found Antwort für nicht existierende spezifische Versionen",
+                    "key": "IG-TI06872YZP",
                     "actor": [
                         "EPA-Medication-Service",
                         "EPA-Patient-Service"
@@ -637,186 +811,25 @@
                     "status": "ACTIVE",
                     "conformance": "SHALL",
                     "path": "general-principles.html"
-                },
-                {
-                    "title": "Verwendung relativer URLs bei der Paginierung von FHIR-Bundles",
-                    "key": "IG-TI78112H2T",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-MHD-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 3,
-                    "release_status": "MODIFIED",
-                    "status": "ACTIVE",
-                    "conformance": "MAY",
-                    "path": "query-api-paging.html"
-                },
-                {
-                    "title": "Abruf der Versionshistorie einer FHIR-Instanz",
-                    "key": "IG-TI78384PEX",
-                    "actor": [
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Versionsprüfung bei Schreiboperationen im FHIR Data Service",
-                    "key": "IG-TI82011VRG",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "operation-api.html"
-                },
-                {
-                    "title": "Befüllungspflicht für Must Support",
-                    "key": "IG-TI87140VUU",
-                    "actor": [
-                        "EPA-CS-KTR",
-                        "EPA-FdV",
-                        "EPA-PS"
-                    ],
-                    "version": 2,
-                    "release_status": "MODIFIED",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Unterstützung der umgekehrten verketteten Parametersuche",
-                    "key": "IG-TI87465NYV",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Speichern der Profilversion",
-                    "key": "IG-TI90315JPK",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 2,
-                    "release_status": "MODIFIED",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite",
-                    "key": "IG-TI92941JBA",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Bereitstellung eines Bundles mit dem Typ history als Antwort",
-                    "key": "IG-TI94321ZRC",
-                    "actor": [
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Vorrang des _format-Parameters gegenüber dem Accept Header",
-                    "key": "IG-TI94558MGC",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-MHD-Service",
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "fhir-format.html"
-                },
-                {
-                    "title": "Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung",
-                    "key": "IG-TI94882PRF",
-                    "actor": [
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Formatierung von Referenzen im fullUrl-Feld",
-                    "key": "IG-TI95143N18",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-MHD-Service",
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 2,
-                    "release_status": "MODIFIED",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Unterstützung des Accept Header für Formatwahl im FHIR Data Service",
-                    "key": "IG-TI96963Y60",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-MHD-Service",
-                        "EPA-Medication-Service",
-                        "EPA-Patient-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "fhir-format.html"
-                },
-                {
-                    "title": "Unterstützung des :iterate-Modifikators",
-                    "key": "IG-TI97020UTC",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
                 }
             ]
         },
         {
             "version": "1.0.1",
             "requirements": [
+                {
+                    "title": "Ignorieren unbekannter Suchparameter",
+                    "key": "IG-TI54164LKA",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "DELETED",
+                    "status": "RETIRED",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
                 {
                     "title": "Verarbeitung von referenzierten Ressourcen in Include-Suchen",
                     "key": "IG-TI08134XQ4",
@@ -841,19 +854,6 @@
                     "status": "ACTIVE",
                     "conformance": "SHALL",
                     "path": "general-principles.html"
-                },
-                {
-                    "title": "Ignorieren unbekannter Suchparameter",
-                    "key": "IG-TI54164LKA",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "DELETED",
-                    "status": "RETIRED",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
                 },
                 {
                     "title": "Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite",
@@ -886,8 +886,20 @@
                     "path": "general-principles.html"
                 },
                 {
-                    "title": "Unterstützung URL-Parameter für Paginierungsfunktion",
-                    "key": "IG-TI07252NTV",
+                    "title": "Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR",
+                    "key": "IG-TI44886ZXA",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Hostname in Bundle.entry.fullUrl für die ePA",
+                    "key": "IG-TI28940QKS",
                     "actor": [
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
@@ -896,11 +908,37 @@
                     "release_status": "NEW",
                     "status": "ACTIVE",
                     "conformance": "SHALL",
-                    "path": "query-api-paging.html"
+                    "path": "query-api-search.html"
                 },
                 {
-                    "title": "Verarbeitung für Must Support",
-                    "key": "IG-TI09377BM6",
+                    "title": "Exakte Übereinstimmungen bei Ganzzahlen",
+                    "key": "IG-TI14253RWM",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Unterstützung von Präfixen für numerische und Datumsvergleiche",
+                    "key": "IG-TI28968WCS",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Befüllungspflicht für Must Support",
+                    "key": "IG-TI87140VUU",
                     "actor": [
                         "EPA-FdV",
                         "EPA-PS"
@@ -912,8 +950,60 @@
                     "path": "general-principles.html"
                 },
                 {
-                    "title": "Exakte Übereinstimmungen bei Ganzzahlen",
-                    "key": "IG-TI14253RWM",
+                    "title": "Vergleichspräfixe für numerische Werte",
+                    "key": "IG-TI36297YXJ",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Speichern der Profilversion",
+                    "key": "IG-TI90315JPK",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Umsetzung der Sortierfunktion gemäß FHIR",
+                    "key": "IG-TI81327UVF",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Bereichsprüfung für Range- und Period-Typen",
+                    "key": "IG-TI61163GRT",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Ignorieren unbekannter Suchparameter",
+                    "key": "IG-TI54164LKA",
                     "actor": [
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
@@ -938,6 +1028,70 @@
                     "path": "general-principles.html"
                 },
                 {
+                    "title": "Unterstützung der _include-Suche im FHIR Data Service gemäß FHIR",
+                    "key": "IG-TI38183K0G",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Unterstützung der Präzision bei numerischen und Datums-Suchparametern",
+                    "key": "IG-TI31988JEY",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Formatierung von Referenzen im fullUrl-Feld",
+                    "key": "IG-TI95143N18",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Vergleichspräfixe für Datumswerte",
+                    "key": "IG-TI85276Y4V",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                },
+                {
+                    "title": "Unterstützung URL-Parameter für Paginierungsfunktion",
+                    "key": "IG-TI07252NTV",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-paging.html"
+                },
+                {
                     "title": "Sortierung der Suchergebnisse durch _sort",
                     "key": "IG-TI27170FRR",
                     "actor": [
@@ -951,8 +1105,8 @@
                     "path": "query-api-search.html"
                 },
                 {
-                    "title": "Hostname in Bundle.entry.fullUrl für die ePA",
-                    "key": "IG-TI28940QKS",
+                    "title": "Standardpräfix für Vergleiche",
+                    "key": "IG-TI40876FQM",
                     "actor": [
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
@@ -964,8 +1118,8 @@
                     "path": "query-api-search.html"
                 },
                 {
-                    "title": "Unterstützung von Präfixen für numerische und Datumsvergleiche",
-                    "key": "IG-TI28968WCS",
+                    "title": "Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles",
+                    "key": "IG-TI64797XGV",
                     "actor": [
                         "EPA-Audit-Service",
                         "EPA-Medication-Service"
@@ -975,6 +1129,45 @@
                     "status": "ACTIVE",
                     "conformance": "SHALL",
                     "path": "query-api-search.html"
+                },
+                {
+                    "title": "Unterstützung Seitennavigationslinks für Paginierungsfunktion",
+                    "key": "IG-TI37232GDE",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-paging.html"
+                },
+                {
+                    "title": "Verarbeitung für Must Support",
+                    "key": "IG-TI09377BM6",
+                    "actor": [
+                        "EPA-FdV",
+                        "EPA-PS"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Verwendung relativer URLs bei der Paginierung von FHIR-Bundles",
+                    "key": "IG-TI78112H2T",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHOULD",
+                    "path": "query-api-paging.html"
                 },
                 {
                     "title": "UUID für Resource.id",
@@ -1003,95 +1196,6 @@
                     "path": "query-api-search.html"
                 },
                 {
-                    "title": "Unterstützung der Präzision bei numerischen und Datums-Suchparametern",
-                    "key": "IG-TI31988JEY",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Vergleichspräfixe für numerische Werte",
-                    "key": "IG-TI36297YXJ",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Unterstützung Seitennavigationslinks für Paginierungsfunktion",
-                    "key": "IG-TI37232GDE",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-paging.html"
-                },
-                {
-                    "title": "Unterstützung der _include-Suche im FHIR Data Service gemäß FHIR",
-                    "key": "IG-TI38183K0G",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Standardpräfix für Vergleiche",
-                    "key": "IG-TI40876FQM",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR",
-                    "key": "IG-TI44886ZXA",
-                    "actor": [
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Ignorieren unbekannter Suchparameter",
-                    "key": "IG-TI54164LKA",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
                     "title": "FHIR-Formatunterstützung JSON",
                     "key": "IG-TI59271UPX",
                     "actor": [
@@ -1103,110 +1207,6 @@
                     "status": "ACTIVE",
                     "conformance": "SHALL",
                     "path": "general-principles.html"
-                },
-                {
-                    "title": "Bereichsprüfung für Range- und Period-Typen",
-                    "key": "IG-TI61163GRT",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles",
-                    "key": "IG-TI64797XGV",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Verwendung relativer URLs bei der Paginierung von FHIR-Bundles",
-                    "key": "IG-TI78112H2T",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHOULD",
-                    "path": "query-api-paging.html"
-                },
-                {
-                    "title": "Umsetzung der Sortierfunktion gemäß FHIR",
-                    "key": "IG-TI81327UVF",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Vergleichspräfixe für Datumswerte",
-                    "key": "IG-TI85276Y4V",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
-                },
-                {
-                    "title": "Befüllungspflicht für Must Support",
-                    "key": "IG-TI87140VUU",
-                    "actor": [
-                        "EPA-FdV",
-                        "EPA-PS"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Speichern der Profilversion",
-                    "key": "IG-TI90315JPK",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "general-principles.html"
-                },
-                {
-                    "title": "Formatierung von Referenzen im fullUrl-Feld",
-                    "key": "IG-TI95143N18",
-                    "actor": [
-                        "EPA-Audit-Service",
-                        "EPA-Medication-Service"
-                    ],
-                    "version": 0,
-                    "release_status": "NEW",
-                    "status": "ACTIVE",
-                    "conformance": "SHALL",
-                    "path": "query-api-search.html"
                 }
             ]
         }

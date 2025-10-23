@@ -8,6 +8,12 @@ Dieses Profil beschreibt die Verwendung der FHIR-Ressource Practitioner im Konte
 
 
 * insert ProfileMeta
+
+// preserve the version of this resource
+* ^version = "1.1.1"
+* ^date = "2025-09-12"
+* ^status = #active
+
 * id MS
 * identifier MS
   * ^slicing.discriminator.type = #pattern

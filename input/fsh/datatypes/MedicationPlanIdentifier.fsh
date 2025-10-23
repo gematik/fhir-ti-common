@@ -6,6 +6,12 @@ Description: """
 Definiert die Struktur des Identifikators für einen Eintrag im elektronischen Medikationsplan (eMP). Der Identifikator ermöglicht die eindeutige technische Referenzierung einzelner eMP-Einträge.
 """
 * insert Meta
+
+// preserve the version of this resource
+* ^version = "1.1.1"
+* ^date = "2025-09-12"
+* ^status = #active
+
 * use = #official (exactly)
   * ^short = "official"
 * system 1..1 MS
