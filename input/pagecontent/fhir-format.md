@@ -14,12 +14,7 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
     Der FHIR Data Service MUSS für Anfragenachrichten und Antwortnachrichten an den Schnittstellen den Content Type <code>application/fhir+xml</code> unterstützen.
 </requirement>
 <requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI96963Y60" title="Unterstützung des Accept Header für Formatwahl im FHIR Data Service" version="0">
-    Der FHIR Data Service MUSS den <i>Accept</i>-Header in eingehenden HTTP-Anfragen auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i>Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem angegebenen Format verarbeiten.
-    <br/><br/>
-    <ul>
-        <li>Wenn der Accept Header auf <i>application/fhir+json</i> gesetzt ist, MUSS die Antwort in diesem Format erfolgen.</li>
-        <li>Wenn der Accept Header auf <i>application/fhir+xml</i> gesetzt ist, MUSS die Antwort in diesem Format erfolgen.</li>
-    </ul>
+    Der FHIR Data Service MUSS den <i>Accept</i>-Header in eingehenden HTTP-Anfragen auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i>Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem Format zurückgeben, das von den beiden Formaten als beste Option angegeben wurde.
 </requirement>
 
 **Beispiel für JSON (_application/fhir+json_)**
@@ -95,4 +90,8 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=10&_offset=20&_format=json
 
 <requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI44797PGD" title="Verhalten bei nicht unterstützten Formaten" version="0">
     Der FHIR Data Service MUSS das Standardformat verwenden, wenn ein nicht unterstütztes Format über den <i>Accept</i> Header oder den <i>_format</i>-Parameter angefordert wird.
+</requirement>
+
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" title="Verhalten bei mehreren gleichrangigen Formaten">
+    Der FHIR Data Service MUSS das Standardformat verwenden, wenn mehrere unterstützte Formate gleichrangig über den <i>Accept</i> Header oder den <i>_format</i>-Parameter angefordert werden.
 </requirement>
