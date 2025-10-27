@@ -1,0 +1,22 @@
+actor:
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: 1cb3d53aecd5dd7f465cb20b5252ace66b0be593f7df850e0096c8d1f5470193
+created: '2025-03-10T12:54:11.422356'
+date: '2025-05-27T09:33:08.791116'
+key: IG-TI06008V22
+modified: '2025-05-27T09:33:08.791114'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
+text: Der FHIR Data Service MUSS das Lesen spezifischer Versionen von FHIR-Instanzen
+  gemäß der HL7 FHIR Spezifikation [FHIR Version Read] implementieren. Dabei MUSS
+  eine angeforderte Version einer Instanz über eine <i>GET</i>-Anfrage der Form <i>[base]/[resourceType]/[id]/_history/[versionId]</i>
+  bereitgestellt werden. Die Antwort MUSS die angeforderte Version der Instanz enthalten,
+  einschließlich der zugehörigen Metadaten (<i>meta.versionId</i>, <i>meta.lastUpdated</i>).
+title: Abruf einer spezifischen Ressourcenversion über die FHIR API
+version: 0

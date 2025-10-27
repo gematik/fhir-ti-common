@@ -1,0 +1,22 @@
+actor:
+- EPA-Audit-Service
+- EPA-MHD-Service
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: 0a9086fa476a0995626bb4c866662840b196e0aed2a527cf23bb58b9046f43ac
+created: '2025-03-06T13:30:46.537743'
+date: '2025-03-12T12:47:19.474259'
+key: IG-TI62717R2P
+modified: '2025-03-12T12:47:19.474257'
+release_status: STABLE
+source: input/pagecontent/fhir-format.md
+status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
+text: Der FHIR Data Service MUSS das FHIR-Format in [FHIR XML] verarbeiten können.
+title: FHIR-Formatunterstützung XML
+version: 0

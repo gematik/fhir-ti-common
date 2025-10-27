@@ -1,0 +1,18 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+content_hash: 03b8e6aa702891de98322fcb2af281f2e9ddfa6d728d91b4c7441696ab093043
+created: '2025-03-10T12:54:11.422786'
+date: '2025-03-10T12:54:11.422788'
+key: IG-TI11342RSA
+modified: '2025-03-10T12:54:11.422787'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+text: Der FHIR Data Service MUSS das Löschen einer Instanz als ein Ereignis im Lebenszyklus
+  der Instanz behandeln, indem eine neue Version erstellt wird, die den gelöschten
+  Zustand widerspiegelt.
+title: Behandlung des Löschvorgangs als versioniertes Ereignis
+version: 0

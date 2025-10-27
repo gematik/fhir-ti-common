@@ -1,0 +1,20 @@
+actor:
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: 2c80aab248c22fe521cb6dc487065a99d9503473cfee2a943d2ab71bf86ee64d
+created: '2025-03-10T12:54:11.423868'
+date: '2025-03-14T10:33:08.469448'
+key: IG-TI72725KAW
+modified: '2025-03-14T10:33:08.469446'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
+text: 'Der FHIR Data Service MUSS das Format für versionierte Referenzen verwenden,
+  das den Ressourcentyp, die <i>Resource.id</i> und die <i>Meta.versionId</i> beinhaltet:
+  <i>[ResourceType]/[id]/_history/[versionId]</i>.'
+title: Format für versionierte Referenzen
+version: 0

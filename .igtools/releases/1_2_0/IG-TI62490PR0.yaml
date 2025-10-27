@@ -1,0 +1,24 @@
+actor:
+- EPA-Audit-Service
+- EPA-MHD-Service
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: 8df88277f1af5db7ddddd17b9dd2047e8c4499d693585ee683e936d9ec34a501
+created: '2025-03-06T13:30:46.537950'
+date: '2025-03-12T12:47:19.474966'
+key: IG-TI62490PR0
+modified: '2025-03-12T12:47:19.474964'
+release_status: STABLE
+source: input/pagecontent/fhir-format.md
+status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
+text: Der FHIR Data Service MUSS das Format <i>application/fhir+json</i> verwenden,
+  wenn in der Anfragenachricht kein <i>Accept</i> Header oder <i>_format</i>-Parameter
+  angegeben ist.
+title: Standardformat für den FHIR Data Service
+version: 0

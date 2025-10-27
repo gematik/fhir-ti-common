@@ -1,0 +1,22 @@
+actor:
+- EPA-Audit-Service
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: 2bc57345bbe3e62089fa8a481df13974155283b575470e0540d314e81d3ca84f
+created: '2025-03-07T10:54:47.697675'
+date: '2025-03-12T12:47:19.475986'
+key: IG-TI43409LRQ
+modified: '2025-03-12T12:47:19.475983'
+release_status: STABLE
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
+text: Der FHIR Data Service MUSS sicherstellen, dass für jede Ressource, die direkt
+  den in der Suchanfrage angegebenen Kriterien entspricht, das Attribut <i>entry.search.mode</i>
+  auf <i>match</i> gesetzt wird.
+title: Verwendung von entry.search.mode = match
+version: 0

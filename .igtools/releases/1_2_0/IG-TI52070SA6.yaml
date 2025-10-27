@@ -1,0 +1,24 @@
+actor:
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: d52393a40a1bc9c64c5deb224c03854d6f8af17cc451b94909be77d7e4efd29c
+created: '2025-03-10T12:54:11.422187'
+date: '2025-03-12T12:47:19.482584'
+key: IG-TI52070SA6
+modified: '2025-03-12T12:47:19.482583'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
+text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> für\
+  \ jede Version einer FHIR-Instanz die zugehörigen <i>entry.request</i>- und <i>entry.response</i>-Elemente\
+  \ bereitstellen.\n    <br/><br/>\n    <ul>\n        <li>Das <i>entry.request</i>-Element\
+  \ MUSS die Methode (<i>method</i>) und die URL (<i>url</i>) enthalten, unter der\
+  \ diese spezifische Version abrufbar ist.</li>\n        <li>Das <i>entry.response</i>-Element\
+  \ MUSS den Status (<i>status</i>) sowie das Datum der letzten Änderung (<i>lastModified</i>)\
+  \ enthalten.</li>\n    </ul>"
+title: Bundle.entry.request und Bundle.entry.esponse innerhalb des _history Bundles
+version: 0

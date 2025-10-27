@@ -1,0 +1,21 @@
+actor:
+- EPA-FdV
+- EPA-PS
+conformance: SHALL
+content_hash: 7c20974774525900465f04a892b07afb7b94ccfb30d9d9ddd2abfc4b54a8a443
+created: '2025-02-26T10:59:21.321306'
+date: '2025-05-27T09:33:08.789870'
+key: IG-TI09377BM6
+modified: '2025-05-27T09:33:08.789868'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-FdV: []
+  EPA-PS: []
+text: Das Client-System, das lesend ein FHIR-Profil des FHIR Data Service implementiert,
+  MUSS in der Lage sein, alle Must-Support-Elemente in FHIR-Instanzen zu verarbeiten.
+  Das Client-System MUSS auch Must-Support-Elemente ohne Wert verarbeiten können,
+  ohne mit einem Fehler abzubrechen oder die Anwendung abstürzen zu lassen.
+title: Verarbeitung für Must Support
+version: 2
