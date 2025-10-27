@@ -52,7 +52,6 @@ Dieses Capability Statement Profil dient als TI-weit gültige Referenz für die 
 #### Common Capability Statements Extensions
 
 {% capture tihttpbasic %}
-StructureDefinition/extension-base-url,
 StructureDefinition/extension-http-header,
 StructureDefinition/extension-http-response-info,
 StructureDefinition/extension-http-method

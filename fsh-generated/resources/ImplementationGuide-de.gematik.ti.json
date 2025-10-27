@@ -57,14 +57,6 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/extension-base-url"
-        },
-        "name": "Base URL der FHIR-API",
-        "description": "Gibt die Basis-URL des FHIR-Servers als Zeichenkette an. Beispiel: http://epa4all/epa/medication/api/v1/fhir",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/ti-capability-statement"
         },
         "name": "Capability Statement Profil für TI FHIR Data Service",
