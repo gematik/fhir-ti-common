@@ -27,6 +27,9 @@ The html source does not contain the publish box; this is recommended for publis
 
 # Ignoring Warnings: We are using a custom template of our own
 %publish box%
+%Illegal HTML: Illegal HTML element: requirement%
+%Name should be usable as an identifier for the module by machine processing applications such as code generation%
+
 
 # Deprecated information
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
