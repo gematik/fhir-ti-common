@@ -17,6 +17,8 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
     Der FHIR Data Service MUSS den <i>Accept</i>-Header in eingehenden HTTP-Anfragen auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i>Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem Format zurückgeben, das von den beiden Formaten als beste Option angegeben wurde.
 </requirement>
 
+_Hinweis:_ Einzelne Schnittstellen eines FHIR Data Services können über andere oder weitere Rückgabeformate verfügen.
+
 **Beispiel für JSON (_application/fhir+json_)**
 
 ```
