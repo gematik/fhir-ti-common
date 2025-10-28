@@ -1,6 +1,25 @@
 {
     "releases": [
         {
+            "version": "1.2.0",
+            "requirements": [
+                {
+                    "title": "Sortierung des Datentyps Period",
+                    "key": "IG-TI00141ZJ2",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html"
+                }
+            ]
+        },
+        {
             "version": "1.1.1",
             "requirements": [
                 {
