@@ -13,7 +13,7 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
 <requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI57083QMG" title="Unterstützung von XML Content Type für FHIR-Data-Schnittstellen" version="0">
     Der FHIR Data Service MUSS für Anfragenachrichten und Antwortnachrichten an den Schnittstellen den Content Type <code>application/fhir+xml</code> unterstützen.
 </requirement>
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI96963Y60" title="Unterstützung des Accept Header für Formatwahl im FHIR Data Service" version="0">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI96963Y60" title="Unterstützung des Accept Header für Formatwahl im FHIR Data Service" version="1">
     Der FHIR Data Service MUSS den <i>Accept</i>-Header in eingehenden HTTP-Anfragen auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i>Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem Format zurückgeben, das von den beiden Formaten als bevorzugte Option angegeben wurde.
 </requirement>
 
@@ -78,7 +78,7 @@ Content-Type: application/fhir+xml
 GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=10&_offset=20&_format=json
 ```
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI62490PR0" title="Standardformat für den FHIR Data Service" version="0">
+<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-Patient-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI62490PR0" title="Standardformat für den FHIR Data Service" version="1">
     Der FHIR Data Service MUSS, sofern die entsprechende Schnittstelle ein FHIR-Format zurückgibt, das Format <i>application/fhir+json</i> verwenden, wenn in der Anfragenachricht kein unterstütztes Format durch den <i>_format</i>-Parameter, und
     <ul>
         <li>kein <i>Accept</i> Header,</li>
