@@ -12,6 +12,7 @@ Description: "Dieses Profil beschreibt die Fähigkeiten eines FHIR Data Service 
 * format ^short = "Die von der API unterstützten Medientypen, z.B. application/json oder application/fhir+json"
 
 * extension contains 
+  BaseUrl named baseUrl 0..1 and
   HTTPHeader named header 0.. and
   HttpResponseInfo named responseInfo 0..
 

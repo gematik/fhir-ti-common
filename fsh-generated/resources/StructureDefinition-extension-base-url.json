@@ -1,0 +1,63 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "extension-base-url",
+  "url": "https://gematik.de/fhir/ti/StructureDefinition/extension-base-url",
+  "version": "1.1.1",
+  "name": "BaseUrl",
+  "title": "Base URL der FHIR-API",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-12",
+  "publisher": "gematik GmbH",
+  "description": "Gibt die Basis-URL des FHIR-Servers als Zeichenkette an. Beispiel: http://epa4all/epa/medication/api/v1/fhir",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "CapabilityStatement"
+    },
+    {
+      "type": "element",
+      "expression": "Endpoint"
+    },
+    {
+      "type": "element",
+      "expression": "ImplementationGuide"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Base URL der FHIR-API",
+        "definition": "Gibt die Basis-URL des FHIR-Servers als Zeichenkette an. Beispiel: http://epa4all/epa/medication/api/v1/fhir"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/ti/StructureDefinition/extension-base-url"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Die Base-URL, z.B. http://epa4all/epa/medication/api/v1/fhir",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}
