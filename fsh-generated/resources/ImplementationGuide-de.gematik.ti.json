@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/ti/ImplementationGuide/de.gematik.ti",
   "version": "1.2.0",
   "name": "gemIG_TI_Common",
-  "title": "Telematikinfrastruktur (TI) Common",
+  "title": "Implementation Guide Telematikinfrastruktur (TI) Common",
   "status": "active",
   "experimental": false,
   "date": "2025-11-03",
