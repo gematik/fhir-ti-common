@@ -390,12 +390,12 @@
         "value": "extracted/resources"
       },
       {
-        "code": "path-resource",
-        "value": "input/content"
+        "code": "path-pages",
+        "value": "input/intro-notes"
       },
       {
         "code": "path-pages",
-        "value": "input/intro-notes"
+        "value": "input/content"
       },
       {
         "code": "no-validate",

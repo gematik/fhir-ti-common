@@ -102,9 +102,9 @@ parameters:
   path-resource:
     - fsh-generated/resources
     - extracted/resources
-    - input/content
   path-pages:
     - input/intro-notes
+    - input/content
   no-validate:
     - MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43
     - Bundle/example-history-bundle
