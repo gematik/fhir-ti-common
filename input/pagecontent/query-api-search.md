@@ -415,5 +415,5 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_sort=action,-date
     <actor name="EPA-Audit-Service"></actor>
     <actor name="EPA-Medication-Service"></actor>
     <actor name="EPA-MHD-Service"></actor>
-    Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen muss sofern vorhanden weitergehend nach <i>Period.end</i> sortiert werden.
+    Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen muss sofern vorhanden weitergehend nach <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.end</i>-Wert ist hierbei als noch offen, also unendlich anzusehen.
 </requirement>
