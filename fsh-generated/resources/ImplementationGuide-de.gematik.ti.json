@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/ti/ImplementationGuide/de.gematik.ti",
   "version": "1.2.0",
   "name": "gemIG_TI_Common",
-  "title": "Telematikinfrastruktur (TI) Common",
+  "title": "Implementation Guide Telematikinfrastruktur (TI) Common",
   "status": "active",
   "experimental": false,
   "date": "2025-11-03",
@@ -55,6 +55,14 @@
   ],
   "definition": {
     "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-base-url"
+        },
+        "name": "Base URL der FHIR-API",
+        "description": "Gibt die Basis-URL des FHIR-Servers als Zeichenkette an. Beispiel: http://epa4all/epa/medication/api/v1/fhir",
+        "exampleBoolean": false
+      },
       {
         "reference": {
           "reference": "StructureDefinition/ti-capability-statement"
@@ -382,12 +390,12 @@
         "value": "extracted/resources"
       },
       {
-        "code": "path-resource",
-        "value": "input/content"
+        "code": "path-pages",
+        "value": "input/intro-notes"
       },
       {
         "code": "path-pages",
-        "value": "input/intro-notes"
+        "value": "input/content"
       },
       {
         "code": "no-validate",

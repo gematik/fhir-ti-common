@@ -1,3 +1,27 @@
+Extension: BaseUrl
+Id: extension-base-url
+Title: "Base URL der FHIR-API"
+Description: "Gibt die Basis-URL des FHIR-Servers als Zeichenkette an. Beispiel: http://epa4all/epa/medication/api/v1/fhir"
+* insert Meta
+
+// preserve the version of this resource
+* ^version = "1.1.1"
+* ^date = "2025-09-12"
+* ^status = #active
+
+// Wo darf die Extension verwendet werden?
+* ^context[+].type = #element
+* ^context[=].expression = "CapabilityStatement"
+* ^context[+].type = #element
+* ^context[=].expression = "Endpoint"
+* ^context[+].type = #element
+* ^context[=].expression = "ImplementationGuide"
+
+// Nur ein Wert vom Typ string erlaubt
+* value[x] only string
+* valueString ^short = "Die Base-URL, z.B. http://epa4all/epa/medication/api/v1/fhir"
+
+
 Extension: HTTPHeader
 Id: extension-http-header
 Title: "HTTP Header"

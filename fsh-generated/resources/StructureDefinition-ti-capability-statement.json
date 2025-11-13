@@ -34,18 +34,19 @@
         "mustSupport": true
       },
       {
-        "id": "CapabilityStatement.extension",
+        "id": "CapabilityStatement.extension:baseUrl",
         "path": "CapabilityStatement.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
+        "sliceName": "baseUrl",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/ti/StructureDefinition/extension-base-url"
+            ]
+          }
+        ]
       },
       {
         "id": "CapabilityStatement.extension:header",
@@ -95,20 +96,6 @@
         "short": "Die von der API unterstützten Medientypen, z.B. application/json oder application/fhir+json"
       },
       {
-        "id": "CapabilityStatement.rest.resource.interaction.extension",
-        "path": "CapabilityStatement.rest.resource.interaction.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "CapabilityStatement.rest.resource.interaction.extension:header",
         "path": "CapabilityStatement.rest.resource.interaction.extension",
         "sliceName": "header",
@@ -152,20 +139,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "CapabilityStatement.rest.resource.operation.extension",
-        "path": "CapabilityStatement.rest.resource.operation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       },
       {
         "id": "CapabilityStatement.rest.resource.operation.extension:header",
@@ -235,20 +208,6 @@
             "code": "BackboneElement"
           }
         ]
-      },
-      {
-        "id": "CapabilityStatement.rest.operation.extension",
-        "path": "CapabilityStatement.rest.operation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       },
       {
         "id": "CapabilityStatement.rest.operation.extension:header",
