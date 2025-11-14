@@ -4,11 +4,11 @@ actor:
 - EPA-Medication-Service
 - EPA-Patient-Service
 conformance: SHALL
-content_hash: 3a8d1f230587c7930a3f69c99aa4221b0dc6b459c3220a443b1bfccf8931e8d1
+content_hash: 20aec8f005cd8c1d8cedac3ed27729611cfbc731ae30cbfd04f06419e3e335d2
 created: '2025-03-06T13:30:46.537950'
-date: '2025-10-29T09:03:51.297854'
+date: '2025-11-14T09:34:47.788257'
 key: IG-TI62490PR0
-modified: '2025-10-29T09:03:51.297847'
+modified: '2025-11-14T09:34:47.788257'
 release_status: MODIFIED
 source: input/pagecontent/fhir-format.md
 status: ACTIVE
@@ -20,7 +20,7 @@ test_procedures:
 text: "Der FHIR Data Service MUSS, sofern die entsprechende Schnittstelle ein FHIR-Format\
   \ zurückgibt, das Format <i>application/fhir+json</i> verwenden, wenn in der Anfragenachricht\
   \ kein unterstütztes Format durch den <i>_format</i>-Parameter, und\n <ul>\n <li>kein\
-  \ <i>Accept</i> Header,</li>\n <li>oder durch den <i>Accept</i> keine eindeutige\
+  \ <i>Accept</i> Header,</li>\n <li>oder durch den <i>Accept</i> Header keine eindeutige\
   \ Präferenz eines unterstützten Formats</li>\n </ul>\n angegeben ist."
 title: Standardformat für den FHIR Data Service
 version: 1

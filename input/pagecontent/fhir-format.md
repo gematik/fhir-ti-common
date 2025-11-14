@@ -82,7 +82,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=10&_offset=20&_format=json
     Der FHIR Data Service MUSS, sofern die entsprechende Schnittstelle ein FHIR-Format zurückgibt, das Format <i>application/fhir+json</i> verwenden, wenn in der Anfragenachricht kein unterstütztes Format durch den <i>_format</i>-Parameter, und
     <ul>
         <li>kein <i>Accept</i> Header,</li>
-        <li>oder durch den <i>Accept</i> keine eindeutige Präferenz eines unterstützten Formats</li>
+        <li>oder durch den <i>Accept</i> Header keine eindeutige Präferenz eines unterstützten Formats</li>
     </ul>
     angegeben ist.
 </requirement>
