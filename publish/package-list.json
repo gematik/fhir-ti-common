@@ -1,0 +1,48 @@
+{
+    "package-id": "de.gematik.ti",
+    "canonical": "https://gematik.de/fhir/ti",
+    "title": "TI Common",
+    "introduction": "Implementation Guide Telematikinfrastruktur (TI) Common",
+    "list": [
+        {
+            "version": "1.0.1",
+            "desc": "TI Common IG 1.0.1.",
+            "path": "https://gematik.de/fhir/ti/1.0.1",
+            "status": "release",
+            "current": false,
+            "date": "2025-05-09",
+            "sequence": "TI",
+            "fhirversion": "4.0.1"
+        },
+        {
+            "version": "1.1.0",
+            "desc": "TI Common IG 1.1.0",
+            "path": "https://gematik.de/fhir/ti/1.1.0",
+            "status": "release",
+            "current": false,
+            "date": "2025-05-28",
+            "sequence": "TI",
+            "fhirversion": "4.0.1"
+        },
+        {
+            "version": "1.1.1-ballot.1",
+            "desc": "TI Common IG 1.1.1-ballot.1",
+            "path": "https://gematik.de/fhir/ti/1.1.1-ballot.1",
+            "status": "draft",
+            "current": false,
+            "date": "2025-08-01",
+            "sequence": "TI Vorabveröffentlichung",
+            "fhirversion": "4.0.1"
+        },
+        {
+            "version": "1.1.1",
+            "desc": "TI Common IG 1.1.1",
+            "path": "https://gematik.de/fhir/ti/1.1.1",
+            "status": "release",
+            "current": false,
+            "date": "2025-09-12",
+            "sequence": "TI",
+            "fhirversion": "4.0.1"
+        }
+    ]
+}

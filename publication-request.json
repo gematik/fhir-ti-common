@@ -1,14 +1,10 @@
 {
-    "package-id": "de.gematik.ti",
-    "version": "1.2.0",
-    "path": "https://gematik.de/fhir/ti/1.2.0",
-    "status": "release",
-    "title": "TI Common",
-    "category": "gematik",
-    "introduction": "Implementation Guide Telematikinfrastruktur (TI) Common",
-    "first": true,
-    "mode": "milestone",
-    "sequence": "TI",
-    "desc": "TI Common IG 1.2.0",
-    "ci-build": "https://gematik.de/fhir/ti/build/1.2.0"
-  }
+  "package-id": "de.gematik.ti",
+  "version": "1.2.0",
+  "path": "https://gematik.de/fhir/ti/1.2.0",
+  "status": "release",
+  "first": false,
+  "mode": "milestone",
+  "sequence": "TI",
+  "desc": "TI Common IG 1.2.0"
+}

@@ -91,6 +91,16 @@ parameters:
   default-contact: true
   no-usage-check: true
   excludettl: true
+  # For which versions comparisons should be generated.
+  #   {last} - compare with the last published version (whatever it's status)
+  #              - this is the default if the parameter doesn't appear
+  #   {current} - compare with the last full published version
+  #   n/a - don't do any comparison
+  #   [v] - a previous version where [v] is the version
+  version-comparison:
+    # There seem to be an problem when using this flag, maybe 1.1.1-ballot.1 causes issues?
+    # - "{current}"
+    - 1.1.1
   bundle-references-resolve: false
   no-narrative:
     # "StructureDefinition/*" doesn't seem to work anymore

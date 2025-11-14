@@ -45,6 +45,9 @@ RUN dotnet tool install --global Firely.Terminal --version $FIRELY_TERMINAL_VERS
 # Add .NET tools to PATH for vscode user
 ENV PATH="/home/vscode/.dotnet/tools:${PATH}"
 
+# Add fhirscripts
+RUN pipx install -f git+https://github.com/gematik/fhir-scripts.git
+
 # Switch back to root user to perform remaining installations
 USER root
 
