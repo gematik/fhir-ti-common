@@ -1,4 +1,6 @@
-Dieser Implementation Guide verwendet die Schlüsselwörter **MUSS**, **DARF NICHT**, **SOLL NICHT** und **KANN** als deutsche Pendants des [RFC2119], um Anforderungen als Ausdruck normativer Festlegungen zu kennzeichnen.
+Dieser Implementation Guide verwendet die Schlüsselwörter **MUSS**, **DARF NICHT**, **SOLL NICHT** und **KANN** als deutsche Pendants des [RFC2119], um Anforderungen als Ausdruck normativer Festlegungen zu kennzeichnen. Anforderungen werden im Implementation Guide wie folgt dargestellt:
+
+<p><br><b>&lt;IG-ID-Version&gt; - &lt;Titel der Anforderung&gt;</b><br> Text / Beschreibung<br> [&lt;=]</p>
 
 
 ### Eindeutigkeit von FHIR-Ressourcen
