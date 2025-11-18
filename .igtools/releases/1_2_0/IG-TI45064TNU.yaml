@@ -4,15 +4,17 @@ actor:
 conformance: SHALL
 content_hash: 6ead9f78afeb96576f40aa4db7bfb0e66f711b57d29698d336ed8cda0ea697da
 created: '2025-07-22T09:44:40.103842'
-date: '2025-07-22T09:44:40.103867'
+date: '2025-11-18T11:03:10.876714'
 key: IG-TI45064TNU
 modified: '2025-07-22T09:44:40.103865'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
-  EPA-Medication-Service: []
-  EPA-Patient-Service: []
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
 text: Der FHIR Data Service MUSS sicherstellen, dass versionierte Referenzen in Bundles
   entsprechend den Vorgaben in [FHIR Bundle References] auflösbar sind.
 title: Auflösen von versionierten Referenzen in Bundles

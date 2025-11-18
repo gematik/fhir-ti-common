@@ -3,14 +3,15 @@ actor:
 conformance: SHALL
 content_hash: 512e171cfc57f0c6f80d3b9e5aea0ab04d826d617530a7a9e11ff252f206aff9
 created: '2025-03-10T12:54:11.422911'
-date: '2025-03-10T12:54:11.422912'
+date: '2025-11-18T11:03:10.875069'
 key: IG-TI16700VFJ
 modified: '2025-03-10T12:54:11.422912'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
-  EPA-Medication-Service: []
+  EPA-Medication-Service:
+  - Produkttest
 text: Der FHIR Data Service MUSS sicherstellen, dass frühere Versionen einer gelöschten
   Instanz weiterhin über versionsspezifische Endpunkte abrufbar sind.
 title: Abruf früherer Versionen einer gelöschten Instanz

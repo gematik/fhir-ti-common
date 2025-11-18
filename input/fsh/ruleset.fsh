@@ -11,7 +11,8 @@ RuleSet: Meta
 * insert ReleaseStatus
 * ^experimental = false
 * ^publisher = "gematik GmbH"
-* ^date = "2025-09-12"
+* ^date = "2025-12-15"
+* ^copyright = "gematik GmbH"
 
 RuleSet: Meta-VS
 * insert Meta
@@ -19,6 +20,7 @@ RuleSet: Meta-VS
 * ^contact.telecom.value = "https://www.gematik.de"
 * ^experimental = false
 * ^immutable = false
+* ^copyright = "gematik GmbH"
 
 RuleSet: MetaCS
 * insert Meta
@@ -26,13 +28,14 @@ RuleSet: MetaCS
 * ^contact.telecom.value = "https://www.gematik.de"
 * ^caseSensitive = true
 * ^content = #complete
+* ^copyright = "gematik GmbH"
 
 
 RuleSet: MetaInst
 * version = $version
 * insert ReleaseStatusInst
 * publisher = "gematik GmbH"
-* date = "2025-09-12"
+* date = "2025-12-15"
 
 
 RuleSet: ProfileMeta

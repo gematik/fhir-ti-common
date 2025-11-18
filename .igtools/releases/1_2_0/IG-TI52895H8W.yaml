@@ -4,15 +4,17 @@ actor:
 conformance: SHALL
 content_hash: cf32c3802658a856d4e8c25d8951f795c9041e864491df8631df5504278defd4
 created: '2025-03-10T12:54:11.421311'
-date: '2025-05-27T09:33:08.790207'
+date: '2025-11-18T11:03:10.872243'
 key: IG-TI52895H8W
 modified: '2025-05-27T09:33:08.790205'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
-  EPA-Medication-Service: []
-  EPA-Patient-Service: []
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
 text: Der FHIR Data Service MUSS sicherstellen, dass bei einer Aktualisierung einer
   FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt,
   die aktuelle Version unverändert bleibt. In diesem Fall wird keine neue Version

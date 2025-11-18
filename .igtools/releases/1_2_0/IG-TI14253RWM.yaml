@@ -5,16 +5,19 @@ actor:
 conformance: SHALL
 content_hash: 2279c88c340437575f8f276cca9f8bf8ce9ddb290cbf23f433d218f4093d33eb
 created: '2025-02-26T10:59:21.315377'
-date: '2025-02-26T13:55:56.513658'
+date: '2025-11-18T12:35:25.435775'
 key: IG-TI14253RWM
 modified: '2025-02-26T13:55:56.513657'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
 text: Der FHIR Data Service MUSS sicherstellen, dass Suchoperationen für Felder mit
   Ganzzahlen (<i>integer</i>) nur exakte numerische Übereinstimmungen liefern und
   keine Präzisionsanpassungen wie bei Gleitkommazahlen (<i>decimal</i>, <i>quantity</i>)

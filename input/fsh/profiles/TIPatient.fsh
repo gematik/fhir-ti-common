@@ -7,7 +7,7 @@ Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data 
 
 // preserve the version of this resource
 * ^version = "1.2.0"
-* ^date = "2025-11-03"
+* ^date = "2025-12-15"
 * ^status = #active
 
 * obeys pat-de-1

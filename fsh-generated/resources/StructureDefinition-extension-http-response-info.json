@@ -10,6 +10,7 @@
   "date": "2025-09-12",
   "publisher": "gematik GmbH",
   "description": "Definiert Informationen zu HTTP-Antworten für FHIR-Interaktionen, inklusive Statuscode, Beschreibung, Beispiel und Response-Schema.",
+  "copyright": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

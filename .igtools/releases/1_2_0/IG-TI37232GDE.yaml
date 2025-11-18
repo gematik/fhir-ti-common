@@ -5,16 +5,19 @@ actor:
 conformance: SHALL
 content_hash: 0daf98b0db301b7fb1f14cd38a268630d1966504db8e51905b933d21e745aac5
 created: '2025-02-26T10:59:21.318707'
-date: '2025-05-27T09:33:08.784487'
+date: '2025-11-18T12:35:25.442413'
 key: IG-TI37232GDE
 modified: '2025-05-27T09:33:08.784484'
 release_status: STABLE
 source: input/pagecontent/query-api-paging.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
 text: "Der FHIR Data Service MUSS in einem FHIR Search Set Bundle das FHIR-Element\
   \ <code>link</code> belegen, welches eine Liste von Link-Elementen beinhaltet, welche\
   \ jeweils einem spezifischen Navigationszweck innerhalb des FHIR Bundles dienen.<br/><br/>Die\

@@ -3,14 +3,15 @@ actor:
 conformance: SHALL
 content_hash: 1ebfa88486894d8e3d8b81f1504e2c3894390aaa2bc09fded496ea82207986f3
 created: '2025-03-10T12:54:11.423196'
-date: '2025-09-08T11:58:42.118701'
+date: '2025-11-18T11:03:10.875374'
 key: IG-TI36210TD1
 modified: '2025-09-08T11:58:42.118690'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
-  EPA-Medication-Service: []
+  EPA-Medication-Service:
+  - Produkttest
 text: "Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine gelöschte\
   \ FHIR-Instanz oder eine gelöschte Version den HTTP Status Code <i>410 (Gone)</i>\
   \ zurückgeben.\n    <br/><br/>\n    Dies gilt für:\n    <ul>\n        <li><i>[ResourceType]/[id]</i>\

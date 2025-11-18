@@ -2,18 +2,20 @@ actor:
 - EPA-Medication-Service
 - EPA-Patient-Service
 conformance: SHALL
-content_hash: 3bf88a7084370b15ad3ae06bebd598be8fe8c83155f7563cb99669611795c39b
+content_hash: 5faaaaab304240a71aecb909ec4698f6b4bf2b9baf704036ec96a68f15bca48a
 created: '2025-03-10T12:54:11.421837'
-date: '2025-03-17T14:32:05.767318'
+date: '2025-11-18T11:03:10.873378'
 key: IG-TI78384PEX
 modified: '2025-03-17T14:32:05.767307'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
-  EPA-Medication-Service: []
-  EPA-Patient-Service: []
-text: 'Der FHIR Data Service MUSS ermöglichen, die Versionshistorie einer FHIR-Instanz
-  über eine HTTP <i>GET</i>-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/[id]/_history</i>.'
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
+text: 'Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie einer FHIR-Instanz
+  über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/[id]/_history</i>.'
 title: Abruf der Versionshistorie einer FHIR-Instanz
 version: 0

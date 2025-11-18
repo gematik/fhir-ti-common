@@ -4,20 +4,24 @@ actor:
 - EPA-Medication-Service
 - EPA-Patient-Service
 conformance: SHALL
-content_hash: 79cd84d37a7a37005c2233ce67b567ad5c4c333bf89b6270ae0bfd4a2fabf1c3
+content_hash: 22f3ec0767669a45f4ed7ee36167c66555462ab59db35ea1fd7beff5e6ab126a
 created: '2025-03-06T13:37:59.523187'
-date: '2025-03-12T12:47:19.475181'
+date: '2025-11-18T11:03:10.858065'
 key: IG-TI94558MGC
 modified: '2025-03-12T12:47:19.475179'
 release_status: STABLE
 source: input/pagecontent/fhir-format.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
-  EPA-Patient-Service: []
-text: Falls sowohl der <i>Accept</i>-Header als auch der <i>_format</i>-Parameter
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
+text: Falls sowohl der <i>Accept</i> Header als auch der <i>_format</i>-Parameter
   in einer Anfragenachricht angegeben sind, MUSS der FHIR Data Service den <i>_format</i>-Parameter
   priorisieren und das Antwortformat entsprechend diesem verarbeiten. Der <i>Accept</i>
   Header MUSS in diesem Fall ignoriert werden.

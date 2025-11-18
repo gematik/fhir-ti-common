@@ -10,6 +10,7 @@
   "date": "2025-09-12",
   "publisher": "gematik GmbH",
   "description": "Definiert die Struktur des Identifikators für einen Eintrag im elektronischen Medikationsplan (eMP). Der Identifikator ermöglicht die eindeutige technische Referenzierung einzelner eMP-Einträge.",
+  "copyright": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

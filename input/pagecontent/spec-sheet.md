@@ -1,4 +1,4 @@
-Die folgende Auflistung fasst die Anforderungsseiten dieses Implementation Guide für den _FHIR Data Service_ zusammen
+Die folgende Auflistung fasst die Anforderungsseiten dieses Implementation Guide für einen _FHIR Data Service_ zusammen.
 
 ### ePA-Aktensystem
 

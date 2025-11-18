@@ -4,20 +4,25 @@ actor:
 - EPA-Medication-Service
 - EPA-Patient-Service
 conformance: SHALL
-content_hash: 9834a312a050e38a639e364073f4fd79c4d7401f3a599a3259ea0348ea29234b
+content_hash: a60bb7cdb03c45264b091adae5aa325f15284a64a05dcf7d8bd4eab58856f2fc
 created: '2025-02-26T10:59:21.321291'
-date: '2025-05-06T10:10:09.639142'
+date: '2025-11-18T11:03:10.870884'
 key: IG-TI29386S9L
 modified: '2025-05-06T10:10:09.639137'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
-  EPA-Patient-Service: []
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
 text: Der FHIR Data Service MUSS ausschließlich zeitbasierte Universally Unique IDentifier
-  (UUID) gemäß [RFC9562] für logische IDs (d.h. FHIR-Element <i>Resource.id</i>) verwenden.
+  (UUID) gemäß [RFC9562] für logische IDs (d.h. für das FHIR-Element <i>Resource.id</i>)
+  verwenden.
 title: UUID für Resource.id
 version: 2

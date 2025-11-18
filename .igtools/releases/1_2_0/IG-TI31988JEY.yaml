@@ -3,21 +3,24 @@ actor:
 - EPA-MHD-Service
 - EPA-Medication-Service
 conformance: SHALL
-content_hash: dd6e6ee8e780e05308774baf5c4c6a813bcfc9c89c756b133f5fb736def06c7c
+content_hash: e77343f82a5b7370a34c36dcee2cf2d39930fc895a4939d2310086cc5640e0eb
 created: '2025-02-26T10:59:21.315231'
-date: '2025-02-26T13:55:56.513516'
+date: '2025-11-18T12:35:25.434510'
 key: IG-TI31988JEY
 modified: '2025-02-26T13:55:56.513515'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
-text: Der FHIR Data Service MUSS numerische und Datums-Suchparameter so verarbeiten,
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS numerische und datumsbasierte Suchparameter so verarbeiten,
   dass die Suchwerte entsprechend ihrer Präzision interpretiert werden. Beispielsweise
   muss eine Suche nach 2025-02-11 den Bereich von 2025-02-11T00:00:00 (inklusive)
   bis 2025-02-12T00:00:00 (exklusive) abdecken.
-title: Unterstützung der Präzision bei numerischen und Datums-Suchparametern
+title: Unterstützung der Präzision bei numerischen und datumsbasierten Suchparametern
 version: 0

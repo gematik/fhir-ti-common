@@ -1,7 +1,17 @@
 
 Bei einer Suche im FHIR Data Service über die FHIR Query API stellt der Service dem Client-System in seiner Antwort ggf. Links zu weiteren Ergebnissen zur Verfügung, die es dem Client erlauben, bequem durch die Ergebnismenge zu navigieren.
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI07252NTV" title="Unterstützung URL-Parameter für Paginierungsfunktion" version="0">
+<requirement conformance="SHALL" key="IG-TI07252NTV" title="Unterstützung URL-Parameter für Paginierungsfunktion" version="0">
+    <meta lockversion="true"/>
+    <actor name="EPA-Audit-Service">
+        <testProcedure id="Produkttest"/>
+    </actor>
+    <actor name="EPA-Medication-Service">
+        <testProcedure id="Produkttest"/>
+    </actor>
+    <actor name="EPA-MHD-Service">
+        <testProcedure id="Produkttest"/>
+    </actor>
   Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und in seiner Antwort Navigationsinformationen in Ergebnisseiten zur Verfügung stellen. Um die Paginierungsfunktion zu implementieren, werden die URL-Parameter <code>_count</code> und <code>_offset</code> verwendet. Der Parameter <code>_count</code> bestimmt die Anzahl der Einträge pro <i>Seite</i> (page), während <code>_offset</code> das Startelement der Seite angibt. Zusätzlich entscheidet der <code>_total</code>-Parameter, ob die Gesamtanzahl der Einträge in der Antwort enthalten sein soll.
   <br/><br/>
   <figure>
@@ -43,7 +53,7 @@ Bei einer Suche im FHIR Data Service über die FHIR Query API stellt der Service
   </ul>
 </requirement>
 
-**Beispiele:**
+**Beispiele**
 
 API-Anfrage von zehn Elementen des Ressourcentyps _AuditEvent_, beginnend mit Element 20 der Liste:
 
@@ -68,7 +78,18 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0_total=accurate
 ```
 
 <br/>
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI37232GDE" title="Unterstützung Seitennavigationslinks für Paginierungsfunktion" version="2">
+
+<requirement conformance="SHALL" key="IG-TI37232GDE" title="Unterstützung Seitennavigationslinks für Paginierungsfunktion" version="2">
+    <meta lockversion="true"/>
+    <actor name="EPA-Audit-Service">
+        <testProcedure id="Produkttest"/>
+    </actor>
+    <actor name="EPA-Medication-Service">
+        <testProcedure id="Produkttest"/>
+    </actor>
+    <actor name="EPA-MHD-Service">
+        <testProcedure id="Produkttest"/>
+    </actor>
   Der FHIR Data Service MUSS in einem FHIR Search Set Bundle das FHIR-Element <code>link</code> belegen, welches eine Liste von Link-Elementen beinhaltet, welche jeweils einem spezifischen Navigationszweck innerhalb des FHIR Bundles dienen.<br/><br/>Die folgenden Beziehungen werden gemäß den [Link Relation Types] bereitgestellt.
   <br/><br/>
   <figure>
@@ -114,13 +135,23 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0_total=accurate
   Jeder Link MUSS eine URL enthalten, um das entsprechende Ergebnis-Set abzurufen, das dynamisch basierend auf der Suchanfrage und den Paginierungsparametern wie <i>_count</i> und <i>_offset</i> generiert wird. Diese Links vereinfachen die Navigation eines Client-Systems durch große Suchergebnisse, indem sie die Notwendigkeit manueller Anpassungen der Abfrageparameter ausräumt.
 </requirement>
 
-<requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="MAY" key="IG-TI78112H2T" title="Verwendung relativer URLs bei der Paginierung von FHIR-Bundles" version="3">
+<requirement conformance="MAY" key="IG-TI78112H2T" title="Verwendung relativer URLs bei der Paginierung von FHIR Bundles" version="3">
+    <meta lockversion="true"/>
+    <actor name="EPA-Audit-Service">
+        <testProcedure id="Produkttest"/>
+    </actor>
+    <actor name="EPA-Medication-Service">
+        <testProcedure id="Produkttest"/>
+    </actor>
+    <actor name="EPA-MHD-Service">
+        <testProcedure id="Produkttest"/>
+    </actor>
     Der FHIR Data Service KANN beim Paginieren von FHIR Bundles das Feld <i>Bundle.link.url</i> mit relativen URLs befüllen, sofern diese sich auf die Basis-URL beziehen.
 </requirement>
 
 Zu jedem Link können zusätzlich zu den Standardpaginierungsparametern wie <i>_count</i> und <i>_offset</i> auch andere Parameter enthalten sein, die die Paginierung innerhalb des FHIR Data Service erleichtern. Ein Beispiel hierfür ist der Parameter <i>stateid</i>, der den aktuellen Zustand der Ergebnisliste repräsentiert. Dies ermöglicht es dem FHIR Data Service, die Navigation durch die Ergebnisse effizient zu verwalten, indem der Kontext oder Zustand der Suche erhalten bleibt. Dies ist besonders nützlich, wenn Clients durch umfangreiche oder komplex strukturierte Ergebnismengen navigieren.
 
-**Beispiel (Audit Event Service):**
+**Beispiel (Audit Event Service)**
 
 ```json
 {

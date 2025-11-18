@@ -5,16 +5,19 @@ actor:
 conformance: SHALL
 content_hash: bfeb5066760c4bcbba566fc27f3dc2af9c0e9efed17026cd652e8d73f9dca98d
 created: '2025-02-26T10:59:21.315356'
-date: '2025-02-26T13:55:56.513637'
+date: '2025-11-18T12:35:25.435490'
 key: IG-TI85276Y4V
 modified: '2025-02-26T13:55:56.513636'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
 text: 'Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für Datumswerte
   (date, Range, Period) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>,
   <i>ge</i>, <i>le</i>, <i>sa</i>, <i>eb</i>'

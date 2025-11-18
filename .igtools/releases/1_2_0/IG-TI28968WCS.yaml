@@ -5,16 +5,19 @@ actor:
 conformance: SHALL
 content_hash: 1b6a3e5732d8c69e3e28ccd512c3b52168cc1047f2c4d85af517d653aab3c926
 created: '2025-02-26T10:59:21.315262'
-date: '2025-02-26T13:55:56.513548'
+date: '2025-11-18T12:35:25.434749'
 key: IG-TI28968WCS
 modified: '2025-02-26T13:55:56.513547'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
 text: Der FHIR Data Service MUSS die in der [FHIR Search Prefixes] definierten Vergleichspräfixe
   für numerische (<i>number</i>, <i>quantity</i>) und Datumsparameter (<i>date</i>,
   <i>Range</i>, <i>Period</i>) unterstützen.

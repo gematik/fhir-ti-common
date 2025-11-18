@@ -7,7 +7,7 @@
   "title": "Implementation Guide Telematikinfrastruktur (TI) Common",
   "status": "active",
   "experimental": false,
-  "date": "2025-11-03",
+  "date": "2025-12-15",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -34,6 +34,7 @@
       ]
     }
   ],
+  "copyright": "gematik GmbH / Dieser Implementation Guide ist lizenziert unter <a href=\"./license.html\">Apache License</a>, Version 2.0.",
   "packageId": "de.gematik.ti",
   "license": "Apache-2.0",
   "fhirVersion": [

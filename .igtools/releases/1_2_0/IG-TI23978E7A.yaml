@@ -3,14 +3,15 @@ actor:
 conformance: SHALL
 content_hash: b05043734e3e7cef4bbf83cbd3e89ac06caf377949390232b66457d961492524
 created: '2025-03-10T12:54:11.423477'
-date: '2025-03-10T12:54:11.423479'
+date: '2025-11-18T11:03:10.875771'
 key: IG-TI23978E7A
 modified: '2025-03-10T12:54:11.423479'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
-  EPA-Medication-Service: []
+  EPA-Medication-Service:
+  - Produkttest
 text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gelöschte\
   \ Versionen einer FHIR-Instanz dokumentieren.\n    <br/><br/>\n    <ul>\n      \
   \  <li>Das <i>entry.request</i>-Element MUSS die Methode (<i>method = DELETE</i>)\

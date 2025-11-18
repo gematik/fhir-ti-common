@@ -6,17 +6,21 @@ actor:
 conformance: SHALL
 content_hash: 0308dff95de1faceec40d989ccb9736636a6b84eae41128ebc20f5a54f589d5f
 created: '2025-05-07T20:31:11.882185'
-date: '2025-05-23T10:04:38.887411'
+date: '2025-11-18T11:03:10.877236'
 key: IG-TI38467S3Q
 modified: '2025-05-23T10:04:38.887401'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
-  EPA-Patient-Service: []
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
 text: Ein FHIR Data Service MUSS an dem Endpunkt /metadata gemäß der [Capabilities-Interaktion]
   ein Capability Statement Typ <i>kind = instance</i> bereitstellen. Dieses Capability
   Statement muss im Element <i>software</i> den Namen und die Versionsnummer der eingesetzten

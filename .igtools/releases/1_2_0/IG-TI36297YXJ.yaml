@@ -5,16 +5,19 @@ actor:
 conformance: SHALL
 content_hash: 8078eb88fc5e6d205ccd54e66a21f8be7a66ed72769f1641af16f8ae997dd747
 created: '2025-02-26T10:59:21.315312'
-date: '2025-02-26T13:55:56.513595'
+date: '2025-11-18T12:35:25.435208'
 key: IG-TI36297YXJ
 modified: '2025-02-26T13:55:56.513594'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
 text: 'Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für numerische Werte
   (number, quantity) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>, <i>ge</i>,
   <i>le</i>'

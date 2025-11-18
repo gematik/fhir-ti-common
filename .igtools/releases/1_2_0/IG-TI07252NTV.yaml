@@ -5,16 +5,19 @@ actor:
 conformance: SHALL
 content_hash: 16395db38e3ea167a64416430a446610a52bbbc1acf11256dd65878a31c59a66
 created: '2025-02-26T10:59:21.318535'
-date: '2025-02-26T13:55:56.516500'
+date: '2025-11-18T12:35:25.441558'
 key: IG-TI07252NTV
 modified: '2025-02-26T13:55:56.516495'
 release_status: STABLE
 source: input/pagecontent/query-api-paging.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
 text: "Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und in\
   \ seiner Antwort Navigationsinformationen in Ergebnisseiten zur Verfügung stellen.\
   \ Um die Paginierungsfunktion zu implementieren, werden die URL-Parameter <code>_count</code>\

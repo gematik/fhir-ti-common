@@ -10,6 +10,7 @@
   "date": "2025-09-12",
   "publisher": "gematik GmbH",
   "description": "Ermöglicht die Angabe global oder spezifisch geforderter HTTP Header in einem CapabilityStatement oder einer Resource-Interaktion.",
+  "copyright": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

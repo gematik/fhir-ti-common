@@ -4,23 +4,27 @@ actor:
 - EPA-Medication-Service
 - EPA-Patient-Service
 conformance: SHALL
-content_hash: 399d8775a0a015d8daae340733311e4028a960729731cca5709ada50332dceec
+content_hash: 0527f0e0d38f6dd7c631ae456929d9c1c829cbbc4407106fb08f7ed123f0a020
 created: '2025-03-06T13:30:46.537848'
-date: '2025-10-29T09:03:51.296789'
+date: '2025-11-18T11:03:10.856787'
 key: IG-TI96963Y60
 modified: '2025-10-29T09:03:51.296778'
 release_status: MODIFIED
 source: input/pagecontent/fhir-format.md
 status: ACTIVE
 test_procedures:
-  EPA-Audit-Service: []
-  EPA-MHD-Service: []
-  EPA-Medication-Service: []
-  EPA-Patient-Service: []
-text: Der FHIR Data Service MUSS den <i>Accept</i>-Header in eingehenden HTTP-Anfragen
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS den <i>Accept</i> Header in eingehenden HTTP-Anfragen
   auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS
-  die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i>Header
-  unterstützen und die jeweilige HTTP-Antwortnachricht in dem Format zurückgeben,
+  die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i>
+  Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem Format zurückgeben,
   das von den beiden Formaten als bevorzugte Option angegeben wurde.
 title: Unterstützung des Accept Header für Formatwahl im FHIR Data Service
 version: 1
