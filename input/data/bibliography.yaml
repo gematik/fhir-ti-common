@@ -1,4 +1,8 @@
 entries:
+  - key: "Anfragenportal"
+    author: "gematik"
+    title: "ePA-Anfragenportal der gematik"
+    link: "https://service.gematik.de/servicedesk/customer/portal/13"
   - key: "FHIR-Suchoperationen"
     author: "HL7"
     title: "FHIR R4 Spezifikation für die FHIR-Suchoperationen"
