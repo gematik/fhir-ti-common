@@ -6,3 +6,13 @@ Die Konzepte und Anforderungen jedes spezifischen FHIR Data Service werden jewei
 ### Abhängigkeiten
 
 {% include dependency-table.xhtml %}
+
+### Sprachliche Konventionen
+
+- Zur besseren Lesbarkeit wird in diesem Implementation Guide das generische Maskulinum verwendet. Die hier verwendeten Personenbezeichnungen beziehen sich stets auf alle Geschlechter.
+
+- Der Begriff "Arzt" wird in diesem Implementation Guide sowohl für Human- als auch für Zahnmediziner verwendet.
+
+### Kontakt
+
+Allgemeine Fragen und Kommentare zum Implementation Guide können Sie über das [Anfragenportal] der gematik einreichen. Falls kein Zugang besteht, senden Sie bitte eine E-Mail an "patientteam [ at ] gematik [ dot ] de" mit dem Betreff "Anfragenportal Zugang".
