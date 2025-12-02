@@ -1,24 +1,26 @@
 actor:
 - EPA-Medication-Service
 conformance: SHALL
-content_hash: b05043734e3e7cef4bbf83cbd3e89ac06caf377949390232b66457d961492524
+content_hash: 5584bbbdac39b623b3caa3594ac0b170c65241924ce47f8675c3247413574d4e
 created: '2025-03-10T12:54:11.423477'
-date: '2025-11-18T11:03:10.875771'
+date: '2025-12-02T13:01:10.401623'
 key: IG-TI23978E7A
-modified: '2025-03-10T12:54:11.423479'
-release_status: STABLE
+modified: '2025-12-02T13:01:10.401620'
+release_status: MODIFIED
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
   EPA-Medication-Service:
   - Produkttest
 text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gelöschte\
-  \ Versionen einer FHIR-Instanz dokumentieren.\n    <br/><br/>\n    <ul>\n      \
-  \  <li>Das <i>entry.request</i>-Element MUSS die Methode (<i>method = DELETE</i>)\
-  \ und die URL (<i>url</i>) enthalten.</li>\n        <li>Das <i>entry.response</i>-Element\
-  \ MUSS den Status (status = 200 OK) sowie das Löschdatum (<i>lastModified</i>) enthalten.</li>\n\
-  \        <li>Das <i>entry.resource</i>-Element DARF für die gelöschte Version NICHT\
-  \ enthalten sein</li>\n    </ul>"
-title: Bundle.entry.request und Bundle.entry.response innerhalb des _history-Bundles
-  bei gelöschten FHIR-Instanzen
-version: 0
+  \ Versionen einer FHIR-Instanz dokumentieren.\n <br/><br/>\n Für gelöschte Versionen\
+  \ gilt:\n <ul>\n <li>Bei gelöschten Ressourceinstanzen wird das Element <i>Bundle.entry.resource</i>\
+  \ nicht ausgegeben.</li>\n <li><i>Bundle.entry.request.method</i> hat für gelöschte\
+  \ Ressourceinstanzen den Wert <i>DELETE</i>.</li>\n <li><i>Bundle.entry.request.url</i>\
+  \ enthält die REST-äquivalente Ressourcen-URL relativ zum FHIR-Endpunkt, <i>ResourceType/{id}</i>.</li>\n\
+  \ <li><i>Bundle.entry.response.status</i> enthält den Wert <i>200 OK</i>.</li>\n\
+  \ <li><i>Bundle.entry.response.lastModified</i> enthält das Löschdatum der Ressourceinstanz.</li>\n\
+  \ </ul>"
+title: Repräsentation gelöschter Versionen in Bundle.entry.request und Bundle.entry.response
+  innerhalb eines _history-Bundles
+version: 1

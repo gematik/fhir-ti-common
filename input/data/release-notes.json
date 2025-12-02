@@ -4,6 +4,19 @@
             "version": "1.2.0",
             "requirements": [
                 {
+                    "title": "Bundle.entry.request und Bundle.entry.response innerhalb des _history Bundles",
+                    "key": "IG-TI52070SA6",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 1,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
                     "title": "Standardformat für den FHIR Data Service",
                     "key": "IG-TI62490PR0",
                     "actor": [
@@ -31,6 +44,18 @@
                     "status": "ACTIVE",
                     "conformance": "SHALL",
                     "path": "query-api-search.html"
+                },
+                {
+                    "title": "Repräsentation gelöschter Versionen in Bundle.entry.request und Bundle.entry.response innerhalb eines _history-Bundles",
+                    "key": "IG-TI23978E7A",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 1,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
                 },
                 {
                     "title": "Verhalten bei nicht unterstützten Formaten",

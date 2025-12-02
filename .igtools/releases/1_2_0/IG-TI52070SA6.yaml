@@ -2,12 +2,12 @@ actor:
 - EPA-Medication-Service
 - EPA-Patient-Service
 conformance: SHALL
-content_hash: d52393a40a1bc9c64c5deb224c03854d6f8af17cc451b94909be77d7e4efd29c
+content_hash: 4d8cdedc77d705e7395316c64d329b286d7d43efe148dbdd8d72e06c934b166b
 created: '2025-03-10T12:54:11.422187'
-date: '2025-11-18T11:03:10.873906'
+date: '2025-12-02T13:01:10.399508'
 key: IG-TI52070SA6
-modified: '2025-03-12T12:47:19.482583'
-release_status: STABLE
+modified: '2025-12-02T13:01:10.399502'
+release_status: MODIFIED
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
@@ -17,10 +17,20 @@ test_procedures:
   - Produkttest
 text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> für\
   \ jede Version einer FHIR-Instanz die zugehörigen <i>entry.request</i>- und <i>entry.response</i>-Elemente\
-  \ bereitstellen.\n    <br/><br/>\n    <ul>\n        <li>Das <i>entry.request</i>-Element\
-  \ MUSS die Methode (<i>method</i>) und die URL (<i>url</i>) enthalten, unter der\
-  \ diese spezifische Version abrufbar ist.</li>\n        <li>Das <i>entry.response</i>-Element\
-  \ MUSS den Status (<i>status</i>) sowie das Datum der letzten Änderung (<i>lastModified</i>)\
-  \ enthalten.</li>\n    </ul>"
-title: Bundle.entry.request und Bundle.entry.esponse innerhalb des _history Bundles
-version: 0
+  \ bereitstellen.\n <br/><br/>\n <ul>\n <li>\n <i>Bundle.entry.request.method</i>\
+  \ gibt die HTTP-äquivalente Aktion an, die zur Entstehung der jeweiligen Version\
+  \ der Ressourceinstanz geführt hat. <i>POST</i> für das Anlegen, <i>PUT</i> für\
+  \ eine Aktualisierung, <i>DELETE</i> für das Löschen der Ressourceinstanz.\n </li>\n\
+  \ <li>\n <i>Bundle.entry.request.url</i> enthält die äquivalente Ressourcen-URL\
+  \ relativ zum FHIR-Endpunkt, aus der die versionsspezifische Abruf-URL <i>ResourceType/{id}/_history/{versionId}</i>\
+  \ abgeleitet werden kann.\n </li>\n <li>\n <i>Bundle.entry.response.status</i> enthält\
+  \ den HTTP-ähnlichen Status der internen Verarbeitung (z. B. <i>201 Created</i>\
+  \ oder <i>200 OK</i>).\n </li>\n <li>\n <i>Bundle.entry.response.lastModified</i>\
+  \ gibt das Datum und die Uhrzeit der letzten Änderung der jeweiligen Version der\
+  \ Ressourceinstanz an und stimmt mit <i>meta.lastUpdated</i> überein, sofern <i>Bundle.entry.resource</i>\
+  \ vorhanden ist.\n </li>\n <li>\n <i>Bundle.entry.response.location</i> enthält\
+  \ die vollständige versionsspezifische Ressourcen-URL (z. B. <i>ResourceType/{id}/_history/{versionId}</i>),\
+  \ sofern die entsprechende Version der Ressourceinstanz einzeln abrufbar ist.\n\
+  \ </li>\n </ul>"
+title: Bundle.entry.request und Bundle.entry.response innerhalb des _history Bundles
+version: 1
