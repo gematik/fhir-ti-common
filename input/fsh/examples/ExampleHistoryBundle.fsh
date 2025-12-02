@@ -13,7 +13,7 @@ Title: "Example History Bundle"
 // POST: this was a create
 * entry[0].fullUrl = "http://epa4all/epa/medication/api/v1/fhir/MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43"
 * entry[0].request.method = #DELETE
-* entry[0].request.url = "MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43/_history/2"
+* entry[0].request.url = "MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43"
 * entry[0].response.status = "200 OK"
 * entry[0].response.lastModified = "2025-08-22T15:00:00.000Z"
 
@@ -21,9 +21,10 @@ Title: "Example History Bundle"
 * entry[1].fullUrl = "http://epa4all/epa/medication/api/v1/fhir/MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43"
 * entry[1].resource = ExampleHistoryMedicationDispense
 * entry[1].request.method = #POST
-* entry[1].request.url = "MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43/_history/1"
+* entry[1].request.url = "MedicationDispense"
 * entry[1].response.status = "201 Created"
 * entry[1].response.lastModified = "2025-08-22T14:43:33.244Z"
+* entry[1].response.location = "MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43/_history/1"
 
 
 

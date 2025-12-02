@@ -87,10 +87,10 @@
         },
         {
             "key": "IG-TI52070SA6",
-            "title": "Bundle.entry.request und Bundle.entry.esponse innerhalb des _history Bundles",
-            "version": 0,
+            "title": "Bundle.entry.request und Bundle.entry.response innerhalb des _history Bundles",
+            "version": 1,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> für jede Version einer FHIR-Instanz die zugehörigen <i>entry.request</i>- und <i>entry.response</i>-Elemente bereitstellen.\n    <br/><br/>\n    <ul>\n        <li>Das <i>entry.request</i>-Element MUSS die Methode (<i>method</i>) und die URL (<i>url</i>) enthalten, unter der diese spezifische Version abrufbar ist.</li>\n        <li>Das <i>entry.response</i>-Element MUSS den Status (<i>status</i>) sowie das Datum der letzten Änderung (<i>lastModified</i>) enthalten.</li>\n    </ul>",
+            "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> für jede Version einer FHIR-Instanz die zugehörigen <i>entry.request</i>- und <i>entry.response</i>-Elemente bereitstellen.\n <br/><br/>\n <ul>\n <li>\n <i>Bundle.entry.request.method</i> gibt die HTTP-äquivalente Aktion an, die zur Entstehung der jeweiligen Version der Ressourceinstanz geführt hat. <i>POST</i> für das Anlegen, <i>PUT</i> für eine Aktualisierung, <i>DELETE</i> für das Löschen der Ressourceinstanz.\n </li>\n <li>\n <i>Bundle.entry.request.url</i> enthält die äquivalente Ressourcen-URL relativ zum FHIR-Endpunkt, aus der die versionsspezifische Abruf-URL <i>ResourceType/{id}/_history/{versionId}</i> abgeleitet werden kann.\n </li>\n <li>\n <i>Bundle.entry.response.status</i> enthält den HTTP-ähnlichen Status der internen Verarbeitung (z. B. <i>201 Created</i> oder <i>200 OK</i>).\n </li>\n <li>\n <i>Bundle.entry.response.lastModified</i> gibt das Datum und die Uhrzeit der letzten Änderung der jeweiligen Version der Ressourceinstanz an und stimmt mit <i>meta.lastUpdated</i> überein, sofern <i>Bundle.entry.resource</i> vorhanden ist.\n </li>\n <li>\n <i>Bundle.entry.response.location</i> enthält die vollständige versionsspezifische Ressourcen-URL (z. B. <i>ResourceType/{id}/_history/{versionId}</i>), sofern die entsprechende Version der Ressourceinstanz einzeln abrufbar ist.\n </li>\n </ul>",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -120,7 +120,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.2.0/general-principles.html#IG-TI52070SA6"
+            "link": "https://gematik.de/fhir/ti/1.2.0/general-principles.html#IG-TI52070SA6-01"
         },
         {
             "key": "IG-TI44886ZXA",
@@ -1298,10 +1298,10 @@
         },
         {
             "key": "IG-TI23978E7A",
-            "title": "Bundle.entry.request und Bundle.entry.response innerhalb des _history-Bundles bei gelöschten FHIR-Instanzen",
-            "version": 0,
+            "title": "Repräsentation gelöschter Versionen in Bundle.entry.request und Bundle.entry.response innerhalb eines _history-Bundles",
+            "version": 1,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gelöschte Versionen einer FHIR-Instanz dokumentieren.\n    <br/><br/>\n    <ul>\n        <li>Das <i>entry.request</i>-Element MUSS die Methode (<i>method = DELETE</i>) und die URL (<i>url</i>) enthalten.</li>\n        <li>Das <i>entry.response</i>-Element MUSS den Status (status = 200 OK) sowie das Löschdatum (<i>lastModified</i>) enthalten.</li>\n        <li>Das <i>entry.resource</i>-Element DARF für die gelöschte Version NICHT enthalten sein</li>\n    </ul>",
+            "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gelöschte Versionen einer FHIR-Instanz dokumentieren.\n <br/><br/>\n Für gelöschte Versionen gilt:\n <ul>\n <li>Bei gelöschten Ressourceinstanzen wird das Element <i>Bundle.entry.resource</i> nicht ausgegeben.</li>\n <li><i>Bundle.entry.request.method</i> hat für gelöschte Ressourceinstanzen den Wert <i>DELETE</i>.</li>\n <li><i>Bundle.entry.request.url</i> enthält die REST-äquivalente Ressourcen-URL relativ zum FHIR-Endpunkt, <i>ResourceType/{id}</i>.</li>\n <li><i>Bundle.entry.response.status</i> enthält den Wert <i>200 OK</i>.</li>\n <li><i>Bundle.entry.response.lastModified</i> enthält das Löschdatum der Ressourceinstanz.</li>\n </ul>",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -1318,7 +1318,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.2.0/general-principles.html#IG-TI23978E7A"
+            "link": "https://gematik.de/fhir/ti/1.2.0/general-principles.html#IG-TI23978E7A-01"
         },
         {
             "key": "IG-TI43409LRQ",
@@ -2639,7 +2639,7 @@
             "title": "HTTP 410 Gone für den Abruf einer gelöschten FHIR-Instanz",
             "version": 2,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine gelöschte FHIR-Instanz oder eine gelöschte Version den HTTP Status Code <i>410 (Gone)</i> zurückgeben.\n    <br/><br/>\n    Dies gilt für:\n    <ul>\n        <li><i>[ResourceType]/[id]</i> – wenn die gesamte FHIR-Instanz gelöscht wurde</li>\n        <li><i>[ResourceType]/[id]/_history/[versionId]</i> – wenn eine spezifische Version der FHIR-Instanz gelöscht wurde</li>\n    </ul>\n    <br/>\n    Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten mit folgenden Eigenschaften:\n    <ul>\n        <li><i>OperationOutcome.issue.code</i> ist auf <i>processing</i> gesetzt</li>\n        <li><i>OperationOutcome.issue.details</i> ist auf <i>MSG_DELETED</i> gesetzt</li>\n        <li><i>OperationOutcome.issue.diagnostics</i> enthält eine Meldung, dass die Instanz gelöscht wurde</li>\n    </ul>",
+            "text": "Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine gelöschte FHIR-Instanz oder eine gelöschte Version den HTTP Status Code <i>410 (Gone)</i> zurückgeben.\n <br/><br/>\n Dies gilt für:\n <ul>\n <li><i>[ResourceType]/[id]</i> – wenn die gesamte FHIR-Instanz gelöscht wurde</li>\n <li><i>[ResourceType]/[id]/_history/[versionId]</i> – wenn eine spezifische Version der FHIR-Instanz gelöscht wurde</li>\n </ul>\n <br/>\n Die Response muss eine <i>OperationOutcome</i>-Ressource enthalten mit folgenden Eigenschaften:\n <ul>\n <li><i>OperationOutcome.issue.code</i> ist auf <i>processing</i> gesetzt</li>\n <li><i>OperationOutcome.issue.details</i> ist auf <i>MSG_DELETED</i> gesetzt</li>\n <li><i>OperationOutcome.issue.diagnostics</i> enthält eine Meldung, dass die Instanz gelöscht wurde</li>\n </ul>",
             "conformance": "SHALL",
             "characteristics": [
                 {

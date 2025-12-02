@@ -11,7 +11,7 @@
     {
       "request": {
         "method": "DELETE",
-        "url": "MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43/_history/2"
+        "url": "MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43"
       },
       "response": {
         "status": "200 OK",
@@ -22,11 +22,12 @@
     {
       "request": {
         "method": "POST",
-        "url": "MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43/_history/1"
+        "url": "MedicationDispense"
       },
       "response": {
         "status": "201 Created",
-        "lastModified": "2025-08-22T14:43:33.244Z"
+        "lastModified": "2025-08-22T14:43:33.244Z",
+        "location": "MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43/_history/1"
       },
       "fullUrl": "http://epa4all/epa/medication/api/v1/fhir/MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43",
       "resource": {
