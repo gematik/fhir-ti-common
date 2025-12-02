@@ -364,6 +364,10 @@
       },
       {
         "code": "version-comparison",
+        "value": "1.0.1"
+      },
+      {
+        "code": "version-comparison",
         "value": "1.1.1"
       },
       {

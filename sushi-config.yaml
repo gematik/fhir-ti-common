@@ -101,6 +101,7 @@ parameters:
   version-comparison:
     # There seem to be an problem when using this flag, maybe 1.1.1-ballot.1 causes issues?
     # - "{current}"
+    - 1.0.1
     - 1.1.1
   bundle-references-resolve: false
   no-narrative:
