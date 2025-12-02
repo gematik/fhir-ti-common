@@ -80,6 +80,9 @@ menu:
     Downloads: downloads.html
     Release Notes: release-notes.html
     Steckbriefe: spec-sheet.html
+  Vergleiche:
+    1.0.1: comparison-v1.0.1/index.html
+    1.1.1: comparison-v1.1.1/index.html
 
 # https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
 parameters:
