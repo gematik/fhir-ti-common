@@ -35,20 +35,6 @@
         "mustSupport": true
       },
       {
-        "id": "CapabilityStatement.extension",
-        "path": "CapabilityStatement.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "CapabilityStatement.extension:baseUrl",
         "path": "CapabilityStatement.extension",
         "sliceName": "baseUrl",
@@ -111,20 +97,6 @@
         "short": "Die von der API unterstützten Medientypen, z.B. application/json oder application/fhir+json"
       },
       {
-        "id": "CapabilityStatement.rest.resource.interaction.extension",
-        "path": "CapabilityStatement.rest.resource.interaction.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "CapabilityStatement.rest.resource.interaction.extension:header",
         "path": "CapabilityStatement.rest.resource.interaction.extension",
         "sliceName": "header",
@@ -168,20 +140,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "CapabilityStatement.rest.resource.operation.extension",
-        "path": "CapabilityStatement.rest.resource.operation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       },
       {
         "id": "CapabilityStatement.rest.resource.operation.extension:header",
@@ -251,20 +209,6 @@
             "code": "BackboneElement"
           }
         ]
-      },
-      {
-        "id": "CapabilityStatement.rest.operation.extension",
-        "path": "CapabilityStatement.rest.operation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       },
       {
         "id": "CapabilityStatement.rest.operation.extension:header",

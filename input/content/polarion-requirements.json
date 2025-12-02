@@ -4,7 +4,7 @@
         "title": "Implementation Guide Telematikinfrastruktur (TI) Common",
         "link": "https://gematik.de/fhir/ti/1.2.0",
         "version": "1.2.0",
-        "date": "1762128000",
+        "date": "1765756800",
         "status": "released",
         "classification": "public"
     },
@@ -25,8 +25,8 @@
                     },
                     "test_procedure": [
                         {
-                            "id": "testProcedurePT03",
-                            "name": "funkt. Eignung: Test Produkt/FA"
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
                         }
                     ]
                 },
@@ -38,8 +38,8 @@
                     },
                     "test_procedure": [
                         {
-                            "id": "testProcedurePT03",
-                            "name": "funkt. Eignung: Test Produkt/FA"
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
                         }
                     ]
                 },
@@ -77,8 +77,8 @@
                     },
                     "test_procedure": [
                         {
-                            "id": "testProcedurePT03",
-                            "name": "funkt. Eignung: Test Produkt/FA"
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
                         }
                     ]
                 }
@@ -514,7 +514,7 @@
             "title": "Befüllungspflicht für Must Support",
             "version": 2,
             "status": "ACTIVE",
-            "text": "Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service implementiert, MUSS jedes als Must Support gekennzeichnete Element gemäß der dazugehörigen Kardinalitätsangabe befüllen. Das heißt auch, dass in optionalen Elementen (z. B. Kardinalität \"0..1\", \"0..*\") der Elementwert leer bleiben darf, sofern dem Client-System kein Wert zur Verfügung steht.",
+            "text": "Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service implementiert, MUSS jedes als Must Support gekennzeichnete Element gemäß der dazugehörigen Kardinalitätsangabe befüllen. Das heißt auch, dass in optionalen Elementen (z.B. Kardinalität \"0..1\", \"0..*\") der Elementwert leer bleiben darf, sofern dem Client-System kein Wert zur Verfügung steht.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -525,8 +525,8 @@
                     },
                     "test_procedure": [
                         {
-                            "id": "testProcedurePT03",
-                            "name": "funkt. Eignung: Test Produkt/FA"
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
                         }
                     ]
                 },
@@ -562,9 +562,9 @@
         {
             "key": "IG-TI62490PR0",
             "title": "Standardformat für den FHIR Data Service",
-            "version": 0,
+            "version": 1,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS das Format <i>application/fhir+json</i> verwenden, wenn in der Anfragenachricht kein <i>Accept</i> Header oder <i>_format</i>-Parameter angegeben ist.",
+            "text": "Der FHIR Data Service MUSS, sofern die entsprechende Schnittstelle ein FHIR-Format zurückgibt, das Format <i>application/fhir+json</i> verwenden, wenn in der Anfragenachricht kein unterstütztes Format durch den <i>_format</i>-Parameter und\n <ul>\n <li>kein <i>Accept</i> Header,</li>\n <li>oder durch den <i>Accept</i> Header keine eindeutige Präferenz eines unterstützten Formats</li>\n </ul>\n angegeben ist.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -620,14 +620,14 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.2.0/fhir-format.html#IG-TI62490PR0"
+            "link": "https://gematik.de/fhir/ti/1.2.0/fhir-format.html#IG-TI62490PR0-01"
         },
         {
             "key": "IG-TI94558MGC",
             "title": "Vorrang des _format-Parameters gegenüber dem Accept Header",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Falls sowohl der <i>Accept</i>-Header als auch der <i>_format</i>-Parameter in einer Anfragenachricht angegeben sind, MUSS der FHIR Data Service den <i>_format</i>-Parameter priorisieren und das Antwortformat entsprechend diesem verarbeiten. Der <i>Accept</i> Header MUSS in diesem Fall ignoriert werden.",
+            "text": "Falls sowohl der <i>Accept</i> Header als auch der <i>_format</i>-Parameter in einer Anfragenachricht angegeben sind, MUSS der FHIR Data Service den <i>_format</i>-Parameter priorisieren und das Antwortformat entsprechend diesem verarbeiten. Der <i>Accept</i> Header MUSS in diesem Fall ignoriert werden.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -1092,7 +1092,7 @@
             "title": "Sortierung des Datentyps Period",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen muss sofern vorhanden weitergehend nach <i>Period.end</i> sortiert werden.",
+            "text": "Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen, muss sofern vorhanden weitergehend nach <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.end</i>-Wert ist hierbei als noch offen, also unendlich anzusehen.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -1264,7 +1264,7 @@
             "title": "Abruf einer spezifischen Ressourcenversion über die FHIR API",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS das Lesen spezifischer Versionen von FHIR-Instanzen gemäß der HL7 FHIR Spezifikation [FHIR Version Read] implementieren. Dabei MUSS eine angeforderte Version einer Instanz über eine <i>GET</i>-Anfrage der Form <i>[base]/[resourceType]/[id]/_history/[versionId]</i> bereitgestellt werden. Die Antwort MUSS die angeforderte Version der Instanz enthalten, einschließlich der zugehörigen Metadaten (<i>meta.versionId</i>, <i>meta.lastUpdated</i>).",
+            "text": "Der FHIR Data Service MUSS das Lesen spezifischer Versionen von FHIR-Instanzen gemäß der HL7 FHIR Spezifikation [FHIR Version Read] implementieren. Dabei MUSS eine angeforderte Version einer Instanz über eine GET-Anfrage der Form <i>[base]/[resourceType]/[id]/_history/[versionId]</i> bereitgestellt werden. Die Antwort MUSS die angeforderte Version der Instanz enthalten, einschließlich der zugehörigen Metadaten (<i>meta.versionId</i>, <i>meta.lastUpdated</i>).",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -1433,10 +1433,10 @@
         },
         {
             "key": "IG-TI31988JEY",
-            "title": "Unterstützung der Präzision bei numerischen und Datums-Suchparametern",
+            "title": "Unterstützung der Präzision bei numerischen und datumsbasierten Suchparametern",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS numerische und Datums-Suchparameter so verarbeiten, dass die Suchwerte entsprechend ihrer Präzision interpretiert werden. Beispielsweise muss eine Suche nach 2025-02-11 den Bereich von 2025-02-11T00:00:00 (inklusive) bis 2025-02-12T00:00:00 (exklusive) abdecken.",
+            "text": "Der FHIR Data Service MUSS numerische und datumsbasierte Suchparameter so verarbeiten, dass die Suchwerte entsprechend ihrer Präzision interpretiert werden. Beispielsweise muss eine Suche nach 2025-02-11 den Bereich von 2025-02-11T00:00:00 (inklusive) bis 2025-02-12T00:00:00 (exklusive) abdecken.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -1485,7 +1485,7 @@
             "key": "IG-TI44797PGD",
             "title": "Verhalten bei nicht unterstützten Formaten",
             "version": 0,
-            "status": "ACTIVE",
+            "status": "RETIRED",
             "text": "Der FHIR Data Service MUSS das Standardformat verwenden, wenn ein nicht unterstütztes Format über den <i>Accept</i> Header oder den <i>_format</i>-Parameter angefordert wird.",
             "conformance": "SHALL",
             "characteristics": [
@@ -1549,7 +1549,7 @@
             "title": "Formatierung von Referenzen im fullUrl-Feld",
             "version": 2,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen wie <i>literal</i>-Referenzen in der Form [Resourcetyp]/[ResourceId] nicht im Feld <i>Bundle.entry.fullUrl</i> verwendet werden. Alle Verweise auf Ressourcen innerhalb des FHIR Data Service MÜSSEN entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.",
+            "text": "Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen - wie <i>literal</i>-Referenzen in der Form [Resourcetyp]/[ResourceId] - nicht im Feld <i>Bundle.entry.fullUrl</i> verwendet werden. Alle Verweise auf Ressourcen innerhalb des FHIR Data Service MÜSSEN entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -1747,8 +1747,8 @@
                     },
                     "test_procedure": [
                         {
-                            "id": "testProcedurePT03",
-                            "name": "funkt. Eignung: Test Produkt/FA"
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
                         }
                     ]
                 },
@@ -1784,9 +1784,9 @@
         {
             "key": "IG-TI96963Y60",
             "title": "Unterstützung des Accept Header für Formatwahl im FHIR Data Service",
-            "version": 0,
+            "version": 1,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS den <i>Accept</i>-Header in eingehenden HTTP-Anfragen auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i>Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem angegebenen Format verarbeiten.\n    <br/><br/>\n    <ul>\n        <li>Wenn der Accept Header auf <i>application/fhir+json</i> gesetzt ist, MUSS die Antwort in diesem Format erfolgen.</li>\n        <li>Wenn der Accept Header auf <i>application/fhir+xml</i> gesetzt ist, MUSS die Antwort in diesem Format erfolgen.</li>\n    </ul>",
+            "text": "Der FHIR Data Service MUSS den <i>Accept</i> Header in eingehenden HTTP-Anfragen auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i> Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem Format zurückgeben, das von den beiden Formaten als bevorzugte Option angegeben wurde.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -1842,7 +1842,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.2.0/fhir-format.html#IG-TI96963Y60"
+            "link": "https://gematik.de/fhir/ti/1.2.0/fhir-format.html#IG-TI96963Y60-01"
         },
         {
             "key": "IG-TI06069XBQ",
@@ -1971,7 +1971,7 @@
             "title": "Standardpräfix für Vergleiche",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Falls kein Vergleichspräfix angegeben wird, MUSS der FHIR Data Service standardmäßig das Präfix <i>eq</i> verwenden.",
+            "text": "Der FHIR Data Service MUSS standardmäßig das Präfix <i>eq</i> verwenden, falls kein Vergleichspräfix angegeben wird.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -2021,7 +2021,7 @@
             "title": "Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. <i>Meta.lastUpdated</i> MUSS auf den Zeitpunkt der Aktualisierung gesetzt werden.",
+            "text": "Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS auf den Zeitpunkt der Aktualisierung gesetzt werden.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -2340,7 +2340,7 @@
         },
         {
             "key": "IG-TI78112H2T",
-            "title": "Verwendung relativer URLs bei der Paginierung von FHIR-Bundles",
+            "title": "Verwendung relativer URLs bei der Paginierung von FHIR Bundles",
             "version": 3,
             "status": "ACTIVE",
             "text": "Der FHIR Data Service KANN beim Paginieren von FHIR Bundles das Feld <i>Bundle.link.url</i> mit relativen URLs befüllen, sofern diese sich auf die Basis-URL beziehen.",
@@ -2393,7 +2393,7 @@
             "title": "Abruf der Versionshistorie aller Instanzen eines ResourceType",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS ermöglichen, die Versionshistorie aller Instanzen eines bestimmten Ressourcentyps über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/_history</i>.",
+            "text": "Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie aller Instanzen eines bestimmten Ressourcentyps über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/_history</i>.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -2430,7 +2430,7 @@
             "title": "UUID für Resource.id",
             "version": 2,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS ausschließlich zeitbasierte Universally Unique IDentifier (UUID) gemäß [RFC9562] für logische IDs (d.h. FHIR-Element <i>Resource.id</i>) verwenden.",
+            "text": "Der FHIR Data Service MUSS ausschließlich zeitbasierte Universally Unique IDentifier (UUID) gemäß [RFC9562] für logische IDs (d.h. für das FHIR-Element <i>Resource.id</i>) verwenden.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -2602,7 +2602,7 @@
             "title": "Umsetzung der Versionierte Referenzen gemäß FHIR",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS die Versionierte Referenzen nach [FHIR References and Versions] implementieren.",
+            "text": "Der FHIR Data Service MUSS versionierte Referenzen nach [FHIR References and Versions] implementieren.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -2726,7 +2726,7 @@
             "title": "Abruf der Versionshistorie einer FHIR-Instanz",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS ermöglichen, die Versionshistorie einer FHIR-Instanz über eine HTTP <i>GET</i>-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/[id]/_history</i>.",
+            "text": "Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie einer FHIR-Instanz über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/[id]/_history</i>.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -2950,7 +2950,7 @@
             "title": "404 Not Found Antwort für nicht existierende spezifische Versionen",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine spezifische Version einer FHIR-Instanz den HTTP Status Code <i>404 (Not Found)</i> zurückgeben, wenn die angeforderte Version nicht existiert.\n    <br/><br/>\n    Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten mit folgenden Eigenschaften:\n    <ul>\n        <li><i>OperationOutcome.issue.code</i> auf <i>not-found</i> gesetzt.</li>\n        <li><i>OperationOutcome.issue.diagnostics</i> mit einer Meldung, dass die angeforderte Version nicht existiert.</li>\n    </ul>",
+            "text": "Der FHIR Data Service MUSS bei einem HTTP GET-Request auf eine spezifische Version einer FHIR-Instanz den HTTP Status Code <i>404 (Not Found)</i> zurückgeben, wenn die angeforderte Version nicht existiert.\n <br/><br/>\n Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten mit folgenden Eigenschaften:\n <ul>\n <li><i>OperationOutcome.issue.code</i> auf <i>not-found</i> gesetzt.</li>\n <li><i>OperationOutcome.issue.diagnostics</i> mit einer Meldung, dass die angeforderte Version nicht existiert.</li>\n </ul>",
             "conformance": "SHALL",
             "characteristics": [
                 {
