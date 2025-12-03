@@ -45,7 +45,7 @@ RuleSet: Meta-CS
 
 
 RuleSet: Meta-Instance
-* insert MetaVersion
+* insert MetaVersion(version)
 * insert MetaStatus(status)
 * insert Gematik(publisher)
 * insert MetaDate(date)
