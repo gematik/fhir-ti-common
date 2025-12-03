@@ -13,6 +13,7 @@ build:
     igtools: true
   pipeline:
     - requirements
+    - shell: igtools polarion ./input/content
     - sushi
     - igpub
     - igpub_qa

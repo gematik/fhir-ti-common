@@ -34,7 +34,7 @@
       ]
     }
   ],
-  "copyright": "gematik GmbH / Dieser Implementation Guide ist lizenziert unter <a href=\"./license.html\">Apache License</a>, Version 2.0.",
+  "copyright": "gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "packageId": "de.gematik.ti",
   "license": "Apache-2.0",
   "fhirVersion": [
