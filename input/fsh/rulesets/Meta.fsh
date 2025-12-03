@@ -1,19 +1,19 @@
 Alias: $version = 1.2.0
 
-RuleSet: MetaDate(field)
-* {field} = "2025-12-15"
+RuleSet: MetaDate(element)
+* {element} = "2025-12-15"
 
 
-RuleSet: MetaStatus(field)
-* {field} = #active
+RuleSet: MetaStatus(element)
+* {element} = #active
 
 
-RuleSet: MetaVersion(field)
-* {field} = $version
+RuleSet: MetaVersion(element)
+* {element} = $version
 
 
-RuleSet: Gematik(field)
-* {field} = "gematik GmbH"
+RuleSet: Gematik(element)
+* {element} = "gematik GmbH"
 
 
 RuleSet: MetaContact
