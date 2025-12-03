@@ -314,6 +314,11 @@
           "nameUrl": "license.html",
           "title": "Apache License",
           "generation": "markdown"
+        },
+        {
+          "nameUrl": "comparisons.html",
+          "title": "Versionsvergleiche",
+          "generation": "markdown"
         }
       ]
     },
