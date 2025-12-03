@@ -10,7 +10,7 @@
   "date": "2025-12-15",
   "publisher": "gematik GmbH",
   "description": "Definiert die Datenstruktur für medizinische, regulatorische und technische Organisationen",
-  "copyright": "gematik GmbH",
+  "copyright": "gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,

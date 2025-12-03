@@ -16,6 +16,10 @@ RuleSet: Gematik(element)
 * {element} = "gematik GmbH"
 
 
+RuleSet: MetaCopyright(element)
+* {element} = "gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0."
+
+
 RuleSet: MetaContact
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://www.gematik.de"
@@ -26,7 +30,7 @@ RuleSet: Meta
 * insert MetaStatus(^status)
 * insert MetaDate(^date)
 * insert Gematik(^publisher)
-* insert Gematik(^copyright)
+* insert MetaCopyright(^copyright)
 * ^experimental = false
 
 
