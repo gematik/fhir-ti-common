@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "ti-operationdefinition",
   "url": "https://gematik.de/fhir/ti/StructureDefinition/ti-operationdefinition",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "name": "TIOperationDefinition",
   "title": "OperationDefinition Profil für TI FHIR Data Service",
   "status": "active",
   "experimental": false,
-  "date": "2025-09-12",
+  "date": "2025-12-15",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil beschreibt FHIR Operationen des FHIR Data Service innerhalb der Telematikinfrastruktur (TI).\nEs stellt sicher, dass zustandsverändernde Operationen (`affectsState = true`) nicht über HTTP GET ausgeführt werden dürfen.",
   "copyright": "gematik GmbH",
@@ -31,21 +31,6 @@
             "source": "https://gematik.de/fhir/ti/StructureDefinition/ti-operationdefinition"
           }
         ]
-      },
-      {
-        "id": "OperationDefinition.meta",
-        "path": "OperationDefinition.meta",
-        "mustSupport": true
-      },
-      {
-        "id": "OperationDefinition.meta.versionId",
-        "path": "OperationDefinition.meta.versionId",
-        "mustSupport": true
-      },
-      {
-        "id": "OperationDefinition.meta.lastUpdated",
-        "path": "OperationDefinition.meta.lastUpdated",
-        "mustSupport": true
       },
       {
         "id": "OperationDefinition.extension",

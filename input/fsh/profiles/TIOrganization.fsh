@@ -3,12 +3,7 @@ Id: ti-organization
 Parent: Organization
 Title: "TI Organization"
 Description: "Definiert die Datenstruktur für medizinische, regulatorische und technische Organisationen"
-* insert ProfileMeta
-
-// preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
-* ^status = #active
+* insert Meta-With-Versioning
 
 * extension contains
     NcpehCountryExtension named ncpehCountryEx 0..1 MS

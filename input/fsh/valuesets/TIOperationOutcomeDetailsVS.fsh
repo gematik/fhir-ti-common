@@ -5,10 +5,6 @@ Title: "TI Operation Outcome Details Value Set"
 Description: "Enthält alle Codes für das Operation Outcome der Telematikinfrastruktur (TI) sowie die in FHIR definierten Operation-Outcome-Codes."
 * insert Meta-VS
 
-// preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
-* ^status = #active
 
 * include codes from system $cs-operation-outcome
 * include codes from system TIOperationOutcomeDetailsCS

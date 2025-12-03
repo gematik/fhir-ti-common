@@ -3,12 +3,12 @@ Parent: CapabilityStatement
 Id: ti-capability-statement
 Title: "Capability Statement Profil für TI FHIR Data Service"
 Description: "Dieses Profil beschreibt die Fähigkeiten eines FHIR Data Service innerhalb der Telematikinfrastruktur (TI) spezifiziert ist."
-* insert ProfileMeta
+* insert Meta
 
 * contact 1..1
 * version 1..1
 * version ^short = "Die Version der API"
-// * format 1..
+
 * format ^short = "Die von der API unterstützten Medientypen, z.B. application/json oder application/fhir+json"
 
 * extension contains 

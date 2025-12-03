@@ -20,21 +20,6 @@
   "differential": {
     "element": [
       {
-        "id": "CapabilityStatement.meta",
-        "path": "CapabilityStatement.meta",
-        "mustSupport": true
-      },
-      {
-        "id": "CapabilityStatement.meta.versionId",
-        "path": "CapabilityStatement.meta.versionId",
-        "mustSupport": true
-      },
-      {
-        "id": "CapabilityStatement.meta.lastUpdated",
-        "path": "CapabilityStatement.meta.lastUpdated",
-        "mustSupport": true
-      },
-      {
         "id": "CapabilityStatement.extension",
         "path": "CapabilityStatement.extension",
         "slicing": {

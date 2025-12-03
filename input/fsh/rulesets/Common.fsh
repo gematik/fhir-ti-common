@@ -1,55 +1,9 @@
-Alias: $version = 1.2.0
-
-RuleSet: ReleaseStatus
-* ^status = #active
-
-RuleSet: ReleaseStatusInst
-* status = #active
-
-RuleSet: Meta
-* ^version = $version
-* insert ReleaseStatus
-* ^experimental = false
-* ^publisher = "gematik GmbH"
-* ^date = "2025-12-15"
-* ^copyright = "gematik GmbH"
-
-RuleSet: Meta-VS
-* insert Meta
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "https://www.gematik.de"
-* ^experimental = false
-* ^immutable = false
-* ^copyright = "gematik GmbH"
-
-RuleSet: MetaCS
-* insert Meta
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "https://www.gematik.de"
-* ^caseSensitive = true
-* ^content = #complete
-* ^copyright = "gematik GmbH"
-
-
-RuleSet: MetaInst
-* version = $version
-* insert ReleaseStatusInst
-* publisher = "gematik GmbH"
-* date = "2025-12-15"
-
-
-RuleSet: ProfileMeta
-* insert Meta
-* meta MS
-  * versionId MS
-  * lastUpdated MS
-
-
 RuleSet: Subject(element-name)
 * {element-name} 1..1 MS
 * {element-name} only Reference(Patient)
   * identifier 1..1 MS
   * identifier only IdentifierKvid10
+
 
 RuleSet: ObservationEffectiveDateTime
 * effective[x] only dateTime
@@ -59,6 +13,7 @@ RuleSet: ObservationEffectiveDateTime
   * ^slicing.rules = #closed
 * effective[x] contains effectiveDateTime 1..1 MS
 * effectiveDateTime only dateTime
+
 
 RuleSet: Performer
 * performer ..1 MS
@@ -72,6 +27,7 @@ RuleSet: Performer
     Patient or
     Practitioner or
     PractitionerRole)
+
 
 RuleSet: Note
 * note MS

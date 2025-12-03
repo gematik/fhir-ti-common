@@ -5,12 +5,7 @@ Title: "TI PractitionerRole"
 Description: """
 Dieses Profil beschreibt die Verwendung der FHIR-Ressource PractitionerRole in der Telematikinfrastruktur (TI). Es wird verwendet, um die Rolle und Funktion einer Gesundheitsfachperson innerhalb einer Organisation zu definieren.
 """
-* insert ProfileMeta
-
-// preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
-* ^status = #active
+* insert Meta-With-Versioning
 
 * id MS
 * practitioner MS

@@ -2,25 +2,11 @@ CodeSystem: TIOperationOutcomeDetailsCS
 Id: operation-outcome-details-codes
 Title: "TI Operation Outcome Details CodeSystem"
 Description: "Telematikinfrastruktur (TI) Operation Outcome Details CodeSystem"
-* insert MetaCS
-
-// preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
-* ^status = #active
+* insert Meta-CS
 
 * ^caseSensitive = true
 
 * #OPERATION_SUCCESS "Operation Successfully Completed"
 * #SVC_IDENTITY_MISMATCH "Telematik-ID inside ID-Token or KVNR in x-insurantid HTTP header does not match FHIR data"
 * #SVC_INACTIVE_CODE "Use of inactive code not permitted"
-// * #MEDICATIONSVC_NO_VALID_STRUCTURE "Invalid Data Structure in Medication Service"
-// * #MEDICATIONSVC_PRESCRIPTION_NO_EXIST "Prescription Not Found in Medication Service"
-// * #MEDICATIONSVC_PRESCRIPTION_DUPLICATE "Duplicate Prescription Detected in Medication Service"
-// * #MEDICATIONSVC_PRESCRIPTION_STATUS "Operation Not Permitted on Current Prescription Status"
-// * #MEDICATIONSVC_DISPENSATION_NO_EXIST "Dispensation Not Found in Medication Service"
-// * #MEDICATIONSVC_DISPENSATION_STATUS "Operation Not Permitted on Current Dispensation Status"
-// * #MEDICATIONSVC_OPERATION_SUCCESS "Operation Successfully Completed in Medication Service"
-// * #MEDICATIONSVC_PARAMETERS_REFERENCE_NO_EXIST "Unresolved Reference in Parameters"
-// * #MEDICATIONSVC_MEDICATIONPLAN_NO_EXIST "Medication Plan Not Found in Medication Service"
-// * #MEDICATIONSCV_MEDICINAL_PRODUCT_PACKAGE_NOT_ALLOWED "Medicinal Product Package not allowed for this Operation"
+

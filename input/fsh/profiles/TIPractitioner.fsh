@@ -6,13 +6,7 @@ Description: """
 Dieses Profil beschreibt die Verwendung der FHIR-Ressource Practitioner im Kontext der Telematikinfrastruktur (TI). Es dient der strukturierten Darstellung von Gesundheitsfachpersonen, wie z.B. Ärzt:innen, Zahnärzt:innen, Psychotherapeut:innen oder Apotheker:innen, innerhalb TI-konformer Anwendungen.
 """
 
-
-* insert ProfileMeta
-
-// preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
-* ^status = #active
+* insert Meta-With-Versioning
 
 * id MS
 * identifier MS

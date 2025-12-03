@@ -76,10 +76,6 @@ Title: "HTTP-Antwortinformationen"
 Description: "Definiert Informationen zu HTTP-Antworten für FHIR-Interaktionen, inklusive Statuscode, Beschreibung, Beispiel und Response-Schema."
 * insert Meta
 
-// preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
-* ^status = #active
 
 * ^context[+].type = #element
 * ^context[=].expression = "CapabilityStatement"
