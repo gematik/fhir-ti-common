@@ -503,26 +503,6 @@ In diesem Beispiel bezieht sich die Referenz auf die 4. Version der _MedicationS
 Zum Auflösen einer versionerten Referenz, muss zunächst ein Treffer auf Grund der Referenz ohne die Versionsinformation (also ohne <code>/_history/[versionId]</code>) mit der <code>Bundle.entry.fullUrl</code> bestimmt werden muss und anschließend die Version mit <code>Resource.meta.versionId</code> auf Übereinstimmung geprüft werden (siehe [FHIR Bundle References]). Hierbei muss die <code>Bundle.entry.fullUrl</code> nicht eindeutig sein (siehe [FHIR Bundle.entry.fullUrl]) und mehrere Versionen der selben Resourcen-Instanz mit der selben URL innerhalb eines Bundles erlaubt.
 
 
-### Persistieren der Profilversion in FHIR
-
-<requirement conformance="SHALL" key="IG-TI90315JPK" title="Speichern der Profilversion" version="2">
-    <meta lockversion="true"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
-    </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
-    </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
-    </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
-    </actor>
-    Beim Erzeugen von FHIR-Ressourcen im FHIR Data Service MUSS dieser jede zu speichernde Ressource gegen das dazugehörige aktuelle Profil validieren. Die Information, gegen welches Profil in welcher Version geprüft wurde, MUSS der FHIR Data Service in der jeweiligen Ressource in <i>Meta.profile</i> speichern.
-</requirement>
-
-
 ### Bereitstellung von Capability Statements
 
 <requirement conformance="SHALL" key="IG-TI38467S3Q" title="Bereitstellung des /metadata-Endpunkts durch FHIR Data Service" version="0">

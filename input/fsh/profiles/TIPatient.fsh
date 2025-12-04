@@ -4,6 +4,10 @@ Parent: Patient
 Title: "TI Patient"
 Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data Services"
 * insert Meta
+// preserve the version of this resource
+* ^version = "1.2.0"
+* ^date = "2025-12-15"
+* ^status = #active
 
 * obeys pat-de-1
 

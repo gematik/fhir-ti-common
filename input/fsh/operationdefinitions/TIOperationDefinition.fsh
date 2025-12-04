@@ -7,6 +7,10 @@ Dieses Profil beschreibt FHIR Operationen des FHIR Data Service innerhalb der Te
 Es stellt sicher, dass zustandsverändernde Operationen (`affectsState = true`) nicht über HTTP GET ausgeführt werden dürfen.
 """
 * insert Meta
+// preserve the version of this resource
+* ^version = "1.1.1"
+* ^date = "2025-09-12"
+* ^status = #active
 
 * obeys op-affectsState-vs-method
 * extension contains HttpMethod named method 0..2 MS
