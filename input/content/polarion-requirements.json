@@ -1343,6 +1343,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"

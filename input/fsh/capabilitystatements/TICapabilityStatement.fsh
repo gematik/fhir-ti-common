@@ -5,6 +5,11 @@ Title: "Capability Statement Profil für TI FHIR Data Service"
 Description: "Dieses Profil beschreibt die Fähigkeiten eines FHIR Data Service innerhalb der Telematikinfrastruktur (TI) spezifiziert ist."
 * insert Meta
 
+// preserve the version of this resource
+* ^version = "1.1.1"
+* ^date = "2025-09-12"
+* ^status = #active
+
 * contact 1..1
 * version 1..1
 * version ^short = "Die Version der API"
