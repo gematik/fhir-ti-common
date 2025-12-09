@@ -17,7 +17,7 @@ RuleSet: Gematik(element)
 
 
 RuleSet: MetaCopyright(element)
-* {element} = "gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0."
+* {element} = "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0."
 
 
 RuleSet: MetaContact
