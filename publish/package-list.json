@@ -43,6 +43,16 @@
             "date": "2025-09-12",
             "sequence": "TI",
             "fhirversion": "4.0.1"
+        },
+        {
+            "version": "1.2.0",
+            "desc": "TI Common IG 1.2.0",
+            "path": "https://gematik.de/fhir/ti/1.2.0",
+            "status": "release",
+            "current": true,
+            "date": "2025-12-15",
+            "sequence": "TI",
+            "fhirversion": "4.0.1"
         }
     ]
 }
