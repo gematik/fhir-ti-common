@@ -13,12 +13,16 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
+    <actor name="EPA-MHD-Service">
+        <testProcedure id="Produkttest"/>
+    </actor>
     <actor name="EPA-Patient-Service">
         <testProcedure id="Produkttest"/>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass für jede Ressource, die direkt den in der Suchanfrage angegebenen Kriterien entspricht, das Attribut <i>entry.search.mode</i> auf <i>match</i> gesetzt wird.
 </requirement>
 
+"Direkt den in der Suchanfrage angegebenen Kriterien" entsprechend heißt in diesem Fall, dass das entsprechende Ergebnis nicht über einen <i>_include</i> oder <i>_revinclude</i>-Parameter der Ergebnismenge hinzugefügt wurde.
 
 #### fullUrl in FHIR Bundles
 
