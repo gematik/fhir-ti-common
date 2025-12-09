@@ -6,12 +6,13 @@ actor:
 conformance: SHALL
 content_hash: 1fe2515cad361d13fbc81405210c4a83a01b2c57227ca1a45e45869cb9bd9e27
 created: '2025-02-26T10:59:21.321344'
-date: '2025-11-18T11:03:10.876973'
+date: '2025-12-04T12:09:29.518908'
+deleted: '2025-12-04T12:09:29.518901'
 key: IG-TI90315JPK
 modified: '2025-03-12T12:47:19.484185'
-release_status: STABLE
+release_status: DELETED
 source: input/pagecontent/general-principles.md
-status: ACTIVE
+status: RETIRED
 test_procedures:
   EPA-Audit-Service:
   - Produkttest

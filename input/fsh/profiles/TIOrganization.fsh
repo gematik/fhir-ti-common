@@ -4,6 +4,10 @@ Parent: Organization
 Title: "TI Organization"
 Description: "Definiert die Datenstruktur für medizinische, regulatorische und technische Organisationen"
 * insert Meta-With-Versioning
+// preserve the version of this resource
+* ^version = "1.1.1"
+* ^date = "2025-09-12"
+* ^status = #active
 
 * extension contains
     NcpehCountryExtension named ncpehCountryEx 0..1 MS

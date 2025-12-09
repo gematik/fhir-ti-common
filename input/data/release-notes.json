@@ -19,8 +19,23 @@
                     "path": "fhir-format.html"
                 },
                 {
-                    "title": "Unterstützung des Accept Header für Formatwahl im FHIR Data Service",
-                    "key": "IG-TI96963Y60",
+                    "title": "Speichern der Profilversion",
+                    "key": "IG-TI90315JPK",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 2,
+                    "release_status": "DELETED",
+                    "status": "RETIRED",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html"
+                },
+                {
+                    "title": "Sortierung des Datentyps Period",
+                    "key": "IG-TI00141ZJ2",
                     "actor": [
                         "EPA-Audit-Service",
                         "EPA-MHD-Service",

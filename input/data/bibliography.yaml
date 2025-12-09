@@ -119,3 +119,7 @@ entries:
     author: "HL7"
     title: "Capabilities-Interaktion FHIR Spezifikation"
     link: "https://hl7.org/fhir/R4/http.html#capabilities"
+  - key: "ePA-Basisfunktionalitäten#IG-EPA74597GNF"
+    author: "gematik"
+    title: "Anforderung: IG-EPA74597GNF - Speichern der Profilversion"
+    link: "https://gematik.de/fhir/epa/1.3.0/general-principles.html#IG-EPA74597GNF"

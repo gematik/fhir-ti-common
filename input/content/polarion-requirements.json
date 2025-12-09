@@ -802,7 +802,7 @@
             "key": "IG-TI90315JPK",
             "title": "Speichern der Profilversion",
             "version": 2,
-            "status": "ACTIVE",
+            "status": "RETIRED",
             "text": "Beim Erzeugen von FHIR-Ressourcen im FHIR Data Service MUSS dieser jede zu speichernde Ressource gegen das dazugehörige aktuelle Profil validieren. Die Information, gegen welches Profil in welcher Version geprüft wurde, MUSS der FHIR Data Service in der jeweiligen Ressource in <i>Meta.profile</i> speichern.",
             "conformance": "SHALL",
             "characteristics": [
