@@ -4,7 +4,6 @@ Title: "Example Patient"
 Usage: #example
 * identifier[KVNR].system = $sid-identifier-kvid-10
 * identifier[KVNR].value = "G995030566"
-* active = true
 * name[Name]
   * family = "Gundlach"
   * given = "Monika"
