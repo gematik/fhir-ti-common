@@ -1,7 +1,7 @@
 current: 1.2.0
 directory: input
-frozen_hash: 96ca950ccebcd0b1e2ed044ee252da3c4c201027e999ced92b940f7fae4021f8
-frozen_version: null
+frozen_hash: 6ad033d69c808887b503aa5ada034455a1877fafd19a9ee75ab3300dedf95b9c
+frozen_version: 1.2.0
 migrated_with_version: 0.3.0
 name: Telematikinfrastruktur (TI) Common
 prefix: IG
