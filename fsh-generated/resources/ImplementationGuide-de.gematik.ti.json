@@ -317,13 +317,13 @@
           ]
         },
         {
-          "nameUrl": "license.html",
-          "title": "Apache License",
+          "nameUrl": "comparisons.html",
+          "title": "Versionsvergleiche",
           "generation": "markdown"
         },
         {
-          "nameUrl": "comparisons.html",
-          "title": "Versionsvergleiche",
+          "nameUrl": "license.html",
+          "title": "Apache License",
           "generation": "markdown"
         }
       ]

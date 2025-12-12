@@ -10,7 +10,7 @@
   "date": "2025-09-12",
   "publisher": "gematik GmbH",
   "description": "Gibt die Basis-URL des FHIR-Servers als Zeichenkette an. Beispiel: http://epa4all/epa/medication/api/v1/fhir",
-  "copyright": "gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.",
+  "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

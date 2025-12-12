@@ -63,10 +63,10 @@ pages:
       title: "Steckbrief: ePA PS / ePA-Client-Systeme / ePA-FdV"
     actor-vsdm.md:
       title: "Steckbrief: VSDM 2.0"
-  license.md:
-    title: "Apache License"
   comparisons.md:
     title: "Versionsvergleiche"
+  license.md:
+    title: "Apache License"
 
 
 menu:
