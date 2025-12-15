@@ -42,12 +42,6 @@
   ],
   "dependsOn": [
     {
-      "packageId": "hl7.terminology.r4",
-      "version": "6.5.0",
-      "uri": "http://terminology.hl7.org",
-      "id": "hl7_terminology_r4"
-    },
-    {
       "packageId": "de.basisprofil.r4",
       "version": "1.5.4",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
