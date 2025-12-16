@@ -1,8 +1,5 @@
 ### Version 1.2.0
 
-#### TI Patient
-- Die Kardinalität des FHIR-Elements _active_ wurde auf 0..0 gesetzt.
-
 #### Anforderungen
 
 Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
