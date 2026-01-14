@@ -6,7 +6,7 @@ Diese Seite beschreibt Standard-API-Zugriffe für eine clientseitige Suche und B
 Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [FHIR-Suchoperationen] gemäß den Vorgaben der FHIR-Spezifikation. Bei einer Suche wird ein _Search Set Bundle_ zurückgegeben.
 
 <requirement conformance="SHALL" key="IG-TI43409LRQ" title="Verwendung von entry.search.mode = match" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -27,7 +27,7 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
 #### fullUrl in FHIR Bundles
 
 <requirement conformance="SHALL" key="IG-TI64797XGV" title="Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -44,7 +44,7 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI29911V07" title="Konsistente Referenzierung innerhalb eines Bundles" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -61,7 +61,7 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI95143N18" title="Formatierung von Referenzen im fullUrl-Feld" version="2">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -122,7 +122,7 @@ In dieser Abfrage bedeutet:
 Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welches alle im FHIR Data Service verfügbaren <i>MedicationRequest</i>-Instanzen enthält - also auch zugehörige <i>Medication</i>-Instanzen. Hinweis: Dies kann potenziell eine große Ergebnismenge bedeuten und ist davon abhängig, wie viele <i>MedicationRequest</i>-Datensätze gespeichert sind.
 
 <requirement conformance="SHALL" key="IG-TI38183K0G" title="Unterstützung der _include-Suche im FHIR Data Service gemäß FHIR" version="2">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -135,7 +135,7 @@ Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welches alle im FHIR Da
 In der FHIR-Spezifikation ist <i>_revinclude</i> ein Suchparameter, der es ermöglicht, Ressourceninstanzen in die Ergebnismenge einzubeziehen, die jeweils auf die primäre Ressourceninstanz referenziert.
 
 <requirement conformance="SHALL" key="IG-TI44886ZXA" title="Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR" version="2">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -158,7 +158,7 @@ In dieser Abfrage bedeutet:
 Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welche <i>MedicationRequest</i>-Instanzen zusammen mit den <i>MedicationDispense</i>-Instanzen enthält.
 
 <requirement conformance="SHALL" key="IG-TI08134XQ4" title="Verarbeitung von referenzierten Ressourcen in Include-Suchen" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -166,7 +166,7 @@ Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welche <i>MedicationReq
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI92941JBA" title="Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -179,7 +179,7 @@ Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welche <i>MedicationReq
 Der <i>:iterate</i>-Modifikator ermöglicht es, bei der Verwendung von <i>_include</i> und <i>_revinclude</i> die Einschlusslogik rekursiv anzuwenden. Dadurch werden nicht nur direkt referenzierte Ressourcen in das Suchergebnis aufgenommen, sondern auch alle Ressourcen, die durch die eingeschlossenen Ressourcen weiter referenziert werden. Dies ist besonders nützlich für mehrstufige Abhängigkeiten und zirkuläre Beziehungen.
 
 <requirement conformance="SHALL" key="IG-TI97020UTC" title="Unterstützung des :iterate-Modifikators" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -187,7 +187,7 @@ Der <i>:iterate</i>-Modifikator ermöglicht es, bei der Verwendung von <i>_inclu
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI00242W49" title="Unterstützung von _include:iterate" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -195,7 +195,7 @@ Der <i>:iterate</i>-Modifikator ermöglicht es, bei der Verwendung von <i>_inclu
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI17755AMW" title="Unterstützung von _revinclude:iterate" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -338,7 +338,7 @@ Datumsangaben haben einen Bereich, der auf ihrer Präzision (Jahr, Monat, Tag) b
 <br/>
 
 <requirement conformance="SHALL" key="IG-TI31988JEY" title="Unterstützung der Präzision bei numerischen und datumsbasierten Suchparametern" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -352,7 +352,7 @@ Datumsangaben haben einen Bereich, der auf ihrer Präzision (Jahr, Monat, Tag) b
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI28968WCS" title="Unterstützung von Präfixen für numerische und Datumsvergleiche" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -366,7 +366,7 @@ Datumsangaben haben einen Bereich, der auf ihrer Präzision (Jahr, Monat, Tag) b
 </requirement>
 
 <requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI40876FQM" title="Standardpräfix für Vergleiche" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -380,7 +380,7 @@ Datumsangaben haben einen Bereich, der auf ihrer Präzision (Jahr, Monat, Tag) b
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI36297YXJ" title="Vergleichspräfixe für numerische Werte" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -394,7 +394,7 @@ Datumsangaben haben einen Bereich, der auf ihrer Präzision (Jahr, Monat, Tag) b
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI85276Y4V" title="Vergleichspräfixe für Datumswerte" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -408,7 +408,7 @@ Datumsangaben haben einen Bereich, der auf ihrer Präzision (Jahr, Monat, Tag) b
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI14253RWM" title="Exakte Übereinstimmungen bei Ganzzahlen" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -422,7 +422,7 @@ Datumsangaben haben einen Bereich, der auf ihrer Präzision (Jahr, Monat, Tag) b
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI61163GRT" title="Bereichsprüfung für Range- und Period-Typen" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -496,7 +496,7 @@ Wenn der Referenzparameter nur auf einen einzelnen Ressourcentyp verweist, kann 
 <br/>
 
 <requirement conformance="SHALL" key="IG-TI06315TQ1" title="Unterstützung verketteter Suchparameter" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -524,7 +524,7 @@ _has:[Ressourcentyp]:[Referenzparameter]:[Suchparameter]=[Wert]
 <br/>
 
 <requirement conformance="SHALL" key="IG-TI87465NYV" title="Unterstützung der umgekehrten verketteten Parametersuche" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -555,7 +555,7 @@ GET [base]/Medication?_has:MedicationStatement:medication:status=stopped&_revinc
 ### Sortierung
 
 <requirement conformance="MAY" key="IG-TI27170FRR" title="Sortierung der Suchergebnisse durch _sort" version="3">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-PS">
         <testProcedure id="Konformitätsbestätigung"/>
     </actor>
@@ -569,7 +569,7 @@ GET [base]/Medication?_has:MedicationStatement:medication:status=stopped&_revinc
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI81327UVF" title="Umsetzung der Sortierfunktion gemäß FHIR" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -588,8 +588,8 @@ GET [base]/Medication?_has:MedicationStatement:medication:status=stopped&_revinc
 GET [base]/epa/audit/api/v1/fhir/AuditEvent?_sort=action,-date
 ```
 
-<requirement conformance="SHALL" key="IG-TI00141ZJ2" title="Sortierung des Datentyps Period" version="0">
-    <meta lockversion="true"/>
+<requirement conformance="SHALL" key="IG-TI00141ZJ2" title="Sortierung des Datentyps Period" version="1">
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>

@@ -2,7 +2,7 @@
 Bei einer Suche im FHIR Data Service über die FHIR Query API stellt der Service dem Client-System in seiner Antwort ggf. Links zu weiteren Ergebnissen zur Verfügung, die es dem Client erlauben, bequem durch die Ergebnismenge zu navigieren.
 
 <requirement conformance="SHALL" key="IG-TI07252NTV" title="Unterstützung URL-Parameter für Paginierungsfunktion" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -80,7 +80,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0_total=accurate
 <br/>
 
 <requirement conformance="SHALL" key="IG-TI37232GDE" title="Unterstützung Seitennavigationslinks für Paginierungsfunktion" version="2">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -136,7 +136,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0_total=accurate
 </requirement>
 
 <requirement conformance="MAY" key="IG-TI78112H2T" title="Verwendung relativer URLs bei der Paginierung von FHIR Bundles" version="3">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>

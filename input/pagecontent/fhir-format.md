@@ -2,7 +2,7 @@
 Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service legt fest, in welchen Formaten der Dienst Anfragen verarbeitet und Antworten zurückgibt. Der FHIR Data Service kann sowohl JSON als auch XML unterstützen und ermöglicht es Client-Systeme, das gewünschte Format über den <i>Accept</i> Header oder den <i>_format</i>-Parameter festzulegen. Falls keine Formatangabe angezeigt wird, bestimmt der FHIR Data Service das Antwortformat. Die Anforderungen regeln zudem, wie der <i>Content Type Header</i> in POST-Nachrichten behandelt wird sowie welche Fehlerreaktion erfolgt, wenn ein nicht unterstütztes Format angefordert wird. Abhängig vom Einsatzzweck des FHIR Data Service kann es sein, dass nicht alle Anforderungen in jeder Implementierung relevant oder erforderlich sind.
 
 <requirement conformance="SHALL" key="IG-TI59271UPX" title="FHIR-Formatunterstützung JSON" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -19,7 +19,7 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI22824X01" title="Unterstützung von JSON Content Type für FHIR-Data-Schnittstellen" version="2">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -36,7 +36,7 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI62717R2P" title="FHIR-Formatunterstützung XML" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -53,7 +53,7 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI57083QMG" title="Unterstützung von XML Content Type für FHIR-Data-Schnittstellen" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -70,7 +70,7 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI96963Y60" title="Unterstützung des Accept Header für Formatwahl im FHIR Data Service" version="1">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -129,7 +129,7 @@ Content-Type: application/fhir+xml
 </auditevent>
 ```
 <requirement conformance="SHALL" key="IG-TI18063SU7" title="Unterstützung des _format-Parameters im FHIR Data Service" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -159,7 +159,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=10&_offset=20&_format=json
 ```
 
 <requirement conformance="SHALL" key="IG-TI62490PR0" title="Standardformat für den FHIR Data Service" version="1">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -181,7 +181,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=10&_offset=20&_format=json
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI19904KM0" title=" Keine Überschreibung des Content Type Header durch den _format-Parameter bei POST-Nachrichten" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -198,7 +198,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=10&_offset=20&_format=json
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI94558MGC" title="Vorrang des _format-Parameters gegenüber dem Accept Header" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Medication-Service">
         <testProcedure id="Produkttest"/>
     </actor>
