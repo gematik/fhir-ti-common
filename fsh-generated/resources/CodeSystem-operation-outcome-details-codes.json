@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "active",
+  "status": "draft",
   "content": "complete",
   "name": "TIOperationOutcomeDetailsCS",
   "id": "operation-outcome-details-codes",
@@ -14,15 +14,23 @@
     },
     {
       "code": "SVC_IDENTITY_MISMATCH",
-      "display": "Telematik-ID inside ID-Token or KVNR in x-insurantid HTTP header does not match FHIR data"
+      "display": "Identity information in ACCESS TOKEN does not match identity information in FHIR data"
     },
     {
       "code": "SVC_INACTIVE_CODE",
       "display": "Use of inactive code not permitted"
+    },
+    {
+      "code": "SVC_ROLE_NOT_ALLOWED",
+      "display": "This role is not allowed to access the resource"
+    },
+    {
+      "code": "SVC_NO_VALID_STRUCTURE",
+      "display": "Invalid Data Structure"
     }
   ],
-  "version": "1.1.1",
-  "date": "2025-09-12",
+  "version": "1.2.0",
+  "date": "2026-01-15",
   "publisher": "gematik GmbH",
   "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "experimental": false,
@@ -37,5 +45,5 @@
     }
   ],
   "caseSensitive": true,
-  "count": 3
+  "count": 5
 }
