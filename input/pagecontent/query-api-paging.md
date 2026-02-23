@@ -2,7 +2,7 @@
 Bei einer Suche im FHIR Data Service über die FHIR Query API stellt der Service dem Client-System in seiner Antwort ggf. Links zu weiteren Ergebnissen zur Verfügung, die es dem Client erlauben, bequem durch die Ergebnismenge zu navigieren.
 
 <requirement conformance="SHALL" key="IG-TI07252NTV" title="Unterstützung URL-Parameter für Paginierungsfunktion" version="0">
-    <meta lockversion="false"/>
+    <meta lockversion="true"/>
     <actor name="EPA-Audit-Service">
         <testProcedure id="Produkttest"/>
     </actor>
@@ -26,7 +26,7 @@ Bei einer Suche im FHIR Data Service über die FHIR Query API stellt der Service
       <tbody>
         <tr>
           <td><code>_count</code></td>
-          <td>Das Client-System KANN die maximale Anzahl von Elementen festlegen, die auf einer <i>Seite</i> (page) der Antwort enthalten sein soll. Das bedeutet, dass der Audit Event Service die Ergebnismenge auf diese maximal angegebene Anzahl beschränkt.</td>
+          <td>Das Client-System KANN die maximale Anzahl von Elementen festlegen, die auf einer <i>Seite</i> (page) der Antwort enthalten sein soll. Das bedeutet, dass der FHIR Data Service die Ergebnismenge auf diese maximal angegebene Anzahl beschränkt.</td>
           <td>25</td>
         </tr>
         <tr>
@@ -36,7 +36,7 @@ Bei einer Suche im FHIR Data Service über die FHIR Query API stellt der Service
         </tr>
         <tr>
           <td><code>_total</code></td>
-          <td>Dieser Parameter steuert, ob und wie der Audit Event Service die Gesamtanzahl der Suchergebnisse zurückgibt. Folgende Werte können eingestellt werden: <code>none</code>, <code>estimate</code>, <code>accurate</code>.</td>
+          <td>Dieser Parameter steuert, ob und wie der FHIR Data Service die Gesamtanzahl der Suchergebnisse zurückgibt. Folgende Werte können eingestellt werden: <code>none</code>, <code>estimate</code>, <code>accurate</code>.</td>
           <td>-</td>
         </tr>
       </tbody>
