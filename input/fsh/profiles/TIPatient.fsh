@@ -5,8 +5,8 @@ Title: "TI Patient"
 Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data Services"
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.2.0"
-* ^date = "2025-12-15"
+* ^version = "1.3.0"
+* ^date = "2026-03-13"
 * ^status = #active
 
 * obeys pat-de-1
@@ -24,7 +24,7 @@ Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data 
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
   * ^comment = """
-        Um die Unterscheidung der Namensbestandteile gemäß dem VSDM-Datensatz beizubehalten oder Präfixe als akademische Titel zu qualifizieren, können Anbieter die im deutschen HumanName-Basisprofil spezifizierten Erweiterungen unterstützen: HumanName DE Basis (https://simplifier.net/basisprofil-de-r4/humannamedebasis).
+        Um die Unterscheidung der Namensbestandteile gemäß dem VSDM-Datensatz beizubehalten oder Präfixe als akademische Titel zu qualifizieren, können Anbieter die im deutschen HumanName-Basisprofil spezifizierten Erweiterungen unterstützen: [HumanName DE Basis](https://simplifier.net/basisprofil-de-r4/humannamedebasis).
 
         Dies ist jedoch nicht verpflichtend im Rahmen dieser Spezifikation.
         """
@@ -53,14 +53,16 @@ Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data 
   * prefix ..0
   * suffix ..0
 * birthDate 1.. MS
+  * ^definition = """
+      Das Geburtsdatum des Versicherten ist eine Pflichtangabe. Partielle Datumsangaben sind allerdings zulässig.
+      """
   * ^comment = """
-      Bei Inländern ist immer ein logisch richtiges Geburtsdatum anzugeben. Bei Ausländern gilt folgendes: Zumindest das Geburtsjahr ist immer anzugeben. Im Geburtsjahr oder im Geburtstag und im Geburtsmonat ist bei Ausländern '00' bzw. '0000' zulässig, wenn der Geburtstag und der Geburtsmonat nicht zu ermitteln sind. Das Geburtsdatum muss komplett gefüllt sein. Beispiel: 1990-00-00
+      Hinweise insbesondere zur Angabe unvollständiger Datumswerte siehe [Patient.birthDate](https://ig.fhir.de/basisprofile-de/stable/ig-markdown-Ressourcen-Patient.html#ig-markdown-Ressourcen-Patient-Geburtsdatum) im HL7 Leitfaden Basis DE (R4).
       """
   * ^short = """
-  Das Geburtsjahr ist immer anzugeben. Im Geburtsjahr oder im Geburtstag und im Geburtsmonat ist bei Ausländern '00' bzw. '0000' zulässig. Beispiel: 1990-00-00
-  """
+      Geburtsdatum
+      """
 * gender MS
 * gender
   * extension contains
     GenderOtherDE named other-amtlich 0..1
-

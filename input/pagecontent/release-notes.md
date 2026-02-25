@@ -1,3 +1,14 @@
+### Version 1.3.0
+
+#### TI Patient
+- Nutzungsvorgabe bei partieller Angabe des Geburtsdatums in _birthDate_ angepasst
+
+#### Anforderungen
+
+Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
+
+{% include release-notes.html version="1.3.0" with_links=true %}
+
 ### Version 1.2.0
 
 #### Anforderungen

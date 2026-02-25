@@ -1,4 +1,4 @@
-TARGET=1.2.0
+TARGET=1.3.0
 PUBLISH_URL=https://gematik.de/fhir/ti/$TARGET
 BUCKET_PATH=/ig/fhir/ti
 PREV="" # Leave empty to skip moving
