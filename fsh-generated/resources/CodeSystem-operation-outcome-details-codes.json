@@ -14,23 +14,39 @@
     },
     {
       "code": "SVC_IDENTITY_MISMATCH",
-      "display": "Identity information in ACCESS TOKEN does not match identity information in FHIR data"
+      "display": "Identity mismatch: Access token or x-insurantid header does not match FHIR data (Telematik-ID / KVNR)"
     },
     {
       "code": "SVC_INACTIVE_CODE",
       "display": "Use of inactive code not permitted"
     },
     {
-      "code": "SVC_ROLE_NOT_ALLOWED",
-      "display": "This role is not allowed to access the resource"
+      "code": "SVC_INVALID_ACCESS_TOKEN",
+      "display": "Invalid access token provided"
     },
     {
-      "code": "SVC_NO_VALID_STRUCTURE",
-      "display": "Invalid Data Structure"
+      "code": "SVC_TELEMATIKID_BLOCKED",
+      "display": "The specified Telematik-ID is blocked"
+    },
+    {
+      "code": "SVC_TELEMATIKID_TEMPORARILY_BLOCKED",
+      "display": "The specified Telematik-ID is temporarily blocked"
+    },
+    {
+      "code": "SVC_VALIDATION_FAILED",
+      "display": "FHIR Profile Validation Failed"
+    },
+    {
+      "code": "SVC_DOSAGE_INVALID_INSTRUCTION_META",
+      "display": "The generated dosage instruction meta information is invalid"
+    },
+    {
+      "code": "SVC_DOSAGE_INVALID_RENDERED_INSTRUCTION",
+      "display": "The provided rendered dosage instruction is invalid"
     }
   ],
-  "version": "1.2.0",
-  "date": "2026-01-15",
+  "version": "1.3.0",
+  "date": "2026-03-20",
   "publisher": "gematik GmbH",
   "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "experimental": false,
@@ -45,5 +61,5 @@
     }
   ],
   "caseSensitive": true,
-  "count": 5
+  "count": 9
 }

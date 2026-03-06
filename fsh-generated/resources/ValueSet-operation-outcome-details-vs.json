@@ -283,12 +283,42 @@
       {
         "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
         "code": "SVC_IDENTITY_MISMATCH",
-        "display": "Telematik-ID inside ID-Token or KVNR in x-insurantid HTTP header does not match FHIR data"
+        "display": "Identity mismatch: Access token or x-insurantid header does not match FHIR data (Telematik-ID / KVNR)"
       },
       {
         "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
         "code": "SVC_INACTIVE_CODE",
         "display": "Use of inactive code not permitted"
+      },
+      {
+        "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
+        "code": "SVC_INVALID_ACCESS_TOKEN",
+        "display": "Invalid access token provided"
+      },
+      {
+        "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
+        "code": "SVC_TELEMATIKID_BLOCKED",
+        "display": "The specified Telematik-ID is blocked"
+      },
+      {
+        "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
+        "code": "SVC_TELEMATIKID_TEMPORARILY_BLOCKED",
+        "display": "The specified Telematik-ID is temporarily blocked"
+      },
+      {
+        "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
+        "code": "SVC_VALIDATION_FAILED",
+        "display": "FHIR Profile Validation Failed"
+      },
+      {
+        "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
+        "code": "SVC_DOSAGE_INVALID_INSTRUCTION_META",
+        "display": "The generated dosage instruction meta information is invalid"
+      },
+      {
+        "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
+        "code": "SVC_DOSAGE_INVALID_RENDERED_INSTRUCTION",
+        "display": "The provided rendered dosage instruction is invalid"
       }
     ]
   },

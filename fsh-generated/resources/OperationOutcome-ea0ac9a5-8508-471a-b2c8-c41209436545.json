@@ -1,6 +1,6 @@
 {
   "resourceType": "OperationOutcome",
-  "id": "ad48bf90-a664-44f4-af14-ee6e81db3df4",
+  "id": "ea0ac9a5-8508-471a-b2c8-c41209436545",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
@@ -9,13 +9,13 @@
   "issue": [
     {
       "severity": "error",
-      "code": "forbidden",
+      "code": "security",
       "details": {
         "coding": [
           {
-            "code": "SVC_IDENTITY_MISMATCH",
+            "code": "SVC_TELEMATIKID_BLOCKED",
             "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
-            "display": "Identity mismatch: Access token or x-insurantid header does not match FHIR data (Telematik-ID / KVNR)"
+            "display": "The specified Telematik-ID is blocked"
           }
         ]
       }

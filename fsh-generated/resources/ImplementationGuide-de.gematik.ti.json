@@ -7,7 +7,7 @@
   "title": "Implementation Guide Telematikinfrastruktur (TI) Common",
   "status": "active",
   "experimental": false,
-  "date": "2026-03-13",
+  "date": "2026-03-20",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -96,6 +96,22 @@
       },
       {
         "reference": {
+          "reference": "OperationOutcome/176e0f12-d08c-4a05-ae0a-e30bf2f5158d"
+        },
+        "name": "ExpTIOperationOutcomeDosageInvalidInstructionMeta",
+        "description": "The generated dosage instruction meta information is invalid",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/0c81ad3a-d6d1-4924-91d2-555cd3d5716f"
+        },
+        "name": "ExpTIOperationOutcomeDosageInvalidRenderedInstruction",
+        "description": "The provided rendered dosage instruction is invalid",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+      },
+      {
+        "reference": {
           "reference": "OperationOutcome/ad48bf90-a664-44f4-af14-ee6e81db3df4"
         },
         "name": "ExpTIOperationOutcomeIdentityMismatch",
@@ -104,10 +120,50 @@
       },
       {
         "reference": {
+          "reference": "OperationOutcome/65643d2f-363b-4df4-89e9-a6ce2ba55227"
+        },
+        "name": "ExpTIOperationOutcomeInactiveCode",
+        "description": "Inactive code not permitted",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/0467fbad-2ef1-4906-aaf5-7ce2a3929f7b"
+        },
+        "name": "ExpTIOperationOutcomeInvalidAccessToken",
+        "description": "Invalid access token provided",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+      },
+      {
+        "reference": {
           "reference": "OperationOutcome/468ca07b-7d63-453d-a738-0c35cb9402aa"
         },
         "name": "ExpTIOperationOutcomeSuccess",
         "description": "Operation Successfully Completed",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ea0ac9a5-8508-471a-b2c8-c41209436545"
+        },
+        "name": "ExpTIOperationOutcomeTelematikIdBlocked",
+        "description": "The specified Telematik-ID is blocked",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/8d5c1994-5caf-46c6-8c95-c5e7e6fad8e5"
+        },
+        "name": "ExpTIOperationOutcomeTelematikIdTemporailyBlocked",
+        "description": "The specified Telematik-ID is temporarily blocked",
+        "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/c5fca094-f4d0-4b6a-8662-8fa158d82416"
+        },
+        "name": "ExpTIOperationOutcomeValidationFailed",
+        "description": "FHIR Profile Validation Failed",
         "exampleCanonical": "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
       },
       {
