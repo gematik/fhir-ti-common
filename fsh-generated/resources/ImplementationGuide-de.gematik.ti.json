@@ -376,6 +376,10 @@
         "value": "1.1.1"
       },
       {
+        "code": "version-comparison",
+        "value": "1.2.0"
+      },
+      {
         "code": "bundle-references-resolve",
         "value": "false"
       },
