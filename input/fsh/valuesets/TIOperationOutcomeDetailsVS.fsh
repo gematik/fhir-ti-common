@@ -223,8 +223,32 @@ Description: "Enthält alle Codes für das Operation Outcome der Telematikinfras
 
 * ^expansion.contains[+].system = Canonical(TIOperationOutcomeDetailsCS)
 * ^expansion.contains[=].code = #SVC_IDENTITY_MISMATCH
-* ^expansion.contains[=].display = "Telematik-ID inside ID-Token or KVNR in x-insurantid HTTP header does not match FHIR data"
+* ^expansion.contains[=].display = "Identity mismatch: Access token or x-insurantid header does not match FHIR data (Telematik-ID / KVNR)"
 
 * ^expansion.contains[+].system = Canonical(TIOperationOutcomeDetailsCS)
 * ^expansion.contains[=].code = #SVC_INACTIVE_CODE
 * ^expansion.contains[=].display = "Use of inactive code not permitted"
+
+* ^expansion.contains[+].system = Canonical(TIOperationOutcomeDetailsCS)
+* ^expansion.contains[=].code = #SVC_INVALID_ACCESS_TOKEN
+* ^expansion.contains[=].display = "Invalid access token provided"
+
+* ^expansion.contains[+].system = Canonical(TIOperationOutcomeDetailsCS)
+* ^expansion.contains[=].code = #SVC_TELEMATIKID_BLOCKED
+* ^expansion.contains[=].display = "The specified Telematik-ID is blocked"
+
+* ^expansion.contains[+].system = Canonical(TIOperationOutcomeDetailsCS)
+* ^expansion.contains[=].code = #SVC_TELEMATIKID_TEMPORARILY_BLOCKED
+* ^expansion.contains[=].display = "The specified Telematik-ID is temporarily blocked"
+
+* ^expansion.contains[+].system = Canonical(TIOperationOutcomeDetailsCS)
+* ^expansion.contains[=].code = #SVC_VALIDATION_FAILED
+* ^expansion.contains[=].display = "FHIR Profile Validation Failed"
+
+* ^expansion.contains[+].system = Canonical(TIOperationOutcomeDetailsCS)
+* ^expansion.contains[=].code = #SVC_DOSAGE_INVALID_INSTRUCTION_META
+* ^expansion.contains[=].display = "The generated dosage instruction meta information is invalid"
+
+* ^expansion.contains[+].system = Canonical(TIOperationOutcomeDetailsCS)
+* ^expansion.contains[=].code = #SVC_DOSAGE_INVALID_RENDERED_INSTRUCTION
+* ^expansion.contains[=].display = "The provided rendered dosage instruction is invalid"

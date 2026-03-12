@@ -1,6 +1,6 @@
 {
   "resourceType": "OperationOutcome",
-  "id": "ad48bf90-a664-44f4-af14-ee6e81db3df4",
+  "id": "0c81ad3a-d6d1-4924-91d2-555cd3d5716f",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
@@ -9,13 +9,13 @@
   "issue": [
     {
       "severity": "error",
-      "code": "forbidden",
+      "code": "invalid",
       "details": {
         "coding": [
           {
-            "code": "SVC_IDENTITY_MISMATCH",
+            "code": "SVC_DOSAGE_INVALID_RENDERED_INSTRUCTION",
             "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
-            "display": "Identity mismatch: Access token or x-insurantid header does not match FHIR data (Telematik-ID / KVNR)"
+            "display": "The provided rendered dosage instruction is invalid"
           }
         ]
       }

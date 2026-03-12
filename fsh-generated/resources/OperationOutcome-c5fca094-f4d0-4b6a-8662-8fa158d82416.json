@@ -1,6 +1,6 @@
 {
   "resourceType": "OperationOutcome",
-  "id": "ad48bf90-a664-44f4-af14-ee6e81db3df4",
+  "id": "c5fca094-f4d0-4b6a-8662-8fa158d82416",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/ti/StructureDefinition/operation-outcome"
@@ -9,13 +9,13 @@
   "issue": [
     {
       "severity": "error",
-      "code": "forbidden",
+      "code": "invalid",
       "details": {
         "coding": [
           {
-            "code": "SVC_IDENTITY_MISMATCH",
+            "code": "SVC_VALIDATION_FAILED",
             "system": "https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes",
-            "display": "Identity mismatch: Access token or x-insurantid header does not match FHIR data (Telematik-ID / KVNR)"
+            "display": "FHIR Profile Validation Failed"
           }
         ]
       }

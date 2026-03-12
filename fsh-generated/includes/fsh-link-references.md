@@ -3,8 +3,15 @@
 [example-history-bundle]: Bundle-example-history-bundle.html
 [ExampleTIPatient]: Patient-ExampleTIPatient.html
 [0dc58d79-1b2e-4c6f-afe0-0a5b721661a2]: OperationOutcome-0dc58d79-1b2e-4c6f-afe0-0a5b721661a2.html
+[176e0f12-d08c-4a05-ae0a-e30bf2f5158d]: OperationOutcome-176e0f12-d08c-4a05-ae0a-e30bf2f5158d.html
+[0c81ad3a-d6d1-4924-91d2-555cd3d5716f]: OperationOutcome-0c81ad3a-d6d1-4924-91d2-555cd3d5716f.html
 [ad48bf90-a664-44f4-af14-ee6e81db3df4]: OperationOutcome-ad48bf90-a664-44f4-af14-ee6e81db3df4.html
+[65643d2f-363b-4df4-89e9-a6ce2ba55227]: OperationOutcome-65643d2f-363b-4df4-89e9-a6ce2ba55227.html
+[0467fbad-2ef1-4906-aaf5-7ce2a3929f7b]: OperationOutcome-0467fbad-2ef1-4906-aaf5-7ce2a3929f7b.html
 [468ca07b-7d63-453d-a738-0c35cb9402aa]: OperationOutcome-468ca07b-7d63-453d-a738-0c35cb9402aa.html
+[ea0ac9a5-8508-471a-b2c8-c41209436545]: OperationOutcome-ea0ac9a5-8508-471a-b2c8-c41209436545.html
+[8d5c1994-5caf-46c6-8c95-c5e7e6fad8e5]: OperationOutcome-8d5c1994-5caf-46c6-8c95-c5e7e6fad8e5.html
+[c5fca094-f4d0-4b6a-8662-8fa158d82416]: OperationOutcome-c5fca094-f4d0-4b6a-8662-8fa158d82416.html
 [HTTPHeader]: StructureDefinition-extension-http-header.html
 [HttpMethod]: StructureDefinition-extension-http-method.html
 [HttpResponseInfo]: StructureDefinition-extension-http-response-info.html
