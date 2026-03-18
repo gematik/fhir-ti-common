@@ -49,19 +49,19 @@ pages:
   release-notes.md:
     title: "Release Notes"
   spec-sheet.md:
-    title: "Steckbriefe"
+    title: "Anforderungslisten"
     actor-epa-medication.md:
-      title: "Steckbrief: ePA Medication Service"
+      title: "Anforderungsliste: ePA Medication Service"
     actor-epa-audit.md:
-      title: "Steckbrief: ePA Audit Event Service"
+      title: "Anforderungsliste: ePA Audit Event Service"
     actor-epa-patient.md:
-      title: "Steckbrief: ePA Patient Service"
+      title: "Anforderungsliste: ePA Patient Service"
     actor-epa-mhd.md:
-      title: "Steckbrief: ePA MHD Service"
+      title: "Anforderungsliste: ePA MHD Service"
     actor-epa-client.md:
-      title: "Steckbrief: ePA PS / ePA-Client-Systeme / ePA-FdV"
+      title: "Anforderungsliste: ePA PS / ePA-Client-Systeme / ePA-FdV"
     actor-vsdm.md:
-      title: "Steckbrief: VSDM 2.0"
+      title: "Anforderungsliste: VSDM 2.0"
   comparisons.md:
     title: "Versionsvergleiche"
   license.md:
@@ -80,7 +80,7 @@ menu:
     Referenzen: referenced.html
     Downloads: downloads.html
     Release Notes: release-notes.html
-    Steckbriefe: spec-sheet.html
+    Anforderungslisten: spec-sheet.html
     Versionsvergleiche: comparisons.html
     Lizenz: license.html
 

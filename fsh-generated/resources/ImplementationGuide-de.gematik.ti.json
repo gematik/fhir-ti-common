@@ -331,37 +331,37 @@
         },
         {
           "nameUrl": "spec-sheet.html",
-          "title": "Steckbriefe",
+          "title": "Anforderungslisten",
           "generation": "markdown",
           "page": [
             {
               "nameUrl": "actor-epa-medication.html",
-              "title": "Steckbrief: ePA Medication Service",
+              "title": "Anforderungsliste: ePA Medication Service",
               "generation": "markdown"
             },
             {
               "nameUrl": "actor-epa-audit.html",
-              "title": "Steckbrief: ePA Audit Event Service",
+              "title": "Anforderungsliste: ePA Audit Event Service",
               "generation": "markdown"
             },
             {
               "nameUrl": "actor-epa-patient.html",
-              "title": "Steckbrief: ePA Patient Service",
+              "title": "Anforderungsliste: ePA Patient Service",
               "generation": "markdown"
             },
             {
               "nameUrl": "actor-epa-mhd.html",
-              "title": "Steckbrief: ePA MHD Service",
+              "title": "Anforderungsliste: ePA MHD Service",
               "generation": "markdown"
             },
             {
               "nameUrl": "actor-epa-client.html",
-              "title": "Steckbrief: ePA PS / ePA-Client-Systeme / ePA-FdV",
+              "title": "Anforderungsliste: ePA PS / ePA-Client-Systeme / ePA-FdV",
               "generation": "markdown"
             },
             {
               "nameUrl": "actor-vsdm.html",
-              "title": "Steckbrief: VSDM 2.0",
+              "title": "Anforderungsliste: VSDM 2.0",
               "generation": "markdown"
             }
           ]
