@@ -4,7 +4,7 @@ Id: ti-operationdefinition
 Title: "OperationDefinition Profil für TI FHIR Data Service"
 Description: """
 Dieses Profil beschreibt FHIR Operationen des FHIR Data Service innerhalb der Telematikinfrastruktur (TI).
-Es stellt sicher, dass zustandsverändernde Operationen (`affectsState = true`) nicht über HTTP GET ausgeführt werden dürfen.
+Es stellt sicher, dass zustandsverändernde Operationen ('affectsState = true') nicht über HTTP GET ausgeführt werden dürfen.
 """
 * insert Meta
 // preserve the version of this resource

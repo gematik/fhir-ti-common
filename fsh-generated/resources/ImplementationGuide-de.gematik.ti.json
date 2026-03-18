@@ -211,7 +211,7 @@
           "reference": "StructureDefinition/ti-operationdefinition"
         },
         "name": "OperationDefinition Profil für TI FHIR Data Service",
-        "description": "Dieses Profil beschreibt FHIR Operationen des FHIR Data Service innerhalb der Telematikinfrastruktur (TI).\nEs stellt sicher, dass zustandsverändernde Operationen (`affectsState = true`) nicht über HTTP GET ausgeführt werden dürfen.",
+        "description": "Dieses Profil beschreibt FHIR Operationen des FHIR Data Service innerhalb der Telematikinfrastruktur (TI).\nEs stellt sicher, dass zustandsverändernde Operationen ('affectsState = true') nicht über HTTP GET ausgeführt werden dürfen.",
         "exampleBoolean": false
       },
       {
@@ -381,7 +381,7 @@
     "parameter": [
       {
         "code": "copyrightyear",
-        "value": "2025+"
+        "value": "2026+"
       },
       {
         "code": "releaselabel",
