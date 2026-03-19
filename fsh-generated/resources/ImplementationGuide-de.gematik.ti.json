@@ -49,7 +49,7 @@
     },
     {
       "packageId": "de.gematik.terminology",
-      "version": "1.0.8",
+      "version": "1.0.9",
       "uri": "https://gematik.de/fhir/terminology/ImplementationGuide/de.gematik.terminology",
       "id": "de_gematik_terminology"
     }

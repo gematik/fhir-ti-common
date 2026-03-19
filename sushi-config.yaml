@@ -25,7 +25,7 @@ publisher:
 
 dependencies:
   de.basisprofil.r4: 1.5.4
-  de.gematik.terminology: 1.0.8
+  de.gematik.terminology: 1.0.9
 
 # FSHOnly: true
 
