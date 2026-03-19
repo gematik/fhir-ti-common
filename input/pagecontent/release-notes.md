@@ -3,6 +3,9 @@
 #### TI Patient
 - Nutzungsvorgabe bei partieller Angabe des Geburtsdatums in _birthDate_ angepasst
 
+#### Terminologien
+- Neue Codes in _TI Operation Outcome Details_ hinzugefügt
+
 #### Anforderungen
 
 Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.

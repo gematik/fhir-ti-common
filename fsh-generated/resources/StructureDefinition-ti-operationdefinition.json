@@ -9,7 +9,7 @@
   "experimental": false,
   "date": "2025-09-12",
   "publisher": "gematik GmbH",
-  "description": "Dieses Profil beschreibt FHIR Operationen des FHIR Data Service innerhalb der Telematikinfrastruktur (TI).\nEs stellt sicher, dass zustandsverändernde Operationen (`affectsState = true`) nicht über HTTP GET ausgeführt werden dürfen.",
+  "description": "Dieses Profil beschreibt FHIR Operationen des FHIR Data Service innerhalb der Telematikinfrastruktur (TI).\nEs stellt sicher, dass zustandsverändernde Operationen ('affectsState = true') nicht über HTTP GET ausgeführt werden dürfen.",
   "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "fhirVersion": "4.0.1",
   "kind": "resource",

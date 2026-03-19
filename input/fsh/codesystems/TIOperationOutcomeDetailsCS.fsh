@@ -6,7 +6,7 @@ Description: "Telematikinfrastruktur (TI) Operation Outcome Details CodeSystem"
 // preserve the version of this resource
 * ^version = "1.3.0"
 * ^date = "2026-03-20"
-* ^status = #draft
+* ^status = #active
 
 * ^caseSensitive = true
 
