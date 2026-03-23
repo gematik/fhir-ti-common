@@ -40,20 +40,6 @@
         "mustSupport": true
       },
       {
-        "id": "Organization.extension",
-        "path": "Organization.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "Organization.extension:ncpehCountryEx",
         "path": "Organization.extension",
         "sliceName": "ncpehCountryEx",
@@ -67,6 +53,21 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.extension:ncpehCountryEx.url",
+        "path": "Organization.extension.url",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.extension:ncpehCountryEx.value[x].version",
+        "path": "Organization.extension.value[x].version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.extension:ncpehCountryEx.value[x].display",
+        "path": "Organization.extension.value[x].display",
         "mustSupport": true
       },
       {
@@ -100,6 +101,16 @@
         "mustSupport": true
       },
       {
+        "id": "Organization.identifier:TelematikID.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:TelematikID.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
         "id": "Organization.identifier:BSNR",
         "path": "Organization.identifier",
         "sliceName": "BSNR",
@@ -113,6 +124,16 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:BSNR.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:BSNR.value",
+        "path": "Organization.identifier.value",
         "mustSupport": true
       },
       {
@@ -132,6 +153,16 @@
         "mustSupport": true
       },
       {
+        "id": "Organization.identifier:KZVA.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:KZVA.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
         "id": "Organization.identifier:IKNR",
         "path": "Organization.identifier",
         "sliceName": "IKNR",
@@ -145,6 +176,16 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:IKNR.system",
+        "path": "Organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:IKNR.value",
+        "path": "Organization.identifier.value",
         "mustSupport": true
       },
       {
@@ -179,6 +220,31 @@
         }
       },
       {
+        "id": "Organization.type:providerType.coding",
+        "path": "Organization.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:providerType.coding.system",
+        "path": "Organization.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:providerType.coding.version",
+        "path": "Organization.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:providerType.coding.code",
+        "path": "Organization.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:providerType.coding.display",
+        "path": "Organization.type.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Organization.type:profession",
         "path": "Organization.type",
         "sliceName": "profession",
@@ -189,6 +255,31 @@
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/directory/ValueSet/OrganizationProfessionOIDTypeVS"
         }
+      },
+      {
+        "id": "Organization.type:profession.coding",
+        "path": "Organization.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:profession.coding.system",
+        "path": "Organization.type.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:profession.coding.version",
+        "path": "Organization.type.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:profession.coding.code",
+        "path": "Organization.type.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:profession.coding.display",
+        "path": "Organization.type.coding.display",
+        "mustSupport": true
       },
       {
         "id": "Organization.name",
@@ -247,8 +338,63 @@
         "mustSupport": true
       },
       {
+        "id": "Organization.partOf.reference",
+        "path": "Organization.partOf.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.partOf.identifier",
+        "path": "Organization.partOf.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.partOf.identifier.system",
+        "path": "Organization.partOf.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.partOf.identifier.value",
+        "path": "Organization.partOf.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.partOf.display",
+        "path": "Organization.partOf.display",
+        "mustSupport": true
+      },
+      {
         "id": "Organization.contact",
         "path": "Organization.contact",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.contact.name",
+        "path": "Organization.contact.name",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.contact.name.use",
+        "path": "Organization.contact.name.use",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.contact.name.family",
+        "path": "Organization.contact.name.family",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.contact.name.given",
+        "path": "Organization.contact.name.given",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.contact.name.prefix",
+        "path": "Organization.contact.name.prefix",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.contact.name.suffix",
+        "path": "Organization.contact.name.suffix",
         "mustSupport": true
       }
     ]

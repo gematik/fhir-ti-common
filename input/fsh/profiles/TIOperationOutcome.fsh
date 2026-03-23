@@ -9,7 +9,10 @@ Description: "Das Operation Outcome-Profil für die Telematikinfrastruktur (TI) 
 * ^date = "2025-09-12"
 * ^status = #active
 
-* issue.severity MS
-* issue.code MS
-* issue.details MS
-* issue.details from TIOperationOutcomeDetailsVS (preferred)
+* issue MS
+  * severity MS
+  * code MS
+  * details MS
+    * insert CodeableConceptMS
+  * details from TIOperationOutcomeDetailsVS (preferred)
+  * diagnostics MS

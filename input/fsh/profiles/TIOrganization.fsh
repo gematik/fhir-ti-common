@@ -11,6 +11,7 @@ Description: "Definiert die Datenstruktur für medizinische, regulatorische und 
 
 * extension contains
     NcpehCountryExtension named ncpehCountryEx 0..1 MS
+* extension[ncpehCountryEx] insert ExtensionCodingMS
 * id MS
 * active MS
 * name 1..1 MS
@@ -24,9 +25,13 @@ Description: "Definiert die Datenstruktur für medizinische, regulatorische und 
     KZVA 0..1 MS and
     IKNR 0..* MS
 * identifier[TelematikID] only $identifier-telematik-id
+  * insert IdentifierMS
 * identifier[BSNR] only $identifier-bsnr
+  * insert IdentifierMS
 * identifier[KZVA] only $identifier-kzva
+  * insert IdentifierMS
 * identifier[IKNR] only $identifier-iknr
+  * insert IdentifierMS
 * type MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -35,9 +40,13 @@ Description: "Definiert die Datenstruktur für medizinische, regulatorische und 
     providerType 0..* MS and
     profession 0..* MS
 * type[providerType] from TIOrganizationTypeVS (required)
+  * insert CodeableConceptMS
 * type[profession] from TIOrganizationProfessionTypeOidVS (required)
+  * insert CodeableConceptMS
 * alias MS
 * contact MS
+  * name MS
+    * insert HumanNameMS
 * address MS
   * use MS
   * text MS
@@ -47,3 +56,4 @@ Description: "Definiert die Datenstruktur für medizinische, regulatorische und 
   * postalCode MS
   * country MS
 * partOf MS
+  * insert ReferenceMS

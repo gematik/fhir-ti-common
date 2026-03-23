@@ -1,8 +1,8 @@
 current: 1.3.0
 current_req_number: 0
 directory: input
-frozen_hash: 6ad033d69c808887b503aa5ada034455a1877fafd19a9ee75ab3300dedf95b9c
-frozen_version: 1.2.0
+frozen_hash: d68765d7ef5ea9e2c78269e12d62b6669778fa15705dbf4f2492565d93068859
+frozen_version: 1.3.0
 key_mode: random
 migrated_with_version: 0.3.0
 name: Telematikinfrastruktur (TI) Common

@@ -45,8 +45,58 @@
         "mustSupport": true
       },
       {
+        "id": "PractitionerRole.practitioner.reference",
+        "path": "PractitionerRole.practitioner.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.practitioner.identifier",
+        "path": "PractitionerRole.practitioner.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.practitioner.identifier.system",
+        "path": "PractitionerRole.practitioner.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.practitioner.identifier.value",
+        "path": "PractitionerRole.practitioner.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.practitioner.display",
+        "path": "PractitionerRole.practitioner.display",
+        "mustSupport": true
+      },
+      {
         "id": "PractitionerRole.organization",
         "path": "PractitionerRole.organization",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.organization.reference",
+        "path": "PractitionerRole.organization.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.organization.identifier",
+        "path": "PractitionerRole.organization.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.organization.identifier.system",
+        "path": "PractitionerRole.organization.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.organization.identifier.value",
+        "path": "PractitionerRole.organization.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.organization.display",
+        "path": "PractitionerRole.organization.display",
         "mustSupport": true
       },
       {
