@@ -13,7 +13,9 @@ Dieses Profil beschreibt die Verwendung der FHIR-Ressource PractitionerRole in d
 
 * id MS
 * practitioner MS
+  * insert ReferenceMS
 * organization MS
+  * insert ReferenceMS
 * telecom MS
   * system MS
   * value MS

@@ -20,6 +20,11 @@
   "differential": {
     "element": [
       {
+        "id": "OperationOutcome.issue",
+        "path": "OperationOutcome.issue",
+        "mustSupport": true
+      },
+      {
         "id": "OperationOutcome.issue.severity",
         "path": "OperationOutcome.issue.severity",
         "mustSupport": true
@@ -37,6 +42,36 @@
           "strength": "preferred",
           "valueSet": "https://gematik.de/fhir/ti/ValueSet/operation-outcome-details-vs"
         }
+      },
+      {
+        "id": "OperationOutcome.issue.details.coding",
+        "path": "OperationOutcome.issue.details.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue.details.coding.system",
+        "path": "OperationOutcome.issue.details.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue.details.coding.version",
+        "path": "OperationOutcome.issue.details.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue.details.coding.code",
+        "path": "OperationOutcome.issue.details.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue.details.coding.display",
+        "path": "OperationOutcome.issue.details.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue.diagnostics",
+        "path": "OperationOutcome.issue.diagnostics",
+        "mustSupport": true
       }
     ]
   }

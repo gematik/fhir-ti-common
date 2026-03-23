@@ -70,6 +70,16 @@
         "mustSupport": true
       },
       {
+        "id": "Practitioner.identifier:TelematikID.system",
+        "path": "Practitioner.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier:TelematikID.value",
+        "path": "Practitioner.identifier.value",
+        "mustSupport": true
+      },
+      {
         "id": "Practitioner.identifier:LANR",
         "path": "Practitioner.identifier",
         "sliceName": "LANR",
@@ -86,6 +96,16 @@
         "mustSupport": true
       },
       {
+        "id": "Practitioner.identifier:LANR.system",
+        "path": "Practitioner.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier:LANR.value",
+        "path": "Practitioner.identifier.value",
+        "mustSupport": true
+      },
+      {
         "id": "Practitioner.name",
         "path": "Practitioner.name",
         "min": 1,
@@ -97,6 +117,11 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.use",
+        "path": "Practitioner.name.use",
         "mustSupport": true
       },
       {
@@ -142,6 +167,21 @@
         "mustSupport": true
       },
       {
+        "id": "Practitioner.photo.contentType",
+        "path": "Practitioner.photo.contentType",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.photo.data",
+        "path": "Practitioner.photo.data",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.photo.url",
+        "path": "Practitioner.photo.url",
+        "mustSupport": true
+      },
+      {
         "id": "Practitioner.qualification",
         "path": "Practitioner.qualification",
         "mustSupport": true
@@ -156,8 +196,58 @@
         }
       },
       {
+        "id": "Practitioner.qualification.code.coding",
+        "path": "Practitioner.qualification.code.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.qualification.code.coding.system",
+        "path": "Practitioner.qualification.code.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.qualification.code.coding.version",
+        "path": "Practitioner.qualification.code.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.qualification.code.coding.code",
+        "path": "Practitioner.qualification.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.qualification.code.coding.display",
+        "path": "Practitioner.qualification.code.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Practitioner.communication",
         "path": "Practitioner.communication",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.communication.coding",
+        "path": "Practitioner.communication.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.communication.coding.system",
+        "path": "Practitioner.communication.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.communication.coding.version",
+        "path": "Practitioner.communication.coding.version",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.communication.coding.code",
+        "path": "Practitioner.communication.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.communication.coding.display",
+        "path": "Practitioner.communication.coding.display",
         "mustSupport": true
       }
     ]
