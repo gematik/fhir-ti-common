@@ -40,6 +40,11 @@
         "mustSupport": true
       },
       {
+        "id": "Organization.extension",
+        "path": "Organization.extension",
+        "mustSupport": true
+      },
+      {
         "id": "Organization.extension:ncpehCountryEx",
         "path": "Organization.extension",
         "sliceName": "ncpehCountryEx",

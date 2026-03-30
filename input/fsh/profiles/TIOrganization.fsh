@@ -9,6 +9,7 @@ Description: "Definiert die Datenstruktur für medizinische, regulatorische und 
 * ^date = "2025-09-12"
 * ^status = #active
 
+* extension MS
 * extension contains
     NcpehCountryExtension named ncpehCountryEx 0..1 MS
 * extension[ncpehCountryEx] insert ExtensionCodingMS
