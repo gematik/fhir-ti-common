@@ -5,8 +5,8 @@ Title: "TI Organization"
 Description: "Definiert die Datenstruktur für medizinische, regulatorische und technische Organisationen"
 * insert Meta-With-Versioning
 // preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
+* ^version = "1.3.1"
+* ^date = "2026-03-20"
 * ^status = #active
 
 * extension MS

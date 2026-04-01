@@ -5,8 +5,8 @@ Title: "TI Operation Outcome"
 Description: "Das Operation Outcome-Profil für die Telematikinfrastruktur (TI) FHIR Data Services"
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
+* ^version = "1.3.1"
+* ^date = "2026-03-20"
 * ^status = #active
 
 * issue MS
