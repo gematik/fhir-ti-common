@@ -1,0 +1,31 @@
+actor:
+- EPA-Audit-Service
+- EPA-MHD-Service
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: ed5a7dfdb7fad3428446dc73113e1c1356f0f0f64c76be640bfa9761259dffc4
+created: '2025-03-06T13:30:46.537921'
+date: '2025-11-18T11:03:10.857163'
+key: IG-TI18063SU7
+modified: '2025-05-27T09:33:08.773270'
+release_status: STABLE
+source: input/pagecontent/fhir-format.md
+status: ACTIVE
+test_procedures:
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
+text: "Der FHIR Data Service MUSS gemäß der [FHIR General parameters] den <i>_format</i>-Parameter\
+  \ in Anfragenachricht auswerten, um das gewünschte Antwortformat zu bestimmen.\n\
+  \    <br/>\n    Der FHIR Data Service MUSS folgende Werte für den <i>_format</i>-Parameter\
+  \ unterstützen:\n    <br/><br/>\n    <ul>\n        <li>XML-Formate: <i>xml</i>,\
+  \ <i>application/xml</i>, <i>application/fhir+xml</i></li>\n        <li>JSON-Formate:\
+  \ <i>json</i>, <i>application/json</i>, <i>application/fhir+json</i></li>\n    </ul>"
+title: Unterstützung des _format-Parameters im FHIR Data Service
+version: 0
