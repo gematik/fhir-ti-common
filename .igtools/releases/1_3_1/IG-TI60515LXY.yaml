@@ -1,0 +1,22 @@
+actor:
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: 29cb2b6bf8dc38a837f517e5f89d32e7251d970ceae101d89c9b75c0f6982132
+created: '2025-03-14T10:33:08.467442'
+date: '2025-11-18T11:03:10.873189'
+key: IG-TI60515LXY
+modified: '2025-03-14T10:33:08.467447'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
+text: 'Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie aller Instanzen
+  eines bestimmten Ressourcentyps über eine HTTP GET-Anfrage an folgende URL abzurufen:
+  <i>[base]/[ResourceType]/_history</i>.'
+title: Abruf der Versionshistorie aller Instanzen eines ResourceType
+version: 0
