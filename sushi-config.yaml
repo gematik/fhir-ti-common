@@ -107,6 +107,7 @@ parameters:
     - 1.0.1
     - 1.1.1
     - 1.2.0
+    - 1.3.0
   bundle-references-resolve: false
   no-narrative:
     # "StructureDefinition/*" doesn't seem to work anymore
