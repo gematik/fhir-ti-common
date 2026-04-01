@@ -1,3 +1,7 @@
+### Version 1.3.1
+
+- Hinzufügen von fehlenden oder inkonsistenten _Must Support_ Flags
+
 ### Version 1.3.0
 
 #### TI Patient
