@@ -4,7 +4,7 @@
   "path": "https://gematik.de/fhir/ti/1.3.2",
   "status": "release",
   "first": false,
-  "mode": "milestone",
+  "mode": "working",
   "sequence": "TI",
   "desc": "TI Common IG 1.3.2"
 }
