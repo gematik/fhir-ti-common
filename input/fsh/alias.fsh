@@ -1,3 +1,8 @@
+// TI Terminology
+Alias: $ti-organization-type-vs = https://gematik.de/fhir/directory/ValueSet/OrganizationTypeVS
+Alias: $ti-organization-profession-type-oid-vs = https://gematik.de/fhir/directory/ValueSet/OrganizationProfessionOIDTypeVS
+Alias: $ti-practitioner-qualification-vs = https://gematik.de/fhir/directory/ValueSet/PractitionerQualificationVS
+
 Alias: $cs-operation-outcome = http://terminology.hl7.org/CodeSystem/operation-outcome
 Alias: $cs-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation|4.0.1
 

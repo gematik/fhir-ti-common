@@ -36,6 +36,6 @@ Dieses Profil beschreibt die Verwendung der FHIR-Ressource Practitioner im Konte
 * qualification MS
   * code MS
     * insert CodeableConceptMS
-  * code from TIPractitionerQualificationVS (extensible)
+  * code from $ti-practitioner-qualification-vs (extensible)
 * communication MS
   * insert CodeableConceptMS

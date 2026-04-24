@@ -40,9 +40,9 @@ Description: "Definiert die Datenstruktur für medizinische, regulatorische und 
 * type contains
     providerType 0..* MS and
     profession 0..* MS
-* type[providerType] from TIOrganizationTypeVS (required)
+* type[providerType] from $ti-organization-type-vs (required)
   * insert CodeableConceptMS
-* type[profession] from TIOrganizationProfessionTypeOidVS (required)
+* type[profession] from $ti-organization-profession-type-oid-vs (required)
   * insert CodeableConceptMS
 * alias MS
 * contact MS
