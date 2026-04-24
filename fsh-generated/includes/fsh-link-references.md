@@ -24,6 +24,7 @@
 [TIEnvironmentsCS]: CodeSystem-ti-environment-codes.html
 [TIEnvironmentsVS]: ValueSet-ti-environment-vs.html
 [TIFeature]: StructureDefinition-ti-feature.html
+[TIFeatureDefinition]: StructureDefinition-ti-feature-definition.html
 [TIFHIRConfiguration]: StructureDefinition-ti-fhir-configuration.html
 [TIFHIRConfigurationVS]: ValueSet-ti-fhir-configuration-vs.html
 [TIOperationOutcome]: StructureDefinition-operation-outcome.html

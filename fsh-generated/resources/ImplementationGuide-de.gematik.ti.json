@@ -258,6 +258,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/ti-feature-definition"
+        },
+        "name": "TI Feature Definition",
+        "description": "Logical Model zur Beschreibung eines aktivierbaren Features.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/ti-fhir-configuration"
         },
         "name": "TI FHIR Configuration",

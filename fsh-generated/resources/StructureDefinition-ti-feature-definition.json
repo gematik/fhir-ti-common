@@ -1,0 +1,116 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ti-feature-definition",
+  "url": "https://gematik.de/fhir/ti/StructureDefinition/ti-feature-definition",
+  "name": "TIFeatureDefinition",
+  "title": "TI Feature Definition",
+  "status": "active",
+  "description": "Logical Model zur Beschreibung eines aktivierbaren Features.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://gematik.de/fhir/ti/StructureDefinition/ti-feature-definition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ti-feature-definition",
+        "path": "ti-feature-definition",
+        "short": "TI Feature Definition",
+        "definition": "Logical Model zur Beschreibung eines aktivierbaren Features."
+      },
+      {
+        "id": "ti-feature-definition.url",
+        "path": "ti-feature-definition.url",
+        "short": "Canonical-URL des Features",
+        "definition": "Canonical-URL des Features",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ]
+      },
+      {
+        "id": "ti-feature-definition.name",
+        "path": "ti-feature-definition.name",
+        "short": "Maschinell verarbeitbarer Name",
+        "definition": "Maschinell verarbeitbarer Name",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ti-feature-definition.title",
+        "path": "ti-feature-definition.title",
+        "short": "Menschenlesbarer Titel",
+        "definition": "Menschenlesbarer Titel",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ti-feature-definition.status",
+        "path": "ti-feature-definition.status",
+        "short": "draft | active | retired",
+        "definition": "draft | active | retired",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "ti-feature-definition.description",
+        "path": "ti-feature-definition.description",
+        "short": "Fachliche Beschreibung",
+        "definition": "Fachliche Beschreibung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "ti-feature-definition.valueType",
+        "path": "ti-feature-definition.valueType",
+        "short": "boolean | code | Coding — Typ des value-Felds",
+        "definition": "boolean | code | Coding — Typ des value-Felds",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "ti-feature-definition.context",
+        "path": "ti-feature-definition.context",
+        "short": "Element-Kontexte im CapabilityStatement",
+        "definition": "Element-Kontexte im CapabilityStatement",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ]
+      }
+    ]
+  }
+}
