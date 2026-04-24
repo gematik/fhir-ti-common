@@ -1,0 +1,26 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "not-present",
+  "name": "TIFHIRConfigurationCS",
+  "id": "ti-fhir-configuration-cs",
+  "title": "TIFHIR Configuration CS",
+  "description": "Dieses CodeSystem beschreibt die FHIR-Konfigurationen eines FHIR-Data Service der TI. Die konkrete Konzeptliste wird extern im gematik-Releaseprozess als Release-Artefakt verwaltet und versioniert; dieser IG referenziert diese Konzepte nur über das Canonical.",
+  "url": "https://gematik.de/fhir/ti/CodeSystem/ti-fhir-configuration-cs",
+  "version": "1.0.0",
+  "date": "2026-06-01",
+  "publisher": "gematik GmbH",
+  "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
+  "experimental": false,
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true
+}

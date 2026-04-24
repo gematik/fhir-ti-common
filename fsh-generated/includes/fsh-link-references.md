@@ -19,6 +19,13 @@
 [NcpehCountryExtension]: StructureDefinition-ncpeh-country-extension.html
 [TIOperationDefinition]: StructureDefinition-ti-operationdefinition.html
 [MedicationPlanIdentifier]: StructureDefinition-medication-plan-identifier.html
+[TIAuditEventRest]: StructureDefinition-audit-event-rest.html
+[TIEnvironment]: StructureDefinition-ti-environment.html
+[TIEnvironmentsCS]: CodeSystem-ti-environment-codes.html
+[TIEnvironmentsVS]: ValueSet-ti-environment-vs.html
+[TIFeature]: StructureDefinition-ti-feature.html
+[TIFHIRConfiguration]: StructureDefinition-ti-fhir-configuration.html
+[TIFHIRConfigurationVS]: ValueSet-ti-fhir-configuration-vs.html
 [TIOperationOutcome]: StructureDefinition-operation-outcome.html
 [TIOperationOutcomeDetailsCS]: CodeSystem-operation-outcome-details-codes.html
 [TIOperationOutcomeDetailsVS]: ValueSet-operation-outcome-details-vs.html
@@ -26,3 +33,4 @@
 [TIPatient]: StructureDefinition-ti-patient.html
 [TIPractitioner]: StructureDefinition-ti-practitioner.html
 [TIPractitionerRole]: StructureDefinition-ti-practitioner-role.html
+[TIFHIRConfigurationCS]: CodeSystem-ti-fhir-configuration-cs.html

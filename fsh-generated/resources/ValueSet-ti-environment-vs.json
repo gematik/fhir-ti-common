@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "TIEnvironmentsVS",
+  "id": "ti-environment-vs",
+  "title": "TI Environments ValueSet",
+  "description": "Dieses ValueSet enthält alle zulässigen Umgebungskennzeichen für CapabilityStatements des TI-Flow-Fachdienstes und wird für die verpflichtende Kennzeichnung der Zielumgebung verwendet.",
+  "url": "https://gematik.de/fhir/ti/ValueSet/ti-environment-vs",
+  "version": "1.0.0",
+  "date": "2026-06-01",
+  "publisher": "gematik GmbH",
+  "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
+  "experimental": false,
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/ti/CodeSystem/ti-environment-codes"
+      }
+    ]
+  }
+}

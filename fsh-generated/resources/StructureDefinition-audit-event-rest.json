@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "audit-event-rest",
+  "url": "https://gematik.de/fhir/ti/StructureDefinition/audit-event-rest",
+  "version": "1.0.0",
+  "name": "TIAuditEventRest",
+  "title": "TI Audit Event Rest",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-01",
+  "publisher": "gematik GmbH",
+  "description": "Das AuditEvent-Profil für die Protokollierung des Zugriffs auf einen FHIR Data Service der Telematikinfrastruktur (TI)",
+  "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AuditEvent",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AuditEvent",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AuditEvent.type",
+        "path": "AuditEvent.type",
+        "fixedCoding": {
+          "code": "rest",
+          "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.type.system",
+        "path": "AuditEvent.type.system",
+        "min": 1
+      },
+      {
+        "id": "AuditEvent.type.code",
+        "path": "AuditEvent.type.code",
+        "min": 1
+      },
+      {
+        "id": "AuditEvent.subtype",
+        "path": "AuditEvent.subtype",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.action",
+        "path": "AuditEvent.action",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.outcome",
+        "path": "AuditEvent.outcome",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.agent",
+        "path": "AuditEvent.agent",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.agent.type",
+        "path": "AuditEvent.agent.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.agent.who.identifier",
+        "path": "AuditEvent.agent.who.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id",
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.agent.name",
+        "path": "AuditEvent.agent.name",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.source",
+        "path": "AuditEvent.source",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.source.site",
+        "path": "AuditEvent.source.site",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.source.observer",
+        "path": "AuditEvent.source.observer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AuditEvent.source.observer.reference",
+        "path": "AuditEvent.source.observer.reference",
+        "min": 1
+      }
+    ]
+  }
+}

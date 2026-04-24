@@ -218,6 +218,62 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/audit-event-rest"
+        },
+        "name": "TI Audit Event Rest",
+        "description": "Das AuditEvent-Profil für die Protokollierung des Zugriffs auf einen FHIR Data Service der Telematikinfrastruktur (TI)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-environment"
+        },
+        "name": "TI Environment",
+        "description": "Diese Extension kennzeichnet die Zielumgebung eines konkreten CapabilityStatements (z. B. Produktiv-, Referenz-, Test- oder Entwicklungsumgebung). Die Information hilft Clients, deklarierte Fähigkeiten im richtigen betrieblichen Kontext zu interpretieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ti-environment-codes"
+        },
+        "name": "TI Environments CodeSystem",
+        "description": "Dieses CodeSystem definiert standardisierte Umgebungskennzeichen für CapabilityStatements des TI-Flow-Fachdienstes. Es erlaubt die eindeutige Kennzeichnung, ob die beschriebene Fähigkeit für Produktions-, Referenz-, Test- oder Entwicklungsumgebung gilt.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ti-environment-vs"
+        },
+        "name": "TI Environments ValueSet",
+        "description": "Dieses ValueSet enthält alle zulässigen Umgebungskennzeichen für CapabilityStatements des TI-Flow-Fachdienstes und wird für die verpflichtende Kennzeichnung der Zielumgebung verwendet.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-feature"
+        },
+        "name": "TI Feature",
+        "description": "Deklariert ein einzelnes Feature eines Fachdienst-Deployments. \nDas Teilfeld `definition` verweist per Canonical auf den Feature-Bezeichner \n(analog zum HL7 Application Feature Framework, `hl7.fhir.uv.application-feature`);\n`value` beschreibt den aktuellen Zustand des Features am betrachteten Endpoint.\n\nKompatibilitätshinweis: Diese Extension spiegelt bewusst die Sub-Extension-Namen\n`definition` und `value` des HL7-Frameworks wider, um eine spätere Migration oder\nProfilierung ohne Breaking Change zu ermöglichen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-fhir-configuration"
+        },
+        "name": "TI FHIR Configuration",
+        "description": "Diese Extension deklariert eine konkrete Konfigurationsausprägung eines FHIR-Data Service in der TI auf CapabilityStatement-Ebene. Die Konfiguration wird als Code transportiert. Die Bedeutung und Konstellation einer FHIR-Konfiguration ist aus externen Quellen der Releaseplanung zu entnehmen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ti-fhir-configuration-vs"
+        },
+        "name": "TI FHIR Configuration ValueSet",
+        "description": "Dieses ValueSet bildet den zulässigen Wertebereich für die FHIR-Konfiguration eines FHIR-Data Service der TI ab.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/operation-outcome"
         },
         "name": "TI Operation Outcome",
@@ -270,6 +326,14 @@
         },
         "name": "TI PractitionerRole",
         "description": "Dieses Profil beschreibt die Verwendung der FHIR-Ressource PractitionerRole in der Telematikinfrastruktur (TI). Es wird verwendet, um die Rolle und Funktion einer Gesundheitsfachperson innerhalb einer Organisation zu definieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ti-fhir-configuration-cs"
+        },
+        "name": "TIFHIR Configuration CS",
+        "description": "Dieses CodeSystem beschreibt die FHIR-Konfigurationen eines FHIR-Data Service der TI. Die konkrete Konzeptliste wird extern im gematik-Releaseprozess als Release-Artefakt verwaltet und versioniert; dieser IG referenziert diese Konzepte nur über das Canonical.",
         "exampleBoolean": false
       }
     ],
