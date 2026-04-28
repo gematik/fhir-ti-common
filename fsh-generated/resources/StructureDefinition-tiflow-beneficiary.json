@@ -1,0 +1,62 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "tiflow-beneficiary",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary",
+  "version": "1.3.0",
+  "name": "TIFlowBeneficiary",
+  "title": "TIFlow Beneficiary",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-03-20",
+  "publisher": "gematik GmbH",
+  "description": "Der Begünstigte (z. B. Apotheke) der Quittung eines TIFlow Vorgangs, der erstellt wird, wenn der Workflow abgeschlossen ist.",
+  "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Bundle",
+      "type": "element"
+    },
+    {
+      "expression": "Composition",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "The beneficiary of the receipt",
+        "definition": "Der Begünstigte (z. B. Apotheke) der Quittung eines TIFlow Vorgangs, der erstellt wird, wenn der Workflow abgeschlossen ist."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -24,6 +24,8 @@ RuleSet: MetaContact
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://www.gematik.de"
 
+RuleSet: LegacyERPUrl(type, name)
+* ^url = "https://gematik.de/fhir/erp/{type}/{name}"
 
 RuleSet: Meta
 * insert MetaVersion(^version)

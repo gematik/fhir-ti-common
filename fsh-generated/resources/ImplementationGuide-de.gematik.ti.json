@@ -68,6 +68,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/ti-flowtypes-codes"
+        },
+        "name": "CodeSystem der Flowtypes in TIFlow Anwendungen",
+        "description": "Zeigt die verschiedenen Typen der TI Workflows entsprechend der Verordnungsformulare.\n\nWICHTIG: Der Codebereich 9xx ist reserviert für Abrechnungsprozesse in Apotheken wie z.B. Pharmazeutische Dienstleistungen!",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Bundle/example-history-bundle"
         },
         "name": "Example History Bundle",
@@ -218,6 +226,30 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/ti-task"
+        },
+        "name": "Task für TIFlow Anwendungen",
+        "description": "Task für die Verwaltung von Workflows der TIFlow Anwendungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/TaskAcceptDateSP"
+        },
+        "name": "TaskAcceptDateSP",
+        "description": "Das Einlösedatum eines E-Rezeptes. Nach Ablaufen dieses Datums darf ein E-Rezept nicht mehr zu Lasten des Kostenträgers abgegeben werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/TaskExpiryDateSP"
+        },
+        "name": "TaskExpiryDateSP",
+        "description": "Das Ablaufdatum eines E-Rezepzes. Nach ablauf dieses Datums darf ein E-Rezept nicht mehr beliefert werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/audit-event-rest"
         },
         "name": "TI Audit Event Rest",
@@ -282,6 +314,46 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/tiflow-accept-date"
+        },
+        "name": "TI Flow AcceptDate",
+        "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu dem eine Krankenkasse die Verschreibung akzeptiert und bezahlt.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/tiflow-access-code"
+        },
+        "name": "TI Flow AccessCode",
+        "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine Ressource gewährt, z. B. Task.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/tiflow-expiry-date"
+        },
+        "name": "TI Flow ExpiryDate",
+        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt das Ablaufdatum des Rezepts an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/tiflow-secret"
+        },
+        "name": "TI Flow Secret",
+        "description": "Das Secret ist ein generiertes Geheimnis, das Zugriff auf eine TIFlow Verordnung gewährt, z. B. Task.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-flowtype"
+        },
+        "name": "TI Flow Type",
+        "description": "Definiert den Typ eines Workflows im TIFlow.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/operation-outcome"
         },
         "name": "TI Operation Outcome",
@@ -342,6 +414,22 @@
         },
         "name": "TIFHIR Configuration CS",
         "description": "Dieses CodeSystem beschreibt die FHIR-Konfigurationen eines FHIR-Data Service der TI. Die konkrete Konzeptliste wird extern im gematik-Releaseprozess als Release-Artefakt verwaltet und versioniert; dieser IG referenziert diese Konzepte nur über das Canonical.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/tiflow-beneficiary"
+        },
+        "name": "TIFlow Beneficiary",
+        "description": "Der Begünstigte (z. B. Apotheke) der Quittung eines TIFlow Vorgangs, der erstellt wird, wenn der Workflow abgeschlossen ist.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ti-flowtypes-vs"
+        },
+        "name": "ValueSet der Flowtypes in TIFlow Anwendungen",
+        "description": "Zeigt die verschiedenen Typen der TI Workflows entsprechend der Verordnungsformulare.",
         "exampleBoolean": false
       }
     ],
@@ -548,6 +636,38 @@
       {
         "code": "no-validate",
         "value": "Bundle/example-history-bundle"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AccessCode"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Secret"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary"
       }
     ]
   }

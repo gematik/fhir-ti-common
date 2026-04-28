@@ -1,5 +1,6 @@
 [BaseUrl]: StructureDefinition-extension-base-url.html
 [TICapabilityStatement]: StructureDefinition-ti-capability-statement.html
+[TIFlowTypesCS]: CodeSystem-ti-flowtypes-codes.html
 [example-history-bundle]: Bundle-example-history-bundle.html
 [ExampleTIPatient]: Patient-ExampleTIPatient.html
 [0dc58d79-1b2e-4c6f-afe0-0a5b721661a2]: OperationOutcome-0dc58d79-1b2e-4c6f-afe0-0a5b721661a2.html
@@ -19,6 +20,9 @@
 [NcpehCountryExtension]: StructureDefinition-ncpeh-country-extension.html
 [TIOperationDefinition]: StructureDefinition-ti-operationdefinition.html
 [MedicationPlanIdentifier]: StructureDefinition-medication-plan-identifier.html
+[TIFlowTask]: StructureDefinition-ti-task.html
+[TaskAcceptDateSP]: SearchParameter-TaskAcceptDateSP.html
+[TaskExpiryDateSP]: SearchParameter-TaskExpiryDateSP.html
 [TIAuditEventRest]: StructureDefinition-audit-event-rest.html
 [TIEnvironment]: StructureDefinition-ti-environment.html
 [TIEnvironmentsCS]: CodeSystem-ti-environment-codes.html
@@ -27,6 +31,11 @@
 [TIFeatureDefinition]: StructureDefinition-ti-feature-definition.html
 [TIFHIRConfiguration]: StructureDefinition-ti-fhir-configuration.html
 [TIFHIRConfigurationVS]: ValueSet-ti-fhir-configuration-vs.html
+[TIFlowAcceptDate]: StructureDefinition-tiflow-accept-date.html
+[TIFlowAccessCode]: StructureDefinition-tiflow-access-code.html
+[TIFlowExpiryDate]: StructureDefinition-tiflow-expiry-date.html
+[TIFlowSecret]: StructureDefinition-tiflow-secret.html
+[TIFlowType]: StructureDefinition-ti-flowtype.html
 [TIOperationOutcome]: StructureDefinition-operation-outcome.html
 [TIOperationOutcomeDetailsCS]: CodeSystem-operation-outcome-details-codes.html
 [TIOperationOutcomeDetailsVS]: ValueSet-operation-outcome-details-vs.html
@@ -35,3 +44,5 @@
 [TIPractitioner]: StructureDefinition-ti-practitioner.html
 [TIPractitionerRole]: StructureDefinition-ti-practitioner-role.html
 [TIFHIRConfigurationCS]: CodeSystem-ti-fhir-configuration-cs.html
+[TIFlowBeneficiary]: StructureDefinition-tiflow-beneficiary.html
+[TIFlowTypesVS]: ValueSet-ti-flowtypes-vs.html

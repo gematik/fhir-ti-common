@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "tiflow-expiry-date",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",
+  "version": "1.3.0",
+  "name": "TIFlowExpiryDate",
+  "title": "TI Flow ExpiryDate",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-03-20",
+  "publisher": "gematik GmbH",
+  "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt das Ablaufdatum des Rezepts an.",
+  "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Task",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Ablaufdatum der Verordnung im TI-Flow-Fachdienst",
+        "definition": "Datum, an dem eine Verordnung abläuft und nicht mehr eingelöst werden kann."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      }
+    ]
+  }
+}

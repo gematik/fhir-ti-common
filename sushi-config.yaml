@@ -124,6 +124,15 @@ parameters:
   no-validate:
     - MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43
     - Bundle/example-history-bundle
+  special-url:
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType
+    - https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType
+    - https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AccessCode
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Secret
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary
 
 instanceOptions:
   # When set to true, slices must be referred to by name and not only by a numeric index in order to be used
