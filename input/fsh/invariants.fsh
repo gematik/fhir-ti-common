@@ -11,4 +11,4 @@ Description: "Die amtliche Differenzierung der Geschlechtsangabe 'other' darf nu
 Invariant: op-affectsState-vs-method
 Description: "Wenn affectsState = true, darf keine http-method Extension GET enthalten."
 Severity: #error
-Expression: "affectsState != true or extension.where(url = 'https://gematik.de/fhir/ti/StructureDefinition/http-method').all(value != 'GET')"
+Expression: "affectsState != true or extension.where(url = 'https://gematik.de/fhir/ti/StructureDefinition/extension-http-method').all(value != 'GET')"
