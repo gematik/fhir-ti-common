@@ -14,16 +14,28 @@ RuleSet: IdentifierMS
 
 RuleSet: ExtensionMS
 * url MS
+
+RuleSet: ExtensionValueMS
+* insert ExtensionMS
 * value[x] MS
 
-RuleSet: ExtensionStringMS
-* insert ExtensionMS
-* valueString MS
+RuleSet: ExtensionBooleanMS
+* insert ExtensionValueMS
+* valueBoolean MS
+
+RuleSet: ExtensionCodeMS
+* insert ExtensionValueMS
+* valueCode MS
 
 RuleSet: ExtensionCodingMS
-* insert ExtensionMS
+* insert ExtensionValueMS
 * valueCoding
   * insert CodingMS
+
+RuleSet: ExtensionStringMS
+* insert ExtensionValueMS
+* valueString MS
+
 
 RuleSet: ReferenceMS
 * reference MS
@@ -42,3 +54,15 @@ RuleSet: AttachmentMS
 * contentType MS
 * data MS
 * url MS
+
+RuleSet: RatioMS
+* numerator MS
+  * insert QuantityMS
+* denominator MS
+  * insert QuantityMS
+
+RuleSet: QuantityMS
+* value MS
+* unit MS
+* system MS
+* code MS

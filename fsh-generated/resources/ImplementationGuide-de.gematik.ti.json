@@ -68,6 +68,38 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/drug-category-extension"
+        },
+        "name": "DrugCategoryExtension",
+        "description": "Extension for indicating the medication category.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/epa-medication"
+        },
+        "name": "EPA Medication",
+        "description": "Defines the medication resource for the Medication Service in the ePA system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/epa-medication-pzn-ingredient"
+        },
+        "name": "EPA Medication PZN Ingredient",
+        "description": "Defines the medication resource for a PZN ingredient of a compounding medication for the Medication Service in the ePA system. These profiles are intended to inherit from EPAMedication, but due to tooling issues, this inheritance cannot currently be implemented.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/epa-medication-pharmaceutical-product"
+        },
+        "name": "EPA Pharmaceutical Product Medication",
+        "description": "Defines the medication resource for a component of a 'Kombipackung' for the Medication Service in the ePA system. These profiles are intended to inherit from EPAMedication, but due to tooling issues, this inheritance cannot currently be implemented.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Bundle/example-history-bundle"
         },
         "name": "Example History Bundle",
@@ -194,6 +226,78 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/epa-medication-type-extension"
+        },
+        "name": "Medication Type",
+        "description": "Extension for EPAMedication types",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/epa-medication-unique-identifier"
+        },
+        "name": "Medication Unique Identifier",
+        "description": "This unique identifier is generated within the Medication Service. It is either a hash derived from a specific set of data elements of the Medication resource or a direct repetition of a single data element. This identifier ensures the distinct identification of Medication resources across the ePA system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/medication-formulation-packaging-extension"
+        },
+        "name": "MedicationFormulationPackagingExtension",
+        "description": "Information on the packaging of a formulation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/medication-ingredient-amount-extension"
+        },
+        "name": "MedicationIngredientAmountExtensions",
+        "description": "Free-text amount of the ingredient for classical Latin notations such as \"ad 100.0\" or \"quantum satis,\" including the unit.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/medication-ingredient-darreichungsform-extension"
+        },
+        "name": "MedicationIngredientDarreichungsformExtension",
+        "description": "Dosage form of an ingredient in a formulation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/medication-is-vaccine-extension"
+        },
+        "name": "MedicationIsVaccineExtension",
+        "description": "Indicator of whether this is a vaccine.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/medication-manufacturing-instructions-extension"
+        },
+        "name": "MedicationManufacturingInstructionsExtension",
+        "description": "Manufacturing instructions regarding the preparation of a formulation (Subscriptio).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/medication-packaging-size-extension"
+        },
+        "name": "MedicationPackagingSizeExtension",
+        "description": "Specification of the package size according to divided quantity (e.g., 100, 2x25), only appears in conjunction with \"unit\" (e.g., 100 Stück).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/medication-total-quantity-formulation-extension"
+        },
+        "name": "MedicationTotalQuantityFormulationExtension",
+        "description": "Total quantity of the formulation (without the unit).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/ncpeh-country-extension"
         },
         "name": "National Contact Point of Health (NCPeH) Country Extension",
@@ -214,6 +318,30 @@
         },
         "name": "Profil für den Identifikator eines eMP-Eintrags",
         "description": "Definiert die Struktur des Identifikators für einen Eintrag im elektronischen Medikationsplan (eMP). Der Identifikator ermöglicht die eindeutige technische Referenzierung einzelner eMP-Einträge.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/rx-originator-process-identifier"
+        },
+        "name": "RxOriginatorProcessIdentifier",
+        "description": "The RxOriginatorProcessIdentifier, generated within the Medication Service, links the prescriptionID from the E-Rezept-Fachdienst with the original input FHIR resource ID, facilitating accurate tracking and utilization of medication data in operational processes within digital healthcare systems.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/rx-prescription-process-identifier"
+        },
+        "name": "RxPrescriptionProcessIdentifier",
+        "description": "This transaction identifier is used to track medication prescription transactions between the E-Rezept-Fachdienst and the ePA. It is generated by the ePA Medication Service, ensuring a consistent and unique identification of each transaction. The identifier is composed of the PrescriptionId and the authoredOn-date of the operations parameters request, providing a robust mechanism for referencing and managing medication-related resources across systems.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/rx-prescription-process-identifier-extension"
+        },
+        "name": "RxPrescriptionProcessIdentifierExtension",
+        "description": "This extension is used to track medication prescription transactions between the E-Rezept-Fachdienst and the ePA. The RxPrescriptionProcessIdentifier is generated by the ePA Medication Service and consists of the PrescriptionId and the authoredOn date of the operation parameters request. It ensures consistent referencing and management of medication-related resources across different systems.",
         "exampleBoolean": false
       },
       {
@@ -481,6 +609,70 @@
       {
         "code": "no-validate",
         "value": "Bundle/example-history-bundle"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-unique-identifier"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-formulation-packaging-extension"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-amount-extension"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-darreichungsform-extension"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-manufacturing-instructions-extension"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-packaging-size-extension"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/rx-originator-process-identifier"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier-extension"
       }
     ]
   }

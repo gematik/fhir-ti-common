@@ -126,6 +126,23 @@ parameters:
   no-validate:
     - MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43
     - Bundle/example-history-bundle
+  special-url:
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-unique-identifier
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-formulation-packaging-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-amount-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-darreichungsform-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-manufacturing-instructions-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-packaging-size-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/rx-originator-process-identifier
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier-extension
 
 instanceOptions:
   # When set to true, slices must be referred to by name and not only by a numeric index in order to be used

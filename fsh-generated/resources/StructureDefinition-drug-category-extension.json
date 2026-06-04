@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "drug-category-extension",
+  "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
+  "version": "1.3.0",
+  "name": "DrugCategoryExtension",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-12-15",
+  "publisher": "gematik GmbH",
+  "description": "Extension for indicating the medication category.",
+  "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "definition": "Extension for indicating the medication category."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/terminology/ValueSet/ti-drug-category-vs"
+        }
+      },
+      {
+        "id": "Extension.value[x].code",
+        "path": "Extension.value[x].code",
+        "short": "Category",
+        "definition": "Drug Category"
+      }
+    ]
+  }
+}
