@@ -15,25 +15,21 @@ RuleSet: IdentifierMS
 RuleSet: ExtensionMS
 * url MS
 
-RuleSet: ExtensionValueMS
-* insert ExtensionMS
-* value[x] MS
-
 RuleSet: ExtensionBooleanMS
-* insert ExtensionValueMS
+* insert ExtensionMS
 * valueBoolean MS
 
 RuleSet: ExtensionCodeMS
-* insert ExtensionValueMS
+* insert ExtensionMS
 * valueCode MS
 
 RuleSet: ExtensionCodingMS
-* insert ExtensionValueMS
+* insert ExtensionMS
 * valueCoding
   * insert CodingMS
 
 RuleSet: ExtensionStringMS
-* insert ExtensionValueMS
+* insert ExtensionMS
 * valueString MS
 
 

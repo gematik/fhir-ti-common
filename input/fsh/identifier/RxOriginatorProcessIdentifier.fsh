@@ -9,6 +9,6 @@ Description: "The RxOriginatorProcessIdentifier, generated within the Medication
 * ^date = "2025-05-12"
 * ^status = #active
 
-* system 1..1 MS
+* system 1..1
 * system = $rx-originator-process-identifier
-* value 1.. MS
+* value 1..

@@ -16,9 +16,6 @@ Description: "Defines the medication resource for a component of a 'Kombipackung
   * insert ExtensionCodingMS
   * valueCoding from $ti-medication-type-pharmaceutical-product-vs
 
-
-* code
-  * coding[pzn] 0..0
-* ingredient
-  * itemReference 0..0
-    * ^short = "Medication Pharmaceutical Product can't have child Medications"
+* code.coding[pzn] 0..0
+* ingredient.itemReference 0..0
+  * ^short = "Medication Pharmaceutical Product can't have child Medications"

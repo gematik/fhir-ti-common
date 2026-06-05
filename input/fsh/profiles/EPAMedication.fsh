@@ -28,7 +28,6 @@ RuleSet: epaMedicationElements
 * obeys epa-med-1
 // * obeys epa-med-2
 // * obeys epa-med-3
-* extension MS
 * extension contains
     RxPrescriptionProcessIdentifierExtension named rxPrescriptionProcessIdentifier 0..1 MS and
     MedicationIsVaccineExtension named isVaccine 0..1 MS and
@@ -58,7 +57,7 @@ RuleSet: epaMedicationElements
 * extension[type]
   * insert ExtensionCodingMS
 
-* identifier 0.. MS
+* identifier 0..
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
@@ -77,7 +76,7 @@ RuleSet: epaMedicationElements
 
 * code 0..1 MS
   * ^short = "Medication in coded form or as free text if necessary"
-  * coding MS
+  * coding
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
@@ -116,8 +115,7 @@ RuleSet: epaMedicationElements
   * display 1..1 MS
 * form MS
   * ^short = "Form of Dispensing"
-* form
-  * coding MS
+  * coding
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
@@ -147,7 +145,6 @@ RuleSet: epaMedicationElements
   * insert RatioMS
   * numerator 0..1
   * numerator from $hl7-vs-ucum-units (preferred)
-    * extension MS
     * extension contains
         MedicationPackagingSizeExtension named packagingSize 0..1 MS and
         MedicationTotalQuantityFormulationExtension named totalQuantity 0..1 MS
@@ -165,13 +162,12 @@ RuleSet: epaMedicationElements
 * ingredient MS
   // * ^short = "Aktive oder inaktive Bestandteile des Medikaments, einschließlich Wirkstoffe sowie einzelner Arzneimittel in Kombipackungen."
   * ^short = "Active or inactive ingredients of the medication, including pharmaceutical substances as well as individual medicinal products in combination packs."
-  * extension MS
   * extension contains
       MedicationIngredientDarreichungsformExtension named darreichungsform 0..1 MS
   * extension[darreichungsform]
     * url MS
     * valueString MS
-  * item[x] 1..1 MS
+  * item[x] 1..1
   * itemCodeableConcept MS
     // * ^short = "Kodierte Beschreibung des Wirkstoffs oder der Komponente."
     * ^short = "Encoded description of the substance or component."
@@ -215,7 +211,6 @@ RuleSet: epaMedicationElements
     * ^short = "Is it an active ingredient?"
   * strength MS
     * ^short = "Strength"
-    * extension MS
     * extension contains
         MedicationIngredientAmountExtensions named amountText 0..1 MS
     * extension[amountText]

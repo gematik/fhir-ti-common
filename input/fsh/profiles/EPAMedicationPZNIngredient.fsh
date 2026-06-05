@@ -16,10 +16,8 @@ Description: "Defines the medication resource for a PZN ingredient of a compound
   * insert ExtensionCodingMS
   * valueCoding from $ti-medication-type-product-vs
 
-* code
-  * coding[pzn] 1..
-* ingredient
-  * itemReference ..0
-    * ^short = "Medication Ingredients can't have child Medications"
+* code.coding[pzn] 1..
+* ingredient.itemReference ..0
+  * ^short = "Medication Ingredients can't have child Medications"
 * batch MS
   * lotNumber MS

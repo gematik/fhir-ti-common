@@ -50,7 +50,6 @@
             "code": "Coding"
           }
         ],
-        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/terminology/ValueSet/ti-medication-type-vs"
