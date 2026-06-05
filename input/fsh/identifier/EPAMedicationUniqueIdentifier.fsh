@@ -10,6 +10,6 @@ Description: "This unique identifier is generated within the Medication Service.
 * ^date = "2025-05-12"
 * ^status = #active
 
-* system 1..1 MS
+* system 1..1
 * system = $epa-medication-unique-identifier
-* value 1.. MS
+* value 1..

@@ -53,11 +53,6 @@
         "max": "0"
       },
       {
-        "id": "Medication.extension",
-        "path": "Medication.extension",
-        "mustSupport": true
-      },
-      {
         "id": "Medication.extension:rxPrescriptionProcessIdentifier",
         "path": "Medication.extension",
         "sliceName": "rxPrescriptionProcessIdentifier",
@@ -118,11 +113,6 @@
       {
         "id": "Medication.extension:drugCategory.url",
         "path": "Medication.extension.url",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:drugCategory.value[x]",
-        "path": "Medication.extension.value[x]",
         "mustSupport": true
       },
       {
@@ -287,8 +277,7 @@
             }
           ],
           "rules": "open"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.identifier:EPAMedicationUniqueIdentifier",
@@ -307,6 +296,16 @@
         "patternIdentifier": {
           "system": "https://gematik.de/fhir/epa-medication/sid/epa-medication-unique-identifier"
         },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.identifier:EPAMedicationUniqueIdentifier.system",
+        "path": "Medication.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.identifier:EPAMedicationUniqueIdentifier.value",
+        "path": "Medication.identifier.value",
         "mustSupport": true
       },
       {
@@ -329,6 +328,16 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.identifier:RxOriginatorProcessIdentifier.system",
+        "path": "Medication.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.identifier:RxOriginatorProcessIdentifier.value",
+        "path": "Medication.identifier.value",
+        "mustSupport": true
+      },
+      {
         "id": "Medication.code",
         "path": "Medication.code",
         "short": "Medication in coded form or as free text if necessary",
@@ -345,8 +354,7 @@
             }
           ],
           "rules": "open"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.code.coding:pzn",
@@ -489,8 +497,7 @@
             }
           ],
           "rules": "open"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.form.coding:kbvDarreichungsform",
@@ -543,11 +550,6 @@
           "strength": "preferred",
           "valueSet": "http://hl7.org/fhir/ValueSet/ucum-units"
         }
-      },
-      {
-        "id": "Medication.amount.numerator.extension",
-        "path": "Medication.amount.numerator.extension",
-        "mustSupport": true
       },
       {
         "id": "Medication.amount.numerator.extension:packagingSize",
@@ -657,11 +659,6 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.extension",
-        "path": "Medication.ingredient.extension",
-        "mustSupport": true
-      },
-      {
         "id": "Medication.ingredient.extension:darreichungsform",
         "path": "Medication.ingredient.extension",
         "sliceName": "darreichungsform",
@@ -699,8 +696,7 @@
           ],
           "ordered": false,
           "rules": "open"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept",
@@ -887,11 +883,6 @@
         "id": "Medication.ingredient.strength",
         "path": "Medication.ingredient.strength",
         "short": "Strength",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.extension",
-        "path": "Medication.ingredient.strength.extension",
         "mustSupport": true
       },
       {
