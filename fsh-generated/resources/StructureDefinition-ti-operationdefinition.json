@@ -27,7 +27,7 @@
             "key": "op-affectsState-vs-method",
             "severity": "error",
             "human": "Wenn affectsState = true, darf keine http-method Extension GET enthalten.",
-            "expression": "affectsState != true or extension.where(url = 'https://gematik.de/fhir/ti/StructureDefinition/http-method').all(value != 'GET')",
+            "expression": "affectsState != true or extension.where(url = 'https://gematik.de/fhir/ti/StructureDefinition/extension-http-method').all(value != 'GET')",
             "source": "https://gematik.de/fhir/ti/StructureDefinition/ti-operationdefinition"
           }
         ]
