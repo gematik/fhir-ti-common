@@ -24,7 +24,9 @@ publisher:
   email: patientteam [ at ] gematik.de
 
 dependencies:
+  hl7.fhir.uv.xver-r5.r4: latest
   de.basisprofil.r4: 1.5.4
+  de.fhir.medication: 1.0.4
 
 # FSHOnly: true
 
@@ -95,6 +97,7 @@ parameters:
   apply-contact: false
   default-contact: true
   no-usage-check: true
+  show-inherited-invariants: true
   excludettl: true
   # For which versions comparisons should be generated.
   #   {last} - compare with the last published version (whatever it's status)
