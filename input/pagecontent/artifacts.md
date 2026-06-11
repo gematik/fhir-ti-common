@@ -31,6 +31,13 @@ StructureDefinition/ti-practitioner-role,
 {% include artifacts-table-generator.html render=profiles %}
 <div><figcaption><strong>Tabelle:</strong> Ressourcenprofile</figcaption></div>
 
+### Extensions
+
+{% capture extensions %}
+StructureDefinition/ncpeh-country-extension,
+{% endcapture %}
+{% include artifacts-table-generator.html render=extensions %}
+<div><figcaption><strong>Tabelle:</strong> Extensions</figcaption></div>
 
 ### Datentypen
 
