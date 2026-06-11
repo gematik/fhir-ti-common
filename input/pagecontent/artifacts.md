@@ -34,7 +34,6 @@ StructureDefinition/ti-practitioner-role,
 ### Extensions
 
 {% capture extensions %}
-StructureDefinition/extension-base-url,
 StructureDefinition/ncpeh-country-extension,
 {% endcapture %}
 {% include artifacts-table-generator.html render=extensions %}
