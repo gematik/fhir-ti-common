@@ -1,5 +1,145 @@
 [
     {
+        "key": "IG-TI00141ZJ2",
+        "title": "Sortierung des Datentyps Period",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 1,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen, muss sofern vorhanden weitergehend nach <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.start</i>-Wert oder <i>Period.end</i>-Wert ist hierbei als noch nicht gestartet, also negativ unendlich, bzw. offen, also unendlich anzusehen.",
+        "conformance": "SHALL",
+        "created": "2025-10-27T11:15:01.479737",
+        "modified": "2026-01-14T09:29:09.949753",
+        "date": "2026-03-12T13:28:36.603173",
+        "content_hash": "e95b42c4582df88b59dbebb5932baafeaa1f5c786c7bd008897a6fa1c20d2d34",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI00242W49",
+        "title": "Unterstützung von _include:iterate",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS alle weiter referenzierten Ressourcen gemäß der angegebenen Referenzpfade iterativ in die Antwort aufnehmen, wenn <i>_include:iterate</i> verwendet wird.",
+        "conformance": "SHALL",
+        "created": "2025-03-07T10:35:21.321969",
+        "modified": "2025-03-07T10:35:21.321972",
+        "date": "2025-11-18T12:35:25.434190",
+        "content_hash": "f522bc728256316ca272448b38e7a89fe8a3545d425458d17282b9448a1f5a29",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI02423P7B",
+        "title": "Referenzierung einer spezifischen Version einer FHIR-Instanz",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass eine FHIR-Instanz eine andere Instanz nicht nur über Ressourcentyp und ID, sondern auch mit einer spezifischen <i>Meta.versionId</i> referenzieren kann.",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.423766",
+        "modified": "2025-05-27T09:33:08.792200",
+        "date": "2025-11-18T11:03:10.876301",
+        "content_hash": "e476ec53bfdb0614a01f8d1fe124ec41b5d901bfaad3c793e9e85c97e73f875e",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI06008V22",
+        "title": "Abruf einer spezifischen Ressourcenversion über die FHIR API",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS das Lesen spezifischer Versionen von FHIR-Instanzen gemäß der HL7 FHIR Spezifikation [FHIR Version Read] implementieren. Dabei MUSS eine angeforderte Version einer Instanz über eine GET-Anfrage der Form <i>[base]/[resourceType]/[id]/_history/[versionId]</i> bereitgestellt werden. Die Antwort MUSS die angeforderte Version der Instanz enthalten, einschließlich der zugehörigen Metadaten (<i>meta.versionId</i>, <i>meta.lastUpdated</i>).",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.422356",
+        "modified": "2025-05-27T09:33:08.791114",
+        "date": "2025-11-18T11:03:10.874162",
+        "content_hash": "1cb3d53aecd5dd7f465cb20b5252ace66b0be593f7df850e0096c8d1f5470193",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI06069XBQ",
+        "title": "Aufsteigende Sequenz der Resource.meta.versionId",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass die <i>versionId</i> einer FHIR-Instanz bei jeder neuen Version um genau 1 erhöht wird. Die erste Version einer FHIR-Instanz erhält die <i>versionId</i> 1, die nächste Version 2, und so weiter. Beispiel: 1 → 2 → 3 →",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.421523",
+        "modified": "2025-03-12T12:47:19.482020",
+        "date": "2025-11-18T11:03:10.872638",
+        "content_hash": "dfd974c7382e205f82e7e483f3fa24af1305a74ab74270142ac4702f40120563",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
         "key": "IG-TI06089XAH",
         "title": "Anzeige für Must Support",
         "actor": [
@@ -40,8 +180,32 @@
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI52070SA6",
-        "title": "Bundle.entry.request und Bundle.entry.response innerhalb des _history Bundles",
+        "key": "IG-TI06315TQ1",
+        "title": "Unterstützung verketteter Suchparameter",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS die Suche von verketteten Parametern gemäß der Spezifikation unter [FHIR Chained parameters] implementieren und unterstützen.",
+        "conformance": "SHALL",
+        "created": "2025-03-07T08:14:24.654914",
+        "modified": "2025-03-28T11:10:43.516953",
+        "date": "2025-11-18T12:35:25.436128",
+        "content_hash": "dcd99dcb175f1d65a9d52bb97a9ab4a1d4f3690b5fbcfd68fefeac527cf7e914",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI06872YZP",
+        "title": "404 Not Found Antwort für nicht existierende spezifische Versionen",
         "actor": [
             "EPA-Medication-Service",
             "EPA-Patient-Service"
@@ -54,22 +218,54 @@
                 "Produkttest"
             ]
         },
-        "version": 1,
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> für jede Version einer FHIR-Instanz die zugehörigen <i>entry.request</i>- und <i>entry.response</i>-Elemente bereitstellen.\n <br/><br/>\n <ul>\n <li>\n <i>Bundle.entry.request.method</i> gibt die HTTP-äquivalente Aktion an, die zur Entstehung der jeweiligen Version der Ressourceinstanz geführt hat. <i>POST</i> für das Anlegen, <i>PUT</i> für eine Aktualisierung, <i>DELETE</i> für das Löschen der Ressourceinstanz.\n </li>\n <li>\n <i>Bundle.entry.request.url</i> enthält die äquivalente Ressourcen-URL relativ zum FHIR-Endpunkt, aus der die versionsspezifische Abruf-URL <i>ResourceType/{id}/_history/{versionId}</i> abgeleitet werden kann.\n </li>\n <li>\n <i>Bundle.entry.response.status</i> enthält den HTTP-ähnlichen Status der internen Verarbeitung (z. B. <i>201 Created</i> oder <i>200 OK</i>).\n </li>\n <li>\n <i>Bundle.entry.response.lastModified</i> gibt das Datum und die Uhrzeit der letzten Änderung der jeweiligen Version der Ressourceinstanz an und stimmt mit <i>meta.lastUpdated</i> überein, sofern <i>Bundle.entry.resource</i> vorhanden ist.\n </li>\n <li>\n <i>Bundle.entry.response.location</i> enthält die vollständige versionsspezifische Ressourcen-URL (z. B. <i>ResourceType/{id}/_history/{versionId}</i>), sofern die entsprechende Version der Ressourceinstanz einzeln abrufbar ist.\n </li>\n </ul>",
+        "text": "Der FHIR Data Service MUSS bei einem HTTP GET-Request auf eine spezifische Version einer FHIR-Instanz den HTTP Status Code <i>404 (Not Found)</i> zurückgeben, wenn die angeforderte Version nicht existiert.\n <br/><br/>\n Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten mit folgenden Eigenschaften:\n <ul>\n <li><i>OperationOutcome.issue.code</i> auf <i>not-found</i> gesetzt.</li>\n <li><i>OperationOutcome.issue.diagnostics</i> mit einer Meldung, dass die angeforderte Version nicht existiert.</li>\n </ul>",
         "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.422187",
-        "modified": "2025-12-02T13:01:10.399502",
-        "date": "2025-12-02T13:01:10.399508",
-        "content_hash": "4d8cdedc77d705e7395316c64d329b286d7d43efe148dbdd8d72e06c934b166b",
+        "created": "2025-03-10T12:54:11.422662",
+        "modified": "2025-03-17T14:32:05.768193",
+        "date": "2025-11-18T11:03:10.874627",
+        "content_hash": "c5ba980dc0f109ed5e83a76ed110b5a224a08167628cc9ed44e73710ba89196a",
         "path": "general-principles.html",
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI44886ZXA",
-        "title": "Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR",
+        "key": "IG-TI07252NTV",
+        "title": "Unterstützung URL-Parameter für Paginierungsfunktion",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-paging.md",
+        "text": "Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und in seiner Antwort Navigationsinformationen in Ergebnisseiten zur Verfügung stellen. Um die Paginierungsfunktion zu implementieren, werden die URL-Parameter <code>_count</code> und <code>_offset</code> verwendet. Der Parameter <code>_count</code> bestimmt die Anzahl der Einträge pro <i>Seite</i> (page), während <code>_offset</code> das Startelement der Seite angibt. Zusätzlich entscheidet der <code>_total</code>-Parameter, ob die Gesamtanzahl der Einträge in der Antwort enthalten sein soll.\n <br/><br/>\n <figure>\n <table style=\"width: 100%\">\n <thead>\n <tr>\n <th>URL-Parameter</th>\n <th>Beschreibung</th>\n <th>Standardwert</th>\n </tr>\n </thead>\n <tbody>\n <tr>\n <td><code>_count</code></td>\n <td>Das Client-System KANN die maximale Anzahl von Elementen festlegen, die auf einer <i>Seite</i> (page) der Antwort enthalten sein soll. Das bedeutet, dass der FHIR Data Service die Ergebnismenge auf diese maximal angegebene Anzahl beschränkt.</td>\n <td>25</td>\n </tr>\n <tr>\n <td><code>_offset</code></td>\n <td>Dieser Parameter gibt den (zero-based) Offset des ersten zurückgegebenen Elements in der Sammlung an.</td>\n <td>0</td>\n </tr>\n <tr>\n <td><code>_total</code></td>\n <td>Dieser Parameter steuert, ob und wie der FHIR Data Service die Gesamtanzahl der Suchergebnisse zurückgibt. Folgende Werte können eingestellt werden: <code>none</code>, <code>estimate</code>, <code>accurate</code>.</td>\n <td>-</td>\n </tr>\n </tbody>\n </table>\n <figcaption><strong>Tabelle:</strong> URL-Parameter für Paginierungsfunktion</figcaption>\n </figure>\n <br/>\n Werte für <code>_total</code>:\n <br/><br/>\n <ul>\n <li><code>none</code> (Standardwert): Die Gesamtanzahl der Suchtreffer wird nicht angezeigt.</li>\n <li><code>estimate</code>: Die ungefähre Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n <li><code>accurate</code>: Die genaue Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n </ul>",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.318535",
+        "modified": "2025-02-26T13:55:56.516495",
+        "date": "2026-02-23T10:27:58.000594",
+        "content_hash": "ddc91e95a7f135e8b944d81d2b83687882ed46a58d57164399b5cf4fa560be29",
+        "path": "query-api-paging.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI08134XQ4",
+        "title": "Verarbeitung von referenzierten Ressourcen in Include-Suchen",
         "actor": [
             "EPA-Medication-Service"
         ],
@@ -78,17 +274,69 @@
                 "Produkttest"
             ]
         },
-        "version": 2,
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Servic MUSS die <i>_revinclude</i>-Suche gemäß der [FHIR Search Revinclude] unterstützen, sodass Ressourcen, die auf die gesuchten Ressourcen verweisen, innerhalb der Suchergebnisse automatisch mit einbezogen werden können.",
+        "text": "Der FHIR Data Service MUSS für jede zurückgegebene Ressource die zugehörigen Ressourcen gemäß den Verknüpfungskriterien ermitteln und mit <i>entry.search.mode = \"include\"</i> in die Antwort aufnehmen. Falls eine referenzierte Ressource nicht existiert, nicht gefunden wird oder nicht abrufbar ist, darf kein Fehler zurückgegeben werden.",
         "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.315223",
-        "modified": "2025-05-27T09:33:08.776875",
-        "date": "2025-11-18T12:35:25.433474",
-        "content_hash": "c56259af79bb912d57961a71ed851c5f02311a675d79400179e263f6c7959af5",
+        "created": "2025-03-07T10:54:47.698334",
+        "modified": "2025-03-07T10:54:47.698336",
+        "date": "2025-11-18T12:35:25.433666",
+        "content_hash": "c3b750b8d7ce9f6a139874b6aaf8b6794862bd51c8133e0e7420a2c4c4512217",
         "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI09377BM6",
+        "title": "Verarbeitung für Must Support",
+        "actor": [
+            "EPA-FdV",
+            "EPA-PS"
+        ],
+        "test_procedures": {
+            "EPA-FdV": [
+                "Produkttest"
+            ],
+            "EPA-PS": [
+                "Konformitätsbestätigung"
+            ]
+        },
+        "version": 2,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Das Client-System, das lesend ein FHIR-Profil des FHIR Data Service implementiert, MUSS in der Lage sein, alle Must-Support-Elemente in FHIR-Instanzen zu verarbeiten. Das Client-System MUSS auch Must-Support-Elemente ohne Wert verarbeiten können, ohne mit einem Fehler abzubrechen oder die Anwendung abstürzen zu lassen.",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.321306",
+        "modified": "2025-05-27T09:33:08.789868",
+        "date": "2025-11-18T11:03:10.871391",
+        "content_hash": "7c20974774525900465f04a892b07afb7b94ccfb30d9d9ddd2abfc4b54a8a443",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI11342RSA",
+        "title": "Behandlung des Löschvorgangs als versioniertes Ereignis",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS das Löschen einer Instanz als ein Ereignis im Lebenszyklus der Instanz behandeln, indem eine neue Version erstellt wird, die den gelöschten Zustand widerspiegelt.",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.422786",
+        "modified": "2025-03-10T12:54:11.422787",
+        "date": "2025-11-18T11:03:10.874817",
+        "content_hash": "03b8e6aa702891de98322fcb2af281f2e9ddfa6d728d91b4c7441696ab093043",
+        "path": "general-principles.html",
         "release": "1.3.2"
     },
     {
@@ -124,120 +372,64 @@
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI61673KWG",
-        "title": "Unterstützung versionierter Referenzen im FHIR Data Service",
+        "key": "IG-TI16700VFJ",
+        "title": "Abruf früherer Versionen einer gelöschten Instanz",
         "actor": [
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS versionierte Referenzen unterstützen, um es zu ermöglichen, innerhalb einer FHIR-Instanz auf eine spezifische Version einer anderen Instanz zu verweisen.",
-        "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.423707",
-        "modified": "2025-03-12T12:47:19.483955",
-        "date": "2025-11-18T11:03:10.876136",
-        "content_hash": "4bca59c16431929b9bd7f646232762ddef756f7e8e7fbb2ae1bb5270c202b19d",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI62717R2P",
-        "title": "FHIR-Formatunterstützung XML",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/fhir-format.md",
-        "text": "Der FHIR Data Service MUSS das FHIR-Format in [FHIR XML] verarbeiten können.",
-        "conformance": "SHALL",
-        "created": "2025-03-06T13:30:46.537743",
-        "modified": "2025-03-12T12:47:19.474257",
-        "date": "2025-11-18T11:03:10.856224",
-        "content_hash": "0a9086fa476a0995626bb4c866662840b196e0aed2a527cf23bb58b9046f43ac",
-        "path": "fhir-format.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI38467S3Q",
-        "title": "Bereitstellung des /metadata-Endpunkts durch FHIR Data Service",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Ein FHIR Data Service MUSS an dem Endpunkt /metadata gemäß der [Capabilities-Interaktion] ein Capability Statement Typ <i>kind = instance</i> bereitstellen. Dieses Capability Statement muss im Element <i>software</i> den Namen und die Versionsnummer der eingesetzten Software angeben. Dieses Capability Statement muss sämtliche Anforderungen an den FHIR Data Service aus dem Capability Statement vom Typ <i>kind = requirements</i> der zugrundeliegenden Spezifikation erfüllen.",
-        "conformance": "SHALL",
-        "created": "2025-05-07T20:31:11.882185",
-        "modified": "2025-05-23T10:04:38.887401",
-        "date": "2025-11-18T11:03:10.877236",
-        "content_hash": "0308dff95de1faceec40d989ccb9736636a6b84eae41128ebc20f5a54f589d5f",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI28968WCS",
-        "title": "Unterstützung von Präfixen für numerische und Datumsvergleiche",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
             "EPA-Medication-Service"
         ],
         "test_procedures": {
-            "EPA-Audit-Service": [
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass frühere Versionen einer gelöschten Instanz weiterhin über versionsspezifische Endpunkte abrufbar sind.",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.422911",
+        "modified": "2025-03-10T12:54:11.422912",
+        "date": "2025-11-18T11:03:10.875069",
+        "content_hash": "512e171cfc57f0c6f80d3b9e5aea0ab04d826d617530a7a9e11ff252f206aff9",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI16747WFN",
+        "title": "Implementierung der _history-Abfrage gemäß HL7 FHIR Spezifikation",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
                 "Produkttest"
             ],
-            "EPA-MHD-Service": [
+            "EPA-Patient-Service": [
                 "Produkttest"
-            ],
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS die <i>_history</i>-Abfrage gemäß der HL7 FHIR Spezifikation [FHIR History Interaction] implementieren, um die Versionshistorie einer FHIR-Instanz abrufbar zu machen.",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.421747",
+        "modified": "2025-05-27T09:33:08.790570",
+        "date": "2025-11-18T11:03:10.873019",
+        "content_hash": "678a55a83c4b0980b45eea128ead70ef81884a0f8fce8e7013da95aeb532335a",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI17755AMW",
+        "title": "Unterstützung von _revinclude:iterate",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
             "EPA-Medication-Service": [
                 "Produkttest"
             ]
@@ -246,12 +438,12 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS die in der [FHIR Search Prefixes] definierten Vergleichspräfixe für numerische (<i>number</i>, <i>quantity</i>) und Datumsparameter (<i>date</i>, <i>Range</i>, <i>Period</i>) unterstützen.",
+        "text": "Der FHIR Data Service MUSS alle iterativ verknüpften rückreferenzierenden Ressourcen zurückgeben, wenn <i>_revinclude:iterate</i> verwendet wird.",
         "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.315262",
-        "modified": "2025-02-26T13:55:56.513547",
-        "date": "2025-11-18T12:35:25.434749",
-        "content_hash": "1b6a3e5732d8c69e3e28ccd512c3b52168cc1047f2c4d85af517d653aab3c926",
+        "created": "2025-03-07T10:35:21.322061",
+        "modified": "2025-03-07T10:35:21.322062",
+        "date": "2025-11-18T12:35:25.434333",
+        "content_hash": "908a4e10c1ee0c67cfb8a0546e203ada7dc9982a914f3024756430c36111ddd1",
         "path": "query-api-search.html",
         "release": "1.3.2"
     },
@@ -292,104 +484,8 @@
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI94321ZRC",
-        "title": "Bereitstellung eines Bundles mit dem Typ history als Antwort",
-        "actor": [
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS als Antwort auf eine <i>_history</i>-Abfrage ein Bundle mit dem Typ <i>history</i> zurückgeben, das die Versionen der angeforderten FHIR-Instanz enthält.",
-        "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.421936",
-        "modified": "2025-03-12T12:47:19.482337",
-        "date": "2025-11-18T11:03:10.873567",
-        "content_hash": "98d16272d12811dadca3520640bff985e86772f2410bda194e66eb28164cc0e2",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI87140VUU",
-        "title": "Befüllungspflicht für Must Support",
-        "actor": [
-            "EPA-CS-KTR",
-            "EPA-FdV",
-            "EPA-PS"
-        ],
-        "test_procedures": {
-            "EPA-CS-KTR": [
-                "Konformitätsbestätigung"
-            ],
-            "EPA-FdV": [
-                "Produkttest"
-            ],
-            "EPA-PS": [
-                "Konformitätsbestätigung"
-            ]
-        },
-        "version": 2,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service implementiert, MUSS jedes als Must Support gekennzeichnete Element gemäß der dazugehörigen Kardinalitätsangabe befüllen. Das heißt auch, dass in optionalen Elementen (z.B. Kardinalität \"0..1\", \"0..*\") der Elementwert leer bleiben darf, sofern dem Client-System kein Wert zur Verfügung steht.",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.321299",
-        "modified": "2025-05-27T09:33:08.789772",
-        "date": "2025-11-18T11:03:10.871121",
-        "content_hash": "777a34849024057245ca44fae44716427f9370c2c07145ebde8371efe0a1e852",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI62490PR0",
-        "title": "Standardformat für den FHIR Data Service",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 1,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/fhir-format.md",
-        "text": "Der FHIR Data Service MUSS, sofern die entsprechende Schnittstelle ein FHIR-Format zurückgibt, das Format <i>application/fhir+json</i> verwenden, wenn in der Anfragenachricht kein unterstütztes Format durch den <i>_format</i>-Parameter und\n <ul>\n <li>kein <i>Accept</i> Header,</li>\n <li>oder durch den <i>Accept</i> Header keine eindeutige Präferenz eines unterstützten Formats</li>\n </ul>\n angegeben ist.",
-        "conformance": "SHALL",
-        "created": "2025-03-06T13:30:46.537950",
-        "modified": "2025-11-14T09:34:47.788257",
-        "date": "2025-11-18T11:03:10.857519",
-        "content_hash": "a532db5c969b1f8317410a404b69f35d467cd54ad8dbc7d1508270261a116a6c",
-        "path": "fhir-format.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI94558MGC",
-        "title": "Vorrang des _format-Parameters gegenüber dem Accept Header",
+        "key": "IG-TI19904KM0",
+        "title": " Keine Überschreibung des Content Type Header durch den _format-Parameter bei POST-Nachrichten",
         "actor": [
             "EPA-Audit-Service",
             "EPA-MHD-Service",
@@ -414,181 +510,13 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
-        "text": "Falls sowohl der <i>Accept</i> Header als auch der <i>_format</i>-Parameter in einer Anfragenachricht angegeben sind, MUSS der FHIR Data Service den <i>_format</i>-Parameter priorisieren und das Antwortformat entsprechend diesem verarbeiten. Der <i>Accept</i> Header MUSS in diesem Fall ignoriert werden.",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass der <i>_format</i>-Parameter den Content Type Header für den Formattyp des Bodys einer POST-Nachricht nicht überschreibt.",
         "conformance": "SHALL",
-        "created": "2025-03-06T13:37:59.523187",
-        "modified": "2025-03-12T12:47:19.475179",
-        "date": "2025-11-18T11:03:10.858065",
-        "content_hash": "22f3ec0767669a45f4ed7ee36167c66555462ab59db35ea1fd7beff5e6ab126a",
+        "created": "2025-03-06T13:30:46.537971",
+        "modified": "2025-03-12T12:47:19.475060",
+        "date": "2025-11-18T11:03:10.857798",
+        "content_hash": "efea0d89fd3acd642867ee28557dec9a695d7a5cbc982b211c19429cc90eeb0e",
         "path": "fhir-format.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI97619U65",
-        "title": "Keine Registrierung bei Nutzung inaktiver Codes",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS das Registrieren und Speichern von neuen Daten ablehnen und mit dem Fehler <i>SVC_INACTIVE_CODE</i> quittieren, falls ein Code den Status <i>inactive</i> besitzt. Unter <i>OperationOutcome.issue.diagnostics</i> MUSS der FHIR Data Service angeben, welcher Code nicht mehr unterstützt wird.",
-        "conformance": "SHALL",
-        "created": "2025-08-19T11:56:04.108952",
-        "modified": "2025-08-19T11:56:04.108960",
-        "date": "2025-11-18T11:03:10.877539",
-        "content_hash": "4f45d5e4e3b0209a9074447163ea7491ebc96a2fae8bbe945b7a542b4266776c",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI36297YXJ",
-        "title": "Vergleichspräfixe für numerische Werte",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für numerische Werte (number, quantity) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>, <i>ge</i>, <i>le</i>",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.315312",
-        "modified": "2025-02-26T13:55:56.513594",
-        "date": "2025-11-18T12:35:25.435208",
-        "content_hash": "8078eb88fc5e6d205ccd54e66a21f8be7a66ed72769f1641af16f8ae997dd747",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI81327UVF",
-        "title": "Umsetzung der Sortierfunktion gemäß FHIR",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS die Sortierfunktion nach [FHIR Sorting] implementieren.",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.315403",
-        "modified": "2025-02-26T13:55:56.513679",
-        "date": "2025-11-18T12:35:25.436634",
-        "content_hash": "cf8dabca9c2516ca0217fd5baf992e3330efb3f3a602f754206b7de1d6740239",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI57083QMG",
-        "title": "Unterstützung von XML Content Type für FHIR-Data-Schnittstellen",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/fhir-format.md",
-        "text": "Der FHIR Data Service MUSS für Anfragenachrichten und Antwortnachrichten an den Schnittstellen den Content Type <code>application/fhir+xml</code> unterstützen.",
-        "conformance": "SHALL",
-        "created": "2025-03-06T13:30:46.537770",
-        "modified": "2025-03-12T12:47:19.474335",
-        "date": "2025-11-18T11:03:10.856461",
-        "content_hash": "ad425f73bf52134aa50d6d32a0189b475c1bd007a081eb82f9b4be0a7eb5de4f",
-        "path": "fhir-format.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI61163GRT",
-        "title": "Bereichsprüfung für Range- und Period-Typen",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS für Suchanfragen, die Range- oder Period-Werte betreffen, sicherstellen, dass obere und untere Grenzen des Bereichs korrekt berücksichtigt werden und mit den definierten Vergleichspräfixen korrekt verarbeitet werden.",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.315384",
-        "modified": "2025-02-26T13:55:56.513664",
-        "date": "2025-11-18T12:35:25.435981",
-        "content_hash": "d15613497fc83544ce7a18a5a6df3bf5937f4c1ca27dd4ffdf1b277619bb5eea",
-        "path": "query-api-search.html",
         "release": "1.3.2"
     },
     {
@@ -628,8 +556,64 @@
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI00141ZJ2",
-        "title": "Sortierung des Datentyps Period",
+        "key": "IG-TI23978E7A",
+        "title": "Repräsentation gelöschter Versionen in Bundle.entry.request und Bundle.entry.response innerhalb eines _history-Bundles",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 1,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gelöschte Versionen einer FHIR-Instanz dokumentieren.\n <br/><br/>\n Für gelöschte Versionen gilt:\n <ul>\n <li>Bei gelöschten Ressourceinstanzen wird das Element <i>Bundle.entry.resource</i> nicht ausgegeben.</li>\n <li><i>Bundle.entry.request.method</i> hat für gelöschte Ressourceinstanzen den Wert <i>DELETE</i>.</li>\n <li><i>Bundle.entry.request.url</i> enthält die REST-äquivalente Ressourcen-URL relativ zum FHIR-Endpunkt, <i>ResourceType/{id}</i>.</li>\n <li><i>Bundle.entry.response.status</i> enthält den Wert <i>200 OK</i>.</li>\n <li><i>Bundle.entry.response.lastModified</i> enthält das Löschdatum der Ressourceinstanz.</li>\n </ul>",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.423477",
+        "modified": "2025-12-02T13:01:10.401620",
+        "date": "2025-12-02T13:01:10.401623",
+        "content_hash": "5584bbbdac39b623b3caa3594ac0b170c65241924ce47f8675c3247413574d4e",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI27170FRR",
+        "title": "Sortierung der Suchergebnisse durch _sort",
+        "actor": [
+            "EPA-CS-Ombudsstelle",
+            "EPA-FdV",
+            "EPA-PS"
+        ],
+        "test_procedures": {
+            "EPA-CS-Ombudsstelle": [
+                "Konformitätsbestätigung"
+            ],
+            "EPA-FdV": [
+                "Produkttest"
+            ],
+            "EPA-PS": [
+                "Konformitätsbestätigung"
+            ]
+        },
+        "version": 3,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Das Client-System KANN die Reihenfolge der zurückgegebenen Ergebnisse durch den Parameter <i>_sort</i> angeben, der eine durch Kommas getrennte Liste von Sortierregeln in Prioritätsreihenfolge enthalten kann.",
+        "conformance": "MAY",
+        "created": "2025-02-26T10:59:21.315396",
+        "modified": "2025-05-27T09:33:08.778111",
+        "date": "2025-11-18T12:35:25.436442",
+        "content_hash": "bf587cd5c2879b4a0cc659c2b6d08d2d7a62f2c6a2d0b4206eb8953f9fad280e",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI28968WCS",
+        "title": "Unterstützung von Präfixen für numerische und Datumsvergleiche",
         "actor": [
             "EPA-Audit-Service",
             "EPA-MHD-Service",
@@ -646,27 +630,35 @@
                 "Produkttest"
             ]
         },
-        "version": 1,
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen, muss sofern vorhanden weitergehend nach <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.start</i>-Wert oder <i>Period.end</i>-Wert ist hierbei als noch nicht gestartet, also negativ unendlich, bzw. offen, also unendlich anzusehen.",
+        "text": "Der FHIR Data Service MUSS die in der [FHIR Search Prefixes] definierten Vergleichspräfixe für numerische (<i>number</i>, <i>quantity</i>) und Datumsparameter (<i>date</i>, <i>Range</i>, <i>Period</i>) unterstützen.",
         "conformance": "SHALL",
-        "created": "2025-10-27T11:15:01.479737",
-        "modified": "2026-01-14T09:29:09.949753",
-        "date": "2026-03-12T13:28:36.603173",
-        "content_hash": "e95b42c4582df88b59dbebb5932baafeaa1f5c786c7bd008897a6fa1c20d2d34",
+        "created": "2025-02-26T10:59:21.315262",
+        "modified": "2025-02-26T13:55:56.513547",
+        "date": "2025-11-18T12:35:25.434749",
+        "content_hash": "1b6a3e5732d8c69e3e28ccd512c3b52168cc1047f2c4d85af517d653aab3c926",
         "path": "query-api-search.html",
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI45064TNU",
-        "title": "Auflösen von versionierten Referenzen in Bundles",
+        "key": "IG-TI29386S9L",
+        "title": "UUID für Resource.id",
         "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -674,27 +666,35 @@
                 "Produkttest"
             ]
         },
-        "version": 0,
+        "version": 2,
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass versionierte Referenzen in Bundles entsprechend den Vorgaben in [FHIR Bundle References] auflösbar sind.",
+        "text": "Der FHIR Data Service MUSS ausschließlich zeitbasierte Universally Unique IDentifier (UUID) gemäß [RFC9562] für logische IDs (d.h. für das FHIR-Element <i>Resource.id</i>) verwenden.",
         "conformance": "SHALL",
-        "created": "2025-07-22T09:44:40.103842",
-        "modified": "2025-07-22T09:44:40.103865",
-        "date": "2025-11-18T11:03:10.876714",
-        "content_hash": "6ead9f78afeb96576f40aa4db7bfb0e66f711b57d29698d336ed8cda0ea697da",
+        "created": "2025-02-26T10:59:21.321291",
+        "modified": "2025-05-06T10:10:09.639137",
+        "date": "2025-11-18T11:03:10.870884",
+        "content_hash": "a60bb7cdb03c45264b091adae5aa325f15284a64a05dcf7d8bd4eab58856f2fc",
         "path": "general-principles.html",
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI44024J5L",
-        "title": "Eindeutigkeit der Resource.meta.versionId pro FHIR-Instanz",
+        "key": "IG-TI29911V07",
+        "title": "Konsistente Referenzierung innerhalb eines Bundles",
         "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -705,14 +705,134 @@
         "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass die <i>Resource.meta.versionId</i> innerhalb einer spezifischen FHIR-Instanz eindeutig ist. Die Versionsnummer darf nicht zurückgesetzt oder übersprungen werden. Jede Instanz besitzt eine eigene fortlaufende Versionsnummer, die bei jeder Änderung der FHIR-Instanz aufsteigt.",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass, wenn im <i>Bundle.entry.fullUrl</i> eine UUID-basierte URI (<i>urn:uuid</i>) verwendet wird, alle Referenzen innerhalb desselben Bundles ebenfalls in der Form <i>urn:uuid:[UUID]</i> angegeben werden. Eine Mischung aus absoluten URLs, UUID-basierten URIs und relativen Referenzen innerhalb eines Bundles darf nicht verwendet werden.",
         "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.421680",
-        "modified": "2025-03-12T12:47:19.482104",
-        "date": "2025-11-18T11:03:10.872838",
-        "content_hash": "30ea9e0df96c5d3f2a8baca39669dfee1a23fa14efc5c8d945a05c1bc64b0ede",
+        "created": "2025-02-26T12:59:25.679584",
+        "modified": "2025-03-12T12:47:19.476263",
+        "date": "2025-11-18T12:35:25.432870",
+        "content_hash": "1cb629d6c7f0cd71a019e419aa20494e63032ca54ccaf00f99c4581b9d009c64",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI31988JEY",
+        "title": "Unterstützung der Präzision bei numerischen und datumsbasierten Suchparametern",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS numerische und datumsbasierte Suchparameter so verarbeiten, dass die Suchwerte entsprechend ihrer Präzision interpretiert werden. Beispielsweise muss eine Suche nach 2025-02-11 den Bereich von 2025-02-11T00:00:00 (inklusive) bis 2025-02-12T00:00:00 (exklusive) abdecken.",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.315231",
+        "modified": "2025-02-26T13:55:56.513515",
+        "date": "2025-11-18T12:35:25.434510",
+        "content_hash": "e77343f82a5b7370a34c36dcee2cf2d39930fc895a4939d2310086cc5640e0eb",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI36210TD1",
+        "title": "HTTP 410 Gone für den Abruf einer gelöschten FHIR-Instanz",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 2,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine gelöschte FHIR-Instanz oder eine gelöschte Version den HTTP Status Code <i>410 (Gone)</i> zurückgeben.\n <br/><br/>\n Dies gilt für:\n <ul>\n <li><i>[ResourceType]/[id]</i> – wenn die gesamte FHIR-Instanz gelöscht wurde</li>\n <li><i>[ResourceType]/[id]/_history/[versionId]</i> – wenn eine spezifische Version der FHIR-Instanz gelöscht wurde</li>\n </ul>\n <br/>\n Die Response muss eine <i>OperationOutcome</i>-Ressource enthalten mit folgenden Eigenschaften:\n <ul>\n <li><i>OperationOutcome.issue.code</i> ist auf <i>processing</i> gesetzt</li>\n <li><i>OperationOutcome.issue.details</i> ist auf <i>MSG_DELETED</i> gesetzt</li>\n <li><i>OperationOutcome.issue.diagnostics</i> enthält eine Meldung, dass die Instanz gelöscht wurde</li>\n </ul>",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.423196",
+        "modified": "2025-09-08T11:58:42.118690",
+        "date": "2025-11-18T11:03:10.875374",
+        "content_hash": "1ebfa88486894d8e3d8b81f1504e2c3894390aaa2bc09fded496ea82207986f3",
         "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI36297YXJ",
+        "title": "Vergleichspräfixe für numerische Werte",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für numerische Werte (number, quantity) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>, <i>ge</i>, <i>le</i>",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.315312",
+        "modified": "2025-02-26T13:55:56.513594",
+        "date": "2025-11-18T12:35:25.435208",
+        "content_hash": "8078eb88fc5e6d205ccd54e66a21f8be7a66ed72769f1641af16f8ae997dd747",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI37232GDE",
+        "title": "Unterstützung Seitennavigationslinks für Paginierungsfunktion",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 2,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-paging.md",
+        "text": "Der FHIR Data Service MUSS in einem FHIR Search Set Bundle das FHIR-Element <code>link</code> belegen, welches eine Liste von Link-Elementen beinhaltet, welche jeweils einem spezifischen Navigationszweck innerhalb des FHIR Bundles dienen.<br/><br/>Die folgenden Beziehungen werden gemäß den [Link Relation Types] bereitgestellt.\n  <br/><br/>\n  <figure>\n    <table style=\"width: 100%\">\n      <thead>\n        <tr>\n          <th>Link Relation</th>\n          <th>Beschreibung</th>\n          <th>Anforderung</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td><code>self</code></td>\n          <td>Ein Link zur aktuellen Seite der Ergebnisse, der die Abfrage repräsentiert, die diese Ergebnisse generiert hat</td>\n          <td>MUSS</td>\n        </tr>\n        <tr>\n          <td><code>next</code></td>\n          <td>Wird verwendet, um zur nächsten Seite der Ergebnisse zu navigieren, entsprechend der festgelegten Paginierung</td>\n          <td>MUSS</td>\n        </tr>\n        <tr>\n          <td><code>previous</code></td>\n          <td>Ermöglicht die Rückkehr zur vorherigen Ergebnismenge und erleichtert die rückwärtige Navigation durch die Seiten</td>\n          <td>MUSS</td>\n        </tr>\n        <tr>\n          <td><code>first</code></td>\n          <td>Navigiert zur ersten Seite der Suchergebnisse und ermöglicht eine schnelle Navigation zum Anfang der Ergebnisliste</td>\n          <td>KANN</td>\n        </tr>\n        <tr>\n          <td><code>last</code></td>\n          <td>Navigiert zur letzten Seite der Suchergebnisse, um ans Ende der Ergebnisliste zu gelangen</td>\n          <td>KANN</td>\n        </tr>\n      </tbody>\n    </table>\n    <figcaption><strong>Tabelle:</strong> Seitennavigationslinks für Paginierungsfunktion</figcaption>\n  </figure>\n  <br/>\n  Jeder Link MUSS eine URL enthalten, um das entsprechende Ergebnis-Set abzurufen, das dynamisch basierend auf der Suchanfrage und den Paginierungsparametern wie <i>_count</i> und <i>_offset</i> generiert wird. Diese Links vereinfachen die Navigation eines Client-Systems durch große Suchergebnisse, indem sie die Notwendigkeit manueller Anpassungen der Abfrageparameter ausräumt.",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.318707",
+        "modified": "2025-05-27T09:33:08.784484",
+        "date": "2025-11-18T12:35:25.442413",
+        "content_hash": "0daf98b0db301b7fb1f14cd38a268630d1966504db8e51905b933d21e745aac5",
+        "path": "query-api-paging.html",
         "release": "1.3.2"
     },
     {
@@ -740,37 +860,21 @@
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI00242W49",
-        "title": "Unterstützung von _include:iterate",
+        "key": "IG-TI38467S3Q",
+        "title": "Bereitstellung des /metadata-Endpunkts durch FHIR Data Service",
         "actor": [
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS alle weiter referenzierten Ressourcen gemäß der angegebenen Referenzpfade iterativ in die Antwort aufnehmen, wenn <i>_include:iterate</i> verwendet wird.",
-        "conformance": "SHALL",
-        "created": "2025-03-07T10:35:21.321969",
-        "modified": "2025-03-07T10:35:21.321972",
-        "date": "2025-11-18T12:35:25.434190",
-        "content_hash": "f522bc728256316ca272448b38e7a89fe8a3545d425458d17282b9448a1f5a29",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI06008V22",
-        "title": "Abruf einer spezifischen Ressourcenversion über die FHIR API",
-        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -782,37 +886,45 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS das Lesen spezifischer Versionen von FHIR-Instanzen gemäß der HL7 FHIR Spezifikation [FHIR Version Read] implementieren. Dabei MUSS eine angeforderte Version einer Instanz über eine GET-Anfrage der Form <i>[base]/[resourceType]/[id]/_history/[versionId]</i> bereitgestellt werden. Die Antwort MUSS die angeforderte Version der Instanz enthalten, einschließlich der zugehörigen Metadaten (<i>meta.versionId</i>, <i>meta.lastUpdated</i>).",
+        "text": "Ein FHIR Data Service MUSS an dem Endpunkt /metadata gemäß der [Capabilities-Interaktion] ein Capability Statement Typ <i>kind = instance</i> bereitstellen. Dieses Capability Statement muss im Element <i>software</i> den Namen und die Versionsnummer der eingesetzten Software angeben. Dieses Capability Statement muss sämtliche Anforderungen an den FHIR Data Service aus dem Capability Statement vom Typ <i>kind = requirements</i> der zugrundeliegenden Spezifikation erfüllen.",
         "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.422356",
-        "modified": "2025-05-27T09:33:08.791114",
-        "date": "2025-11-18T11:03:10.874162",
-        "content_hash": "1cb3d53aecd5dd7f465cb20b5252ace66b0be593f7df850e0096c8d1f5470193",
+        "created": "2025-05-07T20:31:11.882185",
+        "modified": "2025-05-23T10:04:38.887401",
+        "date": "2025-11-18T11:03:10.877236",
+        "content_hash": "0308dff95de1faceec40d989ccb9736636a6b84eae41128ebc20f5a54f589d5f",
         "path": "general-principles.html",
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI23978E7A",
-        "title": "Repräsentation gelöschter Versionen in Bundle.entry.request und Bundle.entry.response innerhalb eines _history-Bundles",
+        "key": "IG-TI40876FQM",
+        "title": "Standardpräfix für Vergleiche",
         "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
             "EPA-Medication-Service"
         ],
         "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ]
         },
-        "version": 1,
+        "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gelöschte Versionen einer FHIR-Instanz dokumentieren.\n <br/><br/>\n Für gelöschte Versionen gilt:\n <ul>\n <li>Bei gelöschten Ressourceinstanzen wird das Element <i>Bundle.entry.resource</i> nicht ausgegeben.</li>\n <li><i>Bundle.entry.request.method</i> hat für gelöschte Ressourceinstanzen den Wert <i>DELETE</i>.</li>\n <li><i>Bundle.entry.request.url</i> enthält die REST-äquivalente Ressourcen-URL relativ zum FHIR-Endpunkt, <i>ResourceType/{id}</i>.</li>\n <li><i>Bundle.entry.response.status</i> enthält den Wert <i>200 OK</i>.</li>\n <li><i>Bundle.entry.response.lastModified</i> enthält das Löschdatum der Ressourceinstanz.</li>\n </ul>",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS standardmäßig das Präfix <i>eq</i> verwenden, falls kein Vergleichspräfix angegeben wird.",
         "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.423477",
-        "modified": "2025-12-02T13:01:10.401620",
-        "date": "2025-12-02T13:01:10.401623",
-        "content_hash": "5584bbbdac39b623b3caa3594ac0b170c65241924ce47f8675c3247413574d4e",
-        "path": "general-principles.html",
+        "created": "2025-02-26T10:59:21.315278",
+        "modified": "2025-02-26T13:55:56.513560",
+        "date": "2025-11-18T12:35:25.434967",
+        "content_hash": "5891bdad8bc3f9e2e8b1eb62c2288476ad5ed16422d7716b618f3df8add27eb8",
+        "path": "query-api-search.html",
         "release": "1.3.2"
     },
     {
@@ -852,8 +964,8 @@
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI72725KAW",
-        "title": "Format für versionierte Referenzen",
+        "key": "IG-TI44024J5L",
+        "title": "Eindeutigkeit der Resource.meta.versionId pro FHIR-Instanz",
         "actor": [
             "EPA-Medication-Service",
             "EPA-Patient-Service"
@@ -870,91 +982,23 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS das Format für versionierte Referenzen verwenden, das den Ressourcentyp, die <i>Resource.id</i> und die <i>Meta.versionId</i> beinhaltet: <i>[ResourceType]/[id]/_history/[versionId]</i>.",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass die <i>Resource.meta.versionId</i> innerhalb einer spezifischen FHIR-Instanz eindeutig ist. Die Versionsnummer darf nicht zurückgesetzt oder übersprungen werden. Jede Instanz besitzt eine eigene fortlaufende Versionsnummer, die bei jeder Änderung der FHIR-Instanz aufsteigt.",
         "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.423868",
-        "modified": "2025-03-14T10:33:08.469446",
-        "date": "2025-11-18T11:03:10.876502",
-        "content_hash": "2c80aab248c22fe521cb6dc487065a99d9503473cfee2a943d2ab71bf86ee64d",
+        "created": "2025-03-10T12:54:11.421680",
+        "modified": "2025-03-12T12:47:19.482104",
+        "date": "2025-11-18T11:03:10.872838",
+        "content_hash": "30ea9e0df96c5d3f2a8baca39669dfee1a23fa14efc5c8d945a05c1bc64b0ede",
         "path": "general-principles.html",
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI11342RSA",
-        "title": "Behandlung des Löschvorgangs als versioniertes Ereignis",
+        "key": "IG-TI44886ZXA",
+        "title": "Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR",
         "actor": [
             "EPA-Medication-Service"
         ],
         "test_procedures": {
             "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS das Löschen einer Instanz als ein Ereignis im Lebenszyklus der Instanz behandeln, indem eine neue Version erstellt wird, die den gelöschten Zustand widerspiegelt.",
-        "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.422786",
-        "modified": "2025-03-10T12:54:11.422787",
-        "date": "2025-11-18T11:03:10.874817",
-        "content_hash": "03b8e6aa702891de98322fcb2af281f2e9ddfa6d728d91b4c7441696ab093043",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI31988JEY",
-        "title": "Unterstützung der Präzision bei numerischen und datumsbasierten Suchparametern",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS numerische und datumsbasierte Suchparameter so verarbeiten, dass die Suchwerte entsprechend ihrer Präzision interpretiert werden. Beispielsweise muss eine Suche nach 2025-02-11 den Bereich von 2025-02-11T00:00:00 (inklusive) bis 2025-02-12T00:00:00 (exklusive) abdecken.",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.315231",
-        "modified": "2025-02-26T13:55:56.513515",
-        "date": "2025-11-18T12:35:25.434510",
-        "content_hash": "e77343f82a5b7370a34c36dcee2cf2d39930fc895a4939d2310086cc5640e0eb",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI95143N18",
-        "title": "Formatierung von Referenzen im fullUrl-Feld",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
                 "Produkttest"
             ]
         },
@@ -962,151 +1006,79 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen - wie <i>literal</i>-Referenzen in der Form [Resourcetyp]/[ResourceId] - nicht im Feld <i>Bundle.entry.fullUrl</i> verwendet werden. Alle Verweise auf Ressourcen innerhalb des FHIR Data Service MÜSSEN entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.",
+        "text": "Der FHIR Data Servic MUSS die <i>_revinclude</i>-Suche gemäß der [FHIR Search Revinclude] unterstützen, sodass Ressourcen, die auf die gesuchten Ressourcen verweisen, innerhalb der Suchergebnisse automatisch mit einbezogen werden können.",
         "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.315207",
-        "modified": "2025-05-27T09:33:08.776699",
-        "date": "2025-11-18T12:35:25.433131",
-        "content_hash": "e60a5affa44ae057d5e590428427b04e497fb236fb95a7201f3d780201019bdd",
+        "created": "2025-02-26T10:59:21.315223",
+        "modified": "2025-05-27T09:33:08.776875",
+        "date": "2025-11-18T12:35:25.433474",
+        "content_hash": "c56259af79bb912d57961a71ed851c5f02311a675d79400179e263f6c7959af5",
         "path": "query-api-search.html",
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI87465NYV",
-        "title": "Unterstützung der umgekehrten verketteten Parametersuche",
+        "key": "IG-TI45064TNU",
+        "title": "Auflösen von versionierten Referenzen in Bundles",
         "actor": [
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS die umgekehrte verkettete Parametersuche gemäß der Spezifikation unter [FHIR Reverse Chaining] implementieren und unterstützen.",
-        "conformance": "SHALL",
-        "created": "2025-03-07T08:14:24.654983",
-        "modified": "2025-03-28T11:10:43.517011",
-        "date": "2025-11-18T12:35:25.436248",
-        "content_hash": "828ee20983260a11030b833b8ed93e117ce87c40dd845a02f434499364ddcdac",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI85276Y4V",
-        "title": "Vergleichspräfixe für Datumswerte",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für Datumswerte (date, Range, Period) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>, <i>ge</i>, <i>le</i>, <i>sa</i>, <i>eb</i>",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.315356",
-        "modified": "2025-02-26T13:55:56.513636",
-        "date": "2025-11-18T12:35:25.435490",
-        "content_hash": "bfeb5066760c4bcbba566fc27f3dc2af9c0e9efed17026cd652e8d73f9dca98d",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI07252NTV",
-        "title": "Unterstützung URL-Parameter für Paginierungsfunktion",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-paging.md",
-        "text": "Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und in seiner Antwort Navigationsinformationen in Ergebnisseiten zur Verfügung stellen. Um die Paginierungsfunktion zu implementieren, werden die URL-Parameter <code>_count</code> und <code>_offset</code> verwendet. Der Parameter <code>_count</code> bestimmt die Anzahl der Einträge pro <i>Seite</i> (page), während <code>_offset</code> das Startelement der Seite angibt. Zusätzlich entscheidet der <code>_total</code>-Parameter, ob die Gesamtanzahl der Einträge in der Antwort enthalten sein soll.\n <br/><br/>\n <figure>\n <table style=\"width: 100%\">\n <thead>\n <tr>\n <th>URL-Parameter</th>\n <th>Beschreibung</th>\n <th>Standardwert</th>\n </tr>\n </thead>\n <tbody>\n <tr>\n <td><code>_count</code></td>\n <td>Das Client-System KANN die maximale Anzahl von Elementen festlegen, die auf einer <i>Seite</i> (page) der Antwort enthalten sein soll. Das bedeutet, dass der FHIR Data Service die Ergebnismenge auf diese maximal angegebene Anzahl beschränkt.</td>\n <td>25</td>\n </tr>\n <tr>\n <td><code>_offset</code></td>\n <td>Dieser Parameter gibt den (zero-based) Offset des ersten zurückgegebenen Elements in der Sammlung an.</td>\n <td>0</td>\n </tr>\n <tr>\n <td><code>_total</code></td>\n <td>Dieser Parameter steuert, ob und wie der FHIR Data Service die Gesamtanzahl der Suchergebnisse zurückgibt. Folgende Werte können eingestellt werden: <code>none</code>, <code>estimate</code>, <code>accurate</code>.</td>\n <td>-</td>\n </tr>\n </tbody>\n </table>\n <figcaption><strong>Tabelle:</strong> URL-Parameter für Paginierungsfunktion</figcaption>\n </figure>\n <br/>\n Werte für <code>_total</code>:\n <br/><br/>\n <ul>\n <li><code>none</code> (Standardwert): Die Gesamtanzahl der Suchtreffer wird nicht angezeigt.</li>\n <li><code>estimate</code>: Die ungefähre Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n <li><code>accurate</code>: Die genaue Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n </ul>",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.318535",
-        "modified": "2025-02-26T13:55:56.516495",
-        "date": "2026-02-23T10:27:58.000594",
-        "content_hash": "ddc91e95a7f135e8b944d81d2b83687882ed46a58d57164399b5cf4fa560be29",
-        "path": "query-api-paging.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI27170FRR",
-        "title": "Sortierung der Suchergebnisse durch _sort",
-        "actor": [
-            "EPA-CS-Ombudsstelle",
-            "EPA-FdV",
-            "EPA-PS"
-        ],
-        "test_procedures": {
-            "EPA-CS-Ombudsstelle": [
-                "Konformitätsbestätigung"
-            ],
-            "EPA-FdV": [
-                "Produkttest"
-            ],
-            "EPA-PS": [
-                "Konformitätsbestätigung"
-            ]
-        },
-        "version": 3,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Das Client-System KANN die Reihenfolge der zurückgegebenen Ergebnisse durch den Parameter <i>_sort</i> angeben, der eine durch Kommas getrennte Liste von Sortierregeln in Prioritätsreihenfolge enthalten kann.",
-        "conformance": "MAY",
-        "created": "2025-02-26T10:59:21.315396",
-        "modified": "2025-05-27T09:33:08.778111",
-        "date": "2025-11-18T12:35:25.436442",
-        "content_hash": "bf587cd5c2879b4a0cc659c2b6d08d2d7a62f2c6a2d0b4206eb8953f9fad280e",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI96963Y60",
-        "title": "Unterstützung des Accept Header für Formatwahl im FHIR Data Service",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
-            "EPA-Audit-Service": [
+            "EPA-Medication-Service": [
                 "Produkttest"
             ],
-            "EPA-MHD-Service": [
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass versionierte Referenzen in Bundles entsprechend den Vorgaben in [FHIR Bundle References] auflösbar sind.",
+        "conformance": "SHALL",
+        "created": "2025-07-22T09:44:40.103842",
+        "modified": "2025-07-22T09:44:40.103865",
+        "date": "2025-11-18T11:03:10.876714",
+        "content_hash": "6ead9f78afeb96576f40aa4db7bfb0e66f711b57d29698d336ed8cda0ea697da",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI47719G19",
+        "title": "Umsetzung der Versionierte Referenzen gemäß FHIR",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
                 "Produkttest"
             ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS versionierte Referenzen nach [FHIR References and Versions] implementieren.",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.423602",
+        "modified": "2025-03-12T12:47:19.483901",
+        "date": "2025-11-18T11:03:10.875984",
+        "content_hash": "405da05f6d1ffc830c03bdf6022f2ba8c72b6116a190b168011b6a540aac0adb",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI52070SA6",
+        "title": "Bundle.entry.request und Bundle.entry.response innerhalb des _history Bundles",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -1117,241 +1089,13 @@
         "version": 1,
         "release_status": "STABLE",
         "status": "ACTIVE",
-        "source": "input/pagecontent/fhir-format.md",
-        "text": "Der FHIR Data Service MUSS den <i>Accept</i> Header in eingehenden HTTP-Anfragen auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i> Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem Format zurückgeben, das von den beiden Formaten als bevorzugte Option angegeben wurde.",
-        "conformance": "SHALL",
-        "created": "2025-03-06T13:30:46.537848",
-        "modified": "2025-10-29T09:03:51.296778",
-        "date": "2025-11-18T11:03:10.856787",
-        "content_hash": "0527f0e0d38f6dd7c631ae456929d9c1c829cbbc4407106fb08f7ed123f0a020",
-        "path": "fhir-format.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI06069XBQ",
-        "title": "Aufsteigende Sequenz der Resource.meta.versionId",
-        "actor": [
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass die <i>versionId</i> einer FHIR-Instanz bei jeder neuen Version um genau 1 erhöht wird. Die erste Version einer FHIR-Instanz erhält die <i>versionId</i> 1, die nächste Version 2, und so weiter. Beispiel: 1 → 2 → 3 →",
+        "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> für jede Version einer FHIR-Instanz die zugehörigen <i>entry.request</i>- und <i>entry.response</i>-Elemente bereitstellen.\n <br/><br/>\n <ul>\n <li>\n <i>Bundle.entry.request.method</i> gibt die HTTP-äquivalente Aktion an, die zur Entstehung der jeweiligen Version der Ressourceinstanz geführt hat. <i>POST</i> für das Anlegen, <i>PUT</i> für eine Aktualisierung, <i>DELETE</i> für das Löschen der Ressourceinstanz.\n </li>\n <li>\n <i>Bundle.entry.request.url</i> enthält die äquivalente Ressourcen-URL relativ zum FHIR-Endpunkt, aus der die versionsspezifische Abruf-URL <i>ResourceType/{id}/_history/{versionId}</i> abgeleitet werden kann.\n </li>\n <li>\n <i>Bundle.entry.response.status</i> enthält den HTTP-ähnlichen Status der internen Verarbeitung (z. B. <i>201 Created</i> oder <i>200 OK</i>).\n </li>\n <li>\n <i>Bundle.entry.response.lastModified</i> gibt das Datum und die Uhrzeit der letzten Änderung der jeweiligen Version der Ressourceinstanz an und stimmt mit <i>meta.lastUpdated</i> überein, sofern <i>Bundle.entry.resource</i> vorhanden ist.\n </li>\n <li>\n <i>Bundle.entry.response.location</i> enthält die vollständige versionsspezifische Ressourcen-URL (z. B. <i>ResourceType/{id}/_history/{versionId}</i>), sofern die entsprechende Version der Ressourceinstanz einzeln abrufbar ist.\n </li>\n </ul>",
         "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.421523",
-        "modified": "2025-03-12T12:47:19.482020",
-        "date": "2025-11-18T11:03:10.872638",
-        "content_hash": "dfd974c7382e205f82e7e483f3fa24af1305a74ab74270142ac4702f40120563",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI08134XQ4",
-        "title": "Verarbeitung von referenzierten Ressourcen in Include-Suchen",
-        "actor": [
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS für jede zurückgegebene Ressource die zugehörigen Ressourcen gemäß den Verknüpfungskriterien ermitteln und mit <i>entry.search.mode = \"include\"</i> in die Antwort aufnehmen. Falls eine referenzierte Ressource nicht existiert, nicht gefunden wird oder nicht abrufbar ist, darf kein Fehler zurückgegeben werden.",
-        "conformance": "SHALL",
-        "created": "2025-03-07T10:54:47.698334",
-        "modified": "2025-03-07T10:54:47.698336",
-        "date": "2025-11-18T12:35:25.433666",
-        "content_hash": "c3b750b8d7ce9f6a139874b6aaf8b6794862bd51c8133e0e7420a2c4c4512217",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI16747WFN",
-        "title": "Implementierung der _history-Abfrage gemäß HL7 FHIR Spezifikation",
-        "actor": [
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS die <i>_history</i>-Abfrage gemäß der HL7 FHIR Spezifikation [FHIR History Interaction] implementieren, um die Versionshistorie einer FHIR-Instanz abrufbar zu machen.",
-        "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.421747",
-        "modified": "2025-05-27T09:33:08.790570",
-        "date": "2025-11-18T11:03:10.873019",
-        "content_hash": "678a55a83c4b0980b45eea128ead70ef81884a0f8fce8e7013da95aeb532335a",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI66054HX2",
-        "title": "Kennzeichnung gelöschter Instanzen statt physischer Entfernung",
-        "actor": [
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS eine als gelöscht markierte Instanz weiterhin in der Versionshistorie speichern, anstatt sie physisch zu entfernen.",
-        "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.422849",
-        "modified": "2025-03-10T12:54:11.422850",
-        "date": "2025-11-18T11:03:10.874943",
-        "content_hash": "5b3c10756191c35aff6e59bb1b2f472e980636285119314555929d0ccee8e81b",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI40876FQM",
-        "title": "Standardpräfix für Vergleiche",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS standardmäßig das Präfix <i>eq</i> verwenden, falls kein Vergleichspräfix angegeben wird.",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.315278",
-        "modified": "2025-02-26T13:55:56.513560",
-        "date": "2025-11-18T12:35:25.434967",
-        "content_hash": "5891bdad8bc3f9e2e8b1eb62c2288476ad5ed16422d7716b618f3df8add27eb8",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI94882PRF",
-        "title": "Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung",
-        "actor": [
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS auf den Zeitpunkt der Aktualisierung gesetzt werden.",
-        "conformance": "SHALL",
-        "created": "2025-03-10T17:01:48.083983",
-        "modified": "2025-03-12T12:47:19.481709",
-        "date": "2025-11-18T11:03:10.872050",
-        "content_hash": "b30f3869c3b1d34d18d4657c70025a64faf7f84f6f9c4f8a3fa6db83397157f8",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI64797XGV",
-        "title": "Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der Standard HL7 FHIR Spezifikation als absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich, dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.315189",
-        "modified": "2025-03-12T12:47:19.476134",
-        "date": "2025-11-18T12:35:25.432582",
-        "content_hash": "03b0e8a86490a8e16ea6d71b9a1669a0261726255ee8ba7b8581532b3b456250",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI59347HCY",
-        "title": "Initiale Versionierung neu erstellter oder hinzugefügter FHIR-Instanzen",
-        "actor": [
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS jede neu erstellte oder neu hinzugefügte FHIR-Instanz mit einer <i>Meta.versionId</i> und einem <i>Meta.lastUpdated</i> versehen, um die Versionierung sicherzustellen.",
-        "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.421232",
-        "modified": "2025-03-12T12:47:19.481614",
-        "date": "2025-11-18T11:03:10.871862",
-        "content_hash": "c5e2bb238b8a6c7c2010ad43dafe6861b04785016f604ca6edb4a1d74fa1e999",
+        "created": "2025-03-10T12:54:11.422187",
+        "modified": "2025-12-02T13:01:10.399502",
+        "date": "2025-12-02T13:01:10.399508",
+        "content_hash": "4d8cdedc77d705e7395316c64d329b286d7d43efe148dbdd8d72e06c934b166b",
         "path": "general-principles.html",
         "release": "1.3.2"
     },
@@ -1412,340 +1156,8 @@
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI97020UTC",
-        "title": "Unterstützung des :iterate-Modifikators",
-        "actor": [
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS den <i>:iterate</i>-Modifikator für <i>_include</i> und <i>_revinclude</i> unterstützen, um rekursive Einschlussabfragen gemäß der FHIR-Spezifikation zu ermöglichen.",
-        "conformance": "SHALL",
-        "created": "2025-03-07T10:29:08.689615",
-        "modified": "2025-03-07T10:35:21.321838",
-        "date": "2025-11-18T12:35:25.434024",
-        "content_hash": "cdf7b5975219fc8506cdded690f3e4e07210aa6d5681d70815e42d053ed34381",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI37232GDE",
-        "title": "Unterstützung Seitennavigationslinks für Paginierungsfunktion",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 2,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-paging.md",
-        "text": "Der FHIR Data Service MUSS in einem FHIR Search Set Bundle das FHIR-Element <code>link</code> belegen, welches eine Liste von Link-Elementen beinhaltet, welche jeweils einem spezifischen Navigationszweck innerhalb des FHIR Bundles dienen.<br/><br/>Die folgenden Beziehungen werden gemäß den [Link Relation Types] bereitgestellt.\n  <br/><br/>\n  <figure>\n    <table style=\"width: 100%\">\n      <thead>\n        <tr>\n          <th>Link Relation</th>\n          <th>Beschreibung</th>\n          <th>Anforderung</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td><code>self</code></td>\n          <td>Ein Link zur aktuellen Seite der Ergebnisse, der die Abfrage repräsentiert, die diese Ergebnisse generiert hat</td>\n          <td>MUSS</td>\n        </tr>\n        <tr>\n          <td><code>next</code></td>\n          <td>Wird verwendet, um zur nächsten Seite der Ergebnisse zu navigieren, entsprechend der festgelegten Paginierung</td>\n          <td>MUSS</td>\n        </tr>\n        <tr>\n          <td><code>previous</code></td>\n          <td>Ermöglicht die Rückkehr zur vorherigen Ergebnismenge und erleichtert die rückwärtige Navigation durch die Seiten</td>\n          <td>MUSS</td>\n        </tr>\n        <tr>\n          <td><code>first</code></td>\n          <td>Navigiert zur ersten Seite der Suchergebnisse und ermöglicht eine schnelle Navigation zum Anfang der Ergebnisliste</td>\n          <td>KANN</td>\n        </tr>\n        <tr>\n          <td><code>last</code></td>\n          <td>Navigiert zur letzten Seite der Suchergebnisse, um ans Ende der Ergebnisliste zu gelangen</td>\n          <td>KANN</td>\n        </tr>\n      </tbody>\n    </table>\n    <figcaption><strong>Tabelle:</strong> Seitennavigationslinks für Paginierungsfunktion</figcaption>\n  </figure>\n  <br/>\n  Jeder Link MUSS eine URL enthalten, um das entsprechende Ergebnis-Set abzurufen, das dynamisch basierend auf der Suchanfrage und den Paginierungsparametern wie <i>_count</i> und <i>_offset</i> generiert wird. Diese Links vereinfachen die Navigation eines Client-Systems durch große Suchergebnisse, indem sie die Notwendigkeit manueller Anpassungen der Abfrageparameter ausräumt.",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.318707",
-        "modified": "2025-05-27T09:33:08.784484",
-        "date": "2025-11-18T12:35:25.442413",
-        "content_hash": "0daf98b0db301b7fb1f14cd38a268630d1966504db8e51905b933d21e745aac5",
-        "path": "query-api-paging.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI09377BM6",
-        "title": "Verarbeitung für Must Support",
-        "actor": [
-            "EPA-FdV",
-            "EPA-PS"
-        ],
-        "test_procedures": {
-            "EPA-FdV": [
-                "Produkttest"
-            ],
-            "EPA-PS": [
-                "Konformitätsbestätigung"
-            ]
-        },
-        "version": 2,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Das Client-System, das lesend ein FHIR-Profil des FHIR Data Service implementiert, MUSS in der Lage sein, alle Must-Support-Elemente in FHIR-Instanzen zu verarbeiten. Das Client-System MUSS auch Must-Support-Elemente ohne Wert verarbeiten können, ohne mit einem Fehler abzubrechen oder die Anwendung abstürzen zu lassen.",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.321306",
-        "modified": "2025-05-27T09:33:08.789868",
-        "date": "2025-11-18T11:03:10.871391",
-        "content_hash": "7c20974774525900465f04a892b07afb7b94ccfb30d9d9ddd2abfc4b54a8a443",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI78112H2T",
-        "title": "Verwendung relativer URLs bei der Paginierung von FHIR Bundles",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 3,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-paging.md",
-        "text": "Der FHIR Data Service KANN beim Paginieren von FHIR Bundles das Feld <i>Bundle.link.url</i> mit relativen URLs befüllen, sofern diese sich auf die Basis-URL beziehen.",
-        "conformance": "MAY",
-        "created": "2025-02-26T10:59:21.318715",
-        "modified": "2025-05-27T09:33:08.784708",
-        "date": "2025-11-18T12:35:25.442843",
-        "content_hash": "387a04b6a69bd4d42e2d0a8cdcce5eca72608767c85e2221450ea1bac4a54a47",
-        "path": "query-api-paging.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI60515LXY",
-        "title": "Abruf der Versionshistorie aller Instanzen eines ResourceType",
-        "actor": [
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie aller Instanzen eines bestimmten Ressourcentyps über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/_history</i>.",
-        "conformance": "SHALL",
-        "created": "2025-03-14T10:33:08.467442",
-        "modified": "2025-03-14T10:33:08.467447",
-        "date": "2025-11-18T11:03:10.873189",
-        "content_hash": "29cb2b6bf8dc38a837f517e5f89d32e7251d970ceae101d89c9b75c0f6982132",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI29386S9L",
-        "title": "UUID für Resource.id",
-        "actor": [
-            "EPA-Audit-Service",
-            "EPA-MHD-Service",
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Audit-Service": [
-                "Produkttest"
-            ],
-            "EPA-MHD-Service": [
-                "Produkttest"
-            ],
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 2,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS ausschließlich zeitbasierte Universally Unique IDentifier (UUID) gemäß [RFC9562] für logische IDs (d.h. für das FHIR-Element <i>Resource.id</i>) verwenden.",
-        "conformance": "SHALL",
-        "created": "2025-02-26T10:59:21.321291",
-        "modified": "2025-05-06T10:10:09.639137",
-        "date": "2025-11-18T11:03:10.870884",
-        "content_hash": "a60bb7cdb03c45264b091adae5aa325f15284a64a05dcf7d8bd4eab58856f2fc",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI06315TQ1",
-        "title": "Unterstützung verketteter Suchparameter",
-        "actor": [
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS die Suche von verketteten Parametern gemäß der Spezifikation unter [FHIR Chained parameters] implementieren und unterstützen.",
-        "conformance": "SHALL",
-        "created": "2025-03-07T08:14:24.654914",
-        "modified": "2025-03-28T11:10:43.516953",
-        "date": "2025-11-18T12:35:25.436128",
-        "content_hash": "dcd99dcb175f1d65a9d52bb97a9ab4a1d4f3690b5fbcfd68fefeac527cf7e914",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI92941JBA",
-        "title": "Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite",
-        "actor": [
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass Ressourcen, die durch <i>_include</i> oder <i>_revinclude</i> in das Suchergebnis aufgenommen werden, stets auf derselben Ergebnisseite wie die zugehörigen Suchtreffer (<i>entry.search.mode = \"match\"</i>) enthalten sind.",
-        "conformance": "SHALL",
-        "created": "2025-03-07T11:05:29.317204",
-        "modified": "2025-03-07T11:05:29.317210",
-        "date": "2025-11-18T12:35:25.433853",
-        "content_hash": "10e268a06a5e654f205fde6e12e25940687d637015090807eb475581973d22fd",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI17755AMW",
-        "title": "Unterstützung von _revinclude:iterate",
-        "actor": [
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS alle iterativ verknüpften rückreferenzierenden Ressourcen zurückgeben, wenn <i>_revinclude:iterate</i> verwendet wird.",
-        "conformance": "SHALL",
-        "created": "2025-03-07T10:35:21.322061",
-        "modified": "2025-03-07T10:35:21.322062",
-        "date": "2025-11-18T12:35:25.434333",
-        "content_hash": "908a4e10c1ee0c67cfb8a0546e203ada7dc9982a914f3024756430c36111ddd1",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI02423P7B",
-        "title": "Referenzierung einer spezifischen Version einer FHIR-Instanz",
-        "actor": [
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass eine FHIR-Instanz eine andere Instanz nicht nur über Ressourcentyp und ID, sondern auch mit einer spezifischen <i>Meta.versionId</i> referenzieren kann.",
-        "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.423766",
-        "modified": "2025-05-27T09:33:08.792200",
-        "date": "2025-11-18T11:03:10.876301",
-        "content_hash": "e476ec53bfdb0614a01f8d1fe124ec41b5d901bfaad3c793e9e85c97e73f875e",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI47719G19",
-        "title": "Umsetzung der Versionierte Referenzen gemäß FHIR",
-        "actor": [
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS versionierte Referenzen nach [FHIR References and Versions] implementieren.",
-        "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.423602",
-        "modified": "2025-03-12T12:47:19.483901",
-        "date": "2025-11-18T11:03:10.875984",
-        "content_hash": "405da05f6d1ffc830c03bdf6022f2ba8c72b6116a190b168011b6a540aac0adb",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI36210TD1",
-        "title": "HTTP 410 Gone für den Abruf einer gelöschten FHIR-Instanz",
-        "actor": [
-            "EPA-Medication-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 2,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine gelöschte FHIR-Instanz oder eine gelöschte Version den HTTP Status Code <i>410 (Gone)</i> zurückgeben.\n <br/><br/>\n Dies gilt für:\n <ul>\n <li><i>[ResourceType]/[id]</i> – wenn die gesamte FHIR-Instanz gelöscht wurde</li>\n <li><i>[ResourceType]/[id]/_history/[versionId]</i> – wenn eine spezifische Version der FHIR-Instanz gelöscht wurde</li>\n </ul>\n <br/>\n Die Response muss eine <i>OperationOutcome</i>-Ressource enthalten mit folgenden Eigenschaften:\n <ul>\n <li><i>OperationOutcome.issue.code</i> ist auf <i>processing</i> gesetzt</li>\n <li><i>OperationOutcome.issue.details</i> ist auf <i>MSG_DELETED</i> gesetzt</li>\n <li><i>OperationOutcome.issue.diagnostics</i> enthält eine Meldung, dass die Instanz gelöscht wurde</li>\n </ul>",
-        "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.423196",
-        "modified": "2025-09-08T11:58:42.118690",
-        "date": "2025-11-18T11:03:10.875374",
-        "content_hash": "1ebfa88486894d8e3d8b81f1504e2c3894390aaa2bc09fded496ea82207986f3",
-        "path": "general-principles.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI29911V07",
-        "title": "Konsistente Referenzierung innerhalb eines Bundles",
+        "key": "IG-TI57083QMG",
+        "title": "Unterstützung von XML Content Type für FHIR-Data-Schnittstellen",
         "actor": [
             "EPA-Audit-Service",
             "EPA-MHD-Service",
@@ -1769,42 +1181,14 @@
         "version": 0,
         "release_status": "STABLE",
         "status": "ACTIVE",
-        "source": "input/pagecontent/query-api-search.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass, wenn im <i>Bundle.entry.fullUrl</i> eine UUID-basierte URI (<i>urn:uuid</i>) verwendet wird, alle Referenzen innerhalb desselben Bundles ebenfalls in der Form <i>urn:uuid:[UUID]</i> angegeben werden. Eine Mischung aus absoluten URLs, UUID-basierten URIs und relativen Referenzen innerhalb eines Bundles darf nicht verwendet werden.",
+        "source": "input/pagecontent/fhir-format.md",
+        "text": "Der FHIR Data Service MUSS für Anfragenachrichten und Antwortnachrichten an den Schnittstellen den Content Type <code>application/fhir+xml</code> unterstützen.",
         "conformance": "SHALL",
-        "created": "2025-02-26T12:59:25.679584",
-        "modified": "2025-03-12T12:47:19.476263",
-        "date": "2025-11-18T12:35:25.432870",
-        "content_hash": "1cb629d6c7f0cd71a019e419aa20494e63032ca54ccaf00f99c4581b9d009c64",
-        "path": "query-api-search.html",
-        "release": "1.3.2"
-    },
-    {
-        "key": "IG-TI78384PEX",
-        "title": "Abruf der Versionshistorie einer FHIR-Instanz",
-        "actor": [
-            "EPA-Medication-Service",
-            "EPA-Patient-Service"
-        ],
-        "test_procedures": {
-            "EPA-Medication-Service": [
-                "Produkttest"
-            ],
-            "EPA-Patient-Service": [
-                "Produkttest"
-            ]
-        },
-        "version": 0,
-        "release_status": "STABLE",
-        "status": "ACTIVE",
-        "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie einer FHIR-Instanz über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/[id]/_history</i>.",
-        "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.421837",
-        "modified": "2025-03-17T14:32:05.767307",
-        "date": "2025-11-18T11:03:10.873378",
-        "content_hash": "5faaaaab304240a71aecb909ec4698f6b4bf2b9baf704036ec96a68f15bca48a",
-        "path": "general-principles.html",
+        "created": "2025-03-06T13:30:46.537770",
+        "modified": "2025-03-12T12:47:19.474335",
+        "date": "2025-11-18T11:03:10.856461",
+        "content_hash": "ad425f73bf52134aa50d6d32a0189b475c1bd007a081eb82f9b4be0a7eb5de4f",
+        "path": "fhir-format.html",
         "release": "1.3.2"
     },
     {
@@ -1844,8 +1228,160 @@
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI19904KM0",
-        "title": " Keine Überschreibung des Content Type Header durch den _format-Parameter bei POST-Nachrichten",
+        "key": "IG-TI59347HCY",
+        "title": "Initiale Versionierung neu erstellter oder hinzugefügter FHIR-Instanzen",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS jede neu erstellte oder neu hinzugefügte FHIR-Instanz mit einer <i>Meta.versionId</i> und einem <i>Meta.lastUpdated</i> versehen, um die Versionierung sicherzustellen.",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.421232",
+        "modified": "2025-03-12T12:47:19.481614",
+        "date": "2025-11-18T11:03:10.871862",
+        "content_hash": "c5e2bb238b8a6c7c2010ad43dafe6861b04785016f604ca6edb4a1d74fa1e999",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI60515LXY",
+        "title": "Abruf der Versionshistorie aller Instanzen eines ResourceType",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie aller Instanzen eines bestimmten Ressourcentyps über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/_history</i>.",
+        "conformance": "SHALL",
+        "created": "2025-03-14T10:33:08.467442",
+        "modified": "2025-03-14T10:33:08.467447",
+        "date": "2025-11-18T11:03:10.873189",
+        "content_hash": "29cb2b6bf8dc38a837f517e5f89d32e7251d970ceae101d89c9b75c0f6982132",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI61163GRT",
+        "title": "Bereichsprüfung für Range- und Period-Typen",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS für Suchanfragen, die Range- oder Period-Werte betreffen, sicherstellen, dass obere und untere Grenzen des Bereichs korrekt berücksichtigt werden und mit den definierten Vergleichspräfixen korrekt verarbeitet werden.",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.315384",
+        "modified": "2025-02-26T13:55:56.513664",
+        "date": "2025-11-18T12:35:25.435981",
+        "content_hash": "d15613497fc83544ce7a18a5a6df3bf5937f4c1ca27dd4ffdf1b277619bb5eea",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI61673KWG",
+        "title": "Unterstützung versionierter Referenzen im FHIR Data Service",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS versionierte Referenzen unterstützen, um es zu ermöglichen, innerhalb einer FHIR-Instanz auf eine spezifische Version einer anderen Instanz zu verweisen.",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.423707",
+        "modified": "2025-03-12T12:47:19.483955",
+        "date": "2025-11-18T11:03:10.876136",
+        "content_hash": "4bca59c16431929b9bd7f646232762ddef756f7e8e7fbb2ae1bb5270c202b19d",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI62490PR0",
+        "title": "Standardformat für den FHIR Data Service",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 1,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/fhir-format.md",
+        "text": "Der FHIR Data Service MUSS, sofern die entsprechende Schnittstelle ein FHIR-Format zurückgibt, das Format <i>application/fhir+json</i> verwenden, wenn in der Anfragenachricht kein unterstütztes Format durch den <i>_format</i>-Parameter und\n <ul>\n <li>kein <i>Accept</i> Header,</li>\n <li>oder durch den <i>Accept</i> Header keine eindeutige Präferenz eines unterstützten Formats</li>\n </ul>\n angegeben ist.",
+        "conformance": "SHALL",
+        "created": "2025-03-06T13:30:46.537950",
+        "modified": "2025-11-14T09:34:47.788257",
+        "date": "2025-11-18T11:03:10.857519",
+        "content_hash": "a532db5c969b1f8317410a404b69f35d467cd54ad8dbc7d1508270261a116a6c",
+        "path": "fhir-format.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI62717R2P",
+        "title": "FHIR-Formatunterstützung XML",
         "actor": [
             "EPA-Audit-Service",
             "EPA-MHD-Service",
@@ -1870,18 +1406,54 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/fhir-format.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass der <i>_format</i>-Parameter den Content Type Header für den Formattyp des Bodys einer POST-Nachricht nicht überschreibt.",
+        "text": "Der FHIR Data Service MUSS das FHIR-Format in [FHIR XML] verarbeiten können.",
         "conformance": "SHALL",
-        "created": "2025-03-06T13:30:46.537971",
-        "modified": "2025-03-12T12:47:19.475060",
-        "date": "2025-11-18T11:03:10.857798",
-        "content_hash": "efea0d89fd3acd642867ee28557dec9a695d7a5cbc982b211c19429cc90eeb0e",
+        "created": "2025-03-06T13:30:46.537743",
+        "modified": "2025-03-12T12:47:19.474257",
+        "date": "2025-11-18T11:03:10.856224",
+        "content_hash": "0a9086fa476a0995626bb4c866662840b196e0aed2a527cf23bb58b9046f43ac",
         "path": "fhir-format.html",
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI16700VFJ",
-        "title": "Abruf früherer Versionen einer gelöschten Instanz",
+        "key": "IG-TI64797XGV",
+        "title": "Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der Standard HL7 FHIR Spezifikation als absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich, dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.315189",
+        "modified": "2025-03-12T12:47:19.476134",
+        "date": "2025-11-18T12:35:25.432582",
+        "content_hash": "03b0e8a86490a8e16ea6d71b9a1669a0261726255ee8ba7b8581532b3b456250",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI66054HX2",
+        "title": "Kennzeichnung gelöschter Instanzen statt physischer Entfernung",
         "actor": [
             "EPA-Medication-Service"
         ],
@@ -1894,12 +1466,12 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass frühere Versionen einer gelöschten Instanz weiterhin über versionsspezifische Endpunkte abrufbar sind.",
+        "text": "Der FHIR Data Service MUSS eine als gelöscht markierte Instanz weiterhin in der Versionshistorie speichern, anstatt sie physisch zu entfernen.",
         "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.422911",
-        "modified": "2025-03-10T12:54:11.422912",
-        "date": "2025-11-18T11:03:10.875069",
-        "content_hash": "512e171cfc57f0c6f80d3b9e5aea0ab04d826d617530a7a9e11ff252f206aff9",
+        "created": "2025-03-10T12:54:11.422849",
+        "modified": "2025-03-10T12:54:11.422850",
+        "date": "2025-11-18T11:03:10.874943",
+        "content_hash": "5b3c10756191c35aff6e59bb1b2f472e980636285119314555929d0ccee8e81b",
         "path": "general-principles.html",
         "release": "1.3.2"
     },
@@ -1932,8 +1504,8 @@
         "release": "1.3.2"
     },
     {
-        "key": "IG-TI06872YZP",
-        "title": "404 Not Found Antwort für nicht existierende spezifische Versionen",
+        "key": "IG-TI72725KAW",
+        "title": "Format für versionierte Referenzen",
         "actor": [
             "EPA-Medication-Service",
             "EPA-Patient-Service"
@@ -1950,12 +1522,440 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS bei einem HTTP GET-Request auf eine spezifische Version einer FHIR-Instanz den HTTP Status Code <i>404 (Not Found)</i> zurückgeben, wenn die angeforderte Version nicht existiert.\n <br/><br/>\n Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten mit folgenden Eigenschaften:\n <ul>\n <li><i>OperationOutcome.issue.code</i> auf <i>not-found</i> gesetzt.</li>\n <li><i>OperationOutcome.issue.diagnostics</i> mit einer Meldung, dass die angeforderte Version nicht existiert.</li>\n </ul>",
+        "text": "Der FHIR Data Service MUSS das Format für versionierte Referenzen verwenden, das den Ressourcentyp, die <i>Resource.id</i> und die <i>Meta.versionId</i> beinhaltet: <i>[ResourceType]/[id]/_history/[versionId]</i>.",
         "conformance": "SHALL",
-        "created": "2025-03-10T12:54:11.422662",
-        "modified": "2025-03-17T14:32:05.768193",
-        "date": "2025-11-18T11:03:10.874627",
-        "content_hash": "c5ba980dc0f109ed5e83a76ed110b5a224a08167628cc9ed44e73710ba89196a",
+        "created": "2025-03-10T12:54:11.423868",
+        "modified": "2025-03-14T10:33:08.469446",
+        "date": "2025-11-18T11:03:10.876502",
+        "content_hash": "2c80aab248c22fe521cb6dc487065a99d9503473cfee2a943d2ab71bf86ee64d",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI78112H2T",
+        "title": "Verwendung relativer URLs bei der Paginierung von FHIR Bundles",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 3,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-paging.md",
+        "text": "Der FHIR Data Service KANN beim Paginieren von FHIR Bundles das Feld <i>Bundle.link.url</i> mit relativen URLs befüllen, sofern diese sich auf die Basis-URL beziehen.",
+        "conformance": "MAY",
+        "created": "2025-02-26T10:59:21.318715",
+        "modified": "2025-05-27T09:33:08.784708",
+        "date": "2025-11-18T12:35:25.442843",
+        "content_hash": "387a04b6a69bd4d42e2d0a8cdcce5eca72608767c85e2221450ea1bac4a54a47",
+        "path": "query-api-paging.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI78384PEX",
+        "title": "Abruf der Versionshistorie einer FHIR-Instanz",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie einer FHIR-Instanz über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/[id]/_history</i>.",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.421837",
+        "modified": "2025-03-17T14:32:05.767307",
+        "date": "2025-11-18T11:03:10.873378",
+        "content_hash": "5faaaaab304240a71aecb909ec4698f6b4bf2b9baf704036ec96a68f15bca48a",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI81327UVF",
+        "title": "Umsetzung der Sortierfunktion gemäß FHIR",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS die Sortierfunktion nach [FHIR Sorting] implementieren.",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.315403",
+        "modified": "2025-02-26T13:55:56.513679",
+        "date": "2025-11-18T12:35:25.436634",
+        "content_hash": "cf8dabca9c2516ca0217fd5baf992e3330efb3f3a602f754206b7de1d6740239",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI85276Y4V",
+        "title": "Vergleichspräfixe für Datumswerte",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für Datumswerte (date, Range, Period) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>, <i>ge</i>, <i>le</i>, <i>sa</i>, <i>eb</i>",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.315356",
+        "modified": "2025-02-26T13:55:56.513636",
+        "date": "2025-11-18T12:35:25.435490",
+        "content_hash": "bfeb5066760c4bcbba566fc27f3dc2af9c0e9efed17026cd652e8d73f9dca98d",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI87140VUU",
+        "title": "Befüllungspflicht für Must Support",
+        "actor": [
+            "EPA-CS-KTR",
+            "EPA-FdV",
+            "EPA-PS"
+        ],
+        "test_procedures": {
+            "EPA-CS-KTR": [
+                "Konformitätsbestätigung"
+            ],
+            "EPA-FdV": [
+                "Produkttest"
+            ],
+            "EPA-PS": [
+                "Konformitätsbestätigung"
+            ]
+        },
+        "version": 2,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service implementiert, MUSS jedes als Must Support gekennzeichnete Element gemäß der dazugehörigen Kardinalitätsangabe befüllen. Das heißt auch, dass in optionalen Elementen (z.B. Kardinalität \"0..1\", \"0..*\") der Elementwert leer bleiben darf, sofern dem Client-System kein Wert zur Verfügung steht.",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.321299",
+        "modified": "2025-05-27T09:33:08.789772",
+        "date": "2025-11-18T11:03:10.871121",
+        "content_hash": "777a34849024057245ca44fae44716427f9370c2c07145ebde8371efe0a1e852",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI87465NYV",
+        "title": "Unterstützung der umgekehrten verketteten Parametersuche",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS die umgekehrte verkettete Parametersuche gemäß der Spezifikation unter [FHIR Reverse Chaining] implementieren und unterstützen.",
+        "conformance": "SHALL",
+        "created": "2025-03-07T08:14:24.654983",
+        "modified": "2025-03-28T11:10:43.517011",
+        "date": "2025-11-18T12:35:25.436248",
+        "content_hash": "828ee20983260a11030b833b8ed93e117ce87c40dd845a02f434499364ddcdac",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI92941JBA",
+        "title": "Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass Ressourcen, die durch <i>_include</i> oder <i>_revinclude</i> in das Suchergebnis aufgenommen werden, stets auf derselben Ergebnisseite wie die zugehörigen Suchtreffer (<i>entry.search.mode = \"match\"</i>) enthalten sind.",
+        "conformance": "SHALL",
+        "created": "2025-03-07T11:05:29.317204",
+        "modified": "2025-03-07T11:05:29.317210",
+        "date": "2025-11-18T12:35:25.433853",
+        "content_hash": "10e268a06a5e654f205fde6e12e25940687d637015090807eb475581973d22fd",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI94321ZRC",
+        "title": "Bereitstellung eines Bundles mit dem Typ history als Antwort",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS als Antwort auf eine <i>_history</i>-Abfrage ein Bundle mit dem Typ <i>history</i> zurückgeben, das die Versionen der angeforderten FHIR-Instanz enthält.",
+        "conformance": "SHALL",
+        "created": "2025-03-10T12:54:11.421936",
+        "modified": "2025-03-12T12:47:19.482337",
+        "date": "2025-11-18T11:03:10.873567",
+        "content_hash": "98d16272d12811dadca3520640bff985e86772f2410bda194e66eb28164cc0e2",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI94558MGC",
+        "title": "Vorrang des _format-Parameters gegenüber dem Accept Header",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/fhir-format.md",
+        "text": "Falls sowohl der <i>Accept</i> Header als auch der <i>_format</i>-Parameter in einer Anfragenachricht angegeben sind, MUSS der FHIR Data Service den <i>_format</i>-Parameter priorisieren und das Antwortformat entsprechend diesem verarbeiten. Der <i>Accept</i> Header MUSS in diesem Fall ignoriert werden.",
+        "conformance": "SHALL",
+        "created": "2025-03-06T13:37:59.523187",
+        "modified": "2025-03-12T12:47:19.475179",
+        "date": "2025-11-18T11:03:10.858065",
+        "content_hash": "22f3ec0767669a45f4ed7ee36167c66555462ab59db35ea1fd7beff5e6ab126a",
+        "path": "fhir-format.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI94882PRF",
+        "title": "Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung",
+        "actor": [
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS auf den Zeitpunkt der Aktualisierung gesetzt werden.",
+        "conformance": "SHALL",
+        "created": "2025-03-10T17:01:48.083983",
+        "modified": "2025-03-12T12:47:19.481709",
+        "date": "2025-11-18T11:03:10.872050",
+        "content_hash": "b30f3869c3b1d34d18d4657c70025a64faf7f84f6f9c4f8a3fa6db83397157f8",
+        "path": "general-principles.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI95143N18",
+        "title": "Formatierung von Referenzen im fullUrl-Feld",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 2,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen - wie <i>literal</i>-Referenzen in der Form [Resourcetyp]/[ResourceId] - nicht im Feld <i>Bundle.entry.fullUrl</i> verwendet werden. Alle Verweise auf Ressourcen innerhalb des FHIR Data Service MÜSSEN entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.",
+        "conformance": "SHALL",
+        "created": "2025-02-26T10:59:21.315207",
+        "modified": "2025-05-27T09:33:08.776699",
+        "date": "2025-11-18T12:35:25.433131",
+        "content_hash": "e60a5affa44ae057d5e590428427b04e497fb236fb95a7201f3d780201019bdd",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI96963Y60",
+        "title": "Unterstützung des Accept Header für Formatwahl im FHIR Data Service",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 1,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/fhir-format.md",
+        "text": "Der FHIR Data Service MUSS den <i>Accept</i> Header in eingehenden HTTP-Anfragen auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i> Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem Format zurückgeben, das von den beiden Formaten als bevorzugte Option angegeben wurde.",
+        "conformance": "SHALL",
+        "created": "2025-03-06T13:30:46.537848",
+        "modified": "2025-10-29T09:03:51.296778",
+        "date": "2025-11-18T11:03:10.856787",
+        "content_hash": "0527f0e0d38f6dd7c631ae456929d9c1c829cbbc4407106fb08f7ed123f0a020",
+        "path": "fhir-format.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI97020UTC",
+        "title": "Unterstützung des :iterate-Modifikators",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/query-api-search.md",
+        "text": "Der FHIR Data Service MUSS den <i>:iterate</i>-Modifikator für <i>_include</i> und <i>_revinclude</i> unterstützen, um rekursive Einschlussabfragen gemäß der FHIR-Spezifikation zu ermöglichen.",
+        "conformance": "SHALL",
+        "created": "2025-03-07T10:29:08.689615",
+        "modified": "2025-03-07T10:35:21.321838",
+        "date": "2025-11-18T12:35:25.434024",
+        "content_hash": "cdf7b5975219fc8506cdded690f3e4e07210aa6d5681d70815e42d053ed34381",
+        "path": "query-api-search.html",
+        "release": "1.3.2"
+    },
+    {
+        "key": "IG-TI97619U65",
+        "title": "Keine Registrierung bei Nutzung inaktiver Codes",
+        "actor": [
+            "EPA-Audit-Service",
+            "EPA-MHD-Service",
+            "EPA-Medication-Service",
+            "EPA-Patient-Service"
+        ],
+        "test_procedures": {
+            "EPA-Audit-Service": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Patient-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "STABLE",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS das Registrieren und Speichern von neuen Daten ablehnen und mit dem Fehler <i>SVC_INACTIVE_CODE</i> quittieren, falls ein Code den Status <i>inactive</i> besitzt. Unter <i>OperationOutcome.issue.diagnostics</i> MUSS der FHIR Data Service angeben, welcher Code nicht mehr unterstützt wird.",
+        "conformance": "SHALL",
+        "created": "2025-08-19T11:56:04.108952",
+        "modified": "2025-08-19T11:56:04.108960",
+        "date": "2025-11-18T11:03:10.877539",
+        "content_hash": "4f45d5e4e3b0209a9074447163ea7491ebc96a2fae8bbe945b7a542b4266776c",
         "path": "general-principles.html",
         "release": "1.3.2"
     }

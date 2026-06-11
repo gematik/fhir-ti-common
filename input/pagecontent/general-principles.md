@@ -7,17 +7,17 @@ Dieser Implementation Guide verwendet die Schlüsselwörter **MUSS**, **DARF NIC
 
 <requirement conformance="SHALL" key="IG-TI29386S9L" title="UUID für Resource.id" version="2">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS ausschließlich zeitbasierte Universally Unique IDentifier (UUID) gemäß [RFC9562] für logische IDs (d.h. für das FHIR-Element <i>Resource.id</i>) verwenden.
 </requirement>
@@ -29,45 +29,45 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
 
 <requirement conformance="SHALL" key="IG-TI87140VUU" title="Befüllungspflicht für Must Support" version="2">
     <meta lockversion="false"/>
-    <actor name="EPA-PS">
-        <testProcedure id="Konformitätsbestätigung"/>
+    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    <actor name="EPA-FdV">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-CS-KTR">
-        <testProcedure id="Konformitätsbestätigung"/>
+    <actor name="EPA-CS-KTR" description="Clientsystem-Schnittstelle ePA: Kostenträger">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
     Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service implementiert, MUSS jedes als Must Support gekennzeichnete Element gemäß der dazugehörigen Kardinalitätsangabe befüllen. Das heißt auch, dass in optionalen Elementen (z.B. Kardinalität "0..1", "0..*") der Elementwert leer bleiben darf, sofern dem Client-System kein Wert zur Verfügung steht.
 </requirement>
 
 <requirement actor="EPA-PS, EPA-FdV" conformance="SHALL" key="IG-TI09377BM6" title="Verarbeitung für Must Support" version="2">
     <meta lockversion="false"/>
-    <actor name="EPA-PS">
-        <testProcedure id="Konformitätsbestätigung"/>
+    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    <actor name="EPA-FdV">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Das Client-System, das lesend ein FHIR-Profil des FHIR Data Service implementiert, MUSS in der Lage sein, alle Must-Support-Elemente in FHIR-Instanzen zu verarbeiten. Das Client-System MUSS auch Must-Support-Elemente ohne Wert verarbeiten können, ohne mit einem Fehler abzubrechen oder die Anwendung abstürzen zu lassen.
 </requirement>
 
 <requirement actor="EPA-PS, EPA-FdV, EPA-CS-KTR, EPA-CS-Ombudsstelle, VSDM-Client" conformance="SHALL" key="IG-TI06089XAH" title="Anzeige für Must Support" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-PS">
-        <testProcedure id="Konformitätsbestätigung"/>
+    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    <actor name="EPA-FdV">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-CS-KTR">
-        <testProcedure id="Konformitätsbestätigung"/>
+    <actor name="EPA-CS-KTR" description="Clientsystem-Schnittstelle ePA: Kostenträger">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    <actor name="EPA-CS-Ombudsstelle">
-        <testProcedure id="Konformitätsbestätigung"/>
+    <actor name="EPA-CS-Ombudsstelle" description="Clientsystem-Schnittstelle ePA: Ombudsstelle">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    <actor name="VSDM-Client">
-        <testProcedure id="Konformitätsbestätigung"/>
+    <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
     Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für die menschliche Nutzung anzeigen. Es muss dabei nicht jeden Wert genauso darstellen, wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen ausblenden.
 </requirement>
@@ -81,33 +81,33 @@ Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen 
 
 <requirement actor="EPA-Medication-Service, EPA-Patient-Service" conformance="SHALL" key="IG-TI59347HCY" title="Initiale Versionierung neu erstellter oder hinzugefügter FHIR-Instanzen" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS jede neu erstellte oder neu hinzugefügte FHIR-Instanz mit einer <i>Meta.versionId</i> und einem <i>Meta.lastUpdated</i> versehen, um die Versionierung sicherzustellen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI94882PRF" title="Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS auf den Zeitpunkt der Aktualisierung gesetzt werden.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI52895H8W" title="Keine neue Version bei inhaltsgleichen Aktualisierungen" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt, die aktuelle Version unverändert bleibt. In diesem Fall wird keine neue Version erstellt und die bestehende <i>Meta.versionId</i> sowie das <i>Meta.lastUpdated-Datum</i> bleiben erhalten.
 </requirement>
@@ -119,33 +119,33 @@ Das Metadatenattribut `Resource.meta.versionId` gibt die Versionsnummer einer FH
 
 <requirement conformance="SHALL" key="IG-TI52829PK9" title="Numerisches Format der Resource.meta.versionId" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass das Element <i>Resource.meta.versionId</i> ausschließlich numerische Werte enthält. Alphanumerische Zeichen, Symbole oder Sonderzeichen dürfen nicht verwendet werden.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI06069XBQ" title="Aufsteigende Sequenz der Resource.meta.versionId" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass die <i>versionId</i> einer FHIR-Instanz bei jeder neuen Version um genau 1 erhöht wird. Die erste Version einer FHIR-Instanz erhält die <i>versionId</i> 1, die nächste Version 2, und so weiter. Beispiel: 1 → 2 → 3 →
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI44024J5L" title="Eindeutigkeit der Resource.meta.versionId pro FHIR-Instanz" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass die <i>Resource.meta.versionId</i> innerhalb einer spezifischen FHIR-Instanz eindeutig ist. Die Versionsnummer darf nicht zurückgesetzt oder übersprungen werden. Jede Instanz besitzt eine eigene fortlaufende Versionsnummer, die bei jeder Änderung der FHIR-Instanz aufsteigt.
 </requirement>
@@ -200,55 +200,55 @@ Funktionalität und Verhalten:
 
 <requirement conformance="SHALL" key="IG-TI16747WFN" title="Implementierung der _history-Abfrage gemäß HL7 FHIR Spezifikation" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS die <i>_history</i>-Abfrage gemäß der HL7 FHIR Spezifikation [FHIR History Interaction] implementieren, um die Versionshistorie einer FHIR-Instanz abrufbar zu machen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI60515LXY" title="Abruf der Versionshistorie aller Instanzen eines ResourceType" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie aller Instanzen eines bestimmten Ressourcentyps über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/_history</i>.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI78384PEX" title="Abruf der Versionshistorie einer FHIR-Instanz" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie einer FHIR-Instanz über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/[id]/_history</i>.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI94321ZRC" title="Bereitstellung eines Bundles mit dem Typ history als Antwort" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS als Antwort auf eine <i>_history</i>-Abfrage ein Bundle mit dem Typ <i>history</i> zurückgeben, das die Versionen der angeforderten FHIR-Instanz enthält.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI52070SA6" title="Bundle.entry.request und Bundle.entry.response innerhalb des _history Bundles" version="1">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> für jede Version einer FHIR-Instanz die zugehörigen <i>entry.request</i>- und <i>entry.response</i>-Elemente bereitstellen.
     <br/><br/>
@@ -299,33 +299,33 @@ GET [base]/epa/medication/api/v1/fhir/MedicationStatement/391fc0c6-e045-48d9-8af
 
 <requirement conformance="SHALL" key="IG-TI06008V22" title="Abruf einer spezifischen Ressourcenversion über die FHIR API" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS das Lesen spezifischer Versionen von FHIR-Instanzen gemäß der HL7 FHIR Spezifikation [FHIR Version Read] implementieren. Dabei MUSS eine angeforderte Version einer Instanz über eine GET-Anfrage der Form <i>[base]/[resourceType]/[id]/_history/[versionId]</i> bereitgestellt werden. Die Antwort MUSS die angeforderte Version der Instanz enthalten, einschließlich der zugehörigen Metadaten (<i>meta.versionId</i>, <i>meta.lastUpdated</i>).
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI66923Q9F" title="Identifikation der Ressourcenversion durch Meta.versionId" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass eine spezifische Version einer Ressource über die <i>Meta.versionId</i> eindeutig identifiziert und abgerufen werden kann. Die <i>versionId</i> dient dabei zur referenzgenauen Anforderung einer bestimmten historischen Version einer Ressource.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI06872YZP" title="404 Not Found Antwort für nicht existierende spezifische Versionen" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS bei einem HTTP GET-Request auf eine spezifische Version einer FHIR-Instanz den HTTP Status Code <i>404 (Not Found)</i> zurückgeben, wenn die angeforderte Version nicht existiert.
     <br/><br/>
@@ -343,32 +343,32 @@ Im FHIR Data Service wird das Löschen einer Ressource als ein weiteres Ereignis
 
 <requirement conformance="SHALL" key="IG-TI11342RSA" title="Behandlung des Löschvorgangs als versioniertes Ereignis" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS das Löschen einer Instanz als ein Ereignis im Lebenszyklus der Instanz behandeln, indem eine neue Version erstellt wird, die den gelöschten Zustand widerspiegelt.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI66054HX2" title="Kennzeichnung gelöschter Instanzen statt physischer Entfernung" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS eine als gelöscht markierte Instanz weiterhin in der Versionshistorie speichern, anstatt sie physisch zu entfernen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI16700VFJ" title="Abruf früherer Versionen einer gelöschten Instanz" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass frühere Versionen einer gelöschten Instanz weiterhin über versionsspezifische Endpunkte abrufbar sind.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI36210TD1" title="HTTP 410 Gone für den Abruf einer gelöschten FHIR-Instanz" version="2">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine gelöschte FHIR-Instanz oder eine gelöschte Version den HTTP Status Code <i>410 (Gone)</i> zurückgeben.
     <br/><br/>
@@ -398,8 +398,8 @@ Das folgende Beispiel zeigt die erwartete Antwort nach dem Abruf einer gelöscht
 
 <requirement conformance="SHALL" key="IG-TI23978E7A" title="Repräsentation gelöschter Versionen in Bundle.entry.request und Bundle.entry.response innerhalb eines _history-Bundles" version="1">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gelöschte Versionen einer FHIR-Instanz dokumentieren.
     <br/><br/>
@@ -447,55 +447,55 @@ In diesem Beispiel bezieht sich die Referenz auf die 4. Version der _MedicationS
 
 <requirement conformance="SHALL" key="IG-TI47719G19" title="Umsetzung der Versionierte Referenzen gemäß FHIR" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS versionierte Referenzen nach [FHIR References and Versions] implementieren.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI61673KWG" title="Unterstützung versionierter Referenzen im FHIR Data Service" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS versionierte Referenzen unterstützen, um es zu ermöglichen, innerhalb einer FHIR-Instanz auf eine spezifische Version einer anderen Instanz zu verweisen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI02423P7B" title="Referenzierung einer spezifischen Version einer FHIR-Instanz" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass eine FHIR-Instanz eine andere Instanz nicht nur über Ressourcentyp und ID, sondern auch mit einer spezifischen <i>Meta.versionId</i> referenzieren kann.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI72725KAW" title="Format für versionierte Referenzen" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS das Format für versionierte Referenzen verwenden, das den Ressourcentyp, die <i>Resource.id</i> und die <i>Meta.versionId</i> beinhaltet: <i>[ResourceType]/[id]/_history/[versionId]</i>.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI45064TNU" title="Auflösen von versionierten Referenzen in Bundles" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass versionierte Referenzen in Bundles entsprechend den Vorgaben in [FHIR Bundle References] auflösbar sind.
 </requirement>
@@ -507,17 +507,17 @@ Zum Auflösen einer versionerten Referenz, muss zunächst ein Treffer auf Grund 
 
 <requirement conformance="SHALL" key="IG-TI38467S3Q" title="Bereitstellung des /metadata-Endpunkts durch FHIR Data Service" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Ein FHIR Data Service MUSS an dem Endpunkt /metadata gemäß der [Capabilities-Interaktion] ein Capability Statement Typ <i>kind = instance</i> bereitstellen. Dieses Capability Statement muss im Element <i>software</i> den Namen und die Versionsnummer der eingesetzten Software angeben. Dieses Capability Statement muss sämtliche Anforderungen an den FHIR Data Service aus dem Capability Statement vom Typ <i>kind = requirements</i> der zugrundeliegenden Spezifikation erfüllen.
 </requirement>
@@ -526,17 +526,17 @@ Zum Auflösen einer versionerten Referenz, muss zunächst ein Treffer auf Grund 
 
 <requirement conformance="SHALL" key="IG-TI97619U65" title="Keine Registrierung bei Nutzung inaktiver Codes" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS das Registrieren und Speichern von neuen Daten ablehnen und mit dem Fehler <i>SVC_INACTIVE_CODE</i> quittieren, falls ein Code den Status <i>inactive</i> besitzt. Unter <i>OperationOutcome.issue.diagnostics</i> MUSS der FHIR Data Service angeben, welcher Code nicht mehr unterstützt wird.
 </requirement>

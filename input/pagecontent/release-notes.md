@@ -1,10 +1,18 @@
 ### Version 1.3.2
 
-{% include release-notes.html version="1.3.1" with_links=true %}
+#### Anforderungen
+
+Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
+
+{% include release-notes.html version="1.3.2" with_links=true %}
 
 ### Version 1.3.1
 
+#### FHIR
+
 - Hinzufügen von fehlenden oder inkonsistenten _Must Support_ Flags
+
+#### Anforderungen
 
 {% include release-notes.html version="1.3.1" with_links=false %}
 
@@ -18,15 +26,11 @@
 
 #### Anforderungen
 
-Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
-
 {% include release-notes.html version="1.3.0" with_links=false %}
 
 ### Version 1.2.0
 
 #### Anforderungen
-
-Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
 
 - Die Anforderung IG-TI90315JPK-02 – Speichern der Profilversion - wurde in den IG für die [ePA-Basisfunktionalitäten#IG-EPA74597GNF] verschoben.
 

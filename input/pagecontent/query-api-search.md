@@ -7,17 +7,17 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
 
 <requirement conformance="SHALL" key="IG-TI43409LRQ" title="Verwendung von entry.search.mode = match" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass für jede Ressource, die direkt den in der Suchanfrage angegebenen Kriterien entspricht, das Attribut <i>entry.search.mode</i> auf <i>match</i> gesetzt wird.
 </requirement>
@@ -28,51 +28,51 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
 
 <requirement conformance="SHALL" key="IG-TI64797XGV" title="Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der Standard HL7 FHIR Spezifikation als absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich, dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI29911V07" title="Konsistente Referenzierung innerhalb eines Bundles" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass, wenn im <i>Bundle.entry.fullUrl</i> eine UUID-basierte URI (<i>urn:uuid</i>) verwendet wird, alle Referenzen innerhalb desselben Bundles ebenfalls in der Form <i>urn:uuid:[UUID]</i> angegeben werden. Eine Mischung aus absoluten URLs, UUID-basierten URIs und relativen Referenzen innerhalb eines Bundles darf nicht verwendet werden.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI95143N18" title="Formatierung von Referenzen im fullUrl-Feld" version="2">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Patient-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen - wie <i>literal</i>-Referenzen in der Form [Resourcetyp]/[ResourceId] - nicht im Feld <i>Bundle.entry.fullUrl</i> verwendet werden. Alle Verweise auf Ressourcen innerhalb des FHIR Data Service MÜSSEN entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.
 </requirement>
@@ -123,8 +123,8 @@ Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welches alle im FHIR Da
 
 <requirement conformance="SHALL" key="IG-TI38183K0G" title="Unterstützung der _include-Suche im FHIR Data Service gemäß FHIR" version="2">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS die <i>_include</i>-Suche gemäß der [FHIR Search Include] unterstützen, sodass referenzierte Ressourcen innerhalb der Suchergebnisse automatisch mit einbezogen werden können.
 </requirement>
@@ -136,8 +136,8 @@ In der FHIR-Spezifikation ist <i>_revinclude</i> ein Suchparameter, der es ermö
 
 <requirement conformance="SHALL" key="IG-TI44886ZXA" title="Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR" version="2">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Servic MUSS die <i>_revinclude</i>-Suche gemäß der [FHIR Search Revinclude] unterstützen, sodass Ressourcen, die auf die gesuchten Ressourcen verweisen, innerhalb der Suchergebnisse automatisch mit einbezogen werden können.
 </requirement>
@@ -159,16 +159,16 @@ Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welche <i>MedicationReq
 
 <requirement conformance="SHALL" key="IG-TI08134XQ4" title="Verarbeitung von referenzierten Ressourcen in Include-Suchen" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS für jede zurückgegebene Ressource die zugehörigen Ressourcen gemäß den Verknüpfungskriterien ermitteln und mit <i>entry.search.mode = "include"</i> in die Antwort aufnehmen. Falls eine referenzierte Ressource nicht existiert, nicht gefunden wird oder nicht abrufbar ist, darf kein Fehler zurückgegeben werden.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI92941JBA" title="Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass Ressourcen, die durch <i>_include</i> oder <i>_revinclude</i> in das Suchergebnis aufgenommen werden, stets auf derselben Ergebnisseite wie die zugehörigen Suchtreffer (<i>entry.search.mode = "match"</i>) enthalten sind.
 </requirement>
@@ -180,24 +180,24 @@ Der <i>:iterate</i>-Modifikator ermöglicht es, bei der Verwendung von <i>_inclu
 
 <requirement conformance="SHALL" key="IG-TI97020UTC" title="Unterstützung des :iterate-Modifikators" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS den <i>:iterate</i>-Modifikator für <i>_include</i> und <i>_revinclude</i> unterstützen, um rekursive Einschlussabfragen gemäß der FHIR-Spezifikation zu ermöglichen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI00242W49" title="Unterstützung von _include:iterate" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS alle weiter referenzierten Ressourcen gemäß der angegebenen Referenzpfade iterativ in die Antwort aufnehmen, wenn <i>_include:iterate</i> verwendet wird.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI17755AMW" title="Unterstützung von _revinclude:iterate" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS alle iterativ verknüpften rückreferenzierenden Ressourcen zurückgeben, wenn <i>_revinclude:iterate</i> verwendet wird.
 </requirement>
@@ -339,98 +339,98 @@ Datumsangaben haben einen Bereich, der auf ihrer Präzision (Jahr, Monat, Tag) b
 
 <requirement conformance="SHALL" key="IG-TI31988JEY" title="Unterstützung der Präzision bei numerischen und datumsbasierten Suchparametern" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS numerische und datumsbasierte Suchparameter so verarbeiten, dass die Suchwerte entsprechend ihrer Präzision interpretiert werden. Beispielsweise muss eine Suche nach 2025-02-11 den Bereich von 2025-02-11T00:00:00 (inklusive) bis 2025-02-12T00:00:00 (exklusive) abdecken.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI28968WCS" title="Unterstützung von Präfixen für numerische und Datumsvergleiche" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
   Der FHIR Data Service MUSS die in der [FHIR Search Prefixes] definierten Vergleichspräfixe für numerische (<i>number</i>, <i>quantity</i>) und Datumsparameter (<i>date</i>, <i>Range</i>, <i>Period</i>) unterstützen.
 </requirement>
 
 <requirement actor="EPA-Audit-Service, EPA-Medication-Service, EPA-MHD-Service" conformance="SHALL" key="IG-TI40876FQM" title="Standardpräfix für Vergleiche" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
   Der FHIR Data Service MUSS standardmäßig das Präfix <i>eq</i> verwenden, falls kein Vergleichspräfix angegeben wird.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI36297YXJ" title="Vergleichspräfixe für numerische Werte" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
   Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für numerische Werte (number, quantity) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>, <i>ge</i>, <i>le</i>
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI85276Y4V" title="Vergleichspräfixe für Datumswerte" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
   Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für Datumswerte (date, Range, Period) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>, <i>ge</i>, <i>le</i>, <i>sa</i>, <i>eb</i>
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI14253RWM" title="Exakte Übereinstimmungen bei Ganzzahlen" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
   Der FHIR Data Service MUSS sicherstellen, dass Suchoperationen für Felder mit Ganzzahlen (<i>integer</i>) nur exakte numerische Übereinstimmungen liefern und keine Präzisionsanpassungen wie bei Gleitkommazahlen (<i>decimal</i>, <i>quantity</i>) vornehmen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI61163GRT" title="Bereichsprüfung für Range- und Period-Typen" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
   Der FHIR Data Service MUSS für Suchanfragen, die Range- oder Period-Werte betreffen, sicherstellen, dass obere und untere Grenzen des Bereichs korrekt berücksichtigt werden und mit den definierten Vergleichspräfixen korrekt verarbeitet werden.
 </requirement>
@@ -497,8 +497,8 @@ Wenn der Referenzparameter nur auf einen einzelnen Ressourcentyp verweist, kann 
 
 <requirement conformance="SHALL" key="IG-TI06315TQ1" title="Unterstützung verketteter Suchparameter" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS die Suche von verketteten Parametern gemäß der Spezifikation unter [FHIR Chained parameters] implementieren und unterstützen.
 </requirement>
@@ -525,8 +525,8 @@ _has:[Ressourcentyp]:[Referenzparameter]:[Suchparameter]=[Wert]
 
 <requirement conformance="SHALL" key="IG-TI87465NYV" title="Unterstützung der umgekehrten verketteten Parametersuche" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS die umgekehrte verkettete Parametersuche gemäß der Spezifikation unter [FHIR Reverse Chaining] implementieren und unterstützen.
 </requirement>
@@ -556,28 +556,28 @@ GET [base]/Medication?_has:MedicationStatement:medication:status=stopped&_revinc
 
 <requirement conformance="MAY" key="IG-TI27170FRR" title="Sortierung der Suchergebnisse durch _sort" version="3">
     <meta lockversion="false"/>
-    <actor name="EPA-PS">
-        <testProcedure id="Konformitätsbestätigung"/>
+    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    <actor name="EPA-FdV">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-CS-Ombudsstelle">
-        <testProcedure id="Konformitätsbestätigung"/>
+    <actor name="EPA-CS-Ombudsstelle" description="Clientsystem-Schnittstelle ePA: Ombudsstelle">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
     Das Client-System KANN die Reihenfolge der zurückgegebenen Ergebnisse durch den Parameter <i>_sort</i> angeben, der eine durch Kommas getrennte Liste von Sortierregeln in Prioritätsreihenfolge enthalten kann.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI81327UVF" title="Umsetzung der Sortierfunktion gemäß FHIR" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS die Sortierfunktion nach [FHIR Sorting] implementieren.
 </requirement>
@@ -590,14 +590,14 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_sort=action,-date
 
 <requirement conformance="SHALL" key="IG-TI00141ZJ2" title="Sortierung des Datentyps Period" version="1">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen, muss sofern vorhanden weitergehend nach <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.start</i>-Wert oder <i>Period.end</i>-Wert ist hierbei als noch nicht gestartet, also negativ unendlich, bzw. offen, also unendlich anzusehen.
 </requirement>

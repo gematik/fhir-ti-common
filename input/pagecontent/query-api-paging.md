@@ -3,14 +3,14 @@ Bei einer Suche im FHIR Data Service über die FHIR Query API stellt der Service
 
 <requirement conformance="SHALL" key="IG-TI07252NTV" title="Unterstützung URL-Parameter für Paginierungsfunktion" version="0">
     <meta lockversion="true"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
   Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und in seiner Antwort Navigationsinformationen in Ergebnisseiten zur Verfügung stellen. Um die Paginierungsfunktion zu implementieren, werden die URL-Parameter <code>_count</code> und <code>_offset</code> verwendet. Der Parameter <code>_count</code> bestimmt die Anzahl der Einträge pro <i>Seite</i> (page), während <code>_offset</code> das Startelement der Seite angibt. Zusätzlich entscheidet der <code>_total</code>-Parameter, ob die Gesamtanzahl der Einträge in der Antwort enthalten sein soll.
   <br/><br/>
@@ -81,14 +81,14 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0_total=accurate
 
 <requirement conformance="SHALL" key="IG-TI37232GDE" title="Unterstützung Seitennavigationslinks für Paginierungsfunktion" version="2">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
   Der FHIR Data Service MUSS in einem FHIR Search Set Bundle das FHIR-Element <code>link</code> belegen, welches eine Liste von Link-Elementen beinhaltet, welche jeweils einem spezifischen Navigationszweck innerhalb des FHIR Bundles dienen.<br/><br/>Die folgenden Beziehungen werden gemäß den [Link Relation Types] bereitgestellt.
   <br/><br/>
@@ -137,14 +137,14 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0_total=accurate
 
 <requirement conformance="MAY" key="IG-TI78112H2T" title="Verwendung relativer URLs bei der Paginierung von FHIR Bundles" version="3">
     <meta lockversion="false"/>
-    <actor name="EPA-Audit-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-Medication-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    <actor name="EPA-MHD-Service">
-        <testProcedure id="Produkttest"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service KANN beim Paginieren von FHIR Bundles das Feld <i>Bundle.link.url</i> mit relativen URLs befüllen, sofern diese sich auf die Basis-URL beziehen.
 </requirement>
