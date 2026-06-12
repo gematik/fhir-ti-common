@@ -1,15 +1,15 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "epa-medication",
-  "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication",
+  "id": "ti-medication",
+  "url": "https://gematik.de/fhir/ti/StructureDefinition/ti-medication",
   "version": "1.3.0",
-  "name": "EPAMedication",
-  "title": "EPA Medication",
+  "name": "TIMedication",
+  "title": "TI Medication",
   "status": "active",
   "experimental": false,
   "date": "2026-03-20",
   "publisher": "gematik GmbH",
-  "description": "Defines the medication resource for the Medication Service in the ePA system.",
+  "description": "Defines the medication resource for the Medication Service in the TI ecosystem.",
   "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -19,19 +19,6 @@
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "Medication",
-        "path": "Medication",
-        "constraint": [
-          {
-            "key": "epa-med-1",
-            "severity": "error",
-            "human": "Medication code, name, or ingredients must be specified",
-            "expression": "code.exists() or ingredient.exists()",
-            "source": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication"
-          }
-        ]
-      },
       {
         "id": "Medication.meta",
         "path": "Medication.meta",
@@ -45,21 +32,6 @@
       {
         "id": "Medication.meta.lastUpdated",
         "path": "Medication.meta.lastUpdated",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.contained",
-        "path": "Medication.contained",
-        "short": "Contains PZN Ingredients for Compounding Medications & PharmaceuticalProducts in case of a 'Kombipackung'",
-        "type": [
-          {
-            "code": "Medication",
-            "profile": [
-              "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product",
-              "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -95,16 +67,6 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.extension:isVaccine.url",
-        "path": "Medication.extension.url",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:isVaccine.value[x]",
-        "path": "Medication.extension.value[x]",
-        "mustSupport": true
-      },
-      {
         "id": "Medication.extension:drugCategory",
         "path": "Medication.extension",
         "sliceName": "drugCategory",
@@ -121,31 +83,14 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.extension:drugCategory.url",
-        "path": "Medication.extension.url",
-        "mustSupport": true
-      },
-      {
         "id": "Medication.extension:drugCategory.value[x].system",
         "path": "Medication.extension.value[x].system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:drugCategory.value[x].version",
-        "path": "Medication.extension.value[x].version",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.extension:drugCategory.value[x].code",
         "path": "Medication.extension.value[x].code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:drugCategory.value[x].display",
-        "path": "Medication.extension.value[x].display",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.extension:normSizeCode",
@@ -166,16 +111,6 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.extension:normSizeCode.url",
-        "path": "Medication.extension.url",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:normSizeCode.value[x]",
-        "path": "Medication.extension.value[x]",
-        "mustSupport": true
-      },
-      {
         "id": "Medication.extension:packaging",
         "path": "Medication.extension",
         "sliceName": "packaging",
@@ -189,16 +124,6 @@
             ]
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:packaging.url",
-        "path": "Medication.extension.url",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:packaging.value[x]",
-        "path": "Medication.extension.value[x]",
         "mustSupport": true
       },
       {
@@ -218,16 +143,6 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.extension:manufacturingInstructions.url",
-        "path": "Medication.extension.url",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:manufacturingInstructions.value[x]",
-        "path": "Medication.extension.value[x]",
-        "mustSupport": true
-      },
-      {
         "id": "Medication.extension:type",
         "path": "Medication.extension",
         "sliceName": "type",
@@ -241,31 +156,6 @@
             ]
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:type.url",
-        "path": "Medication.extension.url",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:type.value[x].system",
-        "path": "Medication.extension.value[x].system",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:type.value[x].version",
-        "path": "Medication.extension.value[x].version",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:type.value[x].code",
-        "path": "Medication.extension.value[x].code",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:type.value[x].display",
-        "path": "Medication.extension.value[x].display",
         "mustSupport": true
       },
       {
@@ -297,18 +187,7 @@
         ],
         "patternIdentifier": {
           "system": "https://gematik.de/fhir/epa-medication/sid/epa-medication-unique-identifier"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.identifier:EPAMedicationUniqueIdentifier.system",
-        "path": "Medication.identifier.system",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.identifier:EPAMedicationUniqueIdentifier.value",
-        "path": "Medication.identifier.value",
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.identifier:RxOriginatorProcessIdentifier",
@@ -326,24 +205,12 @@
         ],
         "patternIdentifier": {
           "system": "https://gematik.de/fhir/epa-medication/sid/rx-originator-process-identifier"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.identifier:RxOriginatorProcessIdentifier.system",
-        "path": "Medication.identifier.system",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.identifier:RxOriginatorProcessIdentifier.value",
-        "path": "Medication.identifier.value",
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.code",
         "path": "Medication.code",
-        "short": "Medication in coded form or as free text if necessary",
-        "mustSupport": true
+        "short": "Medication in coded form or as free text if necessary"
       },
       {
         "id": "Medication.code.coding",
@@ -366,30 +233,17 @@
         "max": "1",
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/ifa/pzn"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.code.coding:pzn.system",
         "path": "Medication.code.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:pzn.version",
-        "path": "Medication.code.coding.version",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.code.coding:pzn.code",
         "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:pzn.display",
-        "path": "Medication.code.coding.display",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.code.coding:atc-de",
@@ -399,31 +253,22 @@
         "max": "*",
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/bfarm/atc"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.code.coding:atc-de.system",
         "path": "Medication.code.coding.system",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.code.coding:atc-de.version",
         "path": "Medication.code.coding.version",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.code.coding:atc-de.code",
         "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:atc-de.display",
-        "path": "Medication.code.coding.display",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.code.coding:ask",
@@ -433,60 +278,38 @@
         "max": "*",
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/ask"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.code.coding:ask.system",
         "path": "Medication.code.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:ask.version",
-        "path": "Medication.code.coding.version",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.code.coding:ask.code",
         "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:ask.display",
-        "path": "Medication.code.coding.display",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.text",
-        "path": "Medication.code.text",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.status",
         "path": "Medication.status",
-        "short": "Status of Medication Information",
-        "mustSupport": true
+        "short": "Status of Medication Information"
       },
       {
         "id": "Medication.manufacturer",
         "path": "Medication.manufacturer",
         "short": "Manufacturer of the Medication",
-        "comment": "Here, the actual manufacturer of the medication can be named, primarily in the case of active ingredient mixtures (compounding prescriptions), such as the hospital pharmacy. It is important to note that the licensing organization, as mentioned in the PZN (Pharmaceutical Central Number) data, is not considered the manufacturer.",
-        "mustSupport": true
+        "comment": "Here, the actual manufacturer of the medication can be named, primarily in the case of active ingredient mixtures (compounding prescriptions), such as the hospital pharmacy. It is important to note that the licensing organization, as mentioned in the PZN (Pharmaceutical Central Number) data, is not considered the manufacturer."
       },
       {
         "id": "Medication.manufacturer.display",
         "path": "Medication.manufacturer.display",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.form",
         "path": "Medication.form",
-        "short": "Form of Dispensing",
-        "mustSupport": true
+        "short": "Form of Dispensing"
       },
       {
         "id": "Medication.form.coding",
@@ -511,7 +334,6 @@
         "patternCoding": {
           "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
         },
-        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
@@ -520,29 +342,12 @@
       {
         "id": "Medication.form.coding:kbvDarreichungsform.system",
         "path": "Medication.form.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.form.coding:kbvDarreichungsform.version",
-        "path": "Medication.form.coding.version",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.form.coding:kbvDarreichungsform.code",
         "path": "Medication.form.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.form.coding:kbvDarreichungsform.display",
-        "path": "Medication.form.coding.display",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount",
-        "path": "Medication.amount",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.amount.numerator",
@@ -566,18 +371,7 @@
               "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-packaging-size-extension"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.extension:packagingSize.url",
-        "path": "Medication.amount.numerator.extension.url",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.extension:packagingSize.value[x]",
-        "path": "Medication.amount.numerator.extension.value[x]",
-        "mustSupport": true
+        ]
       },
       {
         "id": "Medication.amount.numerator.extension:totalQuantity",
@@ -592,18 +386,7 @@
               "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.extension:totalQuantity.url",
-        "path": "Medication.amount.numerator.extension.url",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.extension:totalQuantity.value[x]",
-        "path": "Medication.amount.numerator.extension.value[x]",
-        "mustSupport": true
+        ]
       },
       {
         "id": "Medication.amount.numerator.value",
@@ -657,8 +440,7 @@
       {
         "id": "Medication.ingredient",
         "path": "Medication.ingredient",
-        "short": "Active or inactive ingredients of the medication, including pharmaceutical substances as well as individual medicinal products in combination packs.",
-        "mustSupport": true
+        "short": "Active or inactive ingredients of the medication, including pharmaceutical substances as well as individual medicinal products in combination packs."
       },
       {
         "id": "Medication.ingredient.extension:darreichungsform",
@@ -673,18 +455,7 @@
               "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-darreichungsform-extension"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.extension:darreichungsform.url",
-        "path": "Medication.ingredient.extension.url",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.extension:darreichungsform.value[x]",
-        "path": "Medication.ingredient.extension.value[x]",
-        "mustSupport": true
+        ]
       },
       {
         "id": "Medication.ingredient.item[x]",
@@ -711,8 +482,7 @@
           {
             "code": "CodeableConcept"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding",
@@ -725,8 +495,7 @@
             }
           ],
           "rules": "open"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ask",
@@ -736,30 +505,17 @@
         "max": "*",
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/ask"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ask.system",
         "path": "Medication.ingredient.item[x].coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ask.version",
-        "path": "Medication.ingredient.item[x].coding.version",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ask.code",
         "path": "Medication.ingredient.item[x].coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ask.display",
-        "path": "Medication.ingredient.item[x].coding.display",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:atc-de",
@@ -769,31 +525,22 @@
         "max": "*",
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/bfarm/atc"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:atc-de.system",
         "path": "Medication.ingredient.item[x].coding.system",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:atc-de.version",
         "path": "Medication.ingredient.item[x].coding.version",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:atc-de.code",
         "path": "Medication.ingredient.item[x].coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:atc-de.display",
-        "path": "Medication.ingredient.item[x].coding.display",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:pzn",
@@ -803,35 +550,17 @@
         "max": "*",
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/ifa/pzn"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:pzn.system",
         "path": "Medication.ingredient.item[x].coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:pzn.version",
-        "path": "Medication.ingredient.item[x].coding.version",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:pzn.code",
         "path": "Medication.ingredient.item[x].coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:pzn.display",
-        "path": "Medication.ingredient.item[x].coding.display",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.text",
-        "path": "Medication.ingredient.item[x].text",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.ingredient.item[x]:itemReference",
@@ -847,45 +576,17 @@
               "http://hl7.org/fhir/StructureDefinition/Medication"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemReference.reference",
-        "path": "Medication.ingredient.item[x].reference",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemReference.identifier",
-        "path": "Medication.ingredient.item[x].identifier",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemReference.identifier.system",
-        "path": "Medication.ingredient.item[x].identifier.system",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemReference.identifier.value",
-        "path": "Medication.ingredient.item[x].identifier.value",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemReference.display",
-        "path": "Medication.ingredient.item[x].display",
-        "mustSupport": true
+        ]
       },
       {
         "id": "Medication.ingredient.isActive",
         "path": "Medication.ingredient.isActive",
-        "short": "Is it an active ingredient?",
-        "mustSupport": true
+        "short": "Is it an active ingredient?"
       },
       {
         "id": "Medication.ingredient.strength",
         "path": "Medication.ingredient.strength",
-        "short": "Strength",
-        "mustSupport": true
+        "short": "Strength"
       },
       {
         "id": "Medication.ingredient.strength.extension:amountText",
@@ -900,23 +601,11 @@
               "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-amount-extension"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.extension:amountText.url",
-        "path": "Medication.ingredient.strength.extension.url",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.extension:amountText.value[x]",
-        "path": "Medication.ingredient.strength.extension.value[x]",
-        "mustSupport": true
+        ]
       },
       {
         "id": "Medication.ingredient.strength.numerator",
         "path": "Medication.ingredient.strength.numerator",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "http://hl7.org/fhir/ValueSet/ucum-units"
@@ -925,28 +614,11 @@
       {
         "id": "Medication.ingredient.strength.numerator.value",
         "path": "Medication.ingredient.strength.numerator.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.unit",
-        "path": "Medication.ingredient.strength.numerator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.system",
-        "path": "Medication.ingredient.strength.numerator.system",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.code",
-        "path": "Medication.ingredient.strength.numerator.code",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.ingredient.strength.denominator",
         "path": "Medication.ingredient.strength.denominator",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "http://hl7.org/fhir/ValueSet/ucum-units"
@@ -955,35 +627,17 @@
       {
         "id": "Medication.ingredient.strength.denominator.value",
         "path": "Medication.ingredient.strength.denominator.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.unit",
-        "path": "Medication.ingredient.strength.denominator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.system",
-        "path": "Medication.ingredient.strength.denominator.system",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.code",
-        "path": "Medication.ingredient.strength.denominator.code",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.batch",
         "path": "Medication.batch",
-        "short": "Batch Information",
-        "mustSupport": true
+        "short": "Batch Information"
       },
       {
         "id": "Medication.batch.lotNumber",
         "path": "Medication.batch.lotNumber",
-        "short": "Batch Number",
-        "mustSupport": true
+        "short": "Batch Number"
       }
     ]
   }

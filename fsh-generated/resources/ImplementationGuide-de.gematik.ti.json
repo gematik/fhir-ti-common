@@ -42,10 +42,22 @@
   ],
   "dependsOn": [
     {
+      "packageId": "hl7.fhir.uv.xver-r5.r4",
+      "version": "0.1.0",
+      "uri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
+      "id": "hl7_fhir_uv_xver_r5_r4"
+    },
+    {
       "packageId": "de.basisprofil.r4",
       "version": "1.5.4",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
+    },
+    {
+      "packageId": "de.fhir.medication",
+      "version": "1.0.4",
+      "uri": "http://ig.fhir.de/igs/medication/ImplementationGuide/de.fhir.medication",
+      "id": "de_fhir_medication"
     }
   ],
   "definition": {
@@ -72,30 +84,6 @@
         },
         "name": "DrugCategoryExtension",
         "description": "Extension for indicating the medication category.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/epa-medication"
-        },
-        "name": "EPA Medication",
-        "description": "Defines the medication resource for the Medication Service in the ePA system.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/epa-medication-pzn-ingredient"
-        },
-        "name": "EPA Medication PZN Ingredient",
-        "description": "Defines the medication resource for a PZN ingredient of a compounding medication for the Medication Service in the ePA system. These profiles are intended to inherit from EPAMedication, but due to tooling issues, this inheritance cannot currently be implemented.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/epa-medication-pharmaceutical-product"
-        },
-        "name": "EPA Pharmaceutical Product Medication",
-        "description": "Defines the medication resource for a component of a 'Kombipackung' for the Medication Service in the ePA system. These profiles are intended to inherit from EPAMedication, but due to tooling issues, this inheritance cannot currently be implemented.",
         "exampleBoolean": false
       },
       {
@@ -226,6 +214,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/indicator-bvg-extension"
+        },
+        "name": "IndicatorBVGExtension",
+        "description": "Indicator of whether this regulation is made in reference to the 'Bundesentschädigungsgesetz' or the 'Bundesversorgungsgesetz'.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/indicator-ser-extension"
+        },
+        "name": "IndicatorSERExtension",
+        "description": "Kennzeichnung, ob diese Verordnung mit Bezug zum Sozialen Entschädigungsrecht nach SGB XIV (SER) erfolgt",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/epa-medication-type-extension"
         },
         "name": "Medication Type",
@@ -298,6 +302,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/multiple-prescription-extension"
+        },
+        "name": "MultiplePrescription",
+        "description": "This FHIR Extension for multiple prescriptions adds details such as repetition count and time intervals for repeated medication orders to FHIR resources.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/narcotics-extension"
+        },
+        "name": "NarcoticsExtension",
+        "description": "Abbildung der Angaben zur Verordnung eines Betäubungsmittels im Sinne des Betäubungsmittelgesetzes (BtMG)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/ncpeh-country-extension"
         },
         "name": "National Contact Point of Health (NCPeH) Country Extension",
@@ -310,6 +330,22 @@
         },
         "name": "OperationDefinition Profil für TI FHIR Data Service",
         "description": "Dieses Profil beschreibt FHIR Operationen des FHIR Data Service innerhalb der Telematikinfrastruktur (TI).\nEs stellt sicher, dass zustandsverändernde Operationen ('affectsState = true') nicht über HTTP GET ausgeführt werden dürfen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/patient-id-extension"
+        },
+        "name": "PatientIDExtension",
+        "description": "Patienten-ID, welche bei der Verordnung bestimmter Arzneimittel angegeben werden kann.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/prescriber-id-extension"
+        },
+        "name": "PrescriberIDExtension",
+        "description": "Verschreiber-ID, welche bei der Verordnung bestimmter Präparate anzugeben ist, damit die Apotheke das Rezept beliefern darf.",
         "exampleBoolean": false
       },
       {
@@ -342,6 +378,38 @@
         },
         "name": "RxPrescriptionProcessIdentifierExtension",
         "description": "This extension is used to track medication prescription transactions between the E-Rezept-Fachdienst and the ePA. The RxPrescriptionProcessIdentifier is generated by the ePA Medication Service and consists of the PrescriptionId and the authoredOn date of the operation parameters request. It ensures consistent referencing and management of medication-related resources across different systems.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/teratogenic-extension"
+        },
+        "name": "TeratogenicExtension",
+        "description": "Abbildung der Angaben zur Verordnung eines teratogenen Arzneimittels (T-Rezept)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-medication"
+        },
+        "name": "TI Medication",
+        "description": "Defines the medication resource for the Medication Service in the TI ecosystem.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-medication-dispense"
+        },
+        "name": "TI MedicationDispense",
+        "description": "Defines the medication dispense resource for the Medication Service in the TI ecosystem.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-medication-request"
+        },
+        "name": "TI MedicationRequest",
+        "description": "Defines the medication request resource for the Medication Service in the TI ecosystem.",
         "exampleBoolean": false
       },
       {
@@ -544,6 +612,10 @@
       },
       {
         "code": "no-usage-check",
+        "value": "true"
+      },
+      {
+        "code": "show-inherited-invariants",
         "value": "true"
       },
       {

@@ -1,0 +1,264 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ti-medication-dispense",
+  "url": "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-dispense",
+  "version": "1.0.0",
+  "name": "TIMedicationDispense",
+  "title": "TI MedicationDispense",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-30",
+  "publisher": "gematik GmbH",
+  "description": "Defines the medication dispense resource for the Medication Service in the TI ecosystem.",
+  "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationDispense",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationDispense.meta",
+        "path": "MedicationDispense.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.meta.versionId",
+        "path": "MedicationDispense.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.meta.lastUpdated",
+        "path": "MedicationDispense.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.extension:rxPrescriptionProcessIdentifier",
+        "path": "MedicationDispense.extension",
+        "sliceName": "rxPrescriptionProcessIdentifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier-extension"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.extension:renderedDosageInstruction",
+        "path": "MedicationDispense.extension",
+        "sliceName": "renderedDosageInstruction",
+        "short": "Vollständige Darstellung der Dosierungsanweisungen (generiert aus den Dosage-Elementen).",
+        "definition": "Ein menschenlesbarer, vollständiger Text der Dosierungsanweisungen. Der Text wird aus den strukturierten Dosage-Elementen generiert und dient der patientensicheren Darstellung der Dosierung. Er soll die maschinenlesbaren Angaben konsistent wiedergeben und in einer für Patient:innen verständlichen Form bereitstellen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.extension:renderedDosageInstruction.extension",
+        "path": "MedicationDispense.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "MedicationDispense.extension:renderedDosageInstruction.url",
+        "path": "MedicationDispense.extension.url",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.extension:renderedDosageInstruction.value[x]",
+        "path": "MedicationDispense.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.extension:generatedDosageInstructionsMeta",
+        "path": "MedicationDispense.extension",
+        "sliceName": "generatedDosageInstructionsMeta",
+        "short": "Metadaten zu den generierten Dosierungsanweisungen",
+        "definition": "Diese Extension enthält zusätzliche Metadaten zu den automatisch generierten Dosierungsanweisungen, wie z.B. Informationen zur Generierung oder zum Ursprung der Daten.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.extension:generatedDosageInstructionsMeta.extension:language",
+        "path": "MedicationDispense.extension.extension",
+        "sliceName": "language"
+      },
+      {
+        "id": "MedicationDispense.extension:generatedDosageInstructionsMeta.extension:language.url",
+        "path": "MedicationDispense.extension.extension.url",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.extension:generatedDosageInstructionsMeta.extension:algorithmVersion",
+        "path": "MedicationDispense.extension.extension",
+        "sliceName": "algorithmVersion"
+      },
+      {
+        "id": "MedicationDispense.extension:generatedDosageInstructionsMeta.extension:algorithmVersion.url",
+        "path": "MedicationDispense.extension.extension.url",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.extension:generatedDosageInstructionsMeta.url",
+        "path": "MedicationDispense.extension.url",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.identifier",
+        "path": "MedicationDispense.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "MedicationDispense.identifier:RxOriginatorProcessIdentifier",
+        "path": "MedicationDispense.identifier",
+        "sliceName": "RxOriginatorProcessIdentifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/epa-medication/StructureDefinition/rx-originator-process-identifier"
+            ]
+          }
+        ],
+        "patternIdentifier": {
+          "system": "https://gematik.de/fhir/epa-medication/sid/rx-originator-process-identifier"
+        }
+      },
+      {
+        "id": "MedicationDispense.status",
+        "path": "MedicationDispense.status",
+        "short": "Status of medication dispense",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/terminology/ValueSet/ti-medication-dispense-status-vs"
+        }
+      },
+      {
+        "id": "MedicationDispense.category",
+        "path": "MedicationDispense.category",
+        "short": "Fehlender oder nicht vorhandener Wert weist auf eine Abgabe mit Verschreibung hin.",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/terminology/ValueSet/ti-medication-dispense-category-vs",
+          "description": "Definiert den Kontext einer Abgabe: mit oder ohne ärztliche Verschreibung."
+        }
+      },
+      {
+        "id": "MedicationDispense.medication[x]",
+        "path": "MedicationDispense.medication[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Medication"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.subject",
+        "path": "MedicationDispense.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.subject.identifier",
+        "path": "MedicationDispense.subject.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.performer",
+        "path": "MedicationDispense.performer",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationDispense.performer.actor",
+        "path": "MedicationDispense.performer.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.authorizingPrescription.reference",
+        "path": "MedicationDispense.authorizingPrescription.reference",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.whenHandedOver",
+        "path": "MedicationDispense.whenHandedOver",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction",
+        "path": "MedicationDispense.dosageInstruction",
+        "short": "Hier werden Informationen zur Dosierung angegeben.",
+        "definition": "Hier werden Informationen zur Dosierung angegeben.",
+        "type": [
+          {
+            "code": "Dosage",
+            "profile": [
+              "http://ig.fhir.de/igs/medication/StructureDefinition/DosageDE"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
