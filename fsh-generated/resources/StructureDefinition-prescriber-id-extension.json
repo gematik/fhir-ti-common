@@ -1,0 +1,81 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "prescriber-id-extension",
+  "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/prescriber-id-extension",
+  "version": "1.3.0",
+  "name": "PrescriberIDExtension",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-12-15",
+  "publisher": "gematik GmbH",
+  "description": "Verschreiber-ID, welche bei der Verordnung bestimmter Präparate anzugeben ist, damit die Apotheke das Rezept beliefern darf.",
+  "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "definition": "Verschreiber-ID, welche bei der Verordnung bestimmter Präparate anzugeben ist, damit die Apotheke das Rezept beliefern darf."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/epa-medication/StructureDefinition/prescriber-id-extension"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].use",
+        "path": "Extension.value[x].use",
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x].type",
+        "path": "Extension.value[x].type",
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x].value",
+        "path": "Extension.value[x].value",
+        "short": "Verschreiber-ID",
+        "definition": "Verschreiber-ID, welche bei der Verordnung bestimmter Präparate anzugeben ist, damit die Apotheke das Rezept beliefern darf.",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x].period",
+        "path": "Extension.value[x].period",
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x].assigner",
+        "path": "Extension.value[x].assigner",
+        "max": "0"
+      }
+    ]
+  }
+}
