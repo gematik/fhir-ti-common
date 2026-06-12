@@ -2,10 +2,11 @@ actor:
 - EPA-Audit-Service
 - EPA-MHD-Service
 - EPA-Medication-Service
+- TI-Flow_FD
 conformance: SHALL
 content_hash: ddc91e95a7f135e8b944d81d2b83687882ed46a58d57164399b5cf4fa560be29
 created: '2025-02-26T10:59:21.318535'
-date: '2026-02-23T10:27:58.000594'
+date: '2026-06-11T14:14:37.896534'
 key: IG-TI07252NTV
 modified: '2025-02-26T13:55:56.516495'
 release_status: STABLE
@@ -17,6 +18,8 @@ test_procedures:
   EPA-MHD-Service:
   - Produkttest
   EPA-Medication-Service:
+  - Produkttest
+  TI-Flow_FD:
   - Produkttest
 text: "Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und in\
   \ seiner Antwort Navigationsinformationen in Ergebnisseiten zur Verfügung stellen.\
