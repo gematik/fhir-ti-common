@@ -2,12 +2,12 @@
   "resourceType": "ImplementationGuide",
   "id": "de.gematik.ti",
   "url": "https://gematik.de/fhir/ti/ImplementationGuide/de.gematik.ti",
-  "version": "1.3.2",
+  "version": "1.3.2-ballot.1",
   "name": "gemIG_TI_Common",
   "title": "Implementation Guide TI Common",
-  "status": "active",
+  "status": "draft",
   "experimental": false,
-  "date": "2026-03-20",
+  "date": "2026-06-30",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -384,7 +384,7 @@
       },
       {
         "code": "releaselabel",
-        "value": "draft"
+        "value": "ballot"
       },
       {
         "code": "shownav",
