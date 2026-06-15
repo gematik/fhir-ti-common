@@ -3,10 +3,11 @@ actor:
 - EPA-MHD-Service
 - EPA-Medication-Service
 - EPA-Patient-Service
+- TI-Flow_FD
 conformance: SHALL
 content_hash: 03b0e8a86490a8e16ea6d71b9a1669a0261726255ee8ba7b8581532b3b456250
 created: '2025-02-26T10:59:21.315189'
-date: '2025-11-18T12:35:25.432582'
+date: '2026-06-15T13:51:38.811342'
 key: IG-TI64797XGV
 modified: '2025-03-12T12:47:19.476134'
 release_status: STABLE
@@ -20,6 +21,8 @@ test_procedures:
   EPA-Medication-Service:
   - Produkttest
   EPA-Patient-Service:
+  - Produkttest
+  TI-Flow_FD:
   - Produkttest
 text: Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem
   <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der Standard HL7 FHIR Spezifikation

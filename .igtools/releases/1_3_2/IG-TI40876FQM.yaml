@@ -2,10 +2,11 @@ actor:
 - EPA-Audit-Service
 - EPA-MHD-Service
 - EPA-Medication-Service
+- TI-Flow_FD
 conformance: SHALL
 content_hash: 5891bdad8bc3f9e2e8b1eb62c2288476ad5ed16422d7716b618f3df8add27eb8
 created: '2025-02-26T10:59:21.315278'
-date: '2025-11-18T12:35:25.434967'
+date: '2026-06-15T13:51:38.822321'
 key: IG-TI40876FQM
 modified: '2025-02-26T13:55:56.513560'
 release_status: STABLE
@@ -17,6 +18,8 @@ test_procedures:
   EPA-MHD-Service:
   - Produkttest
   EPA-Medication-Service:
+  - Produkttest
+  TI-Flow_FD:
   - Produkttest
 text: Der FHIR Data Service MUSS standardmäßig das Präfix <i>eq</i> verwenden, falls
   kein Vergleichspräfix angegeben wird.

@@ -2,10 +2,11 @@ actor:
 - EPA-Audit-Service
 - EPA-MHD-Service
 - EPA-Medication-Service
+- TI-Flow_FD
 conformance: SHALL
 content_hash: e95b42c4582df88b59dbebb5932baafeaa1f5c786c7bd008897a6fa1c20d2d34
 created: '2025-10-27T11:15:01.479737'
-date: '2026-03-12T13:28:36.603173'
+date: '2026-06-15T13:51:38.832877'
 key: IG-TI00141ZJ2
 modified: '2026-01-14T09:29:09.949753'
 release_status: STABLE
@@ -17,6 +18,8 @@ test_procedures:
   EPA-MHD-Service:
   - Produkttest
   EPA-Medication-Service:
+  - Produkttest
+  TI-Flow_FD:
   - Produkttest
 text: Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps
   <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen

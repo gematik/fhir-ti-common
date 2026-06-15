@@ -1,9 +1,10 @@
 actor:
 - EPA-Medication-Service
+- TI-Flow_FD
 conformance: SHALL
 content_hash: 828ee20983260a11030b833b8ed93e117ce87c40dd845a02f434499364ddcdac
 created: '2025-03-07T08:14:24.654983'
-date: '2025-11-18T12:35:25.436248'
+date: '2026-06-15T13:51:38.829682'
 key: IG-TI87465NYV
 modified: '2025-03-28T11:10:43.517011'
 release_status: STABLE
@@ -11,6 +12,8 @@ source: input/pagecontent/query-api-search.md
 status: ACTIVE
 test_procedures:
   EPA-Medication-Service:
+  - Produkttest
+  TI-Flow_FD:
   - Produkttest
 text: Der FHIR Data Service MUSS die umgekehrte verkettete Parametersuche gemäß der
   Spezifikation unter [FHIR Reverse Chaining] implementieren und unterstützen.

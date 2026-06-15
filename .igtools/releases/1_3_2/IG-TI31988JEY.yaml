@@ -2,10 +2,11 @@ actor:
 - EPA-Audit-Service
 - EPA-MHD-Service
 - EPA-Medication-Service
+- TI-Flow_FD
 conformance: SHALL
 content_hash: e77343f82a5b7370a34c36dcee2cf2d39930fc895a4939d2310086cc5640e0eb
 created: '2025-02-26T10:59:21.315231'
-date: '2025-11-18T12:35:25.434510'
+date: '2026-06-15T13:51:38.819427'
 key: IG-TI31988JEY
 modified: '2025-02-26T13:55:56.513515'
 release_status: STABLE
@@ -17,6 +18,8 @@ test_procedures:
   EPA-MHD-Service:
   - Produkttest
   EPA-Medication-Service:
+  - Produkttest
+  TI-Flow_FD:
   - Produkttest
 text: Der FHIR Data Service MUSS numerische und datumsbasierte Suchparameter so verarbeiten,
   dass die Suchwerte entsprechend ihrer Präzision interpretiert werden. Beispielsweise
