@@ -55,6 +55,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI00141ZJ2-01"
@@ -290,6 +303,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI06315TQ1"
@@ -518,6 +544,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -873,6 +912,19 @@
                             "name": "funkt. Eignung: Konformitätsbestätigung"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI27170FRR-03"
@@ -916,6 +968,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -1049,6 +1114,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI29911V07"
@@ -1092,6 +1170,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -1166,6 +1257,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -1373,6 +1477,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI40876FQM"
@@ -1429,6 +1546,19 @@
                         "name": "EPA-Patient-Service",
                         "id": "productType162",
                         "description": "EPA-Patient-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -1932,6 +2062,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI61163GRT"
@@ -2151,6 +2294,19 @@
                         "name": "EPA-Patient-Service",
                         "id": "productType162",
                         "description": "EPA-Patient-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -2406,6 +2562,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI81327UVF"
@@ -2449,6 +2618,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -2523,6 +2705,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -2747,6 +2942,19 @@
                         "name": "EPA-Patient-Service",
                         "id": "productType162",
                         "description": "EPA-Patient-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {

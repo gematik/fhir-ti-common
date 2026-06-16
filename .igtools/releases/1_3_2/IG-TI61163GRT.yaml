@@ -2,10 +2,11 @@ actor:
 - EPA-Audit-Service
 - EPA-MHD-Service
 - EPA-Medication-Service
+- TI-Flow_FD
 conformance: SHALL
 content_hash: d15613497fc83544ce7a18a5a6df3bf5937f4c1ca27dd4ffdf1b277619bb5eea
 created: '2025-02-26T10:59:21.315384'
-date: '2025-11-18T12:35:25.435981'
+date: '2026-06-15T13:51:38.828107'
 key: IG-TI61163GRT
 modified: '2025-02-26T13:55:56.513664'
 release_status: STABLE
@@ -17,6 +18,8 @@ test_procedures:
   EPA-MHD-Service:
   - Produkttest
   EPA-Medication-Service:
+  - Produkttest
+  TI-Flow_FD:
   - Produkttest
 text: Der FHIR Data Service MUSS für Suchanfragen, die Range- oder Period-Werte betreffen,
   sicherstellen, dass obere und untere Grenzen des Bereichs korrekt berücksichtigt

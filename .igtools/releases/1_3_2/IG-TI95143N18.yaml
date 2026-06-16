@@ -3,10 +3,11 @@ actor:
 - EPA-MHD-Service
 - EPA-Medication-Service
 - EPA-Patient-Service
+- TI-Flow_FD
 conformance: SHALL
 content_hash: e60a5affa44ae057d5e590428427b04e497fb236fb95a7201f3d780201019bdd
 created: '2025-02-26T10:59:21.315207'
-date: '2025-11-18T12:35:25.433131'
+date: '2026-06-15T13:51:38.814449'
 key: IG-TI95143N18
 modified: '2025-05-27T09:33:08.776699'
 release_status: STABLE
@@ -20,6 +21,8 @@ test_procedures:
   EPA-Medication-Service:
   - Produkttest
   EPA-Patient-Service:
+  - Produkttest
+  TI-Flow_FD:
   - Produkttest
 text: Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen - wie <i>literal</i>-Referenzen
   in der Form [Resourcetyp]/[ResourceId] - nicht im Feld <i>Bundle.entry.fullUrl</i>
