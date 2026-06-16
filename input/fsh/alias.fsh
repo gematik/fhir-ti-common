@@ -19,3 +19,8 @@ Alias: $identifier-zanr = http://fhir.de/StructureDefinition/identifier-zanr
 
 // Schlüsseltabellen
 Alias: $KBV_VS_SFHIR_BAR2_ARZTNRFACHGRUPPE = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_BAR2_ARZTNRFACHGRUPPE
+
+
+// HL7
+Alias: $hl7-task-status-cs = http://hl7.org/fhir/task-status
+

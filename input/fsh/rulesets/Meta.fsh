@@ -1,6 +1,6 @@
 Alias: $version = 1.3.0
 
-RuleSet: MetaDate(element)
+RuleSet: Date(element)
 * {element} = "2026-03-20"
 
 
@@ -28,7 +28,7 @@ RuleSet: MetaContact
 RuleSet: Meta
 * insert MetaVersion(^version)
 * insert MetaStatus(^status)
-* insert MetaDate(^date)
+* insert Date(^date)
 * insert Gematik(^publisher)
 * insert MetaCopyright(^copyright)
 * ^experimental = false
@@ -52,7 +52,7 @@ RuleSet: Meta-Instance
 * insert MetaVersion(version)
 * insert MetaStatus(status)
 * insert Gematik(publisher)
-* insert MetaDate(date)
+* insert Date(date)
 
 
 RuleSet: Meta-With-Versioning

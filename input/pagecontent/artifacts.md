@@ -27,6 +27,8 @@ StructureDefinition/ti-organization,
 StructureDefinition/ti-patient,
 StructureDefinition/ti-practitioner,
 StructureDefinition/ti-practitioner-role,
+StructureDefinition/tiflow-order-task,
+StructureDefinition/tiflow-communication
 {% endcapture %}
 {% include artifacts-table-generator.html render=profiles %}
 <div><figcaption><strong>Tabelle:</strong> Ressourcenprofile</figcaption></div>
@@ -43,7 +45,9 @@ StructureDefinition/ncpeh-country-extension,
 
 {% capture datatypes %}
 StructureDefinition/e-prescription-id,
-StructureDefinition/medication-plan-identifier
+StructureDefinition/medication-plan-identifier,
+StructureDefinition/tiflow-access-code,
+StructureDefinition/tiflow-secret
 {% endcapture %}
 {% include artifacts-table-generator.html render=datatypes %}
 <div><figcaption><strong>Tabelle:</strong> Datentypen</figcaption></div>
@@ -100,7 +104,8 @@ CodeSystem/operation-outcome-details-codes
 #### Value Sets
 
 {% capture operationoutcomevs %}
-ValueSet/operation-outcome-details-vs
+ValueSet/operation-outcome-details-vs,
+ValueSet/tiflow-order-task-status-vs
 {% endcapture %}
 {% include artifacts-table-generator.html render=operationoutcomevs %}
 <div><figcaption><strong>Tabelle:</strong> Operation Outcome - Value Sets</figcaption></div>
