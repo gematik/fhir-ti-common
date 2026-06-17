@@ -9,25 +9,28 @@ Description: "Task für die Verwaltung von Workflows der TIFlow Verordnungen"
 * ^date = "2026-06-30"
 * ^status = #draft
 
+* identifier MS
+  * ^short = "Kennungen und Zugriffsschlüssel zur Identifikation und Autorisierung im Workflow."
+  * ^comment = "Enthält fachliche Identifikatoren der Verordnung (z. B. Verordnungs- oder Prozesskennungen) sowie systemseitig erzeugte Zugriffsschlüssel oder Geheimnisse, die den Zugriff auf den Auftrag oder zugehörige Task autorisieren. Die konkrete Bedeutung ergibt sich aus dem jeweiligen Identifier-Typ." 
 
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier contains
-    AccessCode 0..1 and
-    Secret 0..1
-* identifier[AccessCode] only TIFlowAccessCode 
-  * ^short = "AccessCode Identifier"
-  * ^definition = "Generiert vom TI-Flow-Fachdienst. Dieser Identifikator muss in jeder Anfrage zur Task Ressource übertragen werden."
-  * system 1..
-  * system = $GEM_ERP_NS_AccessCode (exactly)
-  * value 1..
-* identifier[Secret] only TIFlowSecret
-* identifier[Secret] 
-  * ^short = "Secret"
-  * system 1..1
-  * value 1..1
-* intent = #order (exactly)
+// * identifier ^slicing.discriminator.type = #value
+// * identifier ^slicing.discriminator.path = "system"
+// * identifier ^slicing.rules = #open
+// * identifier contains
+//     AccessCode 0..1 and
+//     Secret 0..1
+// * identifier[AccessCode] only TIFlowAccessCode 
+//   * ^short = "AccessCode Identifier"
+//   * ^definition = "Generiert vom TI-Flow-Fachdienst. Dieser Identifikator muss in jeder Anfrage zur Task Ressource übertragen werden."
+//   * system 1..
+//   * system = $GEM_ERP_NS_AccessCode (exactly)
+//   * value 1..
+// * identifier[Secret] only TIFlowSecret
+// * identifier[Secret] 
+//   * ^short = "Secret"
+//   * system 1..1
+//   * value 1..1
+// * intent = #order (exactly)
 
 * status from TIFlowOrderTaskStatusVS (required)
 * status MS

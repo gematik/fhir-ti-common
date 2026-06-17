@@ -37,48 +37,9 @@
       {
         "id": "Task.identifier",
         "path": "Task.identifier",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Task.identifier:AccessCode",
-        "path": "Task.identifier",
-        "sliceName": "AccessCode",
-        "short": "AccessCode Identifier",
-        "definition": "Generiert vom TI-Flow-Fachdienst. Dieser Identifikator muss in jeder Anfrage zur Task Ressource übertragen werden.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "https://gematik.de/fhir/ti/StructureDefinition/tiflow-access-code"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Task.identifier:Secret",
-        "path": "Task.identifier",
-        "sliceName": "Secret",
-        "short": "Secret",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "https://gematik.de/fhir/ti/StructureDefinition/ti-flow-secret"
-            ]
-          }
-        ]
+        "short": "Kennungen und Zugriffsschlüssel zur Identifikation und Autorisierung im Workflow.",
+        "comment": "Enthält fachliche Identifikatoren der Verordnung (z. B. Verordnungs- oder Prozesskennungen) sowie systemseitig erzeugte Zugriffsschlüssel oder Geheimnisse, die den Zugriff auf den Auftrag oder zugehörige Task autorisieren. Die konkrete Bedeutung ergibt sich aus dem jeweiligen Identifier-Typ.",
+        "mustSupport": true
       },
       {
         "id": "Task.status",
@@ -89,11 +50,6 @@
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/ti/ValueSet/tiflow-order-task-status-vs"
         }
-      },
-      {
-        "id": "Task.intent",
-        "path": "Task.intent",
-        "fixedCode": "order"
       },
       {
         "id": "Task.for",
