@@ -604,9 +604,6 @@ GET [base]/Medication?_has:MedicationStatement:medication:status=stopped&_revinc
     <actor name="EPA-CS-Ombudsstelle" description="Clientsystem-Schnittstelle ePA: Ombudsstelle">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
-        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
-    </actor>
     Das Client-System KANN die Reihenfolge der zurückgegebenen Ergebnisse durch den Parameter <i>_sort</i> angeben, der eine durch Kommas getrennte Liste von Sortierregeln in Prioritätsreihenfolge enthalten kann.
 </requirement>
 
