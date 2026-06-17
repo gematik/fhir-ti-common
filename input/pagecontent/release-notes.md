@@ -1,10 +1,14 @@
-### Version 1.3.2
+### Version 1.4.0
+
+#### TIFlow
+
+- Hinzugefügt wurden die Profile TIFlowOrderTask und TIFlowCommunication als wiederverwendbare Profile für die Modellierung von Verordnungen und Kommunikationsvorgängen innerhalb von TIFlow.
 
 #### Anforderungen
 
 Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
 
-{% include release-notes.html version="1.3.2" with_links=true %}
+{% include release-notes.html version="1.4.0" with_links=true %}
 
 ### Version 1.3.1
 

@@ -2,8 +2,8 @@
     "document_info": {
         "id": "gemIG_TI_Common",
         "title": "Implementation Guide TI Common",
-        "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1",
-        "version": "1.3.2-ballot.1",
+        "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1",
+        "version": "1.4.0-ballot.1",
         "date": "1782777600",
         "status": "released",
         "classification": "public"
@@ -70,7 +70,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI00141ZJ2-01"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI00141ZJ2-01"
         },
         {
             "key": "IG-TI00242W49",
@@ -94,7 +94,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI00242W49"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI00242W49"
         },
         {
             "key": "IG-TI02423P7B",
@@ -131,7 +131,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI02423P7B"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI02423P7B"
         },
         {
             "key": "IG-TI06008V22",
@@ -168,7 +168,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI06008V22"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI06008V22"
         },
         {
             "key": "IG-TI06069XBQ",
@@ -205,7 +205,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI06069XBQ"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI06069XBQ"
         },
         {
             "key": "IG-TI06089XAH",
@@ -281,7 +281,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI06089XAH"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI06089XAH"
         },
         {
             "key": "IG-TI06315TQ1",
@@ -318,7 +318,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI06315TQ1"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI06315TQ1"
         },
         {
             "key": "IG-TI06872YZP",
@@ -355,7 +355,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI06872YZP"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI06872YZP"
         },
         {
             "key": "IG-TI07252NTV",
@@ -418,7 +418,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-paging.html#IG-TI07252NTV"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-paging.html#IG-TI07252NTV"
         },
         {
             "key": "IG-TI08134XQ4",
@@ -442,7 +442,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI08134XQ4"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI08134XQ4"
         },
         {
             "key": "IG-TI09377BM6",
@@ -479,7 +479,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI09377BM6-02"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI09377BM6-02"
         },
         {
             "key": "IG-TI11342RSA",
@@ -503,7 +503,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI11342RSA"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI11342RSA"
         },
         {
             "key": "IG-TI14253RWM",
@@ -566,7 +566,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI14253RWM"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI14253RWM"
         },
         {
             "key": "IG-TI16700VFJ",
@@ -590,7 +590,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI16700VFJ"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI16700VFJ"
         },
         {
             "key": "IG-TI16747WFN",
@@ -627,7 +627,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI16747WFN"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI16747WFN"
         },
         {
             "key": "IG-TI17755AMW",
@@ -651,7 +651,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI17755AMW"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI17755AMW"
         },
         {
             "key": "IG-TI18063SU7",
@@ -714,7 +714,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/fhir-format.html#IG-TI18063SU7"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI18063SU7"
         },
         {
             "key": "IG-TI19904KM0",
@@ -777,7 +777,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/fhir-format.html#IG-TI19904KM0"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI19904KM0"
         },
         {
             "key": "IG-TI22824X01",
@@ -840,7 +840,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/fhir-format.html#IG-TI22824X01-02"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI22824X01-02"
         },
         {
             "key": "IG-TI23978E7A",
@@ -864,7 +864,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI23978E7A-01"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI23978E7A-01"
         },
         {
             "key": "IG-TI27170FRR",
@@ -927,7 +927,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI27170FRR-03"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI27170FRR-03"
         },
         {
             "key": "IG-TI28968WCS",
@@ -990,7 +990,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI28968WCS"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI28968WCS"
         },
         {
             "key": "IG-TI29386S9L",
@@ -1053,7 +1053,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI29386S9L-02"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI29386S9L-02"
         },
         {
             "key": "IG-TI29911V07",
@@ -1129,7 +1129,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI29911V07"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI29911V07"
         },
         {
             "key": "IG-TI31988JEY",
@@ -1192,7 +1192,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI31988JEY"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI31988JEY"
         },
         {
             "key": "IG-TI36210TD1",
@@ -1216,7 +1216,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI36210TD1-02"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI36210TD1-02"
         },
         {
             "key": "IG-TI36297YXJ",
@@ -1279,7 +1279,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI36297YXJ"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI36297YXJ"
         },
         {
             "key": "IG-TI37232GDE",
@@ -1342,7 +1342,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-paging.html#IG-TI37232GDE-02"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-paging.html#IG-TI37232GDE-02"
         },
         {
             "key": "IG-TI38183K0G",
@@ -1366,7 +1366,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI38183K0G-02"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI38183K0G-02"
         },
         {
             "key": "IG-TI38467S3Q",
@@ -1429,7 +1429,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI38467S3Q"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI38467S3Q"
         },
         {
             "key": "IG-TI40876FQM",
@@ -1492,7 +1492,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI40876FQM"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI40876FQM"
         },
         {
             "key": "IG-TI43409LRQ",
@@ -1568,7 +1568,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI43409LRQ"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI43409LRQ"
         },
         {
             "key": "IG-TI44024J5L",
@@ -1605,7 +1605,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI44024J5L"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI44024J5L"
         },
         {
             "key": "IG-TI44886ZXA",
@@ -1629,7 +1629,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI44886ZXA-02"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI44886ZXA-02"
         },
         {
             "key": "IG-TI45064TNU",
@@ -1666,7 +1666,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI45064TNU"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI45064TNU"
         },
         {
             "key": "IG-TI47719G19",
@@ -1703,7 +1703,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI47719G19"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI47719G19"
         },
         {
             "key": "IG-TI52070SA6",
@@ -1740,7 +1740,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI52070SA6-01"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI52070SA6-01"
         },
         {
             "key": "IG-TI52829PK9",
@@ -1777,7 +1777,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI52829PK9"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI52829PK9"
         },
         {
             "key": "IG-TI52895H8W",
@@ -1814,7 +1814,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI52895H8W"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI52895H8W"
         },
         {
             "key": "IG-TI57083QMG",
@@ -1877,7 +1877,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/fhir-format.html#IG-TI57083QMG"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI57083QMG"
         },
         {
             "key": "IG-TI59271UPX",
@@ -1940,7 +1940,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/fhir-format.html#IG-TI59271UPX"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI59271UPX"
         },
         {
             "key": "IG-TI59347HCY",
@@ -1977,7 +1977,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI59347HCY"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI59347HCY"
         },
         {
             "key": "IG-TI60515LXY",
@@ -2014,7 +2014,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI60515LXY"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI60515LXY"
         },
         {
             "key": "IG-TI61163GRT",
@@ -2077,7 +2077,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI61163GRT"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI61163GRT"
         },
         {
             "key": "IG-TI61673KWG",
@@ -2114,7 +2114,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI61673KWG"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI61673KWG"
         },
         {
             "key": "IG-TI62490PR0",
@@ -2177,7 +2177,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/fhir-format.html#IG-TI62490PR0-01"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI62490PR0-01"
         },
         {
             "key": "IG-TI62717R2P",
@@ -2240,7 +2240,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/fhir-format.html#IG-TI62717R2P"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI62717R2P"
         },
         {
             "key": "IG-TI64797XGV",
@@ -2316,7 +2316,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI64797XGV"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI64797XGV"
         },
         {
             "key": "IG-TI66054HX2",
@@ -2340,7 +2340,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI66054HX2"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI66054HX2"
         },
         {
             "key": "IG-TI66923Q9F",
@@ -2377,7 +2377,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI66923Q9F"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI66923Q9F"
         },
         {
             "key": "IG-TI72725KAW",
@@ -2414,7 +2414,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI72725KAW"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI72725KAW"
         },
         {
             "key": "IG-TI78112H2T",
@@ -2477,7 +2477,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-paging.html#IG-TI78112H2T-03"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-paging.html#IG-TI78112H2T-03"
         },
         {
             "key": "IG-TI78384PEX",
@@ -2514,7 +2514,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI78384PEX"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI78384PEX"
         },
         {
             "key": "IG-TI81327UVF",
@@ -2577,7 +2577,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI81327UVF"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI81327UVF"
         },
         {
             "key": "IG-TI85276Y4V",
@@ -2640,7 +2640,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI85276Y4V"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI85276Y4V"
         },
         {
             "key": "IG-TI87140VUU",
@@ -2690,7 +2690,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI87140VUU-02"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI87140VUU-02"
         },
         {
             "key": "IG-TI87465NYV",
@@ -2727,7 +2727,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI87465NYV"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI87465NYV"
         },
         {
             "key": "IG-TI92941JBA",
@@ -2751,7 +2751,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI92941JBA"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI92941JBA"
         },
         {
             "key": "IG-TI94321ZRC",
@@ -2788,7 +2788,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI94321ZRC"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI94321ZRC"
         },
         {
             "key": "IG-TI94558MGC",
@@ -2851,7 +2851,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/fhir-format.html#IG-TI94558MGC"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI94558MGC"
         },
         {
             "key": "IG-TI94882PRF",
@@ -2888,7 +2888,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI94882PRF"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI94882PRF"
         },
         {
             "key": "IG-TI95143N18",
@@ -2964,7 +2964,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI95143N18-02"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI95143N18-02"
         },
         {
             "key": "IG-TI96963Y60",
@@ -3027,7 +3027,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/fhir-format.html#IG-TI96963Y60-01"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI96963Y60-01"
         },
         {
             "key": "IG-TI97020UTC",
@@ -3051,7 +3051,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/query-api-search.html#IG-TI97020UTC"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI97020UTC"
         },
         {
             "key": "IG-TI97619U65",
@@ -3114,7 +3114,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.3.2-ballot.1/general-principles.html#IG-TI97619U65"
+            "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI97619U65"
         }
     ]
 }
