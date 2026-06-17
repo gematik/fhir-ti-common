@@ -1,0 +1,101 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "tiflow-communication",
+  "url": "https://gematik.de/fhir/ti/StructureDefinition/tiflow-communication",
+  "version": "1.4.0",
+  "name": "TIFlowCommunication",
+  "title": "Generische TIFlow Communication",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-06-30",
+  "publisher": "gematik GmbH",
+  "description": "Generische TIFlow Workflow-Communication",
+  "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Communication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Communication",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Communication.meta",
+        "path": "Communication.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.meta.versionId",
+        "path": "Communication.meta.versionId",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.meta.lastUpdated",
+        "path": "Communication.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.basedOn",
+        "path": "Communication.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Task"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Communication.status",
+        "path": "Communication.status",
+        "comment": "Muss standardmäßig laut FHIR Core Specification angegeben werden, wird jedoch während des Lebenszyklus der Ressource nicht verändert.",
+        "fixedCode": "unknown",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.sent",
+        "path": "Communication.sent",
+        "short": "Der Zeitpunkt, zu dem diese Kommunikation gesendet wurde.",
+        "comment": "Wird vom TIFlow-Server gesetzt. Ein Client hat diesen Wert daher immer verfügbar.",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.received",
+        "path": "Communication.received",
+        "short": "Der Zeitpunkt, zu dem diese Kommunikation empfangen wurde.",
+        "comment": "Wird vom TIFlow-Server gesetzt. Ein Client hat diesen Wert daher immer verfügbar.",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.recipient",
+        "path": "Communication.recipient",
+        "short": "Die Entität (z. B. Person, Organisation), die Ziel der Kommunikation war.",
+        "comment": "Muss vom Absender der Kommunikation gesetzt werden, um das Ziel festzulegen.",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.sender",
+        "path": "Communication.sender",
+        "short": "Die Entität (z. B. Person, Organisation), die Quelle der Kommunikation war.",
+        "definition": "Nachrichtenabsender — wird vom TIFlow-Server gesetzt.\r\nDie Entität (z. B. Person, Organisation), die Quelle der Kommunikation war.",
+        "comment": "Wird vom TIFlow-Server gesetzt.",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.payload",
+        "path": "Communication.payload",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.payload.content[x]",
+        "path": "Communication.payload.content[x]",
+        "short": "Der tatsächliche Inhalt der Nachricht",
+        "comment": "Der tatsächliche Inhalt der Nachricht"
+      }
+    ]
+  }
+}

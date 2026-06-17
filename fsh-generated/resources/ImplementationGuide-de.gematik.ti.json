@@ -162,6 +162,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/tiflow-communication"
+        },
+        "name": "Generische TIFlow Communication",
+        "description": "Generische TIFlow Workflow-Communication",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/extension-http-header"
         },
         "name": "HTTP Header",
@@ -218,6 +226,30 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/tiflow-order-task"
+        },
+        "name": "Task für TIFlow Verordnungen",
+        "description": "Task für die Verwaltung von Workflows der TIFlow Verordnungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/tiflow-access-code"
+        },
+        "name": "TI Flow AccessCode",
+        "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine Ressource gewährt, z. B. Task.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ti-flow-secret"
+        },
+        "name": "TI Flow Secret",
+        "description": "Das Secret ist ein generiertes Geheimnis, das Zugriff auf eine TIFlow Verordnung gewährt, z. B. Task.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/operation-outcome"
         },
         "name": "TI Operation Outcome",
@@ -270,6 +302,14 @@
         },
         "name": "TI PractitionerRole",
         "description": "Dieses Profil beschreibt die Verwendung der FHIR-Ressource PractitionerRole in der Telematikinfrastruktur (TI). Es wird verwendet, um die Rolle und Funktion einer Gesundheitsfachperson innerhalb einer Organisation zu definieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/tiflow-order-task-status-vs"
+        },
+        "name": "TIFlow Order Task ValueSet",
+        "description": "TIFlow Order Task ValueSet",
         "exampleBoolean": false
       }
     ],

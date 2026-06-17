@@ -1,3 +1,5 @@
+Alias: $GEM_ERP_NS_PrescriptionId = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId
+
 Profile: EPrescriptionId
 Parent: Identifier
 Id: e-prescription-id
@@ -11,5 +13,5 @@ Description: "Die E-Rezept-ID ist eine generierte und nicht veränderbare Zahlen
 
 * use = #official (exactly)
 * system 1.. MS
-* system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId" (exactly)
+* system = $GEM_ERP_NS_PrescriptionId (exactly)
 * value 1.. MS
