@@ -1,15 +1,15 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "tiflow-order-task",
-  "url": "https://gematik.de/fhir/ti/StructureDefinition/tiflow-order-task",
+  "id": "ti-workflow-task",
+  "url": "https://gematik.de/fhir/ti/StructureDefinition/ti-workflow-task",
   "version": "1.4.0",
-  "name": "TIFlowOrderTask",
-  "title": "Task für TIFlow Verordnungen",
+  "name": "TIWorkflowTask",
+  "title": "Task für TI-Workflows",
   "status": "draft",
   "experimental": false,
   "date": "2026-06-30",
   "publisher": "gematik GmbH",
-  "description": "Task für die Verwaltung von Workflows der TIFlow Verordnungen",
+  "description": "Task für die Verwaltung von TI-Workflows",
   "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -38,18 +38,13 @@
         "id": "Task.identifier",
         "path": "Task.identifier",
         "short": "Kennungen und Zugriffsschlüssel zur Identifikation und Autorisierung im Workflow.",
-        "comment": "Enthält fachliche Identifikatoren der Verordnung (z. B. Verordnungs- oder Prozesskennungen) sowie systemseitig erzeugte Zugriffsschlüssel oder Geheimnisse, die den Zugriff auf den Auftrag oder zugehörige Task autorisieren. Die konkrete Bedeutung ergibt sich aus dem jeweiligen Identifier-Typ.",
+        "comment": "Enthält fachliche Identifikatoren des Auftrags (z. B. Verordnungs- oder Prozesskennungen) sowie systemseitig erzeugte Zugriffsschlüssel oder Geheimnisse, die den Zugriff auf den Auftrag oder zugehörige Task autorisieren. Die konkrete Bedeutung ergibt sich aus dem jeweiligen Identifier-Typ.",
         "mustSupport": true
       },
       {
         "id": "Task.status",
         "path": "Task.status",
-        "short": "draft | ready | on-hold | in-progress | completed | cancelled",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ti/ValueSet/tiflow-order-task-status-vs"
-        }
+        "mustSupport": true
       },
       {
         "id": "Task.for",
