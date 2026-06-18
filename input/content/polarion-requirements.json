@@ -912,19 +912,6 @@
                             "name": "funkt. Eignung: Konformitätsbestätigung"
                         }
                     ]
-                },
-                {
-                    "product_type": {
-                        "name": "TI-Flow_FD",
-                        "id": "productType175",
-                        "description": "TI-Flow-Fachdienst"
-                    },
-                    "test_procedure": [
-                        {
-                            "id": "testProcedurePT03",
-                            "name": "funkt. Eignung: Test Produkt/FA"
-                        }
-                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/query-api-search.html#IG-TI27170FRR-03"
