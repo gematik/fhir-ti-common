@@ -2,7 +2,7 @@
 
 #### TIFlow
 
-- Hinzugefügt wurden die Profile TIFlowOrderTask und TIFlowCommunication als wiederverwendbare Profile für die Modellierung von Verordnungen und Kommunikationsvorgängen innerhalb von TIFlow.
+- Hinzugefügt wurde das Profil für den TIFlow AccessCode und das Profil für das TIFlow Secret.
 
 #### Anforderungen
 

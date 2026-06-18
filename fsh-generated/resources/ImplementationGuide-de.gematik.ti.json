@@ -162,14 +162,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ti-workflow-communication"
-        },
-        "name": "Generische TI-Workflow Communication",
-        "description": "Generische TI-Workflow Communication",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/extension-http-header"
         },
         "name": "HTTP Header",
@@ -238,14 +230,6 @@
         },
         "name": "Profil für den TIFlow AccessCode",
         "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine Ressource gewährt, z. B. Task.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/ti-workflow-task"
-        },
-        "name": "Task für TI-Workflows",
-        "description": "Task für die Verwaltung von TI-Workflows",
         "exampleBoolean": false
       },
       {
@@ -469,6 +453,10 @@
       {
         "code": "version-comparison",
         "value": "1.3.0"
+      },
+      {
+        "code": "version-comparison",
+        "value": "1.3.1"
       },
       {
         "code": "bundle-references-resolve",
