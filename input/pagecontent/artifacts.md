@@ -27,8 +27,8 @@ StructureDefinition/ti-organization,
 StructureDefinition/ti-patient,
 StructureDefinition/ti-practitioner,
 StructureDefinition/ti-practitioner-role,
-StructureDefinition/tiflow-order-task,
-StructureDefinition/tiflow-communication
+StructureDefinition/ti-workflow-task,
+StructureDefinition/ti-workflow-communication
 {% endcapture %}
 {% include artifacts-table-generator.html render=profiles %}
 <div><figcaption><strong>Tabelle:</strong> Ressourcenprofile</figcaption></div>

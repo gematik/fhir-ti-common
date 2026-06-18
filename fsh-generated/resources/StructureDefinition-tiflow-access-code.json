@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/ti/StructureDefinition/tiflow-access-code",
   "version": "1.4.0",
   "name": "TIFlowAccessCode",
-  "title": "TI Flow AccessCode",
+  "title": "Profil für den TIFlow AccessCode",
   "status": "active",
   "experimental": false,
   "date": "2026-06-30",
@@ -34,7 +34,7 @@
       {
         "id": "Identifier.value",
         "path": "Identifier.value",
-        "comment": "Das Datenmodell ist in der Spezifikation für den TI-Flow-Fachdienst zu finden.",
+        "comment": "Das Datenmodell ist in der Spezifikation für den TIFlow-Fachdienst zu finden.",
         "min": 1,
         "mustSupport": true
       }

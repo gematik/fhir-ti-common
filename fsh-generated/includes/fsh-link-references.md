@@ -12,17 +12,17 @@
 [ea0ac9a5-8508-471a-b2c8-c41209436545]: OperationOutcome-ea0ac9a5-8508-471a-b2c8-c41209436545.html
 [8d5c1994-5caf-46c6-8c95-c5e7e6fad8e5]: OperationOutcome-8d5c1994-5caf-46c6-8c95-c5e7e6fad8e5.html
 [c5fca094-f4d0-4b6a-8662-8fa158d82416]: OperationOutcome-c5fca094-f4d0-4b6a-8662-8fa158d82416.html
-[TIFlowCommunication]: StructureDefinition-tiflow-communication.html
+[TIWorkflowCommunication]: StructureDefinition-ti-workflow-communication.html
 [HTTPHeader]: StructureDefinition-extension-http-header.html
 [HttpMethod]: StructureDefinition-extension-http-method.html
 [HttpResponseInfo]: StructureDefinition-extension-http-response-info.html
 [EPrescriptionId]: StructureDefinition-e-prescription-id.html
 [NcpehCountryExtension]: StructureDefinition-ncpeh-country-extension.html
 [TIOperationDefinition]: StructureDefinition-ti-operationdefinition.html
+[TIFlowSecret]: StructureDefinition-tiflow-secret.html
 [MedicationPlanIdentifier]: StructureDefinition-medication-plan-identifier.html
-[TIFlowOrderTask]: StructureDefinition-tiflow-order-task.html
 [TIFlowAccessCode]: StructureDefinition-tiflow-access-code.html
-[TIFlowSecret]: StructureDefinition-ti-flow-secret.html
+[TIWorkflowTask]: StructureDefinition-ti-workflow-task.html
 [TIOperationOutcome]: StructureDefinition-operation-outcome.html
 [TIOperationOutcomeDetailsCS]: CodeSystem-operation-outcome-details-codes.html
 [TIOperationOutcomeDetailsVS]: ValueSet-operation-outcome-details-vs.html
@@ -30,4 +30,3 @@
 [TIPatient]: StructureDefinition-ti-patient.html
 [TIPractitioner]: StructureDefinition-ti-practitioner.html
 [TIPractitionerRole]: StructureDefinition-ti-practitioner-role.html
-[TIFlowOrderTaskStatusVS]: ValueSet-tiflow-order-task-status-vs.html

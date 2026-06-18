@@ -1,8 +1,8 @@
-Profile: TIFlowOrderTask
+Profile: TIWorkflowTask
 Parent: Task
-Id: tiflow-order-task
-Title: "Task für TIFlow Verordnungen"
-Description: "Task für die Verwaltung von Workflows der TIFlow Verordnungen"
+Id: ti-workflow-task
+Title: "Task für TI-Workflows"
+Description: "Task für die Verwaltung von TI-Workflows"
 * insert Meta-With-Versioning
 // preserve the version of this resource
 * ^version = "1.4.0"
@@ -11,7 +11,7 @@ Description: "Task für die Verwaltung von Workflows der TIFlow Verordnungen"
 
 * identifier MS
   * ^short = "Kennungen und Zugriffsschlüssel zur Identifikation und Autorisierung im Workflow."
-  * ^comment = "Enthält fachliche Identifikatoren der Verordnung (z. B. Verordnungs- oder Prozesskennungen) sowie systemseitig erzeugte Zugriffsschlüssel oder Geheimnisse, die den Zugriff auf den Auftrag oder zugehörige Task autorisieren. Die konkrete Bedeutung ergibt sich aus dem jeweiligen Identifier-Typ." 
+  * ^comment = "Enthält fachliche Identifikatoren des Auftrags (z. B. Verordnungs- oder Prozesskennungen) sowie systemseitig erzeugte Zugriffsschlüssel oder Geheimnisse, die den Zugriff auf den Auftrag oder zugehörige Task autorisieren. Die konkrete Bedeutung ergibt sich aus dem jeweiligen Identifier-Typ." 
 
 // * identifier ^slicing.discriminator.type = #value
 // * identifier ^slicing.discriminator.path = "system"
@@ -32,9 +32,9 @@ Description: "Task für die Verwaltung von Workflows der TIFlow Verordnungen"
 //   * value 1..1
 // * intent = #order (exactly)
 
-* status from TIFlowOrderTaskStatusVS (required)
+// * status from TIFlowOrderTaskStatusVS (required)
 * status MS
-  * ^short = "draft | ready | on-hold | in-progress | completed | cancelled"
+  // * ^short = "draft | ready | on-hold | in-progress | completed | cancelled"
 
 * for MS
   * ^short = "Kennung des Begünstigten einer Aufgabe"

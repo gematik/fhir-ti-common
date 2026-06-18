@@ -1,15 +1,15 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "tiflow-communication",
-  "url": "https://gematik.de/fhir/ti/StructureDefinition/tiflow-communication",
+  "id": "ti-workflow-communication",
+  "url": "https://gematik.de/fhir/ti/StructureDefinition/ti-workflow-communication",
   "version": "1.4.0",
-  "name": "TIFlowCommunication",
-  "title": "Generische TIFlow Communication",
+  "name": "TIWorkflowCommunication",
+  "title": "Generische TI-Workflow Communication",
   "status": "draft",
   "experimental": false,
   "date": "2026-06-30",
   "publisher": "gematik GmbH",
-  "description": "Generische TIFlow Workflow-Communication",
+  "description": "Generische TI-Workflow Communication",
   "copyright": "gematik GmbH / Dieses Artefakt ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -60,14 +60,14 @@
         "id": "Communication.sent",
         "path": "Communication.sent",
         "short": "Der Zeitpunkt, zu dem diese Kommunikation gesendet wurde.",
-        "comment": "Wird vom TIFlow-Server gesetzt. Ein Client hat diesen Wert daher immer verfügbar.",
+        "comment": "Wird vom Fachdienst gesetzt. Ein Client hat diesen Wert daher immer verfügbar.",
         "mustSupport": true
       },
       {
         "id": "Communication.received",
         "path": "Communication.received",
         "short": "Der Zeitpunkt, zu dem diese Kommunikation empfangen wurde.",
-        "comment": "Wird vom TIFlow-Server gesetzt. Ein Client hat diesen Wert daher immer verfügbar.",
+        "comment": "Wird vom Fachdienst gesetzt. Ein Client hat diesen Wert daher immer verfügbar.",
         "mustSupport": true
       },
       {
@@ -81,8 +81,8 @@
         "id": "Communication.sender",
         "path": "Communication.sender",
         "short": "Die Entität (z. B. Person, Organisation), die Quelle der Kommunikation war.",
-        "definition": "Nachrichtenabsender — wird vom TIFlow-Server gesetzt.\r\nDie Entität (z. B. Person, Organisation), die Quelle der Kommunikation war.",
-        "comment": "Wird vom TIFlow-Server gesetzt.",
+        "definition": "Nachrichtenabsender — wird vom Fachdienst gesetzt.\r\nDie Entität (z. B. Person, Organisation), die Quelle der Kommunikation war.",
+        "comment": "Wird vom Fachdienst gesetzt.",
         "mustSupport": true
       },
       {

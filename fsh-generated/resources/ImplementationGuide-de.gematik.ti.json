@@ -162,10 +162,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/tiflow-communication"
+          "reference": "StructureDefinition/ti-workflow-communication"
         },
-        "name": "Generische TIFlow Communication",
-        "description": "Generische TIFlow Workflow-Communication",
+        "name": "Generische TI-Workflow Communication",
+        "description": "Generische TI-Workflow Communication",
         "exampleBoolean": false
       },
       {
@@ -218,6 +218,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/tiflow-secret"
+        },
+        "name": "Profil für das TIFlow Secret",
+        "description": "Das Secret ist ein generiertes Geheimnis, das Zugriff auf eine TIFlow Verordnung gewährt, z. B. Task.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/medication-plan-identifier"
         },
         "name": "Profil für den Identifikator eines eMP-Eintrags",
@@ -226,26 +234,18 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/tiflow-order-task"
-        },
-        "name": "Task für TIFlow Verordnungen",
-        "description": "Task für die Verwaltung von Workflows der TIFlow Verordnungen",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/tiflow-access-code"
         },
-        "name": "TI Flow AccessCode",
+        "name": "Profil für den TIFlow AccessCode",
         "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine Ressource gewährt, z. B. Task.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ti-flow-secret"
+          "reference": "StructureDefinition/ti-workflow-task"
         },
-        "name": "TI Flow Secret",
-        "description": "Das Secret ist ein generiertes Geheimnis, das Zugriff auf eine TIFlow Verordnung gewährt, z. B. Task.",
+        "name": "Task für TI-Workflows",
+        "description": "Task für die Verwaltung von TI-Workflows",
         "exampleBoolean": false
       },
       {
@@ -302,14 +302,6 @@
         },
         "name": "TI PractitionerRole",
         "description": "Dieses Profil beschreibt die Verwendung der FHIR-Ressource PractitionerRole in der Telematikinfrastruktur (TI). Es wird verwendet, um die Rolle und Funktion einer Gesundheitsfachperson innerhalb einer Organisation zu definieren.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/tiflow-order-task-status-vs"
-        },
-        "name": "TIFlow Order Task ValueSet",
-        "description": "TIFlow Order Task ValueSet",
         "exampleBoolean": false
       }
     ],
