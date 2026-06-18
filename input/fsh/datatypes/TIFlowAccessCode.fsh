@@ -3,7 +3,7 @@ Alias: $GEM_ERP_NS_AccessCode = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP
 Profile: TIFlowAccessCode
 Parent: Identifier
 Id: tiflow-access-code
-Title: "TI Flow AccessCode"
+Title: "Profil für den TIFlow AccessCode"
 Description: "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine Ressource gewährt, z. B. Task."
 * insert Meta
 // * insert LegacyERPUrl(StructureDefinition, GEM_ERP_PR_AccessCode)
@@ -11,4 +11,4 @@ Description: "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine
 * system 1.. MS
 * system = $GEM_ERP_NS_AccessCode (exactly)
 * value 1.. MS
-  * ^comment = "Das Datenmodell ist in der Spezifikation für den TI-Flow-Fachdienst zu finden."
+  * ^comment = "Das Datenmodell ist in der Spezifikation für den TIFlow-Fachdienst zu finden."
