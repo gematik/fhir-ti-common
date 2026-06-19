@@ -21,6 +21,7 @@ Thumbs.db
 **/dependencies
 **/extracted
 **/.temp
+**/fsh-generated
 
 _gencontinuous.*
 _updatePublisher.bat

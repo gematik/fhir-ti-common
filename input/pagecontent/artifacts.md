@@ -73,7 +73,10 @@ Dieses Capability Statement Profil dient als TI-weit gültige Referenz für die 
 StructureDefinition/extension-base-url,
 StructureDefinition/extension-http-header,
 StructureDefinition/extension-http-response-info,
-StructureDefinition/extension-http-method
+StructureDefinition/extension-http-method,
+StructureDefinition/ti-environment,
+StructureDefinition/ti-feature,
+StructureDefinition/ti-fhir-configuration
 {% endcapture %}
 {% include artifacts-table-generator.html render=tihttpbasic %}
 <div><figcaption><strong>Tabelle:</strong> Capability Statement Extensions</figcaption></div>
