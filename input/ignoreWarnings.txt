@@ -61,6 +61,7 @@ The string value contains text that looks like embedded HTML tags. If this conte
 %https://gematik.de/fhir/directory/ValueSet/OrganizationProfessionOIDTypeVS%
 %https://gematik.de/fhir/directory/ValueSet/OrganizationTypeVS%
 %https://gematik.de/fhir/directory/ValueSet/PractitionerQualificationVS%
+%https://gematik.de/fhir/ti/CodeSystem/ti-fhir-configuration-cs%
 
 
 # This expansion is done manually, so there are no parameters and identifiers

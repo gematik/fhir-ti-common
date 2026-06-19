@@ -38,7 +38,7 @@ Context: CapabilityStatement, CapabilityStatement.rest, CapabilityStatement.rest
   * ^short = "Kanonischer Feature-Bezeichner"
   * ^definition = """
     Canonical-URL, die das Feature eindeutig identifiziert.
-    Für gematik-eigene Features: `https://gematik.de/fhir/erp/FeatureDefinition/<Name>`.
+    Für gematik-eigene Features: `https://gematik.de/fhir/erp/FeatureDefinition/[Name]`.
     Die zulässigen Werte sind im ValueSet GEM_ERP_VS_CapabilityStatement_Feature
     als Konzept-URIs definiert.
     """
