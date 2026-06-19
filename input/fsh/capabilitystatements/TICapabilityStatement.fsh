@@ -19,7 +19,10 @@ Description: "Dieses Profil beschreibt die Fähigkeiten eines FHIR Data Service 
 * extension contains 
   BaseUrl named baseUrl 0..1 and
   HTTPHeader named header 0.. and
-  HttpResponseInfo named responseInfo 0..
+  HttpResponseInfo named responseInfo 0.. and
+  TIEnvironment named environment 0..1 and
+  TIFHIRConfiguration named fhirConfiguration 0..1 and
+  TIFeature named feature 0..*
 
 * rest.resource.interaction.extension contains
   HTTPHeader named header 0.. and
