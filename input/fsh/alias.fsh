@@ -35,13 +35,6 @@ Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $cs-pzn = http://fhir.de/CodeSystem/ifa/pzn
 Alias: $icd-10-gm = http://fhir.de/CodeSystem/bfarm/icd-10-gm
 
-<<<<<<< HEAD
-// Schlüsseltabellen
-Alias: $KBV_VS_SFHIR_BAR2_ARZTNRFACHGRUPPE = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_BAR2_ARZTNRFACHGRUPPE
-
-// HL7
-Alias: $hl7-task-status-cs = http://hl7.org/fhir/task-status
-=======
 // Schlüsseltabellen CS
 Alias: $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM
 Alias: $cs-kbv-narcotics = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_NARCOTIC_LABEL
@@ -74,11 +67,12 @@ Alias: $medicationDispense-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.
 Alias: $medicationRequest-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction
 Alias: $medicationRequest-effectiveDosePeriod-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.effectiveDosePeriod
 
-// International
+//// International
+// HL7
 Alias: $cs-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation|4.0.1
+Alias: $hl7-task-status-cs = http://hl7.org/fhir/task-status
 
 
 //// Dataprofiles
 // National
 Alias: $coding-icd-10-gm = http://fhir.de/StructureDefinition/CodingICD10GM
->>>>>>> 9983c3d (WIP)

@@ -1,7 +1,7 @@
-Profile: TIMedicationDispense
+Profile: TIMedicationDispenseDgMP
 Parent: MedicationDispense
-Id: ti-medication-dispense
-Title: "TI MedicationDispense"
+Id: ti-medication-dispense-dgmp
+Title: "TI MedicationDispense dgMP"
 Description: "Defines the medication dispense resource for the Medication Service in the TI ecosystem."
 * insert Meta-With-Versioning
 // preserve the version

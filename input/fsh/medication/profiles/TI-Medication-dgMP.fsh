@@ -1,7 +1,7 @@
-Profile: TIMedication
+Profile: TIMedicationDgMP
 Parent: Medication
-Id: ti-medication
-Title: "TI Medication"
+Id: ti-medication-dgmp
+Title: "TI Medication dgMP"
 Description: "Defines the medication resource for the Medication Service in the TI ecosystem."
 // preserve the version
 * ^version = "1.0.0"

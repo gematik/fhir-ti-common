@@ -1,7 +1,7 @@
-Profile: TIMedicationRequest
+Profile: TIMedicationRequestDgMP
 Parent: MedicationRequest
-Id: ti-medication-request
-Title: "TI MedicationRequest"
+Id: ti-medication-request-dgmp
+Title: "TI MedicationRequest dgMP"
 Description: "Defines the medication request resource for the Medication Service in the TI ecosystem."
 * insert Meta-With-Versioning
 // preserve the version

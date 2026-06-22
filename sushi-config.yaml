@@ -147,6 +147,13 @@ parameters:
     - https://gematik.de/fhir/epa-medication/StructureDefinition/rx-originator-process-identifier
     - https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier
     - https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-bvg-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/narcotics-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/patient-id-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/prescriber-id-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/teratogenic-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension
 
 instanceOptions:
   # When set to true, slices must be referred to by name and not only by a numeric index in order to be used
