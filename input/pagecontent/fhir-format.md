@@ -15,6 +15,9 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS das FHIR-Format in [FHIR JSON] verarbeiten können.
 </requirement>
 
@@ -30,6 +33,9 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS für Anfragenachrichten und Antwortnachrichten an den Schnittstellen den Content Type <code>application/fhir+json</code> unterstützen.
@@ -49,6 +55,9 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS das FHIR-Format in [FHIR XML] verarbeiten können.
 </requirement>
 
@@ -66,6 +75,9 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS für Anfragenachrichten und Antwortnachrichten an den Schnittstellen den Content Type <code>application/fhir+xml</code> unterstützen.
 </requirement>
 
@@ -81,6 +93,9 @@ Die Serialisierung von FHIR-Format-Repräsentationen in einem FHIR Data Service 
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS den <i>Accept</i> Header in eingehenden HTTP-Anfragen auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i> Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem Format zurückgeben, das von den beiden Formaten als bevorzugte Option angegeben wurde.
@@ -142,6 +157,9 @@ Content-Type: application/fhir+xml
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS gemäß der [FHIR General parameters] den <i>_format</i>-Parameter in Anfragenachricht auswerten, um das gewünschte Antwortformat zu bestimmen.
     <br/>
     Der FHIR Data Service MUSS folgende Werte für den <i>_format</i>-Parameter unterstützen:
@@ -172,6 +190,9 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=10&_offset=20&_format=json
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS, sofern die entsprechende Schnittstelle ein FHIR-Format zurückgibt, das Format <i>application/fhir+json</i> verwenden, wenn in der Anfragenachricht kein unterstütztes Format durch den <i>_format</i>-Parameter und
     <ul>
         <li>kein <i>Accept</i> Header,</li>
@@ -194,6 +215,9 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=10&_offset=20&_format=json
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS sicherstellen, dass der <i>_format</i>-Parameter den Content Type Header für den Formattyp des Bodys einer POST-Nachricht nicht überschreibt.
 </requirement>
 
@@ -209,6 +233,9 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=10&_offset=20&_format=json
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Falls sowohl der <i>Accept</i> Header als auch der <i>_format</i>-Parameter in einer Anfragenachricht angegeben sind, MUSS der FHIR Data Service den <i>_format</i>-Parameter priorisieren und das Antwortformat entsprechend diesem verarbeiten. Der <i>Accept</i> Header MUSS in diesem Fall ignoriert werden.

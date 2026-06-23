@@ -519,6 +519,9 @@ Zum Auflösen einer versionerten Referenz, muss zunächst ein Treffer auf Grund 
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Ein FHIR Data Service MUSS an dem Endpunkt /metadata gemäß der [Capabilities-Interaktion] ein Capability Statement Typ <i>kind = instance</i> bereitstellen. Dieses Capability Statement muss im Element <i>software</i> den Namen und die Versionsnummer der eingesetzten Software angeben. Dieses Capability Statement muss sämtliche Anforderungen an den FHIR Data Service aus dem Capability Statement vom Typ <i>kind = requirements</i> der zugrundeliegenden Spezifikation erfüllen.
 </requirement>
 
