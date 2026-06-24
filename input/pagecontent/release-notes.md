@@ -4,6 +4,10 @@
 
 - Hinzugefügt wurde das Profil für den TIFlow AccessCode und das Profil für das TIFlow Secret.
 
+#### Medikationsprozess (dgMP)
+
+- Ergänzung der dgMP-spezifischen Medikationsprofile, einschließlich TIMedicationDgMP, TIMedicationRequestDgMP, TIMedicationDispenseDgMP und TIMedicationStatementDgMP.
+
 #### Anforderungen
 
 Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.

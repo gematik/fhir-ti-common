@@ -78,7 +78,6 @@ menu:
     "Query API: Paginierung": query-api-paging.html
     "Query API: Suche / Sortierung": query-api-search.html
     FHIR-Formatserialisierung: fhir-format.html
-  FHIR-Artefakte: artifacts.html
   Anhänge:
     Referenzen: referenced.html
     Downloads: downloads.html
@@ -86,6 +85,7 @@ menu:
     Anforderungslisten: spec-sheet.html
     Versionsvergleiche: comparisons.html
     Lizenz: license.html
+  FHIR-Artefakte: artifacts.html
 
 # https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
 parameters:
