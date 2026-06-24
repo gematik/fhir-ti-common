@@ -26,15 +26,16 @@ Description: "Defines the medication request resource for the Medication Service
 * identifier[RxOriginatorProcessIdentifier] ^patternIdentifier.system = $rx-originator-process-identifier
 
 * extension contains
-    MultiplePrescriptionExtension named multiplePrescription 0..1 MS and
-    IndicatorBVGExtension named isBvg 0..1 MS and
-    IndicatorSERExtension named isSer 0..1 MS and
-    PrescriberIDExtension named prescriberID 0..1 MS and
-    PatientIDExtension named patientID 0..1 MS and
-    NarcoticsExtension named narcotics 0..1 MS and
-    TeratogenicExtension named teratogenic 0..1 MS and
-    $medicationRequest-renderedDosageInstruction-r5 named renderedDosageInstruction 0..1 MS and
-    GeneratedDosageInstructionsMeta named generatedDosageInstructionsMeta 0..1 MS
+  ContextExtension named context 0..1 MS and
+  MultiplePrescriptionExtension named multiplePrescription 0..1 MS and
+  IndicatorBVGExtension named isBvg 0..1 MS and
+  IndicatorSERExtension named isSer 0..1 MS and
+  PrescriberIDExtension named prescriberID 0..1 MS and
+  PatientIDExtension named patientID 0..1 MS and
+  NarcoticsExtension named narcotics 0..1 MS and
+  TeratogenicExtension named teratogenic 0..1 MS and
+  $medicationRequest-renderedDosageInstruction-r5 named renderedDosageInstruction 0..1 MS and
+  GeneratedDosageInstructionsMeta named generatedDosageInstructionsMeta 0..1 MS
 
 * extension[isBvg].value[x] MS
 * extension[isBvg].valueBoolean MS

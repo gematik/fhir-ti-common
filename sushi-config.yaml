@@ -154,6 +154,8 @@ parameters:
     - https://gematik.de/fhir/epa-medication/StructureDefinition/prescriber-id-extension
     - https://gematik.de/fhir/epa-medication/StructureDefinition/teratogenic-extension
     - https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/context-extension
+    - https://gematik.de/fhir/epa-medication/CodeSystem/context-code
 
 instanceOptions:
   # When set to true, slices must be referred to by name and not only by a numeric index in order to be used

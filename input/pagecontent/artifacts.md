@@ -52,12 +52,31 @@ StructureDefinition/tiflow-secret
 
 ### Medikationsprozess (dgMP)
 
+#### Code Systems
+
+{% capture dgmp-cs %}
+CodeSystem/context-code,
+{% endcapture %}
+{% include artifacts-table-generator.html render=dgmp-cs %}
+<div><figcaption><strong>Tabelle:</strong> Medikationsprozess Code Systems</figcaption></div>
+
+
+#### Value Sets
+
+{% capture dgmp-vs %}
+ValueSet/context-code,
+{% endcapture %}
+{% include artifacts-table-generator.html render=dgmp-vs %}
+<div><figcaption><strong>Tabelle:</strong> Medikationsprozess Value Sets</figcaption></div>
+
+
 #### Ressourcenprofile
 
 {% capture dgmp-profiles %}
 StructureDefinition/ti-medication-dgmp,
 StructureDefinition/ti-medication-dispense-dgmp,
 StructureDefinition/ti-medication-request-dgmp,
+StructureDefinition/ti-medication-statement-dgmp,
 {% endcapture %}
 {% include artifacts-table-generator.html render=dgmp-profiles %}
 <div><figcaption><strong>Tabelle:</strong> Medikationsprozess Ressourcenprofile</figcaption></div>
@@ -82,6 +101,7 @@ StructureDefinition/medication-packaging-size-extension,
 StructureDefinition/medication-manufacturing-instructions-extension,
 StructureDefinition/medication-is-vaccine-extension,
 StructureDefinition/medication-ingredient-darreichungsform-extension,
+StructureDefinition/context-extension,
 {% endcapture %}
 {% include artifacts-table-generator.html render=dgmp-extensions %}
 <div><figcaption><strong>Tabelle:</strong> Medikationsprozess Extensions</figcaption></div>

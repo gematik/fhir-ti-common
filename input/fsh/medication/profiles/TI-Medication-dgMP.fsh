@@ -10,6 +10,7 @@ Description: "Defines the medication resource for the Medication Service in the 
 * insert Meta-With-Versioning
 
 * extension contains
+    ContextExtension named context 0..1 MS and
     RxPrescriptionProcessIdentifierExtension named rxPrescriptionProcessIdentifier 0..1 MS and
     MedicationIsVaccineExtension named isVaccine 0..1 MS and
     DrugCategoryExtension named drugCategory 0..1 MS and
