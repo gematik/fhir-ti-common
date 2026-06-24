@@ -3,10 +3,11 @@ actor:
 - EPA-MHD-Service
 - EPA-Medication-Service
 - EPA-Patient-Service
+- TI-Flow_FD
 conformance: SHALL
 content_hash: 22f3ec0767669a45f4ed7ee36167c66555462ab59db35ea1fd7beff5e6ab126a
 created: '2025-03-06T13:37:59.523187'
-date: '2025-11-18T11:03:10.858065'
+date: '2026-06-24T14:46:41.666820'
 key: IG-TI94558MGC
 modified: '2025-03-12T12:47:19.475179'
 release_status: STABLE
@@ -20,6 +21,8 @@ test_procedures:
   EPA-Medication-Service:
   - Produkttest
   EPA-Patient-Service:
+  - Produkttest
+  TI-Flow_FD:
   - Produkttest
 text: Falls sowohl der <i>Accept</i> Header als auch der <i>_format</i>-Parameter
   in einer Anfragenachricht angegeben sind, MUSS der FHIR Data Service den <i>_format</i>-Parameter

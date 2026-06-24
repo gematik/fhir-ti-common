@@ -712,6 +712,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI18063SU7"
@@ -775,6 +788,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI19904KM0"
@@ -831,6 +857,19 @@
                         "name": "EPA-Patient-Service",
                         "id": "productType162",
                         "description": "EPA-Patient-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -1414,6 +1453,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/general-principles.html#IG-TI38467S3Q"
@@ -1862,6 +1914,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI57083QMG"
@@ -1918,6 +1983,19 @@
                         "name": "EPA-Patient-Service",
                         "id": "productType162",
                         "description": "EPA-Patient-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -2162,6 +2240,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI62490PR0-01"
@@ -2218,6 +2309,19 @@
                         "name": "EPA-Patient-Service",
                         "id": "productType162",
                         "description": "EPA-Patient-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {
@@ -2836,6 +2940,19 @@
                             "name": "funkt. Eignung: Test Produkt/FA"
                         }
                     ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.4.0-ballot.1/fhir-format.html#IG-TI94558MGC"
@@ -3005,6 +3122,19 @@
                         "name": "EPA-Patient-Service",
                         "id": "productType162",
                         "description": "EPA-Patient-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "TI-Flow_FD",
+                        "id": "productType175",
+                        "description": "TI-Flow-Fachdienst"
                     },
                     "test_procedure": [
                         {

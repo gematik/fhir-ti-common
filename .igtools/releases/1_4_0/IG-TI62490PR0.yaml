@@ -3,10 +3,11 @@ actor:
 - EPA-MHD-Service
 - EPA-Medication-Service
 - EPA-Patient-Service
+- TI-Flow_FD
 conformance: SHALL
 content_hash: a532db5c969b1f8317410a404b69f35d467cd54ad8dbc7d1508270261a116a6c
 created: '2025-03-06T13:30:46.537950'
-date: '2025-11-18T11:03:10.857519'
+date: '2026-06-24T14:46:41.666000'
 key: IG-TI62490PR0
 modified: '2025-11-14T09:34:47.788257'
 release_status: STABLE
@@ -20,6 +21,8 @@ test_procedures:
   EPA-Medication-Service:
   - Produkttest
   EPA-Patient-Service:
+  - Produkttest
+  TI-Flow_FD:
   - Produkttest
 text: "Der FHIR Data Service MUSS, sofern die entsprechende Schnittstelle ein FHIR-Format\
   \ zurückgibt, das Format <i>application/fhir+json</i> verwenden, wenn in der Anfragenachricht\
