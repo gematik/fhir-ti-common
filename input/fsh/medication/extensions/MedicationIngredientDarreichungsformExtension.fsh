@@ -9,7 +9,7 @@ Description: "Dosage form of an ingredient in a formulation."
 * ^status = #active
 
 * value[x] only string
-* valueString 1..
+* valueString 1.. MS
   * ^short = "Dosage form of an ingredient in a formulation."
   * ^definition = "The dosage form as free text can be used if the ingredient in the formulation is not a finished medicinal product."
   * ^maxLength = 30

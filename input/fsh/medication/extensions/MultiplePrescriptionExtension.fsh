@@ -11,21 +11,21 @@ Description: "This FHIR Extension for multiple prescriptions adds details such a
 
 * extension ^slicing.rules = #closed
 * extension contains
-    indicator 0..1 and
-    counter 0..1 and
-    period 0..1 and
+    indicator 0..1 MS and
+    counter 0..1 MS and
+    period 0..1 MS and
     id 0..1
 * extension[indicator]
-  * value[x] 1..
+  * value[x] 1.. MS
   * value[x] only boolean
-  * valueBoolean 1..
+  * valueBoolean 1.. MS
   * valueBoolean ^short = "Multiple Prescription Indicator"
   * valueBoolean ^definition = "Indicator of whether the current prescription is part of a multiple prescription\r\n\r\ntrue - the current prescription is part of a multiple prescription \r\nfalse - the current prescription is not part of a multiple prescription"
 
 * extension[counter]
-  * value[x] 1..
+  * value[x] 1.. MS
   * value[x] only Ratio
-  * valueRatio 1..
+  * valueRatio 1.. MS
   * valueRatio.numerator 1..
   * valueRatio.numerator.value 1..
   * valueRatio.numerator.value ^short = "Multiple Prescription Counter"
@@ -45,9 +45,9 @@ Description: "This FHIR Extension for multiple prescriptions adds details such a
 
 * extension[period]
   * ^short = "Zeitraum der Einlösefrist"
-  * value[x] 1..
+  * value[x] 1.. MS
   * value[x] only Period
-  * valuePeriod 1..
+  * valuePeriod 1.. MS
   * valuePeriod only Period
   * valuePeriod obeys -limitationDateStart and -limitationDateEnd
   * valuePeriod.start 1..
@@ -57,9 +57,9 @@ Description: "This FHIR Extension for multiple prescriptions adds details such a
   * valuePeriod.end ^definition = "Date of the last redemption day for the partial prescription within the multiple prescription series. \nThe issuer may specify a redemption period different from the one outlined in the Medicinal Products Prescription Ordinance (AMVV)"
 
 * extension[id]
-  * value[x] 1..
+  * value[x] 1.. MS
   * value[x] only Identifier
-  * valueIdentifier 1..
+  * valueIdentifier 1.. MS
   * valueIdentifier.use ..0
   * valueIdentifier.type ..0
   * valueIdentifier.system = "urn:ietf:rfc:3986" (exactly)

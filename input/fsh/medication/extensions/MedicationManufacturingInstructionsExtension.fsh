@@ -9,7 +9,7 @@ Description: "Manufacturing instructions regarding the preparation of a formulat
 * ^status = #active
 
 * value[x] only string
-* valueString 1..
+* valueString 1.. MS
   * ^short = "Manufacturing instructions for a formulation."
   * ^definition = "Manufacturing instructions regarding the preparation of a formulation (Subscriptio)."
   * ^maxLength = 500

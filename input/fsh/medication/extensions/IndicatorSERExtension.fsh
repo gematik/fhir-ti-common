@@ -9,7 +9,7 @@ Description: "Kennzeichnung, ob diese Verordnung mit Bezug zum Sozialen Entschä
 * ^status = #active
 
 * value[x] only boolean
-* valueBoolean 1..
+* valueBoolean 1.. MS
 * valueBoolean ^short = "SER"
 * valueBoolean ^definition = """
     Kennzeichnung, ob diese Verordnung mit Bezug zum Sozialen Entschädigungsrecht nach SGB XIV (SER) erfolgt

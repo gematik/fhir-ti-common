@@ -9,14 +9,14 @@ Description: "Abbildung der Angaben zur Verordnung eines Betäubungsmittels im S
 * ^status = #active
 
 * value[x] 0..0
-* url MS
-* extension MS
+// * url MS
+// * extension MS
 * extension ^slicing.rules = #closed
 * extension contains
     narcotics-markings 0..1 MS and
     additional-information-substitutes 0..1 MS
 * extension[narcotics-markings]
-  * url MS
+  // * url MS
   * value[x] MS
   * value[x] only Coding
   * valueCoding from $vs-kbv-narcotics (required)
@@ -29,7 +29,7 @@ Description: "Abbildung der Angaben zur Verordnung eines Betäubungsmittels im S
     * code ^short = "Kennzeichen nach § 9 Abs. 1 Nr. 6 BtMVV"
     * code ^definition = "Kennzeichen nach § 9 Abs. 1 Nr. 6 BtMVV"
 * extension[additional-information-substitutes]
-  * url MS
+  // * url MS
   * value[x] MS
   * value[x] only string
   * valueString MS

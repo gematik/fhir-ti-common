@@ -9,7 +9,7 @@ Description: "Information on the packaging of a formulation."
 * ^status = #active
 
 * value[x] only string
-* valueString 1..
+* valueString 1.. MS
   * ^short = "Packaging of a formulation."
   * ^definition = "Information on transport containers or packaging for a formulation."
   * ^maxLength = 90

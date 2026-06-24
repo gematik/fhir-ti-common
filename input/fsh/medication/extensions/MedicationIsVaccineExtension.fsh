@@ -9,7 +9,7 @@ Description: "Indicator of whether this is a vaccine."
 * ^status = #active
 
 * value[x] only boolean
-* valueBoolean 1..
+* valueBoolean 1.. MS
 * valueBoolean ^short = "Vaccine Indicator"
 * valueBoolean ^definition = """
     Indicator of whether this is a vaccine..

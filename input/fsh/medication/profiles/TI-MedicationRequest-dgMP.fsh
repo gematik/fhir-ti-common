@@ -5,8 +5,8 @@ Title: "TI MedicationRequest dgMP"
 Description: "Defines the medication request resource for the Medication Service in the TI ecosystem."
 * insert Meta-With-Versioning
 // preserve the version
-* ^version = "1.0.0"
-* ^date = "2026-06-30"
+* ^version = "1.4.0"
+// * ^date = "2026-06-30"
 * ^status = #active
 
 * identifier ^slicing.discriminator.type = #pattern
@@ -18,6 +18,7 @@ Description: "Defines the medication request resource for the Medication Service
 * identifier contains
     RxPrescriptionProcessIdentifier 0..1 and
     RxOriginatorProcessIdentifier 0..1
+
 * identifier[RxPrescriptionProcessIdentifier] only RxPrescriptionProcessIdentifier
 * identifier[RxPrescriptionProcessIdentifier] ^patternIdentifier.system = $rx-prescription-process-identifier
 
@@ -25,77 +26,120 @@ Description: "Defines the medication request resource for the Medication Service
 * identifier[RxOriginatorProcessIdentifier] ^patternIdentifier.system = $rx-originator-process-identifier
 
 * extension contains
-    MultiplePrescriptionExtension named multiplePrescription 0..1 and
-    IndicatorBVGExtension named isBvg 0..1 and
-    IndicatorSERExtension named isSer 0..1 and
-    PrescriberIDExtension named prescriberID 0..1 and
-    PatientIDExtension named patientID 0..1 and
-    NarcoticsExtension named narcotics 0..1 and
-    TeratogenicExtension named teratogenic 0..1 and
-    $medicationRequest-renderedDosageInstruction-r5 named renderedDosageInstruction 0..1 and
-    GeneratedDosageInstructionsMeta named generatedDosageInstructionsMeta 0..1
+    MultiplePrescriptionExtension named multiplePrescription 0..1 MS and
+    IndicatorBVGExtension named isBvg 0..1 MS and
+    IndicatorSERExtension named isSer 0..1 MS and
+    PrescriberIDExtension named prescriberID 0..1 MS and
+    PatientIDExtension named patientID 0..1 MS and
+    NarcoticsExtension named narcotics 0..1 MS and
+    TeratogenicExtension named teratogenic 0..1 MS and
+    $medicationRequest-renderedDosageInstruction-r5 named renderedDosageInstruction 0..1 MS and
+    GeneratedDosageInstructionsMeta named generatedDosageInstructionsMeta 0..1 MS
 
+* extension[isBvg].value[x] MS
+* extension[isBvg].valueBoolean MS
+
+* extension[isSer].value[x] MS
+* extension[isSer].valueBoolean MS
+
+* extension[narcotics].extension MS
 * extension[narcotics]
   * ^short = "Betäubungsmittel (BtM)"
   * ^definition = "Abbildung der Angaben zur Verordnung eines Betäubungsmittels im Sinne des Betäubungsmittelgesetzes (BtMG)"
 
+* extension[teratogenic].extension MS
 * extension[teratogenic]
   * ^short = "T-Rezept"
   * ^definition = "Abbildung der Angaben zur Verordnung eines teratogenen Arzneimittels (T-Rezept)"
 
-* extension[multiplePrescription] MS
+* extension[prescriberID]
+  * value[x] MS
+  * valueIdentifier MS
+
+* extension[patientID]
+  * value[x] MS
+  * valueIdentifier MS
+
+* extension[multiplePrescription]
   * extension[indicator] MS
-    * value[x] only boolean
+  * extension[indicator].value[x] only boolean
+  * extension[indicator].valueBoolean MS
+
+* extension[multiplePrescription]
   * extension[counter] MS
-    * value[x] only Ratio
+  * extension[counter].value[x] only Ratio
+  * extension[counter].valueRatio MS
+  * extension[counter].valueRatio.numerator MS
+  * extension[counter].valueRatio.numerator.value MS
+  * extension[counter].valueRatio.denominator MS
+  * extension[counter].valueRatio.denominator.value MS
+
+* extension[multiplePrescription]
   * extension[period] MS
-    * value[x] only Period
+  * extension[period].value[x] only Period
+  * extension[period].valuePeriod MS
+  * extension[period].valuePeriod.start MS
+  * extension[period].valuePeriod.end MS
+
+* extension[multiplePrescription]
   * extension[id] MS
-    * value[x] only Identifier
+  * extension[id].value[x] only Identifier
+  * extension[id].valueIdentifier MS
+  * extension[id].valueIdentifier.system MS
+  * extension[id].valueIdentifier.value MS
 
 * insert renderedDosageInstructionDefinition
 
 * status from $ti-medication-request-status-vs
+* status MS
 * status ^short = "Status of Medication Request"
 
+* intent MS
 * intent ^short = "filler-order"
 * intent ^definition = "e.g. when data is synchronized with the E-Rezept-Fachdienst, the 'filler-order' code should be used here."
 
 * insert Subject(subject)
 
+* medication[x] MS
 * medication[x] only Reference
+* medicationReference MS
 * medicationReference only Reference(Medication)
-* medicationReference insert ReferenceMS
 
+* requester MS
 * requester only Reference(Organization or Practitioner or PractitionerRole)
-* requester insert ReferenceMS
-* authoredOn 1..
+
+* authoredOn 1.. MS
 * authoredOn ^short = "Issue Date"
 * authoredOn ^definition = "Issue Date of the Prescription"
 
-* note ..1
-  * insert AnnotationMS
+* note ..1 MS
+  * text MS
   * text ^short = "Dispensing Note"
   * text ^definition = "Instructions to the pharmacy that go beyond the dosage information"
 
+* dosageInstruction MS
 * dosageInstruction only DosageDgMP
   * ^short = "Hier werden Informationen zur Dosierung angegeben."
   * ^definition = "Hier werden Informationen zur Dosierung angegeben."
-  * insert DosageDgMPMS
+  // * insert DosageDgMPMS
 
-* dispenseRequest 0..
-  * quantity 0..
-    * value 1..
+* dispenseRequest 0.. MS
+  * expectedSupplyDuration MS
+  * quantity 0.. MS
+    * value 1.. MS
     * value ^short = "Number of Prescribed Packages"
     * value ^definition = "Number of Prescribed Packages"
-    * system 0..1
+    * system 0..1 MS
     * system = $cs-ucum
-    * code 0..
+    * code 0.. MS
+    * unit MS
     // * code = #{Package}
 
-* substitution
-  * allowed[x] only boolean
-  * allowedBoolean 1..
+* substitution MS
+* substitution.allowed[x] only boolean
+* substitution.allowedBoolean 1.. MS
 
-* basedOn only Reference(MedicationRequest)
-* basedOn.identifier only MedicationPlanIdentifier
+* basedOn MS
+  * reference MS
+  * identifier MS
+  * identifier only MedicationPlanIdentifier

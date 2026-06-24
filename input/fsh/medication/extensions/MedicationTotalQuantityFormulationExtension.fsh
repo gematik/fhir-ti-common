@@ -9,7 +9,7 @@ Description: "Total quantity of the formulation (without the unit)."
 * ^status = #active
 
 * value[x] only string
-* valueString 1..
+* valueString 1.. MS
   * ^short = "Total quantity of the formulation."
   * ^definition = "Total quantity of the formulation (without the unit)."
   * ^maxLength = 7

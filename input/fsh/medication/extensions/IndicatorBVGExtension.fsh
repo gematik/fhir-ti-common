@@ -9,7 +9,7 @@ Description: "Indicator of whether this regulation is made in reference to the '
 * ^status = #active
 
 * value[x] only boolean
-* valueBoolean 1..
+* valueBoolean 1.. MS
 * valueBoolean ^short = "BVG"
 * valueBoolean ^definition = """
     Indicator of whether this regulation applies to claimants under the 'Bundesentschädigungsgesetz' (BEG) or to claimants under the 'Bundesversorgungsgesetz' (BVG).

@@ -9,7 +9,7 @@ Description: "Extension for indicating the medication category."
 * ^status = #active
 
 * value[x] only Coding
-* valueCoding 1..
+* valueCoding 1.. MS
 * valueCoding only Coding
 * valueCoding from $ti-drug-category-vs (required)
   * code ^short = "Category"

@@ -8,9 +8,9 @@ Description: "Patienten-ID, welche bei der Verordnung bestimmter Arzneimittel an
 * ^date = "2025-12-15"
 * ^status = #active
 
-* value[x] 1..
+* value[x] 1.. MS
 * value[x] only Identifier
-* valueIdentifier 1..
+* valueIdentifier 1.. MS
 * valueIdentifier.use ..0
 * valueIdentifier.type ..0
 * valueIdentifier.value 1..1
