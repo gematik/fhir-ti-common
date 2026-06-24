@@ -26,7 +26,7 @@ publisher:
 dependencies:
   hl7.fhir.uv.xver-r5.r4: latest
   de.basisprofil.r4: 1.5.4
-  de.fhir.medication: 1.0.4
+  de.fhir.medication: 1.0.7
 
 # FSHOnly: true
 

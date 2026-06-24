@@ -45,6 +45,9 @@ Alias: $vs-kbv-narcotics = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_NARCOTI
 Alias: $vs-kbv-sfhir-bmp-dosiereinheit = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_BMP_DOSIEREINHEIT
 Alias: $vs-kbv-medication-darreichungsform = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_DARREICHUNGSFORM
 
+// IFA CS
+Alias: $cs-ifa-medication-darreichungsform = https://fhir.ifaffm.de/CodeSystem/IFA_DARREICHUNGSFORM 
+
 // TI CS
 Alias: $epa-drug-category-cs = https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs
 
@@ -79,3 +82,7 @@ Alias: $hl7-task-status-cs = http://hl7.org/fhir/task-status
 //// Dataprofiles
 // National
 Alias: $coding-icd-10-gm = http://fhir.de/StructureDefinition/CodingICD10GM
+
+
+//// FHIR
+Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason

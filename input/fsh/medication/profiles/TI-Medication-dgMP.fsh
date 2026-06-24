@@ -93,6 +93,8 @@ Description: "Defines the medication resource for the Medication Service in the 
 
 * form MS
   * ^short = "Form of Dispensing"
+  * extension MS
+  * extension contains $data-absent-reason named dataAbsentReason 0..1 MS
   * coding MS
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -100,7 +102,8 @@ Description: "Defines the medication resource for the Medication Service in the 
   * coding contains
       // edqm 0.. and
       // snomed 0.. and
-      kbvDarreichungsform 0.. MS
+      kbvDarreichungsform 0..1 MS and
+      ifaDarreichungsform 0..1 MS
   // * coding[edqm] from $vs-edqm-doseform (preferred)
   //   * ^patternCoding.system = $cs-edqm
   //   * system 1..1 MS
@@ -119,6 +122,13 @@ Description: "Defines the medication resource for the Medication Service in the 
     * system 1..1 MS
     * code 1..1 MS
     * display MS
+  * coding[ifaDarreichungsform] from $cs-ifa-medication-darreichungsform (required)
+    * ^patternCoding.system = $cs-ifa-medication-darreichungsform
+    * system 1..1 MS
+    * code 1..1 MS
+    * display MS
+  * text MS
+
 * amount 0..1 MS
   // * insert RatioMS
   * numerator 0..1 MS
