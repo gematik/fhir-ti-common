@@ -13,6 +13,5 @@ Description: "Das Operation Outcome-Profil für die Telematikinfrastruktur (TI) 
   * severity MS
   * code MS
   * details MS
-    * insert CodeableConceptMS
   * details from TIOperationOutcomeDetailsVS (preferred)
   * diagnostics MS

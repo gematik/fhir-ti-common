@@ -24,7 +24,9 @@ publisher:
   email: patientteam [ at ] gematik.de
 
 dependencies:
+  hl7.fhir.uv.xver-r5.r4: latest
   de.basisprofil.r4: 1.5.4
+  de.fhir.medication: 1.0.7
 
 # FSHOnly: true
 
@@ -39,6 +41,8 @@ pages:
     title: "Query API: Allgemeine Anforderungen Paginierung"
   fhir-format.md:
     title: "FHIR-Formatserialisierung"
+  validation.md:
+    title: "Validierung"
   artifacts.md:
     title: "FHIR-Artefakte"
   referenced.md:
@@ -47,6 +51,8 @@ pages:
     title: "Downloads"
   release-notes.md:
     title: "Release Notes"
+  dependencies.md:
+    title: Abhängigkeiten
   spec-sheet.md:
     title: "Anforderungslisten"
     actor-epa-medication.md:
@@ -71,19 +77,22 @@ pages:
 
 menu:
   Home: index.html
-  Generelle Prinzipien: general-principles.html
+  Generelle Prinzipien:
+    Generelle Prinzipien: general-principles.html
+    Validierung: validation.html
   Schnittstellen:
     "Query API: Paginierung": query-api-paging.html
     "Query API: Suche / Sortierung": query-api-search.html
     FHIR-Formatserialisierung: fhir-format.html
-  FHIR-Artefakte: artifacts.html
   Anhänge:
     Referenzen: referenced.html
     Downloads: downloads.html
+    Abhängigkeiten: dependencies.html
     Release Notes: release-notes.html
     Anforderungslisten: spec-sheet.html
     Versionsvergleiche: comparisons.html
     Lizenz: license.html
+  FHIR-Artefakte: artifacts.html
 
 # https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
 parameters:
@@ -95,6 +104,7 @@ parameters:
   apply-contact: false
   default-contact: true
   no-usage-check: true
+  show-inherited-invariants: true
   excludettl: true
   # For which versions comparisons should be generated.
   #   {last} - compare with the last published version (whatever it's status)
@@ -127,6 +137,32 @@ parameters:
   no-validate:
     - MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43
     - Bundle/example-history-bundle
+  special-url:
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-unique-identifier
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-formulation-packaging-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-amount-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-darreichungsform-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-manufacturing-instructions-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-packaging-size-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/rx-originator-process-identifier
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-bvg-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/narcotics-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/patient-id-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/prescriber-id-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/teratogenic-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension
+    - https://gematik.de/fhir/epa-medication/StructureDefinition/context-extension
+    - https://gematik.de/fhir/epa-medication/CodeSystem/context-code
 
 instanceOptions:
   # When set to true, slices must be referred to by name and not only by a numeric index in order to be used

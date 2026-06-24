@@ -27,6 +27,10 @@ The html source does not contain the publish box; this is recommended for publis
 %https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes%
 %MSG_EXTERNAL_FAIL%
 Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
+%Extensions sollten nicht den Kontext Element haben%
+%Das sich wiederholende Element hat ein pattern%
+%uses system 'https://gematik.de/fhir/epa-medication/CodeSystem/context-code' without a version%
+
 
 # Ignoring Warnings: We are using a custom template of our own
 %publish box%
@@ -62,6 +66,13 @@ The string value contains text that looks like embedded HTML tags. If this conte
 %https://gematik.de/fhir/directory/ValueSet/OrganizationTypeVS%
 %https://gematik.de/fhir/directory/ValueSet/PractitionerQualificationVS%
 %https://gematik.de/fhir/ti/CodeSystem/ti-fhir-configuration-cs%
+%https://fhir.kbv.de/ValueSet%
+%https://gematik.de/fhir/terminology/ValueSet/ti-drug-category-vs%
+%https://gematik.de/fhir/terminology/ValueSet/ti-medication-type-vs%
+%https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM%
+%https://fhir.ifaffm.de/CodeSystem/IFA_DARREICHUNGSFORM%
+%https://gematik.de/fhir/terminology/ValueSet/ti-medication-dispense-category-vs%
+%https://gematik.de/fhir/terminology/ValueSet/ti-medication-request-status-vs%
 
 
 # This expansion is done manually, so there are no parameters and identifiers

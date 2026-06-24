@@ -55,3 +55,7 @@ RuleSet: VSExpansionDesignation(system, code, display, lang, langDisplay)
 RuleSet: VSExpansionNoDisplayDesignation(system, code, lang, langDisplay)
 * insert ExpansionNoDisplay({system}, {code})
 * insert ExpansionDesignation({lang}, [[{langDisplay}]])
+
+
+RuleSet: ExpansionTimestamp
+* ^expansion.timestamp = "2026-06-24"

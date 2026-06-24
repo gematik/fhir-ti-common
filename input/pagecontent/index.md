@@ -3,10 +3,6 @@ FHIR Data Services in Produkttypen der Telematikinfrastruktur (TI) unterstützen
 Die Konzepte und Anforderungen jedes spezifischen FHIR Data Service werden jeweils in einem separaten Implementation Guide beschrieben. Es gibt allerdings Aspekte, die allen FHIR Data Services gemeinsam sind. Diese Teile hält der vorliegende Implementation Guide ("TI Common") zentral vor und werden von den spezifischen Implementation Guides bei Bedarf referenziert.
 
 
-### Abhängigkeiten
-
-{% include dependency-table.xhtml %}
-
 ### Sprachliche Konventionen
 
 - Zur besseren Lesbarkeit wird in diesem Implementation Guide das generische Maskulinum verwendet. Die hier verwendeten Personenbezeichnungen beziehen sich stets auf alle Geschlechter.
