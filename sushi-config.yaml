@@ -41,6 +41,8 @@ pages:
     title: "Query API: Allgemeine Anforderungen Paginierung"
   fhir-format.md:
     title: "FHIR-Formatserialisierung"
+  validation.md:
+    title: "Validierung"
   artifacts.md:
     title: "FHIR-Artefakte"
   referenced.md:
@@ -49,6 +51,8 @@ pages:
     title: "Downloads"
   release-notes.md:
     title: "Release Notes"
+  dependencies.md:
+    title: Abhängigkeiten
   spec-sheet.md:
     title: "Anforderungslisten"
     actor-epa-medication.md:
@@ -73,7 +77,9 @@ pages:
 
 menu:
   Home: index.html
-  Generelle Prinzipien: general-principles.html
+  Generelle Prinzipien:
+    Generelle Prinzipien: general-principles.html
+    Validierung: validation.html
   Schnittstellen:
     "Query API: Paginierung": query-api-paging.html
     "Query API: Suche / Sortierung": query-api-search.html
@@ -81,6 +87,7 @@ menu:
   Anhänge:
     Referenzen: referenced.html
     Downloads: downloads.html
+    Abhängigkeiten: dependencies.html
     Release Notes: release-notes.html
     Anforderungslisten: spec-sheet.html
     Versionsvergleiche: comparisons.html
