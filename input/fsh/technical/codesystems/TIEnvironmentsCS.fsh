@@ -10,7 +10,7 @@ Description: "Dieses CodeSystem definiert standardisierte Umgebungskennzeichen f
 
 * ^caseSensitive = true
 
-* #PU "Produktivumgebung" "Produktive Betriebsumgebung für realen Versorgungseinsatz."
-* #RU "Referenzumgebung" "Referenzumgebung für Interoperabilitäts- und Konformitätsabgleiche."
-* #TU "Testumgebung" "Testumgebung für technische und fachliche Verifikation."
-* #DEV "Entwicklungsumgebung" "Entwicklungsumgebung für Implementierung und frühe Integrationsprüfung."
+* #prod "Produktivumgebung" "Produktive Betriebsumgebung für realen Versorgungseinsatz."
+* #ref "Referenzumgebung" "Referenzumgebung für Interoperabilitäts- und Konformitätsabgleiche."
+* #test "Testumgebung" "Testumgebung für technische und fachliche Verifikation."
+* #dev "Entwicklungsumgebung" "Entwicklungsumgebung für Implementierung und frühe Integrationsprüfung."
