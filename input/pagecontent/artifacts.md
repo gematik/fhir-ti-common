@@ -136,6 +136,26 @@ Dieses Capability Statement Profil dient als TI-weit gültige Referenz für die 
 <div><figcaption><strong>Tabelle:</strong> Operation Definition</figcaption></div>
 
 
+#### Code Systems
+
+{% capture technical-cs %}
+CodeSystem/ti-environment-codes,
+CodeSystem/ti-fhir-configuration-cs
+{% endcapture %}
+{% include artifacts-table-generator.html render=technical-cs %}
+<div><figcaption><strong>Tabelle:</strong> Code Systems</figcaption></div>
+
+
+#### Value Sets
+
+{% capture technical-vs %}
+ValueSet/ti-environment-vs,
+ValueSet/ti-fhir-configuration-vs
+{% endcapture %}
+{% include artifacts-table-generator.html render=technical-vs %}
+<div><figcaption><strong>Tabelle:</strong> Value Sets</figcaption></div>
+
+
 #### Capability Statement Extensions
 
 {% capture tihttpbasic %}
