@@ -440,6 +440,30 @@
         "release": "1.4.0"
     },
     {
+        "key": "IG-TI17421K31",
+        "title": "Strukturierte Dosierung - Implementierung der Dosiertexterzeugung",
+        "actor": [
+            "TI-Flow_FD"
+        ],
+        "test_procedures": {
+            "TI-Flow_FD": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/validation.md",
+        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen eine Implementierung des [dgMP-DosageTextgenerierung-Skript] bereitstellen, womit strukturierte Dosierinformationen validiert werden können.",
+        "conformance": "SHALL",
+        "created": "2026-06-25T06:43:07.996080",
+        "modified": "2026-06-25T06:43:07.996081",
+        "date": "2026-06-25T06:43:07.996082",
+        "content_hash": "600278383b73b19b7926dbb97866da77caa1b4678993e4eb9495bbbc32704f08",
+        "path": "validation.html",
+        "release": "1.4.0"
+    },
+    {
         "key": "IG-TI17755AMW",
         "title": "Unterstützung von _revinclude:iterate",
         "actor": [
@@ -981,6 +1005,30 @@
         "date": "2026-06-15T13:51:38.822321",
         "content_hash": "5891bdad8bc3f9e2e8b1eb62c2288476ad5ed16422d7716b618f3df8add27eb8",
         "path": "query-api-search.html",
+        "release": "1.4.0"
+    },
+    {
+        "key": "IG-TI43381BV9",
+        "title": "Strukturierte Dosierung - Anwendung der Validierung",
+        "actor": [
+            "TI-Flow_FD"
+        ],
+        "test_procedures": {
+            "TI-Flow_FD": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/validation.md",
+        "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n\n- `MedicationRequest.dosageInstruction`\n- `MedicationDispense.dosageInstruction`",
+        "conformance": "SHALL",
+        "created": "2026-06-25T06:43:07.996402",
+        "modified": "2026-06-25T06:43:07.996404",
+        "date": "2026-06-25T06:43:07.996405",
+        "content_hash": "a9da80f6169bd630970ca31ccd3e580842332f0c8fe6654d4057a687ffe52ffe",
+        "path": "validation.html",
         "release": "1.4.0"
     },
     {
@@ -1616,6 +1664,30 @@
         "release": "1.4.0"
     },
     {
+        "key": "IG-TI74988KAT",
+        "title": "Strukturierte Dosierung - Bereitstellen von Versionen und Sprachen",
+        "actor": [
+            "TI-Flow_FD"
+        ],
+        "test_procedures": {
+            "TI-Flow_FD": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/validation.md",
+        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen Implementierungen des [dgMP-DosageTextgenerierung-Skript] mit unterschiedlichen Versionen und Sprachen verwalten können.",
+        "conformance": "SHALL",
+        "created": "2026-06-25T06:43:07.996243",
+        "modified": "2026-06-25T06:43:07.996245",
+        "date": "2026-06-25T06:43:07.996246",
+        "content_hash": "e6db85e5b4fe473871cdf59d480d7a9830337bbe7ac7191b4b86c190ed6c6b64",
+        "path": "validation.html",
+        "release": "1.4.0"
+    },
+    {
         "key": "IG-TI78112H2T",
         "title": "Verwendung relativer URLs bei der Paginierung von FHIR Bundles",
         "actor": [
@@ -1713,6 +1785,30 @@
         "date": "2026-06-15T13:51:38.831786",
         "content_hash": "cf8dabca9c2516ca0217fd5baf992e3330efb3f3a602f754206b7de1d6740239",
         "path": "query-api-search.html",
+        "release": "1.4.0"
+    },
+    {
+        "key": "IG-TI83690KSY",
+        "title": "Strukturierte Dosierung - Validierung von Version und Sprache",
+        "actor": [
+            "TI-Flow_FD"
+        ],
+        "test_procedures": {
+            "TI-Flow_FD": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/validation.md",
+        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
+        "conformance": "SHALL",
+        "created": "2026-06-25T06:43:07.995739",
+        "modified": "2026-06-25T06:43:07.995744",
+        "date": "2026-06-25T06:43:07.995746",
+        "content_hash": "7804b34408c379b0be082e05bec5ca6747284b50514df9bc2b1407d9843a7e8c",
+        "path": "validation.html",
         "release": "1.4.0"
     },
     {
@@ -1969,6 +2065,30 @@
         "date": "2026-06-15T13:51:38.814449",
         "content_hash": "e60a5affa44ae057d5e590428427b04e497fb236fb95a7201f3d780201019bdd",
         "path": "query-api-search.html",
+        "release": "1.4.0"
+    },
+    {
+        "key": "IG-TI96213YXB",
+        "title": "Strukturierte Dosierung - Validierung der generierten Dosierungsangabe",
+        "actor": [
+            "TI-Flow_FD"
+        ],
+        "test_procedures": {
+            "TI-Flow_FD": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/validation.md",
+        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction` oder\n- `MedicationDispense.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
+        "conformance": "SHALL",
+        "created": "2026-06-25T06:43:07.995917",
+        "modified": "2026-06-25T06:43:07.995919",
+        "date": "2026-06-25T06:43:07.995920",
+        "content_hash": "98b973688e31a181fe106fcfb016dde600650241574d2f6cbb33fe47b7c86378",
+        "path": "validation.html",
         "release": "1.4.0"
     },
     {
