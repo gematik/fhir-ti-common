@@ -84,7 +84,7 @@ menu:
     "Query API: Paginierung": query-api-paging.html
     "Query API: Suche / Sortierung": query-api-search.html
     FHIR-Formatserialisierung: fhir-format.html
-  Anhänge:
+  Über:
     Referenzen: referenced.html
     Downloads: downloads.html
     Abhängigkeiten: dependencies.html

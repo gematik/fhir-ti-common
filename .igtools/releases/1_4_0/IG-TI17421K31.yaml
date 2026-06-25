@@ -1,0 +1,19 @@
+actor:
+- TI-Flow_FD
+conformance: SHALL
+content_hash: 600278383b73b19b7926dbb97866da77caa1b4678993e4eb9495bbbc32704f08
+created: '2026-06-25T06:43:07.996080'
+date: '2026-06-25T06:43:07.996082'
+key: IG-TI17421K31
+modified: '2026-06-25T06:43:07.996081'
+release_status: NEW
+source: input/pagecontent/validation.md
+status: ACTIVE
+test_procedures:
+  TI-Flow_FD:
+  - Produkttest
+text: Der FHIR Data Service MUSS für die Validierung von Dosierungen eine Implementierung
+  des [dgMP-DosageTextgenerierung-Skript] bereitstellen, womit strukturierte Dosierinformationen
+  validiert werden können.
+title: Strukturierte Dosierung - Implementierung der Dosiertexterzeugung
+version: 0

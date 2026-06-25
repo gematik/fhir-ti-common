@@ -30,6 +30,7 @@ Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
 %Extensions sollten nicht den Kontext Element haben%
 %Das sich wiederholende Element hat ein pattern%
 %uses system 'https://gematik.de/fhir/epa-medication/CodeSystem/context-code' without a version%
+%multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'%
 
 
 # Ignoring Warnings: We are using a custom template of our own
@@ -73,6 +74,7 @@ The string value contains text that looks like embedded HTML tags. If this conte
 %https://fhir.ifaffm.de/CodeSystem/IFA_DARREICHUNGSFORM%
 %https://gematik.de/fhir/terminology/ValueSet/ti-medication-dispense-category-vs%
 %https://gematik.de/fhir/terminology/ValueSet/ti-medication-request-status-vs%
+%https://gematik.de/fhir/terminology/ValueSet/ti-medication-dispense-status-vs%
 
 
 # This expansion is done manually, so there are no parameters and identifiers

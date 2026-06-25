@@ -2,7 +2,73 @@
     "releases": [
         {
             "version": "1.4.0",
-            "requirements": []
+            "requirements": [
+                {
+                    "title": "Strukturierte Dosierung - Implementierung der Dosiertexterzeugung",
+                    "key": "IG-TI17421K31",
+                    "actor": [
+                        "TI-Flow_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {}
+                },
+                {
+                    "title": "Strukturierte Dosierung - Anwendung der Validierung",
+                    "key": "IG-TI43381BV9",
+                    "actor": [
+                        "TI-Flow_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {}
+                },
+                {
+                    "title": "Strukturierte Dosierung - Bereitstellen von Versionen und Sprachen",
+                    "key": "IG-TI74988KAT",
+                    "actor": [
+                        "TI-Flow_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {}
+                },
+                {
+                    "title": "Strukturierte Dosierung - Validierung von Version und Sprache",
+                    "key": "IG-TI83690KSY",
+                    "actor": [
+                        "TI-Flow_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {}
+                },
+                {
+                    "title": "Strukturierte Dosierung - Validierung der generierten Dosierungsangabe",
+                    "key": "IG-TI96213YXB",
+                    "actor": [
+                        "TI-Flow_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {}
+                }
+            ]
         },
         {
             "version": "1.3.1",
