@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6, .requirement p.heading");
     
     const style = document.createElement('style');
-    style.textContent = '.requirement:hover .bubble-link { display: inline; }';
+    style.textContent = '.requirement:hover .bubble-link { display: inline; } .bubble-link::after { display: none !important; content: none !important; }';
     document.head.appendChild(style);
 
     headings.forEach(function(heading) {
