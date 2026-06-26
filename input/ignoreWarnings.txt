@@ -31,7 +31,7 @@ Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
 %Das sich wiederholende Element hat ein pattern%
 %uses system 'https://gematik.de/fhir/epa-medication/CodeSystem/context-code' without a version%
 %multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'%
-
+%OID assigned%
 
 # Ignoring Warnings: We are using a custom template of our own
 %publish box%

@@ -639,6 +639,19 @@
             "characteristics": [
                 {
                     "product_type": {
+                        "name": "EPA-Medication-Service",
+                        "id": "productType161",
+                        "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -1565,6 +1578,19 @@
             "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n\n- `MedicationRequest.dosageInstruction`\n- `MedicationDispense.dosageInstruction`",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-Medication-Service",
+                        "id": "productType161",
+                        "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "TI-Flow_FD",
@@ -2565,6 +2591,19 @@
             "characteristics": [
                 {
                     "product_type": {
+                        "name": "EPA-Medication-Service",
+                        "id": "productType161",
+                        "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -2750,6 +2789,19 @@
             "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-Medication-Service",
+                        "id": "productType161",
+                        "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "TI-Flow_FD",
@@ -3174,6 +3226,19 @@
             "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction` oder\n- `MedicationDispense.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-Medication-Service",
+                        "id": "productType161",
+                        "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "TI-Flow_FD",

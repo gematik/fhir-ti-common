@@ -7,6 +7,7 @@
                     "title": "Strukturierte Dosierung - Implementierung der Dosiertexterzeugung",
                     "key": "IG-TI17421K31",
                     "actor": [
+                        "EPA-Medication-Service",
                         "TI-Flow_FD"
                     ],
                     "version": 0,
@@ -20,6 +21,7 @@
                     "title": "Strukturierte Dosierung - Anwendung der Validierung",
                     "key": "IG-TI43381BV9",
                     "actor": [
+                        "EPA-Medication-Service",
                         "TI-Flow_FD"
                     ],
                     "version": 0,
@@ -33,6 +35,7 @@
                     "title": "Strukturierte Dosierung - Bereitstellen von Versionen und Sprachen",
                     "key": "IG-TI74988KAT",
                     "actor": [
+                        "EPA-Medication-Service",
                         "TI-Flow_FD"
                     ],
                     "version": 0,
@@ -46,6 +49,7 @@
                     "title": "Strukturierte Dosierung - Validierung von Version und Sprache",
                     "key": "IG-TI83690KSY",
                     "actor": [
+                        "EPA-Medication-Service",
                         "TI-Flow_FD"
                     ],
                     "version": 0,
@@ -59,6 +63,7 @@
                     "title": "Strukturierte Dosierung - Validierung der generierten Dosierungsangabe",
                     "key": "IG-TI96213YXB",
                     "actor": [
+                        "EPA-Medication-Service",
                         "TI-Flow_FD"
                     ],
                     "version": 0,
