@@ -33,9 +33,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
       link.addEventListener('click', function(event) {
         event.preventDefault();
-        const currentUrl = window.location.href;
+        const baseUrl = window.location.href.split('#')[0];
+
+        let anchor = '';
+        const requirementDiv = heading.closest('.requirement');
+        if (requirementDiv && requirementDiv.id) {
+          anchor = '#' + requirementDiv.id;
+        } else {
+          const anchorEl = heading.querySelector('a.anchorjs-link');
+          if (anchorEl) {
+            anchor = anchorEl.getAttribute('href') || '';
+          } else if (heading.id) {
+            anchor = '#' + heading.id;
+          }
+        }
+
         const url = new URL(newIssueGithubLink);
-        url.searchParams.set(linkParameter, currentUrl);
+        url.searchParams.set(linkParameter, baseUrl + anchor);
         if (igTagValue) {
           url.searchParams.set(igTagParameter, igTagValue);
         }
