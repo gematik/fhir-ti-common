@@ -1,15 +1,18 @@
 actor:
+- EPA-Medication-Service
 - TI-Flow_FD
 conformance: SHALL
 content_hash: 98b973688e31a181fe106fcfb016dde600650241574d2f6cbb33fe47b7c86378
 created: '2026-06-25T06:43:07.995917'
-date: '2026-06-25T06:43:07.995920'
+date: '2026-06-26T14:51:18.211337'
 key: IG-TI96213YXB
 modified: '2026-06-25T06:43:07.995919'
 release_status: NEW
 source: input/pagecontent/validation.md
 status: ACTIVE
 test_procedures:
+  EPA-Medication-Service:
+  - Produkttest
   TI-Flow_FD:
   - Produkttest
 text: 'Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der

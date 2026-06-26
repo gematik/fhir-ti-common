@@ -443,9 +443,13 @@
         "key": "IG-TI17421K31",
         "title": "Strukturierte Dosierung - Implementierung der Dosiertexterzeugung",
         "actor": [
+            "EPA-Medication-Service",
             "TI-Flow_FD"
         ],
         "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
             "TI-Flow_FD": [
                 "Produkttest"
             ]
@@ -458,7 +462,7 @@
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.996080",
         "modified": "2026-06-25T06:43:07.996081",
-        "date": "2026-06-25T06:43:07.996082",
+        "date": "2026-06-26T14:51:18.211564",
         "content_hash": "600278383b73b19b7926dbb97866da77caa1b4678993e4eb9495bbbc32704f08",
         "path": "validation.html",
         "release": "1.4.0"
@@ -1011,9 +1015,13 @@
         "key": "IG-TI43381BV9",
         "title": "Strukturierte Dosierung - Anwendung der Validierung",
         "actor": [
+            "EPA-Medication-Service",
             "TI-Flow_FD"
         ],
         "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
             "TI-Flow_FD": [
                 "Produkttest"
             ]
@@ -1026,7 +1034,7 @@
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.996402",
         "modified": "2026-06-25T06:43:07.996404",
-        "date": "2026-06-25T06:43:07.996405",
+        "date": "2026-06-26T14:51:18.211961",
         "content_hash": "a9da80f6169bd630970ca31ccd3e580842332f0c8fe6654d4057a687ffe52ffe",
         "path": "validation.html",
         "release": "1.4.0"
@@ -1667,9 +1675,13 @@
         "key": "IG-TI74988KAT",
         "title": "Strukturierte Dosierung - Bereitstellen von Versionen und Sprachen",
         "actor": [
+            "EPA-Medication-Service",
             "TI-Flow_FD"
         ],
         "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
             "TI-Flow_FD": [
                 "Produkttest"
             ]
@@ -1682,7 +1694,7 @@
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.996243",
         "modified": "2026-06-25T06:43:07.996245",
-        "date": "2026-06-25T06:43:07.996246",
+        "date": "2026-06-26T14:51:18.211764",
         "content_hash": "e6db85e5b4fe473871cdf59d480d7a9830337bbe7ac7191b4b86c190ed6c6b64",
         "path": "validation.html",
         "release": "1.4.0"
@@ -1791,9 +1803,13 @@
         "key": "IG-TI83690KSY",
         "title": "Strukturierte Dosierung - Validierung von Version und Sprache",
         "actor": [
+            "EPA-Medication-Service",
             "TI-Flow_FD"
         ],
         "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
             "TI-Flow_FD": [
                 "Produkttest"
             ]
@@ -1806,7 +1822,7 @@
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.995739",
         "modified": "2026-06-25T06:43:07.995744",
-        "date": "2026-06-25T06:43:07.995746",
+        "date": "2026-06-26T14:51:18.211072",
         "content_hash": "7804b34408c379b0be082e05bec5ca6747284b50514df9bc2b1407d9843a7e8c",
         "path": "validation.html",
         "release": "1.4.0"
@@ -2071,9 +2087,13 @@
         "key": "IG-TI96213YXB",
         "title": "Strukturierte Dosierung - Validierung der generierten Dosierungsangabe",
         "actor": [
+            "EPA-Medication-Service",
             "TI-Flow_FD"
         ],
         "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
             "TI-Flow_FD": [
                 "Produkttest"
             ]
@@ -2086,7 +2106,7 @@
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.995917",
         "modified": "2026-06-25T06:43:07.995919",
-        "date": "2026-06-25T06:43:07.995920",
+        "date": "2026-06-26T14:51:18.211337",
         "content_hash": "98b973688e31a181fe106fcfb016dde600650241574d2f6cbb33fe47b7c86378",
         "path": "validation.html",
         "release": "1.4.0"
