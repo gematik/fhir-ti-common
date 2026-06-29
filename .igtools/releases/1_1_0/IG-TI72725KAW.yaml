@@ -13,4 +13,4 @@ text: 'Der FHIR Data Service MUSS das Format für versionierte Referenzen verwen
   das den Ressourcentyp, die <i>Resource.id</i> und die <i>Meta.versionId</i> beinhaltet:
   <i>[ResourceType]/[id]/_history/[versionId]</i>.'
 title: Format für versionierte Referenzen
-version: 1
+version: 0

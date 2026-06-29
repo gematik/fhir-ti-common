@@ -14,4 +14,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass für jede Ressource, die di
   den in der Suchanfrage angegebenen Kriterien entspricht, das Attribut <i>entry.search.mode</i>
   auf <i>match</i> gesetzt wird.
 title: Verwendung von entry.search.mode = match
-version: 1
+version: 0

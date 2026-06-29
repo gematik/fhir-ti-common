@@ -12,4 +12,4 @@ status: ACTIVE
 text: Der FHIR Data Service MUSS ausschließlich zeitbasierte Universally Unique IDentifier
   (UUID) gemäß [RFC4122] für logische IDs (d.h. FHIR-Element <i>Resource.id</i>) verwenden.
 title: UUID für Resource.id
-version: 1
+version: 0

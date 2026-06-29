@@ -2,6 +2,7 @@ actor:
 - EPA-Medication-Service
 - EPA-Patient-Service
 conformance: SHALL
+content_hash: 25322bf747083cd978561b2db4e43c6b0f9db8b98f5e1352eb9e43ae8e54b71b
 created: '2025-03-10T17:01:48.083983'
 date: '2025-03-12T12:47:19.481710'
 key: IG-TI94882PRF
@@ -9,8 +10,11 @@ modified: '2025-03-12T12:47:19.481709'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer
   FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. <i>Meta.lastUpdated</i> MUSS
   auf den Zeitpunkt der Aktualisierung gesetzt werden.
 title: Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung
-version: 1
+version: 0

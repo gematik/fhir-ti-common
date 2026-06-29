@@ -13,4 +13,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung ei
   FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. <i>Meta.lastUpdated</i> MUSS
   auf den Zeitpunkt der Aktualisierung gesetzt werden.
 title: Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung
-version: 1
+version: 0

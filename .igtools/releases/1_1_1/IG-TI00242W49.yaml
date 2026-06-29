@@ -1,6 +1,7 @@
 actor:
 - EPA-Medication-Service
 conformance: SHALL
+content_hash: f522bc728256316ca272448b38e7a89fe8a3545d425458d17282b9448a1f5a29
 created: '2025-03-07T10:35:21.321969'
 date: '2025-03-07T10:35:21.321973'
 key: IG-TI00242W49
@@ -8,8 +9,10 @@ modified: '2025-03-07T10:35:21.321972'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
 text: Der FHIR Data Service MUSS alle weiter referenzierten Ressourcen gemäß der angegebenen
   Referenzpfade iterativ in die Antwort aufnehmen, wenn <i>_include:iterate</i> verwendet
   wird.
 title: Unterstützung von _include:iterate
-version: 1
+version: 0

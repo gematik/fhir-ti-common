@@ -12,4 +12,4 @@ text: Der FHIR Data Service MUSS transaktional ("transaction") gekennzeichnete B
   "serialisiert" ausführen, d.h. das Ergebnis muss einer isolierten sequentiellen
   Ausführung beider Operationen entsprechen.
 title: Serielle Ausführung transaktionaler Bereiche im FHIR Data Service
-version: 1
+version: 0

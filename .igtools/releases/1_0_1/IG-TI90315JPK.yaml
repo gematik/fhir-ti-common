@@ -14,4 +14,4 @@ text: Beim Erzeugen von FHIR-Ressourcen im FHIR Data Service MUSS dieser jede zu
   welches Profil in welcher Version geprüft wurde, MUSS der FHIR Data Service in der
   jeweiligen Ressource in <i>Meta.profile</i> speichern.
 title: Speichern der Profilversion
-version: 1
+version: 0

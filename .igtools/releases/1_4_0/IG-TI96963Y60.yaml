@@ -1,0 +1,33 @@
+actor:
+- EPA-Audit-Service
+- EPA-MHD-Service
+- EPA-Medication-Service
+- EPA-Patient-Service
+- TI-Flow_FD
+conformance: SHALL
+content_hash: 0527f0e0d38f6dd7c631ae456929d9c1c829cbbc4407106fb08f7ed123f0a020
+created: '2025-03-06T13:30:46.537848'
+date: '2026-06-24T14:46:41.664962'
+key: IG-TI96963Y60
+modified: '2025-10-29T09:03:51.296778'
+release_status: STABLE
+source: input/pagecontent/fhir-format.md
+status: ACTIVE
+test_procedures:
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
+  TI-Flow_FD:
+  - Produkttest
+text: Der FHIR Data Service MUSS den <i>Accept</i> Header in eingehenden HTTP-Anfragen
+  auswerten, um das gewünschte Antwortformat zu bestimmen. Der FHIR Data Service MUSS
+  die Formate <i>application/fhir+json</i> und <i>application/fhir+xml</i> im <i>Accept</i>
+  Header unterstützen und die jeweilige HTTP-Antwortnachricht in dem Format zurückgeben,
+  das von den beiden Formaten als bevorzugte Option angegeben wurde.
+title: Unterstützung des Accept Header für Formatwahl im FHIR Data Service
+version: 1

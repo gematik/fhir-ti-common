@@ -15,4 +15,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass bei einer Aktualisierung ei
   erstellt und die bestehende <i>Meta.versionId</i> sowie das <i>Meta.lastUpdated-Datum</i>
   bleiben erhalten.
 title: Keine neue Version bei inhaltsgleichen Aktualisierungen
-version: 1
+version: 0

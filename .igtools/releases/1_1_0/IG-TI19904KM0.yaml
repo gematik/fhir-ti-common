@@ -15,4 +15,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass der <i>_format</i>-Paramete
   den Content Type Header für den Formattyp des Bodys einer POST-Nachricht nicht überschreibt.
 title: ' Keine Überschreibung des Content Type Header durch den _format-Parameter
   bei POST-Nachrichten'
-version: 1
+version: 0

@@ -18,4 +18,4 @@ text: Ein FHIR Data Service MUSS an dem Endpunkt /metadata gemäß der [Capabili
   FHIR Data Service aus dem Capability Statement vom Typ <i>kind = requirements</i>
   der zugrundeliegenden Spezifikation erfüllen.
 title: Bereitstellung des /metadata-Endpunkts durch FHIR Data Service
-version: 1
+version: 0

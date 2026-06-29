@@ -13,4 +13,4 @@ source: input/pagecontent/fhir-format.md
 status: ACTIVE
 text: Der FHIR Data Service MUSS das FHIR-Format in [FHIR XML] verarbeiten können.
 title: FHIR-Formatunterstützung XML
-version: 1
+version: 0

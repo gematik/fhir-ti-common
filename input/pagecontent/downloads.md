@@ -4,7 +4,7 @@
 
 ### Paketdatei
 
-Die folgende Paketdatei enthält eine NPM-Paketdatei, wie sie von vielen FHIR Tools verarbeitet werden kann. Sie enthält u.a. alle Terminologien, Profile, Erweiterungen und eine Liste der Seiten und URLs im Implementation Guide, die in dieser Version des IG definiert werden.
+Die folgende Paketdatei enthält eine NPM-Paketdatei, wie sie von vielen FHIR Tools verarbeitet werden kann. Sie enthält u.a. alle Profile, Erweiterungen und eine Liste der Seiten und URLs, die in dieser Version des Implementation Guide definiert werden.
 
 - [Package (komprimierter Ordner)](package.tgz){::download="true"}
 
@@ -17,7 +17,7 @@ Eine Version dieses Implementation Guide, die auch lokal betrachtet werden kann,
 
 ### Beispiele
 
-Alle nicht-normativen Beispiele in diesem Implementation Guide sind zum Herunterladen verfügbar:
+Alle nicht-normativen Beispiele in diesem Implementation Guide sind ebenfalls zum Herunterladen verfügbar:
 
 - [XML (komprimierter Ordner)](examples.xml.zip)
 - [JSON (komprimierter Ordner)](examples.json.zip)

@@ -36,4 +36,4 @@ text: "Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und i
   \ Die ungefähre Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n    <li><code>accurate</code>:\
   \ Die genaue Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n  </ul>"
 title: Unterstützung URL-Parameter für Paginierungsfunktion
-version: 1
+version: 0

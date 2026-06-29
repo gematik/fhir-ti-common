@@ -15,4 +15,4 @@ text: Der FHIR Data Service MUSS das Standardformat verwenden, wenn ein nicht un
   Format über den <i>Accept</i> Header oder den <i>_format</i>-Parameter angefordert
   wird.
 title: Verhalten bei nicht unterstützten Formaten
-version: 1
+version: 0

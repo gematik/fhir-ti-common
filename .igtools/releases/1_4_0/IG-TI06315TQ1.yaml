@@ -1,0 +1,21 @@
+actor:
+- EPA-Medication-Service
+- TI-Flow_FD
+conformance: SHALL
+content_hash: dcd99dcb175f1d65a9d52bb97a9ab4a1d4f3690b5fbcfd68fefeac527cf7e914
+created: '2025-03-07T08:14:24.654914'
+date: '2026-06-15T13:51:38.828940'
+key: IG-TI06315TQ1
+modified: '2025-03-28T11:10:43.516953'
+release_status: STABLE
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service:
+  - Produkttest
+  TI-Flow_FD:
+  - Produkttest
+text: Der FHIR Data Service MUSS die Suche von verketteten Parametern gemäß der Spezifikation
+  unter [FHIR Chained parameters] implementieren und unterstützen.
+title: Unterstützung verketteter Suchparameter
+version: 0

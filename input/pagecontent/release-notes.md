@@ -1,3 +1,49 @@
+### Version 1.4.0
+
+#### TIFlow
+
+- Hinzugefügt wurde das Profil für den TIFlow AccessCode und das Profil für das TIFlow Secret.
+
+#### Medikationsprozess (dgMP)
+
+- Ergänzung der dgMP-spezifischen Medikationsprofile, einschließlich TIMedicationDgMP, TIMedicationRequestDgMP, TIMedicationDispenseDgMP und TIMedicationStatementDgMP.
+
+#### Anforderungen
+
+Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
+
+{% include release-notes.html version="1.4.0" with_links=true %}
+
+### Version 1.3.1
+
+#### FHIR
+
+- Hinzufügen von fehlenden oder inkonsistenten _Must Support_ Flags
+
+#### Anforderungen
+
+{% include release-notes.html version="1.3.1" with_links=false %}
+
+### Version 1.3.0
+
+#### TI Patient
+- Nutzungsvorgabe bei partieller Angabe des Geburtsdatums in _birthDate_ angepasst
+
+#### Terminologien
+- Neue Codes in _TI Operation Outcome Details_ hinzugefügt
+
+#### Anforderungen
+
+{% include release-notes.html version="1.3.0" with_links=false %}
+
+### Version 1.2.0
+
+#### Anforderungen
+
+- Die Anforderung IG-TI90315JPK-02 – Speichern der Profilversion - wurde in den IG für die [ePA-Basisfunktionalitäten#IG-EPA74597GNF] verschoben.
+
+{% include release-notes.html version="1.2.0" with_links=false %}
+
 ### Version 1.1.1
 
 #### TI Patient
@@ -18,9 +64,7 @@
 
 #### Anforderungen
 
-Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
-
-{% include release-notes.html version="1.1.1" with_links=true %}
+{% include release-notes.html version="1.1.1" with_links=false %}
 
 ### Version 1.1.0
 

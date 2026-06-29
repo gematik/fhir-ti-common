@@ -1,0 +1,23 @@
+actor:
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: 30ea9e0df96c5d3f2a8baca39669dfee1a23fa14efc5c8d945a05c1bc64b0ede
+created: '2025-03-10T12:54:11.421680'
+date: '2025-11-18T11:03:10.872838'
+key: IG-TI44024J5L
+modified: '2025-03-12T12:47:19.482104'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS sicherstellen, dass die <i>Resource.meta.versionId</i>
+  innerhalb einer spezifischen FHIR-Instanz eindeutig ist. Die Versionsnummer darf
+  nicht zurückgesetzt oder übersprungen werden. Jede Instanz besitzt eine eigene fortlaufende
+  Versionsnummer, die bei jeder Änderung der FHIR-Instanz aufsteigt.
+title: Eindeutigkeit der Resource.meta.versionId pro FHIR-Instanz
+version: 0

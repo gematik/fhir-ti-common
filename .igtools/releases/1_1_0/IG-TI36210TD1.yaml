@@ -18,4 +18,4 @@ text: "Der FHIR Data Service MUSS bei einem <i>GET</i>-Request auf eine gelösch
   \ ist auf <i>processing</i> gesetzt</li>\n        <li><i>OperationOutcome.issue.diagnostics</i>\
   \ enthält eine Meldung, dass die Instanz gelöscht wurde</li>\n    </ul>"
 title: HTTP 410 Gone für den Abruf einer gelöschten FHIR-Instanz
-version: 1
+version: 0

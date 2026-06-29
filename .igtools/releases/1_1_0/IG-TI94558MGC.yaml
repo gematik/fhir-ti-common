@@ -16,4 +16,4 @@ text: Falls sowohl der <i>Accept</i>-Header als auch der <i>_format</i>-Paramete
   priorisieren und das Antwortformat entsprechend diesem verarbeiten. Der <i>Accept</i>
   Header MUSS in diesem Fall ignoriert werden.
 title: Vorrang des _format-Parameters gegenüber dem Accept Header
-version: 1
+version: 0

@@ -1,0 +1,21 @@
+actor:
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: 405da05f6d1ffc830c03bdf6022f2ba8c72b6116a190b168011b6a540aac0adb
+created: '2025-03-10T12:54:11.423602'
+date: '2025-11-18T11:03:10.875984'
+key: IG-TI47719G19
+modified: '2025-03-12T12:47:19.483901'
+release_status: STABLE
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service:
+  - Produkttest
+  EPA-Patient-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS versionierte Referenzen nach [FHIR References and
+  Versions] implementieren.
+title: Umsetzung der Versionierte Referenzen gemäß FHIR
+version: 0

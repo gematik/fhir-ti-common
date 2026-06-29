@@ -14,4 +14,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass eine spezifische Version ei
   kann. Die <i>versionId</i> dient dabei zur referenzgenauen Anforderung einer bestimmten
   historischen Version einer Ressource.
 title: Identifikation der Ressourcenversion durch Meta.versionId
-version: 1
+version: 0

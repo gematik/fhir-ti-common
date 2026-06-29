@@ -14,4 +14,4 @@ text: Der FHIR Data Service MUSS numerische und Datums-Suchparameter so verarbei
   MUSS eine Suche nach 2025-02-11 den Bereich von 2025-02-11T00:00:00 (inklusive)
   bis 2025-02-12T00:00:00 (exklusive) abdecken.
 title: Unterstützung der Präzision bei numerischen und Datums-Suchparametern
-version: 1
+version: 0

@@ -1,0 +1,27 @@
+actor:
+- EPA-Audit-Service
+- EPA-MHD-Service
+- EPA-Medication-Service
+conformance: SHALL
+content_hash: d3f6a069fac94c934502158e0b63bf1b93ea994487ad33b198ada208f4732b0b
+created: '2025-10-27T11:15:01.479737'
+date: '2025-11-18T12:35:25.436858'
+key: IG-TI00141ZJ2
+modified: '2025-11-11T07:54:54.799392'
+release_status: NEW
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+test_procedures:
+  EPA-Audit-Service:
+  - Produkttest
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps
+  <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen
+  den gleichen <i>start</i>-Wert besitzen, muss sofern vorhanden weitergehend nach
+  <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.end</i>-Wert
+  ist hierbei als noch offen, also unendlich anzusehen.
+title: Sortierung des Datentyps Period
+version: 0

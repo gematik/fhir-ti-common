@@ -13,4 +13,4 @@ text: Der FHIR Data Service MUSS sicherstellen, dass eine FHIR-Instanz eine ande
   Instanz nicht nur über Ressourcentyp und ID, sondern auch mit einer spezifischen
   <i>Meta.versionId</i> referenzieren kann.
 title: Referenzierung einer spezifischen Version einer FHIR-Instanz
-version: 1
+version: 0

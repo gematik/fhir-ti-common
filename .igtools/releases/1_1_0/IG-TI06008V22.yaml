@@ -15,4 +15,4 @@ text: Der FHIR Data Service MUSS das Lesen spezifischer Versionen von FHIR-Insta
   bereitgestellt werden. Die Antwort MUSS die angeforderte Version der Instanz enthalten,
   einschließlich der zugehörigen Metadaten (<i>meta.versionId</i>, <i>meta.lastUpdated</i>).
 title: Abruf einer spezifischen Ressourcenversion über die FHIR API
-version: 1
+version: 0

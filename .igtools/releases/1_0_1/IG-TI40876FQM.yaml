@@ -12,4 +12,4 @@ status: ACTIVE
 text: Falls kein Vergleichspräfix angegeben wird, MUSS der FHIR Data Service standardmäßig
   das Präfix <i>eq</i> verwenden.
 title: Standardpräfix für Vergleiche
-version: 1
+version: 0

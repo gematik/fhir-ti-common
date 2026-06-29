@@ -13,4 +13,4 @@ text: 'Der FHIR Data Service MUSS die folgenden Vergleichspräfixe für Datumswe
   (date, Range, Period) unterstützen: <i>eq</i>, <i>ne</i>, <i>gt</i>, <i>lt</i>,
   <i>ge</i>, <i>le</i>, <i>sa</i>, <i>eb</i>'
 title: Vergleichspräfixe für Datumswerte
-version: 1
+version: 0

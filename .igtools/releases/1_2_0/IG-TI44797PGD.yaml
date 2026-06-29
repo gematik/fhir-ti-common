@@ -1,0 +1,25 @@
+actor:
+- EPA-Audit-Service
+- EPA-MHD-Service
+- EPA-Medication-Service
+- EPA-Patient-Service
+conformance: SHALL
+content_hash: d2ee6e683243c7f090a1e7b787445ce7a898c960e95df9ca20ed69e237c01a79
+created: '2025-03-06T13:30:46.537999'
+date: '2025-10-29T09:03:51.318787'
+deleted: '2025-10-29T09:03:51.318776'
+key: IG-TI44797PGD
+modified: '2025-03-12T12:47:19.475280'
+release_status: DELETED
+source: input/pagecontent/fhir-format.md
+status: RETIRED
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
+text: Der FHIR Data Service MUSS das Standardformat verwenden, wenn ein nicht unterstütztes
+  Format über den <i>Accept</i> Header oder den <i>_format</i>-Parameter angefordert
+  wird.
+title: Verhalten bei nicht unterstützten Formaten
+version: 0

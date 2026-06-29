@@ -1,91 +1,3 @@
-// Instance: ExpTIOperationOutcomeSuccess
-// InstanceOf: TIOperationOutcome
-// Description: "Operation Successfully Completed in Medication Service"
-// Usage: #example
-// * id = "255002c7-aa1b-4163-bdd4-ede482453cca"
-// * issue
-//   * severity = #information
-//   * code = #informational
-//   * details = TIOperationOutcomeDetailsCS#MEDICATIONSVC_OPERATION_SUCCESS "Operation Successfully Completed in Medication Service"
-
-
-// Instance: ExpTIOperationOutcomeNoValidStructure
-// InstanceOf: TIOperationOutcome
-// Description: "Invalid Data Structure in Medication Service"
-// Usage: #example
-// * id = "2b34898e-a9d1-4fa6-9959-5ff6033cfcb0"
-// * issue
-//   * severity = #error
-//   * code = #structure
-//   * details = TIOperationOutcomeDetailsCS#MEDICATIONSVC_NO_VALID_STRUCTURE "Invalid Data Structure in Medication Service"
-
-
-// Instance: ExpTIOperationOutcomePrescriptionNotFound
-// InstanceOf: TIOperationOutcome
-// Description: "Prescription Not Found in Medication Service"
-// Usage: #example
-// * id = "fc3e8ea4-41ec-4de2-906e-97871b34adcb"
-// * issue
-//   * severity = #error
-//   * code = #processing
-//   * details = TIOperationOutcomeDetailsCS#MEDICATIONSVC_PRESCRIPTION_NO_EXIST "Prescription Not Found in Medication Service"
-
-
-// Instance: ExpTIOperationOutcomeDuplicatePrescriptionDetected
-// InstanceOf: TIOperationOutcome
-// Description: "Duplicate Prescription Detected in Medication Service"
-// Usage: #example
-// * id = "ee1e0518-02f2-4d3a-99ae-bae8e91c382d"
-// * issue
-//   * severity = #error
-//   * code = #duplicate
-//   * details = TIOperationOutcomeDetailsCS#MEDICATIONSVC_PRESCRIPTION_DUPLICATE "Duplicate Prescription Detected in Medication Service"
-
-
-// Instance: ExpTIOperationOutcomeNotPermittedCurrentPrescriptionStatus
-// InstanceOf: TIOperationOutcome
-// Description: "Operation Not Permitted on Current Prescription Status"
-// Usage: #example
-// * id = "bef62761-7eea-4daa-a992-36c532232679"
-// * issue
-//   * severity = #error
-//   * code = #processing
-//   * details = TIOperationOutcomeDetailsCS#MEDICATIONSVC_PRESCRIPTION_STATUS "Operation Not Permitted on Current Prescription Status"
-
-
-// Instance: ExpTIOperationOutcomeOperationDispensationNotFound
-// InstanceOf: TIOperationOutcome
-// Description: "Dispensation Not Found in Medication Service"
-// Usage: #example
-// * id = "c03670fe-eaf2-4a38-a333-4dc1470072a2"
-// * issue
-//   * severity = #error
-//   * code = #not-found
-//   * details = TIOperationOutcomeDetailsCS#MEDICATIONSVC_DISPENSATION_NO_EXIST "Dispensation Not Found in Medication Service"
-
-
-// Instance: ExpTIOperationOutcomeNotPermittedonCurrentDispensationStatus
-// InstanceOf: TIOperationOutcome
-// Description: "Operation Not Permitted on Current Dispensation Status"
-// Usage: #example
-// * id = "a94b020a-2f34-4013-83ea-cf1bd0a92cdd"
-// * issue
-//   * severity = #error
-//   * code = #processing
-//   * details = TIOperationOutcomeDetailsCS#MEDICATIONSVC_DISPENSATION_STATUS "Operation Not Permitted on Current Dispensation Status"
-
-
-// Instance: ExpTIOperationOutcomeUnresolvedReferenceinParameters
-// InstanceOf: TIOperationOutcome
-// Description: "Unresolved Reference in Parameters"
-// Usage: #example
-// * id = "e730e451-3a44-4842-a8ed-1517a3334465"
-// * issue
-//   * severity = #error
-//   * code = #processing
-//   * details = TIOperationOutcomeDetailsCS#MEDICATIONSVC_PARAMETERS_REFERENCE_NO_EXIST "Unresolved Reference in Parameters"
-
-
 Instance: ExpTIOperationOutcomeIdentityMismatch
 InstanceOf: TIOperationOutcome
 Description: "Identity Mismatch"
@@ -94,7 +6,7 @@ Usage: #example
 * issue
   * severity = #error
   * code = #forbidden
-  * details = TIOperationOutcomeDetailsCS#SVC_IDENTITY_MISMATCH "Telematik-ID inside ID-Token or KVNR in x-insurantid HTTP header does not match FHIR data"
+  * details = TIOperationOutcomeDetailsCS#SVC_IDENTITY_MISMATCH "Identity mismatch: Access token or x-insurantid header does not match FHIR data (Telematik-ID / KVNR)"
 
 
 Instance: ExpTIOperationOutcomeSuccess
@@ -118,3 +30,80 @@ Usage: #example
   * code = #processing
   * details = $cs-operation-outcome#MSG_DELETED "This resource has been deleted"
   * diagnostics = "Resource was deleted at 2025-03-10T10:02:27.838+00:00"
+
+
+Instance: ExpTIOperationOutcomeInactiveCode
+InstanceOf: TIOperationOutcome
+Description: "Inactive code not permitted"
+Usage: #example
+* id = "65643d2f-363b-4df4-89e9-a6ce2ba55227"
+* issue
+  * severity = #error
+  * code = #processing
+  * details = TIOperationOutcomeDetailsCS#SVC_INACTIVE_CODE "Use of inactive code not permitted"
+
+
+Instance: ExpTIOperationOutcomeInvalidAccessToken
+InstanceOf: TIOperationOutcome
+Description: "Invalid access token provided"
+Usage: #example
+* id = "0467fbad-2ef1-4906-aaf5-7ce2a3929f7b"
+* issue
+  * severity = #error
+  * code = #security
+  * details = TIOperationOutcomeDetailsCS#SVC_INVALID_ACCESS_TOKEN "Invalid access token provided"
+
+
+Instance: ExpTIOperationOutcomeTelematikIdBlocked
+InstanceOf: TIOperationOutcome
+Description: "The specified Telematik-ID is blocked"
+Usage: #example
+* id = "ea0ac9a5-8508-471a-b2c8-c41209436545"
+* issue
+  * severity = #error
+  * code = #security
+  * details = TIOperationOutcomeDetailsCS#SVC_TELEMATIKID_BLOCKED "The specified Telematik-ID is blocked"
+
+
+Instance: ExpTIOperationOutcomeTelematikIdTemporailyBlocked
+InstanceOf: TIOperationOutcome
+Description: "The specified Telematik-ID is temporarily blocked"
+Usage: #example
+* id = "8d5c1994-5caf-46c6-8c95-c5e7e6fad8e5"
+* issue
+  * severity = #error
+  * code = #security
+  * details = TIOperationOutcomeDetailsCS#SVC_TELEMATIKID_TEMPORARILY_BLOCKED "The specified Telematik-ID is temporarily blocked"
+
+
+Instance: ExpTIOperationOutcomeValidationFailed
+InstanceOf: TIOperationOutcome
+Description: "FHIR Profile Validation Failed"
+Usage: #example
+* id = "c5fca094-f4d0-4b6a-8662-8fa158d82416"
+* issue
+  * severity = #error
+  * code = #invalid
+  * details = TIOperationOutcomeDetailsCS#SVC_VALIDATION_FAILED "FHIR Profile Validation Failed"
+
+
+Instance: ExpTIOperationOutcomeDosageInvalidInstructionMeta
+InstanceOf: TIOperationOutcome
+Description: "The generated dosage instruction meta information is invalid"
+Usage: #example
+* id = "176e0f12-d08c-4a05-ae0a-e30bf2f5158d"
+* issue
+  * severity = #error
+  * code = #invalid
+  * details = TIOperationOutcomeDetailsCS#SVC_DOSAGE_INVALID_INSTRUCTION_META "The generated dosage instruction meta information is invalid"
+
+
+Instance: ExpTIOperationOutcomeDosageInvalidRenderedInstruction
+InstanceOf: TIOperationOutcome
+Description: "The provided rendered dosage instruction is invalid"
+Usage: #example
+* id = "0c81ad3a-d6d1-4924-91d2-555cd3d5716f"
+* issue
+  * severity = #error
+  * code = #invalid
+  * details = TIOperationOutcomeDetailsCS#SVC_DOSAGE_INVALID_RENDERED_INSTRUCTION "The provided rendered dosage instruction is invalid"

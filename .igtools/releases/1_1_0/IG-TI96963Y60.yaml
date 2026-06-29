@@ -20,4 +20,4 @@ text: "Der FHIR Data Service MUSS den <i>Accept</i>-Header in eingehenden HTTP-A
   \ in diesem Format erfolgen.</li>\n        <li>Wenn der Accept Header auf <i>application/fhir+xml</i>\
   \ gesetzt ist, MUSS die Antwort in diesem Format erfolgen.</li>\n    </ul>"
 title: Unterstützung des Accept Header für Formatwahl im FHIR Data Service
-version: 1
+version: 0

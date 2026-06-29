@@ -17,4 +17,4 @@ text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle auch gel√
   \ enthalten sein</li>\n    </ul>"
 title: Bundle.entry.request und Bundle.entry.response innerhalb des _history-Bundles
   bei gel√∂schten FHIR-Instanzen
-version: 1
+version: 0

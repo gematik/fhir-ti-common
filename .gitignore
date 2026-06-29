@@ -21,6 +21,7 @@ Thumbs.db
 **/dependencies
 **/extracted
 **/.temp
+**/fsh-generated
 
 _gencontinuous.*
 _updatePublisher.bat
@@ -28,3 +29,4 @@ _updatePublisher.bat
 # IG Publisher workflow related scripts and files
 **/build-fhir-ig.sh
 **/output-ig/
+Requirements-fromNarrative.json

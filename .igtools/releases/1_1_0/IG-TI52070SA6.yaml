@@ -17,4 +17,4 @@ text: "Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> f√
   \ MUSS den Status (<i>status</i>) sowie das Datum der letzten √Ñnderung (<i>lastModified</i>)\
   \ enthalten.</li>\n    </ul>"
 title: Bundle.entry.request und Bundle.entry.esponse innerhalb des _history Bundles
-version: 1
+version: 0

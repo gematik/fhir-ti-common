@@ -13,4 +13,4 @@ text: Der FHIR Data Service MUSS versionierte Referenzen unterstützen, um es zu
   innerhalb einer FHIR-Instanz auf eine spezifische Version einer anderen Instanz
   zu verweisen.
 title: Unterstützung versionierter Referenzen im FHIR Data Service
-version: 1
+version: 0

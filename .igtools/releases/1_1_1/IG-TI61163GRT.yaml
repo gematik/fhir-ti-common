@@ -1,8 +1,9 @@
 actor:
 - EPA-Audit-Service
-- EPA-Medication-Service
 - EPA-MHD-Service
+- EPA-Medication-Service
 conformance: SHALL
+content_hash: d15613497fc83544ce7a18a5a6df3bf5937f4c1ca27dd4ffdf1b277619bb5eea
 created: '2025-02-26T10:59:21.315384'
 date: '2025-02-26T13:55:56.513665'
 key: IG-TI61163GRT
@@ -10,8 +11,12 @@ modified: '2025-02-26T13:55:56.513664'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
 text: Der FHIR Data Service MUSS für Suchanfragen, die Range- oder Period-Werte betreffen,
   sicherstellen, dass obere und untere Grenzen des Bereichs korrekt berücksichtigt
   werden und mit den definierten Vergleichspräfixen korrekt verarbeitet werden.
 title: Bereichsprüfung für Range- und Period-Typen
-version: 1
+version: 0

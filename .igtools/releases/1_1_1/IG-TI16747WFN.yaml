@@ -2,6 +2,7 @@ actor:
 - EPA-Medication-Service
 - EPA-Patient-Service
 conformance: SHALL
+content_hash: 678a55a83c4b0980b45eea128ead70ef81884a0f8fce8e7013da95aeb532335a
 created: '2025-03-10T12:54:11.421747'
 date: '2025-05-27T09:33:08.790572'
 key: IG-TI16747WFN
@@ -9,8 +10,11 @@ modified: '2025-05-27T09:33:08.790570'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-Medication-Service: []
+  EPA-Patient-Service: []
 text: Der FHIR Data Service MUSS die <i>_history</i>-Abfrage gemäß der HL7 FHIR Spezifikation
   [FHIR History Interaction] implementieren, um die Versionshistorie einer FHIR-Instanz
   abrufbar zu machen.
 title: Implementierung der _history-Abfrage gemäß HL7 FHIR Spezifikation
-version: 1
+version: 0

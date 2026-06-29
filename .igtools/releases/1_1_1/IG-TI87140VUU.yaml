@@ -1,8 +1,9 @@
 actor:
-- EPA-PS
-- EPA-FdV
 - EPA-CS-KTR
+- EPA-FdV
+- EPA-PS
 conformance: SHALL
+content_hash: 777a34849024057245ca44fae44716427f9370c2c07145ebde8371efe0a1e852
 created: '2025-02-26T10:59:21.321299'
 date: '2025-05-27T09:33:08.789775'
 key: IG-TI87140VUU
@@ -10,6 +11,10 @@ modified: '2025-05-27T09:33:08.789772'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
+test_procedures:
+  EPA-CS-KTR: []
+  EPA-FdV: []
+  EPA-PS: []
 text: Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service implementiert,
   MUSS jedes als Must Support gekennzeichnete Element gemäß der dazugehörigen Kardinalitätsangabe
   befüllen. Das heißt auch, dass in optionalen Elementen (z. B. Kardinalität "0..1",

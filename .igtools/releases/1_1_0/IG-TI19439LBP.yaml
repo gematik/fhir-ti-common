@@ -11,4 +11,4 @@ status: ACTIVE
 text: Der FHIR Data Service MUSS die transaktional ("transaction") gekennzeichneten
   Bereiche nach dem ACID-Prinzip ausführen.
 title: Transaktionale Verarbeitung nach dem ACID-Prinzip im FHIR Data Service
-version: 1
+version: 0

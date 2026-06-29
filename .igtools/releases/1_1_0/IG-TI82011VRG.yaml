@@ -12,4 +12,4 @@ text: Der FHIR Data Service MUSS Schreiboperationen ablehnen, wenn die Versionsn
   der zu aktualisierenden Ressourceninstanz von der Versionsnummer abweicht, mit der
   die Ressourceninstanz im Operationsaufruf adressiert wird.
 title: Versionsprüfung bei Schreiboperationen im FHIR Data Service
-version: 1
+version: 0

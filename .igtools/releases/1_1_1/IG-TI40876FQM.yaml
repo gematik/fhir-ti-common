@@ -1,8 +1,9 @@
 actor:
 - EPA-Audit-Service
-- EPA-Medication-Service
 - EPA-MHD-Service
+- EPA-Medication-Service
 conformance: SHALL
+content_hash: 4801e852cd42ac58b42ab69767a7c5b417711258f63e1a8abe5c9e0dc9ab0799
 created: '2025-02-26T10:59:21.315278'
 date: '2025-02-26T13:55:56.513561'
 key: IG-TI40876FQM
@@ -10,7 +11,11 @@ modified: '2025-02-26T13:55:56.513560'
 release_status: STABLE
 source: input/pagecontent/query-api-search.md
 status: ACTIVE
+test_procedures:
+  EPA-Audit-Service: []
+  EPA-MHD-Service: []
+  EPA-Medication-Service: []
 text: Falls kein Vergleichspräfix angegeben wird, MUSS der FHIR Data Service standardmäßig
   das Präfix <i>eq</i> verwenden.
 title: Standardpräfix für Vergleiche
-version: 1
+version: 0

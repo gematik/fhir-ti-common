@@ -14,4 +14,4 @@ text: Der FHIR Data Service der ePA MUSS sicherstellen, dass der Host der absolu
   URL im Feld <i>Bundle.entry.fullUrl</i> stets <b>epa4all</b> ist. Andere Hostnamen
   sind unzulässig.
 title: Hostname in Bundle.entry.fullUrl für die ePA
-version: 1
+version: 0
