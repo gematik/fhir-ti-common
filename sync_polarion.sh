@@ -1,5 +1,6 @@
 #!/bin/bash
 # igtools polarion input/content
+# Copyright 2026-2026 gematik GmbH;
 
 if [ -z "${POLARION_TOKEN}" ]; then
   read -r -p "Please enter your token: " INPUT_TOKEN

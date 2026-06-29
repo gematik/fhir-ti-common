@@ -1,3 +1,4 @@
+# Copyright 2026-2026 gematik GmbH;
 TARGET=1.3.0
 PUBLISH_URL=https://gematik.de/fhir/ti/$TARGET
 BUCKET_PATH=/ig/fhir/ti

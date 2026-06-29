@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Copyright 2026-2026 gematik GmbH;
 # Disable immediate exit on error
 set +e 
 
