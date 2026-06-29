@@ -14,7 +14,7 @@ date: 2026-06-30
 copyrightYear: 2026+
 copyright: gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.
 #Flip releaseLabel to 'release' for publication. Flip to 'ci-build' for CI
-releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 
 fhirVersion: 4.0.1
 
