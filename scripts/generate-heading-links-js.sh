@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright 2026-2026 gematik GmbH;
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -10,6 +11,7 @@ mkdir -p "$(dirname "$OUTPUT_JS")"
 cat > "$OUTPUT_JS" <<EOF
 
 // === AUTO-GENERATED FILE ===
+// Copyright 2026-2026 gematik GmbH;
 // Do not edit by hand; edit scripts/generate-heading-links-js.sh instead.
 
 const newIssueGithubLink = "https://github.com/gematik/fhir-ti-common/issues/new?template=$IG_TEMPLATE_NAME";
