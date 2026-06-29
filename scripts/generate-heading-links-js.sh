@@ -11,8 +11,9 @@ mkdir -p "$(dirname "$OUTPUT_JS")"
 cat > "$OUTPUT_JS" <<EOF
 
 // === AUTO-GENERATED FILE ===
-// Copyright 2026-2026 gematik GmbH;
 // Do not edit by hand; edit scripts/generate-heading-links-js.sh instead.
+// Copyright 2026-2026 gematik GmbH;
+// For additional notes and disclaimer from gematik and in case of changes by gematik, find details in the "Readme" file.
 
 const newIssueGithubLink = "https://github.com/gematik/fhir-ti-common/issues/new?template=$IG_TEMPLATE_NAME";
 const linkParameter = "$LINK_PARAMETER";

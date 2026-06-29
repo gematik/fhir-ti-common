@@ -1,6 +1,8 @@
 
 // === AUTO-GENERATED FILE ===
 // Do not edit by hand; edit scripts/generate-heading-links-js.sh instead.
+// Copyright 2026-2026 gematik GmbH;
+// For additional notes and disclaimer from gematik and in case of changes by gematik, find details in the "Readme" file.
 
 const newIssueGithubLink = "https://github.com/gematik/fhir-ti-common/issues/new?template=1-KOMMENTIERUNG.yml";
 const linkParameter = "page-link";
