@@ -20,6 +20,9 @@ The software is the result of research and development activities, therefore not
  
 gematik may remove published results temporarily or permanently from the place of publication at any time without prior notice or justification.
 
+## Additional Notes and Disclaimer from gematik GmbH
+
+This repository is owned and maintaned by gematik GmbH.
 
 ## Contributions
 
