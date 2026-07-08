@@ -5,16 +5,17 @@ name: gemIG_TI_Common
 title: "Implementation Guide TI Common"
 jurisdiction: "urn:iso:std:iso:3166#DE"
 license: Apache-2.0
+language: de
 
 experimental: false
 status: draft # draft | active | retired | unknown
-version: 1.4.0-ballot.1
+version: 1.4.1-draft.1
 date: 2026-06-30
 
 copyrightYear: 2026+
 copyright: gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.
 #Flip releaseLabel to 'release' for publication. Flip to 'ci-build' for CI
-releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build  # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 
 fhirVersion: 4.0.1
 
@@ -106,6 +107,7 @@ parameters:
   no-usage-check: true
   show-inherited-invariants: true
   excludettl: true
+  i18n-default-lang: de
   # For which versions comparisons should be generated.
   #   {last} - compare with the last published version (whatever it's status)
   #              - this is the default if the parameter doesn't appear
