@@ -75,6 +75,21 @@ The string value contains text that looks like embedded HTML tags. If this conte
 %https://gematik.de/fhir/terminology/ValueSet/ti-medication-dispense-category-vs%
 %https://gematik.de/fhir/terminology/ValueSet/ti-medication-request-status-vs%
 %https://gematik.de/fhir/terminology/ValueSet/ti-medication-dispense-status-vs%
+%https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs%
+%https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-mhd-document-relationship-type-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-xds-mime-type-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-xds-type-code-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-xds-class-code-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-xds-confidentiality-code-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-xds-mime-type-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-xds-language-code-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-xds-format-code-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-xds-healthcare-facility-type-code-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-xds-practice-setting-code-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-mhd-security-label-vs%
+%https://gematik.de/fhir/terminology/ValueSet/epa-xds-event-code-vs%
+
 
 
 # This expansion is done manually, so there are no parameters and identifiers

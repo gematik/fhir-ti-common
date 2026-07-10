@@ -26,7 +26,7 @@ publisher:
 
 dependencies:
   hl7.fhir.uv.xver-r5.r4: latest
-  de.basisprofil.r4: 1.5.4
+  de.basisprofil.r4: 1.6.0
   de.fhir.medication: 1.0.7
   ihe.iti.mhd: 4.2.3
 
@@ -47,13 +47,13 @@ pages:
     title: "Validierung"
   # artifacts.md:
   #   title: "FHIR-Artefakte"
-  common-artifacts.md:
+  artifacts-common.md:
     title: "Common-Artefakte"
-  dgmp-artifacts.md:
+  artifacts-dgmp.md:
     title: "Artefakte für den Medikationsprozess (dgMP)"
-  behavior-artifacts.md:
+  artifacts-behavior.md:
     title: "Artefakte für das Verhalten"
-  document-artifacts.md:
+  artifacts-document.md:
     title: "Artefakte für das Dokumentenmanagement"
   referenced.md:
     title: "Referenzen"
@@ -104,10 +104,10 @@ menu:
     Lizenz: license.html
   FHIR-Artefakte: 
     Übersicht: artifacts.html
-    Common: common-artifacts.html
-    "Medikationsprozess (dgMP)": dgmp-artifacts.html
-    Dokumentenmanagement: document-artifacts.html
-    Verhalten: behavior-artifacts.html
+    Common: artifacts-common.html
+    "Medikationsprozess (dgMP)": artifacts-dgmp.html
+    Dokumentenmanagement: artifacts-document.html
+    Verhalten: artifacts-behavior.html
 
 # https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
 parameters:

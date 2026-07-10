@@ -34,7 +34,7 @@ RuleSet: ExpansionCanonicalNoDisplay(system, code)
 
 
 RuleSet: ExpansionCodeDeprecated
-* ^expansion.contains[=].extension.url = Canonical(ValueSetExpansionDeprecatedExt)
+* ^expansion.contains[=].extension.url = $ti-vs-expansion-deprecated
 * ^expansion.contains[=].extension.valueBoolean = true
 
 
