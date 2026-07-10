@@ -28,6 +28,7 @@ dependencies:
   hl7.fhir.uv.xver-r5.r4: latest
   de.basisprofil.r4: 1.5.4
   de.fhir.medication: 1.0.7
+  ihe.iti.mhd: 4.2.3
 
 # FSHOnly: true
 
@@ -44,8 +45,16 @@ pages:
     title: "FHIR-Formatserialisierung"
   validation.md:
     title: "Validierung"
-  artifacts.md:
-    title: "FHIR-Artefakte"
+  # artifacts.md:
+  #   title: "FHIR-Artefakte"
+  common-artifacts.md:
+    title: "Common-Artefakte"
+  dgmp-artifacts.md:
+    title: "Artefakte für den Medikationsprozess (dgMP)"
+  behavior-artifacts.md:
+    title: "Artefakte für das Verhalten"
+  document-artifacts.md:
+    title: "Artefakte für das Dokumentenmanagement"
   referenced.md:
     title: "Referenzen"
   downloads.md:
@@ -93,7 +102,12 @@ menu:
     Anforderungslisten: spec-sheet.html
     Versionsvergleiche: comparisons.html
     Lizenz: license.html
-  FHIR-Artefakte: artifacts.html
+  FHIR-Artefakte: 
+    Übersicht: artifacts.html
+    Common: common-artifacts.html
+    "Medikationsprozess (dgMP)": dgmp-artifacts.html
+    Dokumentenmanagement: document-artifacts.html
+    Verhalten: behavior-artifacts.html
 
 # https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
 parameters:
@@ -165,6 +179,43 @@ parameters:
     - https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension
     - https://gematik.de/fhir/epa-medication/StructureDefinition/context-extension
     - https://gematik.de/fhir/epa-medication/CodeSystem/context-code
+
+
+# groups:
+#   DgMPProfiles:
+#     name: Medikationsprozess dgMP
+#     description: Base profiles for the European context.
+#     resources:
+#       - StructureDefinition/ti-medication-dgmp
+#       - StructureDefinition/ti-medication-dispense-dgmp
+#       - StructureDefinition/ti-medication-request-dgmp
+#       - StructureDefinition/ti-medication-statement-dgmp
+#       - StructureDefinition/drug-category-extension
+#       - StructureDefinition/epa-medication-type-extension
+#       - StructureDefinition/indicator-bvg-extension
+#       - StructureDefinition/indicator-ser-extension
+#       - StructureDefinition/medication-formulation-packaging-extension
+#       - StructureDefinition/medication-ingredient-amount-extension
+#       - StructureDefinition/teratogenic-extension
+#       - StructureDefinition/rx-prescription-process-identifier-extension
+#       - StructureDefinition/prescriber-id-extension
+#       - StructureDefinition/patient-id-extension
+#       - StructureDefinition/narcotics-extension
+#       - StructureDefinition/multiple-prescription-extension
+#       - StructureDefinition/medication-total-quantity-formulation-extension
+#       - StructureDefinition/medication-packaging-size-extension
+#       - StructureDefinition/medication-manufacturing-instructions-extension
+#       - StructureDefinition/medication-is-vaccine-extension
+#       - StructureDefinition/medication-ingredient-darreichungsform-extension
+#       - StructureDefinition/context-extension
+#       - StructureDefinition/e-prescription-id
+#       - StructureDefinition/medication-plan-identifier
+#       - StructureDefinition/epa-medication-unique-identifier
+#       - StructureDefinition/rx-prescription-process-identifier
+#       - StructureDefinition/rx-originator-process-identifier
+#       - CodeSystem/context-code
+#       - ValueSet/context-code
+
 
 instanceOptions:
   # When set to true, slices must be referred to by name and not only by a numeric index in order to be used
