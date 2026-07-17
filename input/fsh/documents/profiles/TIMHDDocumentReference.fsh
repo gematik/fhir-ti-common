@@ -10,6 +10,12 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 // * ^date = "2026-09-30"
 // * ^status = #active
 
+* extension contains TIDocumentSource named documentSource 0..1 MS
+* extension[documentSource]
+  * ^short = "Quellsystem der DocumentReference; z. B. ePA, wenn sich das referenzierte Dokument in der ePA des Versicherten befindet."
+  * ^definition = "Gibt das Quellsystem an, aus dem die DocumentReference und das durch sie beschriebene Dokument übernommen wurden."
+  * ^comment = "Die Extension ermöglicht die Unterscheidung zwischen verschiedenen Dokumentquellen, beispielsweise einem Primärsystem, einem Workflow-Dokumentenspeicher oder der ePA. Bei Dokumenten aus der ePA befindet sich das referenzierte Dokument in der ePA des durch DocumentReference.subject logisch referenzierten Versicherten und kann über die in DocumentReference.content.attachment.url angegebene URL mittels der ePA-Transaktion Retrieve Document [ITI-68] abgerufen werden."
+
 * masterIdentifier MS
 
 * identifier[entryUUID] 0..1 MS

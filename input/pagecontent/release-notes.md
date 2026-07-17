@@ -1,3 +1,14 @@
+### Version 1.4.1
+
+- Es wurden neue Profile für das TI-weite Dokumentenmanagement hinzugefügt. Die Profile orientieren sich an den Konzepten von IHE MHD und stellen eine gemeinsame Grundlage für die Verwaltung und Referenzierung von Dokumenten in der Telematikinfrastruktur bereit.
+
+{% comment %}
+#### Anforderungen
+
+Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
+
+{% include release-notes.html version="1.4.1" with_links=true %}
+{% endcomment %}
 ### Version 1.4.0
 
 #### TIFlow

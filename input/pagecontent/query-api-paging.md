@@ -2,7 +2,7 @@
 Bei einer Suche im FHIR Data Service über die FHIR Query API stellt der Service dem Client-System in seiner Antwort ggf. Links zu weiteren Ergebnissen zur Verfügung, die es dem Client erlauben, bequem durch die Ergebnismenge zu navigieren.
 
 <requirement conformance="SHALL" key="IG-TI07252NTV" title="Unterstützung URL-Parameter für Paginierungsfunktion" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
