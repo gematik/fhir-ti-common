@@ -28,6 +28,7 @@ Alias: $cs-ucum = http://unitsofmeasure.org
 Alias: $loinc = http://loinc.org
 Alias: $cs-sct = http://snomed.info/sct
 Alias: $cs-sct-de-20260515 = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20260515
+Alias: $cs-orphanet = http://www.orpha.net
 
 // International Value Sets
 Alias: $hl7-vs-ucum-units = http://hl7.org/fhir/ValueSet/ucum-units
