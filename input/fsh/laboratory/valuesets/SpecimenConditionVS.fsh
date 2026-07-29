@@ -1,0 +1,20 @@
+ValueSet: SpecimenConditionVS
+Id: specimen-condition
+Title: "Zustand Probe"
+Description: "Dieses Valueset enthält Codes zur Beschreibung des Zustands einer Probe."
+* insert Meta-VS
+* $cs-sct-de-20251115#710070002 "Specimen unsatisfactory for evaluation due to broken container"
+* $cs-sct-de-20251115#448140007 "Specimen unsatisfactory for evaluation due to obscuring lubricant jelly"
+* $cs-sct-de-20251115#712743008 "Specimen unsatisfactory for evaluation due to improper storage of specimen"
+* $cs-sct-de-20251115#448141006 "Specimen unsatisfactory for evaluation due to marked cellular degeneration"
+* $cs-sct-de-20251115#373881006 "Unsatisfactory for evaluation due to lack of patient identification on specimen and/or requisition form"
+* $cs-v2-0493|3.0.0#AUT "Autolyzed"
+* $cs-v2-0493|3.0.0#CLOT "Clotted"
+* $cs-v2-0493|3.0.0#CON "Contaminated"
+* $cs-v2-0493|3.0.0#COOL "Cool"
+* $cs-v2-0493|3.0.0#FROZ "Frozen"
+* $cs-v2-0493|3.0.0#HEM "Hemolyzed"
+* $cs-v2-0493|3.0.0#LIVE "Live"
+* $cs-v2-0493|3.0.0#ROOM "Room Temperature"
+* $cs-v2-0493|3.0.0#SNR "Sample not received"
+* $cs-v2-0493|3.0.0#CFU "Centrifuged"

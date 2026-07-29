@@ -30,10 +30,14 @@ Alias: $cs-sct = http://snomed.info/sct
 Alias: $cs-sct-de-20260515 = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20260515
 Alias: $cs-orphanet = http://www.orpha.net
 
+Alias: $cs-v2-0493 = http://terminology.hl7.org/CodeSystem/v2-0493
+Alias: $cs-v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+
 // International Value Sets
 Alias: $hl7-vs-ucum-units = http://hl7.org/fhir/ValueSet/ucum-units
 Alias: $cs-data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $specimen-container-type = http://hl7.org/fhir/ValueSet/specimen-container-type
+Alias: $hl7-vs-duration-units = http://hl7.org/fhir/ValueSet/duration-units
 
 // National Code Systems
 Alias: $cs-ask = http://fhir.de/CodeSystem/ask
