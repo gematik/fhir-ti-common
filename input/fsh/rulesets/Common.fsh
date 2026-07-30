@@ -1,8 +1,20 @@
+RuleSet: Reference(path)
+* {path} MS
+* {path}.reference 1..1 MS 
+
+RuleSet: Coding(path)
+* {path} MS
+* {path}.system 1..1 MS
+* {path}.version MS
+* {path}.code 1..1 MS
+* {path}.display 1..1 MS
+
+
 RuleSet: Subject(element-name)
 * {element-name} 1..1 MS
-* {element-name} only Reference(Patient)
-  * identifier 1..1 MS
-  * identifier only IdentifierKvid10
+* {element-name} only Reference(PatientEuCore)
+  * identifier 1..1 MS
+  * identifier only IdentifierKvid10
 
 
 RuleSet: ObservationEffectiveDateTime
@@ -22,11 +34,11 @@ RuleSet: Performer
   * identifier MS
   * identifier only identifier-kvid-10 or
       identifier-telematik-id
-* performer only Reference(Organization or
+* performer only Reference(OrganizationEuCore or
     RelatedPerson or
-    Patient or
-    Practitioner or
-    PractitionerRole)
+    PatientEuCore or
+    PractitionerEuCore or
+    PractitionerRoleEuCore)
 
 
 RuleSet: Note
@@ -39,9 +51,9 @@ RuleSet: Note
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #closed
   * author[x] contains authorReference 0..1 MS
-  * authorReference only Reference(Organization or
-      Patient or
-      Practitioner)
+  * authorReference only Reference(OrganizationEuCore or
+      PatientEuCore or
+      PractitionerEuCore)
     * reference MS
     * identifier MS
     * identifier only identifier-kvid-10 or
