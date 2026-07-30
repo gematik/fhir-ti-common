@@ -116,7 +116,7 @@ menu:
     Anforderungslisten: spec-sheet.html
     Versionsvergleiche: comparisons.html
     Lizenz: license.html
-  FHIR-Artefakte: 
+  FHIR-Artefakte:
     Übersicht: artifacts.html
     "Akteure": artifacts-actors.html
     Common: artifacts-common.html
