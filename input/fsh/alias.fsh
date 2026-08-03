@@ -26,7 +26,7 @@ Alias: $sid-medication-plan-identifier = https://gematik.de/fhir/sid/emp-identif
 Alias: $cs-operation-outcome = http://terminology.hl7.org/CodeSystem/operation-outcome
 Alias: $cs-ucum = http://unitsofmeasure.org
 Alias: $loinc = http://loinc.org
-Alias: $cs-sct = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20251115
+Alias: $cs-sct = http://snomed.info/sct
 Alias: $cs-sct-20251115 = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20251115
 
 // International Value Sets
