@@ -27,7 +27,7 @@ Alias: $cs-operation-outcome = http://terminology.hl7.org/CodeSystem/operation-o
 Alias: $cs-ucum = http://unitsofmeasure.org
 Alias: $loinc = http://loinc.org
 Alias: $cs-sct = http://snomed.info/sct
-Alias: $cs-sct-20251115 = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20251115
+Alias: $cs-sct-de-20251115 = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20251115
 
 // International Value Sets
 Alias: $hl7-vs-ucum-units = http://hl7.org/fhir/ValueSet/ucum-units
