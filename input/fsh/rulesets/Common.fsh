@@ -12,9 +12,14 @@ RuleSet: Coding(path)
 
 RuleSet: Subject(element-name)
 * {element-name} 1..1 MS
+* {element-name} only Reference(Patient)
+  * identifier 1..1 MS
+  * identifier only IdentifierKvid10
+
+RuleSet: SubjectEu(element-name)
+* {element-name} 1..1 MS
 * {element-name} only Reference(PatientEuCore)
-  * identifier 1..1 MS
-  * identifier only IdentifierKvid10
+  * insert ReferenceMS
 
 
 RuleSet: ObservationEffectiveDateTime
