@@ -1,7 +1,7 @@
 Profile: TISpecimenLaboratory
 Parent: SpecimenEu
 Id: ti-specimen-laboratory
-Title: "TI Specimen dgLP"
+Title: "TI Specimen Laboratory"
 Description: "Dieses Profil bildet eine Probe ab.\n
 Identifizierung und Eigenschaften der primären oder sekundären Probe, auf deren Basis die Laboruntersuchung als Messung durchgeführt wird. Ein inhaltliches Beispiel für die Unterscheidung von Primär- und Sekundärprobe:\n
 * Primärprobe: Probenart = Vollblut (über LOINC® oder ergänzende Spezifizierung Probenart); Probengewinnung / Methode = Blutabnahme; Probenverarbeitung / Methode = Zentrifugieren\n
@@ -61,12 +61,12 @@ Der LOINC®-Code impliziert über die LOINC®-Achse SYSTEM bereits eine Probenar
 * als Freitextergänzung, wenn die die Probenart durch Probenart, ergänzende Spezifizierung/SNOMED CT®-Code nicht ausreichend spezifisch bezeichnet werden kann
 * ersatzweise, wenn gar keine passende Codierung zugeordnet werden kann
 * wenn zusätzlich eine Freitext-Bezeichnung aus der LDT-Kommunikation übernommen werden soll."
-* insert SubjectEu(subject)   
+* insert SubjectEu(subject)
 * receivedTime MS
   * ^definition = "Zeitpunkt des Eingangs der Probe im Labor. Dieser Zeitpunkt sollte nach Möglichkeit minutengenau angegeben werden. Im klinischen Alltag ist die minutengenaue Erfassung nicht immer realistisch."
 * parent MS
-  * ^definition = "Ausgangsmaterial für eine Sekundärprobe. Die Sekundärprobe existiert nur auf Basis einer Primärprobe. Wenn eine Sekundärprobe angegeben wird, dann ist das Ausgangsmaterial verpflichtend anzugeben, damit der Bezug hergestellt werden kann." 
-  * insert ReferenceMS 
+  * ^definition = "Ausgangsmaterial für eine Sekundärprobe. Die Sekundärprobe existiert nur auf Basis einer Primärprobe. Wenn eine Sekundärprobe angegeben wird, dann ist das Ausgangsmaterial verpflichtend anzugeben, damit der Bezug hergestellt werden kann."
+  * insert ReferenceMS
 * collection MS
   * ^definition = "Optionale Angaben zur Probengewinnung, dazu gehören: Zeitangabe, Methode der Probengewinnung, Entnahmeort, Angabe zum Nüchternstatus."
   * extension MS
@@ -78,7 +78,7 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstell
       * insert ReferenceMS
   * collector MS
     * ^definition = "Person, welche die Probe entnimmt."
-    * insert ReferenceMS 
+    * insert ReferenceMS
   * collected[x] MS
     * ^definition = "Hier wird eine Zeitangabe zur Probengewinnung vorgenommen."
   * collected[x] only dateTime or Period
@@ -179,8 +179,8 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
   * extension MS
   * extension[device] MS
     * ^definition = "Referenz auf den Probenbehälter."
-    * valueReference 1..1 MS 
-      * insert ReferenceMS 
+    * valueReference 1..1 MS
+      * insert ReferenceMS
   * specimenQuantity MS
     * ^definition = "Menge der Probe im Behälter."
     * insert QuantityMS
@@ -193,7 +193,7 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
   * coding
     * ^definition = "Hier wird der Zustand der Probe als codierte Information angegeben."
   * text MS
-    * ^definition = "Freitext Angabe zum Zustand der Probe." 
+    * ^definition = "Freitext Angabe zum Zustand der Probe."
 * note MS
   * ^definition = "Feld für ergänzende Freitext-Angaben zum Probenmaterial, die in der vorgegebenen Datenstruktur nicht erfasst werden können. Ein Beispiel dafür wäre die Angabe, dass die Probe bei 37 Grad (Körpertemperatur) aufbewahrt wurde."
   * text MS
