@@ -6,7 +6,7 @@ Description: "Hier können Details dazu angegeben werden, wie eine Information e
 * . ^definition = "Hier können Details dazu angegeben werden, wie eine Information entstanden ist, z.B. die Quelle der Information."
 * insert Meta-With-Versioning
 * target MS
-  * ^definition = "Hier wird die Information bzw. Informationsgruppe referenziert, auf die sich die Herkunftsinformation bezieht. Beispiel: Wird in einem MIO Pflege-Überleitungsbogen die Diagnose aus einem Krankenhaus-Entlassbrief übernommen, so ist das Ziel-Element die Diagnose im Pflege-Überleitungsbogen."
+  * ^definition = "Hier wird die Information bzw. Informationsgruppe referenziert, auf die sich die Herkunftsinformation bezieht."
 * insert Reference(target)
 * occurred[x] MS
   * ^definition = "Hier wird der Zeitpunkt angegeben, an dem die jeweilige Aktivität durchgeführt wurde."
