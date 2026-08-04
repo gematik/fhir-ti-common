@@ -15,7 +15,6 @@ Description: "Abbildung, die als Ergänzung mitgegeben wird."
   * valueAttachment 1..1 MS
     * contentType 1..1 MS
       * ^definition = "Hier wird das Dateiformat angegeben."
-    * contentType = #image/png
     * data 1..1 MS
       * ^definition = "Hier wird die Bild-Datei angehängt."
     * title 1..1 MS
