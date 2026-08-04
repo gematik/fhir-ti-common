@@ -20,11 +20,10 @@ Description: "Dieses Profil bildet eine Diagnose ab."
       snomed 0..1 and
       orphanet 0..1
   * coding[ICD-10-GM] only CodingICD10GM
-    * insert CodingMS
   * coding[ICD-10-GM] MS
-    * ^definition = "In diesem Element wird der Code für die Diagnose als ICD-10-Code angegeben, inklusive Anzeigename (Display Name) sowie Name und Version des Codesystems.\n
-Der ICD-Code ist in Deutschland das abrechnungsrelevante Codesystem im ambulanten und stationären Bereich. So wird z. B. bei der Abrechnung nach § 301 und § 295 SGB V die Codierung von Diagnosen mittels ICD-10 GM gesetzlich vorgeschrieben. Im ICD-System ist im Gegensatz zu anderen Codesystem eine detaillierte Spezifikation von Diagnosen ohne Umwege möglich: die Einordnung der diagnostizierten Erkrankung als Ätiologie oder Manifestation, die Diagnosesicherheit und die Beschreibung des Schweregrades wie auch der Seitenlokalisation."
-    * code 1..1 MS
+    * ^definition = "In diesem Element wird der Code für die Diagnose als ICD-10-Code angegeben."
+    * insert CodingMS
+    * code
       * ^definition = "In diesem Element wird der Code für die Diagnose angegeben, allerdings ohne ein Mehrfachcodierungskennzeichen (z. B. '*', '†' oder '!'). Diese sind in anderen entsprechenden Elementen abzubilden."   
     * extension[Seitenlokalisation] MS
       * ^definition = "Zur Spezifizierung von Diagnoseangaben (ICD-10) dürfen die Zusatzkennzeichen für die Seitigkeit (R, L oder B) angegeben werden, d. h. die Angabe ist freiwillig; dies gilt für die stationäre und die ambulante Versorgung."
@@ -57,4 +56,4 @@ ORPHANET ist eine Initiative der Europäischen Union mit französischen Wurzeln 
     * system = $cs-orphanet
   * text MS
     * ^definition = "Hier wird eine Diagnose als Freitext eingetragen."
-* insert Subject(subject)
+* insert SubjectEu(subject)
