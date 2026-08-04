@@ -28,7 +28,7 @@ Description: "Abbildung, die als Ergänzung mitgegeben wird."
     * ^definition = "Hier der Typ des Untersuchungsbildes in Form eines Codes angegeben."
   * text MS
     * ^definition = "Freitextbezeichnung für den Typ des Untersuchungsbildes."
-* insert Subject(subject)
+* insert SubjectEu(subject)
 * insert Performer
 * performer
   * ^definition = "Ausführende Person/Einrichtung"
