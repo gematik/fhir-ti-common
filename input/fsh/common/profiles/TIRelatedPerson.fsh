@@ -15,17 +15,16 @@ Description: "Dieses Profil bildet eine Kontakt- oder Bezugsperson ab."
   * valueString MS
 * identifier MS
   * type MS
-  * insert Coding(type.coding)
   * system MS
   * value MS
-* insert Subject(patient)
+* insert SubjectEu(patient)
 * relationship MS
   * ^definition = "In diesem Element werden Angaben über die Beziehung der Kontaktperson zur/zum Patient:in gemacht. Diese werden als codierte Information und/oder als Freitext angegeben."
+  * insert CodeableConceptMS
   * coding MS
     * ^definition = "Hier wird die Beziehung der Kontaktperson zur/zum Patient:in anhand eines Codes aus einer Werteliste angegeben."
   * text MS
     * ^definition = "Hier wird ein Freitext eingetragen."
-* insert Coding(relationship.coding)
 * name only HumannameDeBasis
 * name MS
   * ^patternHumanName.use = #official
@@ -49,7 +48,7 @@ Description: "Dieses Profil bildet eine Kontakt- oder Bezugsperson ab."
   * extension contains GenderOtherDE named other-amtlich 0..1
   * extension[other-amtlich] MS
     * valueCoding 1..1 MS
-  * insert Coding(extension[other-amtlich].valueCoding)
+      * insert CodingMS
 * telecom MS
   * ^definition = "Dieses Element beschreibt die vorhandenen Kontaktmöglichkeiten."
   * system 1.. MS
