@@ -14,4 +14,4 @@ Description: "Dieses Profil bildet das Modell eines Probenbehälters ab."
   * ^definition = "Kategorisierung des Probenbehälters"
   * insert CodeableConceptMS
   * coding
-    * ^definition = "Fixcode für die Kategorie Probenbehälters."
+    * ^definition = "Hier wird ein Code erfasst, welcher angibt um welchen Gerätetyp es sich handelt."
