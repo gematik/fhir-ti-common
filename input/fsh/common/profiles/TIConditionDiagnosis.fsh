@@ -6,7 +6,9 @@ Description: "Dieses Profil bildet eine Diagnose ab."
 * . ^definition = "Dieses Profil bildet eine Diagnose ab."
 * insert Meta-With-Versioning
 * clinicalStatus MS
+  * ^definition = "Dieses Element beschreibt den Status einer Diagnose bzw. einer Erkrankung aus klinischer Sicht."
 * verificationStatus MS
+  * ^definition = "Hier wird die Diagnosesicherheit dokumentiert."
 * code MS
   * ^definition = "In diesem Element werden Angaben zur Diagnose in Form einer Codierung gemacht. Diese werden als codierte Information und/oder als Freitext angegeben."
   * coding MS
