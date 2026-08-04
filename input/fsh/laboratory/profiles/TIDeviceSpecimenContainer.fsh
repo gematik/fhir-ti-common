@@ -6,9 +6,7 @@ Description: "In diesem Profil werden Informationen zum Probenbehälter angegebe
 * . ^definition = "In diesem Profil werden Informationen zum Probenbehälter angegeben, z. B. Blutröhrchen, steriler Urinprobenbehälter."
 * insert Meta-With-Versioning
 * identifier MS
-  * ^definition = "Identifikator des Probenbehälters. Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar.\n
-  Es kann mehrere geben, z.B. einen Strichcode des Herstellers, eine vom Labor zugewiesene Kennung usw. Der Behälter-Identifikator kann sich ggf. vom Proben-Identifikator unterscheiden. Auch Teilmengen des Untersuchungsmaterials müssen eindeutig einem/r Patient:in zuzuordnen sein.\n
-  Der Sachverhalt, dass es zu einem Untersuchungsmaterial Teilmengen geben kann, wird im Datenmodell berücksichtigt, indem es sowohl die \"Identifikation Probe Einsender\" (Specimen.identifier 1..*) gibt, als auch für mögliche Teilmengen daraus die \"Probenbehälter-ID\" (Device_Specimen_Container.identifier 0..*)."
+  * ^definition = "Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar.\n"
   * ^short = "Identifikator des Probenbehälters"
   * value MS
   * type MS
@@ -46,7 +44,7 @@ Description: "In diesem Profil werden Informationen zum Probenbehälter angegebe
     * ^definition = "Hier wird ein Code aus SNOMED CT® angegeben."
   * coding[snomed] ^patternCoding.system = $cs-sct
   * text MS
-    * ^definition = "Freitextbezeichnung für den spezifischen Typ des Probenbehälters."
+    * ^definition = "Freitextbezeichnung für den spezifischen Typ des Probenbehälters."   
 * note MS
   * ^definition = "Feld für ergänzende Freitext-Angaben zum Probenbehälter, die in der vorgegebenen Datenstruktur nicht erfasst werden können."
   * text MS

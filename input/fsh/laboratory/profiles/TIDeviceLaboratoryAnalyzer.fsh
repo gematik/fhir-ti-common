@@ -52,7 +52,7 @@ Description: "In diesem Profil werden Informationen zum Analysegerät angegeben,
   * text MS
 * version MS
   * ^definition = "Version des Gerätes"
-  * value MS  
+  * value MS
 * note MS
   * ^definition = "Feld für ergänzende Freitext-Angaben zum Laboranalysegerät, die in der vorgegebenen Datenstruktur nicht erfasst werden können."
   * text MS

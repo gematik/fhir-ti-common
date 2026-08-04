@@ -10,7 +10,7 @@ Falls die Probe nicht unmittelbar aus dem menschlichen Körper direkt entnommen 
 Es wäre auch möglich, dass eine Probenentnahme aus mehreren außerkörperlichen Quellen gewonnen wird."
 * insert Meta-With-Versioning
 * identifier MS
-  * ^definition = "Identifikator der außerkörperlichen Quell. Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar."
+  * ^definition = "Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar."
   * ^definition = "Identifikator der außerkörperlichen Quelle"
   * value MS
   * type MS
@@ -49,7 +49,7 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehreren außerkörperliche
 * version MS
   * ^definition = "Version des Gerätes"
   * value MS  
-* insert Subject(patient)
+* insert SubjectEu(patient)
 * note MS
   * ^definition = "Feld für ergänzende Freitext-Angaben zur außerkörperlichen Quelle, die in der vorgegebenen Datenstruktur nicht erfasst werden können."
   * text 1.. MS
