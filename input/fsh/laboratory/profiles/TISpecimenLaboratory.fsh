@@ -1,6 +1,6 @@
-Profile: TISpecimendgLP
+Profile: TISpecimenLaboratory
 Parent: SpecimenEu
-Id: ti-specimen-dglp
+Id: ti-specimen-laboratory
 Title: "TI Specimen dgLP"
 Description: "Dieses Profil bildet eine Probe ab.\n
 Identifizierung und Eigenschaften der primären oder sekundären Probe, auf deren Basis die Laboruntersuchung als Messung durchgeführt wird. Ein inhaltliches Beispiel für die Unterscheidung von Primär- und Sekundärprobe:\n
@@ -61,10 +61,9 @@ Der LOINC®-Code impliziert über die LOINC®-Achse SYSTEM bereits eine Probenar
 * als Freitextergänzung, wenn die die Probenart durch Probenart, ergänzende Spezifizierung/SNOMED CT®-Code nicht ausreichend spezifisch bezeichnet werden kann
 * ersatzweise, wenn gar keine passende Codierung zugeordnet werden kann
 * wenn zusätzlich eine Freitext-Bezeichnung aus der LDT-Kommunikation übernommen werden soll."
-* insert Subject(subject)   
+* insert SubjectEu(subject)   
 * receivedTime MS
-  * ^definition = "Zeitpunkt des Eingangs der Probe im Labor. Dieser Zeitpunkt sollte nach Möglichkeit minutengenau angegeben werden. Im klinischen Alltag ist die minutengenaue Erfassung nicht immer realistisch. Deshalb ist die Mindestangabe hier tagesgenau."
-  * obeys  epa-datetime
+  * ^definition = "Zeitpunkt des Eingangs der Probe im Labor. Dieser Zeitpunkt sollte nach Möglichkeit minutengenau angegeben werden. Im klinischen Alltag ist die minutengenaue Erfassung nicht immer realistisch."
 * parent MS
   * ^definition = "Ausgangsmaterial für eine Sekundärprobe. Die Sekundärprobe existiert nur auf Basis einer Primärprobe. Wenn eine Sekundärprobe angegeben wird, dann ist das Ausgangsmaterial verpflichtend anzugeben, damit der Bezug hergestellt werden kann." 
   * insert ReferenceMS 
@@ -84,16 +83,13 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstell
     * ^definition = "Hier wird eine Zeitangabe zur Probengewinnung vorgenommen."
   * collected[x] only dateTime or Period
   * collectedDateTime MS
-    * ^definition = "Punktueller Zeitpunkt der Entnahme/Abnahme/Gewinnung der Probe. Dieser Zeitpunkt sollte nach Möglichkeit minutengenau angegeben werden. Im klinischen Alltag ist die minutengenaue Erfassung zur Probenentnahme nicht immer realistisch. Die Mindestangabe ist hier tagesgenau."
-    * obeys  epa-datetime
+    * ^definition = "Punktueller Zeitpunkt der Entnahme/Abnahme/Gewinnung der Probe. Dieser Zeitpunkt sollte nach Möglichkeit minutengenau angegeben werden. Im klinischen Alltag ist die minutengenaue Erfassung zur Probenentnahme nicht immer realistisch."
   * collectedPeriod MS
     * ^definition = "Zeitraum mit Start- und Endzeitpunkt, hier geht es um den konkreten Zeitraum der Probenentnahme."
     * start MS
       * ^definition = "Beginn eines Zeitraumes."
-      * obeys  epa-datetime
     * end MS
       * ^definition = "Ende eines Zeitraumes."
-      * obeys  epa-datetime
   * duration MS
     * ^definition = "Dauer steht für eine Zeitspanne, sie ist mindestens durch einen quantitativen Wert und eine zeitbezogene UCUM-Einheit definiert. Hier geht es um die zur Probengewinnung benötigte Zeitspanne, z. B. Sammelurin über einige Stunden."
     * insert QuantityMS
@@ -137,7 +133,7 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
     * text MS
       * ^definition = "Freitextangabe zum Nüchternstatus."
   * fastingStatusDuration MS
-    * ^definition = "Dauer des Nüchternzustandes. Dauer steht für eine Zeitspanne, sie ist mindestens durch einen quantitativen Wert und eine zeitbezogene UCUM-Einheit definiert."
+    * ^definition = "Dauer des Nüchternzustandes. Dauer steht für eine Zeitspanne, sie ist mindestens durch einen quantitativen Wert und eine zeitbezogene Einheit definiert."
     * insert QuantityMS
     * value
       * ^definition = "Hier wird der numerische Wert der Zeitdauer angegeben. Hierbei handelt es sich um eine Zahl mit optionalen Dezimalstellen."
@@ -150,7 +146,6 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
 Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diesem Fall wird kein Komparator gesetzt."
     * unit
       * ^definition = "Hier wird die Einheit der Zeitdauer angegeben."
-    * system
     * code
       * ^definition = "Hier wird der Code für Einheit der Zeitdauer angegeben."
 * processing MS
@@ -172,7 +167,7 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
     * ^definition = "Hier wird eine Zeitangabe vorgenommen."
   * time[x] only dateTime or Period
   * timeDateTime MS
-    * ^definition = "Im Laborkontext sollte der Zeitpunkt nach Möglichkeit minutengenau angegeben werden, die Mindestangabe ist tagesgenau."
+    * ^definition = "Im Laborkontext sollte der Zeitpunkt nach Möglichkeit minutengenau angegeben werden."
   * timePeriod MS
     * ^definition = "Zeitraum mit Start und Ende"
     * start MS
@@ -191,10 +186,10 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
     * insert QuantityMS
     * value MS
       * ^definition = "Numerischer Wert für eine gemessene Größe, eine Zahl mit optionalen Dezimalstellen."
+* condition from SpecimenConditionVS (extensible)
 * condition MS
   * ^definition = "Hier wird eine Angabe zum Zustand der Probe gemacht."
   * insert CodeableConceptMS
-  * coding from SpecimenConditionVS (extensible)
   * coding
     * ^definition = "Hier wird der Zustand der Probe als codierte Information angegeben."
   * text MS
