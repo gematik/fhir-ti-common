@@ -37,6 +37,12 @@ Description: "Administrative und für die Befundung klinisch relevante Teilinfor
 Der Veranlassungsgrund der Labordiagnostik wird als medizinische Fragestellung formuliert. Diese Angabe dient der fachlichen Präzision der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Eingriff; Infektion; Rheuma; Tumor.\n\n
 Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codierung möglich."
   * ^short = "Prozessualer Anlass oder medizinischer Veranlassungsgrund der Labordiagnostik"
+  * extension MS
+  * extension contains ReasonTypeExtension named reasonType 0..1
+  * extension[reasonType] MS
+    * ^definition = "Hier wird unterschieden, ob es sich bei der Angabe um einen Anlass und Veranlassungsgrund des Laborauftrags handelt."
+    * valueString MS
+  * text MS
 * reasonReference MS
   * ^definition = "Hier besteht die Option, die Diagnose aus dem Laborauftrag mitzuführen. Die Übernahme eines Diagnose-Codes geschieht in Abhängigkeit von den Auftragsdaten. Das setzt voraus, dass die Diagnose in den Auftragsdaten codiert übergeben worden ist."
   * ^short = "Auftragsdiagnose"
