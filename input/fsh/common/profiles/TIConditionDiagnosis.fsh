@@ -26,7 +26,7 @@ Description: "Dieses Profil bildet eine Diagnose ab."
     * ^definition = "In diesem Element wird der Code für die Diagnose als ICD-10-Code angegeben."
     * insert CodingMS
     * code
-      * ^definition = "In diesem Element wird der Code für die Diagnose angegeben, allerdings ohne ein Mehrfachcodierungskennzeichen (z. B. '*', '†' oder '!'). Diese sind in anderen entsprechenden Elementen abzubilden."   
+      * ^definition = "In diesem Element wird der Code für die Diagnose angegeben, allerdings ohne ein Mehrfachcodierungskennzeichen (z. B. '*', '†' oder '!'). Diese sind in anderen entsprechenden Elementen abzubilden."
     * extension[Seitenlokalisation] MS
       * ^definition = "Zur Spezifizierung von Diagnoseangaben (ICD-10) dürfen die Zusatzkennzeichen für die Seitigkeit (R, L oder B) angegeben werden, d. h. die Angabe ist freiwillig; dies gilt für die stationäre und die ambulante Versorgung."
       * valueCoding MS
@@ -34,7 +34,7 @@ Description: "Dieses Profil bildet eine Diagnose ab."
     * extension[Diagnosesicherheit] MS
       * ^definition = "Die Diagnosesicherheit, d.h. wie sicher die Diagnose im Einzelfall zu werten ist, wird durch ein Zusatzkennzeichen zum ICD-Code angegeben. Für Abrechnungszwecke in der ambulanten Versorgung muss obligatorisch ein Zusatzkennzeichen für die Diagnosesicherheit (A, G, V oder Z) angegeben werden, d. h. die Angabe ist obligatorisch. In der stationären Versorgung sind diese Zusatzkennzeichen für die Angabe der Diagnosesicherheit für Abrechnungszwecke dagegen nicht zulässig."
       * valueCoding MS
-        * insert CodingMS    
+        * insert CodingMS
     * extension[Mehrfachcodierungs-Kennzeichen] MS
       * ^definition = "In diesem Element wird ein Codierungskennzeichen (z. B. '*', '†' oder '!') zum Diagnosecode hinzugefügt."
       * valueCoding MS
@@ -45,12 +45,13 @@ Description: "Dieses Profil bildet eine Diagnose ab."
 Basierend auf dem alphabetischen Verzeichnis der deutschen Modifikation der International Classification of Diseases (ICD-GM) wird jeder Erkrankung eine fortlaufende Alpha-ID zugewiesen. Im Gegensatz zum ICD-Code erlaubt die Alpha-ID eine ein-eindeutige, individuelle und nicht-klassifizierende Identifikation einer Erkrankung. Die Alpha-ID ist kumulativ und stabil, während ICD-Codes Überarbeitungen erfahren."
     * ^comment = "Bei Alpha-ID-Codes, die zu postkoordinierten ICD-10-Codes gemappt werden, sollten diese nur einmal bei der Primärdiagnose und nicht mehr bei den Sekundärdiagnosen angeben werden (Stichpunkt: related Conditions in FHIR). In Fällen bei denen eine abweichende Diagnosesicherheit zwischen Primär- und Sekundärdiagnose vorhanden ist muss sichergestellt werden, dass die Diagnosesicherheit der Primärdiagnose zu dem assozierten Alpha-ID-Code passt. Siehe der Implementierungsguide (IG) der deutschen Basisprofile von HL7"
     * insert CodingMS
-    * version 1..1 
+    * version 1..1
   * coding[snomed] from DiagnosisSNOMEDCTVS (required)
   * coding[snomed] MS
     * ^definition = "In diesem Element wird der Code für die Diagnose als SNOMED CT®-Code angegeben, inklusive Anzeigename (Display Name) sowie Name und Version des Codesystems.\n
 SNOMED CT® bietet eine umfassende Codiermöglichkeit zu medizinischen Diagnosen, Befunden und Ereignissen. Dazu gehören beispielsweise alle Children der \"(Finding)\"-Konzepte, darunter auch die \"(Disorder)\"-Konzepte."
     * insert CodingMS
+    * system = $cs-sct
     * version 1..1
   * coding[orphanet] MS
     * ^definition = "In diesem Element wird der Code für die Diagnose als ORPHANET-Code angegeben, inklusive Anzeigename (Display Name) sowie Name und Version des Codesystems.\n
