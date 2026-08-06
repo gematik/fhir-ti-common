@@ -16,9 +16,11 @@ Description: "Administrative und für die Befundung klinisch relevante Teilinfor
 * code MS
   * insert CodeableConceptMS
 * orderDetail MS
-  * ^definition = "Als Freitext formulierte Anforderung aus dem Laborauftrag. Das kann beispielsweise aus Muster 10 übernommen sein oder über den Labordatentransfer (LDT) übermittelt worden sein."
-  * ^short = "Freitext Anforderung aus dem Laborauftrag"
+  * ^definition = "Eine Anforderung aus dem Laborauftrag."
+  * ^short = "Anforderung aus dem Laborauftrag"
   * text MS
+    * ^definition = "Als Freitext formulierte Anforderung aus dem Laborauftrag. Das kann beispielsweise aus Muster 10 übernommen sein oder über den Labordatentransfer (LDT) übermittelt worden sein."
+    * ^short = "Freitext Anforderung aus dem Laborauftrag"
 * insert SubjectEu(subject)
 * authoredOn MS
   * ^definition = "Zeitpunkt, zu dem der Einsender den Auftrag erstellt hat."
