@@ -1,6 +1,6 @@
 Extension: SortingNumberExtension
-Id: sorting-number
-Title: "Sortiernummer"
+Id: sorting-number-extension
+Title: "Extension Sortiernummer"
 Description: "Diese Extension bildet eine Sortiernummer ab."
 Context: Observation.hasMember, DiagnosticReport.result, Composition.section.entry
 * insert Meta
