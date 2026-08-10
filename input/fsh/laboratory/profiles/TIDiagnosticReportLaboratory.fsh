@@ -15,6 +15,10 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   PseudonymizedReportExtension named pseudonymizedReport ..1 and
   CriticalResultExtension named criticalResult ..1 and
   SecondaryStatusExtension named secondaryStatus ..3
+* extension[note] MS
+  * ^definition = "Freitextliche Angabe von zusätzliche Informationen zum Laborgesamtbefund."
+  * valueAnnotation 1.. MS
+    * text MS
 * extension[orderEntryTime] MS
   * ^definition = "Die Bedeutung und Verwendung des Auftragseingangszeitpunktes im Laborprozess kann unterschiedlich sein, beispielsweise:\n
   * In einem OrderEntry-Setting kann der Auftragseingangszeitstempel zum Zeitpunkt der ersten Probeneinbuchung für diesen Auftrag im Labor gesetzt werden. In einem solchen Fall aktiviert/generiert die erste Probe den Auftrag im LIS.
@@ -47,7 +51,7 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   * type MS
   * insert IdentifierMS
 * basedOn MS
-  * ^definition = "Referenz auf das auftragnehmende Labor"  
+  * ^definition = "Referenz auf das auftragnehmende Labor"
   * insert ReferenceMS
 * status MS
   * ^definition = "Bearbeitungsstatus des Laborgesamtbefundes."
@@ -62,12 +66,12 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   * ^short = "Fallbezug"
 * issued MS
   * ^definition = "Dokumentationszeitpunkt des Befundes durch das auftragnehmende Labor."
-  * ^short = "Dokumentationszeitpunkt Laborgesamtbefund" 
+  * ^short = "Dokumentationszeitpunkt Laborgesamtbefund"
 * performer MS
   * ^definition = "Person oder Organisation, die für Erstellung des Laborgesamtbefundes verantwortlich ist.\n\n
   Das auftragnehmende Labor kann die Laborleistung selbst erbringen, teilweise selbst erbringen und teilweise an ein Speziallabor weiterleiten oder insgesamt an ein Speziallabor weiterleiten. Der Gesamtbefund wird vollumfänglich zum gesamten Laborauftrag vom Auftragnehmer erstellt."
   * ^short = "Auftragnehmendes Labor"
-* specimen MS 
+* specimen MS
   * ^comment = "Zum Erhalt der europäischen Interoperabilität, orientiert an der Veröffentlichung https://hl7.eu/fhir/laboratory/history.html kann auf Gesamtbefundebene auf das gesamte Probenmaterial referenziert werden. Diese optionale Angabe ist redundant zu den Probenreferenzen der Einzeluntersuchungen."
   * insert ReferenceMS
 * result MS
