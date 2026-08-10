@@ -1,6 +1,10 @@
 {
     "releases": [
         {
+            "version": "1.4.1",
+            "requirements": []
+        },
+        {
             "version": "1.4.0",
             "requirements": [
                 {

@@ -1,6 +1,7 @@
 Instance: ExampleHistoryBundle
 InstanceOf: Bundle
 Title: "Example History Bundle"
+Description: "Das ist ein Beispiel für ein Bundle des Typ history"
 
 * id = "example-history-bundle"
 

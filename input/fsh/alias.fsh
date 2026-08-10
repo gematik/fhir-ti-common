@@ -63,6 +63,28 @@ Alias: $ti-medication-dispense-status-vs = https://gematik.de/fhir/terminology/V
 Alias: $ti-medication-dispense-category-vs = https://gematik.de/fhir/terminology/ValueSet/ti-medication-dispense-category-vs
 Alias: $ti-medication-request-status-vs = https://gematik.de/fhir/terminology/ValueSet/ti-medication-request-status-vs
 
+// TI/ePA Document Terminology
+/// ValueSets
+Alias: $epa-xds-type-code-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-type-code-vs
+Alias: $epa-xds-class-code-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-class-code-vs
+Alias: $epa-mhd-security-label-vs = https://gematik.de/fhir/terminology/ValueSet/epa-mhd-security-label-vs
+Alias: $epa-xds-mime-type-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-mime-type-vs
+Alias: $epa-xds-language-code-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-language-code-vs
+Alias: $epa-xds-format-code-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-format-code-vs
+Alias: $epa-xds-event-code-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-event-code-vs
+Alias: $epa-xds-healthcare-facility-type-code-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-healthcare-facility-type-code-vs
+Alias: $epa-xds-practice-setting-code-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-practice-setting-code-vs
+Alias: $epa-mhd-document-relationship-type-vs = https://gematik.de/fhir/terminology/ValueSet/epa-mhd-document-relationship-type-vs
+Alias: $epa-xds-confidentiality-code-vs-url = https://gematik.de/fhir/terminology/ValueSet/epa-xds-confidentiality-code-vs
+Alias: $ti-vs-expansion-deprecated = https://gematik.de/fhir/terminology/StructureDefinition/valueset-expansion-deprecated
+
+Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
+/// CodeSystems
+Alias: $epa-data-category-medical-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs
+Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
+Alias: $epa-data-category-other-vs = https://gematik.de/fhir/terminology/ValueSet/epa-data-category-other-vs
+
+
 
 //// Extensions
 // R5

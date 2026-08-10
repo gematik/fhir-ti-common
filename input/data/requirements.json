@@ -33,7 +33,7 @@
         "date": "2026-06-15T13:51:38.832877",
         "content_hash": "e95b42c4582df88b59dbebb5932baafeaa1f5c786c7bd008897a6fa1c20d2d34",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI00242W49",
@@ -57,7 +57,7 @@
         "date": "2025-11-18T12:35:25.434190",
         "content_hash": "f522bc728256316ca272448b38e7a89fe8a3545d425458d17282b9448a1f5a29",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI02423P7B",
@@ -85,7 +85,7 @@
         "date": "2025-11-18T11:03:10.876301",
         "content_hash": "e476ec53bfdb0614a01f8d1fe124ec41b5d901bfaad3c793e9e85c97e73f875e",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI06008V22",
@@ -113,7 +113,7 @@
         "date": "2025-11-18T11:03:10.874162",
         "content_hash": "1cb3d53aecd5dd7f465cb20b5252ace66b0be593f7df850e0096c8d1f5470193",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI06069XBQ",
@@ -141,7 +141,7 @@
         "date": "2025-11-18T11:03:10.872638",
         "content_hash": "dfd974c7382e205f82e7e483f3fa24af1305a74ab74270142ac4702f40120563",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI06089XAH",
@@ -181,7 +181,7 @@
         "date": "2025-11-18T11:03:10.871638",
         "content_hash": "607135b9861ab96c628cd75ddb5d1ccc620b95b3c6f2e7a64158afee0114a76d",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI06315TQ1",
@@ -209,7 +209,7 @@
         "date": "2026-06-15T13:51:38.828940",
         "content_hash": "dcd99dcb175f1d65a9d52bb97a9ab4a1d4f3690b5fbcfd68fefeac527cf7e914",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI06872YZP",
@@ -237,7 +237,7 @@
         "date": "2025-11-18T11:03:10.874627",
         "content_hash": "c5ba980dc0f109ed5e83a76ed110b5a224a08167628cc9ed44e73710ba89196a",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI07252NTV",
@@ -273,7 +273,7 @@
         "date": "2026-06-11T14:14:37.896534",
         "content_hash": "ddc91e95a7f135e8b944d81d2b83687882ed46a58d57164399b5cf4fa560be29",
         "path": "query-api-paging.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI08134XQ4",
@@ -297,7 +297,7 @@
         "date": "2025-11-18T12:35:25.433666",
         "content_hash": "c3b750b8d7ce9f6a139874b6aaf8b6794862bd51c8133e0e7420a2c4c4512217",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI09377BM6",
@@ -325,7 +325,7 @@
         "date": "2025-11-18T11:03:10.871391",
         "content_hash": "7c20974774525900465f04a892b07afb7b94ccfb30d9d9ddd2abfc4b54a8a443",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI11342RSA",
@@ -349,7 +349,7 @@
         "date": "2025-11-18T11:03:10.874817",
         "content_hash": "03b8e6aa702891de98322fcb2af281f2e9ddfa6d728d91b4c7441696ab093043",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI14253RWM",
@@ -385,7 +385,7 @@
         "date": "2026-06-15T13:51:38.826776",
         "content_hash": "2279c88c340437575f8f276cca9f8bf8ce9ddb290cbf23f433d218f4093d33eb",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI16700VFJ",
@@ -409,7 +409,7 @@
         "date": "2025-11-18T11:03:10.875069",
         "content_hash": "512e171cfc57f0c6f80d3b9e5aea0ab04d826d617530a7a9e11ff252f206aff9",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI16747WFN",
@@ -437,7 +437,7 @@
         "date": "2025-11-18T11:03:10.873019",
         "content_hash": "678a55a83c4b0980b45eea128ead70ef81884a0f8fce8e7013da95aeb532335a",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI17421K31",
@@ -455,7 +455,7 @@
             ]
         },
         "version": 0,
-        "release_status": "NEW",
+        "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
         "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen eine Implementierung des [dgMP-DosageTextgenerierung-Skript] bereitstellen, womit strukturierte Dosierinformationen validiert werden können.",
@@ -465,7 +465,7 @@
         "date": "2026-06-26T14:51:18.211564",
         "content_hash": "600278383b73b19b7926dbb97866da77caa1b4678993e4eb9495bbbc32704f08",
         "path": "validation.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI17755AMW",
@@ -489,7 +489,7 @@
         "date": "2025-11-18T12:35:25.434333",
         "content_hash": "908a4e10c1ee0c67cfb8a0546e203ada7dc9982a914f3024756430c36111ddd1",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI18063SU7",
@@ -529,7 +529,7 @@
         "date": "2026-06-24T14:46:41.665494",
         "content_hash": "ed5a7dfdb7fad3428446dc73113e1c1356f0f0f64c76be640bfa9761259dffc4",
         "path": "fhir-format.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI19904KM0",
@@ -569,7 +569,7 @@
         "date": "2026-06-24T14:46:41.666429",
         "content_hash": "efea0d89fd3acd642867ee28557dec9a695d7a5cbc982b211c19429cc90eeb0e",
         "path": "fhir-format.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI22824X01",
@@ -609,7 +609,7 @@
         "date": "2026-06-24T14:46:41.663639",
         "content_hash": "6864aac43ff6cec1005da3bfc13f1f1282d882a0e41208b7b3723466caf5a348",
         "path": "fhir-format.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI23978E7A",
@@ -633,7 +633,7 @@
         "date": "2025-12-02T13:01:10.401623",
         "content_hash": "5584bbbdac39b623b3caa3594ac0b170c65241924ce47f8675c3247413574d4e",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI27170FRR",
@@ -665,7 +665,7 @@
         "date": "2026-06-17T09:14:15.251630",
         "content_hash": "bf587cd5c2879b4a0cc659c2b6d08d2d7a62f2c6a2d0b4206eb8953f9fad280e",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI28968WCS",
@@ -701,7 +701,7 @@
         "date": "2026-06-15T13:51:38.820897",
         "content_hash": "1b6a3e5732d8c69e3e28ccd512c3b52168cc1047f2c4d85af517d653aab3c926",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI29386S9L",
@@ -737,7 +737,7 @@
         "date": "2025-11-18T11:03:10.870884",
         "content_hash": "a60bb7cdb03c45264b091adae5aa325f15284a64a05dcf7d8bd4eab58856f2fc",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI29911V07",
@@ -777,7 +777,7 @@
         "date": "2026-06-15T13:51:38.812829",
         "content_hash": "1cb629d6c7f0cd71a019e419aa20494e63032ca54ccaf00f99c4581b9d009c64",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI31988JEY",
@@ -813,7 +813,7 @@
         "date": "2026-06-15T13:51:38.819427",
         "content_hash": "e77343f82a5b7370a34c36dcee2cf2d39930fc895a4939d2310086cc5640e0eb",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI36210TD1",
@@ -837,7 +837,7 @@
         "date": "2025-11-18T11:03:10.875374",
         "content_hash": "1ebfa88486894d8e3d8b81f1504e2c3894390aaa2bc09fded496ea82207986f3",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI36297YXJ",
@@ -873,7 +873,7 @@
         "date": "2026-06-15T13:51:38.823846",
         "content_hash": "8078eb88fc5e6d205ccd54e66a21f8be7a66ed72769f1641af16f8ae997dd747",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI37232GDE",
@@ -909,7 +909,7 @@
         "date": "2026-06-11T14:14:37.897730",
         "content_hash": "0daf98b0db301b7fb1f14cd38a268630d1966504db8e51905b933d21e745aac5",
         "path": "query-api-paging.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI38183K0G",
@@ -933,7 +933,7 @@
         "date": "2025-11-18T12:35:25.433330",
         "content_hash": "a01c1d20144bd3cbcbedf56793592669cd9c78224865ec2c4bc4b63a7b4e2010",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI38467S3Q",
@@ -973,7 +973,7 @@
         "date": "2026-06-24T14:46:41.689539",
         "content_hash": "0308dff95de1faceec40d989ccb9736636a6b84eae41128ebc20f5a54f589d5f",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI40876FQM",
@@ -1009,7 +1009,7 @@
         "date": "2026-06-15T13:51:38.822321",
         "content_hash": "5891bdad8bc3f9e2e8b1eb62c2288476ad5ed16422d7716b618f3df8add27eb8",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI43381BV9",
@@ -1027,7 +1027,7 @@
             ]
         },
         "version": 0,
-        "release_status": "NEW",
+        "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
         "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n\n- `MedicationRequest.dosageInstruction`\n- `MedicationDispense.dosageInstruction`",
@@ -1037,7 +1037,7 @@
         "date": "2026-06-26T14:51:18.211961",
         "content_hash": "a9da80f6169bd630970ca31ccd3e580842332f0c8fe6654d4057a687ffe52ffe",
         "path": "validation.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI43409LRQ",
@@ -1077,7 +1077,7 @@
         "date": "2026-06-15T13:51:38.809931",
         "content_hash": "2bc57345bbe3e62089fa8a481df13974155283b575470e0540d314e81d3ca84f",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI44024J5L",
@@ -1105,7 +1105,7 @@
         "date": "2025-11-18T11:03:10.872838",
         "content_hash": "30ea9e0df96c5d3f2a8baca39669dfee1a23fa14efc5c8d945a05c1bc64b0ede",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI44886ZXA",
@@ -1129,7 +1129,7 @@
         "date": "2025-11-18T12:35:25.433474",
         "content_hash": "c56259af79bb912d57961a71ed851c5f02311a675d79400179e263f6c7959af5",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI45064TNU",
@@ -1157,7 +1157,7 @@
         "date": "2025-11-18T11:03:10.876714",
         "content_hash": "6ead9f78afeb96576f40aa4db7bfb0e66f711b57d29698d336ed8cda0ea697da",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI47719G19",
@@ -1185,7 +1185,7 @@
         "date": "2025-11-18T11:03:10.875984",
         "content_hash": "405da05f6d1ffc830c03bdf6022f2ba8c72b6116a190b168011b6a540aac0adb",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI52070SA6",
@@ -1213,7 +1213,7 @@
         "date": "2025-12-02T13:01:10.399508",
         "content_hash": "4d8cdedc77d705e7395316c64d329b286d7d43efe148dbdd8d72e06c934b166b",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI52829PK9",
@@ -1241,7 +1241,7 @@
         "date": "2025-11-18T11:03:10.872435",
         "content_hash": "c1eece84f9458a9ef269eef88dd7bb7647cdd84e04e3f95f94753a4e41be7882",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI52895H8W",
@@ -1269,7 +1269,7 @@
         "date": "2025-11-18T11:03:10.872243",
         "content_hash": "cf32c3802658a856d4e8c25d8951f795c9041e864491df8631df5504278defd4",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI57083QMG",
@@ -1309,7 +1309,7 @@
         "date": "2026-06-24T14:46:41.664394",
         "content_hash": "ad425f73bf52134aa50d6d32a0189b475c1bd007a081eb82f9b4be0a7eb5de4f",
         "path": "fhir-format.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI59271UPX",
@@ -1349,7 +1349,7 @@
         "date": "2026-06-24T14:46:41.662834",
         "content_hash": "920570db55f6675b7c0a986989d28e73c75329330911231c46cb4d4ec6645044",
         "path": "fhir-format.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI59347HCY",
@@ -1377,7 +1377,7 @@
         "date": "2025-11-18T11:03:10.871862",
         "content_hash": "c5e2bb238b8a6c7c2010ad43dafe6861b04785016f604ca6edb4a1d74fa1e999",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI60515LXY",
@@ -1405,7 +1405,7 @@
         "date": "2025-11-18T11:03:10.873189",
         "content_hash": "29cb2b6bf8dc38a837f517e5f89d32e7251d970ceae101d89c9b75c0f6982132",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI61163GRT",
@@ -1441,7 +1441,7 @@
         "date": "2026-06-15T13:51:38.828107",
         "content_hash": "d15613497fc83544ce7a18a5a6df3bf5937f4c1ca27dd4ffdf1b277619bb5eea",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI61673KWG",
@@ -1469,7 +1469,7 @@
         "date": "2025-11-18T11:03:10.876136",
         "content_hash": "4bca59c16431929b9bd7f646232762ddef756f7e8e7fbb2ae1bb5270c202b19d",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI62490PR0",
@@ -1509,7 +1509,7 @@
         "date": "2026-06-24T14:46:41.666000",
         "content_hash": "a532db5c969b1f8317410a404b69f35d467cd54ad8dbc7d1508270261a116a6c",
         "path": "fhir-format.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI62717R2P",
@@ -1549,7 +1549,7 @@
         "date": "2026-06-24T14:46:41.664024",
         "content_hash": "0a9086fa476a0995626bb4c866662840b196e0aed2a527cf23bb58b9046f43ac",
         "path": "fhir-format.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI64797XGV",
@@ -1589,7 +1589,7 @@
         "date": "2026-06-15T13:51:38.811342",
         "content_hash": "03b0e8a86490a8e16ea6d71b9a1669a0261726255ee8ba7b8581532b3b456250",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI66054HX2",
@@ -1613,7 +1613,7 @@
         "date": "2025-11-18T11:03:10.874943",
         "content_hash": "5b3c10756191c35aff6e59bb1b2f472e980636285119314555929d0ccee8e81b",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI66923Q9F",
@@ -1641,7 +1641,7 @@
         "date": "2025-11-18T11:03:10.874375",
         "content_hash": "d8828d33d06e9d89170a385bcb8fbd94f44bcecd45e3064918e8aca848230509",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI72725KAW",
@@ -1669,7 +1669,7 @@
         "date": "2025-11-18T11:03:10.876502",
         "content_hash": "2c80aab248c22fe521cb6dc487065a99d9503473cfee2a943d2ab71bf86ee64d",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI74988KAT",
@@ -1687,7 +1687,7 @@
             ]
         },
         "version": 0,
-        "release_status": "NEW",
+        "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
         "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen Implementierungen des [dgMP-DosageTextgenerierung-Skript] mit unterschiedlichen Versionen und Sprachen verwalten können.",
@@ -1697,7 +1697,7 @@
         "date": "2026-06-26T14:51:18.211764",
         "content_hash": "e6db85e5b4fe473871cdf59d480d7a9830337bbe7ac7191b4b86c190ed6c6b64",
         "path": "validation.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI78112H2T",
@@ -1733,7 +1733,7 @@
         "date": "2026-06-11T14:14:37.898373",
         "content_hash": "387a04b6a69bd4d42e2d0a8cdcce5eca72608767c85e2221450ea1bac4a54a47",
         "path": "query-api-paging.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI78384PEX",
@@ -1761,7 +1761,7 @@
         "date": "2025-11-18T11:03:10.873378",
         "content_hash": "5faaaaab304240a71aecb909ec4698f6b4bf2b9baf704036ec96a68f15bca48a",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI81327UVF",
@@ -1797,7 +1797,7 @@
         "date": "2026-06-15T13:51:38.831786",
         "content_hash": "cf8dabca9c2516ca0217fd5baf992e3330efb3f3a602f754206b7de1d6740239",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI83690KSY",
@@ -1815,7 +1815,7 @@
             ]
         },
         "version": 0,
-        "release_status": "NEW",
+        "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
         "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
@@ -1825,7 +1825,7 @@
         "date": "2026-06-26T14:51:18.211072",
         "content_hash": "7804b34408c379b0be082e05bec5ca6747284b50514df9bc2b1407d9843a7e8c",
         "path": "validation.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI85276Y4V",
@@ -1861,7 +1861,7 @@
         "date": "2026-06-15T13:51:38.825471",
         "content_hash": "bfeb5066760c4bcbba566fc27f3dc2af9c0e9efed17026cd652e8d73f9dca98d",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI87140VUU",
@@ -1893,7 +1893,7 @@
         "date": "2025-11-18T11:03:10.871121",
         "content_hash": "777a34849024057245ca44fae44716427f9370c2c07145ebde8371efe0a1e852",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI87465NYV",
@@ -1921,7 +1921,7 @@
         "date": "2026-06-15T13:51:38.829682",
         "content_hash": "828ee20983260a11030b833b8ed93e117ce87c40dd845a02f434499364ddcdac",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI92941JBA",
@@ -1945,7 +1945,7 @@
         "date": "2025-11-18T12:35:25.433853",
         "content_hash": "10e268a06a5e654f205fde6e12e25940687d637015090807eb475581973d22fd",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI94321ZRC",
@@ -1973,7 +1973,7 @@
         "date": "2025-11-18T11:03:10.873567",
         "content_hash": "98d16272d12811dadca3520640bff985e86772f2410bda194e66eb28164cc0e2",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI94558MGC",
@@ -2013,7 +2013,7 @@
         "date": "2026-06-24T14:46:41.666820",
         "content_hash": "22f3ec0767669a45f4ed7ee36167c66555462ab59db35ea1fd7beff5e6ab126a",
         "path": "fhir-format.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI94882PRF",
@@ -2041,7 +2041,7 @@
         "date": "2025-11-18T11:03:10.872050",
         "content_hash": "b30f3869c3b1d34d18d4657c70025a64faf7f84f6f9c4f8a3fa6db83397157f8",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI95143N18",
@@ -2081,7 +2081,7 @@
         "date": "2026-06-15T13:51:38.814449",
         "content_hash": "e60a5affa44ae057d5e590428427b04e497fb236fb95a7201f3d780201019bdd",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI96213YXB",
@@ -2099,7 +2099,7 @@
             ]
         },
         "version": 0,
-        "release_status": "NEW",
+        "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
         "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction` oder\n- `MedicationDispense.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
@@ -2109,7 +2109,7 @@
         "date": "2026-06-26T14:51:18.211337",
         "content_hash": "98b973688e31a181fe106fcfb016dde600650241574d2f6cbb33fe47b7c86378",
         "path": "validation.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI96963Y60",
@@ -2149,7 +2149,7 @@
         "date": "2026-06-24T14:46:41.664962",
         "content_hash": "0527f0e0d38f6dd7c631ae456929d9c1c829cbbc4407106fb08f7ed123f0a020",
         "path": "fhir-format.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI97020UTC",
@@ -2173,7 +2173,7 @@
         "date": "2025-11-18T12:35:25.434024",
         "content_hash": "cdf7b5975219fc8506cdded690f3e4e07210aa6d5681d70815e42d053ed34381",
         "path": "query-api-search.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     },
     {
         "key": "IG-TI97619U65",
@@ -2209,6 +2209,6 @@
         "date": "2025-11-18T11:03:10.877539",
         "content_hash": "4f45d5e4e3b0209a9074447163ea7491ebc96a2fae8bbe945b7a542b4266776c",
         "path": "general-principles.html",
-        "release": "1.4.0"
+        "release": "1.4.1"
     }
 ]
