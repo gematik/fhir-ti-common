@@ -28,12 +28,6 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
   * ^short = "Status des Dokuments"
   * ^definition = "Status des Dokuments (DocumentEntry.availabilityStatus) unter Berücksichtigung des [MHD Mapping](https://profiles.ihe.net/ITI/MHD/ConceptMap/FhirStatusVsStatusCode)"
   * ^comment = "Dies ist der Status des DocumentReference-Objekts.\n\nDieses Element wird als Modifier gekennzeichnet, da der Status Codes enthält, die das Dokument oder die Referenz als derzeit nicht gültig markieren."
-// FIXME: original cardinality in IHE.MHD.Minimal.DocumentReference is 0..0 - is there necessity to query for docStatus or diagnostic-report-status?
-// * docStatus 0..1 MS
-// * docStatus from $epa-mhd-composition-stats-vs (required)
-//   * ^short = "Bearbeitungsstatus des Dokuments"
-//   * ^definition = "Bearbeitungsstatus des Dokuments"
-//   * ^comment = "n/a"
 * type 1..1 MS
   * ^short = "Art des Dokuments"
   * ^definition = "Art des Dokuments (DocumentEntry.typeCode)"

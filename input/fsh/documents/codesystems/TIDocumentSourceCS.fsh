@@ -11,4 +11,4 @@ Description: "Quellsystem eines über DocumentReference beschriebenen Dokuments.
 * ^caseSensitive = true
 * ^content = #complete
 
-* #epa "ePA" "Die DocumentReference wurde aus dem MHD Document Responder der ePA übernommen."
+* #epa "ePA" "Die DocumentReference wurde aus dem ePA MHD Service übernommen."
