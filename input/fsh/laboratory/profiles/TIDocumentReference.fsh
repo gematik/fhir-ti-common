@@ -3,6 +3,7 @@ Parent: DocumentReference
 Id: ti-documentReference
 Title: "TI Document Reference"
 Description: "Hier wird auf ein externes Dokument verwiesen und/oder ein Dokument angehängt."
+* insert Meta-With-Versioning
 * . ^definition = "Hier wird auf ein externes Dokument verwiesen und/oder ein Dokument angehängt."
 * status MS
   * ^definition = "Hier wird der Status des Dokumentenverweises bzw. Anhanges angegeben."
