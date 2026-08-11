@@ -30,7 +30,7 @@ text: "Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und i
   \ ob die Gesamtanzahl der Einträge in der Antwort enthalten sein soll.\n <br/><br/>\n\
   \ <figure>\n <table style=\"width: 100%\">\n <thead>\n <tr>\n <th>URL-Parameter</th>\n\
   \ <th>Beschreibung</th>\n <th>Standardwert</th>\n </tr>\n </thead>\n <tbody>\n <tr>\n\
-  \ <td><code>_count</code></td>\n <td>Das Client-System KANN die maximale Anzahl\
+  \ <td><code>_count</code></td>\n <td>Das Client-System kann die maximale Anzahl\
   \ von Elementen festlegen, die auf einer <i>Seite</i> (page) der Antwort enthalten\
   \ sein soll. Das bedeutet, dass der FHIR Data Service die Ergebnismenge auf diese\
   \ maximal angegebene Anzahl beschränkt.</td>\n <td>25</td>\n </tr>\n <tr>\n <td><code>_offset</code></td>\n\
