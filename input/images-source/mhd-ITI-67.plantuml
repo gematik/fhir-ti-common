@@ -1,0 +1,23 @@
+@startuml
+
+' Diagram for Find Document References [ITI-67] and Retrieve Document [ITI-68]
+
+
+hide footbox
+
+participant "Document Consumer" as consumer
+participant "Document Responder" as responder
+
+activate consumer
+activate responder
+
+consumer -> responder: Find Document References
+consumer <-- responder
+
+consumer -> responder: Retrieve Document
+consumer <-- responder
+
+deactivate consumer
+deactivate responder
+
+@enduml

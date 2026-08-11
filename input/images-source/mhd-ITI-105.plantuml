@@ -1,0 +1,28 @@
+@startuml
+
+
+' Diagram for Simplified Publish [ITI-105]
+
+hide footbox
+
+participant "Document Source" as source
+participant "Document Recipient" as recipient
+
+activate source
+activate recipient
+
+' source -> recipient: Simplified Publish [ITI-105]
+' source <-- recipient
+
+source -> recipient: Publish Document
+recipient -> recipient: Validate DocumentReference
+recipient -> recipient: Extract the document
+recipient -> recipient: Revise DocumentReference to point at document
+recipient --> recipient: Create SubmissionSet from DocumentReference and context
+recipient --> recipient: Persist
+source <-- recipient
+
+deactivate source
+deactivate recipient
+
+@enduml

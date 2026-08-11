@@ -45,6 +45,8 @@ pages:
     title: "FHIR-Formatserialisierung"
   validation.md:
     title: "Validierung"
+  document-management.md:
+    title: IHE MHD-basiertes Dokumentenmanagement in der TI
   # artifacts.md:
   #   title: "FHIR-Artefakte"
   artifacts-common.md:
@@ -89,6 +91,7 @@ menu:
   Home: index.html
   Generelle Prinzipien:
     Generelle Prinzipien: general-principles.html
+    Dokumentenmanagement: document-management.html
     Validierung: validation.html
   Schnittstellen:
     "Query API: Paginierung": query-api-paging.html
