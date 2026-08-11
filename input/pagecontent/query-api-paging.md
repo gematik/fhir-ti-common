@@ -29,7 +29,7 @@ Bei einer Suche im FHIR Data Service über die FHIR Query API stellt der Service
       <tbody>
         <tr>
           <td><code>_count</code></td>
-          <td>Das Client-System KANN die maximale Anzahl von Elementen festlegen, die auf einer <i>Seite</i> (page) der Antwort enthalten sein soll. Das bedeutet, dass der FHIR Data Service die Ergebnismenge auf diese maximal angegebene Anzahl beschränkt.</td>
+          <td>Das Client-System kann die maximale Anzahl von Elementen festlegen, die auf einer <i>Seite</i> (page) der Antwort enthalten sein soll. Das bedeutet, dass der FHIR Data Service die Ergebnismenge auf diese maximal angegebene Anzahl beschränkt.</td>
           <td>25</td>
         </tr>
         <tr>
