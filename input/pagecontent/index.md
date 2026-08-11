@@ -14,3 +14,9 @@ Die Konzepte und Anforderungen jedes spezifischen FHIR Data Service werden jewei
 ### Kontakt
 
 Allgemeine Fragen und Kommentare zum Implementation Guide können Sie über das [Anfragenportal] der gematik einreichen. Falls kein Zugang besteht, senden Sie bitte eine E-Mail an "patientteam [ at ] gematik [ dot ] de" mit dem Betreff "Anfragenportal Zugang".
+
+{% comment %}
+### Erklärungen zum geistigen Eigentum
+
+{% include ip-statements.xhtml %}
+{% endcomment %}

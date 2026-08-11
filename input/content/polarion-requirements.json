@@ -1865,6 +1865,19 @@
             "characteristics": [
                 {
                     "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
@@ -1900,6 +1913,19 @@
             "text": "Der FHIR Data Service MUSS sicherstellen, dass bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt, die aktuelle Version unverändert bleibt. In diesem Fall wird keine neue Version erstellt und die bestehende <i>Meta.versionId</i> sowie das <i>Meta.lastUpdated-Datum</i> bleiben erhalten.",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "EPA-Medication-Service",
@@ -2089,6 +2115,19 @@
             "text": "Der FHIR Data Service MUSS jede neu erstellte oder neu hinzugefügte FHIR-Instanz mit einer <i>Meta.versionId</i> und einem <i>Meta.lastUpdated</i> versehen, um die Versionierung sicherzustellen.",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "EPA-Medication-Service",
@@ -2786,7 +2825,7 @@
             "title": "Strukturierte Dosierung - Validierung von Version und Sprache",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
+            "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -3115,6 +3154,19 @@
             "characteristics": [
                 {
                     "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
@@ -3223,7 +3275,7 @@
             "title": "Strukturierte Dosierung - Validierung der generierten Dosierungsangabe",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction` oder\n- `MedicationDispense.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
+            "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction` oder\n- `MedicationDispense.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
             "conformance": "SHALL",
             "characteristics": [
                 {

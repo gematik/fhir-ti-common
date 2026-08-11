@@ -2,9 +2,9 @@ actor:
 - EPA-Medication-Service
 - TI-Flow_FD
 conformance: SHALL
-content_hash: 7804b34408c379b0be082e05bec5ca6747284b50514df9bc2b1407d9843a7e8c
+content_hash: a1e11f7466b451e7311c07d44bec80fad9c1f318182d0d97b1f82e6628a78efa
 created: '2026-06-25T06:43:07.995739'
-date: '2026-06-26T14:51:18.211072'
+date: '2026-08-11T12:57:57.998465'
 key: IG-TI83690KSY
 modified: '2026-06-25T06:43:07.995744'
 release_status: STABLE
@@ -25,7 +25,7 @@ text: 'Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angab
 
 
   mit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation
-  mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive implementierter Version
+  mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive implementierter Version
   und Sprache abbrechen.'
 title: Strukturierte Dosierung - Validierung von Version und Sprache
 version: 0

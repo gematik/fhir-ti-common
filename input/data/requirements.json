@@ -1219,10 +1219,14 @@
         "key": "IG-TI52829PK9",
         "title": "Numerisches Format der Resource.meta.versionId",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -1238,7 +1242,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.421388",
         "modified": "2025-03-12T12:47:19.481885",
-        "date": "2025-11-18T11:03:10.872435",
+        "date": "2026-08-11T12:49:11.659684",
         "content_hash": "c1eece84f9458a9ef269eef88dd7bb7647cdd84e04e3f95f94753a4e41be7882",
         "path": "general-principles.html",
         "release": "1.4.1"
@@ -1247,10 +1251,14 @@
         "key": "IG-TI52895H8W",
         "title": "Keine neue Version bei inhaltsgleichen Aktualisierungen",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -1266,7 +1274,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.421311",
         "modified": "2025-05-27T09:33:08.790205",
-        "date": "2025-11-18T11:03:10.872243",
+        "date": "2026-08-11T12:49:11.659382",
         "content_hash": "cf32c3802658a856d4e8c25d8951f795c9041e864491df8631df5504278defd4",
         "path": "general-principles.html",
         "release": "1.4.1"
@@ -1355,10 +1363,14 @@
         "key": "IG-TI59347HCY",
         "title": "Initiale Versionierung neu erstellter oder hinzugefügter FHIR-Instanzen",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -1374,7 +1386,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.421232",
         "modified": "2025-03-12T12:47:19.481614",
-        "date": "2025-11-18T11:03:10.871862",
+        "date": "2026-08-11T12:49:11.658771",
         "content_hash": "c5e2bb238b8a6c7c2010ad43dafe6861b04785016f604ca6edb4a1d74fa1e999",
         "path": "general-principles.html",
         "release": "1.4.1"
@@ -1818,12 +1830,12 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
-        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
+        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.995739",
         "modified": "2026-06-25T06:43:07.995744",
-        "date": "2026-06-26T14:51:18.211072",
-        "content_hash": "7804b34408c379b0be082e05bec5ca6747284b50514df9bc2b1407d9843a7e8c",
+        "date": "2026-08-11T12:57:57.998465",
+        "content_hash": "a1e11f7466b451e7311c07d44bec80fad9c1f318182d0d97b1f82e6628a78efa",
         "path": "validation.html",
         "release": "1.4.1"
     },
@@ -2019,10 +2031,14 @@
         "key": "IG-TI94882PRF",
         "title": "Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -2038,7 +2054,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T17:01:48.083983",
         "modified": "2025-03-12T12:47:19.481709",
-        "date": "2025-11-18T11:03:10.872050",
+        "date": "2026-08-11T12:49:11.659102",
         "content_hash": "b30f3869c3b1d34d18d4657c70025a64faf7f84f6f9c4f8a3fa6db83397157f8",
         "path": "general-principles.html",
         "release": "1.4.1"
@@ -2102,12 +2118,12 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
-        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction` oder\n- `MedicationDispense.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
+        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction` oder\n- `MedicationDispense.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.995917",
         "modified": "2026-06-25T06:43:07.995919",
-        "date": "2026-06-26T14:51:18.211337",
-        "content_hash": "98b973688e31a181fe106fcfb016dde600650241574d2f6cbb33fe47b7c86378",
+        "date": "2026-08-11T12:49:11.650999",
+        "content_hash": "22a1b25289cd27788e9e9bd28be7cecdcf68ba9180dd74034d4193b12bd47ab5",
         "path": "validation.html",
         "release": "1.4.1"
     },

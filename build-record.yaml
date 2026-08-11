@@ -3,7 +3,7 @@ versions:
   IG Publisher: 2.3.1
   Java: 17.0.16
   PlantUML: 1.2023.6
-  Python: 3.12.10
+  Python: 3.12.12
   fhirscripts: 0.29.1
   gCloud SDK: 464.0.0
   igtools: 1.0.0

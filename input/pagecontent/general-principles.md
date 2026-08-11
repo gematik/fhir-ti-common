@@ -87,6 +87,9 @@ Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen 
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS jede neu erstellte oder neu hinzugefügte FHIR-Instanz mit einer <i>Meta.versionId</i> und einem <i>Meta.lastUpdated</i> versehen, um die Versionierung sicherzustellen.
 </requirement>
 
@@ -98,6 +101,9 @@ Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen 
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS auf den Zeitpunkt der Aktualisierung gesetzt werden.
 </requirement>
 
@@ -107,6 +113,9 @@ Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen 
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt, die aktuelle Version unverändert bleibt. In diesem Fall wird keine neue Version erstellt und die bestehende <i>Meta.versionId</i> sowie das <i>Meta.lastUpdated-Datum</i> bleiben erhalten.
@@ -123,6 +132,9 @@ Das Metadatenattribut `Resource.meta.versionId` gibt die Versionsnummer einer FH
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass das Element <i>Resource.meta.versionId</i> ausschließlich numerische Werte enthält. Alphanumerische Zeichen, Symbole oder Sonderzeichen dürfen nicht verwendet werden.
