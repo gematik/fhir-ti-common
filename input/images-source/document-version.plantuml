@@ -1,0 +1,20 @@
+@startuml
+
+!include ./includes/resources.iuml
+hide empty description
+
+createDocumentReference(docref_v1 , Version 1)
+creatDocument(doc_v1, Version 1)
+
+createDocumentReference(docref_v2 , Version 2) {
+    + relatesTo.code = **replaces** 
+}
+creatDocument(doc_v2, Version 2)
+
+
+docref_v2 -[dashed]> doc_v2 : <i>content.attachment.url</i>
+docref_v2 --> docref_v1 : relatesTo.target
+docref_v1 -[dashed]> doc_v1 : <i>content.attachment.url</i>
+
+
+@enduml

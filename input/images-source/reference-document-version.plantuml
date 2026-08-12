@@ -1,0 +1,15 @@
+@startuml
+
+!include ./includes/resources.iuml
+hide empty description
+
+createDocumentReference(docref_v1 , Version 1)
+createDocumentReference(docref_v2 , Version 2) {
+    + relatesTo.code = **replaces** 
+}
+createTask(task, Workflow-Task)
+
+docref_v2 -> docref_v1 : relatesTo.target
+task --> docref_v2 : <i>input.valueReference</i> \nor\n <i>output.valueReference</i> \nor\n <i>focus</i>
+
+@enduml

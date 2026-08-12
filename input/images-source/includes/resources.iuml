@@ -1,0 +1,11 @@
+@startuml
+
+!define createDocumentReference(name, title) object "<< title >>\n**DocumentReference**" as name #Darkorange
+
+!define creatDocument(name, title) object "<< title >> \n**Document**" as name #MediumAquaMarine
+
+!define creatBinary(name, title) object "<< title >>\n**Binary**" as name #MediumAquaMarine
+
+!define createTask(name, title) object "<< title >>\n**Task**" as name #LightSkyBlue
+
+@enduml

@@ -2,7 +2,7 @@ Profile: TIMHDSimplifiedPublishDocumentReference
 Parent: IHE.MHD.SimplifiedPublish.DocumentReference
 Id: ti-mhd-simplified-publish-document-reference
 Title: "TI MHD Simplified Publish DocumentReference"
-Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentReference-Ressource für den TI-weiten Einsatz und berücksichtigt dabei die Metadaten-Einschränkungen der ePA."
+Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentReference-Ressource für den TI-weiten Einsatz."
 * insert Meta
 
 // preserve the version
