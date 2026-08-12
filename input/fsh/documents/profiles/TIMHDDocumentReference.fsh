@@ -2,7 +2,7 @@ Profile: TIMHDDocumentReference
 Parent: IHE.MHD.Minimal.DocumentReference
 Id: ti-mhd-document-reference
 Title: "TI MHD DocumentReference"
-Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ressource für den TI-weiten Einsatz und berücksichtigt dabei die Metadaten-Einschränkungen der ePA."
+Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ressource für den TI-weiten Einsatz."
 * insert Meta-With-Versioning
 
 // preserve the version
@@ -14,7 +14,7 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 * extension[documentLocation]
   * ^short = "Kennzeichnet das System, in dem sich das referenzierte Dokument befindet, z. B. die ePA des Versicherten."
   * ^definition = "Gibt das System an, in dem sich das durch die DocumentReference beschriebene Dokument befindet und aus dem es abgerufen werden kann."
-  * ^comment = "Die Extension ermöglicht die Unterscheidung zwischen verschiedenen Speicherorten eines Dokuments, beispielsweise einem Primärsystem, einem Workflow-Dokumentenspeicher oder der ePA. Befindet sich das Dokument in der ePA, wird der zugehörige Versicherte über DocumentReference.subject logisch referenziert. Der Dokumentinhalt kann über die in DocumentReference.content.attachment.url angegebene URL mittels der ePA-Transaktion Retrieve Document [ITI-68] abgerufen werden."
+  * ^comment = "Die Extension ermöglicht die Unterscheidung zwischen verschiedenen Speicherorten eines Dokuments, beispielsweise einem Primärsystem, einem Workflow-Dokumentenspeicher oder der ePA."
 
 * masterIdentifier MS
 
@@ -22,7 +22,7 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 * identifier contains uniqueId 1..1 MS
 * identifier[uniqueId] only UniqueIdIdentifier
 * identifier[uniqueId] ^short = "Unique identifier für das referenzierte Dokument"
-* identifier[uniqueId] ^definition = "Der eindeutige Identifikator des referenzierten Dokuments, der dem Element DocumentEntry.uniqueId in XDS entspricht. Dieser dient als fachlicher bzw. dokumentbezogener Identifier des Dokuments und identifiziert das medizinische Dokument selbst, auf das die DocumentReference verweist."
+* identifier[uniqueId] ^definition = "Der eindeutige Identifikator des referenzierten Dokuments, der dem Element DocumentEntry.uniqueId in XDS entspricht. Dieser dient als fachlicher bzw. dokumentenbezogener Identifier des Dokuments und identifiziert das medizinische Dokument selbst, auf das die DocumentReference verweist."
 
 * status MS
   * ^short = "Status des Dokuments"
@@ -59,7 +59,7 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 * subject only Reference(Patient)
   * ^comment = "TIPatient"
   * identifier 1..1 MS
-  * identifier only identifier-kvid-10 
+  * identifier only identifier-kvid-10
 * date 0..1 MS
   * ^short = "Wann die DocumentReference erzeugt wurde"
   * ^definition = "Wann die DocumentReference erzeugt wurde"
