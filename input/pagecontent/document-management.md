@@ -14,7 +14,7 @@ Das gemeinsame Dokumentenmanagement innerhalb der TI basiert auf den grundlegend
 - `DocumentReference.content.attachment` wird zur Beschreibung und Referenzierung des Dokumenteninhalts verwendet.
 - Dokumentmetadaten und Dokumenteninhalt werden getrennt voneinander verwaltet.
 - `DocumentReference.relatesTo` wird zur Beschreibung von Beziehungen zwischen Dokumenten verwendet.
-- Unterschiedliche Dokumentenformate werden über ein gemeinsames Dokumentenmodell verwaltet.
+- Unterschiedliche Dokumentenformate werden über ein gemeinsames Metadatenmodell verwaltet.
 - Für das Einstellen, Suchen und Abrufen von Dokumenten werden standardisierte Transaktionen verwendet.
 
 Zu den für das Dokumentenmanagement relevanten IHE-MHD-Transaktionen gehören beispielsweise:
@@ -27,7 +27,7 @@ Zu den für das Dokumentenmanagement relevanten IHE-MHD-Transaktionen gehören b
 
 Einzelne Dienste (wie die ePA) können weitere spezifische Interaktionen (z. B. Löschen und Aktualisieren von Dokumenten) definieren, die nicht Bestandteil von IHE MHD sind, sich jedoch an dessen Konzepten und Verarbeitungsprinzipien orientieren.
 
-Die konkrete Nutzung dieser Transaktionen kann sich zwischen FHIR-basierten TI-Fachdiensten und FHIR Data Services unterscheiden. Ein dokumentenzentriertes System, wie beispielsweise die ePA, kann die von IHE MHD definierten Transaktionen weitgehend unmittelbar für das Einstellen, Suchen und Abrufen von Dokumenten verwenden. Bei einem workfloworientierten System steht dagegen der fachliche Prozess im Vordergrund. Dieses kann sich an den Message Semantics und Verarbeitungsprinzipien der entsprechenden IHE-MHD-Transaktionen orientieren und diese in fachliche FHIR-Operationen integrieren. Die Verwendung der TI-Common-Profile setzt somit nicht voraus, dass alle FHIR-basierten TI-Fachdienste und FHIR Data Services dieselben IHE-MHD-Transaktionen oder Endpunkte bereitstellen. Unabhängig von der konkreten Ausgestaltung der Schnittstelle bilden das IHE-MHD-Dokumentenmodell und die darauf aufbauenden TI-Common-Profile die gemeinsame Grundlage für die Beschreibung und Verarbeitung von Dokumenten innerhalb der TI.
+Die konkrete Nutzung dieser Transaktionen kann sich zwischen FHIR-basierten TI-Fachdiensten und FHIR Data Services unterscheiden. Ein dokumentenzentriertes System, wie beispielsweise die ePA, kann die von IHE MHD definierten Transaktionen weitgehend unmittelbar für das Einstellen, Suchen und Abrufen von Dokumenten verwenden. Bei einem Workflow-orientierten System steht dagegen der fachliche Prozess im Vordergrund. Dieses kann sich an den Message Semantics und Verarbeitungsprinzipien der entsprechenden IHE-MHD-Transaktionen orientieren und diese in fachliche FHIR-Operationen integrieren. Die Verwendung der TI-Common-Profile setzt somit nicht voraus, dass alle FHIR-basierten TI-Fachdienste und FHIR Data Services dieselben IHE-MHD-Transaktionen oder Endpunkte bereitstellen. Unabhängig von der konkreten Ausgestaltung der Schnittstelle bilden das IHE-MHD-Dokumentenmodell und die darauf aufbauenden TI-Common-Profile die gemeinsame Grundlage für die Beschreibung und Verarbeitung von Dokumenten innerhalb der TI.
 
 ### Gemeinsame TI-MHD-Profile
 
@@ -42,7 +42,7 @@ StructureDefinition/ti-document-location-extension,
 {% endcapture %}
 {% include artifacts-table-generator.html render=document-profiles %}
 
-Für Client-Systeme, wie beispielsweise Primärsysteme oder FdVs bedeutet dies, dass dieselben grundlegenden FHIR-Strukturen und Verarbeitungsmechanismen für Dokumente aus unterschiedlichen Diensten wiederverwendet werden können. Dies ist insbesondere für die dienstübergreifende Verwendung von `DocumentReference` relevant. Ist ein dienstspezifisches `DocumentReference`-Profil von einem gemeinsamen TI-Common-MHD-Profil abgeleitet, kann die Ressourceninstanz auch in einem anderen fachlichen Kontext verwendet werden, sofern dieser ebenfalls auf derselben gemeinsamen Profilbasis aufbaut.
+Für Client-Systeme, wie beispielsweise Primärsysteme oder Frontends der Versicherten bedeutet dies, dass dieselben grundlegenden FHIR-Strukturen und Verarbeitungsmechanismen für Dokumente aus unterschiedlichen Diensten wiederverwendet werden können. Dies ist insbesondere für die dienstübergreifende Verwendung von `DocumentReference` relevant. Ist ein dienstspezifisches `DocumentReference`-Profil von einem gemeinsamen TI-Common-MHD-Profil abgeleitet, kann die Ressourceninstanz auch in einem anderen fachlichen Kontext verwendet werden, sofern dieser ebenfalls auf derselben gemeinsamen Profilbasis aufbaut.
 
 ### Dokumentmetadaten und Dokumenteninhalt
 
@@ -56,7 +56,7 @@ Eine `DocumentReference` kann in einem FHIR-basierten TI-Fachdienst oder FHIR Da
 
 #### Beispiel: Referenzierung eines Dokuments aus der ePA
 
-Ein Dokument befindet sich bereits in der ePA. Das Client-System ermittelt die zugehörige `DocumentReference` über die MHD-Transaktion _Find Document References [ITI-67]_. Da das ePA-spezifische `DocumentReference`-Profil auf dem gemeinsamen TI-Common-MHD-Profil aufbaut, kann die bestehende `DocumentReference`-Instanz anschließend in einem anderen FHIR-basierten TI-Fachdienst oder FHIR Data Service verwendet werden. Die _TI Document Location_ Extension gibt dabei an, dass sich das Dokument in der ePA des durch `DocumentReference.subject` logisch referenzierten Versicherten befindet. Der Dokumenteninhalt kann über die in `DocumentReference.content.attachment.url` angegebene URL mittels der ePA-Transaktion _Retrieve Document [ITI-68]_ abgerufen werden.
+Ein Dokument befindet sich bereits in der ePA. Das Client-System ermittelt die zugehörige `DocumentReference` über die MHD-Transaktion _Find Document References [ITI-67]_. Da das ePA-spezifische `DocumentReference`-Profil auf dem gemeinsamen TI-Common-MHD-Profil aufbaut, kann die bestehende `DocumentReference`-Instanz anschließend in einem anderen FHIR-basierten TI-Fachdienst oder FHIR Data Service verwendet werden. Die _TI Document Location_ Extension gibt dabei an, dass sich das Dokument in der ePA des durch `DocumentReference.subject` logisch referenzierten Versicherten befindet. Der Dokumenteninhalt kann über die in `DocumentReference.content.attachment.url` angegebene URL mittels der ePA-Transaktion _Retrieve Document [ITI-68]_ abgerufen werden. Dabei ist zu beachten, dass die angegebene URL zwar eine absolute URL ist, der Abruf jedoch im Kontext des zuvor identifizierten ePA-Aktensystems und der für den Zugriff bestehenden Befugnis erfolgt. Die URL ist daher nicht unabhängig von diesem Kontext auflösbar.
 
 Es ist dabei nicht erforderlich, für den zweiten Dienst den Dokumenteninhalt erneut zu speichern. Die vorhandene `DocumentReference` einschließlich der Information über die Dokumentenquelle kann übernommen und in den neuen fachlichen Kontext eingebunden werden. Der Dokumenteninhalt verbleibt in der ePA und kann weiterhin über _Retrieve Document [ITI-68]_ abgerufen werden. Voraussetzung für den Abruf des Dokumenteninhalts ist weiterhin, dass der jeweilige Akteur über die erforderlichen Zugriffsberechtigungen auf die angegebene Dokumentenquelle verfügt.
 
@@ -142,13 +142,13 @@ Die ePA ist beispielsweise ein dokumentenzentriertes System, bei dem die MHD-Tra
 
 FHIR-basierte TI-Fachdienste und FHIR Data Services können die Konzepte und Verarbeitungsprinzipien von IHE MHD auch innerhalb fachlicher FHIR-Operationen verwenden. Die konkrete Operation muss dabei nicht unmittelbar einer IHE-MHD-Transaktion entsprechen.
 
-Ein Beispiel hierfür ist die serverseitige Erzeugung einer `DocumentReference` auf Grundlage eines übermittelten Dokuments. Dieses Vorgehen orientiert sich am Prinzip von _Generate Metadata [ITI-106]_. Das Dokument wird dabei im Rahmen einer fachlichen FHIR-Operation übermittelt und die für dessen Verwaltung erforderliche `DocumentReference` durch den TI-Fachdienst oder FHIR Data Service erzeugt.
-
-In einem workfloworientierten System kann dies beispielsweise Bestandteil einer fachlichen Operation wie `Task/{id}/$activate` sein. Das mit der Operation übermittelte Dokument wird dabei in den fachlichen Kontext des adressierten Workflows eingebunden und die zugehörige `DocumentReference` serverseitig erzeugt.
+Ein Beispiel hierfür ist die serverseitige Erzeugung einer `DocumentReference` auf Grundlage eines übermittelten Dokuments. Dieses Vorgehen orientiert sich am Prinzip von _Generate Metadata [ITI-106]_. Das Dokument wird dabei im Rahmen einer fachlichen FHIR-Operation übermittelt und die für dessen Verwaltung erforderliche `DocumentReference` durch den TI-Fachdienst oder FHIR Data Service erzeugt. In einem Workflow-orientierten System kann dies beispielsweise Bestandteil einer fachlichen Operation wie `Task/{id}/$activate` sein. Das mit der Operation übermittelte Dokument wird dabei in den fachlichen Kontext des adressierten Workflow gespeichert. Die zugehörige `DocumentReference` wird serverseitig erzeugt und basiert unmittelbar auf dem entsprechenden TI-Common-Profil.
 
 Auf diese Weise werden die von IHE MHD definierten Konzepte und Verarbeitungsprinzipien auch für fachliche FHIR-Operationen wiederverwendet, ohne dass diese die jeweilige IHE-MHD-Transaktion vollständig abbilden müssen.
 
-### Unterstützte Dokumentenformate
+Die konkreten Verarbeitungsschritte der fachlichen Operation, die Ableitung der Dokumentmetadaten sowie die Einbindung der erzeugten `DocumentReference` in den jeweiligen fachlichen Kontext werden durch die Spezifikation des verwendenden TI-Fachdienstes oder FHIR Data Service festgelegt.
+
+### Unterstützte Dokumentformate
 
 Das gemeinsame Dokumentenmodell ermöglicht die einheitliche Verwaltung unterschiedlicher Dokumentenformate. Dazu können sowohl unstrukturierte beziehungsweise darstellungsorientierte Formate wie PDF/A als auch strukturierte Dokumente wie FHIR Documents gehören. Unabhängig vom jeweiligen Format werden die Dokumentmetadaten über eine `DocumentReference` beschrieben und der zugehörige Dokumenteninhalt über `DocumentReference.content.attachment` abgebildet.
 

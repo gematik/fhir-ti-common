@@ -14,7 +14,7 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 * extension[documentLocation]
   * ^short = "Kennzeichnet das System, in dem sich das referenzierte Dokument befindet, z. B. die ePA des Versicherten."
   * ^definition = "Gibt das System an, in dem sich das durch die DocumentReference beschriebene Dokument befindet und aus dem es abgerufen werden kann."
-  * ^comment = "Die Extension ermöglicht die Unterscheidung zwischen verschiedenen Speicherorten eines Dokuments, beispielsweise einem Primärsystem, einem Workflow-Dokumentenspeicher oder der ePA."
+  * ^comment = "Die Extension ermöglicht die Unterscheidung zwischen verschiedenen Speicherorten eines Dokuments, beispielsweise einem Workflow-Dokumentenspeicher oder der ePA."
 
 * masterIdentifier MS
 
