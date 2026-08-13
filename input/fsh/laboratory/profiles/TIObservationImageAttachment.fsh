@@ -28,9 +28,14 @@ Description: "Abbildung, die als Ergänzung mitgegeben wird."
   * text MS
     * ^definition = "Freitextbezeichnung für den Typ des Untersuchungsbildes."
 * insert SubjectEu(subject)
-* insert Performer
-* performer
+* insert PerformerEu
+* performer 1..
   * ^definition = "Ausführende Person/Einrichtung"
+* performer only Reference(OrganizationEuCore or
+    RelatedPerson or
+    PatientEuCore or
+    PractitionerEuCore or
+    PractitionerRoleEuCore)
 * value[x] ..0
 * note MS
   * ^definition = "Hier werden ergänzende Angaben zum Bild-Anhang gemacht."
