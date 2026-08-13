@@ -19,4 +19,10 @@ Description: "Hier können Details dazu angegeben werden, wie eine Information e
 Dies kann z.B. das explizite Hinzufügen der im Element target referenzierte Information sein (im Sinne eines Audittrails) oder auch eine inhaltliche Überprüfung oder Verifikation der Information."
   * who MS
     * ^definition = "Hier wird die datenintegrierende Person referenziert."
+  * who only Reference(OrganizationEuCore or
+  RelatedPerson or
+  PatientEuCore or
+  PractitionerEuCore or
+  PractitionerRoleEuCore or
+  Device)
   * insert Reference(who)
