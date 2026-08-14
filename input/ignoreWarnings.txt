@@ -2,7 +2,6 @@
 
 # We only want to use narratives if needed
 Unable to find ImplementationGuide.definition.resource.description for the resource Patient/ExampleTIPatient. Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-%Patient/ExampleTIPatient%
 Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 %dom-6%
 

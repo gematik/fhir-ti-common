@@ -1,15 +1,72 @@
+
+Profile: TIHumanName
+Parent: HumannameDeBasis
+Id: ti-human-name
+Title: "TI Human Name"
+Description: "Dieses Profil definiert die Repräsentation des offiziellen Namens innerhalb der Telematikinfrastruktur (TI) auf Grundlage des deutschen HumanName-Basisprofils. Der Name wird durch `use = official` gekennzeichnet und legt die für den offiziellen Namen relevanten Namensbestandteile sowie die Kennzeichnung akademischer Titel fest."
+* insert Meta
+// preserve the version of this resource
+* ^version = "1.4.1"
+* ^date = "2026-09-30"
+* ^status = #active
+
+* use 1..1 MS
+* use = #official (exactly)
+
+* family 1..1 MS
+  * extension[namenszusatz] 0..1 MS
+  * extension[nachname] 0..1 MS
+  * extension[vorsatzwort] 0..1 MS
+
+* given 1..* MS
+
+* prefix MS
+  * extension[prefix-qualifier] 0..1 MS
+    * value[x] only code
+    * valueCode 1..1 MS
+    * valueCode = #AC (exactly)
+
+
+
+Profile: TIBirthName
+Parent: HumannameDeBasis
+Id: ti-birth-name
+Title: "TI Geburtsname"
+Description: "Dieses Profil definiert die Repräsentation eines Geburtsnamens innerhalb der Telematikinfrastruktur (TI) auf Grundlage des deutschen HumanName-Basisprofils. Der Geburtsname wird durch `use = maiden` gekennzeichnet und auf die für den Geburtsnamen relevanten Namensbestandteile eingeschränkt."
+* insert Meta
+// preserve the version of this resource
+* ^version = "1.4.1"
+* ^date = "2026-09-30"
+* ^status = #active
+
+* use 1..1 MS
+* use = #maiden (exactly)
+
+* family 1..1 MS
+  * extension[namenszusatz] 0..1 MS
+  * extension[nachname] 0..1 MS
+  * extension[vorsatzwort] 0..1 MS
+
+* given 0..0
+* prefix 0..0
+* suffix 0..0
+
+
+
 Profile: TIPatient
 Id: ti-patient
-Parent: Patient
+Parent: PatientEuCore
+// Parent: Patient
 Title: "TI Patient"
 Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data Services"
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.3.0"
-* ^date = "2026-03-20"
+* ^version = "1.4.1"
+* ^date = "2026-09-30"
 * ^status = #active
 
 * obeys pat-de-1
+* obeys pat-de-2
 
 * identifier 0.. MS
   * ^slicing.discriminator.type = #pattern
@@ -29,29 +86,15 @@ Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data 
         Dies ist jedoch nicht verpflichtend im Rahmen dieser Spezifikation.
         """
 * name contains
-    Name 1..1 MS and
+    Name 0..1 MS and
     Geburtsname 0..1 MS
-* name[Name] only HumannameDeBasis
-  * ^patternHumanName.use = #official
-  * use 1.. MS
-  * family 1.. MS
-    * extension[namenszusatz] 0..1 MS
-    * extension[nachname] 0..1 MS
-    * extension[vorsatzwort] 0..1 MS
-  * given 1.. MS
-  * prefix MS
-    * extension[prefix-qualifier] 0..1 MS
-    * extension[prefix-qualifier].value[x] = #AC (exactly)
-* name[Geburtsname] only HumannameDeBasis
-  * ^patternHumanName.use = #maiden
-  * use 1.. MS
-  * family 1.. MS
-    * extension[namenszusatz] 0..1 MS
-    * extension[nachname] 0..1 MS
-    * extension[vorsatzwort] 0..1 MS
-  * given ..0
-  * prefix ..0
-  * suffix ..0
+
+* name[Name] only TIHumanName
+* name[Name] ^patternHumanName.use = #official
+
+* name[Geburtsname] only TIBirthName
+* name[Geburtsname] ^patternHumanName.use = #maiden
+
 * birthDate 1.. MS
   * ^definition = """
       Das Geburtsdatum des Versicherten ist eine Pflichtangabe. Partielle Datumsangaben sind allerdings zulässig.
