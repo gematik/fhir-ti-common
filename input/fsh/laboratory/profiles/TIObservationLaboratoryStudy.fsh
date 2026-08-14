@@ -117,8 +117,7 @@ Interpretation des zlog-Wertes:
     * valueDecimal MS
 * identifier MS
 * status MS
-  * ^definition = "Bearbeitungsstatus der einzelnen Laboruntersuchung. Die Status-Werte orientieren sich an HL7® FHIR® Version 4.0.1, jedoch wurde der Wert \"unknown\" aufgrund von Nichtverwendung herausgenommen."
-* status from ObservationStatusdgLPVS (required)
+  * ^definition = "Bearbeitungsstatus der einzelnen Laboruntersuchung."
 * category MS
   * ^definition = "Zur einzelnen Laboruntersuchung wird das \"fachliche Gruppierungsmerkmal\" REDUNDANT abgebildet, der Inhalt entspricht exakt dem fachlichen Gruppierungsmerkmal der zugehörigen Untersuchungsgruppe. Dies ermöglicht bei datenbankbasierten Abfragen von Einzeluntersuchungen (z.B. in der ePA) eine direkte Zuordnung zur fachlichen Gruppierung. Das fachliche Gruppierungsmerkmal der Untersuchungsgruppe ist grundsätzlich führend!"
   * ^short = "Fachliche Bezeichnung für die zugehörige Untersuchungsgruppe, Inhalt identisch zu Observation_Laboratory_Study_Group.category"
