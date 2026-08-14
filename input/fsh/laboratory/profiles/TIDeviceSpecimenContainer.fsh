@@ -33,7 +33,6 @@ Description: "In diesem Profil werden Informationen zum Probenbehälter angegebe
   * ^definition = "Modellnummer des Produktes"
 * type MS
   * ^definition = "Spezifischer Typ des Probenbehälters als Code oder als Freitexteintrag."
-  * insert CodeableConceptMS
   * coding MS
     * ^definition = "Hier kann der spezifische Probenbehälter-Typ in Form eines Codes angegeben werden."
     * ^slicing.discriminator.type = #value
@@ -43,6 +42,8 @@ Description: "In diesem Profil werden Informationen zum Probenbehälter angegebe
   * coding[snomed] from $specimen-container-type (example)
     * ^definition = "Hier wird ein Code aus SNOMED CT® angegeben."
   * coding[snomed] ^patternCoding.system = $cs-sct
+  * coding[snomed]
+    * insert CodingMS
   * text MS
     * ^definition = "Freitextbezeichnung für den spezifischen Typ des Probenbehälters."   
 * note MS

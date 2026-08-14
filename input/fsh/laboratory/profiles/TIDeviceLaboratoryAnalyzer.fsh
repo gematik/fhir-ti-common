@@ -41,7 +41,6 @@ Description: "In diesem Profil werden Informationen zum Analysegerät angegeben,
   * ^definition = "Modellnummer des Geräts"
 * type MS
   * ^definition = "Spezifischer Typ des Laboranalysegerätes als Code oder als Freitexteintrag."
-  * insert CodeableConceptMS
   * coding MS
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -49,6 +48,8 @@ Description: "In diesem Profil werden Informationen zum Analysegerät angegeben,
   * coding contains snomed 0..1 MS
   * coding[snomed] from LaboratoryAnalyzerVS (example)
   * coding[snomed] ^patternCoding.system = $cs-sct
+  * coding[snomed]
+    * insert CodingMS
   * text MS
 * version MS
   * ^definition = "Version des Gerätes"

@@ -37,7 +37,6 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehreren außerkörperliche
   * ^definition = "Modellnummer"
 * type MS
   * ^definition = "Spezifischer Typ der außerkörperlichen Quelle als Code oder als Freitexteintrag."
-  * insert CodeableConceptMS
   * coding MS
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -45,6 +44,8 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehreren außerkörperliche
   * coding contains snomed 0..1 MS
   * coding[snomed] from ExtracorporalDeviceVS (example)
   * coding[snomed] ^patternCoding.system = $cs-sct
+  * coding[snomed]
+    * insert CodingMS
   * text MS  
 * version MS
   * ^definition = "Version des Gerätes"
