@@ -1,12 +1,12 @@
-Profile: TIDocumentReference
+Profile: TIAppendixDocumentReference
 Parent: DocumentReference
-Id: ti-documentReference
-Title: "TI Document Reference"
-Description: "Hier wird auf ein externes Dokument verwiesen und/oder ein Dokument angehängt."
+Id: ti-appendix-documentReference
+Title: "TI Appendix Document Reference"
+Description: "Hier wird ein Dokumentanhang abgebildet."
 * insert Meta-With-Versioning
-* . ^definition = "Hier wird auf ein externes Dokument verwiesen und/oder ein Dokument angehängt."
+* . ^definition = "Hier wird ein Dokumentanhang abgebildet."
 * status MS
-  * ^definition = "Hier wird der Status des Dokumentenverweises bzw. Anhanges angegeben."
+  * ^definition = "Hier wird der Status des Anhanges angegeben."
 * type MS
   * ^definition = "In diesem Element werden Angaben zum Typ des Dokuments gemacht. Diese werden als codierte Information und/oder als Freitext angegeben."
   * coding MS
@@ -41,23 +41,7 @@ Description: "Hier wird auf ein externes Dokument verwiesen und/oder ein Dokumen
 * description MS
   * ^definition = "Hier wird der Dokumentenverweis als Freitext erfasst, z. B. \"Arztbrief vom 28.04.2020\"."
 * content MS
-  * ^definition = "In diesem Element wird eine strukturierte Referenz auf andere Inhalte gemacht, dies kann z. B. ein anderes Dokument in der ePA sein\r\n\r\noder\r\n\r\nHier wird das Dokument in Form eines formatierten Anhangs abgebildet."
-  * ^slicing.discriminator.type = #exists
-  * ^slicing.discriminator.path = "attachment.url"
-  * ^slicing.rules = #open
-* content contains
-  appendix 0.. and
-  link 0..
-* content[link] MS
-  * attachment MS
-    * ^definition = "In diesem Element wird eine strukturierte Referenz auf andere Inhalte gemacht, dies kann z. B. ein anderes Dokument in der ePA sein."
-    * url 1.. MS
-      * ^definition = "Hier wird die URI des Eintrags angegeben."
-    * title 1.. MS
-      * ^definition = "Hier findet sich der Name des referenzierten Dokumentes."
-    * creation MS
-      * ^definition = "Hier wird der Zeitpunkt der Erstellung des referenzierten Dokumentes angegeben."
-* content[appendix] MS
+  * ^definition = "In diesem Element werden Angaben zum angehängten Dokument gemacht."
   * attachment MS
     * ^definition = "Hier wird das Dokument in Form eines formatierten Anhangs abgebildet."
     * contentType 1.. MS
