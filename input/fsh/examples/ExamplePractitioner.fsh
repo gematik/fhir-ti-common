@@ -49,32 +49,3 @@ Description: "Example of a Practitioner resource conforming to the Practitioner 
 * name.given = "John"
 * gender = #male
 * birthDate = "1970-01-01"
-
-
-// RuleSet: Arzt_PractitionerRole_Reference
-// * requester = Reference(Arzt_PractitionerRole)
-//   * display = "Dr. Max Manfred Mustermann / Praxis Dr. med. Max Mustermann"
-
-
-// Instance: Arzt_PractitionerRole
-// InstanceOf: PractitionerRole
-// Title: "Arzt PractitionerRole"
-// Usage: #example
-
-// * id = "73a551f8-d8cd-4b44-823d-ab5f8aeab1aa"
-// * practitioner = Reference(Arzt)
-//   * identifier
-//     * type
-//       // * coding.version = "2.9.0"
-//       * coding = $v2-0203#PRN "Provider number"
-//     * system = $sid-identifier-telematik-id
-//     * value = $Arzt-TelematikID
-//   * insert Arzt-display
-// * organization = Reference(BetriebsstaetteArzt)
-//   * identifier
-//     * type
-//       // * coding.version = "2.9.0"
-//       * coding = $v2-0203#PRN "Provider number"
-//     * system = $sid-identifier-telematik-id
-//     * value = $BetriebsstaetteArzt-TelematikID
-//   * insert BetriebsstaetteArzt-display

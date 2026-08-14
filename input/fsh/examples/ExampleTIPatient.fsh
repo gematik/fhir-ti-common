@@ -11,14 +11,10 @@ Usage: #example
   * given = "Monika"
   * prefix = "Dr."
     * extension[prefix-qualifier].valueCode = #AC
-    // * extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-    // * extension.valueCode = #AC
 * name[Geburtsname]
   * use = #maiden
   * family = "Blohm"
     * extension[nachname].valueString = "Blohm"
-    // * extension.url = "http://hl7.org/fhir/StructureDefinition/humanname-own-name"
-    // * extension.valueString = "Blohm"
 * gender = #female
 * birthDate = "1954-02-27"
 
