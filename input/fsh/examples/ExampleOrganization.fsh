@@ -19,14 +19,14 @@ Usage: #example
 * active = true
 * alias = "gematik"
 * address.text = """gematik GmbH
-Friedrichstr. 136,
-10117 Berlin"""
+Rosenthaler Straße 30,
+10178 Berlin"""
 * address
-  * line[+] = "Friedrichstr. 136"
+  * line[+] = "Rosenthaler Straße 30"
   * city = "Berlin"
   * district = "Mitte"
   * state = "Berlin"
-  * postalCode = "10117"
+  * postalCode = "10178"
   * country = "DE"
 * contact
   * purpose = $ContactEntityTypeCS#ADMIN
@@ -52,14 +52,14 @@ Usage: #example
 * active = true
 * alias = "Apotheke"
 * address.text = """gematik Apotheke
-Friedrichstr. 136,
-10117 Berlin"""
+Rosenthaler Straße 30,
+10178 Berlin"""
 * address
-  * line[+] = "Friedrichstr. 136"
+  * line[+] = "Rosenthaler Straße 30"
   * city = "Berlin"
   * district = "Mitte"
   * state = "Berlin"
-  * postalCode = "10117"
+  * postalCode = "10178"
   * country = "DE"
 * contact
   * purpose = $ContactEntityTypeCS#ADMIN
