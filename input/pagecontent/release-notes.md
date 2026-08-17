@@ -1,5 +1,6 @@
 ### Version 1.4.1
 
+- Es wurden gemeinsame Akteure für die Zuordnung von Obligations eingeführt. Die grundlegenden Akteure `TIClient` und `TIService` können durch konkretere Akteure wie Primärsysteme, FdV, DiGA, Kostenträgersysteme oder fachliche TI Services spezialisiert werden.
 - Es wurden neue Profile für das TI-weite Dokumentenmanagement hinzugefügt. Die Profile orientieren sich an den Konzepten von IHE MHD und stellen eine gemeinsame Grundlage für die Verwaltung und Referenzierung von Dokumenten in der Telematikinfrastruktur bereit.
 
 {% comment %}
