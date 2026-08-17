@@ -14,6 +14,7 @@ ActorDefinition/TIService,
 {% capture clientactors %}
 ActorDefinition/TIPrimarySystem,
 ActorDefinition/TIFdV,
+ActorDefinition/TIPayerSystem,
 ActorDefinition/TIDiGA,
 {% endcapture %}
 {% include artifacts-table-generator.html render=clientactors %}

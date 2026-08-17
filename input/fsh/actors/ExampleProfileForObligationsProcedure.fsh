@@ -7,7 +7,7 @@
 // Description: "Example Profile for Obligations Procedure"
 // * ^version = "1.0.0"
 // * ^status = #active
-// * code 1..1 MS
+// * code 0..1 MS
 // * code ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known
 // * code ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(TIService)
 // * code ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:handle

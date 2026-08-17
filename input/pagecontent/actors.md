@@ -33,9 +33,10 @@ Die aktuell in TI Common definierte Hierarchie umfasst:
     - [Laborinformationssystem (LIS)](ActorDefinition-TILIS.html)
     - [Heilmittelverwaltungssystem (HVS)](ActorDefinition-TIHVS.html)
     - [Pflegeinformationssystem (PIS)](ActorDefinition-TIPIS.html)
+  - **[Kostenträgersystem](ActorDefinition-TIPayerSystem.html)**
   - **[Frontend des Versicherten (FdV)](ActorDefinition-TIFdV.html)**
   - **[Digitale Gesundheitsanwendung (DiGA)](ActorDefinition-TIDiGA.html)**
-- **[TI Service](ActorDefinition-TIService.html)**
+- **[TI Service](ActorDefinition-TIPayerSystem.html)**
 
 Ein abgeleiteter Akteur wird in FSH beispielsweise wie folgt definiert:
 
