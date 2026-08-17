@@ -36,7 +36,7 @@ Die aktuell in TI Common definierte Hierarchie umfasst:
   - **[Kostenträgersystem](ActorDefinition-TIPayerSystem.html)**
   - **[Frontend des Versicherten (FdV)](ActorDefinition-TIFdV.html)**
   - **[Digitale Gesundheitsanwendung (DiGA)](ActorDefinition-TIDiGA.html)**
-- **[TI Service](ActorDefinition-TIPayerSystem.html)**
+- **[TI Service](ActorDefinition-TIService.html)**
 
 Ein abgeleiteter Akteur wird in FSH beispielsweise wie folgt definiert:
 
