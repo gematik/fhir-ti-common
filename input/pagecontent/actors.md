@@ -38,7 +38,7 @@ Die aktuell in TI Common definierte Hierarchie umfasst:
   - **[Digitale Gesundheitsanwendung (DiGA)](ActorDefinition-TIDiGA.html)**
 - **[TI Service](ActorDefinition-TIService.html)**
 
-Ein abgeleiteter Akteur wird in FSH beispielsweise wie folgt definiert:
+Ein abgeleiteter Akteur wird in JSON beispielsweise wie folgt definiert:
 
 ```json
 {
@@ -60,16 +60,14 @@ Die Ableitung beschreibt eine fachliche Spezialisierung. Sie bedeutet nicht, das
 
 ### Akteure und Obligations
 
-Obligations beschreiben, welche Anforderungen ein Akteur für ein FHIR-Profil oder einzelne Elemente dieses Profils erfüllen muss. Eine Obligation kann damit beispielsweise festlegen, dass ein TI Client ein Element verarbeiten, anzeigen oder bei der Erzeugung einer Ressourcen-Instanz unterstützen muss
+Obligations beschreiben, welche Verpflichtungen ein Akteur für ein FHIR-Profil oder für einzelne Elemente dieses Profils erfüllen muss. Sie können festlegen, dass im Zusammenhang mit dem Zugriff auf ein Element eine weitere Aktion auszuführen ist. Eine Obligation kann auch negativ formuliert sein und eine bestimmte Aktion ausdrücklich verbieten. So kann eine Obligation beispielsweise vorgeben, dass ein TI Client ein Element verarbeiten oder anzeigen muss, es beim Erzeugen einer Ressourceninstanz befüllen muss oder eine bestimmte Verarbeitung nicht durchführen darf.
 
-Für die Auswertung von Obligations gilt in TI Common:
+Für die Anwendung von Obligations auf abgeleitete Akteure gilt:
 
 > Eine Obligation, die einem Akteur zugeordnet ist, gilt auch für alle
 > Akteure, die direkt oder transitiv von diesem Akteur abgeleitet sind.
 
-Eine Obligation für den TI Client gilt damit unter anderem auch für ein Primärsystem, ein FdV und eine DiGA. Eine Obligation für das TI Primärsystem gilt zusätzlich für alle davon abgeleiteten Primärsystemtypen wie PVS, ZPVS, KIS oder PIS.
-
-Ein abgeleiteter Akteur kann zusätzliche oder konkretere Obligations erhalten. Diese ergänzen die Obligations der übergeordneten Akteure. Eine Spezialisierung darf die Anforderungen eines übergeordneten Akteurs nicht abschwächen. Wenn mehrere anwendbare Obligations unterschiedlich streng sind, ist die strengere Anforderung zu erfüllen.
+Eine Obligation für den TI Client gilt damit unter anderem auch für ein Primärsystem, ein FdV und eine DiGA. Eine Obligation für das TI Primärsystem gilt zusätzlich für alle davon abgeleiteten Primärsystemtypen wie PVS, ZPVS, KIS oder PIS. Ein abgeleiteter Akteur kann zusätzliche oder konkretere Obligations erhalten. Diese ergänzen die Obligations der übergeordneten Akteure. Eine Spezialisierung darf die Verpflichtungen eines übergeordneten Akteurs nicht abschwächen. Wenn mehrere anwendbare Obligations unterschiedlich streng sind, ist die strengere Verpflichtung zu erfüllen. Die technische Durchsetzung einer Obligation und der Umgang mit einer Verletzung sind nicht in TI Common festgelegt. Sie liegen in der Verantwortung des verarbeitenden Systems und richten sich nach der dort geltenden Security Policy sowie gegebenenfalls nach weiteren anwendungsspezifischen Festlegungen.
 
 Die folgende Abbildung zeigt beispielhaft, wie unterschiedliche Obligations für ein Profilelement verschiedenen Akteuren zugeordnet werden können. Im Beispiel muss der TI Service `Procedure.code` befüllen, sofern der Wert bekannt ist, ein PVS muss das Element verarbeiten können und ein FdV darf den enthaltenen Wert anzeigen. 
 
@@ -131,7 +129,7 @@ Beispiele für solche Ableitungen sind:
   - **ePA Medication Service**
   - **Workflow Service**
 
-Der `EPAMedicationService` ist ein spezialisierter Service für den digitalen Medikationsprozess (dgMP) in der ePA. Der `WorkflowService` ist ein weiteres Beispiel für einen spezialisierten TI Service.
+Der `EPAMedicationService` ist ein spezialisierter Service für den digital gestützten Medikationsprozess (dgMP) in der ePA. Der `WorkflowService` ist ein weiteres Beispiel für einen spezialisierten TI Service.
 
 
 ### Auswahl eines Akteurs
