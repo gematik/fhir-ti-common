@@ -46,6 +46,7 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 %http://hl7.org/fhir/StructureDefinition/regex%
 %'pattern' is deprecated in R5%
 %http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0%
+%http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0%
 
 # Ignore Notice: Potential Embedded HTML Warning
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk

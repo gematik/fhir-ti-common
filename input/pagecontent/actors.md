@@ -69,6 +69,8 @@ Für die Anwendung von Obligations auf abgeleitete Akteure gilt:
 
 Eine Obligation für den TI Client gilt damit unter anderem auch für ein Primärsystem, ein FdV und eine DiGA. Eine Obligation für das TI Primärsystem gilt zusätzlich für alle davon abgeleiteten Primärsystemtypen wie PVS, ZPVS, KIS oder PIS. Ein abgeleiteter Akteur kann zusätzliche oder konkretere Obligations erhalten. Diese ergänzen die Obligations der übergeordneten Akteure. Eine Spezialisierung darf die Verpflichtungen eines übergeordneten Akteurs nicht abschwächen. Wenn mehrere anwendbare Obligations unterschiedlich streng sind, ist die strengere Verpflichtung zu erfüllen. Die technische Durchsetzung einer Obligation und der Umgang mit einer Verletzung sind nicht in TI Common festgelegt. Sie liegen in der Verantwortung des verarbeitenden Systems und richten sich nach der dort geltenden Security Policy sowie gegebenenfalls nach weiteren anwendungsspezifischen Festlegungen.
 
+Die in der Obligation Extension verwendeten Codes stammen aus dem [Obligation Codes ValueSet]. Die Codes verbinden eine Verbindlichkeit wie `SHALL`, `SHOULD` oder `MAY` mit dem erwarteten Verhalten eines Akteurs. Beispiele sind `SHALL:populate-if-known`, `SHALL:handle` und `MAY:display`. 
+
 Die folgende Abbildung zeigt beispielhaft, wie unterschiedliche Obligations für ein Profilelement verschiedenen Akteuren zugeordnet werden können. Im Beispiel muss der TI Service `Procedure.code` befüllen, sofern der Wert bekannt ist, ein PVS muss das Element verarbeiten können und ein FdV darf den enthaltenen Wert anzeigen. 
 
 <figure>
