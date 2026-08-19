@@ -102,6 +102,8 @@ The string value contains text that looks like embedded HTML tags. If this conte
 %https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR%
 %https://gematik.de/fhir/directory/CodeSystem/PractitionerProfessionOID%
 %urn:oid:1.2.276.0.76.5.514%
+%https://gematik.de/fhir/terminology/ValueSet/ti-medication-type-pharmaceutical-product-vs%
+%https://gematik.de/fhir/terminology/ValueSet/ti-medication-type-product-vs%
 
 
 # This expansion is done manually, so there are no parameters and identifiers

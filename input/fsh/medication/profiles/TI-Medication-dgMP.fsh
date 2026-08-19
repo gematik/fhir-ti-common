@@ -4,10 +4,23 @@ Id: ti-medication-dgmp
 Title: "TI Medication dgMP"
 Description: "Defines the medication resource for the Medication Service in the TI ecosystem."
 // preserve the version
-* ^version = "1.4.0"
+* ^version = "1.4.1"
 // * ^date = "2026-06-30"
 * ^status = #active
+
+* contained MS
+* contained only TIMedicationPharmaceuticalProductDgMP or TIMedicationPZNIngredientDgMP
+  * ^short = "Enthält PZN-Bestandteile für Rezepturen sowie pharmazeutische Produkte im Falle einer Kombipackung."
+//TODO: copy Ruleset contents into this resource as soon as the issue: https://github.com/hapifhir/org.hl7.fhir.core/issues/1670 is resolved
+* insert TIMedicationElements
+* batch MS
+  * lotNumber MS
+
+
+
+RuleSet: TIMedicationElements
 * insert Meta-With-Versioning
+* obeys ti-med-1
 
 * extension contains
     ContextExtension named context 0..1 MS and
@@ -38,12 +51,16 @@ Description: "Defines the medication resource for the Medication Service in the 
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
+
 * identifier contains
-    EPAMedicationUniqueIdentifier 0..1 and
     RxOriginatorProcessIdentifier 0..1
-* identifier[EPAMedicationUniqueIdentifier] only EPAMedicationUniqueIdentifier
-* identifier[EPAMedicationUniqueIdentifier]
-  * ^patternIdentifier.system = $epa-medication-unique-identifier
+
+// * identifier contains
+//     EPAMedicationUniqueIdentifier 0..1 and
+//     RxOriginatorProcessIdentifier 0..1
+// * identifier[EPAMedicationUniqueIdentifier] only EPAMedicationUniqueIdentifier
+// * identifier[EPAMedicationUniqueIdentifier]
+//   * ^patternIdentifier.system = $epa-medication-unique-identifier
 
 * identifier[RxOriginatorProcessIdentifier] only RxOriginatorProcessIdentifier
 * identifier[RxOriginatorProcessIdentifier]
@@ -214,8 +231,3 @@ Description: "Defines the medication resource for the Medication Service in the 
       * unit MS
       * system 0..1 MS
       * code 0..1 MS
-
-* batch MS
-  * ^short = "Batch Information"
-  * lotNumber
-    * ^short = "Batch Number"
