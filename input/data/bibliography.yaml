@@ -159,3 +159,7 @@ entries:
     author: "IHE"
     title: "Generate Metadata [ITI-106]"
     link: "https://profiles.ihe.net/ITI/MHD/ITI-106.html"
+  - key: "Obligation Codes ValueSet"
+    author: "HL7"
+    title: "ValueSet: Obligation Codes ValueSet"
+    link: "https://hl7.org/fhir/extensions/ValueSet-obligation.html"

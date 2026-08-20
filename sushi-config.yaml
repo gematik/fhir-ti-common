@@ -37,26 +37,31 @@ pages:
     title: Home
   general-principles.md:
     title: "Generelle Prinzipien"
+  actors.md:
+    title: Akteure
+  document-management.md:
+    title: IHE MHD-basiertes Dokumentenmanagement in der TI
+  validation.md:
+    title: "Validierung"
   query-api-search.md:
     title: "Query API: Allgemeine Anforderungen Suche und Sortierung"
   query-api-paging.md:
     title: "Query API: Allgemeine Anforderungen Paginierung"
   fhir-format.md:
     title: "FHIR-Formatserialisierung"
-  validation.md:
-    title: "Validierung"
-  document-management.md:
-    title: IHE MHD-basiertes Dokumentenmanagement in der TI
+  
   # artifacts.md:
   #   title: "FHIR-Artefakte"
   artifacts-common.md:
     title: "Common-Artefakte"
+  artifacts-actors.md:
+    title: "Artefakte für Akteure"
   artifacts-dgmp.md:
     title: "Artefakte für den Medikationsprozess (dgMP)"
-  artifacts-behavior.md:
-    title: "Artefakte für das Verhalten"
   artifacts-document.md:
     title: "Artefakte für das Dokumentenmanagement"
+  artifacts-behavior.md:
+    title: "Artefakte für das Verhalten"
   referenced.md:
     title: "Referenzen"
   downloads.md:
@@ -91,6 +96,7 @@ menu:
   Home: index.html
   Generelle Prinzipien:
     Generelle Prinzipien: general-principles.html
+    "Akteure und Obligations": actors.html
     Dokumentenmanagement: document-management.html
     Validierung: validation.html
   Schnittstellen:
@@ -107,6 +113,7 @@ menu:
     Lizenz: license.html
   FHIR-Artefakte: 
     Übersicht: artifacts.html
+    "Akteure": artifacts-actors.html
     Common: artifacts-common.html
     "Medikationsprozess (dgMP)": artifacts-dgmp.html
     Dokumentenmanagement: artifacts-document.html
