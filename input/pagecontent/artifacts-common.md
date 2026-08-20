@@ -21,7 +21,9 @@ StructureDefinition/ncpeh-country-extension,
 
 {% capture common-datatypes %}
 StructureDefinition/tiflow-access-code,
-StructureDefinition/tiflow-secret
+StructureDefinition/tiflow-secret,
+StructureDefinition/ti-birth-name,
+StructureDefinition/ti-human-name,
 {% endcapture %}
 {% include artifacts-table-generator.html render=common-datatypes %}
 <div><figcaption><strong>Tabelle:</strong> Common Datentypen</figcaption></div>

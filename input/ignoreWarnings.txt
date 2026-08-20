@@ -2,7 +2,6 @@
 
 # We only want to use narratives if needed
 Unable to find ImplementationGuide.definition.resource.description for the resource Patient/ExampleTIPatient. Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-%Patient/ExampleTIPatient%
 Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 %dom-6%
 
@@ -39,7 +38,14 @@ Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
 %Name should be usable as an identifier for the module by machine processing applications such as code generation%
 %ig-0%
 Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+%multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP%
+%multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient%
+%multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/individual%
+%multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/iso21090%
 
+
+# Known Warning: Expected behavior
+%Element stimmt mit keinem bekannten Slicedefined in the profile https://gematik.de/fhir/ti/StructureDefinition/ti-patient%
 
 # Deprecated information
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
@@ -90,7 +96,12 @@ The string value contains text that looks like embedded HTML tags. If this conte
 %https://gematik.de/fhir/terminology/ValueSet/epa-xds-practice-setting-code-vs%
 %https://gematik.de/fhir/terminology/ValueSet/epa-mhd-security-label-vs%
 %https://gematik.de/fhir/terminology/ValueSet/epa-xds-event-code-vs%
-
+%keinem bekannten Slicedefined in the profile https://gematik.de/fhir/ti/StructureDefinition/ti-organization%
+%https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID%
+%https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR%
+%https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR%
+%https://gematik.de/fhir/directory/CodeSystem/PractitionerProfessionOID%
+%urn:oid:1.2.276.0.76.5.514%
 
 
 # This expansion is done manually, so there are no parameters and identifiers

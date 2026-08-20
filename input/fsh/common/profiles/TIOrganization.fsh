@@ -1,12 +1,12 @@
 Profile: TIOrganization
 Id: ti-organization
-Parent: Organization
+Parent: OrganizationEuCore
 Title: "TI Organization"
 Description: "Definiert die Datenstruktur für medizinische, regulatorische und technische Organisationen"
 * insert Meta-With-Versioning
 // preserve the version of this resource
-* ^version = "1.3.1"
-* ^date = "2026-03-20"
+* ^version = "1.4.1"
+* ^date = "2026-09-30"
 * ^status = #active
 
 * extension MS
