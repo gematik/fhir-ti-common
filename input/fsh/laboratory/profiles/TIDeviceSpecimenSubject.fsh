@@ -11,7 +11,7 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehreren außerkörperliche
 * insert Meta-With-Versioning
 * identifier MS
   * ^definition = "Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar."
-  * ^definition = "Identifikator der außerkörperlichen Quelle"
+  * ^short = "Identifikator der außerkörperlichen Quelle"
   * insert IdentifierMS
   * type MS
 * definition MS
