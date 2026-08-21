@@ -56,6 +56,7 @@ SNOMED CT® bietet eine umfassende Codiermöglichkeit zu medizinischen Diagnosen
   * coding[orphanet] MS
     * ^definition = "In diesem Element wird der Code für die Diagnose als ORPHANET-Code angegeben, inklusive Anzeigename (Display Name) sowie Name und Version des Codesystems.\n
 ORPHANET ist eine Initiative der Europäischen Union mit französischen Wurzeln zur Erfassung von seltenen Erkrankungen. Relevant für die Eingrenzung von seltenen Krankheiten ist ihre Definition anhand der Prävalenz. Die ORPHANET-Datenbank umfasst mehrere tausend seltene Krankheiten. Es gibt Mappings zwischen der ORPHAnumber und anderen Diagnosecodiersystemen."
+    * insert CodingMS
     * system = $cs-orphanet (exactly)
   * text MS
     * ^definition = "Hier wird eine Diagnose als Freitext eingetragen."
