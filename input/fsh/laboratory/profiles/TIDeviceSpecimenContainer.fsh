@@ -18,7 +18,7 @@ Description: "In diesem Profil werden Informationen zum Probenbehälter angegebe
 * UDI-DI: Device Identifier (DI) - statischer Teil der Kennung
 * UDI-PI: Production Identifier (PI) - dynamischer Teil der Kennung, enthält Angaben zu Verfallsdatum, Lotnummer und -größe (LOT), Seriennummer (SN), Herstellungsdatum"
   * deviceIdentifier MS
-  * ^definition  = "UDI-DI ist der \"Device Identifier\". Es ist der statische Teil der UDI. Er enthält die Kennung der gewählten Zuteilungsstelle, die Kennung des Herstellers / Etikettierers, den Referenzcode des Produkts und kann auch eine Kennzeichnung für eine bestimmte Verpackungsebene enthalten."
+    * ^definition  = "UDI-DI ist der \"Device Identifier\". Es ist der statische Teil der UDI. Er enthält die Kennung der gewählten Zuteilungsstelle, die Kennung des Herstellers / Etikettierers, den Referenzcode des Produkts und kann auch eine Kennzeichnung für eine bestimmte Verpackungsebene enthalten."
 * distinctIdentifier MS
   * ^definition = "Teil der UDI-PI"
 * manufactureDate MS
