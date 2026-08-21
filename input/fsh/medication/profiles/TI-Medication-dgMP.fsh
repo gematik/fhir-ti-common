@@ -55,13 +55,6 @@ RuleSet: TIMedicationElements
 * identifier contains
     RxOriginatorProcessIdentifier 0..1
 
-// * identifier contains
-//     EPAMedicationUniqueIdentifier 0..1 and
-//     RxOriginatorProcessIdentifier 0..1
-// * identifier[EPAMedicationUniqueIdentifier] only EPAMedicationUniqueIdentifier
-// * identifier[EPAMedicationUniqueIdentifier]
-//   * ^patternIdentifier.system = $epa-medication-unique-identifier
-
 * identifier[RxOriginatorProcessIdentifier] only RxOriginatorProcessIdentifier
 * identifier[RxOriginatorProcessIdentifier]
   * ^patternIdentifier.system = $rx-originator-process-identifier
