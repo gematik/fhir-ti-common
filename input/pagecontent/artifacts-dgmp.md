@@ -23,6 +23,8 @@ StructureDefinition/ti-medication-dgmp,
 StructureDefinition/ti-medication-dispense-dgmp,
 StructureDefinition/ti-medication-request-dgmp,
 StructureDefinition/ti-medication-statement-dgmp,
+StructureDefinition/ti-medication-pharmaceutical-product-dgmp,
+StructureDefinition/ti-medication-pzn-ingredient-dgmp,
 {% endcapture %}
 {% include artifacts-table-generator.html render=dgmp-profiles %}
 <div><figcaption><strong>Tabelle:</strong> Medikationsprozess Ressourcenprofile</figcaption></div>
@@ -57,7 +59,6 @@ StructureDefinition/context-extension,
 {% capture dgmp-datatypes %}
 StructureDefinition/e-prescription-id,
 StructureDefinition/medication-plan-identifier,
-StructureDefinition/epa-medication-unique-identifier,
 StructureDefinition/rx-prescription-process-identifier,
 StructureDefinition/rx-originator-process-identifier,
 StructureDefinition/rx-originator-process-identifier,
