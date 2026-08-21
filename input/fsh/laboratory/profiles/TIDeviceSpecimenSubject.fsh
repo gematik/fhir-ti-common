@@ -12,10 +12,10 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehreren außerkörperliche
 * identifier MS
   * ^definition = "Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar."
   * ^definition = "Identifikator der außerkörperlichen Quelle"
-  * value MS
+  * insert IdentifierMS
   * type MS
 * definition MS
-  * ^definition = "In diesem Element wird die DeviceDefinition für die Kategorisierung als außerkörperliche Quelle referenziert." 
+  * ^definition = "In diesem Element wird die DeviceDefinition für die Kategorisierung als außerkörperliche Quelle referenziert."
   * insert ReferenceMS
 * udiCarrier MS
   * ^definition = "Das Akronym UDI steht für Unique Device Identification und beschreibt ein Identifikationssystem mit eigenen Kennzahlen für jedes Medizinprodukt, was die Rückverfolgbarkeit des Produkts weltweit gewährleistet. Mit der Medical Device Regulation (MDR) zum 26. Mai 2020 wurde das System für alle Medizinprodukte inkl. In-vitro-Diagnostika verpflichtend (Ausnahmen Sonderanfertigungen). Für die letztendliche Anbringung am Produkt (UDI-Träger) selbst gibt es, gestuft nach Produktklassen, Fristen ab 2021. Voraussetzung für die Umsetzung und Erstellung der UDI ist die Registrierung bei einer der Zuteilungsstellen (aktuell: GS1, IFA, HIBCC, ICCBBA). Die UDI-Identifikation beinhaltet zwei Teile:\n
@@ -46,10 +46,10 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehreren außerkörperliche
   * coding[snomed] ^patternCoding.system = $cs-sct
   * coding[snomed]
     * insert CodingMS
-  * text MS  
+  * text MS
 * version MS
   * ^definition = "Version des Gerätes"
-  * value MS  
+  * value MS
 * insert SubjectEu(patient)
 * note MS
   * ^definition = "Feld für ergänzende Freitext-Angaben zur außerkörperlichen Quelle, die in der vorgegebenen Datenstruktur nicht erfasst werden können."

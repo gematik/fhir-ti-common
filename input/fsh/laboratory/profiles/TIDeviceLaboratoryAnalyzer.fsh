@@ -8,7 +8,7 @@ Description: "In diesem Profil werden Informationen zum Analysegerät angegeben,
 * identifier MS
   * ^definition = "Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar.\n"
   * ^short = "Produktidentifikator des Laboranalysegerätes"
-  * value MS
+  * insert IdentifierMS
   * type MS
 * definition MS
   * ^definition = "In diesem Element wird die DeviceDefinition für die Kategorisierung als Laboranalysegerät referenziert."
@@ -34,7 +34,7 @@ Description: "In diesem Profil werden Informationen zum Analysegerät angegeben,
   * name MS
     * ^definition = "Hier wird der konkrete Name des Gerätes angegeben."
   * type MS
-    * ^definition = "Hier wird angegeben, um welche Art von Namen für das Gerät es sich handelt."  
+    * ^definition = "Hier wird angegeben, um welche Art von Namen für das Gerät es sich handelt."
 * deviceName[manDeviceName] MS
 * deviceName[modelName] MS
 * modelNumber MS
