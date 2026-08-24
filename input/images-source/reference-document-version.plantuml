@@ -3,8 +3,11 @@
 !include ./includes/resources.iuml
 hide empty description
 
-createDocumentReference(docref_v1 , Version 1)
+createDocumentReference(docref_v1 , Version 1) {
+    + status = **superseded**
+}
 createDocumentReference(docref_v2 , Version 2) {
+    + status = **current**
     + relatesTo.code = **replaces** 
 }
 createTask(task, Workflow-Task)

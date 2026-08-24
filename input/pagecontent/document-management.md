@@ -76,7 +76,9 @@ In beiden Fällen wird dasselbe gemeinsame MHD-basierte Dokumentenmodell verwend
 
 Dokumente werden unveränderlich gespeichert. Änderungen an einem Dokument führen daher nicht zur Aktualisierung einer bestehenden `DocumentReference`, sondern zur Erstellung einer neuen Dokumentenversion.
 
-Die Beziehung zwischen den Versionen wird über `DocumentReference.relatesTo` mit dem Beziehungstyp `replaces` modelliert. Dieses Vorgehen orientiert sich an dem aus IHE MHD/XDS bekannten Prinzip der Dokumentersetzung. Frühere Dokumentenversionen bleiben erhalten und können weiterhin für Nachweis- und Revisionszwecke herangezogen werden. Üblicherweise ist die aktuelle Fassung die einzig fachlich gültige. Die genaue Ausgestaltung unterliegt jedoch den konkreten Services.
+Die Beziehung zwischen den Versionen wird über `DocumentReference.relatesTo` mit dem Beziehungstyp `replaces` modelliert. Dieses Vorgehen orientiert sich an dem aus IHE MHD/XDS bekannten Prinzip der Dokumentersetzung. Die neu erstellte `DocumentReference` erhält den Status `current` und verweist über `relatesTo.code = replaces` auf die vorherige Version. Die `DocumentReference` der ersetzten Dokumentversion wird auf den Status `superseded` gesetzt.
+
+Frühere Dokumentversionen und ihre Dokumentinhalte bleiben erhalten und können weiterhin für Nachweis- und Revisionszwecke herangezogen werden. Üblicherweise ist die aktuelle Fassung die einzig fachlich gültige. Die genaue Ausgestaltung unterliegt jedoch den konkreten Services.
 
 <figure>
     <div class="gem-ig-svg-container" style="--box-width: 460px; --box-width-mobile: 100%;">
@@ -89,7 +91,7 @@ Die Beziehung zwischen den Versionen wird über `DocumentReference.relatesTo` mi
 
 <br/>
 
-Die Verweise aus anderen FHIR-Ressourcen sind nur potentiell von der Versionierung betroffen. Jeder Service regelt im Detail, wie referenzierende Ressourcen bei einer Dokumentersetzung zu behandeln sind und insbesondere, ob bestehende Verweise auf die abgelöste Version bestehen bleiben dürfen oder zwingend auf die neue Dokumentenversion umgestellt werden müssen. Das folgende Beispiel zeigt eine mögliche Ausgestaltung aus dem `Task`-Bereich: Wird ein Dokument durch eine neue Version ersetzt, verweisen bestehende Referenzen weiterhin auf die abgelöste `DocumentReference` und müssen daher im Zuge der Dokumentersetzung von der Geschäftslogik des Dienstes auf die neue Dokumentenversion umgestellt werden.
+Die Verweise aus anderen FHIR-Ressourcen sind nur potenziell von der Versionierung betroffen. Jeder Service regelt im Detail, wie referenzierende Ressourcen bei einer Dokumentersetzung zu behandeln sind und insbesondere, ob bestehende Verweise auf die abgelöste Version bestehen bleiben dürfen oder zwingend auf die neue Dokumentversion umgestellt werden müssen. Das folgende Beispiel zeigt eine mögliche Ausgestaltung aus dem `Task`-Bereich: Wird ein Dokument durch eine neue Version ersetzt, verweist eine bestehende Referenz weiterhin auf die abgelöste `DocumentReference` mit `status = superseded` und muss daher im Zuge der Dokumentersetzung von der Geschäftslogik des Dienstes auf die neue `DocumentReference` mit `status = current` umgestellt werden.
 
 <figure>
     <div class="gem-ig-svg-container" style="--box-width: 460px; --box-width-mobile: 100%;">
