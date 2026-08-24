@@ -5,7 +5,7 @@ Title: "TI Patient"
 Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data Services"
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.3.0"
+* ^version = "1.3.1"
 * ^date = "2026-03-20"
 * ^status = #active
 

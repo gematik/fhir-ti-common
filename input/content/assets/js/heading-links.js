@@ -42,9 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const url = new URL(newIssueGithubLink);
         url.searchParams.set(linkParameter, baseUrl + anchor);
-        if (igTagValue) {
-          url.searchParams.set(igTagParameter, igTagValue);
-        }
         window.open(url.toString(), '_blank');
       });
 

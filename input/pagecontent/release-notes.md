@@ -7,6 +7,7 @@
 #### Medikationsprozess (dgMP)
 
 - Ergänzung der dgMP-spezifischen Medikationsprofile, einschließlich TIMedicationDgMP, TIMedicationRequestDgMP, TIMedicationDispenseDgMP und TIMedicationStatementDgMP.
+- Mit TIMedicationPZNIngredientDgMP und TIMedicationPharmaceuticalProductDgMP wurden zwei neue Profile für die Abbildung von PZN-Bestandteilen in Rezepturen sowie von pharmazeutischen Produkten innerhalb von Kombipackungen ergänzt.
 
 #### Anforderungen
 

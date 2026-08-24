@@ -3,6 +3,10 @@
 
 # Release Notes: FHIR Implementation Guide Telematikinfrastruktur (TI) Common
 
+### Version 1.4.0-ballot.2
+
+- Mit TIMedicationPZNIngredientDgMP und TIMedicationPharmaceuticalProductDgMP wurden zwei neue Profile für die Abbildung von PZN-Bestandteilen in Rezepturen sowie von pharmazeutischen Produkten innerhalb von Kombipackungen ergänzt.
+
 ### Version 1.4.0-ballot.1
 
 - Hinzugefügt wurde das Profil für den TIFlow AccessCode und das Profil für das TIFlow Secret.
