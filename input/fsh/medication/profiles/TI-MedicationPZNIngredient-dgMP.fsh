@@ -6,7 +6,7 @@ Description: "Definiert die Medication-Ressource für einen PZN-Bestandteil eine
 //TODO: as soon as the snapshotgenerator can deal with contained child-profiles remove the following insert statement and inherit from EPAMedication
 * insert TIMedicationElements
 // preserve the version
-* ^version = "1.4.1"
+* ^version = "1.4.0"
 // * ^date = "2026-06-30"
 * ^status = #active
 

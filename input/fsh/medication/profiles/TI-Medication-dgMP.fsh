@@ -4,7 +4,7 @@ Id: ti-medication-dgmp
 Title: "TI Medication dgMP"
 Description: "Defines the medication resource for the Medication Service in the TI ecosystem."
 // preserve the version
-* ^version = "1.4.1"
+* ^version = "1.4.0"
 // * ^date = "2026-06-30"
 * ^status = #active
 

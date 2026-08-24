@@ -4,7 +4,7 @@ Title: "TI Operation Outcome Details CodeSystem"
 Description: "Telematikinfrastruktur (TI) Operation Outcome Details CodeSystem"
 * insert Meta-CS
 // preserve the version of this resource
-* ^version = "1.3.0"
+* ^version = "1.3.1"
 * ^date = "2026-03-20"
 * ^status = #active
 

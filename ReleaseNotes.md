@@ -3,7 +3,7 @@
 
 # Release Notes: FHIR Implementation Guide Telematikinfrastruktur (TI) Common
 
-### Version 1.4.1
+### Version 1.5.0
 
 - Es wurden neue Profile für das TI-weite Dokumentenmanagement hinzugefügt. Die Profile orientieren sich an den Konzepten von IHE MHD und stellen eine gemeinsame Grundlage für die Verwaltung und Referenzierung von Dokumenten in der Telematikinfrastruktur bereit.
 

@@ -1,4 +1,4 @@
-### Version 1.4.1
+### Version 1.5.0
 
 - Es wurden gemeinsame Akteure für die Zuordnung von Obligations eingeführt. Die grundlegenden Akteure `TIClient` und `TIService` können durch konkretere Akteure wie Primärsysteme, FdV, DiGA, Kostenträgersysteme oder fachliche TI Services spezialisiert werden.
 - _TIPatient_ leitet nun von Patient EU Core ab. Zur Kompatibilität mit EU Core wurde die Kardinalität von _name[Name]_ auf 0..1 gesetzt, sodass auch Patient.name ohne HumanName.use zulässig bleibt.
@@ -6,13 +6,12 @@
 - _TIPractitioner_ leitet nun von Practitioner EU Core ab. Im Zuge der Anpassung wurden die Constraints für die Abbildung des Namens an EU Core angeglichen. Insbesondere sind _Practitioner.name.text_ und _Practitioner.name.family_ nicht mehr verpflichtend und können optional angegeben werden.
 - _TIPractitionerRole_ leitet sich nun vom PractitionerRole EU Core-Profil ab.
 - Es wurden neue Profile für das TI-weite Dokumentenmanagement hinzugefügt. Die Profile orientieren sich an den Konzepten von IHE MHD und stellen eine gemeinsame Grundlage für die Verwaltung und Referenzierung von Dokumenten in der Telematikinfrastruktur bereit.
-- Mit TIMedicationPZNIngredientDgMP und TIMedicationPharmaceuticalProductDgMP wurden zwei neue Profile für die Abbildung von PZN-Bestandteilen in Rezepturen sowie von pharmazeutischen Produkten innerhalb von Kombipackungen ergänzt.
 
 #### Anforderungen
 
 Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
 
-{% include release-notes.html version="1.4.1" with_links=true %}
+{% include release-notes.html version="1.5.0" with_links=true %}
 
 ### Version 1.4.0
 
@@ -23,6 +22,7 @@ Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr ben�
 #### Medikationsprozess (dgMP)
 
 - Ergänzung der dgMP-spezifischen Medikationsprofile, einschließlich TIMedicationDgMP, TIMedicationRequestDgMP, TIMedicationDispenseDgMP und TIMedicationStatementDgMP.
+- Mit TIMedicationPZNIngredientDgMP und TIMedicationPharmaceuticalProductDgMP wurden zwei neue Profile für die Abbildung von PZN-Bestandteilen in Rezepturen sowie von pharmazeutischen Produkten innerhalb von Kombipackungen ergänzt.
 
 #### Anforderungen
 

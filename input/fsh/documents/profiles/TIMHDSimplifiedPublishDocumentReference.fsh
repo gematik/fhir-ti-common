@@ -6,7 +6,7 @@ Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentRef
 * insert Meta
 
 // preserve the version
-* ^version = "1.4.1"
+* ^version = "1.5.0"
 // * ^date = "2026-09-30"
 // * ^status = #active
 

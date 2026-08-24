@@ -5,7 +5,7 @@ Description: "Zulässige Quellsysteme für TI-MHD-Dokumente."
 * insert Meta-VS
 
 // preserve the version
-* ^version = "1.4.1"
+* ^version = "1.5.0"
 // * ^date = "2026-09-30"
 // * ^status = #active
 

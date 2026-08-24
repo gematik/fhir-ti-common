@@ -9,7 +9,7 @@ language: de
 
 experimental: false
 status: draft # draft | active | retired | unknown
-version: 1.4.1-draft.1
+version: 1.5.0-draft.1
 date: 2026-06-30
 
 copyrightYear: 2026+

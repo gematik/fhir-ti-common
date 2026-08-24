@@ -7,7 +7,7 @@ Dieses Profil beschreibt die Verwendung der FHIR-Ressource Practitioner im Konte
 """
 * insert Meta-With-Versioning
 // preserve the version of this resource
-* ^version = "1.4.1"
+* ^version = "1.5.0"
 * ^date = "2026-09-30"
 * ^status = #active
 

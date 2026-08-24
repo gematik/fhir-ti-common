@@ -6,7 +6,7 @@ Title: "TI Human Name"
 Description: "Dieses Profil definiert die Repräsentation des offiziellen Namens innerhalb der Telematikinfrastruktur (TI) auf Grundlage des deutschen HumanName-Basisprofils. Der Name wird durch `use = official` gekennzeichnet und legt die für den offiziellen Namen relevanten Namensbestandteile sowie die Kennzeichnung akademischer Titel fest."
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.4.1"
+* ^version = "1.5.0"
 * ^date = "2026-09-30"
 * ^status = #active
 
@@ -35,7 +35,7 @@ Title: "TI Geburtsname"
 Description: "Dieses Profil definiert die Repräsentation eines Geburtsnamens innerhalb der Telematikinfrastruktur (TI) auf Grundlage des deutschen HumanName-Basisprofils. Der Geburtsname wird durch `use = maiden` gekennzeichnet und auf die für den Geburtsnamen relevanten Namensbestandteile eingeschränkt."
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.4.1"
+* ^version = "1.5.0"
 * ^date = "2026-09-30"
 * ^status = #active
 
@@ -61,7 +61,7 @@ Title: "TI Patient"
 Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data Services"
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.4.1"
+* ^version = "1.5.0"
 * ^date = "2026-09-30"
 * ^status = #active
 
