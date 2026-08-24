@@ -1,7 +1,7 @@
 Alias: $version = 1.4.0
 
 RuleSet: Date(element)
-* {element} = "2026-06-30"
+* {element} = "2026-08-27"
 
 
 RuleSet: MetaStatus(element)

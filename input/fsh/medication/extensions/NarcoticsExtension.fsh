@@ -5,7 +5,7 @@ Description: "Abbildung der Angaben zur Verordnung eines Betäubungsmittels im S
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/narcotics-extension"
 // preserve the version
 * ^version = "1.3.1"
-//TODO* ^date = "2025-12-15"
+* ^date = "2026-03-20"
 * ^status = #active
 
 * value[x] 0..0

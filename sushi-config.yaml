@@ -8,8 +8,8 @@ license: Apache-2.0
 
 experimental: false
 status: draft # draft | active | retired | unknown
-version: 1.4.0-ballot.1
-date: 2026-06-30
+version: 1.4.0-ballot.2
+date: 2026-08-27
 
 copyrightYear: 2026+
 copyright: gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.
@@ -25,7 +25,7 @@ publisher:
 
 dependencies:
   hl7.fhir.uv.xver-r5.r4: latest
-  de.basisprofil.r4: 1.5.4
+  de.basisprofil.r4: 1.6.0
   de.fhir.medication: 1.0.7
 
 # FSHOnly: true
