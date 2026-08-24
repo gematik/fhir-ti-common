@@ -51,7 +51,8 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   * type MS
   * insert IdentifierMS
 * basedOn MS
-  * ^definition = "Referenz auf das auftragnehmende Labor"
+  * ^definition = "Hier wird eine Laborauftrag-Information referenziert."
+  * ^short = "Referenz Laborauftrag-Information"
   * insert ReferenceMS
 * status MS
   * ^definition = "Bearbeitungsstatus des Laborgesamtbefundes."
@@ -87,7 +88,7 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
     * ^short = "Sortiernummer Untersuchungsgruppe"
     * valuePositiveInt MS
 * media MS
-  * ^definition = "Zum Anhängen zusätzlicher Resultate, die nicht Teil des strukturierten MIO Laborbefundes sind. Hier können Befunde aus labormedizinischen Spezialbereichen in einem digitalen Dokumentformat angehängt werden, beispielsweise Ergebnisse aus mikrobiologischen Kulturen oder humangenetischen Untersuchungen. Ziel ist es, grundsätzlich alle Laborbefunde in digitalem Format übermitteln zu können und in der elektronischen Patientenakte ablegen zu können."
+  * ^definition = "Zum Anhängen zusätzlicher Resultate, die nicht Teil des strukturierten Laborbefundes sind. Hier können Befunde aus labormedizinischen Spezialbereichen in einem digitalen Dokumentformat angehängt werden, beispielsweise Ergebnisse aus mikrobiologischen Kulturen oder humangenetischen Untersuchungen. Ziel ist es, grundsätzlich alle Laborbefunde in digitalem Format übermitteln zu können und in der elektronischen Patientenakte ablegen zu können."
   * ^short = "Ergänzende Dokumente (zusätzlich zum strukturierten Teil des Laborbefundes)"
   * comment MS
     * ^definition = "Feld für Freitext-Angaben zum ergänzenden Dokument, die in der vorgegebenen Datenstruktur nicht erfasst werden können."
@@ -103,8 +104,7 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   * ^definition = "Befund-Bewertung, die sich auf den gesamten Laborbefund bezieht und ggf. Antworten auf klinische Fragestellungen formuliert. "
   * ^short = "Beurteilung des Laborgesamtbefundes"
 * presentedForm MS
-  * ^definition = "Zusätzlich zur FHIR®-Instanz soll der GESAMTE Laborbefund (das bezieht sowohl die strukturierten Daten als auch ergänzende Dokument-Anteile mit ein) in einem weiteren Format wie z.B. als PDF mitgegeben werden.\n
-  Um die Versorgungskontinuität insbesondere zu Beginn der MIO-Einführung sicherzustellen, wird erwartet, dass das MIO neben den strukurierten Informationen auch den Gesamtlaborbefund in Form eines eingebetteten PDF/A-Dokuments enthält!"
+  * ^definition = "Zusätzlich zur FHIR®-Instanz soll der GESAMTE Laborbefund (das bezieht sowohl die strukturierten Daten als auch ergänzende Dokument-Anteile mit ein) in einem weiteren Format z.B. als PDF mitgegeben werden."
   * ^short = "Kompletter Gesamtbefund als exportierbares Format"
   * contentType MS
     * ^definition = "Hier wird das Dateiformat abgebildet. Es ist ein Code aus dem System urn:ietf:bcp:13 zu wählen."
