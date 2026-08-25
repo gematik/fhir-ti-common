@@ -76,9 +76,7 @@ In beiden Fällen wird dasselbe gemeinsame MHD-basierte Dokumentenmodell verwend
 
 Dokumente werden unveränderlich gespeichert. Änderungen an einem Dokument führen daher nicht zur Aktualisierung einer bestehenden `DocumentReference`, sondern zur Erstellung einer neuen Dokumentenversion.
 
-Die Beziehung zwischen den Versionen wird über `DocumentReference.relatesTo` mit dem Beziehungstyp `replaces` modelliert. Dieses Vorgehen orientiert sich an dem aus IHE MHD/XDS bekannten Prinzip der Dokumentersetzung. Die neu erstellte `DocumentReference` erhält den Status `current` und verweist über `relatesTo.code = replaces` auf die vorherige Version. Die `DocumentReference` der ersetzten Dokumentversion wird auf den Status `superseded` gesetzt.
-
-Frühere Dokumentversionen und ihre Dokumentinhalte bleiben erhalten und können weiterhin für Nachweis- und Revisionszwecke herangezogen werden. Üblicherweise ist die aktuelle Fassung die einzig fachlich gültige. Die genaue Ausgestaltung unterliegt jedoch den konkreten Services.
+Die Beziehung zwischen den Versionen wird über `DocumentReference.relatesTo` mit dem Beziehungstyp `replaces` modelliert. Dieses Vorgehen orientiert sich an dem aus IHE MHD/XDS bekannten Prinzip der Dokumentersetzung. Die neu erstellte `DocumentReference` erhält den Status `current` und verweist über `relatesTo.code = replaces` auf die vorherige Version. Die `DocumentReference` der ersetzten Dokumentversion wird auf den Status `superseded` gesetzt. Frühere Dokumentversionen und ihre Dokumentinhalte bleiben standardmäßig erhalten und können weiterhin für Nachweis- und Revisionszwecke herangezogen werden. Üblicherweise ist die aktuelle Fassung die einzig fachlich gültige. Die genaue Ausgestaltung unterliegt jedoch den konkreten Services.
 
 <figure>
     <div class="gem-ig-svg-container" style="--box-width: 460px; --box-width-mobile: 100%;">
