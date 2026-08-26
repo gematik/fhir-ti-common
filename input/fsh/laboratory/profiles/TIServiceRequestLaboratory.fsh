@@ -46,12 +46,11 @@ Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codi
     * valueString MS
   * text MS
 * reasonReference MS
-  * ^definition = "Hier besteht die Option, die Diagnose aus dem Laborauftrag mitzuführen. Die Übernahme eines Diagnose-Codes geschieht in Abhängigkeit von den Auftragsdaten. Das setzt voraus, dass die Diagnose in den Auftragsdaten codiert übergeben worden ist."
-  * ^short = "Auftragsdiagnose"
   * insert ReferenceMS
 * supportingInfo MS
   * ^definition = "Klinische Angaben aus dem Laborauftrag, die für die Befundung wichtig sind, können hier angegeben werden. Das sind beispielsweise Angaben zur Medikation oder zur gesundheitlichen Konstitution."
   * ^short = "Klinische Angaben aus dem Laborauftrag"
+  * insert ReferenceMS
 * note MS
   * ^definition = "Ergänzende Angaben zum Auftrag, z. B. Institutionsspezifische administrative Zuordnung (\"Tour-Nummer\"; \"Tagebuch-Nummer\"). Der Inhalt dieses Elementes kann den Angaben zu \"Auftragsbezogene Hinweise\" aus der LDT-Kommunikation entsprechen."
   * ^short = "Auftragsbezogene Hinweise"
