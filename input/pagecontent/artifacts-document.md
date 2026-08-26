@@ -13,7 +13,7 @@ StructureDefinition/ti-mhd-document-reference,
 ### Extensions
 
 {% capture document-extensions %}
-StructureDefinition/ti-document-location-extension,
+StructureDefinition/ti-document-storage-location-extension,
 {% endcapture %}
 {% include artifacts-table-generator.html render=document-extensions %}
 
@@ -21,14 +21,14 @@ StructureDefinition/ti-document-location-extension,
 ### Value Sets
 
 {% capture document-vs %}
-ValueSet/ti-document-location-vs,
+ValueSet/ti-document-storage-location-vs,
 {% endcapture %}
 {% include artifacts-table-generator.html render=document-vs %}
 
 ### Code System
 
 {% capture document-cs %}
-CodeSystem/ti-document-location-cs,
+CodeSystem/ti-document-storage-location-cs,
 {% endcapture %}
 {% include artifacts-table-generator.html render=document-cs %}
 

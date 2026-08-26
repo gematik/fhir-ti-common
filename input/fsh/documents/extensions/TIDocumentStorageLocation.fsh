@@ -1,6 +1,6 @@
-Extension: TIDocumentLocation
-Id: ti-document-location-extension
-Title: "TI Document Location"
+Extension: TIDocumentStorageLocation
+Id: ti-document-storage-location-extension
+Title: "TI Document Storage Location"
 Description: """
 Die Extension ermöglicht die Unterscheidung zwischen verschiedenen Speicherorten eines Dokuments,
 beispielsweise einem Workflow-Dokumentenspeicher oder der ePA. Befindet sich
@@ -16,4 +16,4 @@ Context: DocumentReference
 // * ^status = #active
 
 * value[x] only Coding
-* valueCoding from TIDocumentLocationVS (required)
+* valueCoding from TIDocumentStorageLocationVS (required)
