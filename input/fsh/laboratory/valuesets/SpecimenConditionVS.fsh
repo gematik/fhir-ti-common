@@ -3,6 +3,7 @@ Id: specimen-condition
 Title: "Zustand Probe"
 Description: "Dieses Valueset enthält Codes zur Beschreibung des Zustands einer Probe."
 * insert Meta-VS
+* ^copyright = "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists."
 * $cs-sct-de-20260515#710070002 "Specimen unsatisfactory for evaluation due to broken container"
 * $cs-sct-de-20260515#448140007 "Specimen unsatisfactory for evaluation due to obscuring lubricant jelly"
 * $cs-sct-de-20260515#712743008 "Specimen unsatisfactory for evaluation due to improper storage of specimen"
