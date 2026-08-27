@@ -12,9 +12,6 @@ Eine Laboruntersuchung als Messung beschreibt die quantitative oder qualitative 
 Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechnete GFR (glomeruläre Filtrationsrate) auf einem gemessenen Kreatinin-Wert im Serum basieren."
 * insert Meta-With-Versioning
 * extension MS
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "url"
-  * ^slicing.rules = #closed
 * extension contains
   TestProfileExtension named testProfile 0..1 MS and
   ExternalServiceExtension named externalService 0..1 MS and
@@ -23,7 +20,7 @@ Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechn
   AlternativeResultExtension named alternativeResult 0.. MS
 * extension[testProfile]
   * ^definition = "Unter Test-Profil werden zusammengehörige Labortests oder eine Gruppe von Einzeluntersuchungen aus einem Verfahren zusammengefasst."
-  * ^short = "Bezeichnung für fachlich-medizinischen Bezug, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu Observation_Laboratory_Study_Group.extension:testProfile"
+  * ^short = "Bezeichnung für fachlich-medizinischen Bezug, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu TIObservationLaboratoryStudyGroup.extension:testProfile"
   * valueCodeableConcept MS
     * insert CodeableConceptMS
     * coding MS
@@ -120,13 +117,13 @@ Interpretation des zlog-Wertes:
   * ^definition = "Bearbeitungsstatus der einzelnen Laboruntersuchung."
 * category MS
   * ^definition = "Zur einzelnen Laboruntersuchung wird das \"fachliche Gruppierungsmerkmal\" REDUNDANT abgebildet, der Inhalt entspricht exakt dem fachlichen Gruppierungsmerkmal der zugehörigen Untersuchungsgruppe. Dies ermöglicht bei datenbankbasierten Abfragen von Einzeluntersuchungen (z.B. in der ePA) eine direkte Zuordnung zur fachlichen Gruppierung. Das fachliche Gruppierungsmerkmal der Untersuchungsgruppe ist grundsätzlich führend!"
-  * ^short = "Fachliche Bezeichnung für die zugehörige Untersuchungsgruppe, Inhalt identisch zu Observation_Laboratory_Study_Group.category"
+  * ^short = "Fachliche Bezeichnung für die zugehörige Untersuchungsgruppe, Inhalt identisch zu TIObservationLaboratoryStudyGroup.category"
 * category[laboratory] MS
   * insert CodeableConceptMS
   * text MS
 * category[studyType] MS
   * ^definition = "Hier kann die fachspezifische Eingrenzung innerhalb der Laboratoriumsmedizin anhand entsprechender Kategorie-Codes angegeben werden. Beispiele für eine fachspezifische Eingrenzung sind: \"Klinische Chemie\", \"Hämatologie\", \"Toxikologie\". Es besteht auch die Option, eine allgemeine Kategorie für \"Labor\" zu vergeben."
-  * ^short = "Bezeichnung für Fachbereich, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu Observation_Laboratory_Study_Group.category:studyType"
+  * ^short = "Bezeichnung für Fachbereich, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu TIObservationLaboratoryStudyGroup.category:studyType"
   * insert CodeableConceptMS
   * coding MS
     * ^definition = "Benennung des labormedizinischen Bereiches als Code."
@@ -253,7 +250,7 @@ Nominal, d.h. Festwerte ohne Rangordnung, beispielsweise in der Mikrobiologie: K
   * text MS
 * method MS
   * ^definition = "Der LOINC®-Code impliziert über die LOINC®-Achse METHOD bereits eine Untersuchungsmethode, unter der Voraussetzung, dass der Part METHOD einen Wert beinhaltet. Die \"Untersuchungsmethode, ergänzende Spezifizierung\" kann in Bezug auf die LOINC®-spezifizierte Laboruntersuchung ergänzt werden, falls der Wert für die LOINC®-Achse METHOD nicht ausreichend spezifisch ist oder gar nicht vorhanden ist.\n
-Ein Beispiel: die Laboruntersuchung (Observation_Laboratory_Study.code) ist mit dem LOINC®-Code 26453-1 \"Erythrocytes [#/volume] in Blood\" ohne Angabe zur Methode codiert. Als ergänzende Spezifizieruung wird für die Untersuchungsmethode (Observation_Laboratory_Study.method) der SNOMED CT®-Code 702659008 |Automated count| zugeordnet."
+Ein Beispiel: die Laboruntersuchung (TIObservationLaboratoryStudy.code) ist mit dem LOINC®-Code 26453-1 \"Erythrocytes [#/volume] in Blood\" ohne Angabe zur Methode codiert. Als ergänzende Spezifizieruung wird für die Untersuchungsmethode (TIObservationLaboratoryStudy.method) der SNOMED CT®-Code 702659008 |Automated count| zugeordnet."
   * ^short = "Untersuchungsmethode, ergänzende Spezifizierung (z.B. postkoordinierend)"
   * insert CodeableConceptMS
   * coding
