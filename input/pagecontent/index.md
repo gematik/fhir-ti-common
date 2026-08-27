@@ -2,7 +2,7 @@ FHIR Data Services in Produkttypen der Telematikinfrastruktur (TI) unterstützen
 
 FHIR Data Services bieten Schnittstellen, Verhalten und Operationen nach FHIR-Spezifikation an. Der ePA Medication Service ist ein solches Beispiel.
 
-Die Konzepte und Anforderungen jedes spezifischen FHIR Data Service werden jeweils in einem separaten Implementation Guide beschrieben. Es gibt allerdings Aspekte, die allen FHIR Data Services gemeinsam sind. Diese Teile hält der vorliegende Implementation Guide ("TI Common") zentral vor und werden von den spezifischen Implementation Guides bei Bedarf referenziert.
+Die in diesem Implementation Guide definierten FHIR-Profile bilden eine gemeinsame Grundlage für FHIR-basierte Anwendungen und Dienste in der TI und berücksichtigen dabei auch europäische Vorgaben. Sie können direkt verwendet und bei Bedarf weiter eingeschränkt werden. TI Common beschreibt dabei nicht nur die Struktur der FHIR-Ressourcen, sondern auch eine gemeinsame Herangehensweise an den Umgang mit den daraus erzeugten Ressourceninstanzen. Die konkreten Fachdienste können diese Vorgaben entsprechend ihren fachlichen und technischen Anforderungen weiter konkretisieren. Die Konzepte und Anforderungen jedes spezifischen FHIR Data Service werden jeweils in einem separaten Implementation Guide beschrieben. Es gibt allerdings Aspekte, die allen FHIR Data Services gemeinsam sind. Diese Teile hält der vorliegende Implementation Guide ("TI Common") zentral vor und werden von den spezifischen Implementation Guides bei Bedarf referenziert.
 
 
 ### Sprachliche Konventionen
