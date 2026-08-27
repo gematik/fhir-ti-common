@@ -1,6 +1,6 @@
-ValueSet: TIDocumentLocationVS
-Id: ti-document-location-vs
-Title: "TI Document Location"
+ValueSet: TIDocumentStorageLocationVS
+Id: ti-document-storage-location-vs
+Title: "TI Document Storage Location"
 Description: "Zulässige Quellsysteme für TI-MHD-Dokumente."
 * insert Meta-VS
 
@@ -9,4 +9,4 @@ Description: "Zulässige Quellsysteme für TI-MHD-Dokumente."
 // * ^date = "2026-09-30"
 // * ^status = #active
 
-* include codes from system TIDocumentLocationCS
+* include codes from system TIDocumentStorageLocationCS

@@ -1,6 +1,6 @@
-CodeSystem: TIDocumentLocationCS
-Id: ti-document-location-cs
-Title: "TI Document Location"
+CodeSystem: TIDocumentStorageLocationCS
+Id: ti-document-storage-location-cs
+Title: "TI Document Storage Location"
 Description: "Quellsystem eines über DocumentReference beschriebenen Dokuments."
 * insert Meta-CS
 // preserve the version

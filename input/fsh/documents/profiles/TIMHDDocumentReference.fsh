@@ -10,8 +10,8 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 // * ^date = "2026-09-30"
 // * ^status = #active
 
-* extension contains TIDocumentLocation named documentLocation 0..1 MS
-* extension[documentLocation]
+* extension contains TIDocumentStorageLocation named documentStorageLocation 0..1 MS
+* extension[documentStorageLocation]
   * ^short = "Kennzeichnet das System, in dem sich das referenzierte Dokument befindet, z. B. die ePA des Versicherten."
   * ^definition = "Gibt das System an, in dem sich das durch die DocumentReference beschriebene Dokument befindet und aus dem es abgerufen werden kann."
   * ^comment = "Die Extension ermöglicht die Unterscheidung zwischen verschiedenen Speicherorten eines Dokuments, beispielsweise einem Workflow-Dokumentenspeicher oder der ePA."
