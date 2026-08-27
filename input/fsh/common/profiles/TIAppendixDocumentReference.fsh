@@ -5,6 +5,7 @@ Title: "TI Appendix Document Reference"
 Description: "Hier wird ein Dokumentanhang abgebildet."
 * insert Meta-With-Versioning
 * . ^definition = "Hier wird ein Dokumentanhang abgebildet."
+* masterIdentifier MS
 * status MS
   * ^definition = "Hier wird der Status des Anhanges angegeben."
 * type MS
@@ -15,7 +16,7 @@ Description: "Hier wird ein Dokumentanhang abgebildet."
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains xds 0..1
-  * coding[xds] from http://ihe-d.de/ValueSets/IHEXDStypeCode (required)
+  * coding[xds] from $epa-xds-type-code-vs (required)
   * coding[xds] MS
     * ^definition = "Hier wird der Dokumenttyp gem. IHE-De-Terminologie in codierter Form angeben."
   * text MS
@@ -29,7 +30,7 @@ Description: "Hier wird ein Dokumentanhang abgebildet."
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains xds 0..1
-  * coding[xds] from http://ihe-d.de/ValueSets/IHEXDSclassCode (required)
+  * coding[xds] from $epa-xds-class-code-vs (required)
   * coding[xds]
     * ^definition = "Hier wird die Kategorie des Dokuments gem. IHE-De-Terminologie in codierter Form angeben."
   * text MS
@@ -38,6 +39,8 @@ Description: "Hier wird ein Dokumentanhang abgebildet."
 * insert SubjectEu(subject)
 * author MS
   * ^definition = "Hier werden Personen, Einrichtungen oder Geräte, die das Dokument erzeugt haben, referenziert."
+  * insert ReferenceMS
+* author only 	Reference(TIPractitioner or TIPractitionerRole or TIOrganization or Device or TIPatient or TIRelatedPerson)
 * description MS
   * ^definition = "Hier wird der Dokumentenverweis als Freitext erfasst, z. B. \"Arztbrief vom 28.04.2020\"."
 * content MS
@@ -45,7 +48,8 @@ Description: "Hier wird ein Dokumentanhang abgebildet."
   * attachment MS
     * ^definition = "Hier wird das Dokument in Form eines formatierten Anhangs abgebildet."
     * contentType 1.. MS
-      * ^definition = "Hier wird das Dateiformat ausgewählt.\r\nEs ist ein Code aus dem System urn:ietf:bcp:13 zu wählen"
+      * ^definition = "Hier wird das Dateiformat ausgewählt."
+    * contentType from $epa-xds-mime-type-vs (required)
     * data 1.. MS
       * ^definition = "Hier wird das Dokument als Datei angehängt."
     * url ..0
