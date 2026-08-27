@@ -34,7 +34,7 @@ HL7®-Code für die Typisierung des Proben-Identifikators. In diesem Kontext mö
       * ^definition = "Text für die Typisierung des Proben-Identifikators."
   * value
     * ^definition = "Identifikator-Wert"
-* status
+* status MS
   * ^definition = "Hier wird ein Code für den Probenstatus vor der Messung angegeben:\n
 * Verfügbar: das physische Exemplar ist vorhanden und in gutem Zustand.
 * Nicht verfügbar: es ist kein physisches Exemplar vorhanden, da es entweder verloren, zerstört oder verbraucht wurde.
@@ -67,6 +67,7 @@ Der LOINC®-Code impliziert über die LOINC®-Achse SYSTEM bereits eine Probenar
 * parent MS
   * ^definition = "Ausgangsmaterial für eine Sekundärprobe. Die Sekundärprobe existiert nur auf Basis einer Primärprobe. Wenn eine Sekundärprobe angegeben wird, dann ist das Ausgangsmaterial verpflichtend anzugeben, damit der Bezug hergestellt werden kann."
   * insert ReferenceMS
+* parent only Reference(TISpecimenLaboratory)
 * collection MS
   * ^definition = "Optionale Angaben zur Probengewinnung, dazu gehören: Zeitangabe, Methode der Probengewinnung, Entnahmeort, Angabe zum Nüchternstatus."
   * extension MS
@@ -76,6 +77,7 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstell
     * ^short = "Körperstelle der Probenentnahme"
     * valueReference MS
       * insert ReferenceMS
+    * valueReference only Reference(TIBodyStructure)
   * collector MS
     * ^definition = "Person, welche die Probe entnimmt."
     * insert ReferenceMS
@@ -163,6 +165,7 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
     * ^definition = "Referenzierung auf Additiva, die bei der Probenweiterverarbeitung hinzugefügt werden."
     * ^short = "Probenzusätze in der Probenverarbeitung"
     * insert ReferenceMS
+  * additive only Reference(TISpecimenAdditiveSubstance)
   * time[x] MS
     * ^definition = "Hier wird eine Zeitangabe vorgenommen."
   * time[x] only dateTime or Period
@@ -181,6 +184,7 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
     * ^definition = "Referenz auf den Probenbehälter."
     * valueReference 1..1 MS
       * insert ReferenceMS
+    * valueReference only Reference(TIDeviceSpecimenContainer)
   * specimenQuantity MS
     * ^definition = "Menge der Probe im Behälter."
     * insert QuantityMS
