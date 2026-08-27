@@ -1,6 +1,6 @@
 CodeSystem: TestProfileCS
 Id: test-profile
-Title: "CodeSystem Test Profile"
+Title: "Laboruntersuchungsgruppen"
 Description: "Dieses Codesystem enthält die Codes für deutsche Bezeichner für Laboruntersuchungsgruppe."
 * ^caseSensitive = true
 * ^content = #complete
