@@ -15,7 +15,7 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
 * extension contains TestProfileExtension named testProfile 0..1 MS
 * extension[testProfile]
   * ^definition = "Unter Test-Profil werden zusammengehörige Labortests oder eine Gruppe von Einzeluntersuchungen aus einem Verfahren zusammengefasst."
-  * ^short = "Bezeichnung für fachlich-medizinischen Bezug, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu Observation_Laboratory_Study_Group.extension:testProfile"
+  * ^short = "Bezeichnung für fachlich-medizinischen Bezug, unter dem Laboruntersuchungen gruppiert werden."
   * valueCodeableConcept
     * insert CodeableConceptMS
     * coding MS
@@ -33,7 +33,7 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
   * insert CodeableConceptMS
 * category[studyType] MS
   * ^definition = "Hier kann die fachspezifische Eingrenzung innerhalb der Laboratoriumsmedizin anhand entsprechender Kategorie-Codes angegeben werden. Beispiele für eine fachspezifische Eingrenzung sind: \"Klinische Chemie\", \"Hämatologie\", \"Toxikologie\". Es besteht auch die Option, eine allgemeine Kategorie für \"Labor\" zu vergeben."
-  * ^short = "Bezeichnung für Fachbereich, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu Observation_Laboratory_Study.category:studyType"
+  * ^short = "Bezeichnung für Fachbereich, unter dem Laboruntersuchungen gruppiert werden"
   * insert CodeableConceptMS
   * coding
     * ^definition = "Benennung des labormedizinischen Bereiches als Code."
@@ -46,7 +46,7 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
 * performer
   * ^short = "Durchführendes Labor"
   * ^definition = "Hier wird das durchführende Labor in Bezug auf die Untersuchungsgruppe benannt.\n
-Zum Erhalt der europäischen Interoperabilität, orientiert an der Veröffentlichung \"HL7 Europe Laboratory Report\" wird die durchführende Person (\"performer\" im FHIR®-Profil \"Observation\") im Informationsmodell bei der Untersuchungsgruppe mitgeführt. Bisher liegt im Rahmen der Spezifizierungsarbeit zum MIO Laborbefund keine medizinisch-fachliche Begründung vor, dass diese Struktur befüllt werden muss."
+Zum Erhalt der europäischen Interoperabilität, orientiert an der Veröffentlichung \"HL7 Europe Laboratory Report\" wird die durchführende Person (\"performer\" im FHIR®-Profil \"Observation\") im Informationsmodell bei der Untersuchungsgruppe mitgeführt. Bisher liegt im Rahmen der Spezifizierungsarbeit zum strukturierten Laborbefund keine medizinisch-fachliche Begründung vor, dass diese Struktur befüllt werden muss."
 * valueQuantity ..0
 * valueString ..0
 * valueRange ..0
@@ -80,6 +80,7 @@ Zum Erhalt der europäischen Interoperabilität, orientiert an der Veröffentlic
 * note MS
   * ^definition = "Die ergänzenden Angaben beziehen sich genau auf diese Untersuchungsgruppe. Neben dem Element \"Interpretation\" ist dieses Feld für weitere, über die rein medizinische Interpretation hinausgehende Kommentierungen gedacht."
   * text MS
+* hasMember only Reference(TIObservationLaboratoryStudy)
 * hasMember 1.. MS
   *  ^definition = "Laboruntersuchungen, die in der Untersuchungsgruppe enthalten sind, werden hier referenziert."
   * extension MS
