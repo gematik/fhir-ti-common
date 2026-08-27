@@ -10,8 +10,9 @@ Description: "Dieses Profil bildet das Modell eines Laboranalysegerätes ab."
 * manufacturerReference MS
   * ^definition = "Hier wird der Hersteller des Laboranalysegerätes referenziert."
   * insert ReferenceMS
+* manufacturerReference only Reference(TIOrganization)
 * type MS
   * ^definition = "Kategorisierung des Laboranalysegerätes"
   * insert CodeableConceptMS
-  * coding 
+  * coding
     * ^definition = "Hier wird ein Code erfasst, welcher angibt um welchen Gerätetyp es sich handelt."

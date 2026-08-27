@@ -10,6 +10,7 @@ Description: "Dieses Profil bildet das Modell einer außerkörperlichen Stelle a
 * manufacturerReference MS
   * ^definition = "Hier wird der Hersteller des Produkts referenziert."
   * insert ReferenceMS
+* manufacturerReference only Reference(TIOrganization)
 * type MS
   * ^definition = "Kategorisierung der außerkörperlichen Stelle"
   * insert CodeableConceptMS

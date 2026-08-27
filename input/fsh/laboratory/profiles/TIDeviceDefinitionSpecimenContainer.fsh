@@ -7,9 +7,10 @@ Description: "Dieses Profil bildet das Modell eines Probenbehälters ab."
 * insert Meta-With-Versioning
 * manufacturer[x] MS
   * ^definition = "Hier werden Angaben zum Hersteller des Gerätes referenziert."
-* manufacturerReference MS 
+* manufacturerReference MS
   * ^definition = "Hier wird der Hersteller des Probenbehälters referenziert."
   * insert ReferenceMS
+* manufacturerReference only Reference(TIOrganization)
 * type MS
   * ^definition = "Kategorisierung des Probenbehälters"
   * insert CodeableConceptMS
