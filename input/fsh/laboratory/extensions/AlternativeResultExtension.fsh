@@ -14,36 +14,34 @@ Context: Observation
   * value[x] 1..
   * value[x] only Quantity or Range or Ratio
   * valueQuantity
-    * ^patternQuantity.system = "http://unitsofmeasure.org"
+    * ^patternQuantity.system = $cs-ucum
     * value 1..
     * unit 1..
     * system 1..
     * code 1..
   * valueRange
     * low
-      * ^patternQuantity.system = "http://unitsofmeasure.org"
+      * ^patternQuantity.system = $cs-ucum
       * value 1..
       * unit 1..
       * system 1..
       * code 1..
     * high
-      * ^patternQuantity.system = "http://unitsofmeasure.org"
+      * ^patternQuantity.system = $cs-ucum
       * value 1..
       * unit 1..
       * system 1..
       * code 1..
   * valueRatio
     * numerator 1..
-      * ^patternQuantity.system = "http://unitsofmeasure.org"
+      * ^patternQuantity.system = $cs-ucum
       * value 1..
-      * comparator
       * unit 1..
       * system 1..
       * code 1..
     * denominator 1..
-      * ^patternQuantity.system = "http://unitsofmeasure.org"
+      * ^patternQuantity.system = $cs-ucum
       * value 1..
-      * comparator
       * unit 1..
       * system 1..
       * code 1..
@@ -51,13 +49,13 @@ Context: Observation
   * value[x] only Range
   * valueRange 1..
     * low
-      * ^patternQuantity.system = "http://unitsofmeasure.org"
+      * ^patternQuantity.system = $cs-ucum
       * value 1..
       * unit 1..
       * system 1..
       * code 1..
     * high
-      * ^patternQuantity.system = "http://unitsofmeasure.org"
+      * ^patternQuantity.system = $cs-ucum
       * value 1..
       * unit 1..
       * system 1..
