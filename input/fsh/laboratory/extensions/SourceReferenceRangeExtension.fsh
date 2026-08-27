@@ -1,5 +1,5 @@
 Extension: SourceReferenceRangeExtension
-Id: source-reference-range
+Id: source-reference-range-extension
 Title: "Quelle der Richtgrenze"
 Description: "Diese Extension bildet eine Quelle der Richtgrenze ab."
 Context: Observation.referenceRange
