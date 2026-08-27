@@ -1,7 +1,7 @@
-CodeSystem: TestProfileCS
-Id: test-profile
-Title: "Laboruntersuchungsgruppen"
-Description: "Dieses Codesystem enthält die Codes für deutsche Bezeichner für Laboruntersuchungsgruppe."
+CodeSystem: LaboratoryTestProfileCS
+Id: laboratory-test-profile
+Title: "Laboratory Test Profiles"
+Description: "Dieses Codesystem enthält die Codes für deutsche Bezeichner für Laboruntersuchungsgruppen."
 * ^caseSensitive = true
 * ^content = #complete
 * #haemato "Hämatologie"
