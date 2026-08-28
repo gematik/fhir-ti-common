@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 CodeSystem: SecondaryStatusCS
 Id: secondary-status
 Title: "Sekundärstatus Gesamtbefund"

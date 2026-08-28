@@ -5,6 +5,6 @@ Description: "Diese Extension bildet einen Auftrageingangszeitpunkt ab."
 Context: DiagnosticReport
 * insert Meta
 * . ^definition = "Diese Extension bildet einen Auftrageingangszeitpunkt ab."
-* . ^short = "Auftrageingangszeitpunkt im Labor"
+* . ^short = "Auftrageingangszeitpunkt"
 * value[x] only dateTime
 * valueDateTime 1..1

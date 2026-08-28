@@ -13,6 +13,11 @@ StructureDefinition/ti-practitioner-role
 
 {% capture common-extensions %}
 StructureDefinition/ncpeh-country-extension,
+StructureDefinition/critical-result-extension,
+StructureDefinition/order-entry-time-extension,
+StructureDefinition/sorting-number-extension,
+StructureDefinition/secondary-status-extension,
+StructureDefinition/pseudonymized-report-extension,
 {% endcapture %}
 {% include artifacts-table-generator.html render=common-extensions %}
 <div><figcaption><strong>Tabelle:</strong> Common Extensions</figcaption></div>

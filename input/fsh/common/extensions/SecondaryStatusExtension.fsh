@@ -5,7 +5,7 @@ Description: "In dieser Extension kann eine optionale sekundäre Angabe des Änd
 Context: DiagnosticReport
 * insert Meta
 * . ^definition = "In dieser Extension kann eine optionale sekundäre Angabe des Änderungsstatus, zusätzlich zum Hauptstatus 'Status Gesamtbefund' angegeben werden"
-* . ^short = "Änderungsstatus Laborbefund (Sekundärstatus)"
+* . ^short = "Änderungsstatus Befund (Sekundärstatus)"
 * value[x] only Coding
 * valueCoding from SecondaryStatusVS (required)
 * valueCoding 1..1

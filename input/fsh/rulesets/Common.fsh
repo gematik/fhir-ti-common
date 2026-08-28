@@ -18,7 +18,7 @@ RuleSet: Subject(element-name)
 
 RuleSet: SubjectEu(element-name)
 * {element-name} 1..1 MS
-* {element-name} only Reference(PatientEuCore)
+* {element-name} only Reference(TIPatient)
   * insert ReferenceMS
 
 
@@ -39,11 +39,16 @@ RuleSet: Performer
   * identifier MS
   * identifier only identifier-kvid-10 or
       identifier-telematik-id
-* performer only Reference(OrganizationEuCore or
+* performer only Reference(TIOrganization or
     RelatedPerson or
-    PatientEuCore or
-    PractitionerEuCore or
-    PractitionerRoleEuCore)
+    TIPatient or
+    TIPractitioner or
+    TIPractitionerRole)
+// * performer only Reference(OrganizationEuCore or
+//     RelatedPerson or
+//     PatientEuCore or
+//     PractitionerEuCore or
+//     PractitionerRoleEuCore)
 
 
 RuleSet: Note

@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: SecondaryStatusVS
 Id: secondary-status
 Title: "Sekundärstatus Gesamtbefund"

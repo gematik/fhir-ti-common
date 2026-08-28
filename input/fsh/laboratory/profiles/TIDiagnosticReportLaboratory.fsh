@@ -1,7 +1,7 @@
 Profile: TIDiagnosticReportLaboratory
 Parent: DiagnosticReportLabEu
 Id: ti-diagnosticReport-laboratory
-Title: "TI Diagnostic Report"
+Title: "TI Diagnostic Report Laboratory"
 Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin verschachtelt unter \"Ergebnisse\" (DiagnosticReport.result) ist die Referenz auf \"Untersuchungsgruppe\" (Observation_Laboratory_Study_Group), darin die Referenz auf \"Laboruntersuchung\" (Observation_Laboratory_Study), darin die Referenz auf \"Probe\" (Specimen)."
 * . ^definition = "Profil für den Laborgesamtbefund (DiagnosticReport). Darin verschachtelt unter \"Ergebnisse\" (DiagnosticReport.result) ist die Referenz auf \"Untersuchungsgruppe\" (Observation_Laboratory_Study_Group), darin die Referenz auf \"Laboruntersuchung\" (Observation_Laboratory_Study), darin die Referenz auf \"Probe\" (Specimen)."
 * insert Meta-With-Versioning
@@ -72,6 +72,10 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   * ^definition = "Person oder Organisation, die für Erstellung des Laborgesamtbefundes verantwortlich ist.\n\n
   Das auftragnehmende Labor kann die Laborleistung selbst erbringen, teilweise selbst erbringen und teilweise an ein Speziallabor weiterleiten oder insgesamt an ein Speziallabor weiterleiten. Der Gesamtbefund wird vollumfänglich zum gesamten Laborauftrag vom Auftragnehmer erstellt."
   * ^short = "Auftragnehmendes Labor"
+* performer only Reference(TIPractitionerRole or TIPractitioner or TIOrganization or CareTeam)
+* performer[organization] only Reference(TIOrganization)
+* resultsInterpreter only Reference(TIPractitionerRole or TIPractitioner or TIOrganization or CareTeam)
+* resultsInterpreter[author] only Reference(TIPractitionerRole)
 * specimen MS
   * ^comment = "Zum Erhalt der europäischen Interoperabilität, orientiert an der Veröffentlichung https://hl7.eu/fhir/laboratory/history.html kann auf Gesamtbefundebene auf das gesamte Probenmaterial referenziert werden. Diese optionale Angabe ist redundant zu den Probenreferenzen der Einzeluntersuchungen."
   * insert ReferenceMS
