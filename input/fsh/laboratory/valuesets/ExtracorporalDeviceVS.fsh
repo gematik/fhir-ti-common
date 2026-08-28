@@ -2,6 +2,7 @@ ValueSet: ExtracorporalDeviceVS
 Id: extracorporal-device
 Title: "Außerkörperliche Quellen SNOMED CT®"
 Description: "Dieses Valueset enthält SNOMED CT® Codes zur Beschreibung von Außerkörperliche Quellen."
+* ^copyright = "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists."
 * insert Meta-VS
 * $cs-sct-de-20260515#19923001 "Catheter"
 * $cs-sct-de-20260515#19923001 ^designation.language = #de
