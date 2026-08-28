@@ -49,6 +49,13 @@ Interpretation des zlog-Wertes:
   * valueDecimal MS
 * extension[alternativeResult] ^definition = "Hier werden auf eine alternative Einheit umgerechnete Messergebnisse mitgeführt.\n
 Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die zlog-Wert-Berechnung. Aus diesem Grund sind deren Strukturen hier (noch einmal) enthalten."
+  * extension[code] MS
+    * ^definition = "Hier wird die Laboruntersuchung in Bezug auf das Messergebnis mit Alternativeinheit spezifiziert."
+    * ^short = "Spezifikation der Laboruntersuchung zum Messergebnis mit Alternativeinheit"
+    * valueCodeableConcept MS
+      * coding MS
+        * ^definition = "In diesem Element wird ein Code für die Laboruntersuchung zum alternativen Messergebnis angegeben"
+        * ^short = "Codierte Spezifikation der Laboruntersuchung zum Messergebnis mit Alternativeinheit"
   * extension[value] MS
     * ^definition = "Hier wird ein Messergebnis mit Alternativeinheit angegeben."
     * ^short = "Messergebnis quantitativ mit Alternativeinheit"
@@ -139,7 +146,7 @@ Interpretation des zlog-Wertes:
     * valueCode MS
     * valueCode from DataAbsentReasonLaboratoryVS (required)
   * coding MS
-    * ^definition = "In diesem Element wird ein Code für die Laboruntersuchung angegeben, inklusive Anzeigename (Display Name) sowie Name und Version des Codesystems."
+    * ^definition = "In diesem Element wird ein Code für die Laboruntersuchung angegeben."
   * text MS
     * ^definition = "Die Freitext-Bezeichnung erlaubt es, in den verwendenden/verarbeitenden Systemen den Einrichtungs-spezifischen bzw. Verwender-spezifischen Bezeichner für eine Laboruntersuchung weiterhin zu verwenden."
     * ^short = "Verwender-spezifische Bezeichnung für die Laboruntersuchung"

@@ -7,9 +7,14 @@ Context: Observation
 * insert Meta
 * value[x] ..0
 * extension contains
+  code 1..1 and
   value 1..1 and
   referenceRange 0..1 and
   zlog 0..1
+* extension[code] 1..1
+  * value[x] only CodeableConcept
+  * valueCodeableConcept 1..1
+    * coding 1..1
 * extension[value]
   * value[x] 1..
   * value[x] only Quantity or Range or Ratio
