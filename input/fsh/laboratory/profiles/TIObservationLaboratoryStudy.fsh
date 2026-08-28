@@ -265,10 +265,12 @@ Ein Beispiel: die Laboruntersuchung (TIObservationLaboratoryStudy.code) ist mit 
   * ^definition = "Eine Laboruntersuchung kann auf einer Primärprobe oder einer weiter verarbeiteten Probe (Sekundärprobe) basieren. Die Zuordnung einer Sekundärprobe zu einer Laboruntersuchung ist dann empfehlenswert, wenn durch die Probenvorbereitung im Labor eine relevante Veränderung des Untersuchungsmaterials erfolgt (z.B. Abtrennung Plasma).\n
 Ein Beispiel für die Unterscheidung zwischen Primärprobe und Sekundärprobe: als Primärprobe erreicht eine Probenart = Vollblut das Labor. Durch Zentrifugieren im Labor entsteht eine Sekundärprobe mit Probenart = Serum. Die zu analysierende Substanz wird im Serum gemessen."
   * insert ReferenceMS
+* specimen only Reference(TISpecimenLaboratory)
 * device MS
   * ^definition = "Hier wird das Gerät bzw. Medizinprodukt referenziert, mit dem die Laboruntersuchung durchgeführt wird."
   * ^short = "Laboranalysegerät"
   * insert ReferenceMS
+* device only Reference(TIDeviceLaboratoryAnalyzer)
 * referenceRange MS
   * ^definition = "Richtgrenzen oder Bewertungsgrenzen zu einer Laboruntersuchung\n
 * werden herangezogen für die Beurteilung und Einordnung von Messergebnissen
@@ -276,9 +278,6 @@ Ein Beispiel für die Unterscheidung zwischen Primärprobe und Sekundärprobe: a
 * sind ärztliche Entscheidungshilfen im klinischen Allta\n\n
 Disclaimer: FHIR® definiert aktuell nur inklusive Richtgrenzen. Für die Praxistauglichkeit besteht aber die Anforderung, auch exklusive Richtgrenzen abbilden zu können. Diese Thematik wurde schon bei HL7® FHIR® platziert, es gibt aber noch keine abschließende Festlegung dazu. Im Informationsmodell sind beide Optionen bereits dargestellt, um diese Anforderung sichtbar zu machen."
   * extension MS
-    * ^slicing.discriminator.type = #value
-    * ^slicing.discriminator.path = "url"
-    * ^slicing.rules = #open
   * extension contains
     SourceReferenceRangeExtension named sourceReferenceRange 0..1 MS and
     NoLinearReferenceRangeExtension named noLinearReferenceRange 0..1 MS
@@ -367,3 +366,4 @@ Bei den Angaben zum Kollektiv können mehrere Angaben kombiniert aufgeführt wer
 * derivedFrom MS
   * ^definition = "Laboruntersuchungen, die als Berechnung erstellt werden, können auf Laboruntersuchungen beruhen, die hier referenziert werden. Hierbei ist zu beachten, dass die Angabe solch referenzierter Messunge(en) nicht zwingend vollständig ist."
   * insert ReferenceMS
+* derivedFrom only Reference(TIObservationLaboratoryStudy)
