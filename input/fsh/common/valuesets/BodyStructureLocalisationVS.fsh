@@ -3,6 +3,7 @@ Id: body-structure-localisation
 Title: "Lokalisation innerhalb Körperstelle SNOMED CT®"
 Description: "Dieses Valueset enthält SNOMED CT® Codes zur Beschreibung der Lokalisation innerhalb einer Körperstelle."
 * insert Meta-VS
+* ^copyright = "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists."
 * $cs-sct-de-20260515#40415009 "Proximal"
 * $cs-sct-de-20260515#40415009 ^designation.language = #de
 * $cs-sct-de-20260515#40415009 ^designation.value = "Proximal"
