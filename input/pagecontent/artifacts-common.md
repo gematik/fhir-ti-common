@@ -6,6 +6,7 @@ StructureDefinition/ti-patient,
 StructureDefinition/ti-practitioner,
 StructureDefinition/ti-practitioner-role,
 StructureDefinition/ti-condition-diagnosis,
+StructureDefinition/ti-appendix-document-reference,
 {% endcapture %}
 {% include artifacts-table-generator.html render=common-profiles %}
 <div><figcaption><strong>Tabelle:</strong> Common Ressourcenprofile</figcaption></div>

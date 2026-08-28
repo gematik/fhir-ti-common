@@ -1,6 +1,6 @@
 Profile: TIDiagnosticReportLaboratory
 Parent: DiagnosticReportLabEu
-Id: ti-diagnosticReport-laboratory
+Id: ti-diagnostic-report-laboratory
 Title: "TI Diagnostic Report Laboratory"
 Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin verschachtelt unter \"Ergebnisse\" (DiagnosticReport.result) ist die Referenz auf \"Untersuchungsgruppe\" (Observation_Laboratory_Study_Group), darin die Referenz auf \"Laboruntersuchung\" (Observation_Laboratory_Study), darin die Referenz auf \"Probe\" (Specimen)."
 * . ^definition = "Profil für den Laborgesamtbefund (DiagnosticReport). Darin verschachtelt unter \"Ergebnisse\" (DiagnosticReport.result) ist die Referenz auf \"Untersuchungsgruppe\" (Observation_Laboratory_Study_Group), darin die Referenz auf \"Laboruntersuchung\" (Observation_Laboratory_Study), darin die Referenz auf \"Probe\" (Specimen)."
@@ -102,6 +102,7 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
     * extension[link] MS
       * ^definition = "Referenzierung auf ergänzende Dokumente"
       * ^short = "Referenzierung auf ergänzende Dokumente"
+      * valueReference only Reference(TIAppendixDocumentReference)
     * display MS
       * ^definition = "Hinweis, der besagt, dass anstelle einer Referenz auf Media auf eine DocumentReference über die Cross-version Extension „link“ referenziert wird."
 * conclusion MS
