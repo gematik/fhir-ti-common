@@ -17,6 +17,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
   * ^short = "Außerkörperliche Quelle zur Probenentnahme"
   * valueReference 1..1 MS
     * insert ReferenceMS
+  * valueReference only Reference(TIDeviceSpecimenSubject)
 * identifier MS
   * insert IdentifierMS
   * type from SpecimenIdentifierTypeVS (extensible)
@@ -81,6 +82,7 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstell
   * collector MS
     * ^definition = "Person, welche die Probe entnimmt."
     * insert ReferenceMS
+  * collector only Reference(TIPractitioner or TIPractitionerRole)
   * collected[x] MS
     * ^definition = "Hier wird eine Zeitangabe zur Probengewinnung vorgenommen."
   * collected[x] only dateTime or Period
