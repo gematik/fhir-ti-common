@@ -26,6 +26,8 @@ publisher:
 
 dependencies:
   hl7.fhir.uv.xver-r5.r4: latest
+  # Temporary dependency required to resolve a preferred binding to an IPS ValueSet referenced by EU Core.
+  hl7.fhir.uv.ips: 2.0.1
   de.basisprofil.r4: 1.6.0
   de.fhir.medication: 1.0.7
   ihe.iti.mhd: 4.2.3
@@ -116,7 +118,7 @@ menu:
     Anforderungslisten: spec-sheet.html
     Versionsvergleiche: comparisons.html
     Lizenz: license.html
-  FHIR-Artefakte: 
+  FHIR-Artefakte:
     Übersicht: artifacts.html
     "Akteure": artifacts-actors.html
     Common: artifacts-common.html
@@ -138,6 +140,7 @@ parameters:
   show-inherited-invariants: true
   excludettl: true
   i18n-default-lang: de
+  ips-comparison: 2.0.1
   # For which versions comparisons should be generated.
   #   {last} - compare with the last published version (whatever it's status)
   #              - this is the default if the parameter doesn't appear
@@ -169,6 +172,8 @@ parameters:
   no-validate:
     - MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43
     - Bundle/example-history-bundle
+    # Validation disabled because the required SNOMED CT version is not available on the terminology server.
+    - ValueSet/diagnosis-snomed-ct
   special-url:
     - https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension
     - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication
