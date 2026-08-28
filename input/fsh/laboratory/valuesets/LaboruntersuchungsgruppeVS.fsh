@@ -2,6 +2,7 @@ ValueSet: LaboruntersuchungsgruppeVS
 Id: laboruntersuchungsgruppe
 Title: "Test-Profil Laboruntersuchungsgruppe"
 Description: "Dieses Valueset enthält die Codes zur Beschreibung von Test-Profil Laboruntersuchungsgruppe."
+* insert Meta-VS
 * LaboratoryTestProfileCS#haemato "Hämatologie"
 * LaboratoryTestProfileCS#baselec "Basisanalytik - Elektrolyte"
 * LaboratoryTestProfileCS#baskidn "Basisanalytik - Nierenfunktion"

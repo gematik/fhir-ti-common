@@ -107,6 +107,7 @@ Alias: $hl7-note = http://hl7.org/fhir/StructureDefinition/note
 //// International
 // HL7
 Alias: $cs-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation|4.0.1
+Alias: $cs-sex-parameter-for-clinical-use = http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use
 Alias: $hl7-task-status-cs = http://hl7.org/fhir/task-status
 
 

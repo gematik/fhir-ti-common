@@ -2,6 +2,8 @@ ValueSet: LaboratoryStudyValueVS
 Id: laboratory-study-value
 Title: "Messergebnis Qualitativ SNOMED CT®"
 Description: "Dieses Valueset enthält SNOMED CT® Codes zur Beschreibung von Messergebnis Qualitativ SNOMED CT®."
+* insert Meta-VS
+* ^copyright = "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists."
 * $cs-sct-de-20260515#260347006 "+"
 * $cs-sct-de-20260515#260347006 ^designation.language = #de
 * $cs-sct-de-20260515#260347006 ^designation.value = "+ aus ++++ vorhanden"
