@@ -3,11 +3,11 @@ Parent: DeviceSpecimenLabReportEu
 Id: ti-device-specimen-subject
 Title: "TI Device Specimen Subject"
 Description: "Dieses Profil bildet eine außerkörperliche Quelle ab.\n
-Falls die Probe nicht unmittelbar aus dem menschlichen Körper direkt entnommen wird, sondern beispielsweise aus einem Sammelgefäß oder Katheter gewonnen wird, kann das einen Einfluss auf das Messergebnis haben. Für diesen Fall kann die (außerkörperliche) Quelle für die Probenentnahme benannt werden.\n
-Es wäre auch möglich, dass eine Probenentnahme aus mehreren außerkörperlichen Quellen gewonnen wird."
+Falls die Probe nicht unmittelbar aus dem menschlichen Körper direkt entnommen wird, sondern beispielsweise aus einem Sammelgefäß oder Katheter gewonnen wird, kann das einen Einfluss auf das Messergebnis haben. Für diesen Fall kann die (außerkörperliche) Quelle für die Probenentnahme benannt werden. Als außerkörperliche Quelle kann auch ein nicht natürlicher Teil des Körpers benannt sein, beispielsweise ein Implantat.\n
+Es ist möglich, dass eine Probenentnahme aus mehreren außerkörperlichen Quellen gewonnen wird."
 * . ^definition = "Dieses Profil bildet eine außerkörperliche Quelle ab.\n
-Falls die Probe nicht unmittelbar aus dem menschlichen Körper direkt entnommen wird, sondern beispielsweise aus einem Sammelgefäß oder Katheter gewonnen wird, kann das einen Einfluss auf das Messergebnis haben. Für diesen Fall kann die (außerkörperliche) Quelle für die Probenentnahme benannt werden.\n
-Es wäre auch möglich, dass eine Probenentnahme aus mehreren außerkörperlichen Quellen gewonnen wird."
+Falls die Probe nicht unmittelbar aus dem menschlichen Körper direkt entnommen wird, sondern beispielsweise aus einem Sammelgefäß oder Katheter gewonnen wird, kann das einen Einfluss auf das Messergebnis haben. Für diesen Fall kann die (außerkörperliche) Quelle für die Probenentnahme benannt werden. Als außerkörperliche Quelle kann auch ein nicht natürlicher Teil des Körpers benannt sein, beispielsweise ein Implantat.\n
+Es ist möglich, dass eine Probenentnahme aus mehreren außerkörperlichen Quellen gewonnen wird."
 * insert Meta-With-Versioning
 * identifier MS
   * ^definition = "Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar."
