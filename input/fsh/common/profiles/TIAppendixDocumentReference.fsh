@@ -5,6 +5,11 @@ Title: "TI Appendix Document Reference"
 Description: "Hier wird ein Dokumentanhang abgebildet."
 * insert Meta-With-Versioning
 * . ^definition = "Hier wird ein Dokumentanhang abgebildet."
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * masterIdentifier MS
 * status MS
   * ^definition = "Hier wird der Status des Anhanges angegeben."

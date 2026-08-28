@@ -140,7 +140,7 @@ parameters:
   show-inherited-invariants: true
   excludettl: true
   i18n-default-lang: de
-  ips-comparison: 2.0.1
+  # ips-comparison: 2.0.1
   # For which versions comparisons should be generated.
   #   {last} - compare with the last published version (whatever it's status)
   #              - this is the default if the parameter doesn't appear

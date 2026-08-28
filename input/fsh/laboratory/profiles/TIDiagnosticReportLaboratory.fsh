@@ -5,6 +5,11 @@ Title: "TI Diagnostic Report Laboratory"
 Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin verschachtelt unter \"Ergebnisse\" (DiagnosticReport.result) ist die Referenz auf \"Untersuchungsgruppe\" (Observation_Laboratory_Study_Group), darin die Referenz auf \"Laboruntersuchung\" (Observation_Laboratory_Study), darin die Referenz auf \"Probe\" (Specimen)."
 * . ^definition = "Profil für den Laborgesamtbefund (DiagnosticReport). Darin verschachtelt unter \"Ergebnisse\" (DiagnosticReport.result) ist die Referenz auf \"Untersuchungsgruppe\" (Observation_Laboratory_Study_Group), darin die Referenz auf \"Laboruntersuchung\" (Observation_Laboratory_Study), darin die Referenz auf \"Probe\" (Specimen)."
 * insert Meta-With-Versioning
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * obeys diag-status-1
 * extension MS
   * ^slicing.discriminator.type = #value
