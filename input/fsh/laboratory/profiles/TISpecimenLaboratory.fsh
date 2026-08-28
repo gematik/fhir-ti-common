@@ -178,13 +178,15 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
     * end MS
       * ^definition = "Ende eines Zeitraum"
 * container MS
-  * ^definition = "Optionale Angaben zum Behältnis, in dem sich die Probe befindet. Hierzu kann angegeben werden, um welche Art Behältnis es sich handelt, welche Zusätze es enthält und welche Menge an Probenmaterial es enthält."
+  * ^definition = "Optionale Angaben zum Behältnis, in dem sich die Probe befindet. Hierzu kann angegeben werden, um welche Art Behältnis es sich handelt und welche Menge an Probenmaterial es enthält."
   * extension MS
   * extension[device] MS
     * ^definition = "Referenz auf den Probenbehälter."
     * valueReference 1..1 MS
       * insert ReferenceMS
     * valueReference only Reference(TIDeviceSpecimenContainer)
+  * type MS
+    * insert CodeableConceptMS
   * specimenQuantity MS
     * ^definition = "Menge der Probe im Behälter."
     * insert QuantityMS
