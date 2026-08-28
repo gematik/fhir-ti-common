@@ -30,6 +30,7 @@ dependencies:
   hl7.fhir.uv.ips: 2.0.1
   de.basisprofil.r4: 1.6.0
   de.fhir.medication: 1.0.7
+  ihe.iti.mhd: 4.2.3
   hl7.fhir.eu.extensions.r4: 1.3.0
   hl7.fhir.eu.base: 2.0.0
   hl7.fhir.eu.laboratory: 2.0.0
@@ -249,3 +250,4 @@ instanceOptions:
   # Determines for which types of Instances SUSHI will automatically set id
   # if InstanceOf references a profile:
   # setId: always # always | standalone-only
+  

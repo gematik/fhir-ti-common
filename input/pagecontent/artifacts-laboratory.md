@@ -19,7 +19,7 @@
 ### Ressourcenprofile
 
 {% capture laboratory-profiles %}
-StructureDefinition/ti-diagnosticReport-laboratory,
+StructureDefinition/ti-diagnostic-report-laboratory,
 {% endcapture %}
 {% include artifacts-table-generator.html render=laboratory-profiles %}
 <div><figcaption><strong>Tabelle:</strong> LaborLaborprozess Ressourcenprofile</figcaption></div>
