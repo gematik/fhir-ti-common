@@ -11,6 +11,7 @@
     "de.fhir.medication": "1.0.7",
     "ihe.iti.mhd": "4.2.3",
     "hl7.fhir.eu.base": "2.0.0",
-    "hl7.fhir.eu.laboratory": "2.0.0"
+    "hl7.fhir.eu.laboratory": "2.0.0",
+    "hl7.fhir.uv.ips": "2.0.1"
   }
 }

@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: DiagnosisSNOMEDCTVS
 Id: diagnosis-snomed-ct
 Title: "Diagnose SNOMED CT®"

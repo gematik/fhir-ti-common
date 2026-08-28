@@ -61,3 +61,5 @@ ORPHANET ist eine Initiative der Europäischen Union mit französischen Wurzeln 
   * text MS
     * ^definition = "Hier wird eine Diagnose als Freitext eingetragen."
 * insert SubjectEu(subject)
+
+* recorder only Reference(TIPractitionerRole or TIPractitioner  or TIPatient or RelatedPerson)
