@@ -1,10 +1,10 @@
 {
   "package-id": "de.gematik.ti",
-  "version": "1.5.0-draft.1",
-  "path": "https://gematik.de/fhir/ti/1.5.0-draft.1",
+  "version": "1.5.0-ballot.1",
+  "path": "https://gematik.de/fhir/ti/1.5.0-ballot.1",
   "status": "release",
   "first": false,
   "mode": "working",
-  "sequence": "TI Vorabveröffentlichung 1.5.0-draft.1",
+  "sequence": "TI Vorabveröffentlichung 1.5.0-ballot.1",
   "desc": "TI Common IG"
 }
