@@ -2,12 +2,12 @@ actor:
 - EPA-Medication-Service
 - TI-Flow_FD
 conformance: SHALL
-content_hash: 600278383b73b19b7926dbb97866da77caa1b4678993e4eb9495bbbc32704f08
+content_hash: 430b9b721282773d9261a7c4202950ea8fb585377ec9eec184118606956e23c4
 created: '2026-06-25T06:43:07.996080'
-date: '2026-06-26T14:51:18.211564'
+date: '2026-08-31T12:20:49.060298'
 key: IG-TI17421K31
-modified: '2026-06-25T06:43:07.996081'
-release_status: STABLE
+modified: '2026-08-31T12:20:49.060298'
+release_status: MODIFIED
 source: input/pagecontent/validation.md
 status: ACTIVE
 test_procedures:
@@ -16,7 +16,7 @@ test_procedures:
   TI-Flow_FD:
   - Produkttest
 text: Der FHIR Data Service MUSS für die Validierung von Dosierungen eine Implementierung
-  des [dgMP-DosageTextgenerierung-Skript] bereitstellen, womit strukturierte Dosierinformationen
-  validiert werden können.
+  des [dgMP-DosageTextgenerierung-Spezifikation] bereitstellen, womit strukturierte
+  Dosierinformationen validiert werden können.
 title: Strukturierte Dosierung - Implementierung der Dosiertexterzeugung
-version: 0
+version: 1

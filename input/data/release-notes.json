@@ -2,7 +2,96 @@
     "releases": [
         {
             "version": "1.5.0",
-            "requirements": []
+            "requirements": [
+                {
+                    "title": "Strukturierte Dosierung - Implementierung der Dosiertexterzeugung",
+                    "key": "IG-TI17421K31",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "TI-Flow_FD"
+                    ],
+                    "version": 1,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {
+                        "1.4.0": {
+                            "text": "--- text.old\n+++ text.new\n@@ -1 +1 @@\n-Der FHIR Data Service MUSS für die Validierung von Dosierungen eine Implementierung des [dgMP-DosageTextgenerierung-Skript] bereitstellen, womit strukturierte Dosierinformationen validiert werden können.\n+Der FHIR Data Service MUSS für die Validierung von Dosierungen eine Implementierung des [dgMP-DosageTextgenerierung-Spezifikation] bereitstellen, womit strukturierte Dosierinformationen validiert werden können.",
+                            "title": "",
+                            "conformance": ""
+                        }
+                    }
+                },
+                {
+                    "title": "Strukturierte Dosierung - Rückgabe erwarteter Dosierungstext",
+                    "key": "IG-TI20681JNN",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "TI-Flow_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {}
+                },
+                {
+                    "title": "Strukturierte Dosierung - Unterstützen mehrerer Versionen",
+                    "key": "IG-TI39852FY6",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "TI-Flow_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {}
+                },
+                {
+                    "title": "Strukturierte Dosierung - Anwendung der Validierung",
+                    "key": "IG-TI43381BV9",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "TI-Flow_FD"
+                    ],
+                    "version": 1,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {
+                        "1.4.0": {
+                            "text": "--- text.old\n+++ text.new\n@@ -2,3 +2,4 @@\n \n - `MedicationRequest.dosageInstruction`\n - `MedicationDispense.dosageInstruction`\n+- `MedicationStatement.dosage`",
+                            "title": "",
+                            "conformance": ""
+                        }
+                    }
+                },
+                {
+                    "title": "Strukturierte Dosierung - Bereitstellen von Versionen und Sprachen",
+                    "key": "IG-TI74988KAT",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "TI-Flow_FD"
+                    ],
+                    "version": 1,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {
+                        "1.4.0": {
+                            "text": "--- text.old\n+++ text.new\n@@ -1 +1 @@\n-Der FHIR Data Service MUSS für die Validierung von Dosierungen Implementierungen des [dgMP-DosageTextgenerierung-Skript] mit unterschiedlichen Versionen und Sprachen verwalten können.\n+Der FHIR Data Service MUSS für die Validierung von Dosierungen Implementierungen des [dgMP-DosageTextgenerierung-Spezifikation] mit unterschiedlichen Versionen und Sprachen verwalten können.",
+                            "title": "",
+                            "conformance": ""
+                        }
+                    }
+                }
+            ]
         },
         {
             "version": "1.4.0",

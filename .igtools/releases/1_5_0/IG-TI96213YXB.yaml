@@ -2,9 +2,9 @@ actor:
 - EPA-Medication-Service
 - TI-Flow_FD
 conformance: SHALL
-content_hash: 22a1b25289cd27788e9e9bd28be7cecdcf68ba9180dd74034d4193b12bd47ab5
+content_hash: c7dc0f1b9edd696f05c3f5705679433d3cca597480bf623b04bead87384cc5fb
 created: '2026-06-25T06:43:07.995917'
-date: '2026-08-11T12:49:11.650999'
+date: '2026-08-31T11:33:26.359570'
 key: IG-TI96213YXB
 modified: '2026-06-25T06:43:07.995919'
 release_status: STABLE
@@ -19,9 +19,11 @@ text: 'Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, 
   in
 
 
-  - `MedicationRequest.extension:renderedDosageInstruction` oder
+  - `MedicationRequest.extension:renderedDosageInstruction`
 
   - `MedicationDispense.extension:renderedDosageInstruction`
+
+  - `MedicationStatement.extension:renderedDosageInstruction`
 
 
   angegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht

@@ -107,3 +107,14 @@ Usage: #example
   * severity = #error
   * code = #invalid
   * details = TIOperationOutcomeDetailsCS#SVC_DOSAGE_INVALID_RENDERED_INSTRUCTION "The provided rendered dosage instruction is invalid"
+
+Instance: ExpTIOperationOutcomeDosageInvalidRenderedInstructionWithText
+InstanceOf: TIOperationOutcome
+Description: "The provided rendered dosage instruction is invalid"
+Usage: #example
+* id = "5ab6bca4-fbdf-49c3-a693-a065187cffd6"
+* issue
+  * extension[expectedDosageText].valueString = "täglich: 08:00 Uhr — je 1 Stück; 18:00 Uhr — je 3 Stück"
+  * severity = #error
+  * code = #invalid
+  * details = TIOperationOutcomeDetailsCS#SVC_DOSAGE_INVALID_RENDERED_INSTRUCTION "The provided rendered dosage instruction is invalid"

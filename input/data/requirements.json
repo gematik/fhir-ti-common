@@ -454,16 +454,16 @@
                 "Produkttest"
             ]
         },
-        "version": 0,
-        "release_status": "STABLE",
+        "version": 1,
+        "release_status": "MODIFIED",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
-        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen eine Implementierung des [dgMP-DosageTextgenerierung-Skript] bereitstellen, womit strukturierte Dosierinformationen validiert werden können.",
+        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen eine Implementierung des [dgMP-DosageTextgenerierung-Spezifikation] bereitstellen, womit strukturierte Dosierinformationen validiert werden können.",
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.996080",
-        "modified": "2026-06-25T06:43:07.996081",
-        "date": "2026-06-26T14:51:18.211564",
-        "content_hash": "600278383b73b19b7926dbb97866da77caa1b4678993e4eb9495bbbc32704f08",
+        "modified": "2026-08-31T12:20:49.060298",
+        "date": "2026-08-31T12:20:49.060298",
+        "content_hash": "430b9b721282773d9261a7c4202950ea8fb585377ec9eec184118606956e23c4",
         "path": "validation.html",
         "release": "1.5.0"
     },
@@ -569,6 +569,34 @@
         "date": "2026-06-24T14:46:41.666429",
         "content_hash": "efea0d89fd3acd642867ee28557dec9a695d7a5cbc982b211c19429cc90eeb0e",
         "path": "fhir-format.html",
+        "release": "1.5.0"
+    },
+    {
+        "key": "IG-TI20681JNN",
+        "title": "Strukturierte Dosierung - Rückgabe erwarteter Dosierungstext",
+        "actor": [
+            "EPA-Medication-Service",
+            "TI-Flow_FD"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "TI-Flow_FD": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/validation.md",
+        "text": "Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in `OperationOutcome.extension[expectedDosageText].valueString` einsetzen.",
+        "conformance": "SHALL",
+        "created": "2026-08-31T12:32:04.709554",
+        "modified": "2026-08-31T12:32:04.709556",
+        "date": "2026-08-31T12:32:04.709557",
+        "content_hash": "62f18d11762818aaa3458a83ec90a387d9818325d8f6f47c18cb4d5dc4764f6b",
+        "path": "validation.html",
         "release": "1.5.0"
     },
     {
@@ -976,6 +1004,34 @@
         "release": "1.5.0"
     },
     {
+        "key": "IG-TI39852FY6",
+        "title": "Strukturierte Dosierung - Unterstützen mehrerer Versionen",
+        "actor": [
+            "EPA-Medication-Service",
+            "TI-Flow_FD"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "TI-Flow_FD": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/validation.md",
+        "text": "Der FHIR Data Service MUSS bei der Validierung einer Instanz die zur jeweiligen Kombination aus Version und Sprache passende Implementierung des [dgMP-DosageTextgenerierung-Spezifikation] heranziehen.\"",
+        "conformance": "SHALL",
+        "created": "2026-08-31T12:20:49.059876",
+        "modified": "2026-08-31T12:32:04.709057",
+        "date": "2026-08-31T12:32:04.709057",
+        "content_hash": "03fced2cebf7bd7a7a7830da5c00a38532c9f689c4a82a7496f3ebbc20f807b9",
+        "path": "validation.html",
+        "release": "1.5.0"
+    },
+    {
         "key": "IG-TI40876FQM",
         "title": "Standardpräfix für Vergleiche",
         "actor": [
@@ -1026,16 +1082,16 @@
                 "Produkttest"
             ]
         },
-        "version": 0,
-        "release_status": "STABLE",
+        "version": 1,
+        "release_status": "MODIFIED",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
-        "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n\n- `MedicationRequest.dosageInstruction`\n- `MedicationDispense.dosageInstruction`",
+        "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n\n- `MedicationRequest.dosageInstruction`\n- `MedicationDispense.dosageInstruction`\n- `MedicationStatement.dosage`",
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.996402",
-        "modified": "2026-06-25T06:43:07.996404",
-        "date": "2026-06-26T14:51:18.211961",
-        "content_hash": "a9da80f6169bd630970ca31ccd3e580842332f0c8fe6654d4057a687ffe52ffe",
+        "modified": "2026-08-31T11:33:26.360278",
+        "date": "2026-08-31T11:33:26.360278",
+        "content_hash": "ecaf21b2ffb0c3f329b00033236f41306082e24af75f2da01c10e8cea03f1094",
         "path": "validation.html",
         "release": "1.5.0"
     },
@@ -1698,16 +1754,16 @@
                 "Produkttest"
             ]
         },
-        "version": 0,
-        "release_status": "STABLE",
+        "version": 1,
+        "release_status": "MODIFIED",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
-        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen Implementierungen des [dgMP-DosageTextgenerierung-Skript] mit unterschiedlichen Versionen und Sprachen verwalten können.",
+        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen Implementierungen des [dgMP-DosageTextgenerierung-Spezifikation] mit unterschiedlichen Versionen und Sprachen verwalten können.",
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.996243",
-        "modified": "2026-06-25T06:43:07.996245",
-        "date": "2026-06-26T14:51:18.211764",
-        "content_hash": "e6db85e5b4fe473871cdf59d480d7a9830337bbe7ac7191b4b86c190ed6c6b64",
+        "modified": "2026-08-31T12:20:49.060550",
+        "date": "2026-08-31T12:20:49.060550",
+        "content_hash": "b89787a99c04aadc76a45d4f180c86a3f81147963989201aaa173f057dde4635",
         "path": "validation.html",
         "release": "1.5.0"
     },
@@ -1830,12 +1886,12 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
-        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
+        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta`\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n- `MedicationStatement.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.995739",
         "modified": "2026-06-25T06:43:07.995744",
-        "date": "2026-08-11T12:57:57.998465",
-        "content_hash": "a1e11f7466b451e7311c07d44bec80fad9c1f318182d0d97b1f82e6628a78efa",
+        "date": "2026-08-31T11:33:26.359301",
+        "content_hash": "e61f5ec0d13d8fba9b4547e491507064e05c352026e80c8a5cd7698fae3902e8",
         "path": "validation.html",
         "release": "1.5.0"
     },
@@ -2118,12 +2174,12 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
-        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction` oder\n- `MedicationDispense.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
+        "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction`\n- `MedicationDispense.extension:renderedDosageInstruction`\n- `MedicationStatement.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
         "conformance": "SHALL",
         "created": "2026-06-25T06:43:07.995917",
         "modified": "2026-06-25T06:43:07.995919",
-        "date": "2026-08-11T12:49:11.650999",
-        "content_hash": "22a1b25289cd27788e9e9bd28be7cecdcf68ba9180dd74034d4193b12bd47ab5",
+        "date": "2026-08-31T11:33:26.359570",
+        "content_hash": "c7dc0f1b9edd696f05c3f5705679433d3cca597480bf623b04bead87384cc5fb",
         "path": "validation.html",
         "release": "1.5.0"
     },
