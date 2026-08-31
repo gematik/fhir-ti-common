@@ -5,6 +5,11 @@ Title: "TI Device Specimen Container"
 Description: "In diesem Profil werden Informationen zum Probenbehälter angegeben, z. B. Blutröhrchen, steriler Urinprobenbehälter."
 * . ^definition = "In diesem Profil werden Informationen zum Probenbehälter angegeben, z. B. Blutröhrchen, steriler Urinprobenbehälter."
 * insert Meta-With-Versioning
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * identifier MS
   * ^definition = "Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar.\n"
   * ^short = "Identifikator des Probenbehälters"

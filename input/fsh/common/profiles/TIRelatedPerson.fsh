@@ -4,6 +4,11 @@ Id: ti-related-person
 Title: "TI Related Person"
 Description: "Dieses Profil bildet eine Kontakt- oder Bezugsperson ab."
 * insert Meta-With-Versioning
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * . ^definition = "Hier wird eine Kontakt- oder Bezugsperson erfasst, die eine Beziehung zum Patienten / zur Patientin hat. Sie kann an der Versorgung des Patienten / der Patientin beteiligt sein, jedoch nur als Privatperson in ihrer privaten Zeit. Wenn ausgedrückt werden soll, dass sie an der Versorgung beteiligt ist, kann sie im Versorgungsteam aufgeführt werden. Ein Beispiel für Letzteres ist ein(e) pflegende(r) An- oder Zugehörige(r)."
 * obeys pat-de-1
 * extension MS

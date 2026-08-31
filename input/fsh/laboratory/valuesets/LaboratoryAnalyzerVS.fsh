@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: LaboratoryAnalyzerVS
 Id: laboratory-analyzer
 Title: "Laboranalysegerät SNOMED CT®"

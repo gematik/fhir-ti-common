@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: ExtracorporalDeviceVS
 Id: extracorporal-device
 Title: "Außerkörperliche Quellen SNOMED CT®"

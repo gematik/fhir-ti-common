@@ -8,6 +8,9 @@ StructureDefinition/ti-practitioner-role,
 StructureDefinition/ti-related-person,
 StructureDefinition/ti-condition-diagnosis,
 StructureDefinition/ti-appendix-document-reference,
+StructureDefinition/ti-device-definition-specimen-container,
+StructureDefinition/ti-device-specimen-container,
+StructureDefinition/ti-device-definition-specimen-subject,
 {% endcapture %}
 {% include artifacts-table-generator.html render=common-profiles %}
 <div><figcaption><strong>Tabelle:</strong> Common Ressourcenprofile</figcaption></div>

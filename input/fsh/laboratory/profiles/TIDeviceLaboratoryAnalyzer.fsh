@@ -5,6 +5,11 @@ Title: "TI Device Laboratory Analyzer"
 Description: "In diesem Profil werden Informationen zum Analysegerät angegeben, mit dem die Messung durchgeführt wird."
 * . ^definition = "In diesem Profil werden Informationen zum Analysegerät angegeben, mit dem die Messung durchgeführt wird."
 * insert Meta-With-Versioning
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * identifier MS
   * ^definition = "Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar.\n"
   * ^short = "Produktidentifikator des Laboranalysegerätes"
