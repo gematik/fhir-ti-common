@@ -35,6 +35,7 @@ Description: "Administrative und für die Befundung klinisch relevante Teilinfor
 * Kontaktperson"
   * ^short = "Einsender:in, Auftraggeber:in"
   * insert ReferenceMS
+* requester only Reference(TIPractitioner or TIPractitionerRole or TIOrganization or TIPatient or TIRelatedPerson or Device)
 * reasonCode MS
   * ^definition = "Der Anlass der Labordiagnostik wird als prozessuale Fragestellung formuliert. Diese Angabe dient der Fokussierung der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Ausschluss; Verlaufskontrolle; Vorsorge.\n\n
 Der Veranlassungsgrund der Labordiagnostik wird als medizinische Fragestellung formuliert. Diese Angabe dient der fachlichen Präzision der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Eingriff; Infektion; Rheuma; Tumor.\n\n
