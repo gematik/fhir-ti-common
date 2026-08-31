@@ -19,6 +19,8 @@ Description: "Abbildung, die zu einer Laboruntersuchung oder einer Untersuchungs
 * status 1..1 MS
   * ^definition = "Zum Untersuchungsbild-Anhang ist die Angabe des Status technisch erforderlich. Wenn es für die Erstellung/Erzeugung des Bildes keinen zu dokumentierenden Prozess gibt, dann wird der Status \"final\" verwendet."
 * category MS
+* category[laboratory] MS
+  * insert CodeableConceptMS
 * code 1.. MS
   * ^definition = "Typisierung des Untersuchungsbildes, z.B. um welche Art von Messdiagramm oder Kurve es sich handelt, als Code oder als Freitexteintrag."
   * insert CodeableConceptMS
@@ -35,6 +37,8 @@ Description: "Abbildung, die zu einer Laboruntersuchung oder einer Untersuchungs
     * ^definition = "Freitextbezeichnung für den Typ des Untersuchungsbildes."
 * insert SubjectEu(subject)
 * effective[x] MS
+* effectiveDateTime MS
+  * ^definition = "Gültigkeitszeitpunkt für den Untersuchungsbild-Anhang"
 * insert PerformerEu
 * performer 1..
 * valueQuantity ..0
