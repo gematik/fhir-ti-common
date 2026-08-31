@@ -5,6 +5,7 @@ StructureDefinition/ti-organization,
 StructureDefinition/ti-patient,
 StructureDefinition/ti-practitioner,
 StructureDefinition/ti-practitioner-role,
+StructureDefinition/ti-related-person,
 StructureDefinition/ti-condition-diagnosis,
 StructureDefinition/ti-appendix-document-reference,
 {% endcapture %}
