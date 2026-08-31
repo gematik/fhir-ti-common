@@ -91,6 +91,7 @@ Alias: $epa-data-category-other-vs = https://gematik.de/fhir/terminology/ValueSe
 
 
 //// Extensions
+
 // R5
 // Extensions r5
 Alias: $medicationRequest-effectiveDosePeriod-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.effectiveDosePeriod
@@ -98,6 +99,8 @@ Alias: $medicationRequest-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0
 Alias: $medicationDispense-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction
 Alias: $medicationStatement-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.renderedDosageInstruction
 
+//HL7
+Alias: $hl7-note = http://hl7.org/fhir/StructureDefinition/note
 
 //// International
 // HL7
