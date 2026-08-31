@@ -34,7 +34,7 @@ Angaben zur Körperstruktur können enthalten:\n
     * extension[clockFacePosition] MS
       * ^definition = "Eine Beschreibung der Richtung, in der sich etwas von einem Orientierungspunkt entfernt befindet, basierend auf einem radialen Zifferblatt, als sogenannte Uhr-Position (Bsp. 3-Uhr-Position, 12 Uhr-Position)."
       * ^short = "Örtliche Präzisierung als Uhrzeigerposition"
-      * valueCodeableConcept from BodyStructureClockFacePositionVS (example)
+      * valueCodeableConcept from BodyStructureClockFacePositionVS (preferred)
       * valueCodeableConcept MS
         * insert CodeableConceptMS
         * text MS
