@@ -4,7 +4,7 @@
 {% capture laboratory-cs %}
 {% endcapture %}
 {% include artifacts-table-generator.html render=laboratory-cs %}
-<div><figcaption><strong>Tabelle:</strong> LaborLaborprozess Code Systems</figcaption></div>
+<div><figcaption><strong>Tabelle:</strong> Laborprozess Code Systems</figcaption></div>
 {% endcomment %}
 
 {% comment %}
@@ -13,7 +13,7 @@
 {% capture laboratory-vs %}
 {% endcapture %}
 {% include artifacts-table-generator.html render=laboratory-vs %}
-<div><figcaption><strong>Tabelle:</strong> LaborLaborprozess Value Sets</figcaption></div>
+<div><figcaption><strong>Tabelle:</strong> Laborprozess Value Sets</figcaption></div>
 {% endcomment %}
 
 ### Ressourcenprofile
@@ -24,18 +24,18 @@ StructureDefinition/ti-device-laboratory-specimen-subject,
 StructureDefinition/ti-device-laboratory-analyzer,
 StructureDefinition/ti-device-definition-laboratory-analyzer,
 StructureDefinition/ti-device-definition-specimen-subject,
+StructureDefinition/ti-service-request-laboratory,
 {% endcapture %}
 {% include artifacts-table-generator.html render=laboratory-profiles %}
-<div><figcaption><strong>Tabelle:</strong> LaborLaborprozess Ressourcenprofile</figcaption></div>
+<div><figcaption><strong>Tabelle:</strong> Laborprozess Ressourcenprofile</figcaption></div>
 
-{% comment %}
 ### Extensions
 
 {% capture laboratory-extensions %}
+StructureDefinition/reason-type-laboratory-extension,
 {% endcapture %}
 {% include artifacts-table-generator.html render=laboratory-extensions %}
-<div><figcaption><strong>Tabelle:</strong> LaborLaborprozess Extensions</figcaption></div>
-{% endcomment %}
+<div><figcaption><strong>Tabelle:</strong> Laborprozess Extensions</figcaption></div>
 
 {% comment %}
 ### Datentypen
@@ -43,5 +43,5 @@ StructureDefinition/ti-device-definition-specimen-subject,
 {% capture laboratory-datatypes %}
 {% endcapture %}
 {% include artifacts-table-generator.html render=laboratory-datatypes %}
-<div><figcaption><strong>Tabelle:</strong> LaborLaborprozess Datentypen</figcaption></div>
+<div><figcaption><strong>Tabelle:</strong> Laborprozess Datentypen</figcaption></div>
 {% endcomment %}

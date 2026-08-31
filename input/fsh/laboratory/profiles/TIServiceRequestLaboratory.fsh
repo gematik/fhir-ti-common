@@ -1,17 +1,24 @@
 Profile: TIServiceRequestLaboratory
 Parent: ServiceRequestLabEu
-Id: ti-serviceRequest-laboratory
+Id: ti-service-request-laboratory
 Title: "TI Service Request Laboratory"
 Description: "Administrative und für die Befundung klinisch relevante Teilinformationen aus dem Laborauftrag"
 * . ^definition = "Administrative und für die Befundung klinisch relevante Teilinformationen aus dem Laborauftrag."
 * insert Meta-With-Versioning
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * identifier MS
 * priority MS
-  * ^definition = "Die im Laborauftrag formulierte Dringlichkeit von Laboruntersuchungen soll im Laborbefund berücksichtigt werden. Mögliche Werte sind:\n
+  * ^definition = """
+Die im Laborauftrag formulierte Dringlichkeit von Laboruntersuchungen soll im Laborbefund berücksichtigt werden. Mögliche Werte sind:\n
 * Routine (routine)
 * Dringend (urgent): der Auftrag sollte umgehend bearbeitet werden, höhere Priorität als Routine
 * Baldmöglichst (asap): der Auftrag sollte so schnell wie möglich bearbeitet werden, höhere Priorität als dringend
-* Sofort/Notfall (stat): der Auftrag sollte sofort mit höchstmöglicher Priorität bearbeitet werden, Notfall-Labor"
+* Sofort/Notfall (stat): der Auftrag sollte sofort mit höchstmöglicher Priorität bearbeitet werden, Notfall-Labor
+"""
   * ^short = "Dringlichkeit des Laborauftrags"
 * code MS
   * ^definition = "Hier wird ein Klassifizierung der Laboraufstrag-Informformation anhand einer codierten Information oder als Freitext vorgenommen."
@@ -27,12 +34,14 @@ Description: "Administrative und für die Befundung klinisch relevante Teilinfor
   * ^definition = "Zeitpunkt, zu dem der Einsender den Auftrag erstellt hat."
   * ^short = "Auftragszeitpunkt"
 * requester MS
-  * ^definition = "Referenzierung auf die auftraggebende bzw. einsendende Person/Einrichtung. Diese kann sein:\n
+  * ^definition = """
+Referenzierung auf die auftraggebende bzw. einsendende Person/Einrichtung. Diese kann sein:\n
 * Behandelnde/r Arzt/Ärztin als Person oder Einrichtung
 * Therapeut:in als Person oder Einrichtung
 * Behandelnde Person/Einrichtung-Kombination
 * Patient:in selbst
-* Kontaktperson"
+* Kontaktperson
+"""
   * ^short = "Einsender:in, Auftraggeber:in"
   * insert ReferenceMS
 * requester only Reference(TIPractitioner or TIPractitionerRole or TIOrganization or TIPatient or TIRelatedPerson or Device)
@@ -53,7 +62,7 @@ Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codi
   * ^definition = "Klinische Angaben aus dem Laborauftrag, die für die Befundung wichtig sind, können hier angegeben werden. Das sind beispielsweise Angaben zur Medikation oder zur gesundheitlichen Konstitution."
   * ^short = "Klinische Angaben aus dem Laborauftrag"
   * insert ReferenceMS
-* specimen only Reference(TISpecimenLaboratory)
+// * specimen only Reference(TISpecimenLaboratory)
 * note MS
   * ^definition = "Ergänzende Angaben zum Auftrag, z. B. Institutionsspezifische administrative Zuordnung (\"Tour-Nummer\"; \"Tagebuch-Nummer\"). Der Inhalt dieses Elementes kann den Angaben zu \"Auftragsbezogene Hinweise\" aus der LDT-Kommunikation entsprechen."
   * ^short = "Auftragsbezogene Hinweise"
