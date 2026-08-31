@@ -1573,9 +1573,9 @@
         {
             "key": "IG-TI43381BV9",
             "title": "Strukturierte Dosierung - Anwendung der Validierung",
-            "version": 0,
+            "version": 1,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n\n- `MedicationRequest.dosageInstruction`\n- `MedicationDispense.dosageInstruction`",
+            "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n\n- `MedicationRequest.dosageInstruction`\n- `MedicationDispense.dosageInstruction`\n- `MedicationStatement.dosage`",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -1605,7 +1605,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/validation.html#IG-TI43381BV9"
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/validation.html#IG-TI43381BV9-01"
         },
         {
             "key": "IG-TI43409LRQ",
@@ -2825,7 +2825,7 @@
             "title": "Strukturierte Dosierung - Validierung von Version und Sprache",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
+            "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter\n\n- `MedicationRequest.extension.generatedDosageInstructionsMeta`\n- `MedicationDispense.extension.generatedDosageInstructionsMeta`\n- `MedicationStatement.extension.generatedDosageInstructionsMeta`\n\nmit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -3275,7 +3275,7 @@
             "title": "Strukturierte Dosierung - Validierung der generierten Dosierungsangabe",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction` oder\n- `MedicationDispense.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
+            "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction`\n- `MedicationDispense.extension:renderedDosageInstruction`\n- `MedicationStatement.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
             "conformance": "SHALL",
             "characteristics": [
                 {

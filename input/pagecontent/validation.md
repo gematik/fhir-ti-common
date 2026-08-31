@@ -41,8 +41,9 @@ Die Validierung von Dosierungen gilt jeweils für freitextliche Dosierinformatio
     </actor>
      Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter
 
-- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.
+- `MedicationRequest.extension.generatedDosageInstructionsMeta`
 - `MedicationDispense.extension.generatedDosageInstructionsMeta`
+- `MedicationStatement.extension.generatedDosageInstructionsMeta`
 
 mit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.
 </requirement>
@@ -57,8 +58,9 @@ mit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Ope
     </actor>
      Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in
 
-- `MedicationRequest.extension:renderedDosageInstruction` oder
+- `MedicationRequest.extension:renderedDosageInstruction`
 - `MedicationDispense.extension:renderedDosageInstruction`
+- `MedicationStatement.extension:renderedDosageInstruction`
 
 angegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.
 </requirement>
@@ -84,7 +86,7 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
     </actor>
      Der FHIR Data Service MUSS für die Validierung von Dosierungen Implementierungen des [dgMP-DosageTextgenerierung-Skript] mit unterschiedlichen Versionen und Sprachen verwalten können.
 </requirement>
-<requirement conformance="SHALL" key="IG-TI43381BV9" title="Strukturierte Dosierung - Anwendung der Validierung" version="0">
+<requirement conformance="SHALL" key="IG-TI43381BV9" title="Strukturierte Dosierung - Anwendung der Validierung" version="1">
     <meta lockversion="false"/>
     <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
@@ -96,4 +98,5 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
 
 - `MedicationRequest.dosageInstruction`
 - `MedicationDispense.dosageInstruction`
+- `MedicationStatement.dosage`
 </requirement>
