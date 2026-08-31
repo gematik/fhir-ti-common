@@ -1,0 +1,22 @@
+actor:
+- EPA-Medication-Service
+- TI-Flow_FD
+conformance: SHALL
+content_hash: 03fced2cebf7bd7a7a7830da5c00a38532c9f689c4a82a7496f3ebbc20f807b9
+created: '2026-08-31T12:20:49.059876'
+date: '2026-08-31T12:32:04.709057'
+key: IG-TI39852FY6
+modified: '2026-08-31T12:32:04.709057'
+release_status: NEW
+source: input/pagecontent/validation.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service:
+  - Produkttest
+  TI-Flow_FD:
+  - Produkttest
+text: Der FHIR Data Service MUSS bei der Validierung einer Instanz die zur jeweiligen
+  Kombination aus Version und Sprache passende Implementierung des [dgMP-DosageTextgenerierung-Spezifikation]
+  heranziehen."
+title: Strukturierte Dosierung - Unterstützen mehrerer Versionen
+version: 0
