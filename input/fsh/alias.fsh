@@ -32,6 +32,7 @@ Alias: $cs-orphanet = http://www.orpha.net
 
 // International Value Sets
 Alias: $hl7-vs-ucum-units = http://hl7.org/fhir/ValueSet/ucum-units
+Alias: $specimen-container-type = http://hl7.org/fhir/ValueSet/specimen-container-type
 
 // National Code Systems
 Alias: $cs-ask = http://fhir.de/CodeSystem/ask
