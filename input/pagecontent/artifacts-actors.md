@@ -30,6 +30,6 @@ ActorDefinition/TIAVS,
 ActorDefinition/TIRIS,
 ActorDefinition/TILIS,
 ActorDefinition/TIHVS,
-ActorDefinition/TIPIS,
+ActorDefinition/TIPPS,
 {% endcapture %}
 {% include artifacts-table-generator.html render=clientactors %}
