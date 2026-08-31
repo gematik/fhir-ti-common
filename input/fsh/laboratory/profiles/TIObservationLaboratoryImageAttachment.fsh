@@ -1,6 +1,6 @@
-Profile: TIObservationImageAttachment
+Profile: TIObservationLaboratoryImageAttachment
 Parent: ObservationResultsLaboratoryEu
-Id: ti-observation-image-attachment
+Id: ti-observation-laboratory-image-attachment
 Title: "TI Observation Image Attachment"
 Description: "Abbildung, die zu einer Laboruntersuchung oder einer Untersuchungsgruppe als Ergänzung mitgegeben wird. Beispielsweise kann die Ausprägung einer Elektrophorese-Kurve eine hilfreiche oder wichtige Zusatzinformation zu einer Erkrankung geben, die durch den quantitativen Ergebniswert allein nicht hinreichend erkennbar wird."
 * insert Meta-With-Versioning
