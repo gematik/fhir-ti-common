@@ -35,6 +35,7 @@ HL7®-Code für die Typisierung des Proben-Identifikators. In diesem Kontext mö
       * ^definition = "Text für die Typisierung des Proben-Identifikators."
   * value
     * ^definition = "Identifikator-Wert"
+* accessionIdentifier 0..0
 * status MS
   * ^definition = "Hier wird ein Code für den Probenstatus vor der Messung angegeben:\n
 * Verfügbar: das physische Exemplar ist vorhanden und in gutem Zustand.
