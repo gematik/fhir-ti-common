@@ -14,6 +14,7 @@ Description: "Administrative und für die Befundung klinisch relevante Teilinfor
 * Sofort/Notfall (stat): der Auftrag sollte sofort mit höchstmöglicher Priorität bearbeitet werden, Notfall-Labor"
   * ^short = "Dringlichkeit des Laborauftrags"
 * code MS
+  * ^definition = "Hier wird ein Klassifizierung der Laboraufstrag-Informformation anhand einer codierten Information oder als Freitext vorgenommen."
   * insert CodeableConceptMS
 * orderDetail MS
   * ^definition = "Eine Anforderung aus dem Laborauftrag."
@@ -51,6 +52,7 @@ Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codi
   * ^definition = "Klinische Angaben aus dem Laborauftrag, die für die Befundung wichtig sind, können hier angegeben werden. Das sind beispielsweise Angaben zur Medikation oder zur gesundheitlichen Konstitution."
   * ^short = "Klinische Angaben aus dem Laborauftrag"
   * insert ReferenceMS
+* specimen only Reference(TISpecimenLaboratory)
 * note MS
   * ^definition = "Ergänzende Angaben zum Auftrag, z. B. Institutionsspezifische administrative Zuordnung (\"Tour-Nummer\"; \"Tagebuch-Nummer\"). Der Inhalt dieses Elementes kann den Angaben zu \"Auftragsbezogene Hinweise\" aus der LDT-Kommunikation entsprechen."
   * ^short = "Auftragsbezogene Hinweise"
