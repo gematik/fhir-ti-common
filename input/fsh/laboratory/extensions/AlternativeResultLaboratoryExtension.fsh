@@ -5,6 +5,11 @@ Description: "Diese Extension bildet das Resultat einer Laboruntersuchung mit ei
 Context: Observation
 * . ^definition = "Diese Extension bildet das Resultat einer Laboruntersuchung mit einer Alternativeinheit ab."
 * insert Meta
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * value[x] ..0
 * extension contains
   code 1..1 and

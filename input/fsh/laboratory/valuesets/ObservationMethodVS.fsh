@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: ObservationMethodVS
 Id: observation-methods
 Title: "Untersuchungsmethode SNOMED CT®"

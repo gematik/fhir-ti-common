@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: LaboratoryStudyValueVS
 Id: laboratory-study-value
 Title: "Messergebnis Qualitativ SNOMED CT®"

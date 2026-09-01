@@ -2,15 +2,25 @@ Profile: TIObservationLaboratoryStudyGroup
 Parent: ObservationResultsLaboratoryEu
 Id: ti-observation-laboratory-study-group
 Title: "TI Observation Laboratory Study Group"
-Description: "Dieses Profil bildet eine Untersuchungsgruppe ab.\n
+Description: """
+Dieses Profil bildet eine Untersuchungsgruppe ab.\n
 Untersuchungsgruppen sind ein technisches Mittel, um fachlich zusammengehörige Laborergebnisse innerhalb des Laborgesamtbefundes gruppiert und sortiert anzuordnen. Die Struktur \"Laborgesamtbefund/Ergebnisse\" enthält mindestens eine Struktur \"Untersuchungsgruppe\" im Abschnitt Ergebnisse.\n
 Für die gruppierte Darstellung von Laboruntersuchungen können (optional) aus den fachlichen Gruppierungsmerkmalen fachliche Bezeichner als Gruppenüberschrift abgeleitet werden.\n
-Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der einzelnen Untersuchungen innerhalb einer Gruppe werden Labor-intern definiert. Das empfangende System muss diese Gruppierungen und Sortierungen interpretieren können. Diese Strukturierung dient dem Erhalt des fachlichen Kontextes von digital kommunizierten Laboruntersuchungen."
+Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der einzelnen Untersuchungen innerhalb einer Gruppe werden Labor-intern definiert. Das empfangende System muss diese Gruppierungen und Sortierungen interpretieren können. Diese Strukturierung dient dem Erhalt des fachlichen Kontextes von digital kommunizierten Laboruntersuchungen.
+"""
 * insert Meta-With-Versioning
-* . ^definition = "Dieses Profil bildet eine Untersuchungsgruppe ab.\n
+* . ^definition = """
+Dieses Profil bildet eine Untersuchungsgruppe ab.\n
 Untersuchungsgruppen sind ein technisches Mittel, um fachlich zusammengehörige Laborergebnisse innerhalb des Laborgesamtbefundes gruppiert und sortiert anzuordnen. Die Struktur \"Laborgesamtbefund/Ergebnisse\" enthält mindestens eine Struktur \"Untersuchungsgruppe\" im Abschnitt Ergebnisse.\n
 Für die gruppierte Darstellung von Laboruntersuchungen können (optional) aus den fachlichen Gruppierungsmerkmalen fachliche Bezeichner als Gruppenüberschrift abgeleitet werden.\n
-Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der einzelnen Untersuchungen innerhalb einer Gruppe werden Labor-intern definiert. Das empfangende System muss diese Gruppierungen und Sortierungen interpretieren können. Diese Strukturierung dient dem Erhalt des fachlichen Kontextes von digital kommunizierten Laboruntersuchungen."
+Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der einzelnen Untersuchungen innerhalb einer Gruppe werden Labor-intern definiert. Das empfangende System muss diese Gruppierungen und Sortierungen interpretieren können. Diese Strukturierung dient dem Erhalt des fachlichen Kontextes von digital kommunizierten Laboruntersuchungen.
+"""
+* insert Meta-With-Versioning
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * extension MS
 * extension contains TestProfileLaboratoryExtension named testProfile 0..1 MS
 * extension[testProfile]
@@ -25,15 +35,19 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
 * insert Coding(extension[testProfile].valueCodeableConcept.coding)
 * status MS
 * category MS
-  * ^definition = "Zur jeweiligen Gruppe kann es (optional) gruppenbezogene fachliche Bezeichner geben, abgebildet in der vorliegenden Struktur \"Fachliches Gruppierungsmerkmal\". Für die gruppierte Darstellung von Laborergebnissen im Laborgesamtbefund können solche fachlichen Gruppierungsmerkmale als Gruppenüberschrift dienen. Mögliche Gruppenüberschriften sind:\n
+  * ^definition = """
+  Zur jeweiligen Gruppe kann es (optional) gruppenbezogene fachliche Bezeichner geben, abgebildet in der vorliegenden Struktur \"Fachliches Gruppierungsmerkmal\". Für die gruppierte Darstellung von Laborergebnissen im Laborgesamtbefund können solche fachlichen Gruppierungsmerkmale als Gruppenüberschrift dienen. Mögliche Gruppenüberschriften sind:\n
   * \"Laborbereich\" (z.B. Klinische Chemie)
-  * \"Laborbereich\" mit \"Test-Profil\" kombiniert"
+  * \"Laborbereich\" mit \"Test-Profil\" kombiniert
+  """
   * ^short = "Fachliche Bezeichnung für eine Untersuchungsgruppe"
 * category[laboratory] MS
   * coding MS
     * insert CodingMS
 * category[studyType] MS
-  * ^definition = "Hier kann die fachspezifische Eingrenzung innerhalb der Laboratoriumsmedizin anhand entsprechender Kategorie-Codes angegeben werden. Beispiele für eine fachspezifische Eingrenzung sind: \"Klinische Chemie\", \"Hämatologie\", \"Toxikologie\". Es besteht auch die Option, eine allgemeine Kategorie für \"Labor\" zu vergeben."
+  * ^definition = """
+  Hier kann die fachspezifische Eingrenzung innerhalb der Laboratoriumsmedizin anhand entsprechender Kategorie-Codes angegeben werden. Beispiele für eine fachspezifische Eingrenzung sind: \"Klinische Chemie\", \"Hämatologie\", \"Toxikologie\". Es besteht auch die Option, eine allgemeine Kategorie für \"Labor\" zu vergeben.
+  """
   * ^short = "Bezeichnung für Fachbereich, unter dem Laboruntersuchungen gruppiert werden"
   * coding MS
     * ^definition = "Benennung des labormedizinischen Bereiches als Code."
@@ -47,8 +61,10 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
 * insert PerformerEu
 * performer
   * ^short = "Durchführendes Labor"
-  * ^definition = "Hier wird das durchführende Labor in Bezug auf die Untersuchungsgruppe benannt.\n
-Zum Erhalt der europäischen Interoperabilität, orientiert an der Veröffentlichung \"HL7 Europe Laboratory Report\" wird die durchführende Person (\"performer\" im FHIR®-Profil \"Observation\") im Informationsmodell bei der Untersuchungsgruppe mitgeführt. Bisher liegt im Rahmen der Spezifizierungsarbeit zum strukturierten Laborbefund keine medizinisch-fachliche Begründung vor, dass diese Struktur befüllt werden muss."
+  * ^definition = """
+  Hier wird das durchführende Labor in Bezug auf die Untersuchungsgruppe benannt.\n
+  Zum Erhalt der europäischen Interoperabilität, orientiert an der Veröffentlichung \"HL7 Europe Laboratory Report\" wird die durchführende Person (\"performer\" im FHIR®-Profil \"Observation\") im Informationsmodell bei der Untersuchungsgruppe mitgeführt. Bisher liegt im Rahmen der Spezifizierungsarbeit zum strukturierten Laborbefund keine medizinisch-fachliche Begründung vor, dass diese Struktur befüllt werden muss.
+  """
 * valueQuantity ..0
 * valueString ..0
 * valueRange ..0

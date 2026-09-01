@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: ReferenceRangeAppliesToVS
 Id: referenceRange-applies-to
 Title: "Kollektivbezug"

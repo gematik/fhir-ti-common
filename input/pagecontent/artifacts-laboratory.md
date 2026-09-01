@@ -25,6 +25,8 @@ StructureDefinition/ti-device-laboratory-analyzer,
 StructureDefinition/ti-device-definition-laboratory-analyzer,
 StructureDefinition/ti-device-definition-specimen-subject,
 StructureDefinition/ti-service-request-laboratory,
+StructureDefinition/ti-observation-laboratory-study,
+StructureDefinition/ti-observation-laboratory-study-group,
 {% endcapture %}
 {% include artifacts-table-generator.html render=laboratory-profiles %}
 <div><figcaption><strong>Tabelle:</strong> Laborprozess Ressourcenprofile</figcaption></div>
@@ -33,6 +35,11 @@ StructureDefinition/ti-service-request-laboratory,
 
 {% capture laboratory-extensions %}
 StructureDefinition/reason-type-laboratory-extension,
+StructureDefinition/alternative-result-laboratory-extension,
+StructureDefinition/association-service-laboratory-extension,
+StructureDefinition/no-linear-reference-range-laboratory-extension,
+StructureDefinition/test-profile-laboratory-extension,
+StructureDefinition/zlog-laboratory-extension,
 {% endcapture %}
 {% include artifacts-table-generator.html render=laboratory-extensions %}
 <div><figcaption><strong>Tabelle:</strong> Laborprozess Extensions</figcaption></div>

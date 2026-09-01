@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: LaboruntersuchungsgruppeVS
 Id: laboruntersuchungsgruppe
 Title: "Test-Profil Laboruntersuchungsgruppe"

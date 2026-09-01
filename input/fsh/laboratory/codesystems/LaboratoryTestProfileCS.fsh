@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 CodeSystem: LaboratoryTestProfileCS
 Id: laboratory-test-profile
 Title: "Laboratory Test Profiles"

@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: DataAbsentReasonLaboratoryVS
 Id: data-absent-reason-laboratory
 Title: "Nichtvorhandensein LOINC®"
