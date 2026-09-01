@@ -22,9 +22,9 @@ Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechn
   * ^definition = "Unter Test-Profil werden zusammengehörige Labortests oder eine Gruppe von Einzeluntersuchungen aus einem Verfahren zusammengefasst."
   * ^short = "Bezeichnung für fachlich-medizinischen Bezug, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu TIObservationLaboratoryStudyGroup.extension:testProfile"
   * valueCodeableConcept MS
-    * insert CodeableConceptMS
     * coding MS
       * ^definition = "Benennung eines Test-Profils als Code."
+      * insert CodingMS
     * text MS
       * ^definition = "Benennung des Test-Profils als Freitext."
 * extension[externalService]
@@ -53,10 +53,10 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
     * ^definition = "Hier wird die Laboruntersuchung in Bezug auf das Messergebnis mit Alternativeinheit spezifiziert."
     * ^short = "Spezifikation der Laboruntersuchung zum Messergebnis mit Alternativeinheit"
     * valueCodeableConcept MS
-      * insert CodeableConceptMS
-      * coding
+      * coding MS
         * ^definition = "In diesem Element wird ein Code für die Laboruntersuchung zum alternativen Messergebnis angegeben"
         * ^short = "Codierte Spezifikation der Laboruntersuchung zum Messergebnis mit Alternativeinheit"
+        * insert CodingMS
   * extension[value] MS
     * ^definition = "Hier wird ein Messergebnis mit Alternativeinheit angegeben."
     * ^short = "Messergebnis quantitativ mit Alternativeinheit"
@@ -127,19 +127,19 @@ Interpretation des zlog-Wertes:
   * ^definition = "Zur einzelnen Laboruntersuchung wird das \"fachliche Gruppierungsmerkmal\" REDUNDANT abgebildet, der Inhalt entspricht exakt dem fachlichen Gruppierungsmerkmal der zugehörigen Untersuchungsgruppe. Dies ermöglicht bei datenbankbasierten Abfragen von Einzeluntersuchungen (z.B. in der ePA) eine direkte Zuordnung zur fachlichen Gruppierung. Das fachliche Gruppierungsmerkmal der Untersuchungsgruppe ist grundsätzlich führend!"
   * ^short = "Fachliche Bezeichnung für die zugehörige Untersuchungsgruppe, Inhalt identisch zu TIObservationLaboratoryStudyGroup.category"
 * category[laboratory] MS
-  * insert CodeableConceptMS
+  * coding MS
+    * insert CodingMS
   * text MS
 * category[studyType] MS
   * ^definition = "Hier kann die fachspezifische Eingrenzung innerhalb der Laboratoriumsmedizin anhand entsprechender Kategorie-Codes angegeben werden. Beispiele für eine fachspezifische Eingrenzung sind: \"Klinische Chemie\", \"Hämatologie\", \"Toxikologie\". Es besteht auch die Option, eine allgemeine Kategorie für \"Labor\" zu vergeben."
   * ^short = "Bezeichnung für Fachbereich, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu TIObservationLaboratoryStudyGroup.category:studyType"
-  * insert CodeableConceptMS
   * coding MS
     * ^definition = "Benennung des labormedizinischen Bereiches als Code."
+    * insert CodingMS
   * text MS
     * ^definition = "Benennung des labormedizinischen Bereiches als Freitext."
 * code MS
   * ^definition = "Hier wird die konkrete einzelne Laboruntersuchung spezifiziert."
-  * insert CodeableConceptMS
   * extension contains $data-absent-reason named data-absent-reason 0..1 MS
   * extension[data-absent-reason]
     * ^definition = "Begründung für die Nicht-Vergabe eines Codes zur Laboruntersuchung"
@@ -148,6 +148,7 @@ Interpretation des zlog-Wertes:
     * valueCode from DataAbsentReasonLaboratoryVS (required)
   * coding MS
     * ^definition = "In diesem Element wird ein Code für die Laboruntersuchung angegeben."
+    * insert CodingMS
   * text MS
     * ^definition = "Die Freitext-Bezeichnung erlaubt es, in den verwendenden/verarbeitenden Systemen den Einrichtungs-spezifischen bzw. Verwender-spezifischen Bezeichner für eine Laboruntersuchung weiterhin zu verwenden."
     * ^short = "Verwender-spezifische Bezeichnung für die Laboruntersuchung"
@@ -182,7 +183,6 @@ Wenn das auftragnehmende Labor die einzelne Laboruntersuchung nicht in Eigenleis
 Ordinal, d.h. numerische, in der Regel ganzzahlige Ordnungswerte, die den Vergleich (z. B. kleiner als, größer als) ermöglichen oder zur Vergabe einer Punktebewertung (\"Benotung\") herangezogen werden, beispielsweise eine Schmerzskala (z.B. von 1 bis 10)\n
 Nominal, d.h. Festwerte ohne Rangordnung, beispielsweise in der Mikrobiologie: Krankheitserreger (z.B. Escherichia Coli; Staphylococcus aureus als Bezeichner oder als Code.) oder Angabe zum Nachweis (z.B. vorhanden / nicht vorhanden)."
   * ^short = "Qualitatives Messergebnis (z.B. nominal oder ordinal)"
-  * insert CodeableConceptMS
   * coding MS
     * ^definition = "Qualitatives Messergebnis in codierter Form."
     * ^slicing.discriminator.type = #value
@@ -193,6 +193,7 @@ Nominal, d.h. Festwerte ohne Rangordnung, beispielsweise in der Mikrobiologie: K
   * coding[snomed]
     * ^definition = "Darstellung des qualitativen Messergebnisses als SNOMED CT®-Code."
     * ^patternCoding.system = $cs-sct
+    * insert CodingMS
   * text MS
     * ^definition = "Qualitatives Messergebnis als Freitext."
 * valueRatio MS
@@ -230,7 +231,8 @@ Nominal, d.h. Festwerte ohne Rangordnung, beispielsweise in der Mikrobiologie: K
   * ^short = "Ergebnis uncodiert in Textform"
 * dataAbsentReason MS
   * ^definition = "Begründung für die Nicht-Verfügbarkeit eines Messergebnisses. Die Angabe eines Messergebnisses ist gefordert (\"required\"). Wenn kein Messergebnis zur Verfügung steht, wird in der FHIR®-Struktur ein \"dataAbsentReason\" angegeben. Der Inhalt dieser Begründung soll der System-anwendenden Person angezeigt werden"
-  * insert CodeableConceptMS
+  * coding MS
+    * insert CodingMS
 * interpretation MS
   * ^definition = "Medizinisch relevante Bewertung zur einzelnen Laboruntersuchung. Die Interpretation kann als Code und/oder Text vorliegen. Die Angabe einer Interpretation ist optional, bei nicht vorhandener Klassifikation wird hier nichts übermittelt. Empfehlung: eine dokumentierte Interpretation sollte mindestens einen Interpretationscode enthalten."
   * ^short = "Medizinische Interpretation des einzelnen Laborergebnisses"
@@ -260,9 +262,9 @@ Nominal, d.h. Festwerte ohne Rangordnung, beispielsweise in der Mikrobiologie: K
   * ^definition = "Der LOINC®-Code impliziert über die LOINC®-Achse METHOD bereits eine Untersuchungsmethode, unter der Voraussetzung, dass der Part METHOD einen Wert beinhaltet. Die \"Untersuchungsmethode, ergänzende Spezifizierung\" kann in Bezug auf die LOINC®-spezifizierte Laboruntersuchung ergänzt werden, falls der Wert für die LOINC®-Achse METHOD nicht ausreichend spezifisch ist oder gar nicht vorhanden ist.\n
 Ein Beispiel: die Laboruntersuchung (TIObservationLaboratoryStudy.code) ist mit dem LOINC®-Code 26453-1 \"Erythrocytes [#/volume] in Blood\" ohne Angabe zur Methode codiert. Als ergänzende Spezifizieruung wird für die Untersuchungsmethode (TIObservationLaboratoryStudy.method) der SNOMED CT®-Code 702659008 |Automated count| zugeordnet."
   * ^short = "Untersuchungsmethode, ergänzende Spezifizierung (z.B. postkoordinierend)"
-  * insert CodeableConceptMS
-  * coding
+  * coding MS
     * ^definition = "Hier kann die Untersuchungsmethode als codierte Information angegeben werden."
+    * insert CodingMS
   * coding from ObservationMethodVS (example)
   * text MS
     * ^definition = "Hier kann eine Freitext-Bezeichnung der Untersuchungsmethode notiert werden. Mögliche Verwendung:\n
@@ -340,10 +342,10 @@ Nicht immer werden Richtgrenzen mit Einheiten angegeben. Ein typisches Bespiel h
 * Zielbereich, zur Kontrolle medizinischer Maßnahmen
 * Perzentilen (z. B. circannuale 2,5-97,5, als 95% eines gesunden Kollektivs)
 * Erwartungsbereiche aufgrund endokrinologischer Konstitution"
-    * insert CodeableConceptMS
-    * coding
+    * coding MS
       * ^definition = "Hier wird der Richtgrenzen-Typ in codierter Form angegeben.\n
 Für die codierte Richtgrenzen-Typisierung wird eine Auswahl von HL7®-Codes als (bevorzugte) Option angeboten. Die Nutzung der hinterlegten Codes ist abhängig vom Kontext."
+      * insert CodingMS
     * text MS
       * ^definition = "Hier wird der Richtgrenzen-Typ als Freitext eingegeben."
   * appliesTo MS
@@ -361,11 +363,11 @@ Beispielsweise:\n
 * Raucher
 * Kind (Beginn des 4. bis zum vollendeten 12. Lebensjahr)\n
 Bei den Angaben zum Kollektiv können mehrere Angaben kombiniert aufgeführt werden. Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codierung möglich."
-    * insert CodeableConceptMS
     * coding from ReferenceRangeAppliesToVS (example)
-    * coding
+    * coding MS
       * ^definition = "Hier kann der \"Kollektiv-Bezug\" als codierte Information angegeben werden.\n
       Dieses ValueSet mit HL7®-Codes für den Kollektivbezug enthält (eHDSI-konform) bislang nur geschlechtsspezifische Bezüge. Viele weitere, mögliche Kollektivbezüge sind noch nicht standardisiert terminologisch abgebildet."
+      * insert CodingMS
     * text MS
       * ^definition = "Freitextangabe zum Kollektiv-Bezug der Richtgrenzen"
   * text MS

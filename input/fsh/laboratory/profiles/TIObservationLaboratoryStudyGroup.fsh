@@ -11,16 +11,15 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
 Untersuchungsgruppen sind ein technisches Mittel, um fachlich zusammengehörige Laborergebnisse innerhalb des Laborgesamtbefundes gruppiert und sortiert anzuordnen. Die Struktur \"Laborgesamtbefund/Ergebnisse\" enthält mindestens eine Struktur \"Untersuchungsgruppe\" im Abschnitt Ergebnisse.\n
 Für die gruppierte Darstellung von Laboruntersuchungen können (optional) aus den fachlichen Gruppierungsmerkmalen fachliche Bezeichner als Gruppenüberschrift abgeleitet werden.\n
 Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der einzelnen Untersuchungen innerhalb einer Gruppe werden Labor-intern definiert. Das empfangende System muss diese Gruppierungen und Sortierungen interpretieren können. Diese Strukturierung dient dem Erhalt des fachlichen Kontextes von digital kommunizierten Laboruntersuchungen."
-* obeys obs-alt-result-1
 * extension MS
 * extension contains TestProfileLaboratoryExtension named testProfile 0..1 MS
 * extension[testProfile]
   * ^definition = "Unter Test-Profil werden zusammengehörige Labortests oder eine Gruppe von Einzeluntersuchungen aus einem Verfahren zusammengefasst."
   * ^short = "Bezeichnung für fachlich-medizinischen Bezug, unter dem Laboruntersuchungen gruppiert werden."
   * valueCodeableConcept
-    * insert CodeableConceptMS
     * coding MS
       * ^definition = "Benennung eines Test-Profils als Code."
+      * insert CodingMS
     * text MS
       * ^definition = "Benennung des Test-Profils als Freitext."
 * insert Coding(extension[testProfile].valueCodeableConcept.coding)
@@ -31,17 +30,19 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
   * \"Laborbereich\" mit \"Test-Profil\" kombiniert"
   * ^short = "Fachliche Bezeichnung für eine Untersuchungsgruppe"
 * category[laboratory] MS
-  * insert CodeableConceptMS
+  * coding MS
+    * insert CodingMS
 * category[studyType] MS
   * ^definition = "Hier kann die fachspezifische Eingrenzung innerhalb der Laboratoriumsmedizin anhand entsprechender Kategorie-Codes angegeben werden. Beispiele für eine fachspezifische Eingrenzung sind: \"Klinische Chemie\", \"Hämatologie\", \"Toxikologie\". Es besteht auch die Option, eine allgemeine Kategorie für \"Labor\" zu vergeben."
   * ^short = "Bezeichnung für Fachbereich, unter dem Laboruntersuchungen gruppiert werden"
-  * insert CodeableConceptMS
-  * coding
+  * coding MS
     * ^definition = "Benennung des labormedizinischen Bereiches als Code."
+    * insert CodingMS
   * text MS
     * ^definition = "Benennung des labormedizinischen Bereiches als Freitext."
 * code MS
-  * insert CodeableConceptMS
+  * coding
+    * insert CodingMS
 * insert SubjectEu(subject)
 * insert PerformerEu
 * performer
