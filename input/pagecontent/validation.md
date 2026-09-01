@@ -126,4 +126,10 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
      Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in `OperationOutcome.extension[expectedDosageText].valueString` einsetzen.
 </requirement>
 
-Hinweis: Ein Beispiel für eine OperationOutcome mit erwartetem Dosierungstext wurde angelegt: [TIOperationOutcomeDosageInvalidRenderedInstructionWithText](./OperationOutcome-5ab6bca4-fbdf-49c3-a693-a065187cffd6.html).
+**Ein Beispiel für eine OperationOutcome mit erwartetem Dosierungstext:**
+<div class="gem-ig-example" data-title="OperationOutcome (JSON)">
+    {% fragment OperationOutcome/5ab6bca4-fbdf-49c3-a693-a065187cffd6 JSON %}
+</div>
+<div class="gem-ig-example" data-title="OperationOutcome (XML)">
+    {% fragment OperationOutcome/5ab6bca4-fbdf-49c3-a693-a065187cffd6 XML %}
+</div>
