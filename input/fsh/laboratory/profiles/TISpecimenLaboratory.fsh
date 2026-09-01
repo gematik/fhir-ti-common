@@ -34,8 +34,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
     * ^definition = """
     Für die Probe können unterschiedliche Identifikatoren vergeben werden. Unterschieden werden beispielsweise \"Identifkator, den die auftragerteilende Institution vergibt\" (Order-Placer, Einsender) und \"Identifkator, den die auftragserfüllende Laboreinrichtung vergibt\" (Order-Filler, Auftragnehmer). Der ID-Typ gibt an, um welche Art von Proben-Identifikator es sich handelt.
     """
-    * insert CodeableConceptMS
-    * coding
+    * coding MS
       * ^definition = """
       Code für die Typisierung des Proben-Identifikators.\n
       HL7®-Code für die Typisierung des Proben-Identifikators. In diesem Kontext mögliche Codes sind beispielsweise:
@@ -44,6 +43,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
       * FILL (Filler Identifier) - Identifikator, den das Labor zur Auftragserfüllung vergibt
       * SID (Specimen ID)
       """
+      * insert CodingMS
     * text MS
       * ^definition = "Text für die Typisierung des Proben-Identifikators."
   * value
@@ -157,9 +157,9 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
   * fastingStatus[x] only CodeableConcept or Duration
   * fastingStatusCodeableConcept MS
     * ^definition = "Angabe zum Nüchternstatus."
-    * insert CodeableConceptMS
-    * coding
+    * coding MS
       * ^definition = "Angabe zum Nüchternstatus in codierter Form."
+      * insert CodingMS
     * text MS
       * ^definition = "Freitextangabe zum Nüchternstatus."
   * fastingStatusDuration MS
@@ -186,9 +186,9 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
     * ^definition = "Freitext Beschreibung zur Probenverarbeitung."
   * procedure MS
     * ^definition = "Methode / Verfahren zur Weiterverarbeitung des Probenmaterials, angegeben in codierter Form oder als Text"
-    * insert CodeableConceptMS
-    * coding
+    * coding MS
       * ^definition = "Methode / Verfahren zur Weiterverarbeitung des Probenmaterials als codierte Information"
+      * insert CodingMS
     * text MS
       * ^definition = "Hier kann die Methode / das Verfahren zur Weiterverarbeitung des Probenmaterials als Freitext angegeben werden."
   * additive MS
@@ -216,7 +216,8 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
       // * insert ReferenceMS
     * valueReference only Reference(TIDeviceSpecimenContainer)
   * type MS
-    * insert CodeableConceptMS
+    * coding MS
+      * insert CodingMS
   * specimenQuantity MS
     * ^definition = "Menge der Probe im Behälter."
     * insert QuantityMS
@@ -225,9 +226,9 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
 * condition from SpecimenConditionVS (extensible)
 * condition MS
   * ^definition = "Hier wird eine Angabe zum Zustand der Probe gemacht."
-  * insert CodeableConceptMS
-  * coding
+  * coding MS
     * ^definition = "Hier wird der Zustand der Probe als codierte Information angegeben."
+    * insert CodingMS
   * text MS
     * ^definition = "Freitext Angabe zum Zustand der Probe."
 * note MS
