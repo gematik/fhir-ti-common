@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: SpecimenConditionVS
 Id: specimen-condition
 Title: "Zustand Probe"

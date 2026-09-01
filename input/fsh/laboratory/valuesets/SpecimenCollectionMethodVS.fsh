@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: SpecimenCollectionMethodVS
 Id: specimen-collection-method
 Title: "Probenentnahme-Methode SNOMED CT®"

@@ -2,49 +2,66 @@ Profile: TISpecimenLaboratory
 Parent: SpecimenEu
 Id: ti-specimen-laboratory
 Title: "TI Specimen Laboratory"
-Description: "Dieses Profil bildet eine Probe ab.\n
+Description: """
+Dieses Profil bildet eine Probe ab.\n
 Identifizierung und Eigenschaften der primären oder sekundären Probe, auf deren Basis die Laboruntersuchung als Messung durchgeführt wird. Ein inhaltliches Beispiel für die Unterscheidung von Primär- und Sekundärprobe:\n
 * Primärprobe: Probenart = Vollblut (über LOINC® oder ergänzende Spezifizierung Probenart); Probengewinnung / Methode = Blutabnahme; Probenverarbeitung / Methode = Zentrifugieren\n
-* Sekundärprobe: Probenart = Serum (über LOINC® oder ergänzende Spezifizierung Probenart); Probengewinnung / Methode = Zentrifugieren zur Serumgewinnung; Probe / Ausgangsmaterial = Vollblut"
-* . ^definition = "Dieses Profil bildet eine Probe ab.\n
+* Sekundärprobe: Probenart = Serum (über LOINC® oder ergänzende Spezifizierung Probenart); Probengewinnung / Methode = Zentrifugieren zur Serumgewinnung; Probe / Ausgangsmaterial = Vollblut
+"""
+* . ^definition = """
+Dieses Profil bildet eine Probe ab.\n
 Identifizierung und Eigenschaften der primären oder sekundären Probe, auf deren Basis die Laboruntersuchung als Messung durchgeführt wird. Ein inhaltliches Beispiel für die Unterscheidung von Primär- und Sekundärprobe:\n
 * Primärprobe: Probenart = Vollblut (über LOINC® oder ergänzende Spezifizierung Probenart); Probengewinnung / Methode = Blutabnahme; Probenverarbeitung / Methode = Zentrifugieren\n
-* Sekundärprobe: Probenart = Serum (über LOINC® oder ergänzende Spezifizierung Probenart); Probengewinnung / Methode = Zentrifugieren zur Serumgewinnung; Probe / Ausgangsmaterial = Vollblut"
+* Sekundärprobe: Probenart = Serum (über LOINC® oder ergänzende Spezifizierung Probenart); Probengewinnung / Methode = Zentrifugieren zur Serumgewinnung; Probe / Ausgangsmaterial = Vollblut
+"""
 * insert Meta-With-Versioning
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * extension MS
 * extension[focus] MS
   * ^definition = "Falls die Probe nicht unmittelbar aus dem menschlichen Körper direkt entnommen wird, sondern beispielsweise aus einem Sammelgefäß oder Katheter gewonnen wird."
   * ^short = "Außerkörperliche Quelle zur Probenentnahme"
   * valueReference 1..1 MS
-    * insert ReferenceMS
-  * valueReference only Reference(TIDeviceSpecimenSubject)
+    // * insert ReferenceMS
+  * valueReference only Reference(TIDeviceLaboratorySpecimenSubject)
 * identifier MS
   * insert IdentifierMS
   * type from SpecimenIdentifierTypeVS (extensible)
   * type MS
-    * ^definition = "Für die Probe können unterschiedliche Identifikatoren vergeben werden. Unterschieden werden beispielsweise \"Identifkator, den die auftragerteilende Institution vergibt\" (Order-Placer, Einsender) und \"Identifkator, den die auftragserfüllende Laboreinrichtung vergibt\" (Order-Filler, Auftragnehmer). Der ID-Typ gibt an, um welche Art von Proben-Identifikator es sich handelt."
+    * ^definition = """
+    Für die Probe können unterschiedliche Identifikatoren vergeben werden. Unterschieden werden beispielsweise \"Identifkator, den die auftragerteilende Institution vergibt\" (Order-Placer, Einsender) und \"Identifkator, den die auftragserfüllende Laboreinrichtung vergibt\" (Order-Filler, Auftragnehmer). Der ID-Typ gibt an, um welche Art von Proben-Identifikator es sich handelt.
+    """
     * insert CodeableConceptMS
     * coding
-      * ^definition = "Code für die Typisierung des Proben-Identifikators.\n
-HL7®-Code für die Typisierung des Proben-Identifikators. In diesem Kontext mögliche Codes sind beispielsweise:
-* PLAC (Placer Identifier) - Identifikator, den die Auftragserteilende Institution vergibt
-* ACSN (Accession ID) - Identifikator, den das Labor zum Auftragseingang vergibt
-* FILL (Filler Identifier) - Identifikator, den das Labor zur Auftragserfüllung vergibt
-* SID (Specimen ID)"
+      * ^definition = """
+      Code für die Typisierung des Proben-Identifikators.\n
+      HL7®-Code für die Typisierung des Proben-Identifikators. In diesem Kontext mögliche Codes sind beispielsweise:
+      * PLAC (Placer Identifier) - Identifikator, den die Auftragserteilende Institution vergibt
+      * ACSN (Accession ID) - Identifikator, den das Labor zum Auftragseingang vergibt
+      * FILL (Filler Identifier) - Identifikator, den das Labor zur Auftragserfüllung vergibt
+      * SID (Specimen ID)
+      """
     * text MS
       * ^definition = "Text für die Typisierung des Proben-Identifikators."
   * value
     * ^definition = "Identifikator-Wert"
 * accessionIdentifier 0..0
 * status MS
-  * ^definition = "Hier wird ein Code für den Probenstatus vor der Messung angegeben:\n
-* Verfügbar: das physische Exemplar ist vorhanden und in gutem Zustand.
-* Nicht verfügbar: es ist kein physisches Exemplar vorhanden, da es entweder verloren, zerstört oder verbraucht wurde.
-* Nicht geeignet: die Probe kann aufgrund eines Qualitätsproblems, z. B. eines zerbrochenen Behälters, einer Verunreinigung oder eines abgelaufenen Verfallsdatums, nicht verwendet werden.
-* Irrtümliche Eingabe: die Probe wurde irrtümlich eingegeben und ist daher ungültig."
+  * ^definition = """
+  Hier wird ein Code für den Probenstatus vor der Messung angegeben:\n
+  * Verfügbar: das physische Exemplar ist vorhanden und in gutem Zustand.
+  * Nicht verfügbar: es ist kein physisches Exemplar vorhanden, da es entweder verloren, zerstört oder verbraucht wurde.
+  * Nicht geeignet: die Probe kann aufgrund eines Qualitätsproblems, z. B. eines zerbrochenen Behälters, einer Verunreinigung oder eines abgelaufenen Verfallsdatums, nicht verwendet werden.
+  * Irrtümliche Eingabe: die Probe wurde irrtümlich eingegeben und ist daher ungültig.
+  """
 * type MS
-  * ^definition = "Probenart, ergänzende Spezifizierung Code/Bezeichnung\n
-Der LOINC®-Code impliziert über die LOINC®-Achse SYSTEM bereits eine Probenart. Falls der Wert für die LOINC®-Achse SYSTEM nicht ausreichend spezifisch ist, kann in Bezug auf den LOINC®-Code der Laboruntersuchung, die \"Probenart, ergänzende Spezifizierung\" (Specimen.type) ergänzt werden. Ein Beispiel: Wenn mit dem LOINC®-Code das Untersuchungsmaterial \"Blut\" definiert ist, könnte als ergänzende Spezifikation der SNOMED CT®-Code für \"arterielles Blut\" dokumentiert werden."
+  * ^definition = """
+  Probenart, ergänzende Spezifizierung Code/Bezeichnung\n
+  Der LOINC®-Code impliziert über die LOINC®-Achse SYSTEM bereits eine Probenart. Falls der Wert für die LOINC®-Achse SYSTEM nicht ausreichend spezifisch ist, kann in Bezug auf den LOINC®-Code der Laboruntersuchung, die \"Probenart, ergänzende Spezifizierung\" (Specimen.type) ergänzt werden. Ein Beispiel: Wenn mit dem LOINC®-Code das Untersuchungsmaterial \"Blut\" definiert ist, könnte als ergänzende Spezifikation der SNOMED CT®-Code für \"arterielles Blut\" dokumentiert werden.
+  """
   * ^short = "Probenart, ergänzende Spezifizierung (z.B. postkoordinierend)"
   * coding MS
     * ^definition = "Hier wird die Probenart als codierte Information angegeben."
@@ -58,11 +75,13 @@ Der LOINC®-Code impliziert über die LOINC®-Achse SYSTEM bereits eine Probenar
     * ^patternCoding.system = $cs-sct
     * insert CodingMS
   * text MS
-    * ^definition = "Freitext Bezeichnung für die ergänzende Spezifizierung der Probenart. Mögliche Verwendung:\n
-* als Freitextergänzung, wenn die Probenart durch die Spezifikation Laboruntersuchung (LOINC® Code: SYSTEM) nicht ausreichend spezifisch codiert werden kann
-* als Freitextergänzung, wenn die die Probenart durch Probenart, ergänzende Spezifizierung/SNOMED CT®-Code nicht ausreichend spezifisch bezeichnet werden kann
-* ersatzweise, wenn gar keine passende Codierung zugeordnet werden kann
-* wenn zusätzlich eine Freitext-Bezeichnung aus der LDT-Kommunikation übernommen werden soll."
+    * ^definition = """
+    Freitext Bezeichnung für die ergänzende Spezifizierung der Probenart. Mögliche Verwendung:\n
+    * als Freitextergänzung, wenn die Probenart durch die Spezifikation Laboruntersuchung (LOINC® Code: SYSTEM) nicht ausreichend spezifisch codiert werden kann
+    * als Freitextergänzung, wenn die die Probenart durch Probenart, ergänzende Spezifizierung/SNOMED CT®-Code nicht ausreichend spezifisch bezeichnet werden kann
+    * ersatzweise, wenn gar keine passende Codierung zugeordnet werden kann
+    * wenn zusätzlich eine Freitext-Bezeichnung aus der LDT-Kommunikation übernommen werden soll.
+    """
 * insert SubjectEu(subject)
 * receivedTime MS
   * ^definition = "Zeitpunkt des Eingangs der Probe im Labor. Dieser Zeitpunkt sollte nach Möglichkeit minutengenau angegeben werden. Im klinischen Alltag ist die minutengenaue Erfassung nicht immer realistisch."
@@ -74,12 +93,14 @@ Der LOINC®-Code impliziert über die LOINC®-Achse SYSTEM bereits eine Probenar
   * ^definition = "Optionale Angaben zur Probengewinnung, dazu gehören: Zeitangabe, Methode der Probengewinnung, Entnahmeort, Angabe zum Nüchternstatus."
   * extension MS
   * extension[bodySite] MS
-    * ^definition = "Es kann eine Körperstruktur mit Seitenangabe, weiterer Lokalisierung und Aussage zur Morphologie angegeben werden.\n
-Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstelle gewonnen wird."
+    * ^definition = """
+    Es kann eine Körperstruktur mit Seitenangabe, weiterer Lokalisierung und Aussage zur Morphologie angegeben werden.\n
+    Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstelle gewonnen wird.
+    """
     * ^short = "Körperstelle der Probenentnahme"
     * valueReference MS
       * insert ReferenceMS
-    * valueReference only Reference(TIBodyStructure)
+    // * valueReference only Reference(TIBodyStructure)
   * collector MS
     * ^definition = "Person, welche die Probe entnimmt."
     * insert ReferenceMS
@@ -101,20 +122,24 @@ Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstell
     * value
       * ^definition = "Hier wird der numerische Wert der Zeitdauer angegeben. Hierbei handelt es sich um eine Zahl mit optionalen Dezimalstellen."
     * comparator MS
-      * ^definition = "Der Komparator kann sein:\n
-* < (kleiner)
-* <= (kleiner oder gleich)
-* >= (größer oder gleich)
-* > (größer)\n
-Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diesem Fall wird kein Komparator gesetzt."
+      * ^definition = """
+      Der Komparator kann sein:\n
+      * < (kleiner)
+      * <= (kleiner oder gleich)
+      * >= (größer oder gleich)
+      * > (größer)\n
+      Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diesem Fall wird kein Komparator gesetzt.
+      """
     * unit
       * ^definition = "Hier wird die Einheit der Zeitdauer angegeben."
     * code
       * ^definition = "Hier wird der Code für Einheit der Zeitdauer angegeben."
   * method MS
-    * ^definition = "Methode, mit welcher das Probenmaterial gewonnen wurde. Diese Angabe kommt infrage für\n
-* die primäre Entnahme des Probenmaterials (Primär-Probe) oder
-* die sekundäre Probengewinnung (Sekundär-Probe), z.B. Zentrifugat im Labor"
+    * ^definition = """
+    Methode, mit welcher das Probenmaterial gewonnen wurde. Diese Angabe kommt infrage für\n
+    * die primäre Entnahme des Probenmaterials (Primär-Probe) oder
+    * die sekundäre Probengewinnung (Sekundär-Probe), z.B. Zentrifugat im Labor
+    """
     * coding MS
       * ^definition = "Hier kann die Methode der Probengewinnung als codierte Information angegeben werden."
       * ^slicing.discriminator.type = #value
@@ -143,12 +168,14 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
     * value
       * ^definition = "Hier wird der numerische Wert der Zeitdauer angegeben. Hierbei handelt es sich um eine Zahl mit optionalen Dezimalstellen."
     * comparator MS
-      * ^definition = "Der Komparator kann sein:\n
-* < (kleiner)
-* <= (kleiner oder gleich)
-* >= (größer oder gleich)
-* > (größer)\n
-Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diesem Fall wird kein Komparator gesetzt."
+      * ^definition = """
+      Der Komparator kann sein:\n
+      * < (kleiner)
+      * <= (kleiner oder gleich)
+      * >= (größer oder gleich)
+      * > (größer)\n
+      Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diesem Fall wird kein Komparator gesetzt.
+      """
     * unit
       * ^definition = "Hier wird die Einheit der Zeitdauer angegeben."
     * code
@@ -168,7 +195,7 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
     * ^definition = "Referenzierung auf Additiva, die bei der Probenweiterverarbeitung hinzugefügt werden."
     * ^short = "Probenzusätze in der Probenverarbeitung"
     * insert ReferenceMS
-  * additive only Reference(TISpecimenAdditiveSubstance)
+  * additive only Reference(TISpecimenAdditiveSubstanceLaboratory)
   * time[x] MS
     * ^definition = "Hier wird eine Zeitangabe vorgenommen."
   * time[x] only dateTime or Period
@@ -186,7 +213,7 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
   * extension[device] MS
     * ^definition = "Referenz auf den Probenbehälter."
     * valueReference 1..1 MS
-      * insert ReferenceMS
+      // * insert ReferenceMS
     * valueReference only Reference(TIDeviceSpecimenContainer)
   * type MS
     * insert CodeableConceptMS
@@ -204,5 +231,7 @@ Der häufigste Option ist, dass eine Dauer = (gleich) eines Wertes ist. In diese
   * text MS
     * ^definition = "Freitext Angabe zum Zustand der Probe."
 * note MS
-  * ^definition = "Feld für ergänzende Freitext-Angaben zum Probenmaterial, die in der vorgegebenen Datenstruktur nicht erfasst werden können. Ein Beispiel dafür wäre die Angabe, dass die Probe bei 37 Grad (Körpertemperatur) aufbewahrt wurde."
+  * ^definition = """
+  Feld für ergänzende Freitext-Angaben zum Probenmaterial, die in der vorgegebenen Datenstruktur nicht erfasst werden können. Ein Beispiel dafür wäre die Angabe, dass die Probe bei 37 Grad (Körpertemperatur) aufbewahrt wurde.
+  """
   * text MS

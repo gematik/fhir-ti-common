@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: SpecimenIdentifierTypeVS
 Id: specimen-identifier-type
 Title: "Specimen Identifier Type"

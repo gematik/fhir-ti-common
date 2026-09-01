@@ -177,6 +177,8 @@ parameters:
     - ValueSet/laboratory-analyzer
     - ValueSet/observation-methods
     - ValueSet/diagram-type
+    - ValueSet/specimen-collection-method
+    - ValueSet/specimen-type
   special-url:
     - https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension
     - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication

@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: SpecimenTypeVS
 Id: specimen-type
 Title: "Probenart SNOMED CT®"
