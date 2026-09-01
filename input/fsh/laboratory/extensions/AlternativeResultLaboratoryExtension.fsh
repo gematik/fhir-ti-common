@@ -1,5 +1,5 @@
-Extension: AlternativeResultExtension
-Id: alternative-result-extension
+Extension: AlternativeResultLaboratoryExtension
+Id: alternative-result-laboratory-extension
 Title: "Messergebnis Alternative Einheit"
 Description: "Diese Extension bildet das Resultat einer Laboruntersuchung mit einer Alternativeinheit ab."
 Context: Observation

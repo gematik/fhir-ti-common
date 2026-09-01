@@ -13,11 +13,11 @@ Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechn
 * insert Meta-With-Versioning
 * extension MS
 * extension contains
-  TestProfileExtension named testProfile 0..1 MS and
+  TestProfileLaboratoryExtension named testProfile 0..1 MS and
   ExternalServiceExtension named externalService 0..1 MS and
-  AssociationServiceExtension named associationService 0..1 MS and
-  ZlogExtension named zlogValue 0..1 MS and
-  AlternativeResultExtension named alternativeResult 0.. MS
+  AssociationServiceLaboratoryExtension named associationService 0..1 MS and
+  ZlogLaboratoryExtension named zlogValue 0..1 MS and
+  AlternativeResultLaboratoryExtension named alternativeResult 0.. MS
 * extension[testProfile]
   * ^definition = "Unter Test-Profil werden zusammengehörige Labortests oder eine Gruppe von Einzeluntersuchungen aus einem Verfahren zusammengefasst."
   * ^short = "Bezeichnung für fachlich-medizinischen Bezug, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu TIObservationLaboratoryStudyGroup.extension:testProfile"
@@ -53,7 +53,8 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
     * ^definition = "Hier wird die Laboruntersuchung in Bezug auf das Messergebnis mit Alternativeinheit spezifiziert."
     * ^short = "Spezifikation der Laboruntersuchung zum Messergebnis mit Alternativeinheit"
     * valueCodeableConcept MS
-      * coding MS
+      * insert CodeableConceptMS
+      * coding
         * ^definition = "In diesem Element wird ein Code für die Laboruntersuchung zum alternativen Messergebnis angegeben"
         * ^short = "Codierte Spezifikation der Laboruntersuchung zum Messergebnis mit Alternativeinheit"
   * extension[value] MS
@@ -287,7 +288,7 @@ Disclaimer: FHIR® definiert aktuell nur inklusive Richtgrenzen. Für die Praxis
   * extension MS
   * extension contains
     SourceReferenceRangeExtension named sourceReferenceRange 0..1 MS and
-    NoLinearReferenceRangeExtension named noLinearReferenceRange 0..1 MS
+    NoLinearReferenceRangeLaboratoryExtension named noLinearReferenceRange 0..1 MS
   * extension[noLinearReferenceRange] MS
     * ^definition = "Kennzeichnung, dass das numerische Ergebnis aus einem NICHT-LINEAREN Wertebereich stammt. Beispiele hierfür sind ganzzahlige Scores oder Titer-Reihen. Umgangssprachlich wird auch von sog. \"semiquantitativen\" Ergebnissen gesprochen. Seit LOINC® Version 2.76 ist das anhand des LOINC®-Codes offiziell definiert und ablesbar mit Scale = \"SemiQn\". Das Kennzeichen ist optional und wird vom messenden Labor gesetzt."
     * ^short = "Kennzeichen Nicht-linearer Referenzbereich"

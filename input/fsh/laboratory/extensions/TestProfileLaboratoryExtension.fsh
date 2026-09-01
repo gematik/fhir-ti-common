@@ -1,5 +1,5 @@
-Extension: TestProfileExtension
-Id: test-profile-extension
+Extension: TestProfileLaboratoryExtension
+Id: test-profile-laboratory-extension
 Title: "Laboruntersuchungsgruppe / Test-Profil"
 Description: "Mit dieser Extension werden zusammengehörige Labortests oder eine Gruppe von Einzeluntersuchungen aus einem Verfahren zusammengefasst."
 Context: Observation

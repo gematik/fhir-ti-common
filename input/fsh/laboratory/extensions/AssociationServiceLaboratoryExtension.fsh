@@ -1,5 +1,5 @@
-Extension: AssociationServiceExtension
-Id: association-service-extension
+Extension: AssociationServiceLaboratoryExtension
+Id: association-service-laboratory-extension
 Title: "Kennzeichen Verbundleistung"
 Description: "Diese Extension bildet eine Kennzeichnung für Verbundleistungen ab."
 Context: Observation
