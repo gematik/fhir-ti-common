@@ -175,6 +175,7 @@ parameters:
     # Validation disabled because the required SNOMED CT version is not available on the terminology server.
     - ValueSet/diagnosis-snomed-ct
     - ValueSet/laboratory-analyzer
+    - ValueSet/observation-methods
   special-url:
     - https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension
     - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication
