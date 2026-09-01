@@ -1,5 +1,9 @@
 == Suppressed Messages ==
 
+# Known issue with BodyStructure extensions (see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Issue.20with.20the.20bodySite.20extension). Issue for EU Core BodyStructure: https://jira.hl7.org/browse/FHIR-58774
+The slice definition for BodyStructure.extension:includedStructure.extension:bodyLandmarkOrientation.extension:distanceFromLandmark.extension:device.extension has a minimum of 0 but the slices add up to a minimum of 1
+The slice definition for BodyStructure.extension has a minimum of 0 but the slices add up to a minimum of 1
+
 # We only want to use narratives if needed
 Unable to find ImplementationGuide.definition.resource.description for the resource Patient/ExampleTIPatient. Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
