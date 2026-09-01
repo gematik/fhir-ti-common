@@ -210,7 +210,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
 * container MS
   * ^definition = "Optionale Angaben zum Behältnis, in dem sich die Probe befindet. Hierzu kann angegeben werden, um welche Art Behältnis es sich handelt und welche Menge an Probenmaterial es enthält."
   * extension MS
-  * extension[device] MS
+  * extension[device] 1..1 MS
     * ^definition = "Referenz auf den Probenbehälter."
     * valueReference 1..1 MS
       // * insert ReferenceMS
