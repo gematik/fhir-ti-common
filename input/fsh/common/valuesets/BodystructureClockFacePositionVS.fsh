@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: BodyStructureClockFacePositionVS
 Id: body-structure-clock-face-position
 Title: "BodyStructure Clock Face Position SNOMED CT®"

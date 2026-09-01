@@ -2,20 +2,29 @@ Profile: TIBodyStructure
 Parent: BodyStructureEuCore
 Id: ti-body-structure
 Title: "TI Body Structure"
-Description: "Dieses Profil bildet eine Körperstruktur ab.\n\n
+Description: """
+Dieses Profil bildet eine Körperstruktur ab.\n\n
 Angaben zur Körperstruktur können enthalten:\n
 * Körperstelle (anatomische Benennung)
 * Lateralität (für paarige Organe/Strukturen: rechts, links, beidseits)
 * Lokalisierung (für räumliche Angaben, z.B. oben, unten)
 * Uhrzeigerposition (z.B. 12-Uhr-Position)
-* Morphologie (z.B. pathologische Strukturen)"
-* . ^definition = "Angaben zur Körperstruktur können enthalten:\n
+* Morphologie (z.B. pathologische Strukturen)
+"""
+* . ^definition = """
+Angaben zur Körperstruktur können enthalten:\n
 * Körperstelle (anatomische Benennung)
 * Lateralität (für paarige Organe/Strukturen: rechts, links, beidseits)
 * Lokalisierung (für räumliche Angaben, z.B. oben, unten)
 * Uhrzeigerposition (z.B. 12-Uhr-Position)
-* Morphologie (z.B. pathologische Strukturen)"
+* Morphologie (z.B. pathologische Strukturen)
+"""
 * insert Meta-With-Versioning
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * extension MS
 * extension[includedStructure] MS
   * extension[structure] MS

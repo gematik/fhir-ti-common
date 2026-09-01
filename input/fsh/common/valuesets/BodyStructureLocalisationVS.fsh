@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: BodyStructureLocalisationVS
 Id: body-structure-localisation
 Title: "Lokalisation innerhalb Körperstelle SNOMED CT®"
