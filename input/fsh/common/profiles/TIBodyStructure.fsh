@@ -26,7 +26,7 @@ Angaben zur Körperstruktur können enthalten:\n
 // * ^status = #active
 
 * extension MS
-* extension[includedStructure] MS
+* extension[includedStructure] 1.. MS
   * extension[structure] MS
     * ^definition = "Anatomische Benennung eines Körperteils, Körperdetails oder Organs."
     * ^short = "Anatomische Körperstelle"
