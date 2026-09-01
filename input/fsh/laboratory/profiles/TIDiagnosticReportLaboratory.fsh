@@ -104,7 +104,7 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
     * ^definition = "Zu jeder Untersuchungsgruppe gibt es immer eine Sortiernummer. Die mit dem Datenstrom mitgegebenen Sortiernummern sind als Standardsortierung gedacht. Die Standardsortierung legt das Befund-erstellende Labor fest. Verwender können in Primärsystemen zusätzlich interaktiv auch anders sortieren, wenn das Primärsystem solche Funktionen anbietet."
     * ^short = "Sortiernummer Untersuchungsgruppe"
     * valuePositiveInt MS
-* result only Reference(TIObservationLaboratoryStudyGroup or TIObservationImageAttachment)
+* result only Reference(TIObservationLaboratoryStudyGroup or TIObservationLaboratoryImageAttachment)
 * media MS
   * ^definition = "Zum Anhängen zusätzlicher Resultate, die nicht Teil des strukturierten Laborbefundes sind. Hier können Befunde aus labormedizinischen Spezialbereichen in einem digitalen Dokumentformat angehängt werden, beispielsweise Ergebnisse aus mikrobiologischen Kulturen oder humangenetischen Untersuchungen. Ziel ist es, grundsätzlich alle Laborbefunde in digitalem Format übermitteln zu können und in der elektronischen Patientenakte ablegen zu können."
   * ^short = "Ergänzende Dokumente (zusätzlich zum strukturierten Teil des Laborbefundes)"
@@ -127,7 +127,7 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   * ^short = "Kompletter Gesamtbefund als exportierbares Format"
   * contentType MS
     * ^definition = "Hier wird das Dateiformat abgebildet."
-  * contentType from $epa-xds-mime-type-vs (required)
+  * contentType = #application/pdf
   * data MS
     * ^definition = "Hier wird die Dokument-Datei angehängt."
   * title MS
