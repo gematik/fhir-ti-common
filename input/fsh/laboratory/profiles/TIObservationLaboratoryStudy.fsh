@@ -11,6 +11,7 @@ Laboruntersuchungen können als Messung oder als Berechnung erfolgen.\n
 Eine Laboruntersuchung als Messung beschreibt die quantitative oder qualitative Untersuchung eines spezifischen Laborparameters in einem definierten Probenmaterial; z. B. die Untersuchung des Hämoglobin-(Hb-)Werts als Konzentration im Blut. Der Bezug zur Probe, anhand derer die Messung vorgenommen wurde, muss erkennbar sein.\n
 Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechnete GFR (glomeruläre Filtrationsrate) auf einem gemessenen Kreatinin-Wert im Serum basieren."
 * insert Meta-With-Versioning
+* obeys obs-alt-result-1
 * extension MS
 * extension contains
   TestProfileLaboratoryExtension named testProfile 0..1 MS and
