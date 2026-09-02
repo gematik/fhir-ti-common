@@ -5,6 +5,8 @@ Title: "TI MHD DocumentReference"
 Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ressource für den TI-weiten Einsatz."
 * insert Meta-With-Versioning
 
+* obeys ti-mhd-1
+
 // preserve the version
 * ^version = "1.5.0"
 // * ^date = "2026-09-30"
@@ -19,10 +21,11 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 * masterIdentifier MS
 
 * identifier[entryUUID] 0..1 MS
-* identifier contains uniqueId 1..1 MS
-* identifier[uniqueId] only UniqueIdIdentifier
+// Slice und Datentypprofil (IHE.MHD.UniqueIdIdentifier) kommen seit MHD 4.2.4 aus dem Basisprofil,
+// hier wird nur die Kardinalität verschärft (IHE: 0..1).
+* identifier[uniqueId] 1..1 MS
 * identifier[uniqueId] ^short = "Unique identifier für das referenzierte Dokument"
-* identifier[uniqueId] ^definition = "Der eindeutige Identifikator des referenzierten Dokuments, der dem Element DocumentEntry.uniqueId in XDS entspricht. Dieser dient als fachlicher bzw. dokumentenbezogener Identifier des Dokuments und identifiziert das medizinische Dokument selbst, auf das die DocumentReference verweist."
+* identifier[uniqueId] ^definition = "Der eindeutige Identifikator des referenzierten Dokuments, der dem Element DocumentEntry.uniqueId in XDS entspricht. Dieser dient als fachlicher bzw. dokumentenbezogener Identifier des Dokuments und identifiziert das medizinische Dokument selbst, auf das die DocumentReference verweist. Der Wert MUSS mit dem in masterIdentifier angegebenen Wert übereinstimmen."
 
 * status MS
   * ^short = "Status des Dokuments"
