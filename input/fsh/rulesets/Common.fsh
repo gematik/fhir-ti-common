@@ -1,6 +1,6 @@
 RuleSet: Reference(path)
 * {path} MS
-* {path}.reference 1..1 MS 
+* {path}.reference 1..1 MS
 
 RuleSet: Coding(path)
 * {path} MS
@@ -31,6 +31,10 @@ RuleSet: ObservationEffectiveDateTime
 * effective[x] contains effectiveDateTime 1..1 MS
 * effectiveDateTime only dateTime
 
+RuleSet: PerformerEu
+* performer MS
+  * ^definition = "Hier wird die behandelnde Person/Einrichtung referenziert, die die Beobachtung durchgeführt hat."
+  * insert ReferenceMS
 
 RuleSet: Performer
 * performer ..1 MS

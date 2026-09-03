@@ -25,6 +25,8 @@ StructureDefinition/order-entry-time-extension,
 StructureDefinition/sorting-number-extension,
 StructureDefinition/secondary-status-extension,
 StructureDefinition/pseudonymized-report-extension,
+StructureDefinition/external-service-extension,
+StructureDefinition/source-reference-range-extension,
 {% endcapture %}
 {% include artifacts-table-generator.html render=common-extensions %}
 <div><figcaption><strong>Tabelle:</strong> Common Extensions</figcaption></div>

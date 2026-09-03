@@ -32,6 +32,7 @@ Alias: $cs-orphanet = http://www.orpha.net
 
 // International Value Sets
 Alias: $hl7-vs-ucum-units = http://hl7.org/fhir/ValueSet/ucum-units
+Alias: $cs-data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $specimen-container-type = http://hl7.org/fhir/ValueSet/specimen-container-type
 
 // National Code Systems
@@ -82,12 +83,14 @@ Alias: $epa-xds-practice-setting-code-vs = https://gematik.de/fhir/terminology/V
 Alias: $epa-mhd-document-relationship-type-vs = https://gematik.de/fhir/terminology/ValueSet/epa-mhd-document-relationship-type-vs
 Alias: $epa-xds-confidentiality-code-vs-url = https://gematik.de/fhir/terminology/ValueSet/epa-xds-confidentiality-code-vs
 Alias: $ti-vs-expansion-deprecated = https://gematik.de/fhir/terminology/StructureDefinition/valueset-expansion-deprecated
+Alias: $epa-data-category-other-vs = https://gematik.de/fhir/terminology/ValueSet/epa-data-category-other-vs
+
 
 Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
 /// CodeSystems
 Alias: $epa-data-category-medical-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs
 Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
-Alias: $epa-data-category-other-vs = https://gematik.de/fhir/terminology/ValueSet/epa-data-category-other-vs
+Alias: $ti-laboratory-test-profile-cs = https://gematik.de/fhir/ti/CodeSystem/laboratory-test-profile
 
 
 
@@ -106,6 +109,7 @@ Alias: $hl7-note = http://hl7.org/fhir/StructureDefinition/note
 //// International
 // HL7
 Alias: $cs-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation|4.0.1
+Alias: $cs-sex-parameter-for-clinical-use = http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use
 Alias: $hl7-task-status-cs = http://hl7.org/fhir/task-status
 
 
