@@ -105,6 +105,8 @@ Alias: $medicationStatement-renderedDosageInstruction-r5 = http://hl7.org/fhir/5
 
 //HL7
 Alias: $hl7-note = http://hl7.org/fhir/StructureDefinition/note
+Alias: $observation-value-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value
+
 
 //// International
 // HL7
