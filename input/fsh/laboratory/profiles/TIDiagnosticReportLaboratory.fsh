@@ -119,6 +119,7 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
       * valueReference only Reference(TIAppendixDocumentReference)
     * display MS
       * ^definition = "Hinweis, der besagt, dass anstelle einer Referenz auf Media auf eine DocumentReference über die Cross-version Extension „link“ referenziert wird."
+    * display = "Media wird durch eine DocumentReference dargestellt, auf die in einer Extension verwiesen wird."
 * conclusion MS
   * ^definition = "Befund-Bewertung, die sich auf den gesamten Laborbefund bezieht und ggf. Antworten auf klinische Fragestellungen formuliert. "
   * ^short = "Beurteilung des Laborgesamtbefundes"
