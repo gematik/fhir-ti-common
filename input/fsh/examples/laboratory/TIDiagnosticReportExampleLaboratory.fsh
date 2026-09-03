@@ -8,7 +8,7 @@ Description: "Maximale Beispielinstanz für das Profil DiagnosticReportdgLP"
 * extension[orderEntryTime].valueDateTime = "2023-05-02T14:15:00+01:00"
 * extension[pseudonymizedReport].valueBoolean = true
 * extension[criticalResult].valueBoolean = true
-* extension[secondaryStatus].valueCoding = https://gematik.de/fhir/ti/CodeSystem/secondary-status|1.0.0#Geaendert "Geändert"
+* extension[secondaryStatus].valueCoding = https://gematik.de/fhir/ti/CodeSystem/secondary-status|1.5.0#Geaendert "Geändert"
 * extension[note].valueAnnotation
   * text = "<div xmlns='http://www.w3.org/1999/xhtml'>Ergänzende Angabe</div>"
 * identifier
