@@ -45,8 +45,7 @@ Description: "Hier wird ein Dokumentanhang abgebildet."
 * author MS
   * ^definition = "Hier werden Personen, Einrichtungen oder Geräte, die das Dokument erzeugt haben, referenziert."
   * insert ReferenceMS
-// * author only Reference(TIPractitioner or TIPractitionerRole or TIOrganization or Device or TIPatient or TIRelatedPerson)
-* author only Reference(TIPractitioner or TIPractitionerRole or TIOrganization or Device or TIPatient or RelatedPerson)
+* author only Reference(TIPractitioner or TIPractitionerRole or TIOrganization or Device or TIPatient or TIRelatedPerson)
 * description MS
   * ^definition = "Hier wird der Dokumentenverweis als Freitext erfasst, z. B. \"Arztbrief vom 28.04.2020\"."
 * content MS

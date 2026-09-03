@@ -100,7 +100,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
     * ^short = "Körperstelle der Probenentnahme"
     * valueReference MS
       * insert ReferenceMS
-    // * valueReference only Reference(TIBodyStructure)
+    * valueReference only Reference(TIBodyStructure)
   * collector MS
     * ^definition = "Person, welche die Probe entnimmt."
     * insert ReferenceMS

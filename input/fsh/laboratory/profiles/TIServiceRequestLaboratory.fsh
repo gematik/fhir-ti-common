@@ -46,9 +46,11 @@ Referenzierung auf die auftraggebende bzw. einsendende Person/Einrichtung. Diese
   * insert ReferenceMS
 * requester only Reference(TIPractitioner or TIPractitionerRole or TIOrganization or TIPatient or TIRelatedPerson or Device)
 * reasonCode MS
-  * ^definition = "Der Anlass der Labordiagnostik wird als prozessuale Fragestellung formuliert. Diese Angabe dient der Fokussierung der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Ausschluss; Verlaufskontrolle; Vorsorge.\n\n
-Der Veranlassungsgrund der Labordiagnostik wird als medizinische Fragestellung formuliert. Diese Angabe dient der fachlichen Präzision der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Eingriff; Infektion; Rheuma; Tumor.\n\n
-Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codierung möglich."
+  * ^definition = """
+  Der Anlass der Labordiagnostik wird als prozessuale Fragestellung formuliert. Diese Angabe dient der Fokussierung der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Ausschluss; Verlaufskontrolle; Vorsorge.\n\n
+  Der Veranlassungsgrund der Labordiagnostik wird als medizinische Fragestellung formuliert. Diese Angabe dient der fachlichen Präzision der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Eingriff; Infektion; Rheuma; Tumor.\n\n
+  Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codierung möglich.
+  """
   * ^short = "Prozessualer Anlass oder medizinischer Veranlassungsgrund der Labordiagnostik"
   * extension MS
   * extension contains ReasonTypeLaboratoryExtension named reasonType 0..1
