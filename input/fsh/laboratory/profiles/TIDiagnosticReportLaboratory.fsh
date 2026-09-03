@@ -25,9 +25,11 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   * valueAnnotation 1.. MS
     * text MS
 * extension[orderEntryTime] MS
-  * ^definition = "Die Bedeutung und Verwendung des Auftragseingangszeitpunktes im Laborprozess kann unterschiedlich sein, beispielsweise:\n
+  * ^definition = """
+  Die Bedeutung und Verwendung des Auftragseingangszeitpunktes im Laborprozess kann unterschiedlich sein, beispielsweise:\n
   * In einem OrderEntry-Setting kann der Auftragseingangszeitstempel zum Zeitpunkt der ersten Probeneinbuchung für diesen Auftrag im Labor gesetzt werden. In einem solchen Fall aktiviert/generiert die erste Probe den Auftrag im LIS.
-  * In einem papiergebundenen Setting ist in der Regel der Scanzeitpunkt des Papierauftrages der Auftragseingangszeitstempel. Ggf. kann dieser vor oder nach der/den zugehörigen Probeneinbuchungen liegen."
+  * In einem papiergebundenen Setting ist in der Regel der Scanzeitpunkt des Papierauftrages der Auftragseingangszeitstempel. Ggf. kann dieser vor oder nach der/den zugehörigen Probeneinbuchungen liegen.
+  """
   * ^short = "Auftrageingangszeitpunkt im Labor"
   * valueDateTime MS
 * extension[DiagnosticReportCompositionR5] MS
@@ -38,16 +40,20 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   * ^short = "Manuell gesetztes Kennzeichen Kritischer Befund"
   * valueBoolean MS
 * extension[pseudonymizedReport] MS
-  * ^definition = "Mit diesem Kennzeichen kann ein Laborbefund als \"pseudonymisiert\" deklariert werden.\n
-  Fachlicher Hintergrund: es gibt Anwendungsfälle, z.B. aus der Betriebsmedizin, die erfordern, dass ein Laborbefund pseudonymisiert, also ohne personenidentifizierende Inhalte übertragen wird. Nach welchen Regeln und mit welchem Identifikator ein pseudonymisierter Laborbefund übermittelt wird, ist Gegenstand einer Einzelabstimmung zwischen der anfordernden Einrichtung und dem Labor. Oft ist bereits der Auftrag pseudonymisiert. Hinweis: Zu einem späteren Zeitpunkt könnten Patient:innen berechtigterweise fordern, dass der Laborbefund seinen anderen Befunden hinzugefügt wird, z.B. in der ePA. Durch das Hochladen in die ePA wird der Befund eindeutig einer Person zugeordnet und dadurch die Pseudonymisierung (auch bei unverändert verdeckten Personendaten) \"demaskiert\"."
+  * ^definition = """
+  Mit diesem Kennzeichen kann ein Laborbefund als \"pseudonymisiert\" deklariert werden.\n
+  Fachlicher Hintergrund: es gibt Anwendungsfälle, z.B. aus der Betriebsmedizin, die erfordern, dass ein Laborbefund pseudonymisiert, also ohne personenidentifizierende Inhalte übertragen wird. Nach welchen Regeln und mit welchem Identifikator ein pseudonymisierter Laborbefund übermittelt wird, ist Gegenstand einer Einzelabstimmung zwischen der anfordernden Einrichtung und dem Labor. Oft ist bereits der Auftrag pseudonymisiert. Hinweis: Zu einem späteren Zeitpunkt könnten Patient:innen berechtigterweise fordern, dass der Laborbefund seinen anderen Befunden hinzugefügt wird, z.B. in der ePA. Durch das Hochladen in die ePA wird der Befund eindeutig einer Person zugeordnet und dadurch die Pseudonymisierung (auch bei unverändert verdeckten Personendaten) \"demaskiert\".
+  """
   * ^short = "Kennzeichnung, ob ein Laborbefund pseudonymisiert ist"
   * valueBoolean MS
 * extension[secondaryStatus] MS
-  * ^definition = "Optionale sekundäre Angabe des Änderungsstatus, die zusätzlich zum Hauptstatus \"Status Gesamtbefund\" mitgegeben werden kann. Es können mehrere Werte als Änderungsgrund angegeben werden. Die möglichen Werte sind:\n
+  * ^definition = """
+  Optionale sekundäre Angabe des Änderungsstatus, die zusätzlich zum Hauptstatus \"Status Gesamtbefund\" mitgegeben werden kann. Es können mehrere Werte als Änderungsgrund angegeben werden. Die möglichen Werte sind:\n
   * Geändert
   * Korrigiert
   * Angefügt\n
-  Der typische und in jedem Labor alltägliche Anwendungsfall ist die Nachforderung bei einer Stufendiagnostik. Änderungen am Gesamtbefund können sich auch auf einen noch nicht abgeschlossenen Befund beziehen, z.B. auf einen Teilbefund oder einen vorläufigen Befund."
+  Der typische und in jedem Labor alltägliche Anwendungsfall ist die Nachforderung bei einer Stufendiagnostik. Änderungen am Gesamtbefund können sich auch auf einen noch nicht abgeschlossenen Befund beziehen, z.B. auf einen Teilbefund oder einen vorläufigen Befund.
+  """
   * ^short = "Änderungsstatus Laborbefund (Sekundärstatus)"
   * valueCoding MS
   * valueCoding from SecondaryStatusVS (required)

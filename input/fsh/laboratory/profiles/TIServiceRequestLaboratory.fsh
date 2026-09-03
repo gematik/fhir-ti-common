@@ -46,9 +46,11 @@ Referenzierung auf die auftraggebende bzw. einsendende Person/Einrichtung. Diese
   * insert ReferenceMS
 * requester only Reference(TIPractitioner or TIPractitionerRole or TIOrganization or TIPatient or TIRelatedPerson or Device)
 * reasonCode MS
-  * ^definition = "Der Anlass der Labordiagnostik wird als prozessuale Fragestellung formuliert. Diese Angabe dient der Fokussierung der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Ausschluss; Verlaufskontrolle; Vorsorge.\n\n
-Der Veranlassungsgrund der Labordiagnostik wird als medizinische Fragestellung formuliert. Diese Angabe dient der fachlichen Präzision der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Eingriff; Infektion; Rheuma; Tumor.\n\n
-Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codierung möglich."
+  * ^definition = """
+  Der Anlass der Labordiagnostik wird als prozessuale Fragestellung formuliert. Diese Angabe dient der Fokussierung der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Ausschluss; Verlaufskontrolle; Vorsorge.\n\n
+  Der Veranlassungsgrund der Labordiagnostik wird als medizinische Fragestellung formuliert. Diese Angabe dient der fachlichen Präzision der Beurteilung. Beispiele für Inhalte aus dem LDT, die in dieses Freitextfeld hineinpassen könnten, sind: Eingriff; Infektion; Rheuma; Tumor.\n\n
+  Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codierung möglich.
+  """
   * ^short = "Prozessualer Anlass oder medizinischer Veranlassungsgrund der Labordiagnostik"
   * extension MS
   * extension contains ReasonTypeLaboratoryExtension named reasonType 0..1
@@ -62,7 +64,7 @@ Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codi
   * ^definition = "Klinische Angaben aus dem Laborauftrag, die für die Befundung wichtig sind, können hier angegeben werden. Das sind beispielsweise Angaben zur Medikation oder zur gesundheitlichen Konstitution."
   * ^short = "Klinische Angaben aus dem Laborauftrag"
   * insert ReferenceMS
-// * specimen only Reference(TISpecimenLaboratory)
+* specimen only Reference(TISpecimenLaboratory)
 * note MS
   * ^definition = "Ergänzende Angaben zum Auftrag, z. B. Institutionsspezifische administrative Zuordnung (\"Tour-Nummer\"; \"Tagebuch-Nummer\"). Der Inhalt dieses Elementes kann den Angaben zu \"Auftragsbezogene Hinweise\" aus der LDT-Kommunikation entsprechen."
   * ^short = "Auftragsbezogene Hinweise"

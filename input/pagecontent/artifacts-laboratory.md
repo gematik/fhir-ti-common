@@ -28,6 +28,8 @@ StructureDefinition/ti-service-request-laboratory,
 StructureDefinition/ti-observation-laboratory-study,
 StructureDefinition/ti-observation-laboratory-study-group,
 StructureDefinition/ti-observation-laboratory-image-attachment,
+StructureDefinition/ti-specimen-laboratory,
+StructureDefinition/ti-specimen-additive-substance-laboratory,
 {% endcapture %}
 {% include artifacts-table-generator.html render=laboratory-profiles %}
 <div><figcaption><strong>Tabelle:</strong> Laborprozess Ressourcenprofile</figcaption></div>
