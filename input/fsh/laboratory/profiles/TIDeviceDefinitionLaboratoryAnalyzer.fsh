@@ -5,6 +5,10 @@ Title: "TI DeviceDefinition LaboratoryAnalyzer"
 Description: "Dieses Profil bildet das Modell eines Laboranalysegerätes ab."
 * . ^definition = "Dieses Profil bildet das Modell eines Laboranalysegerätes ab."
 * insert Meta-With-Versioning
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
 
 * manufacturer[x] only string
   * ^definition = "Hier wird der Hersteller des Laboranalysegerätes angegeben."

@@ -5,6 +5,11 @@ Title: "TI Observation Image Attachment"
 Description: "Abbildung, die zu einer Laboruntersuchung oder einer Untersuchungsgruppe als Ergänzung mitgegeben wird. Beispielsweise kann die Ausprägung einer Elektrophorese-Kurve eine hilfreiche oder wichtige Zusatzinformation zu einer Erkrankung geben, die durch den quantitativen Ergebniswert allein nicht hinreichend erkennbar wird."
 * insert Meta-With-Versioning
 * . ^definition = "Abbildung, die zu einer Laboruntersuchung oder einer Untersuchungsgruppe als Ergänzung mitgegeben wird. Beispielsweise kann die Ausprägung einer Elektrophorese-Kurve eine hilfreiche oder wichtige Zusatzinformation zu einer Erkrankung geben, die durch den quantitativen Ergebniswert allein nicht hinreichend erkennbar wird."
+// preserve the version
+* ^version = "1.5.0"
+// * ^date = "2026-09-30"
+// * ^status = #active
+
 * extension MS
 * extension[value-r5] 1..1 MS
   * value[x] only Attachment
