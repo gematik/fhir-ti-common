@@ -97,6 +97,12 @@ Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
 Alias: $ti-laboratory-test-profile-cs = https://gematik.de/fhir/ti/CodeSystem/laboratory-test-profile
 
 
+/// CodeSystems
+Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
+Alias: $epa-data-category-medical-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs
+Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
+Alias: $ti-secondary-status = https://gematik.de/fhir/ti/CodeSystem/secondary-status
+
 
 //// Extensions
 
