@@ -5,6 +5,8 @@ Title: "TI MHD Simplified Publish DocumentReference"
 Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentReference-Ressource für den TI-weiten Einsatz."
 * insert Meta
 
+* obeys ti-mhd-1
+
 // preserve the version
 * ^version = "1.5.0"
 // * ^date = "2026-09-30"
