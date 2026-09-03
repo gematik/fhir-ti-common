@@ -65,6 +65,7 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   * ^definition = "Hier wird eine Laborauftrag-Information referenziert."
   * ^short = "Referenz Laborauftrag-Information"
   * insert ReferenceMS
+* basedOn only Reference(TIServiceRequestLaboratory)
 * status MS
   * ^definition = "Bearbeitungsstatus des Laborgesamtbefundes."
 * code MS
@@ -90,6 +91,7 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
 * specimen MS
   * ^comment = "Zum Erhalt der europäischen Interoperabilität, orientiert an der Veröffentlichung https://hl7.eu/fhir/laboratory/history.html kann auf Gesamtbefundebene auf das gesamte Probenmaterial referenziert werden. Diese optionale Angabe ist redundant zu den Probenreferenzen der Einzeluntersuchungen."
   * insert ReferenceMS
+* specimen only Reference(TISpecimenLaboratory)
 * result MS
   * ^definition = "Die Laborergebnisse werden grundsätzlich gruppiert. Es gibt mindestens eine Untersuchungsgruppe."
   * insert ReferenceMS
@@ -102,6 +104,7 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
     * ^definition = "Zu jeder Untersuchungsgruppe gibt es immer eine Sortiernummer. Die mit dem Datenstrom mitgegebenen Sortiernummern sind als Standardsortierung gedacht. Die Standardsortierung legt das Befund-erstellende Labor fest. Verwender können in Primärsystemen zusätzlich interaktiv auch anders sortieren, wenn das Primärsystem solche Funktionen anbietet."
     * ^short = "Sortiernummer Untersuchungsgruppe"
     * valuePositiveInt MS
+* result only Reference(TIObservationLaboratoryStudyGroup or TIObservationLaboratoryImageAttachment)
 * media MS
   * ^definition = "Zum Anhängen zusätzlicher Resultate, die nicht Teil des strukturierten Laborbefundes sind. Hier können Befunde aus labormedizinischen Spezialbereichen in einem digitalen Dokumentformat angehängt werden, beispielsweise Ergebnisse aus mikrobiologischen Kulturen oder humangenetischen Untersuchungen. Ziel ist es, grundsätzlich alle Laborbefunde in digitalem Format übermitteln zu können und in der elektronischen Patientenakte ablegen zu können."
   * ^short = "Ergänzende Dokumente (zusätzlich zum strukturierten Teil des Laborbefundes)"
@@ -123,7 +126,8 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
   * ^definition = "Zusätzlich zur FHIR®-Instanz soll der GESAMTE Laborbefund (das bezieht sowohl die strukturierten Daten als auch ergänzende Dokument-Anteile mit ein) in einem weiteren Format z.B. als PDF mitgegeben werden."
   * ^short = "Kompletter Gesamtbefund als exportierbares Format"
   * contentType MS
-    * ^definition = "Hier wird das Dateiformat abgebildet. Es ist ein Code aus dem System urn:ietf:bcp:13 zu wählen."
+    * ^definition = "Hier wird das Dateiformat abgebildet."
+  * contentType = #application/pdf
   * data MS
     * ^definition = "Hier wird die Dokument-Datei angehängt."
   * title MS

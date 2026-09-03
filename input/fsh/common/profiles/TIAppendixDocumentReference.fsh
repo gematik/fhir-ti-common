@@ -54,7 +54,7 @@ Description: "Hier wird ein Dokumentanhang abgebildet."
     * ^definition = "Hier wird das Dokument in Form eines formatierten Anhangs abgebildet."
     * contentType 1.. MS
       * ^definition = "Hier wird das Dateiformat ausgewählt."
-    * contentType from $epa-xds-mime-type-vs (required)
+    * contentType = #application/pdf
     * data 1.. MS
       * ^definition = "Hier wird das Dokument als Datei angehängt."
     * url ..0
