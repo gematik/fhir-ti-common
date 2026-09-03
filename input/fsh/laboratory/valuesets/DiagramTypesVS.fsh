@@ -23,35 +23,36 @@ Description: "Dieses Valueset enthält die Codes zur Typisierung von Messdiagram
 * $cs-sct-de-20260515#1303998006 ^designation.language = #de
 * $cs-sct-de-20260515#1303998006 ^designation.value = "Multiplex-PCR"
 * $cs-sct-de-20260515#417965000 "Electrophoresis band"
-* ^expansion.identifier = "urn:uuid:76c07be6-a75c-11f1-8442-005056ad42c6"
-* ^expansion.timestamp = 2026-09-03T07:58:19+02:00
-* ^expansion.total = 7
-* ^expansion.offset = 0
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #703450007
-* ^expansion.contains[=].display = "Electrophoresis"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #70531000052106
-* ^expansion.contains[=].display = "Agarose gel electrophoresis technique"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #70581000052105
-* ^expansion.contains[=].display = "Capillary electrophoresis technique"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #1304163000
-* ^expansion.contains[=].display = "Isoelectric focusing electrophoresis technique"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #708058007
-* ^expansion.contains[=].display = "Flow cytometry"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #1303998006
-* ^expansion.contains[=].display = "Multiplex polymerase chain reaction technique"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #417965000
-* ^expansion.contains[=].display = "Electrophoresis band"
+
+// * ^expansion.identifier = "urn:uuid:76c07be6-a75c-11f1-8442-005056ad42c6"
+// * ^expansion.timestamp = 2026-09-03T07:58:19+02:00
+// * ^expansion.total = 7
+// * ^expansion.offset = 0
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #703450007
+// * ^expansion.contains[=].display = "Electrophoresis"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #70531000052106
+// * ^expansion.contains[=].display = "Agarose gel electrophoresis technique"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #70581000052105
+// * ^expansion.contains[=].display = "Capillary electrophoresis technique"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #1304163000
+// * ^expansion.contains[=].display = "Isoelectric focusing electrophoresis technique"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #708058007
+// * ^expansion.contains[=].display = "Flow cytometry"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #1303998006
+// * ^expansion.contains[=].display = "Multiplex polymerase chain reaction technique"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #417965000
+// * ^expansion.contains[=].display = "Electrophoresis band"

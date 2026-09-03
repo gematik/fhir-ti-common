@@ -120,159 +120,160 @@ Description: "Dieses Valueset enthält SNOMED CT® Codes zur Beschreibung von Me
 * $cs-sct-de-20260515#277025001 "Proven"
 * $cs-sct-de-20260515#277025001 ^designation.language = #de
 * $cs-sct-de-20260515#277025001 ^designation.value = "Erwiesen"
-* ^expansion.identifier = "urn:uuid:720382b2-a75c-11f1-b874-005056ad42c6"
-* ^expansion.timestamp = 2026-09-03T07:58:11+02:00
-* ^expansion.total = 38
-* ^expansion.offset = 0
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260347006
-* ^expansion.contains[=].display = "+"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260348001
-* ^expansion.contains[=].display = "++"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260349009
-* ^expansion.contains[=].display = "+++"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260350009
-* ^expansion.contains[=].display = "++++"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #441614007
-* ^expansion.contains[=].display = "Present one plus out of three plus"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #441517005
-* ^expansion.contains[=].display = "Present two plus out of three plus"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #441521003
-* ^expansion.contains[=].display = "Present three plus out of three plus"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260373001
-* ^expansion.contains[=].display = "Detected"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260385009
-* ^expansion.contains[=].display = "Negative"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260392004
-* ^expansion.contains[=].display = "Non-patent"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260415000
-* ^expansion.contains[=].display = "Not detected"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #52101004
-* ^expansion.contains[=].display = "Present"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #10828004
-* ^expansion.contains[=].display = "Positive"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #2667000
-* ^expansion.contains[=].display = "Absent"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #895231008
-* ^expansion.contains[=].display = "Not detected in pooled specimen"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #720735008
-* ^expansion.contains[=].display = "Presumptive positive"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #373067005
-* ^expansion.contains[=].display = "No"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #373066001
-* ^expansion.contains[=].display = "Yes"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #264887000
-* ^expansion.contains[=].display = "Not isolated"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #264868006
-* ^expansion.contains[=].display = "No growth"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260413007
-* ^expansion.contains[=].display = "None"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260408008
-* ^expansion.contains[=].display = "Weakly positive"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260405006
-* ^expansion.contains[=].display = "Trace"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #260389003
-* ^expansion.contains[=].display = "No reaction"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #46651001
-* ^expansion.contains[=].display = "Isolated"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #419984006
-* ^expansion.contains[=].display = "Inconclusive"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #42425007
-* ^expansion.contains[=].display = "Equivocal"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #82334004
-* ^expansion.contains[=].display = "Indeterminate"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #62482003
-* ^expansion.contains[=].display = "Low"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #11214006
-* ^expansion.contains[=].display = "Reactive"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #131194007
-* ^expansion.contains[=].display = "Non-Reactive"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #280416009
-* ^expansion.contains[=].display = "Indeterminate result"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #75540009
-* ^expansion.contains[=].display = "High"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #455371000124106
-* ^expansion.contains[=].display = "Invalid result"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #89292003
-* ^expansion.contains[=].display = "Rare"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #262008008
-* ^expansion.contains[=].display = "Not performed"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #17621005
-* ^expansion.contains[=].display = "Normal"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #277025001
-* ^expansion.contains[=].display = "Proven"
+
+// * ^expansion.identifier = "urn:uuid:720382b2-a75c-11f1-b874-005056ad42c6"
+// * ^expansion.timestamp = 2026-09-03T07:58:11+02:00
+// * ^expansion.total = 38
+// * ^expansion.offset = 0
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260347006
+// * ^expansion.contains[=].display = "+"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260348001
+// * ^expansion.contains[=].display = "++"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260349009
+// * ^expansion.contains[=].display = "+++"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260350009
+// * ^expansion.contains[=].display = "++++"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #441614007
+// * ^expansion.contains[=].display = "Present one plus out of three plus"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #441517005
+// * ^expansion.contains[=].display = "Present two plus out of three plus"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #441521003
+// * ^expansion.contains[=].display = "Present three plus out of three plus"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260373001
+// * ^expansion.contains[=].display = "Detected"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260385009
+// * ^expansion.contains[=].display = "Negative"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260392004
+// * ^expansion.contains[=].display = "Non-patent"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260415000
+// * ^expansion.contains[=].display = "Not detected"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #52101004
+// * ^expansion.contains[=].display = "Present"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #10828004
+// * ^expansion.contains[=].display = "Positive"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #2667000
+// * ^expansion.contains[=].display = "Absent"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #895231008
+// * ^expansion.contains[=].display = "Not detected in pooled specimen"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #720735008
+// * ^expansion.contains[=].display = "Presumptive positive"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #373067005
+// * ^expansion.contains[=].display = "No"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #373066001
+// * ^expansion.contains[=].display = "Yes"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #264887000
+// * ^expansion.contains[=].display = "Not isolated"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #264868006
+// * ^expansion.contains[=].display = "No growth"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260413007
+// * ^expansion.contains[=].display = "None"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260408008
+// * ^expansion.contains[=].display = "Weakly positive"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260405006
+// * ^expansion.contains[=].display = "Trace"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #260389003
+// * ^expansion.contains[=].display = "No reaction"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #46651001
+// * ^expansion.contains[=].display = "Isolated"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #419984006
+// * ^expansion.contains[=].display = "Inconclusive"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #42425007
+// * ^expansion.contains[=].display = "Equivocal"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #82334004
+// * ^expansion.contains[=].display = "Indeterminate"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #62482003
+// * ^expansion.contains[=].display = "Low"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #11214006
+// * ^expansion.contains[=].display = "Reactive"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #131194007
+// * ^expansion.contains[=].display = "Non-Reactive"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #280416009
+// * ^expansion.contains[=].display = "Indeterminate result"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #75540009
+// * ^expansion.contains[=].display = "High"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #455371000124106
+// * ^expansion.contains[=].display = "Invalid result"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #89292003
+// * ^expansion.contains[=].display = "Rare"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #262008008
+// * ^expansion.contains[=].display = "Not performed"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #17621005
+// * ^expansion.contains[=].display = "Normal"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #277025001
+// * ^expansion.contains[=].display = "Proven"

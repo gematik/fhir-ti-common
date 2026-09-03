@@ -57,107 +57,108 @@ Description: "Dieses Valueset enthält SNOMED CT® Codes zur Beschreibung von Au
 * $cs-sct-de-20260515#721001006 "Gastric drainage/decompression bag"
 * $cs-sct-de-20260515#408861001 "Wound drainage bag"
 * $cs-sct-de-20260515#736867000 "Wound drainage bag, sterile"
-* ^expansion.identifier = "urn:uuid:f7f448e8-a75b-11f1-beb2-005056ad42c6"
-* ^expansion.timestamp = 2026-09-03T07:54:46+02:00
-* ^expansion.total = 25
-* ^expansion.offset = 0
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #19923001
-* ^expansion.contains[=].display = "Catheter"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #706499002
-* ^expansion.contains[=].display = "Wearable urine collection bag"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #41323003
-* ^expansion.contains[=].display = "Urinary collection bag"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #303947005
-* ^expansion.contains[=].display = "Rod fixation system"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #27606000
-* ^expansion.contains[=].display = "Dental prosthesis"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #63112008
-* ^expansion.contains[=].display = "Bone wire"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #77777004
-* ^expansion.contains[=].display = "Bone staple"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #77444004
-* ^expansion.contains[=].display = "Bone pin"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #68183006
-* ^expansion.contains[=].display = "Bone screw"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #303503009
-* ^expansion.contains[=].display = "Musculoskeletal implant"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #257296003
-* ^expansion.contains[=].display = "Fixator"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #6012004
-* ^expansion.contains[=].display = "Hearing aid"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #407744008
-* ^expansion.contains[=].display = "Stoma appliance"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #417136005
-* ^expansion.contains[=].display = "Ileostomy bag"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #704902005
-* ^expansion.contains[=].display = "Colostomy irrigation bag"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #8407004
-* ^expansion.contains[=].display = "Bile collection bag"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #398013009
-* ^expansion.contains[=].display = "Implantable venous access port"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #303515008
-* ^expansion.contains[=].display = "Orbital implant"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #303500007
-* ^expansion.contains[=].display = "Auditory implant"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #701750003
-* ^expansion.contains[=].display = "Subcutaneous glucose sensor"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #464557001
-* ^expansion.contains[=].display = "Parenteral/enteral solution bag"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #30968007
-* ^expansion.contains[=].display = "Drainage bag"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #721001006
-* ^expansion.contains[=].display = "Gastric drainage/decompression bag"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #408861001
-* ^expansion.contains[=].display = "Wound drainage bag"
-* ^expansion.contains[+].system = $cs-sct
-* ^expansion.contains[=].version = $cs-sct-de-20260515
-* ^expansion.contains[=].code = #736867000
-* ^expansion.contains[=].display = "Wound drainage bag, sterile"
+
+// * ^expansion.identifier = "urn:uuid:f7f448e8-a75b-11f1-beb2-005056ad42c6"
+// * ^expansion.timestamp = 2026-09-03T07:54:46+02:00
+// * ^expansion.total = 25
+// * ^expansion.offset = 0
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #19923001
+// * ^expansion.contains[=].display = "Catheter"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #706499002
+// * ^expansion.contains[=].display = "Wearable urine collection bag"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #41323003
+// * ^expansion.contains[=].display = "Urinary collection bag"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #303947005
+// * ^expansion.contains[=].display = "Rod fixation system"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #27606000
+// * ^expansion.contains[=].display = "Dental prosthesis"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #63112008
+// * ^expansion.contains[=].display = "Bone wire"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #77777004
+// * ^expansion.contains[=].display = "Bone staple"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #77444004
+// * ^expansion.contains[=].display = "Bone pin"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #68183006
+// * ^expansion.contains[=].display = "Bone screw"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #303503009
+// * ^expansion.contains[=].display = "Musculoskeletal implant"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #257296003
+// * ^expansion.contains[=].display = "Fixator"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #6012004
+// * ^expansion.contains[=].display = "Hearing aid"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #407744008
+// * ^expansion.contains[=].display = "Stoma appliance"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #417136005
+// * ^expansion.contains[=].display = "Ileostomy bag"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #704902005
+// * ^expansion.contains[=].display = "Colostomy irrigation bag"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #8407004
+// * ^expansion.contains[=].display = "Bile collection bag"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #398013009
+// * ^expansion.contains[=].display = "Implantable venous access port"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #303515008
+// * ^expansion.contains[=].display = "Orbital implant"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #303500007
+// * ^expansion.contains[=].display = "Auditory implant"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #701750003
+// * ^expansion.contains[=].display = "Subcutaneous glucose sensor"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #464557001
+// * ^expansion.contains[=].display = "Parenteral/enteral solution bag"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #30968007
+// * ^expansion.contains[=].display = "Drainage bag"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #721001006
+// * ^expansion.contains[=].display = "Gastric drainage/decompression bag"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #408861001
+// * ^expansion.contains[=].display = "Wound drainage bag"
+// * ^expansion.contains[+].system = $cs-sct
+// * ^expansion.contains[=].version = $cs-sct-de-20260515
+// * ^expansion.contains[=].code = #736867000
+// * ^expansion.contains[=].display = "Wound drainage bag, sterile"
