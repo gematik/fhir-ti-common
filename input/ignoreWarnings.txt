@@ -35,6 +35,7 @@ Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
 %uses system 'https://gematik.de/fhir/epa-medication/CodeSystem/context-code' without a version%
 %multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'%
 %OID assigned%
+The link 'http://hl7.org/fhir/R4/valueset-diagnostic-requests.html' for "here" cannot be resolved
 
 # Ignoring Warnings: We are using a custom template of our own
 %publish box%
