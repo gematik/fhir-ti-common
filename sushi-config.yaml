@@ -176,6 +176,7 @@ parameters:
     - ValueSet/diagnosis-snomed-ct
     - ValueSet/laboratory-analyzer
     - ValueSet/observation-methods
+    - ValueSet/diagram-type
   special-url:
     - https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension
     - https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication

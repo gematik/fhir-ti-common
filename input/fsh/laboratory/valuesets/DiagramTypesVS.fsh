@@ -1,3 +1,5 @@
+// TODO: Move to de.gematik.terminology
+
 ValueSet: DiagramTypeVS
 Id: diagram-type
 Title: "Typisierung Messdiagramm"
