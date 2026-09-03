@@ -49,3 +49,36 @@ Description: "Example of a Practitioner resource conforming to the Practitioner 
 * name.given = "John"
 * gender = #male
 * birthDate = "1970-01-01"
+
+
+Instance: MaximaleBeispielinstanzTIPractitioner
+InstanceOf: TIPractitioner
+Description: "Maximale Beispielinstanz für das Profil TIPractitioner"
+* id = "00120bfc-a941-4bf4-8904-9eb09303dbfd"
+* meta
+  * versionId = "1"
+  * lastUpdated = "2023-05-03T11:15:00+01:00"
+* text
+  * status = #extensions
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>John Doe</div>"
+* identifier[LANR]
+  * type = $cs-v2-0203|5.0.0#LANR "Lifelong physician number"
+  * system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR"
+  * value = "123456789"
+* identifier[TelematikID]
+  * type = $cs-v2-0203|5.0.0#PRN "Provider number"
+  * system = "https://gematik.de/fhir/sid/telematik-id"
+  * value = "1-1.58.00000056"
+* name
+  * use = #official
+  * text = "Dr. Hans Glücklich"
+  * family = "Glücklich"
+  * given = "Hans"
+  * prefix = "Dr"
+    * extension[prefix-qualifier].valueCode = #AC
+* telecom
+  * system = #phone
+  * value = "12123455"
+* gender = #other
+* qualification[+].code = $TIPractitionerProfessionOidCS#1.2.276.0.76.4.30 "Ärztin/Arzt"
+* qualification[+].code = $FacharztCS#011001 "FA Allgemeinmedizin"

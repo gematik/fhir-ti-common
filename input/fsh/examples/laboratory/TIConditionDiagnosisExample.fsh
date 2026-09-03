@@ -1,10 +1,10 @@
 Instance: 1d344181-abf0-428d-9f3f-1bbd84b7684e
 InstanceOf: TIConditionDiagnosis
-Description: "Maximale Beispielinstanz für das Profil ConditiondgLP"
+Description: "Maximale Beispielinstanz für das Profil TIConditionDiagnosis"
 Usage: #example
-* text
-  * status = #extensions
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>John Doe</div>"
+// * text
+//   * status = #extensions
+//   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>John Doe</div>"
 * clinicalStatus = $cs-condition-clinical|3.0.0#active "Active"
 * verificationStatus = $cs-condition-ver-status|2.0.1#provisional "Provisional"
 * code
@@ -16,7 +16,7 @@ Usage: #example
   * coding[alphaId] = $cs-alpha-id|2020#I30919 "Klassische Cholera"
   * coding[snomed] = $cs-sct-de-20260515#63650001 "Cholera"
   * text = "Beispielkrankheit"
-* subject = Reference(Patient/84e01fa5-6763-4a96-99f3-170cf9b317ff)
+* subject = Reference(ExampleTIPatient)
   * identifier
     * type = $identifier-type-de-basis#KVZ10 "Krankenversichertennummer"
     * system = $sid-identifier-kvid-10

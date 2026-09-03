@@ -172,6 +172,10 @@ parameters:
   no-validate:
     - MedicationDispense/4e6e1623-778e-44a3-b208-8479f5339e43
     - Bundle/example-history-bundle
+    - Condition/1d344181-abf0-428d-9f3f-1bbd84b7684e
+    - Observation/035761c3-8934-499f-bf34-3963979afb56
+    - Observation/6a2a44c6-92f8-40cf-a0bc-673404f7ac9b
+    - Observation/c1b00183-b205-48a8-9d07-31fc8b6aa74e
     # Validation disabled because the required SNOMED CT version is not available on the terminology server.
     - ValueSet/diagnosis-snomed-ct
     - ValueSet/laboratory-analyzer

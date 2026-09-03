@@ -1,20 +1,20 @@
 Instance: 7813a2dc-36aa-41ce-b5f5-f338e944b5e9
 InstanceOf: TIObservationLaboratoryImageAttachment
-Description: "Maximale Beispielinstanz für das Profil ObservationImageAttachmentdgLP"
-* meta
-  * versionId = "1"
-  * lastUpdated = "2023-05-03T11:20:00+01:00"
-* text
-  * status = #extensions
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>John Doe</div>"
+Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratoryImageAttachment"
+// * meta
+//   * versionId = "1"
+//   * lastUpdated = "2023-05-03T11:20:00+01:00"
+// * text
+//   * status = #extensions
+//   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>John Doe</div>"
 * extension[value-r5].valueAttachment
   * contentType = #image/png
   * data = "dGVzdA=="
   * title = "Protein-Elektrophoresekurve"
 * status = #final
 * category[laboratory].coding = $cs-observation-category|4.0.1#laboratory "Laboratory"
-* code.coding[snomed] = $cs-sct-de-20260515#703450007 "Electrophoresis technique"
-* subject = Reference(Patient/84e01fa5-6763-4a96-99f3-170cf9b317ff)
+* code.coding[snomed] = $cs-sct-de-20260515#703450007 "Elektrophorese"
+* subject = Reference(ExampleTIPatient)
   * identifier
     * type = $identifier-type-de-basis#KVZ10 "Krankenversichertennummer"
     * system = $sid-identifier-kvid-10

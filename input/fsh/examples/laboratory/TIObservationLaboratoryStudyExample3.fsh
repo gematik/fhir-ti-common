@@ -1,12 +1,12 @@
 Instance: 6a2a44c6-92f8-40cf-a0bc-673404f7ac9b
 InstanceOf: TIObservationLaboratoryStudy
-Description: "Maximale Beispielinstanz für das Profil ObservationLaboratoryStudydgLP"
-* meta
-  * versionId = "1"
-  * lastUpdated = "2023-05-03T11:15:00+01:00"
-* text
-  * status = #extensions
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboruntersuchung</div>"
+Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratoryStudy"
+// * meta
+//   * versionId = "1"
+//   * lastUpdated = "2023-05-03T11:15:00+01:00"
+// * text
+//   * status = #extensions
+//   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboruntersuchung</div>"
 * extension[accredited].valueBoolean = true
 * extension[testProfile]
   * valueCodeableConcept.coding = https://gematik.de/fhir/ti/CodeSystem/test-profile#haemato "Hämatologie"
@@ -36,7 +36,7 @@ Description: "Maximale Beispielinstanz für das Profil ObservationLaboratoryStud
 * code
   * coding = $loinc-2.82#14933-6 "Harnsäure [Mol/Volumen] in Serum oder Plasma"
   * text = "additional text"
-* subject = Reference(Patient/84e01fa5-6763-4a96-99f3-170cf9b317ff)
+* subject = Reference(ExampleTIPatient)
   * identifier
     * type = $identifier-type-de-basis#KVZ10 "Krankenversichertennummer"
     * system = $sid-identifier-kvid-10

@@ -1,5 +1,6 @@
 Profile: TIDiagnosticReportLaboratory
-Parent: DiagnosticReportLabEu
+// Parent: DiagnosticReportLabEu
+Parent: DiagnosticReportEuCore
 Id: ti-diagnostic-report-laboratory
 Title: "TI Diagnostic Report Laboratory"
 Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin verschachtelt unter \"Ergebnisse\" (DiagnosticReport.result) ist die Referenz auf \"Untersuchungsgruppe\" (Observation_Laboratory_Study_Group), darin die Referenz auf \"Laboruntersuchung\" (Observation_Laboratory_Study), darin die Referenz auf \"Probe\" (Specimen)."
@@ -113,6 +114,8 @@ Description: "Profil für den Laborgesamtbefund (DiagnosticReport). Darin versch
     * ^short = "Freitext-Angaben zum ergänzenden Dokument"
   * link MS
     * extension MS
+    // Because this profile is based on DiagnosticReportEuCore rather than DiagnosticReportLabEu
+    * extension contains $diagnosticReport-link-xver named link 0..1 
     * extension[link] MS
       * ^definition = "Referenzierung auf ergänzende Dokumente"
       * ^short = "Referenzierung auf ergänzende Dokumente"

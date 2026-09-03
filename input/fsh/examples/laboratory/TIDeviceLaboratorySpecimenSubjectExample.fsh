@@ -1,13 +1,13 @@
 Instance: c46e7bfb-1ee3-4c6b-9ce2-204939133cc5
 InstanceOf: TIDeviceLaboratorySpecimenSubject
-Description: "Maximale Beispielinstanz für das Profil DeviceSpecimenSubjectdgLP"
+Description: "Maximale Beispielinstanz für das Profil TIDeviceLaboratorySpecimenSubject"
 Usage: #example
 * meta
   * versionId = "1"
   * lastUpdated = "2023-05-03T11:15:00+01:00"
-* text
-  * status = #extensions
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboranalysegerät</div>"
+// * text
+//   * status = #extensions
+//   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboranalysegerät</div>"
 * identifier
   * type.coding = $cs-v2-0203|5.0.0#UDI "Universal Device Identifier"
   * system = "http://goodcare.org/devices/id"
@@ -24,7 +24,7 @@ Usage: #example
   * coding[snomed] = $cs-sct-de-20260515#8407004	"Bile collection bag"
   * text = "Medizinisches Laboranalysegerät"
 * version.value = "v1"
-* patient = Reference(Patient/84e01fa5-6763-4a96-99f3-170cf9b317ff)
+* patient = Reference(ExampleTIPatient)
   * identifier
     * type = $identifier-type-de-basis#KVZ10 "Krankenversichertennummer"
     * system = $sid-identifier-kvid-10

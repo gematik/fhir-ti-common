@@ -1,13 +1,13 @@
 Instance: 18a30aa6-3b2d-4738-9ca9-125a452d14e0
 InstanceOf: TIDeviceLaboratoryAnalyzer
-Description: "Maximale Beispielinstanz für das Profil DeviceLaboratoryAnalyzerdgLP"
+Description: "Maximale Beispielinstanz für das Profil TIDeviceLaboratoryAnalyzer"
 Usage: #example
-* meta
-  * versionId = "1"
-  * lastUpdated = "2023-05-03T11:15:00+01:00"
-* text
-  * status = #extensions
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboranalysegerät</div>"
+// * meta
+//   * versionId = "1"
+//   * lastUpdated = "2023-05-03T11:15:00+01:00"
+// * text
+//   * status = #extensions
+//   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboranalysegerät</div>"
 * identifier
   * type.coding = $cs-v2-0203|5.0.0#UDI "Universal Device Identifier"
   * system = "http://goodcare.org/devices/id"

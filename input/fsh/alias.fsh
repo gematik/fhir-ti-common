@@ -137,6 +137,8 @@ Alias: $medicationRequest-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0
 Alias: $medicationDispense-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction
 Alias: $medicationStatement-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.renderedDosageInstruction
 
+Alias: $diagnosticReport-link-xver = http://hl7.org/fhir/StructureDefinition/alternate-reference
+
 //HL7
 Alias: $hl7-note = http://hl7.org/fhir/StructureDefinition/note
 Alias: $observation-value-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value

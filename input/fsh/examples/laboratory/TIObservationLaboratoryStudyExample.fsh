@@ -1,12 +1,12 @@
 Instance: 035761c3-8934-499f-bf34-3963979afb56
 InstanceOf: TIObservationLaboratoryStudy
-Description: "Maximale Beispielinstanz für das Profil ObservationLaboratoryStudydgLP"
-* meta
-  * versionId = "1"
-  * lastUpdated = "2023-05-03T11:15:00+01:00"
-* text
-  * status = #extensions
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboruntersuchung</div>"
+Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratoryStudy"
+// * meta
+//   * versionId = "1"
+//   * lastUpdated = "2023-05-03T11:15:00+01:00"
+// * text
+//   * status = #extensions
+//   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboruntersuchung</div>"
 * extension[accredited].valueBoolean = true
 * extension[testProfile]
   * valueCodeableConcept.coding = https://gematik.de/fhir/ti/CodeSystem/test-profile#haemato "Hämatologie"
@@ -31,7 +31,7 @@ Description: "Maximale Beispielinstanz für das Profil ObservationLaboratoryStud
 * code
   * extension[data-absent-reason].valueCode = #unknown
   * text = "Urate [Mass/volume] in Blood"
-* subject = Reference(Patient/84e01fa5-6763-4a96-99f3-170cf9b317ff)
+* subject = Reference(ExampleTIPatient)
   * identifier
     * type = $identifier-type-de-basis#KVZ10 "Krankenversichertennummer"
     * system = $sid-identifier-kvid-10
