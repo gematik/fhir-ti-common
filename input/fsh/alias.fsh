@@ -83,12 +83,14 @@ Alias: $epa-xds-practice-setting-code-vs = https://gematik.de/fhir/terminology/V
 Alias: $epa-mhd-document-relationship-type-vs = https://gematik.de/fhir/terminology/ValueSet/epa-mhd-document-relationship-type-vs
 Alias: $epa-xds-confidentiality-code-vs-url = https://gematik.de/fhir/terminology/ValueSet/epa-xds-confidentiality-code-vs
 Alias: $ti-vs-expansion-deprecated = https://gematik.de/fhir/terminology/StructureDefinition/valueset-expansion-deprecated
+Alias: $epa-data-category-other-vs = https://gematik.de/fhir/terminology/ValueSet/epa-data-category-other-vs
+
 
 Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
 /// CodeSystems
 Alias: $epa-data-category-medical-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs
 Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
-Alias: $epa-data-category-other-vs = https://gematik.de/fhir/terminology/ValueSet/epa-data-category-other-vs
+Alias: $ti-laboratory-test-profile-cs = https://gematik.de/fhir/ti/CodeSystem/laboratory-test-profile
 
 
 
