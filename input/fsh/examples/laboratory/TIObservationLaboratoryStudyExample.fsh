@@ -1,0 +1,70 @@
+Instance: 035761c3-8934-499f-bf34-3963979afb56
+InstanceOf: TIObservationLaboratoryStudy
+Description: "Maximale Beispielinstanz für das Profil ObservationLaboratoryStudydgLP"
+* meta
+  * versionId = "1"
+  * lastUpdated = "2023-05-03T11:15:00+01:00"
+* text
+  * status = #extensions
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboruntersuchung</div>"
+* extension[accredited].valueBoolean = true
+* extension[testProfile]
+  * valueCodeableConcept.coding = https://gematik.de/fhir/ti/CodeSystem/test-profile#haemato "Hämatologie"
+  * valueCodeableConcept.text = "Hämatologie"
+* extension[externalService].valueBoolean = true
+* extension[associationService].valueBoolean = true
+* extension[zlogValue].valueDecimal = 2.00
+* identifier[0]
+  * type.coding = $cs-v2-0203|5.0.0#OBI "Observation Instance Identifier"
+  * system = "http://www.acmedasdd.com/identifiers/patient"
+  * value = "123456"
+* identifier[+]
+  * type.coding = $cs-v2-0203|5.0.0#UDI "Universal Device Identifier"
+  * system = "http://www.acmedasdd.com/identifiers/patient"
+  * value = "123456"
+* status = #final
+* category[laboratory]
+  * coding = $cs-observation-category#laboratory "Laboratory"
+* category[studyType]
+  * coding = $loinc#18717-9 "Blood bank studies (set)"
+  * text = "test"
+* code
+  * extension[data-absent-reason].valueCode = #unknown
+  * text = "Urate [Mass/volume] in Blood"
+* subject = Reference(Patient/84e01fa5-6763-4a96-99f3-170cf9b317ff)
+  * identifier
+    * type = $identifier-type-de-basis#KVZ10 "Krankenversichertennummer"
+    * system = $sid-identifier-kvid-10
+    * value = "K123456789"
+* effectiveDateTime = "2021-11-15T11:30:00+01:00"
+* issued = "2021-11-15T11:30:00+01:00"
+* performer = Reference(PractitionerRole/a424d6c6-de52-443e-a9b2-5240d3b9401a)
+* valueQuantity = 6.5 $cs-ucum#mg/dL "mg/dL"
+* interpretation
+  * coding[hl7Interpretation]
+    * system = "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+    * version = "4.0.0"
+    * code = #CAR
+    * display = "Carrier"
+  * coding[snomed] = $cs-sct-de-20260515#371152001 "Assisted (qualifier value)"
+  * text = "test"
+* note.text = "**Name**"
+* method.coding = $cs-sct-de-20260515#4241000179101 "Laboratory report (record artifact)"
+* method.text = "Blutgruppe"
+* specimen = Reference(Specimen/4f47fe9c-d92e-46f4-ad6d-85740aaa467b)
+* device = Reference(Device/18a30aa6-3b2d-4738-9ca9-125a452d14e0)
+* referenceRange
+  * extension[sourceReferenceRange].valueCodeableConcept
+    * coding = $cs-sct-de-20260515#260394003 "Normal limits (qualifier value)"
+    * text = "note"
+  * extension[noLinearReferenceRange].valueBoolean = true
+  * low = 3.0 $cs-ucum#mg/dL "mg/dL"
+  * high = 10.0 $cs-ucum#mg/dL "mg/dL"
+  * type
+    * coding = $cs-referencerange-meaning|1.0.1#type "Type"
+    * text = "test"
+  * appliesTo.coding = http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use#female-typical	"Apply female-typical setting or reference range"
+  * appliesTo.coding.version = "2.0.0"
+  * appliesTo.text = "Test"
+  * text = "test"
+* derivedFrom = Reference(Observation/035761c3-8934-499f-bf34-3963979afb56)
