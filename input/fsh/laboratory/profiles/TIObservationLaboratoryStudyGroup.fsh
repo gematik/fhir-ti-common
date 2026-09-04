@@ -111,4 +111,4 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
     * ^short = "Sortiernummer Laboruntersuchung innerhalb der Untersuchungsgruppe"
     * value[x] MS
     * valuePositiveInt MS
-  * insert ReferenceMS
+  * insert OnlyReferenceMS

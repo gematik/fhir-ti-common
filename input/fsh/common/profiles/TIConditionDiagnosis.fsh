@@ -51,7 +51,7 @@ Basierend auf dem alphabetischen Verzeichnis der deutschen Modifikation der Inte
     * ^comment = "Bei Alpha-ID-Codes, die zu postkoordinierten ICD-10-Codes gemappt werden, sollten diese nur einmal bei der Primärdiagnose und nicht mehr bei den Sekundärdiagnosen angeben werden (Stichpunkt: related Conditions in FHIR). In Fällen bei denen eine abweichende Diagnosesicherheit zwischen Primär- und Sekundärdiagnose vorhanden ist muss sichergestellt werden, dass die Diagnosesicherheit der Primärdiagnose zu dem assozierten Alpha-ID-Code passt. Siehe der Implementierungsguide (IG) der deutschen Basisprofile von HL7"
     * insert CodingMS
     * version 1..1
-  * coding[snomed] from DiagnosisSNOMEDCTVS (required)
+  * coding[snomed] from $ti-vs-diagnosis-snomed-ct (required)
   * coding[snomed] MS
     * ^definition = "In diesem Element wird der Code für die Diagnose als SNOMED CT®-Code angegeben, inklusive Anzeigename (Display Name) sowie Name und Version des Codesystems.\n
 SNOMED CT® bietet eine umfassende Codiermöglichkeit zu medizinischen Diagnosen, Befunden und Ereignissen. Dazu gehören beispielsweise alle Children der \"(Finding)\"-Konzepte, darunter auch die \"(Disorder)\"-Konzepte."
@@ -68,3 +68,4 @@ ORPHANET ist eine Initiative der Europäischen Union mit französischen Wurzeln 
 * insert SubjectEu(subject)
 
 * recorder only Reference(TIPractitionerRole or TIPractitioner  or TIPatient or RelatedPerson)
+  * insert OnlyReferenceMS

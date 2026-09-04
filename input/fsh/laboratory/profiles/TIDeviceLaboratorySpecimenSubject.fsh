@@ -25,7 +25,7 @@ Es ist möglich, dass eine Probenentnahme aus mehreren außerkörperlichen Quell
   * type MS
 * definition MS
   * ^definition = "In diesem Element wird die DeviceDefinition für die Kategorisierung als außerkörperliche Quelle referenziert."
-  * insert ReferenceMS
+  * insert OnlyReferenceMS
 * definition only Reference(TIDeviceDefinitionSpecimenSubject)
 * udiCarrier MS
   * ^definition = """
@@ -56,7 +56,7 @@ UDI-DI ist der \"Device Identifier\". Es ist der statische Teil der UDI. Er enth
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains snomed 0..1 MS
-  * coding[snomed] from ExtracorporalDeviceVS (example)
+  * coding[snomed] from $ti-vs-extracorporal-device (example)
   * coding[snomed] ^patternCoding.system = $cs-sct
   * coding[snomed]
     * insert CodingMS

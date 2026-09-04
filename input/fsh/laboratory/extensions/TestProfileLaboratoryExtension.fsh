@@ -11,7 +11,7 @@ Context: Observation
 // * ^status = #active
 
 * value[x] only CodeableConcept
-* valueCodeableConcept from LaboruntersuchungsgruppeVS (example)
+* valueCodeableConcept from $ti-vs-laboruntersuchungsgruppe (example)
 * valueCodeableConcept 1..1
   * coding
     * system 1..1

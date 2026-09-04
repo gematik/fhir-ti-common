@@ -113,19 +113,36 @@ Alias: $epa-xds-confidentiality-code-vs-url = https://gematik.de/fhir/terminolog
 Alias: $ti-vs-expansion-deprecated = https://gematik.de/fhir/terminology/StructureDefinition/valueset-expansion-deprecated
 Alias: $epa-data-category-other-vs = https://gematik.de/fhir/terminology/ValueSet/epa-data-category-other-vs
 
+Alias: $ti-vs-body-structure-clock-face-position = https://gematik.de/fhir/terminology/ValueSet/body-structure-clock-face-position
+Alias: $ti-vs-body-structure-localisation = https://gematik.de/fhir/terminology/ValueSet/body-structure-localisation
+Alias: $ti-vs-diagnosis-snomed-ct = https://gematik.de/fhir/terminology/ValueSet/diagnosis-snomed-ct
+Alias: $ti-vs-laboratory-analyzer = https://gematik.de/fhir/terminology/ValueSet/laboratory-analyzer
+Alias: $ti-vs-extracorporal-device = https://gematik.de/fhir/terminology/ValueSet/extracorporal-device
+Alias: $ti-vs-diagram-type =  https://gematik.de/fhir/terminology/ValueSet/diagram-type
+Alias: $ti-vs-laboruntersuchungsgruppe = https://gematik.de/fhir/terminology/ValueSet/laboruntersuchungsgruppe
+Alias: $ti-vs-data-absent-reason-laboratory = https://gematik.de/fhir/terminology/ValueSet/data-absent-reason-laboratory
+Alias: $ti-vs-observation-methods = https://gematik.de/fhir/terminology/ValueSet/observation-methods
+Alias: $ti-vs-reference-range-applies-to = https://gematik.de/fhir/terminology/ValueSet/reference-range-applies-to
+Alias: $ti-vs-specimen-identifier-type = https://gematik.de/fhir/terminology/ValueSet/specimen-identifier-type
+Alias: $ti-vs-specimen-type = https://gematik.de/fhir/terminology/ValueSet/specimen-type
+Alias: $ti-vs-specimen-collection-method = https://gematik.de/fhir/terminology/ValueSet/specimen-collection-method
+Alias: $ti-vs-specimen-condition = https://gematik.de/fhir/terminology/ValueSet/specimen-condition
+Alias: $ti-vs-secondary-status = https://gematik.de/fhir/terminology/ValueSet/secondary-status
+Alias: $ti-vs-laboratory-study-value = https://gematik.de/fhir/terminology/ValueSet/laboratory-study-value
+
 
 Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
 /// CodeSystems
 Alias: $epa-data-category-medical-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs
 Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
-Alias: $ti-laboratory-test-profile-cs = https://gematik.de/fhir/ti/CodeSystem/laboratory-test-profile
+Alias: $ti-laboratory-test-profile-cs = https://gematik.de/fhir/terminology/CodeSystem/laboratory-test-profile
 
 
 /// CodeSystems
 Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
 Alias: $epa-data-category-medical-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs
 Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
-Alias: $ti-secondary-status = https://gematik.de/fhir/ti/CodeSystem/secondary-status
+Alias: $ti-secondary-status = https://gematik.de/fhir/terminology/CodeSystem/secondary-status
 
 
 //// Extensions

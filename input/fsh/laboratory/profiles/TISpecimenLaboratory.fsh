@@ -29,7 +29,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
   * valueReference only Reference(TIDeviceLaboratorySpecimenSubject)
 * identifier MS
   * insert IdentifierMS
-  * type from SpecimenIdentifierTypeVS (extensible)
+  * type from $ti-vs-specimen-identifier-type (extensible)
   * type MS
     * ^definition = """
     Für die Probe können unterschiedliche Identifikatoren vergeben werden. Unterschieden werden beispielsweise \"Identifkator, den die auftragerteilende Institution vergibt\" (Order-Placer, Einsender) und \"Identifkator, den die auftragserfüllende Laboreinrichtung vergibt\" (Order-Filler, Auftragnehmer). Der ID-Typ gibt an, um welche Art von Proben-Identifikator es sich handelt.
@@ -69,7 +69,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains snomed 0..1 MS
-  * coding[snomed] from SpecimenTypeVS (extensible)
+  * coding[snomed] from $ti-vs-specimen-type (extensible)
   * coding[snomed]
     * ^definition = "Hier kann ein Code aus SNOMED CT® angegeben werden."
     * ^patternCoding.system = $cs-sct
@@ -87,7 +87,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
   * ^definition = "Zeitpunkt des Eingangs der Probe im Labor. Dieser Zeitpunkt sollte nach Möglichkeit minutengenau angegeben werden. Im klinischen Alltag ist die minutengenaue Erfassung nicht immer realistisch."
 * parent MS
   * ^definition = "Ausgangsmaterial für eine Sekundärprobe. Die Sekundärprobe existiert nur auf Basis einer Primärprobe. Wenn eine Sekundärprobe angegeben wird, dann ist das Ausgangsmaterial verpflichtend anzugeben, damit der Bezug hergestellt werden kann."
-  * insert ReferenceMS
+  * insert OnlyReferenceMS
 * parent only Reference(TISpecimenLaboratory)
 * collection MS
   * ^definition = "Optionale Angaben zur Probengewinnung, dazu gehören: Zeitangabe, Methode der Probengewinnung, Entnahmeort, Angabe zum Nüchternstatus."
@@ -99,7 +99,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
     """
     * ^short = "Körperstelle der Probenentnahme"
     * valueReference MS
-      * insert ReferenceMS
+      * insert OnlyReferenceMS
     * valueReference only Reference(TIBodyStructure)
   * collector MS
     * ^definition = "Person, welche die Probe entnimmt."
@@ -146,7 +146,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
       * ^slicing.discriminator.path = "$this"
       * ^slicing.rules = #open
     * coding contains snomed 0..1 MS
-    * coding[snomed] from SpecimenCollectionMethodVS (example)
+    * coding[snomed] from $ti-vs-specimen-collection-method (example)
     * coding[snomed]
       * ^patternCoding.system = $cs-sct
       * insert CodingMS
@@ -194,7 +194,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
   * additive MS
     * ^definition = "Referenzierung auf Additiva, die bei der Probenweiterverarbeitung hinzugefügt werden."
     * ^short = "Probenzusätze in der Probenverarbeitung"
-    * insert ReferenceMS
+    * insert OnlyReferenceMS
   * additive only Reference(TISpecimenAdditiveSubstanceLaboratory)
   * time[x] MS
     * ^definition = "Hier wird eine Zeitangabe vorgenommen."
@@ -223,7 +223,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
     * insert QuantityMS
     * value MS
       * ^definition = "Numerischer Wert für eine gemessene Größe, eine Zahl mit optionalen Dezimalstellen."
-* condition from SpecimenConditionVS (extensible)
+* condition from $ti-vs-specimen-condition (extensible)
 * condition MS
   * ^definition = "Hier wird eine Angabe zum Zustand der Probe gemacht."
   * coding MS

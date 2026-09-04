@@ -43,7 +43,7 @@ Referenzierung auf die auftraggebende bzw. einsendende Person/Einrichtung. Diese
 * Kontaktperson
 """
   * ^short = "Einsender:in, Auftraggeber:in"
-  * insert ReferenceMS
+  * insert OnlyReferenceMS
 * requester only Reference(TIPractitioner or TIPractitionerRole or TIOrganization or TIPatient or TIRelatedPerson or Device)
 * reasonCode MS
   * ^definition = """
@@ -59,11 +59,11 @@ Referenzierung auf die auftraggebende bzw. einsendende Person/Einrichtung. Diese
     * valueString MS
   * text MS
 * reasonReference MS
-  * insert ReferenceMS
+  * insert OnlyReferenceMS
 * supportingInfo MS
   * ^definition = "Klinische Angaben aus dem Laborauftrag, die für die Befundung wichtig sind, können hier angegeben werden. Das sind beispielsweise Angaben zur Medikation oder zur gesundheitlichen Konstitution."
   * ^short = "Klinische Angaben aus dem Laborauftrag"
-  * insert ReferenceMS
+  * insert OnlyReferenceMS
 * specimen only Reference(TISpecimenLaboratory)
 * note MS
   * ^definition = "Ergänzende Angaben zum Auftrag, z. B. Institutionsspezifische administrative Zuordnung (\"Tour-Nummer\"; \"Tagebuch-Nummer\"). Der Inhalt dieses Elementes kann den Angaben zu \"Auftragsbezogene Hinweise\" aus der LDT-Kommunikation entsprechen."
