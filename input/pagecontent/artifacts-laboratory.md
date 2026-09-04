@@ -19,7 +19,6 @@
 ### Ressourcenprofile
 
 {% capture laboratory-profiles %}
-StructureDefinition/ti-diagnostic-report-laboratory,
 StructureDefinition/ti-device-laboratory-specimen-subject,
 StructureDefinition/ti-device-laboratory-analyzer,
 StructureDefinition/ti-device-definition-laboratory-analyzer,
