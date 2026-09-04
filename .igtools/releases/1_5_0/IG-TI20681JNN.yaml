@@ -2,11 +2,11 @@ actor:
 - EPA-Medication-Service
 - TI-Flow_FD
 conformance: SHALL
-content_hash: 62f18d11762818aaa3458a83ec90a387d9818325d8f6f47c18cb4d5dc4764f6b
+content_hash: 22f99abf45ab820cb839cebd2196a5d0b09fa54f9dca03c3bb353ff63f50d3d5
 created: '2026-08-31T12:32:04.709554'
-date: '2026-08-31T12:32:04.709557'
+date: '2026-09-04T14:48:04.950857'
 key: IG-TI20681JNN
-modified: '2026-08-31T12:32:04.709556'
+modified: '2026-09-04T14:48:04.950857'
 release_status: NEW
 source: input/pagecontent/validation.md
 status: ACTIVE
@@ -16,7 +16,7 @@ test_procedures:
   TI-Flow_FD:
   - Produkttest
 text: Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten
-  Dosierungstext unformatiert in `OperationOutcome.extension[expectedDosageText].valueString`
+  Dosierungstext unformatiert in `OperationOutcome.extension[expectedDosageText].valueMarkdown`
   einsetzen.
 title: Strukturierte Dosierung - Rückgabe erwarteter Dosierungstext
 version: 0
