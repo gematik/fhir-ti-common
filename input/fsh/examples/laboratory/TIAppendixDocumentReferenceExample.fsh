@@ -9,10 +9,10 @@ Description: "Maximale Beispielinstanz für das Profil TIAppendixDocumentReferen
 //   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>John Doe</div>"
 * status = #current
 * type
-  * coding[xds] = http://ihe-d.de/CodeSystems/IHEXDStypeCode|4.0.0#PATI "Patienteninformationen"
+  * coding[xds] = http://ihe-d.de/CodeSystems/IHEXDStypeCode|3.0.0#PATI "Patienteninformationen"
   * text = "test"
 * category
-  * coding[xds] = http://ihe-d.de/CodeSystems/IHEXDSclassCode|4.0.0#ADM "Administratives Dokument"
+  * coding[xds] = http://ihe-d.de/CodeSystems/IHEXDSclassCode|3.0.0#ADM "Administratives Dokument"
   * text = "test"
 * subject = Reference(ExampleTIPatient)
   * identifier
