@@ -26,9 +26,24 @@ Alias: $sid-medication-plan-identifier = https://gematik.de/fhir/sid/emp-identif
 Alias: $cs-operation-outcome = http://terminology.hl7.org/CodeSystem/operation-outcome
 Alias: $cs-ucum = http://unitsofmeasure.org
 Alias: $loinc = http://loinc.org
+Alias: $loinc-2.82 = http://loinc.org|2.82
 Alias: $cs-sct = http://snomed.info/sct
 Alias: $cs-sct-de-20260515 = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20260515
 Alias: $cs-orphanet = http://www.orpha.net
+Alias: $cs-alpha-id = http://fhir.de/CodeSystem/bfarm/alpha-id
+
+
+Alias: $cs-v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $cs-v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
+Alias: $cs-v2-0371 = http://terminology.hl7.org/CodeSystem/v2-0371
+Alias: $cs-v2-0373 = http://terminology.hl7.org/CodeSystem/v2-0373
+Alias: $cs-v2-0493 = http://terminology.hl7.org/CodeSystem/v2-0493
+Alias: $cs-referencerange-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
+Alias: $cs-observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $cs-condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $cs-condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
+
+
 
 Alias: $cs-v2-0493 = http://terminology.hl7.org/CodeSystem/v2-0493
 Alias: $cs-v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
@@ -44,6 +59,15 @@ Alias: $cs-ask = http://fhir.de/CodeSystem/ask
 Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $cs-pzn = http://fhir.de/CodeSystem/ifa/pzn
 Alias: $icd-10-gm = http://fhir.de/CodeSystem/bfarm/icd-10-gm
+Alias: $KBV_CS_SFHIR_ICD_SEITENLOKALISATION = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION
+Alias: $KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT
+Alias: $icd-10-gm-mehrfachcodierungs-kennzeichen = http://fhir.de/CodeSystem/icd-10-gm-mehrfachcodierungs-kennzeichen
+
+
+Alias: $identifier-type-de-basis = http://fhir.de/CodeSystem/identifier-type-de-basis
+Alias: $sid-identifier-kvid-10 = http://fhir.de/sid/gkv/kvid-10
+Alias: $fachabteilungsschluessel-de-basis = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel
+Alias: $fachabteilungsschluessel-erweitert-de-basis = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert
 
 // Schlüsseltabellen CS
 Alias: $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM
@@ -112,6 +136,8 @@ Alias: $medicationRequest-effectiveDosePeriod-r5 = http://hl7.org/fhir/5.0/Struc
 Alias: $medicationRequest-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction
 Alias: $medicationDispense-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction
 Alias: $medicationStatement-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.renderedDosageInstruction
+
+Alias: $diagnosticReport-link-xver = http://hl7.org/fhir/StructureDefinition/alternate-reference
 
 //HL7
 Alias: $hl7-note = http://hl7.org/fhir/StructureDefinition/note
