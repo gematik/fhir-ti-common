@@ -65,7 +65,7 @@
                     "path": "validation.html",
                     "diff": {
                         "1.4.0": {
-                            "text": "--- text.old\n+++ text.new\n@@ -2,3 +2,4 @@\n \n - `MedicationRequest.dosageInstruction`\n - `MedicationDispense.dosageInstruction`\n+- `MedicationStatement.dosage`",
+                            "text": "--- text.old\n+++ text.new\n@@ -1,4 +1,6 @@\n Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n-\n-- `MedicationRequest.dosageInstruction`\n-- `MedicationDispense.dosageInstruction`\n+ <ul>\n+ <li>MedicationRequest.dosageInstruction</li>\n+ <li>MedicationDispense.dosageInstruction</li>\n+ <li>MedicationStatement.dosage</li>\n+ </ul>",
                             "title": "",
                             "conformance": ""
                         }

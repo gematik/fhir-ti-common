@@ -1649,7 +1649,7 @@
             "title": "Strukturierte Dosierung - Anwendung der Validierung",
             "version": 1,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n\n- `MedicationRequest.dosageInstruction`\n- `MedicationDispense.dosageInstruction`\n- `MedicationStatement.dosage`",
+            "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n <ul>\n <li>MedicationRequest.dosageInstruction</li>\n <li>MedicationDispense.dosageInstruction</li>\n <li>MedicationStatement.dosage</li>\n </ul>",
             "conformance": "SHALL",
             "characteristics": [
                 {

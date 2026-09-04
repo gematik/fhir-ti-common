@@ -109,10 +109,11 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
      Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:
-
-- `MedicationRequest.dosageInstruction`
-- `MedicationDispense.dosageInstruction`
-- `MedicationStatement.dosage`
+    <ul>
+        <li>MedicationRequest.dosageInstruction</li>
+        <li>MedicationDispense.dosageInstruction</li>
+        <li>MedicationStatement.dosage</li>
+    </ul>
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI20681JNN" title="Strukturierte Dosierung - Rückgabe erwarteter Dosierungstext" version="0">
