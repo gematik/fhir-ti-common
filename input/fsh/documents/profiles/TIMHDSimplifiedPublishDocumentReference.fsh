@@ -75,14 +75,14 @@ Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentRef
   * target MS
     * identifier 0..1 MS
     * identifier only IHE.MHD.EntryUUID.Identifier
-* securityLabel 0..* MS
+* securityLabel 1..* MS
   * ^short = "Vertraulichkeitskennzeichnung und Datenkategorie des Dokuments"
   * ^definition = "Vertraulichkeitskennzeichnung des Dokuments (DocumentEntry.confidentialityCode)"
   * ^comment = "Der Confidentiality Code drückt die Vertraulichkeitsstufe des Dokuments aus. Die Vertraulichkeitsstufe ist üblicherweise die Einschätzung des Autors oder des Einstellenden wie schützenswert das Dokument ist. Die Einschätzung des Autors oder Erstellers sollte erhalten bleiben, auch wenn die des Betroffenen (d.h. des Patienten) davon abweicht. Das heißt, dass man dem Dokument mehrere ConfidentialityCodes zuordnen können sollte. Dies unterstützt IHE XDS auch. Daher enthält das deutsche Value Set neben Codes der Autoreneinschätzung explizite Codes zur Betroffeneneinschätzung, die aus einem separaten, dediziertem Codesystem stammen. Die Datenkategorie des Dokuments entsprechend der ePA Legal Policy ist ebenso Bestandteil dieser Liste."
   * coding MS
     * ^definition = "Vertraulichkeitskennzeichnung und Datenkategorie des Dokuments in kodierter Form"
     * ^comment = "n/a"
-  * coding from $epa-xds-confidentiality-code-vs-url (required)
+  * coding from $epa-mhd-security-label-vs (required)
     * ^definition = "n/a"
     * system 1.. MS
     * code 1.. MS
@@ -118,6 +118,7 @@ Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentRef
   * ^definition = "Global eindeutiger Code für das Dokumentenformat (DocumentEntry.formatCode)"
   * ^comment = "Das Attribut 'formatCode' spezifiziert das Format des Dokumentes. Zusammen mit dem typeCode (und ggf. mit dem mimeType) soll der formatCode für hinreichende Information sorgen, um einem Dokument-Konsumenten die Entscheidung zu ermöglichen, ob und wie er das Dokumentenformat verarbeiten kann."
 * content.format from $epa-xds-format-code-vs (required)
+* context 1..1 MS
 * context.period 0..1 MS
 * context.period.start 0..1 MS
   * ^short = "Zeitpunkt, an dem das im Dokument dokumentierte (Behandlungs-)Ereignis begonnen wurde"
