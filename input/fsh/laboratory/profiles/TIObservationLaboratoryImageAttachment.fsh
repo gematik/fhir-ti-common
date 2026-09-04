@@ -35,7 +35,7 @@ Description: "Abbildung, die zu einer Laboruntersuchung oder einer Untersuchungs
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains snomed 0..1 MS
-  * coding[snomed] from DiagramTypeVS (preferred)
+  * coding[snomed] from $ti-vs-diagram-type (preferred)
   * coding[snomed]
     * ^patternCoding.system = $cs-sct
   * text MS
@@ -62,5 +62,5 @@ Description: "Abbildung, die zu einer Laboruntersuchung oder einer Untersuchungs
   * text 1.. MS
 * derivedFrom 1.. MS
   * ^definition = "Hier wird die Untersuchung oder Untersuchungsgruppe referenziert, auf die sich der Untersuchungsbild-Anhang bezieht."
-  * insert ReferenceMS
+  * insert OnlyReferenceMS
 * derivedFrom only Reference(TIObservationLaboratoryStudyGroup or TIObservationLaboratoryStudy)

@@ -9,7 +9,7 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
 //   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboruntersuchung</div>"
 * extension[accredited].valueBoolean = true
 * extension[testProfile]
-  * valueCodeableConcept.coding = https://gematik.de/fhir/ti/CodeSystem/laboratory-test-profile#haemato "Hämatologie"
+  * valueCodeableConcept.coding = $ti-laboratory-test-profile-cs#haemato "Hämatologie"
   * valueCodeableConcept.text = "Hämatologie"
 * extension[externalService].valueBoolean = true
 * extension[associationService].valueBoolean = true

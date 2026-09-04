@@ -160,7 +160,7 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
     * ^definition = "Begründung für die Nicht-Vergabe eines Codes zur Laboruntersuchung"
     * ^short = "Grund für das Nichtvorhandensein eines Codes"
     * valueCode MS
-    * valueCode from DataAbsentReasonLaboratoryVS (required)
+    * valueCode from $ti-vs-data-absent-reason-laboratory (required)
   * coding MS
     * ^definition = "In diesem Element wird ein Code für die Laboruntersuchung angegeben."
     * insert CodingMS
@@ -210,7 +210,7 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains snomed 0..1 MS
-  * coding[snomed] from LaboratoryStudyValueVS (example)
+  * coding[snomed] from $ti-vs-laboratory-study-value (example)
   * coding[snomed]
     * ^definition = "Darstellung des qualitativen Messergebnisses als SNOMED CT®-Code."
     * ^patternCoding.system = $cs-sct
@@ -288,7 +288,7 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   * coding MS
     * ^definition = "Hier kann die Untersuchungsmethode als codierte Information angegeben werden."
     * insert CodingMS
-  * coding from ObservationMethodVS (example)
+  * coding from $ti-vs-observation-methods (example)
   * text MS
     * ^definition = """
     Hier kann eine Freitext-Bezeichnung der Untersuchungsmethode notiert werden. Mögliche Verwendung:\n
@@ -301,12 +301,12 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   Eine Laboruntersuchung kann auf einer Primärprobe oder einer weiter verarbeiteten Probe (Sekundärprobe) basieren. Die Zuordnung einer Sekundärprobe zu einer Laboruntersuchung ist dann empfehlenswert, wenn durch die Probenvorbereitung im Labor eine relevante Veränderung des Untersuchungsmaterials erfolgt (z.B. Abtrennung Plasma).\n
   Ein Beispiel für die Unterscheidung zwischen Primärprobe und Sekundärprobe: als Primärprobe erreicht eine Probenart = Vollblut das Labor. Durch Zentrifugieren im Labor entsteht eine Sekundärprobe mit Probenart = Serum. Die zu analysierende Substanz wird im Serum gemessen.
   """
-  * insert ReferenceMS
-// * specimen only Reference(TISpecimenLaboratory)
+  * insert OnlyReferenceMS
+* specimen only Reference(TISpecimenLaboratory)
 * device MS
   * ^definition = "Hier wird das Gerät bzw. Medizinprodukt referenziert, mit dem die Laboruntersuchung durchgeführt wird."
   * ^short = "Laboranalysegerät"
-  * insert ReferenceMS
+  * insert OnlyReferenceMS
 * device only Reference(TIDeviceLaboratoryAnalyzer)
 * referenceRange MS
   * ^definition = """
@@ -408,7 +408,7 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
     * Kind (Beginn des 4. bis zum vollendeten 12. Lebensjahr)\n
     Bei den Angaben zum Kollektiv können mehrere Angaben kombiniert aufgeführt werden. Zusätzlich zur Freitextangabe einer LDT-Information ist in FHIR® auch die Codierung möglich.
     """
-    * coding from ReferenceRangeAppliesToVS (example)
+    * coding from $ti-vs-reference-range-applies-to (example)
     * coding MS
       * ^definition = """
       Hier kann der \"Kollektiv-Bezug\" als codierte Information angegeben werden.\n
@@ -422,5 +422,5 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
 * hasMember ..0
 * derivedFrom MS
   * ^definition = "Laboruntersuchungen, die als Berechnung erstellt werden, können auf Laboruntersuchungen beruhen, die hier referenziert werden. Hierbei ist zu beachten, dass die Angabe solch referenzierter Messunge(en) nicht zwingend vollständig ist."
-  * insert ReferenceMS
+  * insert OnlyReferenceMS
 * derivedFrom only Reference(TIObservationLaboratoryStudy)

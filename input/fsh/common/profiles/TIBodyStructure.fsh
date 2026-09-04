@@ -43,14 +43,14 @@ Angaben zur Körperstruktur können enthalten:\n
     * extension[clockFacePosition] MS
       * ^definition = "Eine Beschreibung der Richtung, in der sich etwas von einem Orientierungspunkt entfernt befindet, basierend auf einem radialen Zifferblatt, als sogenannte Uhr-Position (Bsp. 3-Uhr-Position, 12 Uhr-Position)."
       * ^short = "Örtliche Präzisierung als Uhrzeigerposition"
-      * valueCodeableConcept from BodyStructureClockFacePositionVS (preferred)
+      * valueCodeableConcept from $ti-vs-body-structure-clock-face-position (preferred)
       * valueCodeableConcept MS
         * insert CodeableConceptMS
         * text MS
   * extension[qualifier] MS
     * ^definition = "An dieser Stelle kann eine präzisere Beschreibung der Lokalisation innerhalb einer Körperstruktur / eines Organs / Körperteils abgebildet werden. Es geht um räumliche Angaben, beispielsweise: oben, unten, medial, lateral oder Angabe eines Quadranten."
     * ^short = "Örtliche Qualifizierung oder Präzisierung einer anatomischen Körperstelle"
-    * valueCodeableConcept from BodyStructureLocalisationVS (preferred)
+    * valueCodeableConcept from $ti-vs-body-structure-localisation  (preferred)
     * valueCodeableConcept MS
       * insert CodeableConceptMS
       * text MS

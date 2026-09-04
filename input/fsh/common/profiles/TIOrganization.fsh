@@ -57,4 +57,4 @@ Description: "Definiert die Datenstruktur für medizinische, regulatorische und 
   * postalCode MS
   * country MS
 * partOf MS
-  * insert ReferenceMS
+  * insert OnlyReferenceMS

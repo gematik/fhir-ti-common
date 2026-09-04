@@ -98,6 +98,16 @@ RuleSet: RatioMS
 * denominator MS
   * insert QuantityMS
 
+
+RuleSet: OnlyReferenceMS
+* reference MS
+* display MS
+
+RuleSet: OnlyReferenceIdentifierMS
+* identifier MS
+  * insert IdentifierMS
+* display MS
+
 RuleSet: ReferenceMS
 * reference MS
 * identifier MS

@@ -17,7 +17,7 @@ Description: "In diesem Profil werden Informationen zum Analysegerät angegeben,
   * type MS
 * definition MS
   * ^definition = "In diesem Element wird die DeviceDefinition für die Kategorisierung als Laboranalysegerät referenziert."
-  * insert ReferenceMS
+  * insert OnlyReferenceMS
 * definition only Reference(TIDeviceDefinitionLaboratoryAnalyzer)
 * udiCarrier MS
   * ^definition = "Das Akronym UDI steht für Unique Device Identification und beschreibt ein Identifikationssystem mit eigenen Kennzahlen für jedes Medizinprodukt, was die Rückverfolgbarkeit des Produkts weltweit gewährleistet. Mit der Medical Device Regulation (MDR) zum 26. Mai 2020 wurde das System für alle Medizinprodukte inkl. In-vitro-Diagnostika verpflichtend (Ausnahmen Sonderanfertigungen). Für die letztendliche Anbringung am Produkt (UDI-Träger) selbst gibt es, gestuft nach Produktklassen, Fristen ab 2021. Voraussetzung für die Umsetzung und Erstellung der UDI ist die Registrierung bei einer der Zuteilungsstellen (aktuell: GS1, IFA, HIBCC, ICCBBA). Die UDI-Identifikation beinhaltet zwei Teile:\n
@@ -52,7 +52,7 @@ Description: "In diesem Profil werden Informationen zum Analysegerät angegeben,
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains snomed 0..1 MS
-  * coding[snomed] from LaboratoryAnalyzerVS (example)
+  * coding[snomed] from $ti-vs-laboratory-analyzer (example)
   * coding[snomed] ^patternCoding.system = $cs-sct
   * coding[snomed]
     * insert CodingMS
