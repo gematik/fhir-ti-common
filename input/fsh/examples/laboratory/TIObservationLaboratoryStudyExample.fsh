@@ -24,7 +24,7 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
   * value = "123456"
 * status = #final
 * category[laboratory]
-  * coding = $cs-observation-category#laboratory "Laboratory"
+  * coding = $cs-observation-category|2.0.0#laboratory "Laboratory"
 * category[studyType]
   * coding = $loinc#18717-9 "Blood bank studies (set)"
   * text = "test"

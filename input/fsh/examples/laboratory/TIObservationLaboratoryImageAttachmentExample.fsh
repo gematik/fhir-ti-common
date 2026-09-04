@@ -12,7 +12,7 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratoryIm
   * data = "dGVzdA=="
   * title = "Protein-Elektrophoresekurve"
 * status = #final
-* category[laboratory].coding = $cs-observation-category|4.0.1#laboratory "Laboratory"
+* category[laboratory].coding = $cs-observation-category|2.0.0#laboratory "Laboratory"
 * code.coding[snomed] = $cs-sct-de-20260515#703450007 "Elektrophorese"
 * subject = Reference(ExampleTIPatient)
   * identifier
