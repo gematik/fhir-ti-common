@@ -8,5 +8,5 @@ Description: "This extension is used in an Operation Outcome to state the expect
 * ^date = "2026-08-31"
 * ^status = #active
 
-* value[x] only string
-* valueString 1..1
+* value[x] only markdown
+* valueMarkdown 1..1

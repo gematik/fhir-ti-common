@@ -12,7 +12,7 @@ Description: "Das Operation Outcome-Profil für die Telematikinfrastruktur (TI) 
 * issue MS
   * extension contains 
     ExpectedDosageTextExtension named expectedDosageText 0..1 MS
-  * extension[expectedDosageText] insert ExtensionStringMS
+  * extension[expectedDosageText] insert ExtensionMarkdownMS
 
   * severity MS
   * code MS

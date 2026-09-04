@@ -847,7 +847,7 @@
             "title": "Strukturierte Dosierung - Rückgabe erwarteter Dosierungstext",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in `OperationOutcome.extension[expectedDosageText].valueString` einsetzen.",
+            "text": "Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in `OperationOutcome.extension[expectedDosageText].valueMarkdown` einsetzen.",
             "conformance": "SHALL",
             "characteristics": [
                 {

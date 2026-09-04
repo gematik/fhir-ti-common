@@ -123,7 +123,7 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-     Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in `OperationOutcome.extension[expectedDosageText].valueString` einsetzen.
+     Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in `OperationOutcome.extension[expectedDosageText].valueMarkdown` einsetzen.
 </requirement>
 
 **Ein Beispiel für eine OperationOutcome mit erwartetem Dosierungstext:**

@@ -7,4 +7,4 @@ versions:
   fhirscripts: 0.31.0
   gCloud SDK: 464.0.0
   igtools: 1.0.1
-  npm: 10.9.1
+  npm: 11.4.2
