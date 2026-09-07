@@ -15,6 +15,8 @@ Neue Anforderungen wurden hinzugef체gt, bestehende ge채ndert und nicht mehr ben�
 
 ### Version 1.4.0
 
+- Eine neue Seite zur Validierung strukturierter Dosierungen wurde erg채nzt, die die Vorgaben f체r FHIR Data Services zur Erzeugung und Pr체fung der textuellen Repr채sentation von Dosierinformationen beschreibt.
+
 #### TIFlow
 
 - Hinzugef체gt wurde das Profil f체r den TIFlow AccessCode und das Profil f체r das TIFlow Secret.
@@ -23,6 +25,8 @@ Neue Anforderungen wurden hinzugef체gt, bestehende ge채ndert und nicht mehr ben�
 
 - Erg채nzung der dgMP-spezifischen Medikationsprofile, einschlie횩lich TIMedicationDgMP, TIMedicationRequestDgMP, TIMedicationDispenseDgMP und TIMedicationStatementDgMP.
 - Mit TIMedicationPZNIngredientDgMP und TIMedicationPharmaceuticalProductDgMP wurden zwei neue Profile f체r die Abbildung von PZN-Bestandteilen in Rezepturen sowie von pharmazeutischen Produkten innerhalb von Kombipackungen erg채nzt.
+- Die neue Extension ExpectedDosageTextExtension wurde erg채nzt, um in einem OperationOutcome den erwarteten Text der Dosierungsanweisung f체r die renderedDosageInstruction anzugeben.
+
 
 #### Anforderungen
 

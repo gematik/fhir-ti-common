@@ -5,7 +5,7 @@ Title: "TI Medication dgMP"
 Description: "Defines the medication resource for the Medication Service in the TI ecosystem."
 // preserve the version
 * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * contained MS

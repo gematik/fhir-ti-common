@@ -2,11 +2,11 @@ actor:
 - EPA-Medication-Service
 - TI-Flow_FD
 conformance: SHALL
-content_hash: e61f5ec0d13d8fba9b4547e491507064e05c352026e80c8a5cd7698fae3902e8
+content_hash: 369d1eb98df2b14dc014cf94ef7dd54c4c7dc11656b972403bc7fb9df17badbe
 created: '2026-06-25T06:43:07.995739'
-date: '2026-08-31T11:33:26.359301'
+date: '2026-09-07T10:21:43.137060'
 key: IG-TI83690KSY
-modified: '2026-06-25T06:43:07.995744'
+modified: '2026-09-07T10:21:43.137060'
 release_status: STABLE
 source: input/pagecontent/validation.md
 status: ACTIVE
@@ -15,19 +15,11 @@ test_procedures:
   - Produkttest
   TI-Flow_FD:
   - Produkttest
-text: 'Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben
-  von Version und Sprache unter
-
-
-  - `MedicationRequest.extension.generatedDosageInstructionsMeta`
-
-  - `MedicationDispense.extension.generatedDosageInstructionsMeta`
-
-  - `MedicationStatement.extension.generatedDosageInstructionsMeta`
-
-
-  mit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation
-  mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive implementierter Version
-  und Sprache abbrechen.'
+text: "Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben\
+  \ von Version und Sprache unter\n <ul>\n <li>MedicationRequest.extension.generatedDosageInstructionsMeta</li>\n\
+  \ <li>MedicationDispense.extension.generatedDosageInstructionsMeta</li>\n <li>MedicationStatement.extension.generatedDosageInstructionsMeta</li>\n\
+  \ </ul>\n mit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen\
+  \ die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive implementierter\
+  \ Version und Sprache abbrechen."
 title: Strukturierte Dosierung - Validierung von Version und Sprache
 version: 0

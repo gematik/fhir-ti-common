@@ -8,7 +8,7 @@ Description: "Definiert die Medication-Ressource für eine Komponente einer 'Kom
 * insert TIMedicationElements
 // preserve the version
 * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * contained ..0

@@ -34,20 +34,20 @@ Die Validierung von Dosierungen gilt jeweils für freitextliche Dosierinformatio
 ### Anforderungen an einen FHIR Data Service
 
 <requirement conformance="SHALL" key="IG-TI83690KSY" title="Strukturierte Dosierung - Validierung von Version und Sprache" version="0">
-    <meta lockversion="true"/>
+    <meta lockversion="false"/>
     <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-     Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter
-
-- `MedicationRequest.extension.generatedDosageInstructionsMeta`
-- `MedicationDispense.extension.generatedDosageInstructionsMeta`
-- `MedicationStatement.extension.generatedDosageInstructionsMeta`
-
-mit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.
+    Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter
+    <ul>
+        <li>MedicationRequest.extension.generatedDosageInstructionsMeta</li>
+        <li>MedicationDispense.extension.generatedDosageInstructionsMeta</li>
+        <li>MedicationStatement.extension.generatedDosageInstructionsMeta</li>
+    </ul>
+    mit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI96213YXB" title="Strukturierte Dosierung - Validierung der generierten Dosierungsangabe" version="0">
@@ -100,7 +100,7 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
      Der FHIR Data Service MUSS bei der Validierung einer Instanz die zur jeweiligen Kombination aus Version und Sprache passende Implementierung des [dgMP-DosageTextgenerierung-Spezifikation] heranziehen."
 </requirement>
 
-<requirement conformance="SHALL" key="IG-TI43381BV9" title="Strukturierte Dosierung - Anwendung der Validierung" version="1">
+<requirement conformance="SHALL" key="IG-TI43381BV9" title="Strukturierte Dosierung - Anwendung der Validierung" version="0">
     <meta lockversion="false"/>
     <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
@@ -117,14 +117,14 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI20681JNN" title="Strukturierte Dosierung - Rückgabe erwarteter Dosierungstext" version="0">
-    <meta lockversion="false"/>
+    <meta lockversion="true"/>
     <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-     Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in `OperationOutcome.extension[expectedDosageText].valueMarkdown` einsetzen.
+     Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in <i>OperationOutcome.extension[expectedDosageText].valueMarkdown</i> einsetzen.
 </requirement>
 
 **Ein Beispiel für eine OperationOutcome mit erwartetem Dosierungstext:**

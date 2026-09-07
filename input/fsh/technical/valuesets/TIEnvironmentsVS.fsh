@@ -4,8 +4,8 @@ Title: "TI Environments ValueSet"
 Description: "Dieses ValueSet enthält alle zulässigen Umgebungskennzeichen für CapabilityStatements des TI-Flow-Fachdienstes und wird für die verpflichtende Kennzeichnung der Zielumgebung verwendet."
 * insert Meta-VS
 // preserve the version of this resource
-// * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * include codes from system TIEnvironmentsCS

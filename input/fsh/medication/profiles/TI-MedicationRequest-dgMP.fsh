@@ -6,7 +6,7 @@ Description: "Defines the medication request resource for the Medication Service
 * insert Meta-With-Versioning
 // preserve the version
 * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * identifier ^slicing.discriminator.type = #pattern

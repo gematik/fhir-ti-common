@@ -5,8 +5,8 @@ Description: "Diese Extension deklariert eine konkrete Konfigurationsausprägung
 Context: CapabilityStatement
 * insert Meta
 // preserve the version of this resource
-// * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * . ^short = "FHIR-Konfigurationskennzeichen für den FHIR-Data Service"

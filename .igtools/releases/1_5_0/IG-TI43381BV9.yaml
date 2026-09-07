@@ -4,10 +4,10 @@ actor:
 conformance: SHALL
 content_hash: 26b97ca7f81f6517336bffa26220cf2931c8aa5d22824f9c8b3b4f4f0a16ab72
 created: '2026-06-25T06:43:07.996402'
-date: '2026-09-04T13:20:53.347201'
+date: '2026-09-07T09:54:53.423465'
 key: IG-TI43381BV9
-modified: '2026-09-04T13:20:53.347201'
-release_status: MODIFIED
+modified: '2026-09-07T09:54:53.423465'
+release_status: STABLE
 source: input/pagecontent/validation.md
 status: ACTIVE
 test_procedures:
@@ -20,4 +20,4 @@ text: "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn
   \ <li>MedicationDispense.dosageInstruction</li>\n <li>MedicationStatement.dosage</li>\n\
   \ </ul>"
 title: Strukturierte Dosierung - Anwendung der Validierung
-version: 1
+version: 0
