@@ -5,8 +5,8 @@ Description: "Diese Extension kennzeichnet die Zielumgebung eines konkreten Capa
 Context: CapabilityStatement
 * insert Meta
 // preserve the version of this resource
-// * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * . ^short = "Umgebungskennzeichen für ein CapabilityStatement"

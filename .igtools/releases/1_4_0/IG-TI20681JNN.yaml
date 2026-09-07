@@ -1,0 +1,22 @@
+actor:
+- EPA-Medication-Service
+- TI-Flow_FD
+conformance: SHALL
+content_hash: f6dcaa13173359212887193e5df9832164818350c13e1c897f4abf458e412642
+created: '2026-09-07T09:54:53.423699'
+date: '2026-09-07T10:21:43.138526'
+key: IG-TI20681JNN
+modified: '2026-09-07T10:21:43.138526'
+release_status: NEW
+source: input/pagecontent/validation.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service:
+  - Produkttest
+  TI-Flow_FD:
+  - Produkttest
+text: Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten
+  Dosierungstext unformatiert in <i>OperationOutcome.extension[expectedDosageText].valueMarkdown</i>
+  einsetzen.
+title: Strukturierte Dosierung - Rückgabe erwarteter Dosierungstext
+version: 0

@@ -11,7 +11,7 @@ Client Systeme, die strukturierte Dosierinformationen lesen, müssen in der Lage
 
 Im Verordnungsdatensatz und der Dispensierinformation für ein Arzneimittel können Angaben zur Dosierung gemacht werden. Im dgMP Kontext gibt es hierfür einen übergreifenden FHIR-Implementation Guide [Medication IG DE] der HL7 Deutschland, die entsprechende Vorgaben dazu macht.
 
-Hierzu muss u.a. für jede Angabe der Dosierung eine gerenderte textuelle Darstellung nach [dgMP-DosageTextgenerierungSkript] erzeugt und im Datensatz angegeben werden.
+Hierzu muss u.a. für jede Angabe der Dosierung eine gerenderte textuelle Darstellung nach [dgMP-DosageTextgenerierung-Skript] erzeugt und im Datensatz angegeben werden.
 
 ### Umsetzung für den FHIR Data Service
 Der FHIR Data Service muss eingehende Instanzen zunächst FHIR-validieren und nachfolgend überprüfen, ob die textuelle Repräsentation der Dosierung dem Output des Algorithmus, der im [dgMP-DosageTextgenerierung-Skript] definiert ist, entspricht. Falls der Client keinen korrekten String übermittelt hat, wird die Instanz mit entsprechendem Fehler abgewiesen.
@@ -48,12 +48,13 @@ Die Validierung von Dosierungen gilt jeweils für freitextliche Dosierinformatio
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-     Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter
-
-- `MedicationRequest.extension.generatedDosageInstructionsMeta` bzw.
-- `MedicationDispense.extension.generatedDosageInstructionsMeta`
-
-mit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.
+    Der FHIR Data Service MUSS für die Validierung von Dosierungen die Angaben von Version und Sprache unter
+    <ul>
+        <li>MedicationRequest.extension.generatedDosageInstructionsMeta</li>
+        <li>MedicationDispense.extension.generatedDosageInstructionsMeta</li>
+        <li>MedicationStatement.extension.generatedDosageInstructionsMeta</li>
+    </ul>
+    mit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive implementierter Version und Sprache abbrechen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI96213YXB" title="Strukturierte Dosierung - Validierung der generierten Dosierungsangabe" version="0">
@@ -64,12 +65,13 @@ mit dem aktuellen Implementierungsstand vergleichen und bei Abweichungen die Ope
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-     Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in
-
-- `MedicationRequest.extension:renderedDosageInstruction` oder
-- `MedicationDispense.extension:renderedDosageInstruction`
-
-angegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.
+    Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in
+    <ul>
+        <li>MedicationRequest.extension.renderedDosageInstruction</li>
+        <li>MedicationDispense.extension.renderedDosageInstruction</li>
+        <li>MedicationStatement.extension.renderedDosageInstruction</li>
+    </ul>
+    angegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP-Fehlercode 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI17421K31" title="Strukturierte Dosierung - Implementierung der Dosiertexterzeugung" version="0">
@@ -93,6 +95,7 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
     </actor>
      Der FHIR Data Service MUSS für die Validierung von Dosierungen Implementierungen des [dgMP-DosageTextgenerierung-Skript] mit unterschiedlichen Versionen und Sprachen verwalten können.
 </requirement>
+
 <requirement conformance="SHALL" key="IG-TI43381BV9" title="Strukturierte Dosierung - Anwendung der Validierung" version="0">
     <meta lockversion="false"/>
     <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
@@ -101,8 +104,31 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-     Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:
-
-- `MedicationRequest.dosageInstruction`
-- `MedicationDispense.dosageInstruction`
+    Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:
+    <ul>
+        <li>MedicationRequest.dosageInstruction</li>
+        <li>MedicationDispense.dosageInstruction</li>
+        <li>MedicationStatement.dosage</li>
+    </ul>
 </requirement>
+
+<requirement conformance="SHALL" key="IG-TI20681JNN" title="Strukturierte Dosierung - Rückgabe erwarteter Dosierungstext" version="0">
+    <meta lockversion="false"/>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+     Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in <i>OperationOutcome.extension[expectedDosageText].valueMarkdown</i> einsetzen.
+</requirement>
+
+
+**Ein Beispiel für eine OperationOutcome mit erwartetem Dosierungstext:**
+
+<div class="gem-ig-example" data-title="OperationOutcome (JSON)">
+    {% fragment OperationOutcome/5ab6bca4-fbdf-49c3-a693-a065187cffd6 JSON %}
+</div>
+<div class="gem-ig-example" data-title="OperationOutcome (XML)">
+    {% fragment OperationOutcome/5ab6bca4-fbdf-49c3-a693-a065187cffd6 XML %}
+</div>

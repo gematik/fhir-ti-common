@@ -6,7 +6,7 @@ Description: "Hält die Medikationsinformationen eines Patienten."
 * insert Meta-With-Versioning
 // preserve the version
 * ^version = "1.4.0"
-// * ^date = "2025-12-15"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * extension contains

@@ -183,6 +183,13 @@ StructureDefinition/operation-outcome
 {% include artifacts-table-generator.html render=operationoutcome %}
 <div><figcaption><strong>Tabelle:</strong> Operation Outcome - Ressourcenprofile</figcaption></div>
 
+#### Extensions
+
+{% capture operationoutcome %}
+StructureDefinition/expected-dosage-text
+{% endcapture %}
+{% include artifacts-table-generator.html render=operationoutcome %}
+<div><figcaption><strong>Tabelle:</strong> Operation Outcome - Extensions</figcaption></div>
 
 #### Code Systems
 

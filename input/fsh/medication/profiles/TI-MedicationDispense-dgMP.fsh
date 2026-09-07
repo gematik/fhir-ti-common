@@ -6,7 +6,7 @@ Description: "Defines the medication dispense resource for the Medication Servic
 * insert Meta-With-Versioning
 // preserve the version
 * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * extension contains

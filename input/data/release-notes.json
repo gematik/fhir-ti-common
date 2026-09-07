@@ -18,6 +18,20 @@
                     "diff": {}
                 },
                 {
+                    "title": "Strukturierte Dosierung - Rückgabe erwarteter Dosierungstext",
+                    "key": "IG-TI20681JNN",
+                    "actor": [
+                        "EPA-Medication-Service",
+                        "TI-Flow_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "validation.html",
+                    "diff": {}
+                },
+                {
                     "title": "Strukturierte Dosierung - Anwendung der Validierung",
                     "key": "IG-TI43381BV9",
                     "actor": [
