@@ -34,6 +34,13 @@ Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
 The link 'http://hl7.org/fhir/R4/valueset-diagnostic-requests.html' for "here" cannot be resolved
 Das ShareableCodeSystem-Profil sagt, dass das experimental-Element obligatorisch ist, aber es ist nicht vorhanden. Veröffentlichte Codesysteme SOLLTEN mit dem ShareableCodeSystem-Profil übereinstimmen
 %There are multiple different potential matches%
+Keiner der angegebenen Codes ist im Valueset 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://loinc.org#18717-9)
+%the code system http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation has no Display Names for the language de%
+%no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#D for language(s) 'de'%
+Keiner der angegebenen Codes ist im Valueset 'Laboratory Code' (http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab|2.0.0), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://snomed.info/sct#703450007)
+Keiner der angegebenen Codes ist im Valueset 'Laboratory Order' (http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab|2.0.0), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://snomed.info/sct#721965002)
+Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://gematik.de/fhir/ti/StructureDefinition/ti-appendix-document-reference|1.5.0 überein.
+Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://gematik.de/fhir/ti/StructureDefinition/ti-observation-laboratory-study-group|1.5.0 überein.
 
 
 # Ignoring Warnings: We are using a custom template of our own
@@ -46,6 +53,22 @@ Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 %multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient%
 %multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/individual%
 %multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/iso21090%
+
+
+# This warning is intentionally ignored because the slice is not used at this level. Derived profiles either close the slice or mark it as Must Support where applicable.
+The slice 'bodyStructure' on path 'Observation.extension' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'triggeredBy' on path 'Observation.extension' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'supportingInfo' on path 'Observation.extension' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'labTestKit' on path 'Observation.extension' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'certifiedRefMaterialCodeable' on path 'Observation.extension' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'certifiedRefMaterialIdentifer' on path 'Observation.extension' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'accredited' on path 'Observation.extension' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'studyType' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'specialty' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'value-r5' on path 'Observation.extension' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'valueTime' on path 'Observation.value[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'valueDateTime' on path 'Observation.value[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'valuePeriod' on path 'Observation.value[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 
 
 # Known Warning: Expected behavior
@@ -100,6 +123,29 @@ The string value contains text that looks like embedded HTML tags. If this conte
 %https://gematik.de/fhir/terminology/ValueSet/epa-xds-practice-setting-code-vs%
 %https://gematik.de/fhir/terminology/ValueSet/epa-mhd-security-label-vs%
 %https://gematik.de/fhir/terminology/ValueSet/epa-xds-event-code-vs%
+%https://gematik.de/fhir/terminology/ValueSet/body-structure-clock-face-position%
+%https://gematik.de/fhir/terminology/ValueSet/body-structure-localisation%
+%https://gematik.de/fhir/terminology/ValueSet/laboratory-analyzer%
+%https://gematik.de/fhir/terminology/ValueSet/extracorporal-device%
+%http://ihe-d.de/CodeSystems/IHEXDStypeCode%
+%https://gematik.de/fhir/terminology/ValueSet/laboruntersuchungsgruppe%
+%https://gematik.de/fhir/terminology/CodeSystem/laboratory-test-profile%
+%https://gematik.de/fhir/epa-laboratory/CodeSystem/laboratory-study-group%
+%https://gematik.de/fhir/terminology/ValueSet/diagram-type%
+%https://gematik.de/fhir/terminology/ValueSet/specimen-identifier-type%
+%https://gematik.de/fhir/terminology/ValueSet/specimen-type%
+%https://gematik.de/fhir/terminology/ValueSet/specimen-collection-method%
+%https://gematik.de/fhir/terminology/ValueSet/specimen-condition%
+%https://gematik.de/fhir/terminology/ValueSet/secondary-status%
+%https://gematik.de/fhir/terminology/ValueSet/body-structure-clock-face-position%
+%https://gematik.de/fhir/terminology/ValueSet/body-structure-localisation%
+%https://gematik.de/fhir/terminology/ValueSet/body-structure-clock-face-position%
+%https://gematik.de/fhir/terminology/ValueSet/body-structure-localisation%
+%https://gematik.de/fhir/terminology/ValueSet/diagnosis-snomed-ct%
+%https://gematik.de/fhir/terminology/ValueSet/data-absent-reason-laboratory%
+%https://gematik.de/fhir/terminology/ValueSet/laboratory-study-value%
+%https://gematik.de/fhir/terminology/ValueSet/observation-methods%
+%https://gematik.de/fhir/terminology/ValueSet/reference-range-applies-to%
 %keinem bekannten Slicedefined in the profile https://gematik.de/fhir/ti/StructureDefinition/ti-organization%
 %https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID%
 %https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR%
@@ -116,6 +162,7 @@ URL-Wert 'http://goodcare.org/devices/id' löst nicht auf
 %http://snomed.info/sct/11000274103/version/20260515%
 %URL-Wert 'http://testsystem.de' löst nicht auf%
 %http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder%
+%http://ihe-d.de/CodeSystems/IHEXDSclassCode%
 
 # German language is not resolved for the SNOMED CT code system.
 %the code system http://snomed.info/sct has no Display Names for the language de%
