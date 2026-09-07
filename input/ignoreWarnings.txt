@@ -178,3 +178,7 @@ Canonical URL 'http://hl7.org/fhir/uv/ips/ValueSet/results-microorganism-snomed-
 Canonical URL 'http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set' kann nicht aufgelöst werden
 Canonical URL 'http://hl7.org/fhir/uv/ips/ValueSet/results-microorganism-snomed-ct-ips-free-set' kann nicht aufgelöst werden
 %link 'http://hl7.org/fhir/uv/ips/%
+
+
+# Additional Bindings with no key
+%ext-ab-1%
