@@ -1,6 +1,7 @@
 Instance: ExampleTIPatient
 InstanceOf: TIPatient
-Title: "Example TIPatient"
+Title: "TIPatient Example"
+Description: "Example of a Patient resource conforming to the TIPatient profile."
 Usage: #example
 // * id = "ti-patient-example"
 * id = "c78415a2-9285-403d-9fda-1b8e24e30964"
@@ -24,6 +25,7 @@ Instance: ExamplePatientEuCore
 InstanceOf: TIPatient
 Title: "PatientEuCore Example"
 Description: "Example of a Patient resource conforming to the Patient (EU Core) profile."
+Usage: #example
 * id = "4acf1580-7770-4e37-9cbe-d839cd75c1f3"
 * name.family = "Doe"
 * name.given = "John"
