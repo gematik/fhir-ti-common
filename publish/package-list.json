@@ -89,8 +89,18 @@
             "desc": "Implementation Guide TI Common Version 1.4.0-ballot.3",
             "path": "https://gematik.de/fhir/ti/1.4.0-ballot.3",
             "status": "ballot",
-            "current": true,
+            "current": false,
             "date": "2026-09-11",
+            "sequence": "TI Vorabveröffentlichung",
+            "fhirversion": "4.0.1"
+        },
+        {
+            "version": "1.5.0-ballot.1",
+            "desc": "Implementation Guide TI Common Version 1.5.0-ballot.1",
+            "path": "https://gematik.de/fhir/ti/1.5.0-ballot.1",
+            "status": "ballot",
+            "current": true,
+            "date": "2026-09-15",
             "sequence": "TI Vorabveröffentlichung",
             "fhirversion": "4.0.1"
         }
