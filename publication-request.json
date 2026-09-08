@@ -1,10 +1,10 @@
 {
   "package-id": "de.gematik.ti",
-  "version": "1.4.0-ballot.2",
-  "path": "https://gematik.de/fhir/ti/1.4.0-ballot.2",
-  "status": "release",
+  "version": "1.4.0-ballot.3",
+  "path": "https://gematik.de/fhir/ti/1.4.0-ballot.3",
+  "status": "draft",
   "first": false,
   "mode": "working",
   "sequence": "TI Vorabveröffentlichung",
-  "desc": "TI Common IG 1.4.0-ballot.2"
+  "desc": "Implementation Guide TI Common Version 1.4.0-ballot.3"
 }

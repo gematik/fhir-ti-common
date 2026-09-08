@@ -10,7 +10,11 @@
 
 - Ergänzung der dgMP-spezifischen Medikationsprofile, einschließlich TIMedicationDgMP, TIMedicationRequestDgMP, TIMedicationDispenseDgMP und TIMedicationStatementDgMP.
 - Mit TIMedicationPZNIngredientDgMP und TIMedicationPharmaceuticalProductDgMP wurden zwei neue Profile für die Abbildung von PZN-Bestandteilen in Rezepturen sowie von pharmazeutischen Produkten innerhalb von Kombipackungen ergänzt.
+
+#### Systemverhalten
+
 - Die neue Extension ExpectedDosageTextExtension wurde ergänzt, um in einem OperationOutcome den erwarteten Text der Dosierungsanweisung für die renderedDosageInstruction anzugeben.
+
 
 #### Anforderungen
 
@@ -24,9 +28,13 @@ Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr ben�
 
 - Hinzufügen von fehlenden oder inkonsistenten _Must Support_ Flags
 
+{% comment %}
+
 #### Anforderungen
 
 {% include release-notes.html version="1.3.1" with_links=false %}
+
+{% endcomment %}
 
 ### Version 1.3.0
 
