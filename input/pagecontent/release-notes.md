@@ -40,7 +40,7 @@ Keine neuen FHIR-Artefakte mit expliziter Version `1.5.0`.
 
 Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
 
-{% include release-notes.html version="1.5.0" with_links=true %}
+{% include release-notes.html version="1.5.0" diff_to="1.4.0" with_links=true %}
 
 ### Version 1.4.0
 

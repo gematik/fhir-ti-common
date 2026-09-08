@@ -17,7 +17,8 @@
 			],
 			"settings": {
 				"codfsh.HapiValidator.Executable": "/home/vscode/.fhir/validators/validator_cli.jar",
-				"codfsh.HapiValidator.Settings.SettingsFile": "/home/vscode/.fhir/settings/codfsh-config.yaml"
+				"codfsh.HapiValidator.Settings.SettingsFile": "/home/vscode/.fhir/settings/codfsh-config.yaml",
+				"terminal.integrated.defaultProfile.linux": "zsh"
 			}
 		}
 	},
