@@ -336,11 +336,11 @@ Datumsangaben haben einen Bereich, der auf ihrer Präzision (Jahr, Monat, Tag) b
       </tr>
       <tr>
         <td><code>sa</code></td>
-        <td>Der Bereich des Parameterwerts beginnt nach dem Zielbereich.</td>
+        <td>Der Bereich des Zielwerts liegt vollständig nach dem Bereich des Suchwerts.</td>
       </tr>
       <tr>
         <td><code>eb</code></td>
-        <td>Der Bereich des Parameterwerts endet vor dem Zielbereich.</td>
+        <td>Der Bereich des Zielwerts liegt vollständig vor dem Bereich des Suchwerts.</td>
       </tr>
     </tbody>
   </table>
