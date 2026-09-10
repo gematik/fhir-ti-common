@@ -224,7 +224,7 @@ GET [base]/Medication?_revinclude=MedicationDispense:medication&_include:iterate
 
 In dieser Abfrage bedeutet:
 1. _revinclude=MedicationDispense:medication
-  - Sucht alle _Medication_-Instanzen und schließt zusätzlich alle _MedicationDispense_-Instanzen ein, die diese _Medikamente_ referenzieren.
+  - Sucht alle _Medication_-Instanzen und schließt zusätzlich alle _MedicationDispense_-Instanzen ein, die diese Medikamente referenzieren.
 2. _include:iterate=MedicationDispense:performer
   - Nachdem die _MedicationDispense_-Instanzen über <i>\_revinclude</i> einbezogen wurden, bewirkt der _:iterate_-Modifikator, dass die in _MedicationDispense.performer_ referenzierten Organisationen ebenfalls in die Antwort aufgenommen werden.
 
