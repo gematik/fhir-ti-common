@@ -481,7 +481,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_lastUpdated=lt2025-01-15T00:00:00Z
 Alle <i>AuditEvent</i>s nach dem 15. Januar 2025:
 
 ```
-GET [base]/epa/audit/api/v1/fhir/AuditEvent?date=gt2025-01-15T00:00:00Z
+GET [base]/epa/audit/api/v1/fhir/AuditEvent?date=gt2025-01-15
 ```
 
 <br/>
@@ -489,7 +489,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?date=gt2025-01-15T00:00:00Z
 Alle <i>AuditEvent</i>s seit dem 15. Januar 2025 und von der Allgemeinarztpraxis "Praxis Dr. John Doe":
 
 ```
-GET [base]/epa/audit/api/v1/fhir/AuditEvent?date=ge2025-01-15T11:00:00Z&altid=1-883110000092404
+GET [base]/epa/audit/api/v1/fhir/AuditEvent?date=ge2025-01-15&altid=1-883110000092404
 ```
 
 <br/>
