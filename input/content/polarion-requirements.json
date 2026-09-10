@@ -14,7 +14,7 @@
             "title": "Sortierung des Datentyps Period",
             "version": 1,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen, muss sofern vorhanden weitergehend nach <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.start</i>-Wert oder <i>Period.end</i>-Wert ist hierbei als noch nicht gestartet, also negativ unendlich, bzw. offen, also unendlich anzusehen.",
+            "text": "Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen, muss, sofern vorhanden, weitergehend nach <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.start</i>-Wert oder <i>Period.end</i>-Wert ist hierbei als noch nicht gestartet, also negativ unendlich, bzw. offen, also unendlich anzusehen.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -1549,7 +1549,7 @@
             "title": "Strukturierte Dosierung - Unterstützen mehrerer Versionen",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS bei der Validierung einer Instanz die zur jeweiligen Kombination aus Version und Sprache passende Implementierung des [dgMP-DosageTextgenerierung-Spezifikation] heranziehen.\"",
+            "text": "Der FHIR Data Service MUSS bei der Validierung einer Instanz die zur jeweiligen Kombination aus Version und Sprache passende Implementierung des [dgMP-DosageTextgenerierung-Spezifikation] heranziehen.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -1799,7 +1799,7 @@
             "title": "Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR",
             "version": 2,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Servic MUSS die <i>_revinclude</i>-Suche gemäß der [FHIR Search Revinclude] unterstützen, sodass Ressourcen, die auf die gesuchten Ressourcen verweisen, innerhalb der Suchergebnisse automatisch mit einbezogen werden können.",
+            "text": "Der FHIR Data Service MUSS die <i>_revinclude</i>-Suche gemäß der [FHIR Search Revinclude] unterstützen, sodass Ressourcen, die auf die gesuchten Ressourcen verweisen, innerhalb der Suchergebnisse automatisch mit einbezogen werden können.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -2525,7 +2525,7 @@
             "title": "Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der Standard HL7 FHIR Spezifikation als absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich, dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.",
+            "text": "Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der HL7-FHIR-Spezifikation als absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich, dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -3273,7 +3273,7 @@
             "title": "Formatierung von Referenzen im fullUrl-Feld",
             "version": 2,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen - wie <i>literal</i>-Referenzen in der Form [Resourcetyp]/[ResourceId] - nicht im Feld <i>Bundle.entry.fullUrl</i> verwendet werden. Alle Verweise auf Ressourcen innerhalb des FHIR Data Service MÜSSEN entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.",
+            "text": "Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen - wie <i>literal</i>-Referenzen in der Form [Ressourcentyp]/[ResourceId] - nicht im Feld <i>Bundle.entry.fullUrl</i> verwendet werden. Alle Verweise auf Ressourcen innerhalb des FHIR Data Service MÜSSEN entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -3349,7 +3349,7 @@
             "title": "Strukturierte Dosierung - Validierung der generierten Dosierungsangabe",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n\n- `MedicationRequest.extension:renderedDosageInstruction`\n- `MedicationDispense.extension:renderedDosageInstruction`\n- `MedicationStatement.extension:renderedDosageInstruction`\n\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
+            "text": "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der in\n <ul>\n <li>MedicationRequest.extension:renderedDosageInstruction</li>\n <li>MedicationDispense.extension:renderedDosageInstruction</li>\n <li>MedicationStatement.extension:renderedDosageInstruction</li>\n </ul>\nangegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung inklusive erwarteter textueller Repräsentation abbrechen.",
             "conformance": "SHALL",
             "characteristics": [
                 {

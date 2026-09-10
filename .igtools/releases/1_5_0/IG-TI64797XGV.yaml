@@ -5,9 +5,9 @@ actor:
 - EPA-Patient-Service
 - TI-Flow_FD
 conformance: SHALL
-content_hash: 03b0e8a86490a8e16ea6d71b9a1669a0261726255ee8ba7b8581532b3b456250
+content_hash: d5abb4c1396fc4102b6b8a2a6f92cf01ab17db796ede870c2f154957bca55af3
 created: '2025-02-26T10:59:21.315189'
-date: '2026-06-15T13:51:38.811342'
+date: '2026-09-10T09:12:27.537952'
 key: IG-TI64797XGV
 modified: '2025-03-12T12:47:19.476134'
 release_status: STABLE
@@ -25,9 +25,9 @@ test_procedures:
   TI-Flow_FD:
   - Produkttest
 text: Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem
-  <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der Standard HL7 FHIR Spezifikation
-  als absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative
-  Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich,
-  dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.
+  <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der HL7-FHIR-Spezifikation als
+  absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative Pfade
+  sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich, dass
+  sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.
 title: Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles
 version: 0

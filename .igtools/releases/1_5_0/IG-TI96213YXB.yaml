@@ -2,9 +2,9 @@ actor:
 - EPA-Medication-Service
 - TI-Flow_FD
 conformance: SHALL
-content_hash: c7dc0f1b9edd696f05c3f5705679433d3cca597480bf623b04bead87384cc5fb
+content_hash: b584927b3800204d3c116cf6bfe3894ef3b127735c0e95d44d3686147b6e47ac
 created: '2026-06-25T06:43:07.995917'
-date: '2026-08-31T11:33:26.359570'
+date: '2026-09-09T16:20:37.856067'
 key: IG-TI96213YXB
 modified: '2026-06-25T06:43:07.995919'
 release_status: STABLE
@@ -15,19 +15,11 @@ test_procedures:
   - Produkttest
   TI-Flow_FD:
   - Produkttest
-text: 'Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der
-  in
-
-
-  - `MedicationRequest.extension:renderedDosageInstruction`
-
-  - `MedicationDispense.extension:renderedDosageInstruction`
-
-  - `MedicationStatement.extension:renderedDosageInstruction`
-
-
-  angegebene String den Vorgaben der Validierung von strukturierten Dosierungen entspricht
-  und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung
-  inklusive erwarteter textueller Repräsentation abbrechen.'
+text: "Der FHIR Data Service MUSS für die Validierung von Dosierungen prüfen, ob der\
+  \ in\n <ul>\n <li>MedicationRequest.extension:renderedDosageInstruction</li>\n <li>MedicationDispense.extension:renderedDosageInstruction</li>\n\
+  \ <li>MedicationStatement.extension:renderedDosageInstruction</li>\n </ul>\nangegebene\
+  \ String den Vorgaben der Validierung von strukturierten Dosierungen entspricht\
+  \ und andernfalls die Operation mit dem HTTP Status Code 400 und einer Fehlermeldung\
+  \ inklusive erwarteter textueller Repräsentation abbrechen."
 title: Strukturierte Dosierung - Validierung der generierten Dosierungsangabe
 version: 0

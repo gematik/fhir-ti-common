@@ -1,4 +1,4 @@
-Diese Seite beschreibt Standard-API-Zugriffe für eine clientseitige Suche und Bereitstellung von Daten eines FHIR Data Service. Im Detail bedeutet dies das Navigieren in Suchergebnisseiten, die kompakte Suche mit verknüpften FHIR-Ressourcen als auch die Suche unter Nutzung von Vergleichsoperatoren.
+Diese Seite beschreibt Standard-API-Zugriffe für eine clientseitige Suche und Bereitstellung von Daten eines FHIR Data Service. Im Detail bedeutet dies das Navigieren in Suchergebnisseiten, die kompakte Suche mit verknüpften FHIR-Ressourcen sowie die Suche unter Nutzung von Vergleichsoperatoren.
 
 
 ### Suche
@@ -25,12 +25,12 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
     Der FHIR Data Service MUSS sicherstellen, dass für jede Ressource, die direkt den in der Suchanfrage angegebenen Kriterien entspricht, das Attribut <i>entry.search.mode</i> auf <i>match</i> gesetzt wird.
 </requirement>
 
-"Direkt den in der Suchanfrage angegebenen Kriterien" entsprechend heißt in diesem Fall, dass das entsprechende Ergebnis nicht über einen <i>_include</i> oder <i>_revinclude</i>-Parameter der Ergebnismenge hinzugefügt wurde.
+"Direkt den in der Suchanfrage angegebenen Kriterien entsprechen" heißt in diesem Fall, dass das entsprechende Ergebnis nicht über einen <i>_include</i>- oder <i>_revinclude</i>-Parameter der Ergebnismenge hinzugefügt wurde.
 
 #### fullUrl in FHIR Bundles
 
 <requirement conformance="SHALL" key="IG-TI64797XGV" title="Formatierungsvorgaben für das fullUrl-Feld in FHIR-Bundles" version="0">
-    <meta lockversion="false"/>
+    <meta lockversion="true"/>
     <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
@@ -46,7 +46,7 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
     <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der Standard HL7 FHIR Spezifikation als absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich, dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.
+    Der FHIR Data Service MUSS sicherstellen, dass das <i>fullUrl</i>-Feld in jedem <i>Entry</i> (<i>Bundle.entry.fullUrl</i>) wie in der HL7-FHIR-Spezifikation als absolute URL oder als UUID-basierte URI (urn:uuid) angegeben wird. Relative Pfade sind im <i>fullUrl</i>-Feld nicht zulässig. Für absolute URLs gilt zusätzlich, dass sie das Format <i>[base]/[Ressourcentyp]/[ResourceId]</i> aufweisen müssen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI29911V07" title="Konsistente Referenzierung innerhalb eines Bundles" version="0">
@@ -70,7 +70,7 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI95143N18" title="Formatierung von Referenzen im fullUrl-Feld" version="2">
-    <meta lockversion="false"/>
+    <meta lockversion="true"/>
     <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
@@ -86,7 +86,7 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
     <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen - wie <i>literal</i>-Referenzen in der Form [Resourcetyp]/[ResourceId] - nicht im Feld <i>Bundle.entry.fullUrl</i> verwendet werden. Alle Verweise auf Ressourcen innerhalb des FHIR Data Service MÜSSEN entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.
+    Der FHIR Data Service MUSS sicherstellen, dass relative Referenzen - wie <i>literal</i>-Referenzen in der Form [Ressourcentyp]/[ResourceId] - nicht im Feld <i>Bundle.entry.fullUrl</i> verwendet werden. Alle Verweise auf Ressourcen innerhalb des FHIR Data Service MÜSSEN entweder als absolute URLs oder als UUID-basierte URIs (urn:uuid) angegeben werden.
 </requirement>
 
 
@@ -109,7 +109,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_id=ea01ccbc-aa5d-4c34-8292-d95678d5
 _\_lastUpdated_: Kann verwendet werden, um Ressourcen basierend auf dem letzten Änderungszeitpunkt auszuwählen
 
 ```
-GET [base]/epa/audit/api/v1/fhir/AuditEvent?_lastUpdated=2025-15-01
+GET [base]/epa/audit/api/v1/fhir/AuditEvent?_lastUpdated=2025-01-15
 ```
 
 
@@ -117,7 +117,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_lastUpdated=2025-15-01
 
 ##### _include
 
-In der FHIR-Spezifikation wird der Suchparameter <i>_include</i> verwendet, um zu fordern, dass der Server nicht nur die angeforderten Ressourcen, sondern auch andere Ressourcen, die über eine angegebene Referenz mit ihnen verbunden sind, zurückgibt. Dieser Parameter ist besonders nützlich, um verknüpfte Ressourcen in einer einzigen Abfrage abzurufen, wodurch die Notwendigkeit nachfolgender Anfragen verringert wird. Beispielsweise, wenn eine Abfrage an <i>MedicationRequest</i>-Instanzen mit einem <i>_include</i>-Parameter wie <i>MedicationRequest:medication</i> durchgeführt wird, gibt der FHIR Data Service die angeforderten <i>MedicationRequest</i>-Instanzen zusammen mit verknüpften <i>Medication</i>-Instanzen zurück. Das bedeutet, dass eine Liste von <i>Medication</i>-Instanzen ebenso erhalten ist.
+In der FHIR-Spezifikation wird der Suchparameter <i>_include</i> verwendet, um zu fordern, dass der Server nicht nur die angeforderten Ressourcen, sondern auch andere Ressourcen, die über eine angegebene Referenz mit ihnen verbunden sind, zurückgibt. Dieser Parameter ist besonders nützlich, um verknüpfte Ressourcen in einer einzigen Abfrage abzurufen, wodurch die Notwendigkeit nachfolgender Anfragen verringert wird. Wird beispielsweise eine Abfrage an <i>MedicationRequest</i>-Instanzen mit einem <i>_include</i>-Parameter wie <i>MedicationRequest:medication</i> durchgeführt, gibt der FHIR Data Service die angeforderten <i>MedicationRequest</i>-Instanzen zusammen mit verknüpften <i>Medication</i>-Instanzen zurück. Das bedeutet, dass eine Liste von <i>Medication</i>-Instanzen zusätzlich enthalten ist.
 
 **Beispiel**
 
@@ -129,9 +129,9 @@ In dieser Abfrage bedeutet:
 
 1. _MedicationRequest_ der FHIR-Ressourcentyp, der abgefragt wird
 
-2. <i>_include=MedicationRequest:medication</i> die Anweisung an den FHIR Data Service, die <i>Medication</i>-Instanzen einzubeziehen, auf die in den<i> MedicationRequest</i>-Instanzen referenziert wird
+2. <i>_include=MedicationRequest:medication</i> die Anweisung an den FHIR Data Service, die <i>Medication</i>-Instanzen einzubeziehen, die in den <i>MedicationRequest</i>-Instanzen referenziert werden
 
-Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welches alle im FHIR Data Service verfügbaren <i>MedicationRequest</i>-Instanzen enthält - also auch zugehörige <i>Medication</i>-Instanzen. Hinweis: Dies kann potenziell eine große Ergebnismenge bedeuten und ist davon abhängig, wie viele <i>MedicationRequest</i>-Datensätze gespeichert sind.
+Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welches alle im FHIR Data Service verfügbaren <i>MedicationRequest</i>-Instanzen sowie die zugehörigen <i>Medication</i>-Instanzen enthält. Hinweis: Dies kann potenziell eine große Ergebnismenge bedeuten und ist davon abhängig, wie viele <i>MedicationRequest</i>-Datensätze gespeichert sind.
 
 <requirement conformance="SHALL" key="IG-TI38183K0G" title="Unterstützung der _include-Suche im FHIR Data Service gemäß FHIR" version="2">
     <meta lockversion="false"/>
@@ -144,14 +144,14 @@ Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welches alle im FHIR Da
 
 ##### _revinclude
 
-In der FHIR-Spezifikation ist <i>_revinclude</i> ein Suchparameter, der es ermöglicht, Ressourceninstanzen in die Ergebnismenge einzubeziehen, die jeweils auf die primäre Ressourceninstanz referenziert.
+In der FHIR-Spezifikation ist <i>_revinclude</i> ein Suchparameter, der es ermöglicht, Ressourceninstanzen in die Ergebnismenge einzubeziehen, die jeweils auf die primäre Ressourceninstanz verweisen.
 
 <requirement conformance="SHALL" key="IG-TI44886ZXA" title="Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR" version="2">
-    <meta lockversion="false"/>
+    <meta lockversion="true"/>
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    Der FHIR Data Servic MUSS die <i>_revinclude</i>-Suche gemäß der [FHIR Search Revinclude] unterstützen, sodass Ressourcen, die auf die gesuchten Ressourcen verweisen, innerhalb der Suchergebnisse automatisch mit einbezogen werden können.
+    Der FHIR Data Service MUSS die <i>_revinclude</i>-Suche gemäß der [FHIR Search Revinclude] unterstützen, sodass Ressourcen, die auf die gesuchten Ressourcen verweisen, innerhalb der Suchergebnisse automatisch mit einbezogen werden können.
 </requirement>
 
 
@@ -167,7 +167,7 @@ In dieser Abfrage bedeutet:
 
 2. <i>_revinclude=MedicationDispense:prescription</i> die Anweisung an den FHIR Data Service, die <i>MedicationDispense</i>-Instanzen einzuschließen, die eine <i>authorizingPrescription</i>-Referenz haben, welche wiederum auf die <i>MedicationRequest</i>-Instanzen verweist
 
-Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welche <i>MedicationRequest</i>-Instanzen zusammen mit den <i>MedicationDispense</i>-Instanzen enthält.
+Diese Abfrage gibt ein <i>Search Set Bundle</i> zurück, welches die <i>MedicationRequest</i>-Instanzen zusammen mit den zugehörigen <i>MedicationDispense</i>-Instanzen enthält.
 
 <requirement conformance="SHALL" key="IG-TI08134XQ4" title="Verarbeitung von referenzierten Ressourcen in Include-Suchen" version="0">
     <meta lockversion="false"/>
@@ -226,11 +226,11 @@ In dieser Abfrage bedeutet:
 1. _revinclude=MedicationDispense:medication
   - Sucht alle _Medication_-Instanzen und schließt zusätzlich alle _MedicationDispense_-Instanzen ein, die diese _Medikamente_ referenzieren.
 2. _include:iterate=MedicationDispense:performer
-  - Nachdem die _MedicationDispense_-Instanzen über <i>_revinclude</i> einbezogen wurden, bewirkt der _:iterate_-Modifikator, dass die in _MedicationDispense.performer_ referenzierten Organisationen ebenfalls in die Antwort aufgenommen werden.
+  - Nachdem die _MedicationDispense_-Instanzen über <i>\_revinclude</i> einbezogen wurden, bewirkt der _:iterate_-Modifikator, dass die in _MedicationDispense.performer_ referenzierten Organisationen ebenfalls in die Antwort aufgenommen werden.
 
 ##### Beispiel: Abruf aller Verschreibungen mit zugehörigem verschreibenden Leistungserbringer (LE) und verschreibender Leistungserbringerinstitution (LEI)
 
-Die folgende FHIR-Suchanfrage kombiniert <i>_include</i> und <i>_include:iterate</i>, um eine vollständige Abfrage aller _MedicationRequest_-Instanzen mit den relevanten Informationen zum verschreibenden LE und zur verschreibenden LEI durchzuführen. Diese Abfrage ermöglicht es, alle Verschreibungen (_MedicationRequest_) mit dem zugehörigen verschreibenden LE (_Practitioner_) und der verschreibenden LEI (_Organization_) abzurufen.
+Die folgende FHIR-Suchanfrage kombiniert <i>\_include</i> und <i>\_include:iterate</i>, um eine vollständige Abfrage aller _MedicationRequest_-Instanzen mit den relevanten Informationen zum verschreibenden LE und zur verschreibenden LEI durchzuführen. Diese Abfrage ermöglicht es, alle Verschreibungen (_MedicationRequest_) mit dem zugehörigen verschreibenden LE (_Practitioner_) und der verschreibenden LEI (_Organization_) abzurufen.
 
 ```
 GET [base]/MedicationRequest?_include=MedicationRequest:medication
@@ -249,7 +249,7 @@ In dieser Abfrage bedeutet:
   - So kann die verschreibende LEI (z. B. eine Praxis oder Klinik) ermittelt werden.
 4. _include:iterate=PractitionerRole:practitioner
   - Falls die _PractitionerRole_-Instanz eine Referenz zu einer _Practitioner_-Instanz enthält, wird diese in die Antwort aufgenommen.
-  - So kann der verschreibenden LE ermittelt werden.
+  - So kann der verschreibende LE ermittelt werden.
 
 ### Vergleiche und Präzision für Zahlen, Daten und Mengen
 
@@ -257,7 +257,7 @@ Bei einer Suche, die numerische oder Datumsparameter umfasst, hängen die verwen
 
 #### Präfix
 
-In FHIR werden Gleitkommazahlen durch Datentypen wie [FHIR decimal) und [FHIR Quantity] dargestellt, die die Präzision des gespeicherten Werts erfassen. Dies schließt jedoch einige Felder aus, die einfache Ganzzahlen verwenden. Suchoperationen in diesen Feldern führen zu exakten numerischen Übereinstimmungen. Bei numerischen Vergleichen ([FHIR Search number], [FHIR Search quantity]) mit einem einzelnen Wert sind nachfolgende spezifische Präfixe anwendbar. Wenn kein Präfix angegeben wird, wird standardmäßig _eq_ verwendet. Weitere Details finden sich hier: [FHIR Search Prefixes]
+In FHIR werden Gleitkommazahlen durch Datentypen wie [FHIR decimal] und [FHIR Quantity] dargestellt, die die Präzision des gespeicherten Werts erfassen. Dies schließt jedoch einige Felder aus, die einfache Ganzzahlen verwenden. Suchoperationen in diesen Feldern führen zu exakten numerischen Übereinstimmungen. Bei numerischen Vergleichen ([FHIR Search number], [FHIR Search quantity]) mit einem einzelnen Wert gelten die nachfolgenden Präfixe. Wenn kein Präfix angegeben wird, wird standardmäßig _eq_ verwendet. Weitere Details finden sich hier: [FHIR Search Prefixes]
 
 <figure>
   <table style="width: 100%">
@@ -572,19 +572,19 @@ _has:[Ressourcentyp]:[Referenzparameter]:[Suchparameter]=[Wert]
 
 **Beispiele**
 
-In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die von <i>MedicationStatement</i>-Instanzen referenziert werden und der Status der <i>MedicationStatement</i>-Instanzen auf "active" steht.
+In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die von <i>MedicationStatement</i>-Instanzen referenziert werden, deren Status auf "active" steht.
 
 ```
 GET [base]/Medication?_has:MedicationStatement:medication:status=active
 ```
 
-In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die von <i>MedicationStatement</i>-Instanzen referenziert werden und das <i>effective</i>-Datum zwischen dem 22. Juli 2025 und dem 23. Juli 2025 liegt.
+In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die von <i>MedicationStatement</i>-Instanzen referenziert werden, deren <i>effective</i>-Datum zwischen dem 22. Juli 2025 und dem 23. Juli 2025 liegt.
 
 ```
 GET [base]/Medication?_has:MedicationStatement:medication:effective=ge2025-07-22&_has:MedicationStatement:medication:effective=le2025-07-23
 ```
 
-In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die von <i>MedicationStatement</i>-Instanzen referenziert werden und der Status der <i>MedicationStatement</i>-Instanzen auf "stopped" steht. Mit dem <i>_revinclude</i>-Parameter werden zusätzlich alle zugehörigen <i>MedicationStatement</i>-Instanzen, die auf die jeweilige <i>Medication</i>-Ressource verweisen, in den Ergebnissen zurückgegeben.
+In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die von <i>MedicationStatement</i>-Instanzen referenziert werden, deren Status auf "stopped" steht. Mit dem <i>_revinclude</i>-Parameter werden zusätzlich alle zugehörigen <i>MedicationStatement</i>-Instanzen, die auf die jeweilige <i>Medication</i>-Ressource verweisen, in den Ergebnissen zurückgegeben.
 
 ```
 GET [base]/Medication?_has:MedicationStatement:medication:status=stopped&_revinclude=MedicationStatement:medication
@@ -631,7 +631,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_sort=action,-date
 ```
 
 <requirement conformance="SHALL" key="IG-TI00141ZJ2" title="Sortierung des Datentyps Period" version="1">
-    <meta lockversion="false"/>
+    <meta lockversion="true"/>
     <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
@@ -644,5 +644,5 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_sort=action,-date
     <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen, muss sofern vorhanden weitergehend nach <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.start</i>-Wert oder <i>Period.end</i>-Wert ist hierbei als noch nicht gestartet, also negativ unendlich, bzw. offen, also unendlich anzusehen.
+    Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen den gleichen <i>start</i>-Wert besitzen, muss, sofern vorhanden, weitergehend nach <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.start</i>-Wert oder <i>Period.end</i>-Wert ist hierbei als noch nicht gestartet, also negativ unendlich, bzw. offen, also unendlich anzusehen.
 </requirement>
