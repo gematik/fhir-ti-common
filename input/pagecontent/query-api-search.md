@@ -578,10 +578,10 @@ In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die 
 GET [base]/Medication?_has:MedicationStatement:medication:status=active
 ```
 
-In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die von <i>MedicationStatement</i>-Instanzen referenziert werden, deren <i>effective</i>-Datum zwischen dem 22. Juli 2025 und dem 23. Juli 2025 liegt.
+In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die von <i>MedicationStatement</i>-Instanzen referenziert werden, deren <i>effective</i>-Datum am oder nach dem 22. Juli 2025 liegt.
 
 ```
-GET [base]/Medication?_has:MedicationStatement:medication:effective=ge2025-07-22&_has:MedicationStatement:medication:effective=le2025-07-23
+GET [base]/Medication?_has:MedicationStatement:medication:effective=ge2025-07-22
 ```
 
 In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die von <i>MedicationStatement</i>-Instanzen referenziert werden, deren Status auf "stopped" steht. Mit dem <i>_revinclude</i>-Parameter werden zusätzlich alle zugehörigen <i>MedicationStatement</i>-Instanzen, die auf die jeweilige <i>Medication</i>-Ressource verweisen, in den Ergebnissen zurückgegeben.

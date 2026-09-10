@@ -48,7 +48,7 @@ Der [Medication IG DE] der HL7 DE definiert als ersten Anwendungsfall für die d
 
 In diesem IG wurden Festlegungen getroffen wie diese Dosierungen anzugeben und zu validieren sind. Neben der FHIR-Struktur, die durch die Profildefinitionen vorgegeben ist, müssen FHIR Data Services der TI auch außerhalb der FHIR-Validierung die textuelle Repräsentation der Dosierung prüfen.
 
-Client-Systeme, die Dosierinformationen an den FHIR Data Service übertragen, können diese strukturiert oder als Freitext angeben. Für diese Fälle muss in einer dafür vorgesehenen Extension eine textuelle Repräsentation der Dosierung generiert werden, die dann vom FHIR Data Service nach den Vorgaben des Algorithmus geprüft wird.
+Client-Systeme können Dosierinformationen strukturiert oder als Freitext an einen FHIR Data Service übertragen. Für die Dosierinformation wird in einer dafür vorgesehenen Extension eine textuelle Repräsentation bereitgestellt. Bei strukturierten Dosierinformationen wird diese aus den strukturierten Angaben generiert; bei einer Dosierung als Freitext wird die textuelle Angabe entsprechend übernommen. Der FHIR Data Service prüft diese textuelle Repräsentation anschließend nach den Vorgaben des Algorithmus.
 
 Die HL7 DE hat für die Erzeugung des gerenderten Dosiertextes eine [dgMP-DosageTextgenerierung-Spezifikation] bereitgestellt, die normativ vorgibt, wie eine Textgenerierung von strukturierten Dosierinformationen zu erfolgen hat. Dieser Algorithmus ist normativ vom FHIR Data Service umzusetzen.
 
