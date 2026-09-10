@@ -494,10 +494,10 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?date=ge2025-01-15T11:00:00Z&altid=1-
 
 <br/>
 
-Alle <i>AuditEvent</i>s ab dem 15. Januar 2025 und alle <i>AuditEvent</i>s, die eine Erstellung protokollieren:
+Alle <i>AuditEvent</i>s ab dem 15. Januar 2025, die eine Erstellung protokollieren:
 
 ```
-GET [base]/epa/audit/api/v1/fhir/AuditEvent?date=2025-01-15T11:00:00Z&action=C
+GET [base]/epa/audit/api/v1/fhir/AuditEvent?date=ge2025-01-15&action=C
 ```
 
 <br/>
