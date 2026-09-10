@@ -92,7 +92,7 @@ Die FHIR-Schnittstellen eines FHIR Data Service unterstützen standardmäßige [
 
 **Beispiel**
 
-Eine UUID-basierte URI MUSS das Format `urn:uuid:[UUID]` haben, zum Beispiel:
+Eine UUID-basierte URI muss das Format `urn:uuid:[UUID]` haben, zum Beispiel:
 
 ```
 urn:uuid:ea01ccbc-aa5d-4c34-8292-d95678d52c98
