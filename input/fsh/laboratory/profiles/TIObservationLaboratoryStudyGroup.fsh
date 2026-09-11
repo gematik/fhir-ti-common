@@ -56,6 +56,7 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
   * text MS
     * ^definition = "Benennung des labormedizinischen Bereiches als Freitext."
 * code 1..1 MS
+  * ^definition = "Dieses Element ist vorhanden, um die Datenstruktur \"Laboruntersuchungsgruppe\" FHIR-konform mit einem klassifizierenden Code abzubilden."
   * coding 1..1
     * version MS
 * insert Coding(code.coding)
