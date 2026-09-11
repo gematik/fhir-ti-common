@@ -1,0 +1,18 @@
+actor:
+- TI-Flow_FD
+conformance: SHALL
+content_hash: 07aac23aa03706b6c2ae7710acd19bc662e3e598de7b45c2ad4233e37de19275
+created: '2026-09-11T14:39:32.731387'
+date: '2026-09-11T14:39:32.731393'
+key: IG-TI03535MXB
+modified: '2026-09-11T14:39:32.731391'
+release_status: NEW
+source: input/pagecontent/validation.md
+status: ACTIVE
+test_procedures:
+  TI-Flow_FD:
+  - Produkttest
+text: Der FHIR Data Service MUSS beim Erzeugen von FHIR-Bundles im `fullUrl`-Element
+  das `urn:uuid`-Schema verwenden.
+title: FHIR-Ressource erzeugen - fullUrl Format in FHIR-Bundles
+version: 0

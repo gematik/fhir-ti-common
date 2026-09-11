@@ -167,3 +167,7 @@ entries:
     author: "HL7"
     title: "ValueSet: Obligation Codes ValueSet"
     link: "https://hl7.org/fhir/extensions/ValueSet-obligation.html"
+  - key: "FHIR Spezifikation Auflösen von Referenzen in Bundles"
+    author: "HL7"
+    title: "Bundle: Resolving references in Bundles"
+    link: "https://hl7.org/fhir/R4/bundle.html#references"

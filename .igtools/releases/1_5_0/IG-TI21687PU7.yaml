@@ -1,0 +1,28 @@
+actor:
+- TI-Flow_FD
+conformance: SHALL
+content_hash: 3b38f7e1f1fa82f7453cc500e1de06af13dbcde91c18964c151d725eaf446c61
+created: '2026-09-11T14:39:32.731837'
+date: '2026-09-11T14:39:32.731839'
+key: IG-TI21687PU7
+modified: '2026-09-11T14:39:32.731838'
+release_status: NEW
+source: input/pagecontent/validation.md
+status: ACTIVE
+test_procedures:
+  TI-Flow_FD:
+  - Produkttest
+text: "Der FHIR Data Service MUSS bei der Validierung einer FHIR-Ressource vom Typ\
+  \ Bundle prüfen, ob die ID der Ressource (Bundle.entry.resource.id) und die ID ihrer\
+  \ fullUrl (Bundle.entry.fullurl) übereinstimmen und bei Abweichung die Operation\
+  \ mit dem folgenden Fehler:\n      <table id=\"error-code\" style=\"border: 1px\
+  \ solid black; border-collapse: collapse;\">\n        <tr>\n            <th>HTTP-Code</th>\n\
+  \            <td>400 - Bad Request</td>\n        </tr>\n        <tr>\n         \
+  \   <th>Severity</th>\n            <td>error</td>\n        </tr>\n        <tr>\n\
+  \            <th>Code</th>\n            <td>invalid</td>\n        </tr>\n      \
+  \  <tr>\n            <th>Details Code</th>\n            <td>MSG_RESOURCE_ID_MISMATCH</td>\n\
+  \        </tr>\n        <tr>\n            <th>Details Text</th>\n            <td>Die\
+  \ ID einer Ressource und die ID der zugehörigen fullUrl stimmen nicht überein.</td>\n\
+  \        </tr>\n    </table> \n    abbrechen."
+title: FHIR-Ressource validieren - Prüfung Konsistenz Ressource IDs
+version: 0
