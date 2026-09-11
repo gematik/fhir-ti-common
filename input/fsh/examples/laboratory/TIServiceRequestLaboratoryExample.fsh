@@ -7,7 +7,10 @@ Description: "Maximale Beispielinstanz für das Profil TIServiceRequestLaborator
 // * text
 //   * status = #extensions
 //   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laborauftrag-Information</div>"
-* identifier
+* identifier[orderNumberSender]
+  * system = "http://testsystem.de"
+  * value = "20211115-127"
+* identifier[additionalRequestIdentification]
   * system = "http://testsystem.de"
   * value = "20211115-127"
 * status = #completed

@@ -16,7 +16,7 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
 * category[studyType]
   * coding = $loinc#18717-9 "Blood bank studies (set)"
   * text = "test"
-* code.coding = https://gematik.de/fhir/epa-laboratory/CodeSystem/laboratory-study-group|1.0.0#laboruntersuchungsgruppe "Laboruntersuchungsgruppe"
+* code.coding = $ti-cs-laboratory-study-group#laboruntersuchungsgruppe "Laboruntersuchungsgruppe"
 * subject = Reference(ExampleTIPatient)
   * identifier
     * type = $identifier-type-de-basis#KVZ10 "Krankenversichertennummer"
