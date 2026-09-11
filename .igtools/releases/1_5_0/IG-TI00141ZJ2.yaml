@@ -4,9 +4,9 @@ actor:
 - EPA-Medication-Service
 - TI-Flow_FD
 conformance: SHALL
-content_hash: e95b42c4582df88b59dbebb5932baafeaa1f5c786c7bd008897a6fa1c20d2d34
+content_hash: 8ce4201df28b0c9a66a5c3836d93684427eb898bc080da7e91e302e6ec67af90
 created: '2025-10-27T11:15:01.479737'
-date: '2026-06-15T13:51:38.832877'
+date: '2026-09-10T09:12:27.553818'
 key: IG-TI00141ZJ2
 modified: '2026-01-14T09:29:09.949753'
 release_status: STABLE
@@ -23,7 +23,7 @@ test_procedures:
   - Produkttest
 text: Der FHIR Data Service MUSS bei der Sortierung von Instanzen anhand des Datentyps
   <i>Period</i> nach dem Element <i>Period.start</i> sortieren. Sofern zwei Instanzen
-  den gleichen <i>start</i>-Wert besitzen, muss sofern vorhanden weitergehend nach
+  den gleichen <i>start</i>-Wert besitzen, muss, sofern vorhanden, weitergehend nach
   <i>Period.end</i> sortiert werden. Ein nicht angegebener <i>Period.start</i>-Wert
   oder <i>Period.end</i>-Wert ist hierbei als noch nicht gestartet, also negativ unendlich,
   bzw. offen, also unendlich anzusehen.

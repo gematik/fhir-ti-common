@@ -83,7 +83,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0_total=accurate
 <br/>
 
 <requirement conformance="SHALL" key="IG-TI37232GDE" title="Unterstützung Seitennavigationslinks für Paginierungsfunktion" version="2">
-    <meta lockversion="false"/>
+    <meta lockversion="true"/>
     <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
@@ -115,12 +115,12 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0_total=accurate
         </tr>
         <tr>
           <td><code>next</code></td>
-          <td>Wird verwendet, um zur nächsten Seite der Ergebnisse zu navigieren, entsprechend der festgelegten Paginierung</td>
+          <td>Verweist auf die in der vom Server bestimmten Seitenfolge unmittelbar auf die aktuelle Seite folgende Ergebnisseite</td>
           <td>MUSS</td>
         </tr>
         <tr>
           <td><code>previous</code></td>
-          <td>Ermöglicht die Rückkehr zur vorherigen Ergebnismenge und erleichtert die rückwärtige Navigation durch die Seiten</td>
+          <td>Verweist auf die in der vom Server bestimmten Seitenfolge unmittelbar vor der aktuellen Seite liegende Ergebnisseite. Dies ist nicht notwendigerweise die zuletzt aufgerufene Seite</td>
           <td>MUSS</td>
         </tr>
         <tr>
