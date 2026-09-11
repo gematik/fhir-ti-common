@@ -23,6 +23,7 @@ Description: "Abbildung, die zu einer Laboruntersuchung oder einer Untersuchungs
       * ^definition = "Hier wird ein Titel bzw. eine Bezeichnung für die angehängte Bild-Datei angegeben."
 * status 1..1 MS
   * ^definition = "Zum Untersuchungsbild-Anhang ist die Angabe des Status technisch erforderlich. Wenn es für die Erstellung/Erzeugung des Bildes keinen zu dokumentierenden Prozess gibt, dann wird der Status \"final\" verwendet."
+* status from $ti-vs-observation-status (required)
 * category MS
 * category[laboratory] MS
   * insert CodeableConceptMS

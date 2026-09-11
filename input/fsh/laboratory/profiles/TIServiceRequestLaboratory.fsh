@@ -11,6 +11,35 @@ Description: "Administrative und für die Befundung klinisch relevante Teilinfor
 // * ^status = #active
 
 * identifier MS
+* identifier 1.. MS
+  * ^definition = "In der Labordatenkommunikation kann sowohl von der einsendenden Einrichtung/Person wie auch vom auftragsnehmenden Labor ein auftragsbezogener Identifikator zugeordnet werden."
+  * ^short = "Auftragsbezogener Identifikator"
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "type"
+  * ^slicing.rules = #open
+* identifier contains
+  orderNumberSender 1..1 MS and
+  additionalRequestIdentification 0.. MS
+* identifier[orderNumberSender]
+  * ^definition = "Auftragsnummer, die der auftraggebende Einsender vergibt und führt."
+  * ^short = "Auftragsnummer, die der auftraggebende Einsender vergibt und führt."
+  * type 1.. MS
+    * coding 1..1
+      * version MS
+  * type = $ti-cs-laboratory-identificator#AE "Auftragsnummer des Einsenders"
+  * system 1.. MS
+  * value 1.. MS
+* insert Coding(identifier[orderNumberSender].type.coding)
+* identifier[additionalRequestIdentification]
+  * ^definition = "Nachforderungs-ID - Eine Nachforderung ist eine ergänzende Anforderung von Laboruntersuchungen zu einem bereits bestehenden Überweisungsauftrag."
+  * ^short = "Identifiziert eine Nachforderung mit Bezug auf eine bereits vorhandene Auftragsidentifikation"
+  * type 1.. MS
+    * coding 1..1 MS
+      * version MS
+  * type = $ti-cs-laboratory-identificator#NI "Nachforderungsidentifikation"
+  * system 1.. MS
+  * value 1.. MS
+* insert Coding(identifier[additionalRequestIdentification].type.coding)
 * priority MS
   * ^definition = """
 Die im Laborauftrag formulierte Dringlichkeit von Laboruntersuchungen soll im Laborbefund berücksichtigt werden. Mögliche Werte sind:\n

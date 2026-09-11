@@ -34,6 +34,7 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
       * ^definition = "Benennung des Test-Profils als Freitext."
 * insert Coding(extension[testProfile].valueCodeableConcept.coding)
 * status MS
+* status from $ti-vs-observation-status (required)
 * category MS
   * ^definition = """
   Zur jeweiligen Gruppe kann es (optional) gruppenbezogene fachliche Bezeichner geben, abgebildet in der vorliegenden Struktur \"Fachliches Gruppierungsmerkmal\". Für die gruppierte Darstellung von Laborergebnissen im Laborgesamtbefund können solche fachlichen Gruppierungsmerkmale als Gruppenüberschrift dienen. Mögliche Gruppenüberschriften sind:\n
@@ -54,9 +55,12 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
     * insert CodingMS
   * text MS
     * ^definition = "Benennung des labormedizinischen Bereiches als Freitext."
-* code MS
-  * coding
-    * insert CodingMS
+* code 1..1 MS
+  * ^definition = "Dieses Element ist vorhanden, um die Datenstruktur \"Laboruntersuchungsgruppe\" FHIR-konform mit einem klassifizierenden Code abzubilden."
+  * coding 1..1
+    * version MS
+* insert Coding(code.coding)
+* code = $ti-cs-laboratory-study-group#laboruntersuchungsgruppe "Laboruntersuchungsgruppe"
 * insert SubjectEu(subject)
 * insert PerformerEu
 * performer

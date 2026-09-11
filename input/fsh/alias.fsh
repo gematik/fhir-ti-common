@@ -129,6 +129,10 @@ Alias: $ti-vs-specimen-collection-method = https://gematik.de/fhir/terminology/V
 Alias: $ti-vs-specimen-condition = https://gematik.de/fhir/terminology/ValueSet/specimen-condition
 Alias: $ti-vs-secondary-status = https://gematik.de/fhir/terminology/ValueSet/secondary-status
 Alias: $ti-vs-laboratory-study-value = https://gematik.de/fhir/terminology/ValueSet/laboratory-study-value
+Alias: $ti-vs-observation-status = https://gematik.de/fhir/terminology/ValueSet/observation-status
+
+Alias: $ti-cs-laboratory-study-group = https://gematik.de/fhir/terminology/CodeSystem/laboratory-study-group
+Alias: $ti-cs-laboratory-identificator = https://gematik.de/fhir/terminology/CodeSystem/laboratory-identificator
 
 
 Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs

@@ -138,6 +138,7 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
 * identifier MS
 * status MS
   * ^definition = "Bearbeitungsstatus der einzelnen Laboruntersuchung."
+* status from $ti-vs-observation-status (required)
 * category MS
   * ^definition = "Zur einzelnen Laboruntersuchung wird das \"fachliche Gruppierungsmerkmal\" REDUNDANT abgebildet, der Inhalt entspricht exakt dem fachlichen Gruppierungsmerkmal der zugehörigen Untersuchungsgruppe. Dies ermöglicht bei datenbankbasierten Abfragen von Einzeluntersuchungen (z.B. in der ePA) eine direkte Zuordnung zur fachlichen Gruppierung. Das fachliche Gruppierungsmerkmal der Untersuchungsgruppe ist grundsätzlich führend!"
   * ^short = "Fachliche Bezeichnung für die zugehörige Untersuchungsgruppe, Inhalt identisch zu TIObservationLaboratoryStudyGroup.category"
