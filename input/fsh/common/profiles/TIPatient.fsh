@@ -55,8 +55,8 @@ Description: "Dieses Profil definiert die Repräsentation eines Geburtsnamens in
 
 Profile: TIPatient
 Id: ti-patient
-Parent: PatientEuCore
-// Parent: Patient
+// Parent: PatientEuCore
+Parent: Patient
 Title: "TI Patient"
 Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data Services"
 * insert Meta
@@ -64,6 +64,20 @@ Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data 
 * ^version = "1.5.0"
 * ^date = "2026-09-30"
 * ^status = #active
+
+//-------- EU --------
+* insert ImposeProfile(PatientEuCore, 0)
+* extension contains
+    $patient-birthPlace named birthPlace 0..1 and
+    $sexForClinicalUse named sex-for-clinical-use 0..* and // from Lab Report
+    $individual-genderIdentity named gender-identity 0..* and
+    $individual-pronouns named pronouns 0..* and
+    $patient-citizenship named patient-citizenship 0..* and
+    $patient-nationality named patient-nationality 0..* and
+    $patient-birthTime named birthTime 0..1
+* extension[birthPlace].valueAddress only AddressEu
+//-------------------- 
+
 
 * obeys pat-de-1
 * obeys pat-de-2

@@ -6,8 +6,8 @@ Description: "Dieses Profil beschreibt die Fähigkeiten eines FHIR Data Service 
 * insert Meta
 
 // preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * contact 1..1
@@ -39,4 +39,9 @@ Description: "Dieses Profil beschreibt die Fähigkeiten eines FHIR Data Service 
   HTTPHeader named header 0.. and
   HttpResponseInfo named responseInfo 0.. and
   HttpMethod named method 0..2 and
+  $cs-expectation named expectation 0..1
+
+* rest.resource.searchParam.extension contains
+  SearchParameterInteraction named interaction 0.. and
+  HttpMethod named method 0.. and
   $cs-expectation named expectation 0..1

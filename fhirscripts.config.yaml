@@ -15,6 +15,6 @@ build:
     - requirements
     - shell: reqtools polarion ./input/content
     - shell: ./scripts/generate-heading-links-js.sh
-    - sushi
+    # - sushi
     - igpub
     - igpub_qa

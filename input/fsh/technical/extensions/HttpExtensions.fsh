@@ -127,8 +127,8 @@ Description: "Gibt an, ob eine FHIR Operation mit GET, POST oder beidem verwende
 * insert Meta
 
 // preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * ^context[+].type = #element
@@ -137,5 +137,7 @@ Description: "Gibt an, ob eine FHIR Operation mit GET, POST oder beidem verwende
 * ^context[=].expression = "CapabilityStatement.rest.operation"
 * ^context[+].type = #element
 * ^context[=].expression = "CapabilityStatement.rest.resource.operation"
+* ^context[+].type = #element
+* ^context[=].expression = "CapabilityStatement.rest.resource.searchParam"
 * valueCode 1..1
 * valueCode from HTTPVerb (required)
