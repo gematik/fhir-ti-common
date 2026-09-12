@@ -29,12 +29,14 @@ Description: "Ermöglicht die Angabe global oder spezifisch geforderter HTTP Hea
 * insert Meta
 
 // preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * ^context[+].type = #element
 * ^context[=].expression = "CapabilityStatement"
+* ^context[+].type = #element
+* ^context[=].expression = "CapabilityStatement.rest.resource"
 * ^context[+].type = #element
 * ^context[=].expression = "CapabilityStatement.rest.resource.interaction"
 * ^context[+].type = #element
@@ -48,7 +50,8 @@ Description: "Ermöglicht die Angabe global oder spezifisch geforderter HTTP Hea
   description 0..1 and
   pattern 0..1 and
   format 0..1 and
-  required 1..1
+  required 1..1 and
+  interaction 0..1
 
 * extension[name].value[x] only string
 * extension[name] ^short = "Name des HTTP-Headers, z.B. X-Request-ID"
@@ -68,6 +71,10 @@ Description: "Ermöglicht die Angabe global oder spezifisch geforderter HTTP Hea
 * extension[required].value[x] only boolean
 * extension[required] ^short = "Gibt an, ob der Header verpflichtend ist (true/false)"
 
+* extension[interaction].value[x] only code
+* extension[interaction].valueCode from TIRestfulInteractionVS (required)
+* extension[interaction] ^short = "REST-Interaktion, für die diese Angabe gilt"
+
 
 
 Extension: HttpResponseInfo
@@ -76,12 +83,14 @@ Title: "HTTP-Antwortinformationen"
 Description: "Definiert Informationen zu HTTP-Antworten für FHIR-Interaktionen, inklusive Statuscode, Beschreibung, Beispiel und Response-Schema."
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * ^context[+].type = #element
 * ^context[=].expression = "CapabilityStatement"
+* ^context[+].type = #element
+* ^context[=].expression = "CapabilityStatement.rest.resource"
 * ^context[+].type = #element
 * ^context[=].expression = "CapabilityStatement.rest.resource.interaction"
 * ^context[+].type = #element
@@ -90,13 +99,14 @@ Description: "Definiert Informationen zu HTTP-Antworten für FHIR-Interaktionen,
 * ^context[=].expression = "CapabilityStatement.rest.resource.operation"
 
 * extension contains
-    statusCode 1..1 and
-    description 1..1 and
-    example 0..1 and
-    format 0..1 and
-    retryable 0..1 and
-    responseType 0..1 and
-    errorCode 0..1
+  statusCode 1..1 and
+  description 1..1 and
+  example 0..1 and
+  format 0..1 and
+  retryable 0..1 and
+  responseType 0..1 and
+  errorCode 0..1 and
+  interaction 0..1
 
 * extension[statusCode].value[x] only string
 * extension[statusCode] ^short = "Der HTTP-Statuscode (z.B. 200, 201, 404, 500)"
@@ -118,6 +128,10 @@ Description: "Definiert Informationen zu HTTP-Antworten für FHIR-Interaktionen,
 
 * extension[errorCode].value[x] only string
 * extension[errorCode] ^short = "Ein technischer oder semantischer Fehlercode, z.B. internalError"
+
+* extension[interaction].value[x] only code
+* extension[interaction].valueCode from TIRestfulInteractionVS (required)
+* extension[interaction] ^short = "REST-Interaktion, für die diese Angabe gilt"
 
 
 Extension: HttpMethod

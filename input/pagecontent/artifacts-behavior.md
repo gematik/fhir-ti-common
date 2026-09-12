@@ -18,6 +18,7 @@ Dieses Capability Statement Profil dient als TI-weit gültige Referenz für die 
 CodeSystem/ti-environment-codes,
 CodeSystem/ti-fhir-configuration-cs,
 CodeSystem/ti-operation-parameter-location-cs,
+CodeSystem/ti-restful-interaction-cs,
 {% endcapture %}
 {% include artifacts-table-generator.html render=technical-cs %}
 <div><figcaption><strong>Tabelle:</strong> Code Systems</figcaption></div>

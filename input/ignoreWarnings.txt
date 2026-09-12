@@ -37,6 +37,7 @@ Keiner der angegebenen Codes ist im Valueset 'Laboratory Code' (http://hl7.eu/fh
 Keiner der angegebenen Codes ist im Valueset 'Laboratory Order' (http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab|2.0.0), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://snomed.info/sct#721965002)
 Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://gematik.de/fhir/ti/StructureDefinition/ti-appendix-document-reference|1.5.0 überein.
 Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://gematik.de/fhir/ti/StructureDefinition/ti-observation-laboratory-study-group|1.5.0 überein.
+%hl7.fhir.eu.extensions.r4#1.3.0%
 
 
 # Ignoring Warnings: We are using a custom template of our own
