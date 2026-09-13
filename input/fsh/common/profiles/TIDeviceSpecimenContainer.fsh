@@ -7,8 +7,8 @@ Description: "In diesem Profil werden Informationen zum Probenbehälter angegebe
 * insert Meta-With-Versioning
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * identifier MS
   * ^definition = "Hier werden eineindeutige Produktnummern angegeben. Diese stellen einen eineindeutigen (Bijektiven) Identifier dar.\n"

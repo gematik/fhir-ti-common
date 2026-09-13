@@ -18,8 +18,8 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
 * insert Meta-With-Versioning
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * extension MS
 * extension contains TestProfileLaboratoryExtension named testProfile 0..1 MS

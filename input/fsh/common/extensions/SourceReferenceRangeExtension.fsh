@@ -7,8 +7,8 @@ Context: Observation.referenceRange
 * . ^definition = "Diese Extension bildet eine Quelle der Richtgrenze ab."
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1

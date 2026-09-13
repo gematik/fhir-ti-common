@@ -22,8 +22,8 @@ Angaben zur Körperstruktur können enthalten:\n
 * insert Meta-With-Versioning
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * extension MS
 * extension[includedStructure] 1.. MS

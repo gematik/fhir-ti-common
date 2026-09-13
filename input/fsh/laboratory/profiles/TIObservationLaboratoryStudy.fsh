@@ -17,8 +17,8 @@ Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechn
 * insert Meta-With-Versioning
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 
 * obeys obs-alt-result-1

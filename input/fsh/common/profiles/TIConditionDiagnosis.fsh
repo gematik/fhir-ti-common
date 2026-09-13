@@ -7,8 +7,8 @@ Description: "Dieses Profil bildet eine Diagnose ab."
 * insert Meta-With-Versioning
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * clinicalStatus MS
   * ^definition = "Dieses Element beschreibt den Status einer Diagnose bzw. einer Erkrankung aus klinischer Sicht."

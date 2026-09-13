@@ -6,8 +6,8 @@ Context: DiagnosticReport
 * insert Meta
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * . ^definition = "In dieser Extension kann ein Befund als pseudonymisiert deklariert werden. Es kann bei der Steuerung der Übermittlungswege und für technische Validierung genutzt werden."
 * . ^short = "Kennzeichnet einen Laborbefund, der keine personenidentifzierende Inhalte hat"

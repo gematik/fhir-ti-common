@@ -6,8 +6,8 @@ Context: Observation.hasMember, DiagnosticReport.result, Composition.section.ent
 * insert Meta
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * . ^definition = "Diese Extension bildet eine Sortiernummer ab. Zu jeder Untersuchungsgruppe gibt es immer eine Sortiernummer. Die mit dem Datenstrom mitgegebenen Sortiernummern sind als Standardsortierung gedacht. Die Standardsortierung legt das Befund-erstellende Labor fest. "
 * value[x] only positiveInt

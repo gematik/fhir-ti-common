@@ -9,8 +9,8 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * extension contains TIDocumentStorageLocation named documentStorageLocation 0..1 MS
 * extension[documentStorageLocation]

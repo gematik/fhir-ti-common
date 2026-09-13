@@ -9,7 +9,7 @@ Dieses Profil beschreibt die Verwendung der FHIR-Ressource PractitionerRole in d
 * insert Meta-With-Versioning
 // preserve the version of this resource
 * ^version = "1.5.0"
-* ^date = "2026-09-30"
+* ^date = "2026-11-16"
 * ^status = #active
 
 //-------- EU --------

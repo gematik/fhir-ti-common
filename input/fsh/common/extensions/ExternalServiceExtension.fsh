@@ -7,8 +7,8 @@ Context: Observation
 * . ^definition = "Diese Extension bildet ein Kennzeichen Fremdleistung ab."
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * value[x] only boolean
 * valueBoolean 1..1

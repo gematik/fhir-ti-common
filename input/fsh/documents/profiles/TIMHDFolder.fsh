@@ -7,8 +7,8 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal Folder."
 
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * identifier[entryUUID]
   * ^short = "Intern verwendete, aktenweit eindeutige Kennung für den Folder"

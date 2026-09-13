@@ -7,8 +7,8 @@ Context: Observation
 * insert Meta
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * value[x] ..0
 * extension contains

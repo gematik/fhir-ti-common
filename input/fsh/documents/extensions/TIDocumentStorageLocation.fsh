@@ -9,11 +9,11 @@ Der Dokumenteninhalt kann über die in DocumentReference.content.attachment.url 
 ePA-Transaktion Retrieve Document [ITI-68] abgerufen werden.
 """
 Context: DocumentReference
-
+* insert Meta
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * value[x] only Coding
 * valueCoding from TIDocumentStorageLocationVS (required)

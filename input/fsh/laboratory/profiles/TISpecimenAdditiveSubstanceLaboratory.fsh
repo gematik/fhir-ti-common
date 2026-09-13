@@ -7,8 +7,8 @@ Description: "Hier wird eine Substanz abgebildet, die bei der Probenverarbeitung
 * insert Meta-With-Versioning
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * code MS
   * ^definition = "In diesem Element werden Angaben zu Additiva in Form einer Codierung gemacht. Diese werden als codierte Information und/oder als Freitext angegeben."

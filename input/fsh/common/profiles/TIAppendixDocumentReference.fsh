@@ -7,8 +7,8 @@ Description: "Hier wird ein Dokumentanhang abgebildet."
 * . ^definition = "Hier wird ein Dokumentanhang abgebildet."
 // preserve the version
 * ^version = "1.5.0"
-// * ^date = "2026-09-30"
-// * ^status = #active
+* ^date = "2026-11-16"
+* ^status = #active
 
 * masterIdentifier MS
 * status MS
