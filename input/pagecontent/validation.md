@@ -180,3 +180,165 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
 <div class="gem-ig-example" data-title="OperationOutcome (XML)">
     {% fragment OperationOutcome/5ab6bca4-fbdf-49c3-a693-a065187cffd6 XML %}
 </div>
+
+### Validierung von Referenzen in FHIR-Objekten
+
+FHIR ermöglicht die Verknüpfung von Ressourcen über Referenzen. Das erfolgt über den Datentyp [Reference](https://hl7.org/fhir/R4/references.html). Referenzen dienen dazu, auf andere Ressourcen innerhalb derselben oder einer anderen FHIR-Instanz zu verweisen.
+
+FHIR Data Services der gematik erzeugen und validieren diese Angaben.
+
+Beim Erzeugen von FHIR-Objekten verwenden FHIR Data Services grundsätzlich das `urn:uuid`-Schema, um eine Referenz anzugeben. Das ermöglicht eine direkte Auflösung innerhalb des Artefakts.
+
+#### Referenzierungen und fullUrl in FHIR-Bundles
+
+Innerhalb eines [FHIR-Bundle](https://hl7.org/fhir/R4/bundle.html#references) dient die `fullUrl` als eindeutige Kennung eines Bundle-Eintrags, damit Resourcen im Bundle referenziert und aufgelöst werden können. Für den Wert von `fullUrl` sind sieht die FHIR Spezifikation verschiedene Formate vor: 
+
+- `oid`, 
+- `urn:uuid` 
+- und `http(s)`
+
+Die `fullUrl` muss dabei mit der ID der referenzierten Ressource konsistent sein, damit die Referenzierung eindeutig und prüfbar bleibt.
+
+<requirement conformance="SHALL" key="IG-TI03535MXB" title="FHIR-Ressource erzeugen - fullUrl Format in FHIR-Bundles" version="0">
+    <meta lockversion="false"/>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+     Der FHIR Data Service MUSS beim Erzeugen von FHIR-Bundles im `fullUrl`-Element das `urn:uuid`-Schema verwenden.
+</requirement>
+
+<requirement conformance="SHALL" key="IG-TI12108QJK" title="FHIR-Ressource erzeugen - Format von Referenzen in FHIR-Ressourcen" version="0">
+    <meta lockversion="false"/>
+    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+     Der FHIR Data Service MUSS beim Erzeugen von FHIR-Datensätzen für die Referenzierung von FHIR-Ressourcen das `urn:uuid`-Schema verwenden.
+</requirement>
+
+<!-- A_26229-02 -->
+<requirement conformance="SHALL" key="IG-TI21687PU7" title="FHIR-Ressource validieren - Prüfung Konsistenz Ressource IDs" version="0">
+	<meta lockversion="false"/>
+	<actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+    	<testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+  	</actor>
+	Der FHIR Data Service MUSS bei der Validierung einer FHIR-Ressource vom Typ Bundle prüfen, ob die ID der Ressource (Bundle.entry.resource.id) und die ID ihrer fullUrl (Bundle.entry.fullurl) übereinstimmen und bei Abweichung die Operation mit dem folgenden Fehler:
+      <table id="error-code" style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <th>HTTP-Code</th>
+            <td>400 - Bad Request</td>
+        </tr>
+        <tr>
+            <th>Severity</th>
+            <td>error</td>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <td>invalid</td>
+        </tr>
+        <tr>
+            <th>Details Code</th>
+            <td>MSG_RESOURCE_ID_MISMATCH</td>
+        </tr>
+        <tr>
+            <th>Details Text</th>
+            <td>Die ID einer Ressource und die ID der zugehörigen fullUrl stimmen nicht überein.</td>
+        </tr>
+    </table> 
+    abbrechen.
+</requirement>
+
+<!-- A_26233-01 -->
+<requirement conformance="SHALL" key="IG-TI42629HLM" title="FHIR-Ressource validieren - Prüfung Format fullUrl" version="0">
+	<meta lockversion="false"/>
+	<actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+    	<testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+  	</actor>
+	Der FHIR Data Service MUSS bei der Validierung einer FHIR-Ressource vom Typ Bundle prüfen, ob der Wert von fullUrls der entries (Bundle.entry.fullUrl) dem [Format http-Schema] oder [Format urn:uuid-Schema] entsprechen und bei Abweichung die Operation mit dem folgenden Fehler:
+      <table id="error-code" style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <th>HTTP-Code</th>
+            <td>400 - Bad Request</td>
+        </tr>
+        <tr>
+            <th>Severity</th>
+            <td>error</td>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <td>invalid</td>
+        </tr>
+        <tr>
+            <th>Details Code</th>
+            <td>SVC_RESOURCE_FULLURL_INVALID</td>
+        </tr>
+        <tr>
+            <th>Details Text</th>
+            <td>Invalid format of the fullUrl</td>
+        </tr>
+    </table> 
+    abbrechen.
+</requirement>
+
+<!-- A_27648 -->
+<requirement conformance="SHALL" key="IG-TI06477FBZ" title="FHIR-Ressource validieren - Prüfung Existenz von Ressource.id" version="0">
+	<meta lockversion="false"/>
+	<actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+    	<testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+  	</actor>
+	Der FHIR Data Service MUSS bei der Validierung einer FHIR-Ressource vom Typ Bundle prüfen, ob für jedes entry im Bundle die ID der Ressource (Bundle.entry.resource.id) vorhanden ist und bei Abweichung die Operation mit dem folgenden Fehler:
+      <table id="error-code" style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <th>HTTP-Code</th>
+            <td>400 - Bad Request</td>
+        </tr>
+        <tr>
+            <th>Severity</th>
+            <td>error</td>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <td>invalid</td>
+        </tr>
+        <tr>
+            <th>Details Code</th>
+            <td>MSG_RESOURCE_ID_MISSING</td>
+        </tr>
+        <tr>
+            <th>Details Text</th>
+            <td>The ID of a resource in the bundle does not exist</td>
+        </tr>
+    </table> 
+    abbrechen.
+</requirement>
+
+<!-- A_27649 -->
+<requirement conformance="SHALL" key="IG-TI05986KWW" title="FHIR-Ressource validieren - Prüfung Auflösbarkeit von Referenzen" version="0">
+	<meta lockversion="false"/>
+	<actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
+    	<testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+  	</actor>
+	Der FHIR Data Service MUSS bei der Validierung einer FHIR-Ressource prüfen, ob angegebene Referenzen nach [FHIR Spezifikation Auflösen von Referenzen in Bundles] ermittelt werden können und bei Abweichung die Operation mit dem folgenden Fehler:
+      <table id="error-code" style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <th>HTTP-Code</th>
+            <td>400 - Bad Request</td>
+        </tr>
+        <tr>
+            <th>Severity</th>
+            <td>error</td>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <td>invalid</td>
+        </tr>
+        <tr>
+            <th>Details Code</th>
+            <td>MSG_RESOURCE_ID_FAIL</td>
+        </tr>
+        <tr>
+            <th>Details Text</th>
+            <td>Reference to a resource could not be resolved</td>
+        </tr>
+    </table> 
+    abbrechen.
+</requirement>

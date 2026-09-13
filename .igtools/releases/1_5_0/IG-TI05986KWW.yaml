@@ -1,0 +1,27 @@
+actor:
+- TI-Flow_FD
+conformance: SHALL
+content_hash: 3f99c90f25735a2c1c4fff751fa7cf3a6b416ceec383c3a782e1002bc7e9ccf5
+created: '2026-09-11T14:39:32.732913'
+date: '2026-09-11T14:39:32.732915'
+key: IG-TI05986KWW
+modified: '2026-09-11T14:39:32.732914'
+release_status: NEW
+source: input/pagecontent/validation.md
+status: ACTIVE
+test_procedures:
+  TI-Flow_FD:
+  - Produkttest
+text: "Der FHIR Data Service MUSS bei der Validierung einer FHIR-Ressource prüfen,\
+  \ ob angegebene Referenzen nach [FHIR Spezifikation Auflösen von Referenzen in Bundles]\
+  \ ermittelt werden können und bei Abweichung die Operation mit dem folgenden Fehler:\n\
+  \      <table id=\"error-code\" style=\"border: 1px solid black; border-collapse:\
+  \ collapse;\">\n        <tr>\n            <th>HTTP-Code</th>\n            <td>400\
+  \ - Bad Request</td>\n        </tr>\n        <tr>\n            <th>Severity</th>\n\
+  \            <td>error</td>\n        </tr>\n        <tr>\n            <th>Code</th>\n\
+  \            <td>invalid</td>\n        </tr>\n        <tr>\n            <th>Details\
+  \ Code</th>\n            <td>MSG_RESOURCE_ID_FAIL</td>\n        </tr>\n        <tr>\n\
+  \            <th>Details Text</th>\n            <td>Reference to a resource could\
+  \ not be resolved</td>\n        </tr>\n    </table> \n    abbrechen."
+title: FHIR-Ressource validieren - Prüfung Auflösbarkeit von Referenzen
+version: 0

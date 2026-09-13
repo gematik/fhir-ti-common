@@ -1,0 +1,27 @@
+actor:
+- TI-Flow_FD
+conformance: SHALL
+content_hash: ed9d2b414448c0169df4cad355cc6ee5493d364443824cbf3fbdc1e9eef4753a
+created: '2026-09-11T14:39:32.732562'
+date: '2026-09-11T14:39:32.732564'
+key: IG-TI06477FBZ
+modified: '2026-09-11T14:39:32.732563'
+release_status: NEW
+source: input/pagecontent/validation.md
+status: ACTIVE
+test_procedures:
+  TI-Flow_FD:
+  - Produkttest
+text: "Der FHIR Data Service MUSS bei der Validierung einer FHIR-Ressource vom Typ\
+  \ Bundle prüfen, ob für jedes entry im Bundle die ID der Ressource (Bundle.entry.resource.id)\
+  \ vorhanden ist und bei Abweichung die Operation mit dem folgenden Fehler:\n   \
+  \   <table id=\"error-code\" style=\"border: 1px solid black; border-collapse: collapse;\"\
+  >\n        <tr>\n            <th>HTTP-Code</th>\n            <td>400 - Bad Request</td>\n\
+  \        </tr>\n        <tr>\n            <th>Severity</th>\n            <td>error</td>\n\
+  \        </tr>\n        <tr>\n            <th>Code</th>\n            <td>invalid</td>\n\
+  \        </tr>\n        <tr>\n            <th>Details Code</th>\n            <td>MSG_RESOURCE_ID_MISSING</td>\n\
+  \        </tr>\n        <tr>\n            <th>Details Text</th>\n            <td>The\
+  \ ID of a resource in the bundle does not exist</td>\n        </tr>\n    </table>\
+  \ \n    abbrechen."
+title: FHIR-Ressource validieren - Prüfung Existenz von Ressource.id
+version: 0
