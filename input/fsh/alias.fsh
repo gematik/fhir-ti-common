@@ -179,3 +179,13 @@ Alias: $coding-icd-10-gm = http://fhir.de/StructureDefinition/CodingICD10GM
 
 //// FHIR
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+
+
+//// EU
+Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
+Alias: $sexForClinicalUse = http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse
+Alias: $individual-genderIdentity = http://hl7.org/fhir/StructureDefinition/individual-genderIdentity
+Alias: $individual-pronouns = http://hl7.org/fhir/StructureDefinition/individual-pronouns
+Alias: $patient-citizenship = http://hl7.org/fhir/StructureDefinition/patient-citizenship
+Alias: $patient-nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
+Alias: $patient-birthTime = http://hl7.org/fhir/StructureDefinition/patient-birthTime

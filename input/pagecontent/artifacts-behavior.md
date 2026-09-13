@@ -16,7 +16,9 @@ Dieses Capability Statement Profil dient als TI-weit gültige Referenz für die 
 
 {% capture technical-cs %}
 CodeSystem/ti-environment-codes,
-CodeSystem/ti-fhir-configuration-cs
+CodeSystem/ti-fhir-configuration-cs,
+CodeSystem/ti-operation-parameter-location-cs,
+CodeSystem/ti-restful-interaction-cs,
 {% endcapture %}
 {% include artifacts-table-generator.html render=technical-cs %}
 <div><figcaption><strong>Tabelle:</strong> Code Systems</figcaption></div>
@@ -26,25 +28,29 @@ CodeSystem/ti-fhir-configuration-cs
 
 {% capture technical-vs %}
 ValueSet/ti-environment-vs,
-ValueSet/ti-fhir-configuration-vs
+ValueSet/ti-fhir-configuration-vs,
+ValueSet/ti-operation-parameter-location-vs,
+ValueSet/ti-restful-interaction-vs,
 {% endcapture %}
 {% include artifacts-table-generator.html render=technical-vs %}
 <div><figcaption><strong>Tabelle:</strong> Value Sets</figcaption></div>
 
 
-### Capability Statement Extensions
+### Capability Extensions
 
 {% capture tihttpbasic %}
 StructureDefinition/extension-base-url,
 StructureDefinition/extension-http-header,
 StructureDefinition/extension-http-response-info,
 StructureDefinition/extension-http-method,
+StructureDefinition/operation-parameter-location
 StructureDefinition/ti-environment,
 StructureDefinition/ti-feature,
-StructureDefinition/ti-fhir-configuration
+StructureDefinition/ti-fhir-configuration,
+StructureDefinition/search-parameter-interaction,
 {% endcapture %}
 {% include artifacts-table-generator.html render=tihttpbasic %}
-<div><figcaption><strong>Tabelle:</strong> Capability Statement Extensions</figcaption></div>
+<div><figcaption><strong>Tabelle:</strong> Capability Extensions</figcaption></div>
 
 
 ### Operation Outcome

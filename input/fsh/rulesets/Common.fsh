@@ -77,3 +77,7 @@ RuleSet: Note
     * ^comment = "Dieses Element sollte in der Regel automatisiert ohne Aufwand für die Person, die die Notiz erstellt befüllt werden."
   * text MS
     * ^definition = "Hier wird der eigentliche Text der Notiz eingetragen."
+
+
+RuleSet: ImposeProfile (profile, index)
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile][{index}].valueCanonical = Canonical({profile})

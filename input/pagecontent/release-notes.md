@@ -7,10 +7,10 @@
 
 #### Allgemein (Common)
 
-- _TIPatient_ leitet nun von Patient EU Core ab. Zur Kompatibilität mit EU Core wurde die Kardinalität von _name[Name]_ auf 0..1 gesetzt, sodass auch Patient.name ohne HumanName.use zulässig bleibt.
-- _TIOrganization_ leitet nun von Organization EU Core ab. Dadurch wird für Organization.address das EU-Core-Profil Address EU verwendet.
-- _TIPractitioner_ leitet nun von Practitioner EU Core ab. Im Zuge der Anpassung wurden die Constraints für die Abbildung des Namens an EU Core angeglichen. Insbesondere sind _Practitioner.name.text_ und _Practitioner.name.family_ nicht mehr verpflichtend und können optional angegeben werden.
-- _TIPractitionerRole_ leitet sich nun vom PractitionerRole EU Core-Profil ab.
+- _TIPatient_ ist nun konform zum Patient EU Core-Profil. Die Konformität wird über imposeProfile festgelegt. Zur Kompatibilität mit EU Core wurde die Kardinalität von _name[Name]_ auf 0..1 gesetzt, sodass auch Patient.name ohne HumanName.use zulässig bleibt.
+- _TIOrganization_ ist nun konform zum Organization EU Core-Profil. Die Konformität wird über imposeProfile festgelegt. Dadurch wird für Organization.address das EU-Core-Profil Address EU verwendet.
+- _TIPractitioner_ ist nun konform zum Practitioner EU Core-Profil. Die Konformität wird über imposeProfile festgelegt. Im Zuge der Anpassung wurden die Constraints für die Abbildung des Namens an EU Core angeglichen. Insbesondere sind _Practitioner.name.text_ und _Practitioner.name.family_ nicht mehr verpflichtend und können optional angegeben werden.
+- _TIPractitionerRole_ ist nun konform zum PractitionerRole EU Core-Profil. Die Konformität wird über imposeProfile festgelegt.
 - Die neuen Datentyp-Profile _TIHumanName_ und _TIBirthName_ wurden zur Abbildung offizieller Namen und Geburtsnamen ergänzt.
 - Als gemeinsame Profile wurden _TIConditionDiagnosis_, _TIRelatedPerson_, _TIBodyStructure_ und _TIAppendixDocumentReference_ für Diagnosen, Kontakt- und Bezugspersonen, Körperstrukturen und Dokumentanhänge hinzugefügt. _TIConditionDiagnosis_ leitet von _ConditionEuCore_ und _TIBodyStructure_ von _BodyStructureEuCore_ ab. Damit übernehmen auch diese beiden Profile die Vorgaben ihrer jeweiligen EU-Core-Basisprofile.
 - Für Probenbehälter und außerkörperliche Probenquellen wurden die Profile _TIDeviceSpecimenContainer_, _TIDeviceDefinitionSpecimenContainer_ und _TIDeviceDefinitionSpecimenSubject_ ergänzt.

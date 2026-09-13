@@ -1,6 +1,7 @@
 Profile: TIPractitioner
 Id: ti-practitioner
-Parent: PractitionerEuCore
+// Parent: PractitionerEuCore
+Parent: Practitioner
 Title: "TI Practitioner"
 Description: """
 Dieses Profil beschreibt die Verwendung der FHIR-Ressource Practitioner im Kontext der Telematikinfrastruktur (TI). Es dient der strukturierten Darstellung von Gesundheitsfachpersonen, wie z.B. Ärzt:innen, Zahnärzt:innen, Psychotherapeut:innen oder Apotheker:innen, innerhalb TI-konformer Anwendungen.
@@ -10,6 +11,8 @@ Dieses Profil beschreibt die Verwendung der FHIR-Ressource Practitioner im Konte
 * ^version = "1.5.0"
 * ^date = "2026-09-30"
 * ^status = #active
+
+* insert ImposeProfile(PractitionerEuCore, 0)
 
 * id MS
 * identifier MS
