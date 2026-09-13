@@ -30,12 +30,13 @@ CodeSystem/ti-restful-interaction-cs,
 ValueSet/ti-environment-vs,
 ValueSet/ti-fhir-configuration-vs,
 ValueSet/ti-operation-parameter-location-vs,
+ValueSet/ti-restful-interaction-vs,
 {% endcapture %}
 {% include artifacts-table-generator.html render=technical-vs %}
 <div><figcaption><strong>Tabelle:</strong> Value Sets</figcaption></div>
 
 
-### Capability Statement Extensions
+### Capability Extensions
 
 {% capture tihttpbasic %}
 StructureDefinition/extension-base-url,
@@ -49,7 +50,7 @@ StructureDefinition/ti-fhir-configuration,
 StructureDefinition/search-parameter-interaction,
 {% endcapture %}
 {% include artifacts-table-generator.html render=tihttpbasic %}
-<div><figcaption><strong>Tabelle:</strong> Capability Statement Extensions</figcaption></div>
+<div><figcaption><strong>Tabelle:</strong> Capability Extensions</figcaption></div>
 
 
 ### Operation Outcome
