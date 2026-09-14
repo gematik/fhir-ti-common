@@ -13,4 +13,4 @@ Description: "Gibt an, für welche REST-Interaktionen ein SearchParameter unters
 * ^context[=].expression = "CapabilityStatement.rest.resource.searchParam"
 
 * value[x] only code
-* valueCode from TypeRestfulInteraction (required)
+* valueCode from TIRestfulInteractionVS (required)
