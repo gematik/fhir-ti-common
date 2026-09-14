@@ -1,6 +1,6 @@
 Extension: ExpectedDosageTextExtension
 Id: expected-dosage-text
-Description: "Diese Extension wird in einem OperationOutcome verwendet, um den erwarteten Text der Dosierungsanweisung für die rendered-dosagetext-extension anzugeben."
+Description: "This extension is used in an Operation Outcome to state the expected Dosage Instruction in the rendered-dosagetext-extension."
 * insert Meta
 
 // preserve the version
