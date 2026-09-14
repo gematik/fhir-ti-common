@@ -65,10 +65,10 @@ pages:
     title: "Artefakte für den Medikationsprozess (dgMP)"
   artifacts-document.md:
     title: "Artefakte für das Dokumentenmanagement"
-  artifacts-behavior.md:
-    title: "Artefakte für das Verhalten"
   artifacts-laboratory.md:
     title: "Artefakte für den Laborprozess"
+  artifacts-behavior.md:
+    title: "Artefakte für das Verhalten"
   referenced.md:
     title: "Referenzen"
   downloads.md:
@@ -124,8 +124,9 @@ menu:
     Common: artifacts-common.html
     "Medikationsprozess (dgMP)": artifacts-dgmp.html
     Dokumentenmanagement: artifacts-document.html
-    Verhalten: artifacts-behavior.html
     Laborprozess: artifacts-laboratory.html
+    Verhalten: artifacts-behavior.html
+
 
 # https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
 parameters:
