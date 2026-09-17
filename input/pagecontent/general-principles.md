@@ -367,8 +367,8 @@ GET [base]/Medication/123/_history?_at=2026-09-17T13:00:00+02:00
     <actor name="EPA-Query-Responder" description="EPA-Query-Responder">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction] verarbeiten. Der Wert von <i>_at</i> wird dabei als vollständiges <i>dateTime</i> (YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz) erwartet. 
-    Das Ergebnis MUSS auf diejenigen Versionen eingeschränkt werden, die zum angegebenen Zeitpunkt gültig waren. Das Ergebnis MUSS dabei ebenfalls als FHIR-<i>Bundle</i> mit <i>Bundle.type = history</i> zurückgegeben werden.
+    Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction] verarbeiten. Der Wert von <i>_at</i> wird dabei als vollständiges <i>dateTime</i> (YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz) erwartet.<br/>
+    Das Ergebnis MUSS auf diejenigen Versionen eingeschränkt werden, die zum angegebenen Zeitpunkt gültig waren. Das Ergebnis MUSS dabei ebenfalls als FHIR-<i>Bundle</i> mit <i>Bundle.type = history</i> zurückgegeben werden.<br/>
     Bei einem Wert von <i>_at</i>, der nicht dem erwarteten Format (vollständiges <i>dateTime</i>) entspricht, MUSS der FHIR Data Service mit einem HTTP Status Code <code>400</code> <i>"Bad Request"</i> sowie einer <i>OperationOutcome</i>-Ressource und Wert <i>MSG_BAD_SYNTAX</i> im Element <i>.issue.details.coding.code</i> antworten.
 </requirement>
 
