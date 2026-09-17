@@ -3143,6 +3143,30 @@
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/general-principles.html#IG-TI94321ZRC"
         },
         {
+            "key": "IG-TI94388VFQ",
+            "title": "Zeitpunktbezogener Abruf der Versionshistorie mit _at",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction] verarbeiten und das Ergebnis auf die zum angegebenen Zeitpunkt bzw. im angegebenen Zeitraum gültigen Versionen einschränken.",
+            "conformance": "SHALL",
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-Medication-Service",
+                        "id": "productType161",
+                        "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                }
+            ],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/general-principles.html#IG-TI94388VFQ"
+        },
+        {
             "key": "IG-TI94558MGC",
             "title": "Vorrang des _format-Parameters gegenüber dem Accept Header",
             "version": 0,
