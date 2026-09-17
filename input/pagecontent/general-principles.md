@@ -350,14 +350,26 @@ GET [base]/epa/medication/api/v1/fhir/MedicationStatement/391fc0c6-e045-48d9-8af
 
 #### Zeitpunktbezogener Abruf 
 
-Ergänzend kann die Versionshistorie einer Ressource (<i>history-instance</i>) oder eines Ressourcentyps (<i>history-type</i>) zeitpunktbezogen abgefragt werden. Der FHIR-Suchparameter <i>_at</i> schränkt das Ergebnis auf diejenigen Versionen ein, die zu einem angegebenen Zeitpunkt bzw. innerhalb eines angegebenen Zeitraums gültig waren. Damit lässt sich der Zustand einer Ressourceninstanz zu einem vergangenen Zeitpunkt gezielt und nachvollziehbar ermitteln – auch dann, wenn die Instanz zwischenzeitlich geändert oder gelöscht wurde.
+Ergänzend kann die Versionshistorie einer Ressource (<i>history-instance</i>) oder eines Ressourcentyps (<i>history-type</i>) zeitpunktbezogen abgefragt werden. Der FHIR-Suchparameter <i>_at</i> schränkt das Ergebnis auf diejenigen Versionen ein, die zum angegebenen Zeitpunkt gültig waren. Damit lässt sich der Zustand einer Ressourceninstanz zu einem vergangenen Zeitpunkt gezielt und nachvollziehbar ermitteln – auch dann, wenn die Instanz zwischenzeitlich geändert oder gelöscht wurde.
+
+HL7 FHIR definiert den Datentyp von <i>_at</i> als <i>date(Time)</i>, erlaubt also grundsätzlich sowohl ein reines Datum (<i>date</i>) als auch einen Zeitstempel mit Uhrzeit (<i>dateTime</i>). Für diese Spezifikation ist festgelegt, dass der Wert von <i>_at</i> ausschließlich als vollständiges <i>dateTime</i> (mit Zeitkomponente) übergeben wird; reine Datumsangaben werden nicht unterstützt.
+
+**Beispiel**
+
+Um diejenigen Versionen einer `Medication`-Instanz mit der ID "123" abzurufen, die zum angegebenen Zeitpunkt gültig waren, muss die URL für die HTTP GET-Anfrage wie folgt aussehen:
+
+```
+GET [base]/Medication/123/_history?_at=2026-09-17T13:00:00+02:00
+```
 
 <requirement conformance="SHALL" key="IG-TI94388VFQ" title="Zeitpunktbezogener Abruf der Versionshistorie mit _at" version="0">
     <meta lockversion="false"/>
-    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+    <actor name="EPA-Query-Responder" description="EPA-Query-Responder">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction] verarbeiten und das Ergebnis auf die zum angegebenen Zeitpunkt bzw. im angegebenen Zeitraum gültigen Versionen einschränken.
+    Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction] verarbeiten. Der Wert von <i>_at</i> wird dabei als vollständiges <i>dateTime</i> (YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz) erwartet. 
+    Das Ergebnis MUSS auf diejenigen Versionen eingeschränkt werden, die zum angegebenen Zeitpunkt gültig waren. Das Ergebnis MUSS dabei ebenfalls als FHIR-<i>Bundle</i> mit <i>Bundle.type = history</i> zurückgegeben werden.
+    Bei einem Wert von <i>_at</i>, der nicht dem erwarteten Format (vollständiges <i>dateTime</i>) entspricht, MUSS der FHIR Data Service mit einem HTTP Status Code <code>400</code> <i>"Bad Request"</i> sowie einer <i>OperationOutcome</i>-Ressource und Wert <i>MSG_BAD_SYNTAX</i> im Element <i>.issue.details.coding.code</i> antworten.
 </requirement>
 
 

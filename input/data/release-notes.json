@@ -61,7 +61,7 @@
                     "title": "Zeitpunktbezogener Abruf der Versionshistorie mit _at",
                     "key": "IG-TI94388VFQ",
                     "actor": [
-                        "EPA-Medication-Service"
+                        "EPA-Query-Responder"
                     ],
                     "version": 0,
                     "release_status": "NEW",

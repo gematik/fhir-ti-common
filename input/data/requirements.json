@@ -2047,10 +2047,10 @@
         "key": "IG-TI94388VFQ",
         "title": "Zeitpunktbezogener Abruf der Versionshistorie mit _at",
         "actor": [
-            "EPA-Medication-Service"
+            "EPA-Query-Responder"
         ],
         "test_procedures": {
-            "EPA-Medication-Service": [
+            "EPA-Query-Responder": [
                 "Produkttest"
             ]
         },
@@ -2058,12 +2058,12 @@
         "release_status": "NEW",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction] verarbeiten und das Ergebnis auf die zum angegebenen Zeitpunkt bzw. im angegebenen Zeitraum gültigen Versionen einschränken.",
+        "text": "Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction] verarbeiten. Der Wert von <i>_at</i> wird dabei als vollständiges <i>dateTime</i> (YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz) erwartet. \n Das Ergebnis MUSS auf diejenigen Versionen eingeschränkt werden, die zum angegebenen Zeitpunkt gültig waren. Das Ergebnis MUSS dabei ebenfalls als FHIR-<i>Bundle</i> mit <i>Bundle.type = history</i> zurückgegeben werden.\n Bei einem Wert von <i>_at</i>, der nicht dem erwarteten Format (vollständiges <i>dateTime</i>) entspricht, MUSS der FHIR Data Service mit einem HTTP Status Code <code>400</code> <i>\"Bad Request\"</i> sowie einer <i>OperationOutcome</i>-Ressource und Wert <i>MSG_BAD_SYNTAX</i> im Element <i>.issue.details.coding.code</i> antworten.",
         "conformance": "SHALL",
         "created": "2026-09-17T06:49:27.055588",
-        "modified": "2026-09-17T06:49:27.055594",
-        "date": "2026-09-17T06:49:27.055596",
-        "content_hash": "045a8cd906d30f4218eabdd2725b88a8afe51e53a9685edce678ab70ba27008d",
+        "modified": "2026-09-17T13:41:04.642198",
+        "date": "2026-09-17T13:41:04.642198",
+        "content_hash": "f4d4d791fc64a14fbebd440d3383068aaff06c03f693a26209a8fa943d9b957e",
         "path": "general-principles.html",
         "release": "1.5.0"
     },
