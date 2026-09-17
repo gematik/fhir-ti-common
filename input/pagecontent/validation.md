@@ -154,6 +154,9 @@ Die Validierung von Dosierungen gilt jeweils für freitextliche Dosierinformatio
         <li>MedicationRequest.dosageInstruction</li>
         <li>MedicationDispense.dosageInstruction</li>
         <li>MedicationStatement.dosage</li>
+        <li>MedicationRequest.extension:renderedDosageInstruction</li>
+        <li>MedicationDispense.extension:renderedDosageInstruction</li>
+        <li>MedicationStatement.extension:renderedDosageInstruction</li>
     </ul>
 </requirement>
 
