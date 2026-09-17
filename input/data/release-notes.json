@@ -56,6 +56,19 @@
                             "conformance": ""
                         }
                     }
+                },
+                {
+                    "title": "Zeitpunktbezogener Abruf der Versionshistorie mit _at",
+                    "key": "IG-TI94388VFQ",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html",
+                    "diff": {}
                 }
             ]
         },

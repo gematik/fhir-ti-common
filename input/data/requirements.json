@@ -2044,6 +2044,30 @@
         "release": "1.5.0"
     },
     {
+        "key": "IG-TI94388VFQ",
+        "title": "Zeitpunktbezogener Abruf der Versionshistorie mit _at",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction] verarbeiten und das Ergebnis auf die zum angegebenen Zeitpunkt bzw. im angegebenen Zeitraum gültigen Versionen einschränken.",
+        "conformance": "SHALL",
+        "created": "2026-09-17T06:49:27.055588",
+        "modified": "2026-09-17T06:49:27.055594",
+        "date": "2026-09-17T06:49:27.055596",
+        "content_hash": "045a8cd906d30f4218eabdd2725b88a8afe51e53a9685edce678ab70ba27008d",
+        "path": "general-principles.html",
+        "release": "1.5.0"
+    },
+    {
         "key": "IG-TI94558MGC",
         "title": "Vorrang des _format-Parameters gegenüber dem Accept Header",
         "actor": [

@@ -1,0 +1,20 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+content_hash: 045a8cd906d30f4218eabdd2725b88a8afe51e53a9685edce678ab70ba27008d
+created: '2026-09-17T06:49:27.055588'
+date: '2026-09-17T06:49:27.055596'
+key: IG-TI94388VFQ
+modified: '2026-09-17T06:49:27.055594'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und
+  <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction]
+  verarbeiten und das Ergebnis auf die zum angegebenen Zeitpunkt bzw. im angegebenen
+  Zeitraum gültigen Versionen einschränken.
+title: Zeitpunktbezogener Abruf der Versionshistorie mit _at
+version: 0

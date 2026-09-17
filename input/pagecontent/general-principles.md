@@ -352,7 +352,7 @@ GET [base]/epa/medication/api/v1/fhir/MedicationStatement/391fc0c6-e045-48d9-8af
 
 Ergänzend kann die Versionshistorie einer Ressource (<i>history-instance</i>) oder eines Ressourcentyps (<i>history-type</i>) zeitpunktbezogen abgefragt werden. Der FHIR-Suchparameter <i>_at</i> schränkt das Ergebnis auf diejenigen Versionen ein, die zu einem angegebenen Zeitpunkt bzw. innerhalb eines angegebenen Zeitraums gültig waren. Damit lässt sich der Zustand einer Ressourceninstanz zu einem vergangenen Zeitpunkt gezielt und nachvollziehbar ermitteln – auch dann, wenn die Instanz zwischenzeitlich geändert oder gelöscht wurde.
 
-<requirement conformance="SHALL" title="Zeitpunktbezogener Abruf der Versionshistorie mit _at">
+<requirement conformance="SHALL" key="IG-TI94388VFQ" title="Zeitpunktbezogener Abruf der Versionshistorie mit _at" version="0">
     <meta lockversion="false"/>
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
