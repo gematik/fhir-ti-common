@@ -4,8 +4,8 @@ Title: "TI Environments CodeSystem"
 Description: "Dieses CodeSystem definiert standardisierte Umgebungskennzeichen für CapabilityStatements des TI-Fachdienstes. Es erlaubt die eindeutige Kennzeichnung, ob die beschriebene Fähigkeit für Produktions-, Referenz-, Test- oder Entwicklungsumgebung gilt."
 * insert Meta-CS
 // preserve the version of this resource
-// * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * ^caseSensitive = true

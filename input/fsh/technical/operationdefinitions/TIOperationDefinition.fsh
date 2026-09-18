@@ -8,8 +8,8 @@ Es stellt sicher, dass zustandsverändernde Operationen ('affectsState = true') 
 """
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * obeys op-affectsState-vs-method
@@ -22,3 +22,5 @@ Es stellt sicher, dass zustandsverändernde Operationen ('affectsState = true') 
 * instance MS
 * inputProfile MS
 * outputProfile MS
+* parameter MS
+  * extension contains OperationParameterLocation named parameterLocation 0.. MS

@@ -3,16 +3,16 @@ Parent: Medication
 Id: ti-medication-dgmp
 Title: "TI Medication dgMP"
 Description: "Defines the medication resource for the Medication Service in the TI ecosystem."
+//TODO: copy Ruleset contents into this resource as soon as the issue: https://github.com/hapifhir/org.hl7.fhir.core/issues/1670 is resolved
+* insert TIMedicationElements
 // preserve the version
 * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * contained MS
 * contained only TIMedicationPharmaceuticalProductDgMP or TIMedicationPZNIngredientDgMP
   * ^short = "Enthält PZN-Bestandteile für Rezepturen sowie pharmazeutische Produkte im Falle einer Kombipackung."
-//TODO: copy Ruleset contents into this resource as soon as the issue: https://github.com/hapifhir/org.hl7.fhir.core/issues/1670 is resolved
-* insert TIMedicationElements
 * batch MS
   * lotNumber MS
 

@@ -4,8 +4,8 @@ Title: "TIFHIR Configuration CS"
 Description: "Dieses CodeSystem beschreibt die FHIR-Konfigurationen eines FHIR Data Service der TI. Die konkrete Konzeptliste wird extern im gematik-Releaseprozess als Release-Artefakt verwaltet und versioniert; dieser IG referenziert diese Konzepte nur über das Canonical."
 * insert Meta-CS
 // preserve the version of this resource
-// * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * ^content = #not-present

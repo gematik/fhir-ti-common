@@ -5,8 +5,8 @@ Description: "The RxOriginatorProcessIdentifier, generated within the Medication
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/rx-originator-process-identifier"
 // preserve the version
-// * ^version = "1.0.6-2"
-// * ^date = "2025-05-12"
+* ^version = "1.1.1"
+* ^date = "2025-09-12"
 * ^status = #active
 
 * system 1..1 MS

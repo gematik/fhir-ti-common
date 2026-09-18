@@ -14,8 +14,8 @@ Profilierung ohne Breaking Change zu ermöglichen.
 Context: CapabilityStatement, CapabilityStatement.rest, CapabilityStatement.rest.resource
 * insert Meta
 // preserve the version of this resource
-// * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^version = "1.4.0"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * . ^short = "Deklaration eines aktivierbaren CapabilityStatement-Features"

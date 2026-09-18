@@ -2,11 +2,11 @@ actor:
 - EPA-Medication-Service
 - TI-Flow_FD
 conformance: SHALL
-content_hash: a9da80f6169bd630970ca31ccd3e580842332f0c8fe6654d4057a687ffe52ffe
+content_hash: 91a887a4eeebc382f90c3ae80990f291d84278db5dcc5cca1465931307e4f996
 created: '2026-06-25T06:43:07.996402'
-date: '2026-06-26T14:51:18.211961'
+date: '2026-09-17T14:34:17.245354'
 key: IG-TI43381BV9
-modified: '2026-06-25T06:43:07.996404'
+modified: '2026-09-17T14:34:17.245354'
 release_status: NEW
 source: input/pagecontent/validation.md
 status: ACTIVE
@@ -15,12 +15,10 @@ test_procedures:
   - Produkttest
   TI-Flow_FD:
   - Produkttest
-text: 'Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines
-  der folgenden Felder in einer FHIR-Ressource vorhanden ist:
-
-
-  - `MedicationRequest.dosageInstruction`
-
-  - `MedicationDispense.dosageInstruction`'
+text: "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines\
+  \ der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n <ul>\n <li>MedicationRequest.dosageInstruction</li>\n\
+  \ <li>MedicationDispense.dosageInstruction</li>\n <li>MedicationStatement.dosage</li>\n\
+  \ <li>MedicationRequest.extension:renderedDosageInstruction</li>\n <li>MedicationDispense.extension:renderedDosageInstruction</li>\n\
+  \ <li>MedicationStatement.extension:renderedDosageInstruction</li>\n </ul>"
 title: Strukturierte Dosierung - Anwendung der Validierung
 version: 0

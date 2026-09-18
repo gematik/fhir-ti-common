@@ -7,7 +7,7 @@ Description: "Definiert die Medication-Ressource für einen PZN-Bestandteil eine
 * insert TIMedicationElements
 // preserve the version
 * ^version = "1.4.0"
-// * ^date = "2026-06-30"
+* ^date = "2026-09-23"
 * ^status = #active
 
 * contained ..0
