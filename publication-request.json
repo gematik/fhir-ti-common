@@ -1,10 +1,10 @@
 {
   "package-id": "de.gematik.ti",
-  "version": "1.4.0-rc.1",
-  "path": "https://gematik.de/fhir/ti/1.4.0-rc.1",
-  "status": "draft",
+  "version": "1.4.0",
+  "path": "https://gematik.de/fhir/ti/1.4.0",
+  "status": "release",
   "first": false,
-  "mode": "working",
-  "sequence": "TI Vorabveröffentlichung",
-  "desc": "Implementation Guide TI Common Version 1.4.0-rc.1"
+  "mode": "milestone",
+  "sequence": "TI",
+  "desc": "Implementation Guide TI Common Version 1.4.0"
 }
