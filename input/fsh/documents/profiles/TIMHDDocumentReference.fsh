@@ -9,7 +9,7 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 
 // preserve the version
 * ^version = "1.5.0"
-* ^date = "2026-11-16"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * extension contains TIDocumentStorageLocation named documentStorageLocation 0..1 MS
@@ -131,8 +131,8 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
   * ^definition = "Größe des Dokuments in Bytes (DocumentEntry.size)"
   * ^comment = "n/a"
 * content.attachment.hash 0..1 MS
-  * ^short = "Kryptographische Prüfsumme des Dokuments"
-  * ^definition = "Kryptographische Prüfsumme des Dokuments (DocumentEntry.hash)"
+  * ^short = "Kryptographische Prüfsumme des Dokuments mit SHA1"
+  * ^definition = "Kryptographische Prüfsumme des Dokuments mit SHA1 (DocumentEntry.hash)"
   * ^comment = "n/a"
 * content.attachment.title 1..1 MS
   * ^short = "Titel des Dokuments"

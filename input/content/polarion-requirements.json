@@ -4,7 +4,7 @@
         "title": "Implementation Guide TI Common",
         "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1",
         "version": "1.5.0-ballot.1",
-        "date": "1794787200",
+        "date": "1796688000",
         "status": "released",
         "classification": "public"
     },
@@ -443,6 +443,43 @@
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/query-api-search.html#IG-TI08134XQ4"
+        },
+        {
+            "key": "IG-TI08247KW8",
+            "title": "Unterstützung des :not-Modifikators",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Der FHIR Data Service MUSS den <i>:not</i>-Modifikator für Suchparameter vom Typ <i>token</i> gemäß [FHIR Search - Token] unterstützen, um Ressourceninstanzen anhand eines angegebenen Suchwertes aus der Ergebnismenge auszuschließen.",
+            "conformance": "SHALL",
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Medication-Service",
+                        "id": "productType161",
+                        "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                }
+            ],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/query-api-search.html#IG-TI08247KW8"
         },
         {
             "key": "IG-TI09377BM6",
@@ -1649,7 +1686,7 @@
             "title": "Strukturierte Dosierung - Anwendung der Validierung",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n <ul>\n <li>MedicationRequest.dosageInstruction</li>\n <li>MedicationDispense.dosageInstruction</li>\n <li>MedicationStatement.dosage</li>\n </ul>",
+            "text": "Der FHIR Data Service MUSS die Validierung von Dosierungen anwenden, wenn eines der folgenden Felder in einer FHIR-Ressource vorhanden ist:\n <ul>\n <li>MedicationRequest.dosageInstruction</li>\n <li>MedicationDispense.dosageInstruction</li>\n <li>MedicationStatement.dosage</li>\n <li>MedicationRequest.extension:renderedDosageInstruction</li>\n <li>MedicationDispense.extension:renderedDosageInstruction</li>\n <li>MedicationStatement.extension:renderedDosageInstruction</li>\n </ul>",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -3147,14 +3184,14 @@
             "title": "Zeitpunktbezogener Abruf der Versionshistorie mit _at",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction] verarbeiten und das Ergebnis auf die zum angegebenen Zeitpunkt bzw. im angegebenen Zeitraum gültigen Versionen einschränken.",
+            "text": "Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction] verarbeiten. Der Wert von <i>_at</i> wird dabei als vollständiges <i>dateTime</i> (YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz) erwartet.<br/>\n Das Ergebnis MUSS auf diejenigen Versionen eingeschränkt werden, die zum angegebenen Zeitpunkt gültig waren. Das Ergebnis MUSS dabei ebenfalls als FHIR-<i>Bundle</i> mit <i>Bundle.type = history</i> zurückgegeben werden.<br/>\n Bei einem Wert von <i>_at</i>, der nicht dem erwarteten Format (vollständiges <i>dateTime</i>) entspricht, MUSS der FHIR Data Service mit einem HTTP Status Code <code>400</code> <i>\"Bad Request\"</i> sowie einer <i>OperationOutcome</i>-Ressource und Wert <i>MSG_BAD_SYNTAX</i> im Element <i>.issue.details.coding.code</i> antworten.",
             "conformance": "SHALL",
             "characteristics": [
                 {
                     "product_type": {
-                        "name": "EPA-Medication-Service",
-                        "id": "productType161",
-                        "description": "EPA-Medication-Service"
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {

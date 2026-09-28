@@ -7,7 +7,7 @@ Description: "Administrative und für die Befundung klinisch relevante Teilinfor
 * insert Meta-With-Versioning
 // preserve the version
 * ^version = "1.5.0"
-* ^date = "2026-11-16"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * identifier MS

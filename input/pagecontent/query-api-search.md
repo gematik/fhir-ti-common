@@ -590,6 +590,42 @@ In diesem Beispiel wird nach <i>Medication</i>-Ressourceninstanzen gesucht, die 
 GET [base]/Medication?_has:MedicationStatement:medication:status=stopped&_revinclude=MedicationStatement:medication
 ```
 
+### Unterstützung des :not-Modifikators
+
+Der <i>:not</i>-Modifikator ermöglicht es, bei Suchparametern vom Typ <i>token</i> Ressourcen anhand eines angegebenen Wertes aus der Ergebnismenge auszuschließen. Eine Ressource entspricht der Suchbedingung, wenn sie keinen dem angegebenen Suchwert entsprechenden Wert besitzt. Dies umfasst gemäß FHIR R4 auch Ressourcen, für die kein Wert für den betreffenden Suchparameter vorhanden ist.
+
+Die Syntax für eine Suche mit dem <i>:not</i>-Modifikator sieht folgendermaßen aus:
+
+```
+[Suchparameter]:not=[Wert]
+```
+
+<br/>
+
+<requirement conformance="SHALL" key="IG-TI08247KW8" title="Unterstützung des :not-Modifikators" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service MUSS den <i>:not</i>-Modifikator für Suchparameter vom Typ <i>token</i> gemäß [FHIR Search - Token] unterstützen, um Ressourceninstanzen anhand eines angegebenen Suchwertes aus der Ergebnismenge auszuschließen.
+</requirement>
+
+**Beispiele**
+
+In diesem Beispiel wird nach <i>MedicationRequest</i>-Ressourceninstanzen gesucht, deren <i>status</i> <u>nicht</u> <i>completed</i> entspricht.
+
+```
+GET [base]/MedicationRequest?status:not=completed
+```
+
+In diesem Beispiel wird nach <i>DocumentReference</i>-Ressourceninstanzen gesucht, die der Kategorie <i>LAB</i> entsprechen, den Status <i>current</i> besitzen und deren <i>type</i> <u>nicht</u> dem Code <i>11502-2</i> entspricht.
+
+```
+GET [base]/DocumentReference?patient=Patient/123&category=urn:oid:1.3.6.1.4.1.19376.3.276.1.5.8|LAB&type:not=11502-2&status=current
+```
 
 ### Sortierung
 

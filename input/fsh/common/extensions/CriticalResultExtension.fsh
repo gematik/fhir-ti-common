@@ -8,7 +8,7 @@ Context: DiagnosticReport
 * . ^short = "Manuell gesetztes Kennzeichen Kritischer Befund"
 // preserve the version
 * ^version = "1.5.0"
-* ^date = "2026-11-16"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * value[x] only boolean

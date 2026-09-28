@@ -7,7 +7,7 @@ Context: Observation
 * . ^definition = "Mit dieser Extension werden zusammengehörige Labortests oder eine Gruppe von Einzeluntersuchungen aus einem Verfahren zusammengefasst"
 // preserve the version
 * ^version = "1.5.0"
-* ^date = "2026-11-16"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * value[x] only CodeableConcept

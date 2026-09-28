@@ -4,6 +4,20 @@
             "version": "1.5.0",
             "requirements": [
                 {
+                    "title": "Unterstützung des :not-Modifikators",
+                    "key": "IG-TI08247KW8",
+                    "actor": [
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-search.html",
+                    "diff": {}
+                },
+                {
                     "title": "Strukturierte Dosierung - Implementierung der Dosiertexterzeugung",
                     "key": "IG-TI17421K31",
                     "actor": [
