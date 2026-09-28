@@ -167,3 +167,7 @@ entries:
     author: "HL7"
     title: "ValueSet: Obligation Codes ValueSet"
     link: "https://hl7.org/fhir/extensions/ValueSet-obligation.html"
+  - key: "FHIR Search - Token"
+    author: "HL7"
+    title: "FHIR Search - Token"
+    link: "https://hl7.org/fhir/R4/search.html#token"

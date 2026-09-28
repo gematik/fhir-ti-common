@@ -7,7 +7,7 @@ Context: Observation
 * . ^definition = "Diese Extension bildet den zlog-Wert ab."
 // preserve the version
 * ^version = "1.5.0"
-* ^date = "2026-11-16"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * value[x] only decimal

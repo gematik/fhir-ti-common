@@ -6,7 +6,7 @@ Description: "Enthält alle Datenkategorien der Legal Policy"
 
 // preserve the version
 * ^version = "1.5.0"
-* ^date = "2026-11-16"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * include codes from system $epa-data-category-medical-cs|1.0.7

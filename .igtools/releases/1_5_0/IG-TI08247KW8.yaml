@@ -1,0 +1,22 @@
+actor:
+- EPA-MHD-Service
+- EPA-Medication-Service
+conformance: SHALL
+content_hash: 4134c8722a1b5b68021853207acf9aa2ff6a8babf2d1e573134d5b9daee6768e
+created: '2026-09-28T11:49:05.033052'
+date: '2026-09-28T11:49:05.033071'
+key: IG-TI08247KW8
+modified: '2026-09-28T11:49:05.033069'
+release_status: NEW
+source: input/pagecontent/query-api-search.md
+status: ACTIVE
+test_procedures:
+  EPA-MHD-Service:
+  - Produkttest
+  EPA-Medication-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS den <i>:not</i>-Modifikator für Suchparameter vom
+  Typ <i>token</i> gemäß [FHIR Search - Token] unterstützen, um Ressourceninstanzen
+  anhand eines angegebenen Suchwertes aus der Ergebnismenge auszuschließen.
+title: Unterstützung des :not-Modifikators
+version: 0
