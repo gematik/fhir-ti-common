@@ -112,6 +112,9 @@ RuleSet: TimingMS
     * system MS
     * unit MS
     * value MS
+  * boundsPeriod MS
+    * start MS
+    * end MS
   * frequency MS
   * period MS
   * periodUnit MS
