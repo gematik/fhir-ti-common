@@ -87,6 +87,8 @@ pages:
       title: "Anforderungsliste: ePA Patient Service"
     actor-epa-mhd.md:
       title: "Anforderungsliste: ePA MHD Service"
+    actor-epa-query-responder.md:
+      title: "Anforderungsliste: ePA Query Responder"
     actor-epa-client.md:
       title: "Anforderungsliste: ePA PS / ePA-Client-Systeme / ePA-FdV"
     actor-tiflow.md:
@@ -261,4 +263,3 @@ instanceOptions:
   # Determines for which types of Instances SUSHI will automatically set id
   # if InstanceOf references a profile:
   # setId: always # always | standalone-only
-  

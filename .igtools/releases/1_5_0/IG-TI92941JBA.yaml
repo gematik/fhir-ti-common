@@ -1,9 +1,10 @@
 actor:
 - EPA-Medication-Service
+- EPA-Query-Responder
 conformance: SHALL
 content_hash: 10e268a06a5e654f205fde6e12e25940687d637015090807eb475581973d22fd
 created: '2025-03-07T11:05:29.317204'
-date: '2025-11-18T12:35:25.433853'
+date: '2026-09-30T16:35:53.238836'
 key: IG-TI92941JBA
 modified: '2025-03-07T11:05:29.317210'
 release_status: STABLE
@@ -11,6 +12,8 @@ source: input/pagecontent/query-api-search.md
 status: ACTIVE
 test_procedures:
   EPA-Medication-Service:
+  - Produkttest
+  EPA-Query-Responder:
   - Produkttest
 text: Der FHIR Data Service MUSS sicherstellen, dass Ressourcen, die durch <i>_include</i>
   oder <i>_revinclude</i> in das Suchergebnis aufgenommen werden, stets auf derselben

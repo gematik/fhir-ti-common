@@ -6,6 +6,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -16,6 +17,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -30,7 +34,7 @@
         "conformance": "SHALL",
         "created": "2025-10-27T11:15:01.479737",
         "modified": "2026-01-14T09:29:09.949753",
-        "date": "2026-09-10T09:12:27.553818",
+        "date": "2026-09-30T16:35:53.244218",
         "content_hash": "8ce4201df28b0c9a66a5c3836d93684427eb898bc080da7e91e302e6ec67af90",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -39,10 +43,14 @@
         "key": "IG-TI00242W49",
         "title": "Unterstützung von _include:iterate",
         "actor": [
-            "EPA-Medication-Service"
+            "EPA-Medication-Service",
+            "EPA-Query-Responder"
         ],
         "test_procedures": {
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ]
         },
@@ -54,7 +62,7 @@
         "conformance": "SHALL",
         "created": "2025-03-07T10:35:21.321969",
         "modified": "2025-03-07T10:35:21.321972",
-        "date": "2025-11-18T12:35:25.434190",
+        "date": "2026-09-30T16:35:53.239307",
         "content_hash": "f522bc728256316ca272448b38e7a89fe8a3545d425458d17282b9448a1f5a29",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -188,10 +196,14 @@
         "title": "Unterstützung verketteter Suchparameter",
         "actor": [
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -206,7 +218,7 @@
         "conformance": "SHALL",
         "created": "2025-03-07T08:14:24.654914",
         "modified": "2025-03-28T11:10:43.516953",
-        "date": "2026-06-15T13:51:38.828940",
+        "date": "2026-09-30T16:35:53.242450",
         "content_hash": "dcd99dcb175f1d65a9d52bb97a9ab4a1d4f3690b5fbcfd68fefeac527cf7e914",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -246,6 +258,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -258,19 +271,22 @@
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
+            "EPA-Query-Responder": [
+                "Produkttest"
+            ],
             "TI-Flow_FD": [
                 "Produkttest"
             ]
         },
-        "version": 0,
-        "release_status": "STABLE",
+        "version": 1,
+        "release_status": "MODIFIED",
         "status": "ACTIVE",
         "source": "input/pagecontent/query-api-paging.md",
         "text": "Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und in seiner Antwort Navigationsinformationen in Ergebnisseiten zur Verfügung stellen. Um die Paginierungsfunktion zu implementieren, werden die URL-Parameter <code>_count</code> und <code>_offset</code> verwendet. Der Parameter <code>_count</code> bestimmt die Anzahl der Einträge pro <i>Seite</i> (page), während <code>_offset</code> das Startelement der Seite angibt. Zusätzlich entscheidet der <code>_total</code>-Parameter, ob die Gesamtanzahl der Einträge in der Antwort enthalten sein soll.\n <br/><br/>\n <figure>\n <table style=\"width: 100%\">\n <thead>\n <tr>\n <th>URL-Parameter</th>\n <th>Beschreibung</th>\n <th>Standardwert</th>\n </tr>\n </thead>\n <tbody>\n <tr>\n <td><code>_count</code></td>\n <td>Das Client-System kann die maximale Anzahl von Elementen festlegen, die auf einer <i>Seite</i> (page) der Antwort enthalten sein soll. Das bedeutet, dass der FHIR Data Service die Ergebnismenge auf diese maximal angegebene Anzahl beschränkt.</td>\n <td>25</td>\n </tr>\n <tr>\n <td><code>_offset</code></td>\n <td>Dieser Parameter gibt den (zero-based) Offset des ersten zurückgegebenen Elements in der Sammlung an.</td>\n <td>0</td>\n </tr>\n <tr>\n <td><code>_total</code></td>\n <td>Dieser Parameter steuert, ob und wie der FHIR Data Service die Gesamtanzahl der Suchergebnisse zurückgibt. Folgende Werte können eingestellt werden: <code>none</code>, <code>estimate</code>, <code>accurate</code>.</td>\n <td>-</td>\n </tr>\n </tbody>\n </table>\n <figcaption><strong>Tabelle:</strong> URL-Parameter für Paginierungsfunktion</figcaption>\n </figure>\n <br/>\n Werte für <code>_total</code>:\n <br/><br/>\n <ul>\n <li><code>none</code> (Standardwert): Die Gesamtanzahl der Suchtreffer wird nicht angezeigt.</li>\n <li><code>estimate</code>: Die ungefähre Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n <li><code>accurate</code>: Die genaue Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n </ul>",
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.318535",
-        "modified": "2025-02-26T13:55:56.516495",
-        "date": "2026-06-11T14:14:37.896534",
+        "modified": "2026-09-30T16:28:38.300444",
+        "date": "2026-09-30T16:28:38.300444",
         "content_hash": "ddc91e95a7f135e8b944d81d2b83687882ed46a58d57164399b5cf4fa560be29",
         "path": "query-api-paging.html",
         "release": "1.5.0"
@@ -279,10 +295,14 @@
         "key": "IG-TI08134XQ4",
         "title": "Verarbeitung von referenzierten Ressourcen in Include-Suchen",
         "actor": [
-            "EPA-Medication-Service"
+            "EPA-Medication-Service",
+            "EPA-Query-Responder"
         ],
         "test_procedures": {
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ]
         },
@@ -294,7 +314,7 @@
         "conformance": "SHALL",
         "created": "2025-03-07T10:54:47.698334",
         "modified": "2025-03-07T10:54:47.698336",
-        "date": "2025-11-18T12:35:25.433666",
+        "date": "2026-09-30T16:35:53.238587",
         "content_hash": "c3b750b8d7ce9f6a139874b6aaf8b6794862bd51c8133e0e7420a2c4c4512217",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -304,13 +324,17 @@
         "title": "Unterstützung des :not-Modifikators",
         "actor": [
             "EPA-MHD-Service",
-            "EPA-Medication-Service"
+            "EPA-Medication-Service",
+            "EPA-Query-Responder"
         ],
         "test_procedures": {
             "EPA-MHD-Service": [
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ]
         },
@@ -322,7 +346,7 @@
         "conformance": "SHALL",
         "created": "2026-09-28T11:49:05.033052",
         "modified": "2026-09-28T11:49:05.033069",
-        "date": "2026-09-28T11:49:05.033071",
+        "date": "2026-09-30T16:35:53.242961",
         "content_hash": "4134c8722a1b5b68021853207acf9aa2ff6a8babf2d1e573134d5b9daee6768e",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -386,6 +410,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -396,6 +421,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -410,7 +438,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315377",
         "modified": "2025-02-26T13:55:56.513657",
-        "date": "2026-06-15T13:51:38.826776",
+        "date": "2026-09-30T16:35:53.241801",
         "content_hash": "2279c88c340437575f8f276cca9f8bf8ce9ddb290cbf23f433d218f4093d33eb",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -499,10 +527,14 @@
         "key": "IG-TI17755AMW",
         "title": "Unterstützung von _revinclude:iterate",
         "actor": [
-            "EPA-Medication-Service"
+            "EPA-Medication-Service",
+            "EPA-Query-Responder"
         ],
         "test_procedures": {
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ]
         },
@@ -514,7 +546,7 @@
         "conformance": "SHALL",
         "created": "2025-03-07T10:35:21.322061",
         "modified": "2025-03-07T10:35:21.322062",
-        "date": "2025-11-18T12:35:25.434333",
+        "date": "2026-09-30T16:35:53.239526",
         "content_hash": "908a4e10c1ee0c67cfb8a0546e203ada7dc9982a914f3024756430c36111ddd1",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -730,6 +762,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -740,6 +773,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -754,7 +790,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315262",
         "modified": "2025-02-26T13:55:56.513547",
-        "date": "2026-06-15T13:51:38.820897",
+        "date": "2026-09-30T16:35:53.240214",
         "content_hash": "1b6a3e5732d8c69e3e28ccd512c3b52168cc1047f2c4d85af517d653aab3c926",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -803,6 +839,7 @@
             "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -818,6 +855,9 @@
             "EPA-Patient-Service": [
                 "Produkttest"
             ],
+            "EPA-Query-Responder": [
+                "Produkttest"
+            ],
             "TI-Flow_FD": [
                 "Produkttest"
             ]
@@ -830,7 +870,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T12:59:25.679584",
         "modified": "2025-03-12T12:47:19.476263",
-        "date": "2026-06-15T13:51:38.812829",
+        "date": "2026-09-30T16:35:53.237398",
         "content_hash": "1cb629d6c7f0cd71a019e419aa20494e63032ca54ccaf00f99c4581b9d009c64",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -842,6 +882,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -852,6 +893,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -866,7 +910,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315231",
         "modified": "2025-02-26T13:55:56.513515",
-        "date": "2026-06-15T13:51:38.819427",
+        "date": "2026-09-30T16:35:53.239810",
         "content_hash": "e77343f82a5b7370a34c36dcee2cf2d39930fc895a4939d2310086cc5640e0eb",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -902,6 +946,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -912,6 +957,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -926,7 +974,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315312",
         "modified": "2025-02-26T13:55:56.513594",
-        "date": "2026-06-15T13:51:38.823846",
+        "date": "2026-09-30T16:35:53.240979",
         "content_hash": "8078eb88fc5e6d205ccd54e66a21f8be7a66ed72769f1641af16f8ae997dd747",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -938,6 +986,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -948,6 +997,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -962,7 +1014,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.318707",
         "modified": "2025-05-27T09:33:08.784484",
-        "date": "2026-09-10T15:40:34.953493",
+        "date": "2026-09-30T16:35:53.248198",
         "content_hash": "0d3c34053d38ff9c5699158b8e9f5640a7de266c579eb3cbc63911710bd1e8f7",
         "path": "query-api-paging.html",
         "release": "1.5.0"
@@ -971,10 +1023,14 @@
         "key": "IG-TI38183K0G",
         "title": "Unterstützung der _include-Suche im FHIR Data Service gemäß FHIR",
         "actor": [
-            "EPA-Medication-Service"
+            "EPA-Medication-Service",
+            "EPA-Query-Responder"
         ],
         "test_procedures": {
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ]
         },
@@ -986,7 +1042,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315216",
         "modified": "2025-05-27T09:33:08.776795",
-        "date": "2025-11-18T12:35:25.433330",
+        "date": "2026-09-30T16:35:53.238131",
         "content_hash": "a01c1d20144bd3cbcbedf56793592669cd9c78224865ec2c4bc4b63a7b4e2010",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -1066,6 +1122,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -1076,6 +1133,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -1090,7 +1150,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315278",
         "modified": "2025-02-26T13:55:56.513560",
-        "date": "2026-06-15T13:51:38.822321",
+        "date": "2026-09-30T16:35:53.240588",
         "content_hash": "5891bdad8bc3f9e2e8b1eb62c2288476ad5ed16422d7716b618f3df8add27eb8",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -1131,6 +1191,7 @@
             "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -1146,6 +1207,9 @@
             "EPA-Patient-Service": [
                 "Produkttest"
             ],
+            "EPA-Query-Responder": [
+                "Produkttest"
+            ],
             "TI-Flow_FD": [
                 "Produkttest"
             ]
@@ -1158,7 +1222,7 @@
         "conformance": "SHALL",
         "created": "2025-03-07T10:54:47.697675",
         "modified": "2025-03-12T12:47:19.475983",
-        "date": "2026-06-15T13:51:38.809931",
+        "date": "2026-09-30T16:35:53.236501",
         "content_hash": "2bc57345bbe3e62089fa8a481df13974155283b575470e0540d314e81d3ca84f",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -1195,10 +1259,14 @@
         "key": "IG-TI44886ZXA",
         "title": "Unterstützung der _revinclude-Suche im FHIR Data Service gemäß FHIR",
         "actor": [
-            "EPA-Medication-Service"
+            "EPA-Medication-Service",
+            "EPA-Query-Responder"
         ],
         "test_procedures": {
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ]
         },
@@ -1210,7 +1278,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315223",
         "modified": "2025-05-27T09:33:08.776875",
-        "date": "2026-09-10T09:12:27.540228",
+        "date": "2026-09-30T16:35:53.238358",
         "content_hash": "f7cb4dc5bfc590fdcaeb6d2a0f067830db5445a742a943a74b21458eef068360",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -1510,6 +1578,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -1520,6 +1589,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -1534,7 +1606,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315384",
         "modified": "2025-02-26T13:55:56.513664",
-        "date": "2026-06-15T13:51:38.828107",
+        "date": "2026-09-30T16:35:53.242161",
         "content_hash": "d15613497fc83544ce7a18a5a6df3bf5937f4c1ca27dd4ffdf1b277619bb5eea",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -1655,6 +1727,7 @@
             "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -1670,6 +1743,9 @@
             "EPA-Patient-Service": [
                 "Produkttest"
             ],
+            "EPA-Query-Responder": [
+                "Produkttest"
+            ],
             "TI-Flow_FD": [
                 "Produkttest"
             ]
@@ -1682,7 +1758,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315189",
         "modified": "2025-03-12T12:47:19.476134",
-        "date": "2026-09-10T09:12:27.537952",
+        "date": "2026-09-30T16:35:53.236955",
         "content_hash": "d5abb4c1396fc4102b6b8a2a6f92cf01ab17db796ede870c2f154957bca55af3",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -1802,6 +1878,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -1812,6 +1889,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -1826,7 +1906,7 @@
         "conformance": "MAY",
         "created": "2025-02-26T10:59:21.318715",
         "modified": "2025-05-27T09:33:08.784708",
-        "date": "2026-06-11T14:14:37.898373",
+        "date": "2026-09-30T16:35:53.248821",
         "content_hash": "387a04b6a69bd4d42e2d0a8cdcce5eca72608767c85e2221450ea1bac4a54a47",
         "path": "query-api-paging.html",
         "release": "1.5.0"
@@ -1866,6 +1946,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -1876,6 +1957,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -1890,7 +1974,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315403",
         "modified": "2025-02-26T13:55:56.513679",
-        "date": "2026-06-15T13:51:38.831786",
+        "date": "2026-09-30T16:35:53.243837",
         "content_hash": "cf8dabca9c2516ca0217fd5baf992e3330efb3f3a602f754206b7de1d6740239",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -1930,6 +2014,7 @@
             "EPA-Audit-Service",
             "EPA-MHD-Service",
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -1940,6 +2025,9 @@
                 "Produkttest"
             ],
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -1954,7 +2042,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315356",
         "modified": "2025-02-26T13:55:56.513636",
-        "date": "2026-06-15T13:51:38.825471",
+        "date": "2026-09-30T16:35:53.241407",
         "content_hash": "bfeb5066760c4bcbba566fc27f3dc2af9c0e9efed17026cd652e8d73f9dca98d",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -1996,10 +2084,14 @@
         "title": "Unterstützung der umgekehrten verketteten Parametersuche",
         "actor": [
             "EPA-Medication-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ],
             "TI-Flow_FD": [
@@ -2014,7 +2106,7 @@
         "conformance": "SHALL",
         "created": "2025-03-07T08:14:24.654983",
         "modified": "2025-03-28T11:10:43.517011",
-        "date": "2026-06-15T13:51:38.829682",
+        "date": "2026-09-30T16:35:53.242700",
         "content_hash": "828ee20983260a11030b833b8ed93e117ce87c40dd845a02f434499364ddcdac",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -2023,10 +2115,14 @@
         "key": "IG-TI92941JBA",
         "title": "Einbeziehung verknüpfter Ressourcen auf derselben Ergebnisseite",
         "actor": [
-            "EPA-Medication-Service"
+            "EPA-Medication-Service",
+            "EPA-Query-Responder"
         ],
         "test_procedures": {
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ]
         },
@@ -2038,7 +2134,7 @@
         "conformance": "SHALL",
         "created": "2025-03-07T11:05:29.317204",
         "modified": "2025-03-07T11:05:29.317210",
-        "date": "2025-11-18T12:35:25.433853",
+        "date": "2026-09-30T16:35:53.238836",
         "content_hash": "10e268a06a5e654f205fde6e12e25940687d637015090807eb475581973d22fd",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -2175,6 +2271,7 @@
             "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service",
+            "EPA-Query-Responder",
             "TI-Flow_FD"
         ],
         "test_procedures": {
@@ -2190,6 +2287,9 @@
             "EPA-Patient-Service": [
                 "Produkttest"
             ],
+            "EPA-Query-Responder": [
+                "Produkttest"
+            ],
             "TI-Flow_FD": [
                 "Produkttest"
             ]
@@ -2202,7 +2302,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.315207",
         "modified": "2025-05-27T09:33:08.776699",
-        "date": "2026-09-10T09:12:27.539401",
+        "date": "2026-09-30T16:35:53.237821",
         "content_hash": "c0d0e5d6bd8a1f515bb0d4f3fe304f93715438de61087399229df066e84d8d0d",
         "path": "query-api-search.html",
         "release": "1.5.0"
@@ -2279,10 +2379,14 @@
         "key": "IG-TI97020UTC",
         "title": "Unterstützung des :iterate-Modifikators",
         "actor": [
-            "EPA-Medication-Service"
+            "EPA-Medication-Service",
+            "EPA-Query-Responder"
         ],
         "test_procedures": {
             "EPA-Medication-Service": [
+                "Produkttest"
+            ],
+            "EPA-Query-Responder": [
                 "Produkttest"
             ]
         },
@@ -2294,7 +2398,7 @@
         "conformance": "SHALL",
         "created": "2025-03-07T10:29:08.689615",
         "modified": "2025-03-07T10:35:21.321838",
-        "date": "2025-11-18T12:35:25.434024",
+        "date": "2026-09-30T16:35:53.239084",
         "content_hash": "cdf7b5975219fc8506cdded690f3e4e07210aa6d5681d70815e42d053ed34381",
         "path": "query-api-search.html",
         "release": "1.5.0"

@@ -1,9 +1,10 @@
 actor:
 - EPA-Medication-Service
+- EPA-Query-Responder
 conformance: SHALL
 content_hash: 908a4e10c1ee0c67cfb8a0546e203ada7dc9982a914f3024756430c36111ddd1
 created: '2025-03-07T10:35:21.322061'
-date: '2025-11-18T12:35:25.434333'
+date: '2026-09-30T16:35:53.239526'
 key: IG-TI17755AMW
 modified: '2025-03-07T10:35:21.322062'
 release_status: STABLE
@@ -11,6 +12,8 @@ source: input/pagecontent/query-api-search.md
 status: ACTIVE
 test_procedures:
   EPA-Medication-Service:
+  - Produkttest
+  EPA-Query-Responder:
   - Produkttest
 text: Der FHIR Data Service MUSS alle iterativ verknüpften rückreferenzierenden Ressourcen
   zurückgeben, wenn <i>_revinclude:iterate</i> verwendet wird.

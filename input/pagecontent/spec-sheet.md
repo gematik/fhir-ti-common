@@ -6,6 +6,7 @@ Die folgende Auflistung fasst die Anforderungsseiten dieses Implementation Guide
 - [Anforderungsliste: ePA Patient Service](./actor-epa-patient.html)
 - [Anforderungsliste: ePA Medication Service](./actor-epa-medication.html)
 - [Anforderungsliste: ePA MHD Service](./actor-epa-mhd.html)
+- [Anforderungsliste: ePA Query Responder](./actor-epa-query-responder.html)
 - [Anforderungsliste: ePA PS / ePA-Client-Systeme / ePA-FdV](./actor-epa-client.html)
 
 ### TI-Flow

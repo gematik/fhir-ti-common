@@ -1,9 +1,10 @@
 actor:
 - EPA-Medication-Service
+- EPA-Query-Responder
 conformance: SHALL
 content_hash: f7cb4dc5bfc590fdcaeb6d2a0f067830db5445a742a943a74b21458eef068360
 created: '2025-02-26T10:59:21.315223'
-date: '2026-09-10T09:12:27.540228'
+date: '2026-09-30T16:35:53.238358'
 key: IG-TI44886ZXA
 modified: '2025-05-27T09:33:08.776875'
 release_status: STABLE
@@ -11,6 +12,8 @@ source: input/pagecontent/query-api-search.md
 status: ACTIVE
 test_procedures:
   EPA-Medication-Service:
+  - Produkttest
+  EPA-Query-Responder:
   - Produkttest
 text: Der FHIR Data Service MUSS die <i>_revinclude</i>-Suche gemäß der [FHIR Search
   Revinclude] unterstützen, sodass Ressourcen, die auf die gesuchten Ressourcen verweisen,

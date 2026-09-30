@@ -2,11 +2,12 @@ actor:
 - EPA-Audit-Service
 - EPA-MHD-Service
 - EPA-Medication-Service
+- EPA-Query-Responder
 - TI-Flow_FD
 conformance: SHALL
 content_hash: 0d3c34053d38ff9c5699158b8e9f5640a7de266c579eb3cbc63911710bd1e8f7
 created: '2025-02-26T10:59:21.318707'
-date: '2026-09-10T15:40:34.953493'
+date: '2026-09-30T16:35:53.248198'
 key: IG-TI37232GDE
 modified: '2025-05-27T09:33:08.784484'
 release_status: STABLE
@@ -18,6 +19,8 @@ test_procedures:
   EPA-MHD-Service:
   - Produkttest
   EPA-Medication-Service:
+  - Produkttest
+  EPA-Query-Responder:
   - Produkttest
   TI-Flow_FD:
   - Produkttest

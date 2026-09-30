@@ -58,6 +58,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -85,6 +98,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {
@@ -306,6 +332,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -360,7 +399,7 @@
         {
             "key": "IG-TI07252NTV",
             "title": "Unterstützung URL-Parameter für Paginierungsfunktion",
-            "version": 0,
+            "version": 1,
             "status": "ACTIVE",
             "text": "Der FHIR Data Service MUSS eine Paginierungsfunktion implementieren und in seiner Antwort Navigationsinformationen in Ergebnisseiten zur Verfügung stellen. Um die Paginierungsfunktion zu implementieren, werden die URL-Parameter <code>_count</code> und <code>_offset</code> verwendet. Der Parameter <code>_count</code> bestimmt die Anzahl der Einträge pro <i>Seite</i> (page), während <code>_offset</code> das Startelement der Seite angibt. Zusätzlich entscheidet der <code>_total</code>-Parameter, ob die Gesamtanzahl der Einträge in der Antwort enthalten sein soll.\n <br/><br/>\n <figure>\n <table style=\"width: 100%\">\n <thead>\n <tr>\n <th>URL-Parameter</th>\n <th>Beschreibung</th>\n <th>Standardwert</th>\n </tr>\n </thead>\n <tbody>\n <tr>\n <td><code>_count</code></td>\n <td>Das Client-System kann die maximale Anzahl von Elementen festlegen, die auf einer <i>Seite</i> (page) der Antwort enthalten sein soll. Das bedeutet, dass der FHIR Data Service die Ergebnismenge auf diese maximal angegebene Anzahl beschränkt.</td>\n <td>25</td>\n </tr>\n <tr>\n <td><code>_offset</code></td>\n <td>Dieser Parameter gibt den (zero-based) Offset des ersten zurückgegebenen Elements in der Sammlung an.</td>\n <td>0</td>\n </tr>\n <tr>\n <td><code>_total</code></td>\n <td>Dieser Parameter steuert, ob und wie der FHIR Data Service die Gesamtanzahl der Suchergebnisse zurückgibt. Folgende Werte können eingestellt werden: <code>none</code>, <code>estimate</code>, <code>accurate</code>.</td>\n <td>-</td>\n </tr>\n </tbody>\n </table>\n <figcaption><strong>Tabelle:</strong> URL-Parameter für Paginierungsfunktion</figcaption>\n </figure>\n <br/>\n Werte für <code>_total</code>:\n <br/><br/>\n <ul>\n <li><code>none</code> (Standardwert): Die Gesamtanzahl der Suchtreffer wird nicht angezeigt.</li>\n <li><code>estimate</code>: Die ungefähre Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n <li><code>accurate</code>: Die genaue Gesamtanzahl der Suchtreffer wird angezeigt.</li>\n </ul>",
             "conformance": "SHALL",
@@ -406,6 +445,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -418,7 +470,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/query-api-paging.html#IG-TI07252NTV"
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/query-api-paging.html#IG-TI07252NTV-01"
         },
         {
             "key": "IG-TI08134XQ4",
@@ -433,6 +485,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {
@@ -470,6 +535,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {
@@ -581,6 +659,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {
@@ -716,6 +807,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {
@@ -1115,6 +1219,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -1254,6 +1371,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -1307,6 +1437,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {
@@ -1404,6 +1547,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -1467,6 +1623,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -1494,6 +1663,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {
@@ -1667,6 +1849,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -1780,6 +1975,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -1844,6 +2052,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {
@@ -2354,6 +2575,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -2619,6 +2853,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -2817,6 +3064,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -2907,6 +3167,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {
@@ -3017,6 +3290,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -3104,6 +3390,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -3131,6 +3430,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {
@@ -3391,6 +3703,19 @@
                 },
                 {
                     "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "TI-Flow_FD",
                         "id": "productType175",
                         "description": "TI-Flow-Fachdienst"
@@ -3531,6 +3856,19 @@
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "EPA-Query-Responder",
+                        "id": "productType186",
+                        "description": "EPA-Query-Responder"
                     },
                     "test_procedure": [
                         {

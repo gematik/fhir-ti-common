@@ -1,9 +1,10 @@
 actor:
 - EPA-Medication-Service
+- EPA-Query-Responder
 conformance: SHALL
 content_hash: c3b750b8d7ce9f6a139874b6aaf8b6794862bd51c8133e0e7420a2c4c4512217
 created: '2025-03-07T10:54:47.698334'
-date: '2025-11-18T12:35:25.433666'
+date: '2026-09-30T16:35:53.238587'
 key: IG-TI08134XQ4
 modified: '2025-03-07T10:54:47.698336'
 release_status: STABLE
@@ -11,6 +12,8 @@ source: input/pagecontent/query-api-search.md
 status: ACTIVE
 test_procedures:
   EPA-Medication-Service:
+  - Produkttest
+  EPA-Query-Responder:
   - Produkttest
 text: Der FHIR Data Service MUSS für jede zurückgegebene Ressource die zugehörigen
   Ressourcen gemäß den Verknüpfungskriterien ermitteln und mit <i>entry.search.mode

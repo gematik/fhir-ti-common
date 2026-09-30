@@ -4,11 +4,35 @@
             "version": "1.5.0",
             "requirements": [
                 {
+                    "title": "Unterstützung URL-Parameter für Paginierungsfunktion",
+                    "key": "IG-TI07252NTV",
+                    "actor": [
+                        "EPA-Audit-Service",
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service",
+                        "EPA-Query-Responder",
+                        "TI-Flow_FD"
+                    ],
+                    "version": 1,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "query-api-paging.html",
+                    "diff": {
+                        "1.4.0": {
+                            "text": "",
+                            "title": "",
+                            "conformance": ""
+                        }
+                    }
+                },
+                {
                     "title": "Unterstützung des :not-Modifikators",
                     "key": "IG-TI08247KW8",
                     "actor": [
                         "EPA-MHD-Service",
-                        "EPA-Medication-Service"
+                        "EPA-Medication-Service",
+                        "EPA-Query-Responder"
                     ],
                     "version": 0,
                     "release_status": "NEW",
