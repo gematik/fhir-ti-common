@@ -39,7 +39,9 @@ Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechn
     * text MS
       * ^definition = "Benennung des Test-Profils als Freitext."
 * extension[externalService]
-  * ^definition = "Dieses Kennzeichen wird gesetzt, wenn die Laboruntersuchung von einem anderen Labor durchgeführt wird."
+  * ^definition = "Dieses Kennzeichen wird gesetzt, wenn die Laboruntersuchung von einem anderen Labor durchgeführt wird.\n\n
+Gemäß Richtlinie der Bundesärztekammer zur Qualitätssicherung laboratoriumsmedizinischer Untersuchungen müssen laboratoriumsmedizinische Untersuchungen, die an ein Fremdlaboratorium weitergegeben worden sind, dokumentiert werden.\n\n
+Die Euro-Norm EN ISO 15189:2014-11 schreibt vor, dass alle Untersuchungen, die durch ein Auftragslaboratorium ausgeführt worden sind, identifiziert werden müssen."
   * ^short = "Kennzeichen Fremdleistung"
   * valueBoolean MS
 * extension[associationService]
@@ -47,7 +49,8 @@ Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechn
   * ^short = "Kennzeichen Verbundleistung"
   * valueBoolean MS
 * extension[accredited] MS
-  * ^definition = "Diese Angabe betrifft akkreditierte Labore. Basierend auf der Akkreditierung ist gefordert, dass nicht akkreditierte Leistungen gekennzeichnet werden, auch im Laborbefund."
+  * ^definition = "Diese Angabe betrifft akkreditierte Labore. Basierend auf der Akkreditierung ist gefordert, dass nicht akkreditierte Leistungen gekennzeichnet werden, auch im Laborbefund.\n
+  Nicht akkreditierte Labore müssen hier keine Angabe machen."
   * ^short = "Kennzeichen Akkreditierte Laboruntersuchung"
   * valueBoolean MS
 * extension[zlogValue] ^definition = """
