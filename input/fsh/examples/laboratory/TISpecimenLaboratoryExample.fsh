@@ -14,7 +14,7 @@ Description: "Maximale Beispielinstanz für das Profil TISpecimenLaboratory"
   * value = "Test Specimen identifier"
 * status = #available
 * type
-  * coding[snomed] = $cs-sct-de-20260515#119376003 "Gewebeprobe"
+  * coding = $cs-sct-de-20260515#119376003 "Gewebeprobe"
   * text = "test"
 * subject = Reference(ExampleTIPatient)
   * identifier

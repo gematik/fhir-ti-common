@@ -63,14 +63,8 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
   Der LOINC®-Code impliziert über die LOINC®-Achse SYSTEM bereits eine Probenart. Falls der Wert für die LOINC®-Achse SYSTEM nicht ausreichend spezifisch ist, kann in Bezug auf den LOINC®-Code der Laboruntersuchung, die \"Probenart, ergänzende Spezifizierung\" (Specimen.type) ergänzt werden. Ein Beispiel: Wenn mit dem LOINC®-Code das Untersuchungsmaterial \"Blut\" definiert ist, könnte als ergänzende Spezifikation der SNOMED CT®-Code für \"arterielles Blut\" dokumentiert werden.
   """
   * ^short = "Probenart, ergänzende Spezifizierung (z.B. postkoordinierend)"
+  * coding from $ti-vs-specimen-type (extensible)
   * coding MS
-    * ^definition = "Hier wird die Probenart als codierte Information angegeben."
-    * ^slicing.discriminator.type = #value
-    * ^slicing.discriminator.path = "$this"
-    * ^slicing.rules = #open
-  * coding contains snomed 0..1 MS
-  * coding[snomed] from $ti-vs-specimen-type (extensible)
-  * coding[snomed]
     * ^definition = "Hier kann ein Code aus SNOMED CT® angegeben werden."
     * ^patternCoding.system = $cs-sct
     * insert CodingMS
