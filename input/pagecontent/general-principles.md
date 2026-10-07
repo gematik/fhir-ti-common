@@ -538,7 +538,7 @@ In diesem Beispiel bezieht sich die Referenz auf die 4. Version der _MedicationS
 
 Zum Auflösen einer versionerten Referenz, muss zunächst ein Treffer auf Grund der Referenz ohne die Versionsinformation (also ohne <code>/_history/[versionId]</code>) mit der <code>Bundle.entry.fullUrl</code> bestimmt werden muss und anschließend die Version mit <code>Resource.meta.versionId</code> auf Übereinstimmung geprüft werden (siehe [FHIR Bundle References]). Hierbei muss die <code>Bundle.entry.fullUrl</code> nicht eindeutig sein (siehe [FHIR Bundle.entry.fullUrl]) und mehrere Versionen der selben Resourcen-Instanz mit der selben URL innerhalb eines Bundles erlaubt.
 
-#### Referentielle Integrität
+### Referentielle Integrität
 
 Es ist sicher zu stellen, dass durch schreibende Anfragen keine hängenden Referenzen entstehen. Eine hängende Referenz ist eine literale Referenz, deren Ziel nicht auflösbar ist.
 
@@ -560,7 +560,7 @@ Eine literale Referenz ist auflösbar, wenn innerhalb des Datenbestands, auf den
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    Der FHIR Data Service MUSS eine schreibende Anfrage (z.B. eine FHIR-Operation, eine <i>create</i>-, <i>update</i>- oder <i>delete</i>-Interaktion oder ein Bundle vom Typ <i>transaction</i>) vollständig ablehnen, wenn ihre Verarbeitung zu mindestens einer hängenden Referenz führen würde. Bei einem Bundle vom Typ <i>batch</i> gilt dies je Eintrag.
+    Der FHIR Data Service MUSS eine schreibende Anfrage (z.B. eine FHIR-Operation, eine <i>create</i>-, <i>update</i>-, <i>patch</i>- oder <i>delete</i>-Interaktion oder ein Bundle vom Typ <i>transaction</i>) vollständig ablehnen, wenn ihre Verarbeitung zu mindestens einer hängenden Referenz führen würde. Bei einem Bundle vom Typ <i>batch</i> gilt dies je Eintrag.
     <br/><br/>
     In diesem Fall MUSS der FHIR Data Service den Datenbestand unverändert lassen, d.h. alle durch die Anfrage bewirkten Änderungen verwerfen, und mit dem HTTP Status Code <i>409 (Conflict)</i> antworten. Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten, die je hängender Referenz ein <i>issue</i> mit folgenden Eigenschaften enthält:
     <ul>
@@ -588,7 +588,7 @@ Eine literale Referenz ist auflösbar, wenn innerhalb des Datenbestands, auf den
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    Der FHIR Data Service MUSS lesende Anfragen (z.B. <i>read</i>, <i>vread</i>, <i>search</i>, <i>history</i> oder lesende FHIR-Operationen) auch dann erfolgreich beantworten, wenn die zurückzugebenden FHIR-Instanzen hängende Referenzen enthalten. Hängende Referenzen MÜSSEN dabei unverändert zurückgegeben werden. Ist das Ziel einer über <i>_include</i> angeforderten Referenz nicht auflösbar, MUSS der FHIR Data Service die Anfrage ohne die entsprechende FHIR-Instanz beantworten.
+    Der FHIR Data Service MUSS lesende Anfragen (z.B. <i>read</i>, <i>vread</i>, <i>search-type</i>, <i>history-type</i>, <i>history-instance</i> oder lesende FHIR-Operationen) auch dann erfolgreich beantworten, wenn die zurückzugebenden FHIR-Instanzen hängende Referenzen enthalten. Hängende Referenzen MÜSSEN dabei unverändert zurückgegeben werden. Ist das Ziel einer über <i>_include</i> angeforderten Referenz nicht auflösbar, MUSS der FHIR Data Service die Anfrage ohne die entsprechende FHIR-Instanz beantworten.
 </requirement>
 
 Das folgende Beispiel zeigt die erwartete Antwort auf eine schreibende Anfrage, die zu einer hängenden Referenz führen würde.
