@@ -76,6 +76,32 @@
                     "diff": {}
                 },
                 {
+                    "title": "Ablehnung schreibender Anfragen bei Entstehen hängender Referenzen",
+                    "key": "IG-TI61238TMT",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html",
+                    "diff": {}
+                },
+                {
+                    "title": "Keine Fehler durch hängende Referenzen bei lesenden Anfragen",
+                    "key": "IG-TI73085GDL",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html",
+                    "diff": {}
+                },
+                {
                     "title": "Strukturierte Dosierung - Bereitstellen von Versionen und Sprachen",
                     "key": "IG-TI74988KAT",
                     "actor": [
@@ -94,6 +120,19 @@
                             "conformance": ""
                         }
                     }
+                },
+                {
+                    "title": "Berücksichtigung ausschließlich durch die Anfrage entstehender hängender Referenzen",
+                    "key": "IG-TI88437PD3",
+                    "actor": [
+                        "EPA-Medication-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html",
+                    "diff": {}
                 },
                 {
                     "title": "Zeitpunktbezogener Abruf der Versionshistorie mit _at",

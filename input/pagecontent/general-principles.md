@@ -555,7 +555,7 @@ Eine literale Referenz ist auflösbar, wenn innerhalb des Datenbestands, auf den
 - bei einer Referenz ohne Versionsangabe eine nicht gelöschte FHIR-Instanz mit dem angegebenen Ressourcentyp und der angegebenen <i>Resource.id</i> existiert, bzw.
 - bei einer versionierten Referenz die angegebene Version der FHIR-Instanz über <code>[base]/[ResourceType]/[id]/_history/[versionId]</code> abrufbar ist. Dies gilt auch dann, wenn die FHIR-Instanz zwischenzeitlich gelöscht wurde.
 
-<requirement conformance="SHALL" title="Ablehnung schreibender Anfragen bei Entstehen hängender Referenzen">
+<requirement conformance="SHALL" key="IG-TI61238TMT" title="Ablehnung schreibender Anfragen bei Entstehen hängender Referenzen" version="0">
     <meta lockversion="false"/>
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
@@ -570,7 +570,7 @@ Eine literale Referenz ist auflösbar, wenn innerhalb des Datenbestands, auf den
     </ul>
 </requirement>
 
-<requirement conformance="SHALL" title="Berücksichtigung ausschließlich durch die Anfrage entstehender hängender Referenzen">
+<requirement conformance="SHALL" key="IG-TI88437PD3" title="Berücksichtigung ausschließlich durch die Anfrage entstehender hängender Referenzen" version="0">
     <meta lockversion="false"/>
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
@@ -583,7 +583,7 @@ Eine literale Referenz ist auflösbar, wenn innerhalb des Datenbestands, auf den
     Der FHIR Data Service MUSS bereits vor der Verarbeitung bestehende hängende Referenzen bei der Prüfung unberücksichtigt lassen, sodass diese nicht zur Ablehnung der Anfrage führen. Dies gilt auch, wenn sie in einer durch die Anfrage aktualisierten FHIR-Instanz unverändert erhalten bleiben. Die Prüfung MUSS anhand des Gesamtergebnisses der Anfrage erfolgen, sodass z.B. das Löschen einer referenzierenden und der von ihr referenzierten FHIR-Instanz innerhalb derselben Anfrage zulässig ist.
 </requirement>
 
-<requirement conformance="SHALL" title="Keine Fehler durch hängende Referenzen bei lesenden Anfragen">
+<requirement conformance="SHALL" key="IG-TI73085GDL" title="Keine Fehler durch hängende Referenzen bei lesenden Anfragen" version="0">
     <meta lockversion="false"/>
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>

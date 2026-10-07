@@ -1,0 +1,29 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+content_hash: 467a02cc21c57e2ea34f2c2cbb6b5697839d35af3a8f4d2e468f78a4540d8b8e
+created: '2026-10-07T08:17:54.243380'
+date: '2026-10-07T08:25:43.464644'
+key: IG-TI88437PD3
+modified: '2026-10-07T08:25:43.464644'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service:
+  - Produkttest
+text: "Der FHIR Data Service MUSS bei der Prüfung auf hängende Referenzen ausschließlich\
+  \ solche hängenden Referenzen berücksichtigen, die durch die Anfrage entstehen.\
+  \ Dies sind:\n <ul>\n <li>literale Referenzen, die durch die Anfrage hinzugefügt\
+  \ oder geändert werden und nicht auflösbar sind, sowie</li>\n <li>literale Referenzen\
+  \ in nach der Verarbeitung aktuellen, nicht gelöschten FHIR-Instanzen, die vor der\
+  \ Verarbeitung auflösbar waren und durch die Anfrage (z.B. durch Löschen der referenzierten\
+  \ FHIR-Instanz) nicht mehr auflösbar sind.</li>\n </ul>\n Der FHIR Data Service\
+  \ MUSS bereits vor der Verarbeitung bestehende hängende Referenzen bei der Prüfung\
+  \ unberücksichtigt lassen, sodass diese nicht zur Ablehnung der Anfrage führen.\
+  \ Dies gilt auch, wenn sie in einer durch die Anfrage aktualisierten FHIR-Instanz\
+  \ unverändert erhalten bleiben. Die Prüfung MUSS anhand des Gesamtergebnisses der\
+  \ Anfrage erfolgen, sodass z.B. das Löschen einer referenzierenden und der von ihr\
+  \ referenzierten FHIR-Instanz innerhalb derselben Anfrage zulässig ist."
+title: Berücksichtigung ausschließlich durch die Anfrage entstehender hängender Referenzen
+version: 0

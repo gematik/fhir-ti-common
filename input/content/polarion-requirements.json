@@ -2603,6 +2603,30 @@
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/query-api-search.html#IG-TI61163GRT"
         },
         {
+            "key": "IG-TI61238TMT",
+            "title": "Ablehnung schreibender Anfragen bei Entstehen hängender Referenzen",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Der FHIR Data Service MUSS eine schreibende Anfrage (z.B. eine FHIR-Operation, eine <i>create</i>-, <i>update</i>- oder <i>delete</i>-Interaktion oder ein Bundle vom Typ <i>transaction</i>) vollständig ablehnen, wenn ihre Verarbeitung zu mindestens einer hängenden Referenz führen würde. Bei einem Bundle vom Typ <i>batch</i> gilt dies je Eintrag.\n <br/><br/>\n In diesem Fall MUSS der FHIR Data Service den Datenbestand unverändert lassen, d.h. alle durch die Anfrage bewirkten Änderungen verwerfen, und mit dem HTTP Status Code <i>409 (Conflict)</i> antworten. Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten, die je hängender Referenz ein <i>issue</i> mit folgenden Eigenschaften enthält:\n <ul>\n <li><i>OperationOutcome.issue.code</i> ist auf <i>conflict</i> gesetzt</li>\n <li><i>OperationOutcome.issue.details</i> ist auf <i>SVC_DANGLING_REFERENCE</i> gesetzt</li>\n <li><i>OperationOutcome.issue.diagnostics</i> benennt die referenzierende FHIR-Instanz, das referenzierende Element und den Wert der nicht auflösbaren Referenz</li>\n </ul>",
+            "conformance": "SHALL",
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-Medication-Service",
+                        "id": "productType161",
+                        "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                }
+            ],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/general-principles.html#IG-TI61238TMT"
+        },
+        {
             "key": "IG-TI61673KWG",
             "title": "Unterstützung versionierter Referenzen im FHIR Data Service",
             "version": 0,
@@ -2977,6 +3001,30 @@
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/general-principles.html#IG-TI72725KAW"
+        },
+        {
+            "key": "IG-TI73085GDL",
+            "title": "Keine Fehler durch hängende Referenzen bei lesenden Anfragen",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Der FHIR Data Service MUSS lesende Anfragen (z.B. <i>read</i>, <i>vread</i>, <i>search</i>, <i>history</i> oder lesende FHIR-Operationen) auch dann erfolgreich beantworten, wenn die zurückzugebenden FHIR-Instanzen hängende Referenzen enthalten. Hängende Referenzen MÜSSEN dabei unverändert zurückgegeben werden. Ist das Ziel einer über <i>_include</i> angeforderten Referenz nicht auflösbar, MUSS der FHIR Data Service die Anfrage ohne die entsprechende FHIR-Instanz beantworten.",
+            "conformance": "SHALL",
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-Medication-Service",
+                        "id": "productType161",
+                        "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                }
+            ],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/general-principles.html#IG-TI73085GDL"
         },
         {
             "key": "IG-TI74988KAT",
@@ -3416,6 +3464,30 @@
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/query-api-search.html#IG-TI87465NYV"
+        },
+        {
+            "key": "IG-TI88437PD3",
+            "title": "Berücksichtigung ausschließlich durch die Anfrage entstehender hängender Referenzen",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Der FHIR Data Service MUSS bei der Prüfung auf hängende Referenzen ausschließlich solche hängenden Referenzen berücksichtigen, die durch die Anfrage entstehen. Dies sind:\n <ul>\n <li>literale Referenzen, die durch die Anfrage hinzugefügt oder geändert werden und nicht auflösbar sind, sowie</li>\n <li>literale Referenzen in nach der Verarbeitung aktuellen, nicht gelöschten FHIR-Instanzen, die vor der Verarbeitung auflösbar waren und durch die Anfrage (z.B. durch Löschen der referenzierten FHIR-Instanz) nicht mehr auflösbar sind.</li>\n </ul>\n Der FHIR Data Service MUSS bereits vor der Verarbeitung bestehende hängende Referenzen bei der Prüfung unberücksichtigt lassen, sodass diese nicht zur Ablehnung der Anfrage führen. Dies gilt auch, wenn sie in einer durch die Anfrage aktualisierten FHIR-Instanz unverändert erhalten bleiben. Die Prüfung MUSS anhand des Gesamtergebnisses der Anfrage erfolgen, sodass z.B. das Löschen einer referenzierenden und der von ihr referenzierten FHIR-Instanz innerhalb derselben Anfrage zulässig ist.",
+            "conformance": "SHALL",
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-Medication-Service",
+                        "id": "productType161",
+                        "description": "EPA-Medication-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                }
+            ],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.1/general-principles.html#IG-TI88437PD3"
         },
         {
             "key": "IG-TI92941JBA",
