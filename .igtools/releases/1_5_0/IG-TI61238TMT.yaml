@@ -1,11 +1,11 @@
 actor:
 - EPA-Medication-Service
 conformance: SHALL
-content_hash: 1cf3b6bd1a813dc77738337872ae030fd380e01e4a904e72a64fd0231d7ea417
+content_hash: 5d41f14c1b897745ddf3ba6fb12a904bc8aea28be1cb34fffebf01be48966d7c
 created: '2026-10-07T08:17:54.242982'
-date: '2026-10-07T08:25:43.463918'
+date: '2026-10-07T13:18:54.552791'
 key: IG-TI61238TMT
-modified: '2026-10-07T08:25:43.463918'
+modified: '2026-10-07T13:18:54.552791'
 release_status: NEW
 source: input/pagecontent/general-principles.md
 status: ACTIVE
@@ -13,17 +13,18 @@ test_procedures:
   EPA-Medication-Service:
   - Produkttest
 text: "Der FHIR Data Service MUSS eine schreibende Anfrage (z.B. eine FHIR-Operation,\
-  \ eine <i>create</i>-, <i>update</i>- oder <i>delete</i>-Interaktion oder ein Bundle\
-  \ vom Typ <i>transaction</i>) vollständig ablehnen, wenn ihre Verarbeitung zu mindestens\
-  \ einer hängenden Referenz führen würde. Bei einem Bundle vom Typ <i>batch</i> gilt\
-  \ dies je Eintrag.\n <br/><br/>\n In diesem Fall MUSS der FHIR Data Service den\
-  \ Datenbestand unverändert lassen, d.h. alle durch die Anfrage bewirkten Änderungen\
-  \ verwerfen, und mit dem HTTP Status Code <i>409 (Conflict)</i> antworten. Die Response\
-  \ MUSS eine <i>OperationOutcome</i>-Ressource enthalten, die je hängender Referenz\
-  \ ein <i>issue</i> mit folgenden Eigenschaften enthält:\n <ul>\n <li><i>OperationOutcome.issue.code</i>\
-  \ ist auf <i>conflict</i> gesetzt</li>\n <li><i>OperationOutcome.issue.details</i>\
-  \ ist auf <i>SVC_DANGLING_REFERENCE</i> gesetzt</li>\n <li><i>OperationOutcome.issue.diagnostics</i>\
-  \ benennt die referenzierende FHIR-Instanz, das referenzierende Element und den\
-  \ Wert der nicht auflösbaren Referenz</li>\n </ul>"
+  \ eine <i>create</i>-, <i>update</i>-, <i>patch</i>- oder <i>delete</i>-Interaktion\
+  \ oder ein Bundle vom Typ <i>transaction</i>) vollständig ablehnen, wenn ihre Verarbeitung\
+  \ zu mindestens einer hängenden Referenz führen würde. Bei einem Bundle vom Typ\
+  \ <i>batch</i> gilt dies je Eintrag.\n <br/><br/>\n In diesem Fall MUSS der FHIR\
+  \ Data Service den Datenbestand unverändert lassen, d.h. alle durch die Anfrage\
+  \ bewirkten Änderungen verwerfen, und mit dem HTTP Status Code <i>409 (Conflict)</i>\
+  \ antworten. Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten,\
+  \ die je hängender Referenz ein <i>issue</i> mit folgenden Eigenschaften enthält:\n\
+  \ <ul>\n <li><i>OperationOutcome.issue.code</i> ist auf <i>conflict</i> gesetzt</li>\n\
+  \ <li><i>OperationOutcome.issue.details</i> ist auf <i>SVC_DANGLING_REFERENCE</i>\
+  \ gesetzt</li>\n <li><i>OperationOutcome.issue.diagnostics</i> benennt die referenzierende\
+  \ FHIR-Instanz, das referenzierende Element und den Wert der nicht auflösbaren Referenz</li>\n\
+  \ </ul>"
 title: Ablehnung schreibender Anfragen bei Entstehen hängender Referenzen
 version: 0
