@@ -34,7 +34,7 @@ Keine neuen FHIR-Artefakte mit expliziter Version `1.5.0`.
 
 #### Systemverhalten
 
-Keine neuen FHIR-Artefakte mit expliziter Version `1.5.0`.
+- Dem CodeSystem _TIOperationOutcomeDetailsCS_ und dem ValueSet _TIOperationOutcomeDetailsVS_ wurde der Code _SVC_DANGLING_REFERENCE_ hinzugefügt. Er wird verwendet, wenn eine schreibende Anfrage abgelehnt wird, weil sie zu hängenden literalen Referenzen führen würde (siehe Abschnitt "Referentielle Integrität" unter [Generelle Prinzipien](general-principles.html)).
 
 #### Anforderungen
 

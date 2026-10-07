@@ -538,6 +538,68 @@ In diesem Beispiel bezieht sich die Referenz auf die 4. Version der _MedicationS
 
 Zum Auflösen einer versionerten Referenz, muss zunächst ein Treffer auf Grund der Referenz ohne die Versionsinformation (also ohne <code>/_history/[versionId]</code>) mit der <code>Bundle.entry.fullUrl</code> bestimmt werden muss und anschließend die Version mit <code>Resource.meta.versionId</code> auf Übereinstimmung geprüft werden (siehe [FHIR Bundle References]). Hierbei muss die <code>Bundle.entry.fullUrl</code> nicht eindeutig sein (siehe [FHIR Bundle.entry.fullUrl]) und mehrere Versionen der selben Resourcen-Instanz mit der selben URL innerhalb eines Bundles erlaubt.
 
+### Referentielle Integrität
+
+Es ist sicher zu stellen, dass durch schreibende Anfragen keine hängenden Referenzen entstehen. Eine hängende Referenz ist eine literale Referenz, deren Ziel nicht auflösbar ist.
+
+Als literale Referenz im Sinne dieses Abschnitts gilt ein Wert im Element <i>Reference.reference</i> (siehe [FHIR Literal References]) in einer der folgenden Formen:
+
+- relative URL der Form <code>[ResourceType]/[id]</code>,
+- versionierte relative URL der Form <code>[ResourceType]/[id]/_history/[versionId]</code>,
+- absolute URL, deren Basis-URL dem FHIR Data Service selbst entspricht (mit oder ohne Versionsangabe).
+
+Nicht betrachtet werden logische Referenzen (<i>Reference.identifier</i>), Referenzen auf enthaltene Ressourcen (<code>#[id]</code>), absolute URLs auf andere Server sowie kanonische URLs (Datentyp <i>canonical</i>). Referenzen der Form <code>urn:uuid:[uuid]</code> innerhalb eines Bundles werden gemäß [FHIR Bundle References] innerhalb des Bundles aufgelöst; betrachtet werden die daraus bei der Verarbeitung resultierenden literalen Referenzen.
+
+Eine literale Referenz ist auflösbar, wenn innerhalb des Datenbestands, auf den sich die Anfrage bezieht (z.B. das Aktenkonto eines Versicherten),
+
+- bei einer Referenz ohne Versionsangabe eine nicht gelöschte FHIR-Instanz mit dem angegebenen Ressourcentyp und der angegebenen <i>Resource.id</i> existiert, bzw.
+- bei einer versionierten Referenz die angegebene Version der FHIR-Instanz über <code>[base]/[ResourceType]/[id]/_history/[versionId]</code> abrufbar ist. Dies gilt auch dann, wenn die FHIR-Instanz zwischenzeitlich gelöscht wurde.
+
+<requirement conformance="SHALL" key="IG-TI61238TMT" title="Ablehnung schreibender Anfragen bei Entstehen hängender Referenzen" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service MUSS eine schreibende Anfrage (z.B. eine FHIR-Operation, eine <i>create</i>-, <i>update</i>-, <i>patch</i>- oder <i>delete</i>-Interaktion oder ein Bundle vom Typ <i>transaction</i>) vollständig ablehnen, wenn ihre Verarbeitung zu mindestens einer hängenden Referenz führen würde. Bei einem Bundle vom Typ <i>batch</i> gilt dies je Eintrag.
+    <br/><br/>
+    In diesem Fall MUSS der FHIR Data Service den Datenbestand unverändert lassen, d.h. alle durch die Anfrage bewirkten Änderungen verwerfen, und mit dem HTTP Status Code <i>409 (Conflict)</i> antworten. Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten, die je hängender Referenz ein <i>issue</i> mit folgenden Eigenschaften enthält:
+    <ul>
+        <li><i>OperationOutcome.issue.code</i> ist auf <i>conflict</i> gesetzt</li>
+        <li><i>OperationOutcome.issue.details</i> ist auf <i>SVC_DANGLING_REFERENCE</i> gesetzt</li>
+        <li><i>OperationOutcome.issue.diagnostics</i> benennt die referenzierende FHIR-Instanz, das referenzierende Element und den Wert der nicht auflösbaren Referenz</li>
+    </ul>
+</requirement>
+
+<requirement conformance="SHALL" key="IG-TI88437PD3" title="Berücksichtigung ausschließlich durch die Anfrage entstehender hängender Referenzen" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service MUSS bei der Prüfung auf hängende Referenzen ausschließlich solche hängenden Referenzen berücksichtigen, die durch die Anfrage entstehen. Dies sind:
+    <ul>
+        <li>literale Referenzen, die durch die Anfrage hinzugefügt oder geändert werden und nicht auflösbar sind, sowie</li>
+        <li>literale Referenzen in nach der Verarbeitung aktuellen, nicht gelöschten FHIR-Instanzen, die vor der Verarbeitung auflösbar waren und durch die Anfrage (z.B. durch Löschen der referenzierten FHIR-Instanz) nicht mehr auflösbar sind.</li>
+    </ul>
+    Der FHIR Data Service MUSS bereits vor der Verarbeitung bestehende hängende Referenzen bei der Prüfung unberücksichtigt lassen, sodass diese nicht zur Ablehnung der Anfrage führen. Dies gilt auch, wenn sie in einer durch die Anfrage aktualisierten FHIR-Instanz unverändert erhalten bleiben. Die Prüfung MUSS anhand des Gesamtergebnisses der Anfrage erfolgen, sodass z.B. das Löschen einer referenzierenden und der von ihr referenzierten FHIR-Instanz innerhalb derselben Anfrage zulässig ist.
+</requirement>
+
+<requirement conformance="SHALL" key="IG-TI73085GDL" title="Keine Fehler durch hängende Referenzen bei lesenden Anfragen" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service MUSS lesende Anfragen (z.B. <i>read</i>, <i>vread</i>, <i>search-type</i>, <i>history-type</i>, <i>history-instance</i> oder lesende FHIR-Operationen) auch dann erfolgreich beantworten, wenn die zurückzugebenden FHIR-Instanzen hängende Referenzen enthalten. Hängende Referenzen MÜSSEN dabei unverändert zurückgegeben werden. Ist das Ziel einer über <i>_include</i> angeforderten Referenz nicht auflösbar, MUSS der FHIR Data Service die Anfrage ohne die entsprechende FHIR-Instanz beantworten.
+</requirement>
+
+Das folgende Beispiel zeigt die erwartete Antwort auf eine schreibende Anfrage, die zu einer hängenden Referenz führen würde.
+
+<div class="gem-ig-example" data-title="OperationOutcome (JSON)">
+    {% fragment OperationOutcome/7c2e5a91-4f0b-4d8e-9a63-1b8f2d6c0e47 JSON %}
+</div>
+<div class="gem-ig-example" data-title="OperationOutcome (XML)">
+    {% fragment OperationOutcome/7c2e5a91-4f0b-4d8e-9a63-1b8f2d6c0e47 XML %}
+</div>
+
 
 ### Bereitstellung von Capability Statements
 

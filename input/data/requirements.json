@@ -1612,6 +1612,30 @@
         "release": "1.5.0"
     },
     {
+        "key": "IG-TI61238TMT",
+        "title": "Ablehnung schreibender Anfragen bei Entstehen hängender Referenzen",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS eine schreibende Anfrage (z.B. eine FHIR-Operation, eine <i>create</i>-, <i>update</i>-, <i>patch</i>- oder <i>delete</i>-Interaktion oder ein Bundle vom Typ <i>transaction</i>) vollständig ablehnen, wenn ihre Verarbeitung zu mindestens einer hängenden Referenz führen würde. Bei einem Bundle vom Typ <i>batch</i> gilt dies je Eintrag.\n <br/><br/>\n In diesem Fall MUSS der FHIR Data Service den Datenbestand unverändert lassen, d.h. alle durch die Anfrage bewirkten Änderungen verwerfen, und mit dem HTTP Status Code <i>409 (Conflict)</i> antworten. Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten, die je hängender Referenz ein <i>issue</i> mit folgenden Eigenschaften enthält:\n <ul>\n <li><i>OperationOutcome.issue.code</i> ist auf <i>conflict</i> gesetzt</li>\n <li><i>OperationOutcome.issue.details</i> ist auf <i>SVC_DANGLING_REFERENCE</i> gesetzt</li>\n <li><i>OperationOutcome.issue.diagnostics</i> benennt die referenzierende FHIR-Instanz, das referenzierende Element und den Wert der nicht auflösbaren Referenz</li>\n </ul>",
+        "conformance": "SHALL",
+        "created": "2026-10-07T08:17:54.242982",
+        "modified": "2026-10-07T13:18:54.552791",
+        "date": "2026-10-07T13:18:54.552791",
+        "content_hash": "5d41f14c1b897745ddf3ba6fb12a904bc8aea28be1cb34fffebf01be48966d7c",
+        "path": "general-principles.html",
+        "release": "1.5.0"
+    },
+    {
         "key": "IG-TI61673KWG",
         "title": "Unterstützung versionierter Referenzen im FHIR Data Service",
         "actor": [
@@ -1840,6 +1864,30 @@
         "modified": "2025-03-14T10:33:08.469446",
         "date": "2025-11-18T11:03:10.876502",
         "content_hash": "2c80aab248c22fe521cb6dc487065a99d9503473cfee2a943d2ab71bf86ee64d",
+        "path": "general-principles.html",
+        "release": "1.5.0"
+    },
+    {
+        "key": "IG-TI73085GDL",
+        "title": "Keine Fehler durch hängende Referenzen bei lesenden Anfragen",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS lesende Anfragen (z.B. <i>read</i>, <i>vread</i>, <i>search-type</i>, <i>history-type</i>, <i>history-instance</i> oder lesende FHIR-Operationen) auch dann erfolgreich beantworten, wenn die zurückzugebenden FHIR-Instanzen hängende Referenzen enthalten. Hängende Referenzen MÜSSEN dabei unverändert zurückgegeben werden. Ist das Ziel einer über <i>_include</i> angeforderten Referenz nicht auflösbar, MUSS der FHIR Data Service die Anfrage ohne die entsprechende FHIR-Instanz beantworten.",
+        "conformance": "SHALL",
+        "created": "2026-10-07T08:17:54.243776",
+        "modified": "2026-10-07T13:18:54.554072",
+        "date": "2026-10-07T13:18:54.554072",
+        "content_hash": "9b90f2be592183b94abbb05202fcdc8a304fe461288d615c7c91d425219a8d02",
         "path": "general-principles.html",
         "release": "1.5.0"
     },
@@ -2109,6 +2157,30 @@
         "date": "2026-09-30T16:35:53.242700",
         "content_hash": "828ee20983260a11030b833b8ed93e117ce87c40dd845a02f434499364ddcdac",
         "path": "query-api-search.html",
+        "release": "1.5.0"
+    },
+    {
+        "key": "IG-TI88437PD3",
+        "title": "Berücksichtigung ausschließlich durch die Anfrage entstehender hängender Referenzen",
+        "actor": [
+            "EPA-Medication-Service"
+        ],
+        "test_procedures": {
+            "EPA-Medication-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS bei der Prüfung auf hängende Referenzen ausschließlich solche hängenden Referenzen berücksichtigen, die durch die Anfrage entstehen. Dies sind:\n <ul>\n <li>literale Referenzen, die durch die Anfrage hinzugefügt oder geändert werden und nicht auflösbar sind, sowie</li>\n <li>literale Referenzen in nach der Verarbeitung aktuellen, nicht gelöschten FHIR-Instanzen, die vor der Verarbeitung auflösbar waren und durch die Anfrage (z.B. durch Löschen der referenzierten FHIR-Instanz) nicht mehr auflösbar sind.</li>\n </ul>\n Der FHIR Data Service MUSS bereits vor der Verarbeitung bestehende hängende Referenzen bei der Prüfung unberücksichtigt lassen, sodass diese nicht zur Ablehnung der Anfrage führen. Dies gilt auch, wenn sie in einer durch die Anfrage aktualisierten FHIR-Instanz unverändert erhalten bleiben. Die Prüfung MUSS anhand des Gesamtergebnisses der Anfrage erfolgen, sodass z.B. das Löschen einer referenzierenden und der von ihr referenzierten FHIR-Instanz innerhalb derselben Anfrage zulässig ist.",
+        "conformance": "SHALL",
+        "created": "2026-10-07T08:17:54.243380",
+        "modified": "2026-10-07T08:25:43.464644",
+        "date": "2026-10-07T08:25:43.464644",
+        "content_hash": "467a02cc21c57e2ea34f2c2cbb6b5697839d35af3a8f4d2e468f78a4540d8b8e",
+        "path": "general-principles.html",
         "release": "1.5.0"
     },
     {

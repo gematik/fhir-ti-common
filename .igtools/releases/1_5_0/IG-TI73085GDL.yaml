@@ -1,0 +1,22 @@
+actor:
+- EPA-Medication-Service
+conformance: SHALL
+content_hash: 9b90f2be592183b94abbb05202fcdc8a304fe461288d615c7c91d425219a8d02
+created: '2026-10-07T08:17:54.243776'
+date: '2026-10-07T13:18:54.554072'
+key: IG-TI73085GDL
+modified: '2026-10-07T13:18:54.554072'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-Medication-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS lesende Anfragen (z.B. <i>read</i>, <i>vread</i>,
+  <i>search-type</i>, <i>history-type</i>, <i>history-instance</i> oder lesende FHIR-Operationen)
+  auch dann erfolgreich beantworten, wenn die zurückzugebenden FHIR-Instanzen hängende
+  Referenzen enthalten. Hängende Referenzen MÜSSEN dabei unverändert zurückgegeben
+  werden. Ist das Ziel einer über <i>_include</i> angeforderten Referenz nicht auflösbar,
+  MUSS der FHIR Data Service die Anfrage ohne die entsprechende FHIR-Instanz beantworten.
+title: Keine Fehler durch hängende Referenzen bei lesenden Anfragen
+version: 0

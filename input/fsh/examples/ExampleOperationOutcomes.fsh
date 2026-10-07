@@ -32,6 +32,18 @@ Usage: #example
   * diagnostics = "Resource was deleted at 2025-03-10T10:02:27.838+00:00"
 
 
+Instance: ExpTIOperationOutcomeDanglingReference
+InstanceOf: TIOperationOutcome
+Description: "The request would result in unresolvable literal references"
+Usage: #example
+* id = "7c2e5a91-4f0b-4d8e-9a63-1b8f2d6c0e47"
+* issue
+  * severity = #error
+  * code = #conflict
+  * details = TIOperationOutcomeDetailsCS#SVC_DANGLING_REFERENCE "The request would result in unresolvable literal references"
+  * diagnostics = "Reference 'MedicationDispense/2f8b6c1e-5a3d-4e9f-b7c0-8d1a4e6f9b25' in MedicationStatement/9e4d7a2b-3c6f-4b1e-8f5a-0d2c7b9e1a63 (element MedicationStatement.derivedFrom) would no longer be resolvable"
+
+
 Instance: ExpTIOperationOutcomeInactiveCode
 InstanceOf: TIOperationOutcome
 Description: "Inactive code not permitted"
