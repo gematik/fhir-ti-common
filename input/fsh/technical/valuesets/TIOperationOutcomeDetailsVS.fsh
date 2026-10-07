@@ -5,15 +5,15 @@ Title: "TI Operation Outcome Details Value Set"
 Description: "Enthält alle Codes für das Operation Outcome der Telematikinfrastruktur (TI) sowie die in FHIR definierten Operation-Outcome-Codes."
 * insert Meta-VS
 // preserve the version of this resource
-* ^version = "1.3.1"
-* ^date = "2026-03-20"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * include codes from system $cs-operation-outcome
 * include codes from system TIOperationOutcomeDetailsCS
 
 // expansion of explicitly defined codes
-* ^expansion.timestamp = "2026-03-20T06:56:46.224Z"
+* ^expansion.timestamp = "2026-12-08T00:00:00.000Z"
 
 * ^expansion.contains[0].system = "http://terminology.hl7.org/CodeSystem/operation-outcome"
 * ^expansion.contains[=].code = #DELETE_MULTIPLE_MATCHES
@@ -252,3 +252,7 @@ Description: "Enthält alle Codes für das Operation Outcome der Telematikinfras
 * ^expansion.contains[+].system = Canonical(TIOperationOutcomeDetailsCS)
 * ^expansion.contains[=].code = #SVC_DOSAGE_INVALID_RENDERED_INSTRUCTION
 * ^expansion.contains[=].display = "The provided rendered dosage instruction is invalid"
+
+* ^expansion.contains[+].system = Canonical(TIOperationOutcomeDetailsCS)
+* ^expansion.contains[=].code = #SVC_DANGLING_REFERENCE
+* ^expansion.contains[=].display = "The request would result in unresolvable literal references"
