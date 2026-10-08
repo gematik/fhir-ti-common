@@ -39,7 +39,14 @@ Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://g
 Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://gematik.de/fhir/ti/StructureDefinition/ti-observation-laboratory-study-group|1.5.0 überein.
 The ImplementationGuide uses package ihe.iti.mhd#4.2.5-comment released on 2026-06-16, but the most recent appropriate version is 5.0.0. This reference is getting old and the more recent version should be considered
 %hl7.fhir.eu.extensions.r4#1.3.0%
-
+%html source is not well formed: Found "</p>" expecting "</div>"%
+%html source is not well formed: Found "</div>" expecting "</h2>"%
+%html source is not well formed: Found "</div>" expecting "</body>"%
+%html source is not well formed: Found "</div>" expecting "</body>"%
+%html source is not well formed: Found "</div>" expecting "</body>"%
+%html source is not well formed: Found "</div>" expecting "</body>"%
+%html source has duplicate element ids: root. An id must be unique in a page%
+%page has more than one top level heading: <h2> (no text) is at the same level as the first heading on the page%
 
 # Ignoring Warnings: We are using a custom template of our own
 %publish box%
