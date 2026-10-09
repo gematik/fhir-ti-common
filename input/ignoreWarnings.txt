@@ -44,6 +44,7 @@ The ImplementationGuide uses package ihe.iti.mhd#4.2.5-comment released on 2026-
 %html source is not well formed: Found "</div>" expecting "</body>"%
 %html source has duplicate element ids: root. An id must be unique in a page%
 %page has more than one top level heading: <h2> (no text) is at the same level as the first heading on the page%
+%package ihe.iti.mhd#4.2.5-comment released on 2026-06-16, but the most recent appropriate version is 5.0.0%
 
 # Ignoring Warnings: We are using a custom template of our own
 %publish box%
