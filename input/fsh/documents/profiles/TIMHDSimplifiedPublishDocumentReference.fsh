@@ -102,9 +102,9 @@ Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentRef
   * ^definition = "Größe des Dokuments in Bytes (DocumentEntry.size)"
   * ^comment = "n/a"
 * content.attachment.hash 1..1 MS
-  * ^short = "Kryptographische Prüfsumme des Dokuments mit SHA-256"
-  * ^definition = "Kryptographische Prüfsumme des Dokuments mit SHA-256 (DocumentEntry.hash)"
-  * ^comment = "Abweichend von FHIR R4 und IHE MHD, die für Attachment.hash SHA-1 vorsehen, wird in der TI SHA-256 verwendet. Der Hash wird über den Base64-dekodierten Dokumentinhalt berechnet und als base64Binary angegeben."
+  * ^short = "Kryptographische Prüfsumme des Dokuments"
+  * ^definition = "Kryptographische Prüfsumme des Dokuments (DocumentEntry.hash)"
+  * ^comment = "n/a"
 * content.attachment.title 1..1 MS
   * ^short = "Titel des Dokuments"
   * ^definition = "Titel des Dokuments (DocumentEntry.title)"

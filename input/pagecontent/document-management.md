@@ -48,28 +48,6 @@ Für Client-Systeme, wie beispielsweise Primärsysteme oder Frontends der Versic
 
 Dokumentmetadaten und Dokumenteninhalt werden getrennt voneinander verwaltet. Die `DocumentReference` beschreibt das Dokument und enthält die für dessen Verwaltung erforderlichen Metadaten. Der eigentliche Dokumenteninhalt wird über `DocumentReference.content.attachment` beschrieben und kann über die in `DocumentReference.content.attachment.url` angegebene URL abgerufen werden. Der Dokumenteninhalt kann dabei durch denselben FHIR-basierten TI-Fachdienst oder FHIR Data Service bereitgestellt werden oder sich in einem anderen Dienst befinden. Diese Trennung ermöglicht es, eine `DocumentReference` unabhängig vom Speicherort des Dokumenteninhalts in unterschiedlichen fachlichen Kontexten zu verwenden.
 
-#### Prüfsumme des Dokumenteninhalts
-
-<requirement conformance="SHALL" key="IG-TI10658TAQ" title="Prüfsumme des Dokumenteninhalts mit SHA-256" version="0">
-    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
-        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
-    </actor>
-    <actor name="TI-Flow_FD" description="TI-Flow-Fachdienst">
-        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
-    </actor>
-    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
-        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
-    </actor>
-    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
-        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
-    </actor>
-    <actor name="EPA-CS-KTR" description="Clientsystem-Schnittstelle ePA: Kostenträger">
-        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
-    </actor>
-    Ein System, das <i>DocumentReference.content.attachment.hash</i> in einer auf einem TI-MHD-Profil basierenden <i>DocumentReference</i> belegt oder prüft, MUSS dabei den mit SHA-256 über den Dokumentinhalt berechneten Hash als <i>base64Binary</i> verwenden.
-</requirement>
-
-_Hinweis_: FHIR R4 und IHE MHD sehen für <i>Attachment.hash</i> SHA-1 vor; die TI weicht davon ab. Einige FHIR-Validatoren prüfen <i>Attachment.hash</i> gemäß FHIR R4 als SHA-1-Hash von <i>.data</i> und melden deshalb bei einem korrekt gebildeten SHA-256-Hash einen Fehler.
 
 ### Dienstübergreifende Referenzierung von Dokumenten
 

@@ -27,7 +27,6 @@
 
 - Dem IG wurde die Seite [IHE MHD-basiertes Dokumentenmanagement in der TI](document-management.html) hinzugefügt. Sie beschreibt das gemeinsame Dokumentenmodell und das an IHE MHD orientierte Verhalten für die Referenzierung, Verwaltung und den Austausch von Dokumenten in der TI.
 - Für das TI-weite Dokumentenmanagement wurden die Profile _TIMHDDocumentReference_, _TIMHDSimplifiedPublishDocumentReference_, _TIMHDSubmissionSet_ und _TIMHDFolder_ hinzugefügt. Die Profile orientieren sich an den Konzepten von IHE MHD und stellen eine gemeinsame Grundlage für die Verwaltung und Referenzierung von Dokumenten in der Telematikinfrastruktur bereit. Ergänzt wurden außerdem die Extension _TIDocumentStorageLocation_, das CodeSystem _TIDocumentStorageLocationCS_ sowie die ValueSets _TIDocumentStorageLocationVS_ und _TIMHDDataCategoryVS_.
-- Für _DocumentReference.content.attachment.hash_ verwenden die TI-MHD-Profile abweichend von FHIR R4 und IHE MHD SHA-256 statt SHA-1.
 
 #### Medikationsprozess (dgMP)
 

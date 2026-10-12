@@ -44,6 +44,8 @@ The ImplementationGuide uses package ihe.iti.mhd#4.2.5-comment released on 2026-
 %html source is not well formed: Found "</div>" expecting "</body>"%
 %html source has duplicate element ids: root. An id must be unique in a page%
 %page has more than one top level heading: <h2> (no text) is at the same level as the first heading on the page%
+%html source has duplicate element ids: docref_v2-to-docref_v1,entity_docref_v1,entity_docref_v2,link_docref_v2_docref_v1%
+%html source is not well formed: Found "</a>" expecting "</img>"%
 %package ihe.iti.mhd#4.2.5-comment released on 2026-06-16, but the most recent appropriate version is 5.0.0%
 
 # Ignoring Warnings: We are using a custom template of our own
@@ -51,6 +53,7 @@ The ImplementationGuide uses package ihe.iti.mhd#4.2.5-comment released on 2026-
 %Illegal HTML: Illegal HTML element: requirement%
 %Name should be usable as an identifier for the module by machine processing applications such as code generation%
 %ig-0%
+%html source has duplicate element ids%
 
 
 # This warning is intentionally ignored because the slice is not used at this level. Derived profiles either close the slice or mark it as Must Support where applicable.
