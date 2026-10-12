@@ -380,6 +380,46 @@
         "release": "1.5.0"
     },
     {
+        "key": "IG-TI10658TAQ",
+        "title": "Prüfsumme des Dokumenteninhalts mit SHA-256",
+        "actor": [
+            "EPA-CS-KTR",
+            "EPA-FdV",
+            "EPA-MHD-Service",
+            "EPA-PS",
+            "TI-Flow_FD"
+        ],
+        "test_procedures": {
+            "EPA-CS-KTR": [
+                "Konformitätsbestätigung"
+            ],
+            "EPA-FdV": [
+                "Produkttest"
+            ],
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
+            "EPA-PS": [
+                "Konformitätsbestätigung"
+            ],
+            "TI-Flow_FD": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/document-management.md",
+        "text": "Ein System, das <i>DocumentReference.content.attachment.hash</i> in einer auf einem TI-MHD-Profil basierenden <i>DocumentReference</i> belegt oder prüft, MUSS dabei den mit SHA-256 über den Dokumentinhalt berechneten Hash als <i>base64Binary</i> verwenden.",
+        "conformance": "SHALL",
+        "created": "2026-10-12T14:13:35.770285",
+        "modified": "2026-10-12T14:13:35.770311",
+        "date": "2026-10-12T14:13:35.770314",
+        "content_hash": "e75d2448a55c062312cd56a77863d7b74f4813a14a58c2acc01d589b1eb0e23c",
+        "path": "document-management.html",
+        "release": "1.5.0"
+    },
+    {
         "key": "IG-TI11342RSA",
         "title": "Behandlung des Löschvorgangs als versioniertes Ereignis",
         "actor": [

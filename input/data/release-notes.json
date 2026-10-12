@@ -42,6 +42,23 @@
                     "diff": {}
                 },
                 {
+                    "title": "Prüfsumme des Dokumenteninhalts mit SHA-256",
+                    "key": "IG-TI10658TAQ",
+                    "actor": [
+                        "EPA-CS-KTR",
+                        "EPA-FdV",
+                        "EPA-MHD-Service",
+                        "EPA-PS",
+                        "TI-Flow_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "document-management.html",
+                    "diff": {}
+                },
+                {
                     "title": "Strukturierte Dosierung - Implementierung der Dosiertexterzeugung",
                     "key": "IG-TI17421K31",
                     "actor": [
