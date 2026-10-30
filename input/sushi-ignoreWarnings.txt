@@ -4,3 +4,5 @@ Multiple profiles present on element Observation.note.author[x]:authorReference.
 Multiple profiles present on element Provenance.agent.who.identifier. Base element type will be used instead of any profiles.
 Files not in the supported file types (.md and .xml) were detected. These files will be included without any processing.
 http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0 was requested, but SUSHI found http://hl7.org/fhir/StructureDefinition/bodySite|5.3.0
+http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0 was requested, but SUSHI found http://hl7.org/fhir/StructureDefinition/bodySite|5.4.0
+The ImplementationGuide name "gemIG_TI_Common" does not match the FHIR constraint '[A-Z]([A-Za-z0-9_]){0,254}'. Valid names start with an upper-case ASCII letter ('A'..'Z') followed by any combination of upper- or lower-case ASCII letters ('A'..'Z', and 'a'..'z'), numerals ('0'-'9') and '_', with a length limit of 255 characters. Update the "name" property in sushi-config.yaml.
