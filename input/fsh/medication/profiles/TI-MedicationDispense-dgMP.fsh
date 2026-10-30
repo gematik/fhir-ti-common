@@ -5,8 +5,8 @@ Title: "TI MedicationDispense dgMP"
 Description: "Defines the medication dispense resource for the Medication Service in the TI ecosystem."
 * insert Meta-With-Versioning
 // preserve the version
-* ^version = "1.4.0"
-* ^date = "2026-09-23"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * extension contains
@@ -56,6 +56,7 @@ Description: "Defines the medication dispense resource for the Medication Servic
 //   * text 0..1
 //   * text ^short = "Hier kann die Dosieranweisung in Form eines Freitextes abgebildet werden."
 //   * text ^definition = "Hier kann die Dosieranweisung in Form eines Freitextes abgebildet werden."
+* obeys ExtRequiresDosage-MD
 * dosageInstruction MS
 * dosageInstruction only DosageDE
   * ^short = "Hier werden Informationen zur Dosierung angegeben."
