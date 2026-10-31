@@ -30,7 +30,7 @@
 
 #### Medikationsprozess (dgMP)
 
-Keine neuen FHIR-Artefakte mit expliziter Version `1.5.0`.
+- Die Profile _TIMedicationRequestDgMP_, _TIMedicationDispenseDgMP_ und _TIMedicationStatementDgMP_ tragen nun die Constraints `RenderedRequiresMeta-MR`, `RenderedRequiresMeta-MD` bzw. `RenderedRequiresMeta-MS` aus dem Medication IG DE. Liegt die Extension _renderedDosageInstruction_ vor, muss auch die Extension _generatedDosageInstructionsMeta_ vorhanden sein.
 
 #### Systemverhalten
 
