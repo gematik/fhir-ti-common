@@ -5,8 +5,8 @@ Title: "TI MedicationStatement dgMP"
 Description: "Hält die Medikationsinformationen eines Patienten."
 * insert Meta-With-Versioning
 // preserve the version
-* ^version = "1.4.0"
-* ^date = "2026-09-23"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * extension contains
@@ -39,6 +39,8 @@ Description: "Hält die Medikationsinformationen eines Patienten."
     * obeys epa-datetime
   * end 0..1 MS
     * obeys epa-datetime
+
+* obeys ExtRequiresDosage-MS
 
 * dosage MS
 * dosage only DosageDgMP

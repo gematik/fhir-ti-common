@@ -5,8 +5,8 @@ Title: "TI MedicationRequest dgMP"
 Description: "Defines the medication request resource for the Medication Service in the TI ecosystem."
 * insert Meta-With-Versioning
 // preserve the version
-* ^version = "1.4.0"
-* ^date = "2026-09-23"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * identifier ^slicing.discriminator.type = #pattern
@@ -117,6 +117,8 @@ Description: "Defines the medication request resource for the Medication Service
   * text MS
   * text ^short = "Dispensing Note"
   * text ^definition = "Instructions to the pharmacy that go beyond the dosage information"
+
+* obeys ExtRequiresDosage-MR
 
 * dosageInstruction MS
 * dosageInstruction only DosageDgMP

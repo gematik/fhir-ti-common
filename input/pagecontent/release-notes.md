@@ -30,7 +30,7 @@
 
 #### Medikationsprozess (dgMP)
 
-Keine neuen FHIR-Artefakte mit expliziter Version `1.5.0`.
+- Die Profile _TIMedicationRequestDgMP_, _TIMedicationDispenseDgMP_ und _TIMedicationStatementDgMP_ tragen nun die Constraints `ExtRequiresDosage-MR`, `ExtRequiresDosage-MD` bzw. `ExtRequiresDosage-MS` aus dem Medication IG DE (DosageExtensionsRequireDosage). Liegt die Dosierungs-Extension _renderedDosageInstruction_ oder _generatedDosageInstructionsMeta_ vor, müssen den Profilen entsprechende Instanzen mindestens eine Dosierung enthalten.
 
 #### Systemverhalten
 
