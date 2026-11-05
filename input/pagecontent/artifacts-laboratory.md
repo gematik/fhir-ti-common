@@ -21,8 +21,6 @@
 {% capture laboratory-profiles %}
 StructureDefinition/ti-device-laboratory-specimen-subject,
 StructureDefinition/ti-device-laboratory-analyzer,
-StructureDefinition/ti-device-definition-laboratory-analyzer,
-StructureDefinition/ti-device-definition-specimen-subject,
 StructureDefinition/ti-service-request-laboratory,
 StructureDefinition/ti-observation-laboratory-study,
 StructureDefinition/ti-observation-laboratory-study-group,
