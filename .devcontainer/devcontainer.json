@@ -6,6 +6,7 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
+    "initializeCommand": "curl https://raw.githubusercontent.com/gematik/fhir-scripts/refs/heads/main/docker/devcontainer/Dockerfile -o ./.devcontainer/Dockerfile",
 	"postCreateCommand": "fhirscripts install --config-file",
 	"postStartCommand": "fhirscripts update",
 	"customizations": {
