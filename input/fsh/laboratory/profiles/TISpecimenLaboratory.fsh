@@ -91,16 +91,19 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
 * parent only Reference(TISpecimenLaboratory)
 * collection MS
   * ^definition = "Optionale Angaben zur Probengewinnung, dazu gehören: Zeitangabe, Methode der Probengewinnung, Entnahmeort, Angabe zum Nüchternstatus."
-  * extension MS
-  * extension[bodySite] MS
-    * ^definition = """
-    Es kann eine Körperstruktur mit Seitenangabe, weiterer Lokalisierung und Aussage zur Morphologie angegeben werden.\n
-    Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstelle gewonnen wird.
-    """
-    * ^short = "Körperstelle der Probenentnahme"
-    * valueReference MS
-      * insert OnlyReferenceMS
-    * valueReference only Reference(TIBodyStructure)
+  // Since EU Laboratory 2.1.0 the reference to the BodyStructure is carried by the R5 cross-version
+  // extension on Specimen.collection.bodySite instead of the core bodySite extension on Specimen.collection.
+  * bodySite MS
+    * extension MS
+    * extension[bodySite] MS
+      * ^definition = """
+      Es kann eine Körperstruktur mit Seitenangabe, weiterer Lokalisierung und Aussage zur Morphologie angegeben werden.\n
+      Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstelle gewonnen wird.
+      """
+      * ^short = "Körperstelle der Probenentnahme"
+      * valueReference MS
+        * insert OnlyReferenceMS
+      * valueReference only Reference(TIBodyStructure)
   * collector MS
     * ^definition = "Person, welche die Probe entnimmt."
     * insert ReferenceMS
