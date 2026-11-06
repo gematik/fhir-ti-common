@@ -12,8 +12,8 @@ Usage: #example
   * type.coding = $cs-v2-0203|5.0.0#UDI "Universal Device Identifier"
   * system = "http://goodcare.org/devices/id"
   * value = "345675"
-* definition = Reference(DeviceDefinition/25068c1f-a497-4cfe-b4e7-4a7026adf1e6)
 * udiCarrier.deviceIdentifier = "example"
+* manufacturer = "Herstellende Einrichtung"
 * distinctIdentifier = "example"
 * manufactureDate = "2021-11-15T16:55:00+01:00"
 * expirationDate = "2021-11-15T16:55:00+01:00"
