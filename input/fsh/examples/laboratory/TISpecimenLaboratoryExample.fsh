@@ -24,7 +24,7 @@ Description: "Maximale Beispielinstanz für das Profil TISpecimenLaboratory"
 * receivedTime = "2021-11-15T16:55:00+01:00"
 // * parent = Reference(Specimen/eb7fbea2-95bd-4618-b38d-ce69cde79726)
 * collection
-  * extension[bodySite].valueReference = Reference(BodyStructure/6894b106-8a91-4cfb-9826-443aed21c98b)
+  * bodySite.extension[bodySite].valueReference = Reference(BodyStructure/6894b106-8a91-4cfb-9826-443aed21c98b)
   * collector = Reference(PractitionerRole/a424d6c6-de52-443e-a9b2-5240d3b9401a)
   * collectedDateTime = "2023-05-03"
 //  * collectedPeriod
