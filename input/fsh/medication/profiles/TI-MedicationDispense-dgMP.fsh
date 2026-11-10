@@ -58,7 +58,7 @@ Description: "Defines the medication dispense resource for the Medication Servic
 //   * text ^definition = "Hier kann die Dosieranweisung in Form eines Freitextes abgebildet werden."
 * obeys ExtRequiresDosage-MD
 * dosageInstruction MS
-* dosageInstruction only DosageDE
+* dosageInstruction only DosageDgMP
   * ^short = "Hier werden Informationen zur Dosierung angegeben."
   * ^definition = "Hier werden Informationen zur Dosierung angegeben."
 
