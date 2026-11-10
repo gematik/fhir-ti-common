@@ -9,9 +9,11 @@ Description: "Maximale Beispielinstanz für das Profil TIServiceRequestLaborator
 //   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laborauftrag-Information</div>"
 * identifier[orderNumberSender]
   * system = "http://testsystem.de"
+  * type = $ti-cs-laboratory-identificator#AE "Auftragsnummer des Einsenders"
   * value = "20211115-127"
 * identifier[additionalRequestIdentification]
   * system = "http://testsystem.de"
+  * type = $ti-cs-laboratory-identificator#NI "Nachforderungsidentifikation"
   * value = "20211115-127"
 * status = #completed
 * intent = #order

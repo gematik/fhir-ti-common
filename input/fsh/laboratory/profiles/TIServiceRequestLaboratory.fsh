@@ -26,7 +26,7 @@ Description: "Administrative und für die Befundung klinisch relevante Teilinfor
   * type 1.. MS
     * coding 1..1
       * version MS
-  * type = $ti-cs-laboratory-identificator#AE "Auftragsnummer des Einsenders"
+  * type = $ti-cs-laboratory-identificator#AE
   * system 1.. MS
   * value 1.. MS
 * insert Coding(identifier[orderNumberSender].type.coding)
@@ -36,7 +36,7 @@ Description: "Administrative und für die Befundung klinisch relevante Teilinfor
   * type 1.. MS
     * coding 1..1 MS
       * version MS
-  * type = $ti-cs-laboratory-identificator#NI "Nachforderungsidentifikation"
+  * type = $ti-cs-laboratory-identificator#NI
   * system 1.. MS
   * value 1.. MS
 * insert Coding(identifier[additionalRequestIdentification].type.coding)

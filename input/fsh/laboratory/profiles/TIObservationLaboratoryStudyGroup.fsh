@@ -60,7 +60,7 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
   * coding 1..1
     * version MS
 * insert Coding(code.coding)
-* code = $ti-cs-laboratory-study-group#laboruntersuchungsgruppe "Laboruntersuchungsgruppe"
+* code = $ti-cs-laboratory-study-group#laboruntersuchungsgruppe
 * insert SubjectEu(subject)
 * insert PerformerEu
 * performer
