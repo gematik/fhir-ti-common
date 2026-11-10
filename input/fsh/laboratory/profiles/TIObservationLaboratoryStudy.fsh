@@ -187,15 +187,15 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
 * effective[x] MS
 * effectiveDateTime MS
   * ^definition = """
-  Der Klinische Bezugszeitpunkt ist wichtig, um die Laboruntersuchung im Zeitverlauf einordnen zu können.\n
-  Die Redundanz ist beabsichtigt. Es geht darum, einen Zeitpunkt ermitteln zu können, der für Studien-Statistiken als vergleichsrelevant eingestuft wird. Da im klinischen Alltag nicht sicher gestellt ist, dass grundsätzlich und immer der Zeitpunkt der Materialentnahme auch dokumentiert wird, wurde dieser Algorithmus festgelegt, um die Dokumentation eines statistischen relevanten Zeitpunktes zu garantieren:\n
-  * WENN der Entnahmezeitpunkt des Probenmaterials angeben ist, so gilt der Entnahmezeitpunkt;
-  * WENN der Sammelzeitraum-bis angegeben ist, so gilt der bis-Zeitpunkt;
-  * SONST gilt (hilfsweise) der Laboreingangszeitpunkt: Zeitpunkt des Eingangs der Probe im Labor.
+  Der Klinische Bezugszeitpunkt ist wichtig, um die Laboruntersuchung im Zeitverlauf einordnen zu können. Die Redundanz ist beabsichtigt. Es geht darum, einen Zeitpunkt ermitteln zu können, der für Studien-Statistiken oder vergleichende Ansichten als vergleichsrelevant eingestuft wird. Da im klinischen Alltag nicht sichergestellt ist, dass grundsätzlich und immer der Zeitpunkt der Materialentnahme auch dokumentiert wird, wurde dieser Algorithmus festgelegt, um die Dokumentation eines statistischen relevanten Zeitpunktes zu garantieren:\n
+  * WENN Probengewinnung / Zeitpunkt (Specimen.collection.collected[x]:collectedDateTime) angeben ist, so wird dieser als \"Klinischer Bezugszeitpunkt\" übernommen.
+  * WENN Probengewinnung / Zeitraum (Specimen.collection.collected[x]:collectedPeriod.end) angeben ist, so wird der bis-Zeitpunkt als \"Klinischer Bezugszeitpunkt\" übernommen.
+  * WENN die Zeitangabe zur Probengewinnung fehlt, so wird der Probeneingangszeitpunkt (Specimen.receivedTime) als \"Klinischer Bezugszeitpunkt\" übernommen.
+  * SONST, wenn keine Probe referenziert werden kann, wird der Dokumentationszeitpunkt der Laboruntersuchung (Observation.issued) als \"Klinischer Bezugszeitpunkt\" übernommen.
   """
   * ^short = "Klinischer Bezugszeitpunkt"
 * issued MS
-  * ^definition = "Zeitstempel oder Zeitangabe zur Dokumentation der einzelnen Laboruntersuchung."
+  * ^definition = "Zeitstempel oder Zeitangabe zur Dokumentation der einzelnen Laboruntersuchung. Der Messzeitpunkt / Berechnungszeitpunkt wird hier angegeben."
   * ^short = "Dokumentationszeitpunkt"
 * insert PerformerEu
 * performer
