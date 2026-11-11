@@ -31,6 +31,8 @@
 #### Medikationsprozess (dgMP)
 
 - Die Profile _TIMedicationRequestDgMP_, _TIMedicationDispenseDgMP_ und _TIMedicationStatementDgMP_ tragen nun die Constraints `ExtRequiresDosage-MR`, `ExtRequiresDosage-MD` bzw. `ExtRequiresDosage-MS` aus dem Medication IG DE (DosageExtensionsRequireDosage). Liegt die Dosierungs-Extension _renderedDosageInstruction_ oder _generatedDosageInstructionsMeta_ vor, müssen den Profilen entsprechende Instanzen mindestens eine Dosierung enthalten.
+- In _TIMedicationDispenseDgMP_ wird die Dosierung nun als _DosageDgMP_ statt als _DosageDE_ abgebildet. Damit gelten für die Abgabe dieselben Dosierungs-Vorgaben des Medication IG DE wie für Verordnung und Medikationsinformation.
+- In _TIMedicationDgMP_ und _TIMedicationPZNIngredientDgMP_ wurde die Extension _MedicationIngredientDarreichungsformExtension_ an _Medication.ingredient_ wieder als Must Support (MS) gekennzeichnet. Das Flag war bereits in den Versionen 1.3.1 bis 1.3.5 des Medication IG gesetzt und war bei der Überführung des Profils nach _TIMedicationDgMP_ entfallen. Ihr Wert fließt in die Hash-Berechnung des _EPAMedicationUniqueIdentifier_ ein.
 
 #### Systemverhalten
 

@@ -164,7 +164,7 @@ RuleSet: TIMedicationElements
   // * ^short = "Aktive oder inaktive Bestandteile des Medikaments, einschließlich Wirkstoffe sowie einzelner Arzneimittel in Kombipackungen."
   * ^short = "Active or inactive ingredients of the medication, including pharmaceutical substances as well as individual medicinal products in combination packs."
   * extension contains
-      MedicationIngredientDarreichungsformExtension named darreichungsform 0..1
+      MedicationIngredientDarreichungsformExtension named darreichungsform 0..1 MS
   * item[x] 1..1 MS
   * itemCodeableConcept MS
     // * ^short = "Kodierte Beschreibung des Wirkstoffs oder der Komponente."
