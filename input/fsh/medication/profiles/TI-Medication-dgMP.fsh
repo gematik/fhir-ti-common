@@ -209,7 +209,7 @@ RuleSet: TIMedicationElements
   * strength MS
     * ^short = "Strength"
     * extension contains
-        MedicationIngredientAmountExtensions named amountText 0..1
+        MedicationIngredientAmountExtensions named amountText 0..1 MS
     * extension[amountText]
       * value[x] MS
       * valueString MS
