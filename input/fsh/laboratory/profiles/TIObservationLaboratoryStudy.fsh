@@ -168,7 +168,7 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   * text MS
     * ^definition = "Die Freitext-Bezeichnung erlaubt es, in den verwendenden/verarbeitenden Systemen den Einrichtungs-spezifischen bzw. Verwender-spezifischen Bezeichner für eine Laboruntersuchung weiterhin zu verwenden."
     * ^short = "Verwender-spezifische Bezeichnung für die Laboruntersuchung"
-* insert SubjectEu(subject)
+* insert SubjectEu
 * effective[x] MS
 * effectiveDateTime MS
   * ^definition = """
@@ -314,8 +314,7 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   Richtgrenzen oder Bewertungsgrenzen zu einer Laboruntersuchung\n
   * werden herangezogen für die Beurteilung und Einordnung von Messergebnissen
   * sind laborärztliche Entscheidungsgrenzen (mit ggf. juristischer Relevanz)
-  * sind ärztliche Entscheidungshilfen im klinischen Allta\n\n
-  Disclaimer: FHIR® definiert aktuell nur inklusive Richtgrenzen. Für die Praxistauglichkeit besteht aber die Anforderung, auch exklusive Richtgrenzen abbilden zu können. Diese Thematik wurde schon bei HL7® FHIR® platziert, es gibt aber noch keine abschließende Festlegung dazu. Im Informationsmodell sind beide Optionen bereits dargestellt, um diese Anforderung sichtbar zu machen.
+  * sind ärztliche Entscheidungshilfen im klinischen Alltag
   """
   * extension MS
   * extension contains
@@ -347,10 +346,30 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
         * code MS
         * display MS
       * text MS
+  * modifierExtension MS
+  * modifierExtension[lowComparator] MS
+    * ^definition = "Hier kann ein Komparator zur Angabe einer exklusiven unteren Richtgrenze angegeben werden."
+    * ^short = "Komparator exklusive untere Richtgrenze"
+    * valueCode MS
+      * ^definition = """
+      Bei der unteren Richtgrenze sind mögliche Werte für den Komparator:\n
+      >= (größer oder gleich)
+      > (größer)
+      """
+      * ^short = "Komparator-Code: >= (größer oder gleich) oder > (größer)"
+  * modifierExtension[highComparator] MS
+    * ^definition = "Hier kann ein Komparator zur Angabe einer exklusiven oberen Richtgrenze angegeben werden."
+    * ^short = "Komparator exklusive obere Richtgrenze"
+    * valueCode MS
+      * ^definition = """
+      Bei der oberen Richtgrenze sind mögliche Werte für den Komparator:\n
+      < (kleiner)
+      <= (kleiner oder gleich)
+      """
+      * ^short = "Komparator-Code: < (kleiner) oder <= (kleiner oder gleich)"
   * low MS
     * ^definition = """
     Die untere Richtgrenze ist eine quantitative Grenze. Datentyp und Einheit entsprechen denen beim quantitativen Messergebnis. Unter Eigenschaften sind mögliche Werte gelistet, die in dieses Feld hineinpassen könnten, beispielsweise ein Grenzwert aus dem LDT. Bei diesen Beispielen aus dem LDT gilt es zu beachten, dass die Grenzwerte nur für eine Richtgrenze vom Typ \"normal\" gelten.\n
-    Disclaimer: FHIR® definiert aktuell nur inklusive Richtgrenzen. Für die Praxistauglichkeit besteht aber die Anforderung, auch exklusive Richtgrenzen abbilden zu können. Diese Thematik wurde schon bei HL7® FHIR® platziert, es gibt aber noch keine abschließende Festlegung dazu. Im Informationsmodell sind beide Optionen bereits dargestellt, um diese Anforderung sichtbar zu machen.
     """
     * value MS
       * ^definition = "Numerischer Wert für eine gemessene Größe, eine Zahl mit optionalen Dezimalstellen."
@@ -364,7 +383,6 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   * high MS
     * ^definition = """
     Die obere Richtgrenze ist eine quantitative Grenze. Datentyp und Einheit entsprechen denen beim quantitativen Messergebnis. Unter Eigenschaften sind mögliche Werte gelistet, die in dieses Feld hineinpassen könnten, beispielsweise ein Grenzwert aus dem LDT. Bei diesen Beispielen aus dem LDT gilt es zu beachten, dass die Grenzwerte nur für eine Richtgrenze vom Typ \"normal\" gelten.\n
-    Disclaimer: FHIR® definiert aktuell nur inklusive Richtgrenzen. Für die Praxistauglichkeit besteht aber die Anforderung, auch exklusive Richtgrenzen abbilden zu können. Diese Thematik wurde schon bei HL7® FHIR® platziert, es gibt aber noch keine abschließende Festlegung dazu. Im Informationsmodell sind beide Optionen bereits dargestellt, um diese Anforderung sichtbar zu machen.
     """
     * value MS
       * ^definition = "Numerischer Wert für eine gemessene Größe, eine Zahl mit optionalen Dezimalstellen."

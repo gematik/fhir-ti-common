@@ -41,23 +41,18 @@ Description: "Abbildung, die zu einer Laboruntersuchung oder einer Untersuchungs
     * ^patternCoding.system = $cs-sct
   * text MS
     * ^definition = "Freitextbezeichnung für den Typ des Untersuchungsbildes."
-* insert SubjectEu(subject)
+* insert SubjectEu
 * effective[x] MS
 * effectiveDateTime MS
   * ^definition = "Gültigkeitszeitpunkt für den Untersuchungsbild-Anhang"
 * insert PerformerEu
 * performer 1..
-* valueQuantity ..0
-* valueString ..0
-* valueRange ..0
-* valueRatio ..0
-* valueTime ..0
-* valueDateTime ..0
-* valuePeriod ..0
-* valueCodeableConcept ..0
-* valueBoolean ..0
-* valueInteger ..0
-* value[x] ..0
+// value[x] is prohibited. The max is set with a caret rule instead of "* value[x] ..0" (plus one "..0" per type slice),
+// because SUSHI would then set every type slice to 0..0 as well: the snapshot generator removes the type of each
+// prohibited type slice from value[x], and since EU Laboratory 2.1.0 slices every value[x] type, value[x] would be left
+// without any type (IG Publisher error SD_NO_TYPES_OR_CONTENTREF). The type slices inherited from EU stay 0..1 in the
+// snapshot but cannot be used, because value[x] itself is 0..0.
+* value[x] ^max = "0"
 * note MS
   * ^definition = "Hier werden ergänzende Angaben zum Bild-Anhang gemacht."
   * text 1.. MS

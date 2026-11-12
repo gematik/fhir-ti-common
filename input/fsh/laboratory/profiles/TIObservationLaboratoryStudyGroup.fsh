@@ -61,7 +61,7 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
     * version MS
 * insert Coding(code.coding)
 * code = $ti-cs-laboratory-study-group#laboruntersuchungsgruppe
-* insert SubjectEu(subject)
+* insert SubjectEu
 * insert PerformerEu
 * performer
   * ^short = "Durchführendes Labor"
@@ -69,17 +69,12 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
   Hier wird das durchführende Labor in Bezug auf die Untersuchungsgruppe benannt.\n
   Zum Erhalt der europäischen Interoperabilität, orientiert an der Veröffentlichung \"HL7 Europe Laboratory Report\" wird die durchführende Person (\"performer\" im FHIR®-Profil \"Observation\") im Informationsmodell bei der Untersuchungsgruppe mitgeführt. Bisher liegt im Rahmen der Spezifizierungsarbeit zum strukturierten Laborbefund keine medizinisch-fachliche Begründung vor, dass diese Struktur befüllt werden muss.
   """
-* valueQuantity ..0
-* valueString ..0
-* valueRange ..0
-* valueRatio ..0
-* valueTime ..0
-* valueDateTime ..0
-* valuePeriod ..0
-* valueCodeableConcept ..0
-* valueBoolean ..0
-* valueInteger ..0
-* value[x] ..0
+// value[x] is prohibited. The max is set with a caret rule instead of "* value[x] ..0" (plus one "..0" per type slice),
+// because SUSHI would then set every type slice to 0..0 as well: the snapshot generator removes the type of each
+// prohibited type slice from value[x], and since EU Laboratory 2.1.0 slices every value[x] type, value[x] would be left
+// without any type (IG Publisher error SD_NO_TYPES_OR_CONTENTREF). The type slices inherited from EU stay 0..1 in the
+// snapshot but cannot be used, because value[x] itself is 0..0.
+* value[x] ^max = "0"
 * dataAbsentReason ..0
 * interpretation MS
   * ^definition = "Medizinisch relevante Bewertung zur Untersuchungsgruppe. Die Interpretation kann als Code und/oder Text vorliegen. Die Angabe einer Interpretation ist optional, bei nicht vorhandener Klassifikation wird hier nichts übermittelt. Empfehlung: eine dokumentierte Interpretation sollte mindestens einen Interpretationscode enthalten."
