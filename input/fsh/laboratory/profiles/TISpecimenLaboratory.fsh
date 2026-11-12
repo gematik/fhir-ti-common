@@ -82,7 +82,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
     * ersatzweise, wenn gar keine passende Codierung zugeordnet werden kann
     * wenn zusätzlich eine Freitext-Bezeichnung aus der LDT-Kommunikation übernommen werden soll.
     """
-* insert SubjectEu(subject)
+* insert SubjectEu
 * receivedTime MS
   * ^definition = "Zeitpunkt des Eingangs der Probe im Labor. Dieser Zeitpunkt sollte nach Möglichkeit minutengenau angegeben werden. Im klinischen Alltag ist die minutengenaue Erfassung nicht immer realistisch."
 * parent MS

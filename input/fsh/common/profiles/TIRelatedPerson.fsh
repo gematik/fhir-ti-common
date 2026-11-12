@@ -17,7 +17,7 @@ Description: "Dieses Profil bildet eine Kontakt- oder Bezugsperson ab."
   * ^definition = "Hier werden weitere Informationen, beispielsweise die Pflegebedürftigkeitssituation der Kontaktperson, dargestellt. Wenn die Kontaktperson auch gesetzlich betreuende Person ist, kann hier beschrieben werden, für welchen Bereich sie bevollmächtigt ist."
   * valueAnnotation MS
     * insert AnnotationMS
-* insert SubjectEu(patient)
+* insert PatientEu
 * relationship MS
   * ^definition = "In diesem Element werden Angaben über die Beziehung der Kontaktperson zur/zum Patient:in gemacht. Diese werden als codierte Information und/oder als Freitext angegeben."
   * insert CodeableConceptMS

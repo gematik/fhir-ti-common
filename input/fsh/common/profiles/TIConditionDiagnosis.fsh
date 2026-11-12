@@ -65,7 +65,9 @@ ORPHANET ist eine Initiative der Europäischen Union mit französischen Wurzeln 
     * system = $cs-orphanet (exactly)
   * text MS
     * ^definition = "Hier wird eine Diagnose als Freitext eingetragen."
-* insert SubjectEu(subject)
+
+* subject 1..1 MS
+* subject only Reference(TIPatient)
 
 * recorder only Reference(TIPractitionerRole or TIPractitioner  or TIPatient or RelatedPerson)
   * insert OnlyReferenceMS

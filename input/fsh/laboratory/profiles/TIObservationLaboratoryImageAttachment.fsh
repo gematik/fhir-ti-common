@@ -41,7 +41,7 @@ Description: "Abbildung, die zu einer Laboruntersuchung oder einer Untersuchungs
     * ^patternCoding.system = $cs-sct
   * text MS
     * ^definition = "Freitextbezeichnung für den Typ des Untersuchungsbildes."
-* insert SubjectEu(subject)
+* insert SubjectEu
 * effective[x] MS
 * effectiveDateTime MS
   * ^definition = "Gültigkeitszeitpunkt für den Untersuchungsbild-Anhang"
