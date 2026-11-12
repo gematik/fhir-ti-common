@@ -41,7 +41,9 @@ Description: "Hier wird ein Dokumentanhang abgebildet."
   * text MS
     * ^definition = "Hier wird ein Freitext eingetragen."
 * insert Coding(category.coding[xds])
-* insert SubjectEu(subject)
+* subject 1..1 MS
+* subject only Reference(TIPatient or Group or Device)
+  * insert ReferenceMS
 * author MS
   * ^definition = "Hier werden Personen, Einrichtungen oder Geräte, die das Dokument erzeugt haben, referenziert."
   * insert OnlyReferenceMS

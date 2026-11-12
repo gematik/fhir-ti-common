@@ -168,7 +168,7 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   * text MS
     * ^definition = "Die Freitext-Bezeichnung erlaubt es, in den verwendenden/verarbeitenden Systemen den Einrichtungs-spezifischen bzw. Verwender-spezifischen Bezeichner für eine Laboruntersuchung weiterhin zu verwenden."
     * ^short = "Verwender-spezifische Bezeichnung für die Laboruntersuchung"
-* insert SubjectEu(subject)
+* insert SubjectEu
 * effective[x] MS
 * effectiveDateTime MS
   * ^definition = """

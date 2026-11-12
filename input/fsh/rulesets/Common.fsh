@@ -9,18 +9,21 @@ RuleSet: Coding(path)
 * {path}.code 1..1 MS
 * {path}.display 1..1 MS
 
-
 RuleSet: Subject(element-name)
 * {element-name} 1..1 MS
 * {element-name} only Reference(Patient)
   * identifier 1..1 MS
   * identifier only IdentifierKvid10
 
-RuleSet: SubjectEu(element-name)
-* {element-name} 1..1 MS
-* {element-name} only Reference(TIPatient)
+RuleSet: SubjectEu
+* subject 1..1 MS
+* subject only Reference(TIPatient or Group or Location or Device)
   * insert ReferenceMS
 
+RuleSet: PatientEu
+* patient 1..1 MS
+* patient only Reference(TIPatient)
+  * insert ReferenceMS
 
 RuleSet: ObservationEffectiveDateTime
 * effective[x] only dateTime
@@ -34,7 +37,13 @@ RuleSet: ObservationEffectiveDateTime
 RuleSet: PerformerEu
 * performer MS
   * ^definition = "Hier wird die behandelnde Person/Einrichtung referenziert, die die Beobachtung durchgeführt hat."
-  * insert ReferenceMS
+  * reference MS
+  * identifier MS
+* performer only Reference(TIOrganization or
+    RelatedPerson or
+    TIPatient or
+    TIPractitioner or
+    TIPractitionerRole)
 
 RuleSet: Performer
 * performer ..1 MS
@@ -48,12 +57,6 @@ RuleSet: Performer
     TIPatient or
     TIPractitioner or
     TIPractitionerRole)
-// * performer only Reference(OrganizationEuCore or
-//     RelatedPerson or
-//     PatientEuCore or
-//     PractitionerEuCore or
-//     PractitionerRoleEuCore)
-
 
 RuleSet: Note
 * note MS

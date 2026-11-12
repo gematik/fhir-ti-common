@@ -58,7 +58,7 @@ Die im Laborauftrag formulierte Dringlichkeit von Laboruntersuchungen soll im La
   * text MS
     * ^definition = "Als Freitext formulierte Anforderung aus dem Laborauftrag. Das kann beispielsweise aus Muster 10 übernommen sein oder über den Labordatentransfer (LDT) übermittelt worden sein."
     * ^short = "Freitext Anforderung aus dem Laborauftrag"
-* insert SubjectEu(subject)
+* insert SubjectEu
 * authoredOn MS
   * ^definition = "Zeitpunkt, zu dem der Einsender den Auftrag erstellt hat."
   * ^short = "Auftragszeitpunkt"
