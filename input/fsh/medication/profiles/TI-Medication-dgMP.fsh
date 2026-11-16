@@ -126,14 +126,14 @@ RuleSet: TIMedicationElements
   //   * code 1..1 MS
   //   * version MS
   //   * display MS
-  * coding[kbvDarreichungsform] from $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM (required)
+  * coding[kbvDarreichungsform]
     * ^comment = "KBV updates its \"Schüsseltabellen\" package more often than ePA versions get released. However, the eRezept clients and eRezept service take over new KBV package versions quickly after release and thus hands them over to the ePA Medication Service. Since the Medication Service is potentially fixed onto an older version of the KBV package, it would reject the forwarded eRezept data. In the future, the Medication Service will be enabled to update to the latest KBV package versions without the need for a new ePA release.
     Since the eRezept *does* check the codes against the latest KBV package version, the Medication Service will not receive any \"invalid\" codes and clients can rely on the Medication Service data conforming to the latest KBV package."
     * ^patternCoding.system = $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM
     * system 1..1 MS
     * code 1..1 MS
     * display MS
-  * coding[ifaDarreichungsform] from $cs-ifa-medication-darreichungsform (required)
+  * coding[ifaDarreichungsform]
     * ^patternCoding.system = $cs-ifa-medication-darreichungsform
     * system 1..1 MS
     * code 1..1 MS
