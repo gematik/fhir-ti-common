@@ -319,8 +319,8 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   * extension MS
   * extension contains
     SourceReferenceRangeExtension named sourceReferenceRange 0..1 MS and
-    NoLinearReferenceRangeLaboratoryExtension named noLinearReferenceRange 0..1 MS
-  * extension[noLinearReferenceRange] MS
+    NonLinearReferenceRangeLaboratoryExtension named nonLinearReferenceRange 0..1 MS
+  * extension[nonLinearReferenceRange] MS
     * ^definition = "Kennzeichnung, dass das numerische Ergebnis aus einem NICHT-LINEAREN Wertebereich stammt. Beispiele hierfür sind ganzzahlige Scores oder Titer-Reihen. Umgangssprachlich wird auch von sog. \"semiquantitativen\" Ergebnissen gesprochen. Seit LOINC® Version 2.76 ist das anhand des LOINC®-Codes offiziell definiert und ablesbar mit Scale = \"SemiQn\". Das Kennzeichen ist optional und wird vom messenden Labor gesetzt."
     * ^short = "Kennzeichen Nicht-linearer Referenzbereich"
     * value[x] MS

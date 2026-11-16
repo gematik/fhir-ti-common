@@ -1,5 +1,5 @@
-Extension: NoLinearReferenceRangeLaboratoryExtension
-Id: no-linear-reference-range-laboratory-extension
+Extension: NonLinearReferenceRangeLaboratoryExtension
+Id: non-linear-reference-range-laboratory-extension
 Title: "Kennzeichen Nicht-linearer Wertebereich"
 Description: "Diese Extension kennzeichnet, dass es sich um einen nicht-linearen Wertebereich handelt."
 Context: Observation.referenceRange

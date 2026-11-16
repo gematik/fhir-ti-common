@@ -62,7 +62,7 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
   * extension[sourceReferenceRange].valueCodeableConcept
     * coding = $cs-sct-de-20260515#260394003 "Normal limits (qualifier value)"
     * text = "note"
-  * extension[noLinearReferenceRange].valueBoolean = true
+  * extension[nonLinearReferenceRange].valueBoolean = true
   * low = 1 $cs-ucum#1 "1"
   * high = 50 $cs-ucum#1 "1"
   * type
