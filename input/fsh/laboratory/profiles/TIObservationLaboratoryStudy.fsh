@@ -29,6 +29,18 @@ Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechn
   AssociationServiceLaboratoryExtension named associationService 0..1 MS and
   ZlogLaboratoryExtension named zlogValue 0..1 MS and
   AlternativeResultLaboratoryExtension named alternativeResult 0.. MS
+* extension[statusReason] MS
+  * ^definition = """
+ Hier wird der Grund für die Wahl des aktuellen Status der Einzeluntersuchung angegeben. Diese Angabe ist insbesondere relevant, wenn die Einzeluntersuchung widerrufen oder abgebrochen wurde. Auch bei Überarbeitungen kann die Angabe des Grunds hilfreich sein. 
+
+ Beispiel:
+ Status = Fehleingabe
+ Statusbegründung Laboruntersuchung= schwerwiegender Tippfehler im Messergebnis
+ """
+  * ^short = "Statusbegründung Einzeluntersuchung"
+* valueCodeableConcept MS
+  * text MS
+    * ^definition = "Hier wird der Grund zum aktuellen Status der Einzeluntersuchung als Freitextinformation angegeben."
 * extension[testProfile]
   * ^definition = "Unter Test-Profil werden zusammengehörige Labortests oder eine Gruppe von Einzeluntersuchungen aus einem Verfahren zusammengefasst."
   * ^short = "Bezeichnung für fachlich-medizinischen Bezug, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu TIObservationLaboratoryStudyGroup.extension:testProfile"
