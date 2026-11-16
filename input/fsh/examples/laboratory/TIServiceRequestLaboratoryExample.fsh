@@ -7,6 +7,7 @@ Description: "Maximale Beispielinstanz für das Profil TIServiceRequestLaborator
 // * text
 //   * status = #extensions
 //   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laborauftrag-Information</div>"
+* extension[geneticTestingConsent].valueBoolean = false
 * identifier[orderNumberSender]
   * system = "http://testsystem.de"
   * type = $ti-cs-laboratory-identificator#AE "Auftragsnummer des Einsenders"
