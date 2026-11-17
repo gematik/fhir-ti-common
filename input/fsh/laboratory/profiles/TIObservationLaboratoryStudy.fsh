@@ -125,14 +125,17 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   * extension[referenceRange] MS
     * ^definition = "Richtgrenzen für das quantitative Ergebnis mit Alternativeinheit."
     * ^short = "Richtgrenzen für Alternativeinheit"
-    * valueRange MS
-      * low MS
+    * extension[low] MS
+      * valueQuantity MS
         * value MS
+        * comparator MS
         * unit MS
         * system MS
         * code MS
-      * high MS
+    * extension[high] MS
+      * valueQuantity MS
         * value MS
+        * comparator MS
         * unit MS
         * system MS
         * code MS

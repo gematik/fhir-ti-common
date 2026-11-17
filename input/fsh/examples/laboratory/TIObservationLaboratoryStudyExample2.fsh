@@ -19,9 +19,9 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
   * extension[value].valueRatio
     * numerator = 6.5 $cs-ucum#mg/dL "mg/dL"
     * denominator = 8.5 $cs-ucum#mg/dL "mg/dL"
-  * extension[referenceRange].valueRange
-    * low = 3.0 $cs-ucum#mg/dL "mg/dL"
-    * high = 10.0 $cs-ucum#mg/dL "mg/dL"
+  * extension[referenceRange]
+    * extension[low].valueQuantity = 3.0 $cs-ucum#mg/dL "mg/dL"
+    * extension[high].valueQuantity = 10.0 $cs-ucum#mg/dL "mg/dL"
   * extension[zlog].valueDecimal = 2.00
 * identifier
   * type.coding = $cs-v2-0203|5.0.0#OBI "Observation Instance Identifier"
