@@ -106,7 +106,7 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
     * ^slicing.rules = #open
   * extension contains SortingNumberExtension named sortingNumberResult 0..1 MS
   * extension[sortingNumberResult]
-    * ^definition = "Laboruntersuchungen werden innerhalb einer Gruppe grundsätzlich sortiert. Die mit dem Datenstrom mitgegebenen Sortiernummern sind als Standardsortierung gedacht. Die Standardsortierung legt das Befund-erstellende Labor fest. Verwender können in Primärsystemen zusätzlich interaktiv auch anders sortieren, wenn das Primärsystem solche Funktionen anbietet."
+    * ^definition = "Hier wird eine Sortiernummer angegeben mit der Laboruntersuchungen innerhalb einer Gruppe sortiert werden."
     * ^short = "Sortiernummer Laboruntersuchung innerhalb der Untersuchungsgruppe"
     * value[x] MS
     * valuePositiveInt MS
