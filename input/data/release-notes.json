@@ -102,6 +102,17 @@
                     "diff": {}
                 },
                 {
+                    "title": "ETag je Instanzversion im _history-Bundle",
+                    "key": "IG-TI58182JX4",
+                    "actor": [],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "MAY",
+                    "path": "general-principles.html",
+                    "diff": {}
+                },
+                {
                     "title": "Ablehnung schreibender Anfragen bei Entstehen hängender Referenzen",
                     "key": "IG-TI61238TMT",
                     "actor": [

@@ -2412,6 +2412,16 @@
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/fhir-format.html#IG-TI57083QMG"
         },
         {
+            "key": "IG-TI58182JX4",
+            "title": "ETag je Instanzversion im _history-Bundle",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle für jede Version einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/\"&lt;versionId&gt;\"</i>, z. B. <i>W/\"2\"</i>) ausweisen.",
+            "conformance": "MAY",
+            "characteristics": [],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI58182JX4"
+        },
+        {
             "key": "IG-TI59271UPX",
             "title": "FHIR-Formatunterstützung JSON",
             "version": 0,

@@ -299,6 +299,10 @@ Funktionalität und Verhalten:
     </ul>
 </requirement>
 
+<requirement conformance="MAY" key="IG-TI58182JX4" title="ETag je Instanzversion im _history-Bundle" version="0">
+    Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle für jede Version einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/"&lt;versionId&gt;"</i>, z. B. <i>W/"2"</i>) ausweisen.
+</requirement>
+
 **Hinweis:**
 
 Die in <i>Bundle.entry.request.method</i> und <i>Bundle.entry.request.url</i> abgebildete Interaktion ist die HTTP-äquivalente Repräsentation der internen Persistenz des FHIR Data Service. Sie muss nicht der tatsächlich aufgerufenen fachlichen FHIR-Operation entsprechen.

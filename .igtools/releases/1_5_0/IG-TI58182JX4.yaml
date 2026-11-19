@@ -1,0 +1,16 @@
+actor: []
+conformance: MAY
+content_hash: a311d0c4af3c7f355468f7e0f6743e25b5bb211316c38225cbc99c0613b29010
+created: '2026-11-19T15:51:29.580754'
+date: '2026-11-19T15:51:29.580777'
+key: IG-TI58182JX4
+modified: '2026-11-19T15:51:29.580775'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures: {}
+text: Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle für jede Version
+  einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/"&lt;versionId&gt;"</i>,
+  z. B. <i>W/"2"</i>) ausweisen.
+title: ETag je Instanzversion im _history-Bundle
+version: 0
