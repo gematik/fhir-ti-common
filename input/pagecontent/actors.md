@@ -1,3 +1,8 @@
+<div class="stu-note" style="width: 66%; margin-bottom: 20px;">
+  Die Seite <i>Akteure und Obligations</i> hat in diesem Release informativen Status. Sie zeigt, wie grundlegende Akteure und ihre Obligations auf Basis von TI Common beschrieben werden können.
+</div>
+
+
 In der TI greifen unterschiedliche Systeme auf FHIR-Schnittstellen zu oder stellen diese bereit. Viele Anforderungen gelten dabei für mehrere Systemtypen. Anforderungen an einen TI Client können beispielsweise sowohl für ein Primärsystem als auch für ein Frontend des Versicherten oder eine DiGA gelten.
 
 TI Common definiert dafür gemeinsame Akteure als `ActorDefinition`-Instanzen. Obligations können diesen Akteuren zugeordnet und dadurch für verschiedene Systemtypen wiederverwendet werden.
