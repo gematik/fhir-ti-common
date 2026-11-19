@@ -10,6 +10,15 @@ Description: "Administrative und für die Befundung klinisch relevante Teilinfor
 * ^date = "2026-12-08"
 * ^status = #active
 
+* extension contains GeneticTestingConsentLaboratoryExtension named geneticTestingConsent 0..1
+* extension[geneticTestingConsent] MS
+  * ^definition = """
+  Das Kennzeichen \"Kennzeichen Einwilligung Genetische Untersuchung\" ist eine Information, die aus dem Laborauftrag übernommen oder abgeleitet wird.
+  Technisch wird der Boolsche Wert auf \"wahr\" (true) gesetzt um zu kennzeichnen, dass die Einwilligung nach § 8 GenDG (Gendiagnostikgesetz) vorliegt.
+  Diese Einwilligung bezieht sich ausschließlich auf die Durchführung der Analyse und die Übermittlung der Befundinformation. Sie ist nicht gleichzusetzen mit der Einwilligung zur Einstellung in die elektronische Patientenakte.
+  """
+  * ^short = "Kennzeichen Einwilligung Genetische Untersuchung nach § 8 GenDG"
+  * valueBoolean MS
 * identifier MS
 * identifier 1.. MS
   * ^definition = "In der Labordatenkommunikation kann sowohl von der einsendenden Einrichtung/Person wie auch vom auftragsnehmenden Labor ein auftragsbezogener Identifikator zugeordnet werden."
