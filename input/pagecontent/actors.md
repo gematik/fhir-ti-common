@@ -60,8 +60,7 @@ Ein abgeleiteter Akteur wird in JSON beispielsweise wie folgt definiert:
 }
 ```
 
-
-Die Ableitung beschreibt eine fachliche Spezialisierung. Sie bedeutet nicht, dass der abgeleitete Akteur eine konkrete technische Komponente oder ein bestimmtes Produkt darstellt.
+Die Ableitung ist eine Spezialisierung der Rolle: Der abgeleitete Akteur übernimmt alle Obligations des übergeordneten Akteurs. Akteure beschreiben Rollen im Datenaustausch, keine konkreten technischen Komponenten oder Produkte.
 
 ### Akteure und Obligations
 
