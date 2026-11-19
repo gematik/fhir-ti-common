@@ -26,7 +26,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
   * ^short = "Außerkörperliche Quelle zur Probenentnahme"
   * valueReference 1..1 MS
     // * insert ReferenceMS
-  * valueReference only Reference(TIDeviceLaboratorySpecimenSubject)
+  * valueReference only Reference(TIDeviceLaboratorySpecimenSubject or BiologicallyDerivedProduct or Patient)
 * identifier MS
   * insert IdentifierMS
   * type from $ti-vs-specimen-identifier-type (extensible)
@@ -82,7 +82,7 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
     * ersatzweise, wenn gar keine passende Codierung zugeordnet werden kann
     * wenn zusätzlich eine Freitext-Bezeichnung aus der LDT-Kommunikation übernommen werden soll.
     """
-* insert SubjectEu(subject)
+* insert SubjectEu
 * receivedTime MS
   * ^definition = "Zeitpunkt des Eingangs der Probe im Labor. Dieser Zeitpunkt sollte nach Möglichkeit minutengenau angegeben werden. Im klinischen Alltag ist die minutengenaue Erfassung nicht immer realistisch."
 * parent MS
@@ -91,16 +91,19 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
 * parent only Reference(TISpecimenLaboratory)
 * collection MS
   * ^definition = "Optionale Angaben zur Probengewinnung, dazu gehören: Zeitangabe, Methode der Probengewinnung, Entnahmeort, Angabe zum Nüchternstatus."
-  * extension MS
-  * extension[bodySite] MS
-    * ^definition = """
-    Es kann eine Körperstruktur mit Seitenangabe, weiterer Lokalisierung und Aussage zur Morphologie angegeben werden.\n
-    Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstelle gewonnen wird.
-    """
-    * ^short = "Körperstelle der Probenentnahme"
-    * valueReference MS
-      * insert OnlyReferenceMS
-    * valueReference only Reference(TIBodyStructure)
+  // Since EU Laboratory 2.1.0 the reference to the BodyStructure is carried by the R5 cross-version
+  // extension on Specimen.collection.bodySite instead of the core bodySite extension on Specimen.collection.
+  * bodySite MS
+    * extension MS
+    * extension[bodySite] MS
+      * ^definition = """
+      Es kann eine Körperstruktur mit Seitenangabe, weiterer Lokalisierung und Aussage zur Morphologie angegeben werden.\n
+      Es wäre auch möglich, dass eine Probenentnahme aus mehr als einer Körperstelle gewonnen wird.
+      """
+      * ^short = "Körperstelle der Probenentnahme"
+      * valueReference MS
+        * insert OnlyReferenceMS
+      * valueReference only Reference(TIBodyStructure)
   * collector MS
     * ^definition = "Person, welche die Probe entnimmt."
     * insert ReferenceMS
@@ -210,10 +213,10 @@ Identifizierung und Eigenschaften der primären oder sekundären Probe, auf dere
 * container MS
   * ^definition = "Optionale Angaben zum Behältnis, in dem sich die Probe befindet. Hierzu kann angegeben werden, um welche Art Behältnis es sich handelt und welche Menge an Probenmaterial es enthält."
   * extension MS
-  * extension[device] 1..1 MS
+  * extension[device] MS
     * ^definition = "Referenz auf den Probenbehälter."
     * valueReference 1..1 MS
-      // * insert ReferenceMS
+      * insert OnlyReferenceMS
     * valueReference only Reference(TIDeviceSpecimenContainer)
   * type MS
     * coding MS

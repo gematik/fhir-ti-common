@@ -62,7 +62,7 @@ UDI-DI ist der \"Device Identifier\". Es ist der statische Teil der UDI. Er enth
 * version MS
   * ^definition = "Version des Gerätes"
   * value MS
-* insert SubjectEu(patient)
+* insert PatientEu
 * note MS
   * ^definition = "Feld für ergänzende Freitext-Angaben zur außerkörperlichen Quelle, die in der vorgegebenen Datenstruktur nicht erfasst werden können."
   * text 1.. MS

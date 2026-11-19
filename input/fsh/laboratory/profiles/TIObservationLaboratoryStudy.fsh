@@ -29,6 +29,18 @@ Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechn
   AssociationServiceLaboratoryExtension named associationService 0..1 MS and
   ZlogLaboratoryExtension named zlogValue 0..1 MS and
   AlternativeResultLaboratoryExtension named alternativeResult 0.. MS
+* extension[statusReason] MS
+  * ^definition = """
+ Hier wird der Grund für die Wahl des aktuellen Status der Einzeluntersuchung angegeben. Diese Angabe ist insbesondere relevant, wenn die Einzeluntersuchung widerrufen oder abgebrochen wurde. Auch bei Überarbeitungen kann die Angabe des Grunds hilfreich sein. 
+
+ Beispiel:
+ Status = Fehleingabe
+ Statusbegründung Laboruntersuchung= schwerwiegender Tippfehler im Messergebnis
+ """
+  * ^short = "Statusbegründung Einzeluntersuchung"
+* valueCodeableConcept MS
+  * text MS
+    * ^definition = "Hier wird der Grund zum aktuellen Status der Einzeluntersuchung als Freitextinformation angegeben."
 * extension[testProfile]
   * ^definition = "Unter Test-Profil werden zusammengehörige Labortests oder eine Gruppe von Einzeluntersuchungen aus einem Verfahren zusammengefasst."
   * ^short = "Bezeichnung für fachlich-medizinischen Bezug, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu TIObservationLaboratoryStudyGroup.extension:testProfile"
@@ -113,14 +125,17 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   * extension[referenceRange] MS
     * ^definition = "Richtgrenzen für das quantitative Ergebnis mit Alternativeinheit."
     * ^short = "Richtgrenzen für Alternativeinheit"
-    * valueRange MS
-      * low MS
+    * extension[low] MS
+      * valueQuantity MS
         * value MS
+        * comparator MS
         * unit MS
         * system MS
         * code MS
-      * high MS
+    * extension[high] MS
+      * valueQuantity MS
         * value MS
+        * comparator MS
         * unit MS
         * system MS
         * code MS
@@ -168,7 +183,7 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   * text MS
     * ^definition = "Die Freitext-Bezeichnung erlaubt es, in den verwendenden/verarbeitenden Systemen den Einrichtungs-spezifischen bzw. Verwender-spezifischen Bezeichner für eine Laboruntersuchung weiterhin zu verwenden."
     * ^short = "Verwender-spezifische Bezeichnung für die Laboruntersuchung"
-* insert SubjectEu(subject)
+* insert SubjectEu
 * effective[x] MS
 * effectiveDateTime MS
   * ^definition = """
@@ -314,14 +329,13 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   Richtgrenzen oder Bewertungsgrenzen zu einer Laboruntersuchung\n
   * werden herangezogen für die Beurteilung und Einordnung von Messergebnissen
   * sind laborärztliche Entscheidungsgrenzen (mit ggf. juristischer Relevanz)
-  * sind ärztliche Entscheidungshilfen im klinischen Allta\n\n
-  Disclaimer: FHIR® definiert aktuell nur inklusive Richtgrenzen. Für die Praxistauglichkeit besteht aber die Anforderung, auch exklusive Richtgrenzen abbilden zu können. Diese Thematik wurde schon bei HL7® FHIR® platziert, es gibt aber noch keine abschließende Festlegung dazu. Im Informationsmodell sind beide Optionen bereits dargestellt, um diese Anforderung sichtbar zu machen.
+  * sind ärztliche Entscheidungshilfen im klinischen Alltag
   """
   * extension MS
   * extension contains
     SourceReferenceRangeExtension named sourceReferenceRange 0..1 MS and
-    NoLinearReferenceRangeLaboratoryExtension named noLinearReferenceRange 0..1 MS
-  * extension[noLinearReferenceRange] MS
+    NonLinearReferenceRangeLaboratoryExtension named nonLinearReferenceRange 0..1 MS
+  * extension[nonLinearReferenceRange] MS
     * ^definition = "Kennzeichnung, dass das numerische Ergebnis aus einem NICHT-LINEAREN Wertebereich stammt. Beispiele hierfür sind ganzzahlige Scores oder Titer-Reihen. Umgangssprachlich wird auch von sog. \"semiquantitativen\" Ergebnissen gesprochen. Seit LOINC® Version 2.76 ist das anhand des LOINC®-Codes offiziell definiert und ablesbar mit Scale = \"SemiQn\". Das Kennzeichen ist optional und wird vom messenden Labor gesetzt."
     * ^short = "Kennzeichen Nicht-linearer Referenzbereich"
     * value[x] MS
@@ -347,10 +361,30 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
         * code MS
         * display MS
       * text MS
+  * modifierExtension MS
+  * modifierExtension[lowComparator] MS
+    * ^definition = "Hier kann ein Komparator zur Angabe einer exklusiven unteren Richtgrenze angegeben werden."
+    * ^short = "Komparator exklusive untere Richtgrenze"
+    * valueCode MS
+      * ^definition = """
+      Bei der unteren Richtgrenze sind mögliche Werte für den Komparator:\n
+      >= (größer oder gleich)
+      > (größer)
+      """
+      * ^short = "Komparator-Code: >= (größer oder gleich) oder > (größer)"
+  * modifierExtension[highComparator] MS
+    * ^definition = "Hier kann ein Komparator zur Angabe einer exklusiven oberen Richtgrenze angegeben werden."
+    * ^short = "Komparator exklusive obere Richtgrenze"
+    * valueCode MS
+      * ^definition = """
+      Bei der oberen Richtgrenze sind mögliche Werte für den Komparator:\n
+      < (kleiner)
+      <= (kleiner oder gleich)
+      """
+      * ^short = "Komparator-Code: < (kleiner) oder <= (kleiner oder gleich)"
   * low MS
     * ^definition = """
     Die untere Richtgrenze ist eine quantitative Grenze. Datentyp und Einheit entsprechen denen beim quantitativen Messergebnis. Unter Eigenschaften sind mögliche Werte gelistet, die in dieses Feld hineinpassen könnten, beispielsweise ein Grenzwert aus dem LDT. Bei diesen Beispielen aus dem LDT gilt es zu beachten, dass die Grenzwerte nur für eine Richtgrenze vom Typ \"normal\" gelten.\n
-    Disclaimer: FHIR® definiert aktuell nur inklusive Richtgrenzen. Für die Praxistauglichkeit besteht aber die Anforderung, auch exklusive Richtgrenzen abbilden zu können. Diese Thematik wurde schon bei HL7® FHIR® platziert, es gibt aber noch keine abschließende Festlegung dazu. Im Informationsmodell sind beide Optionen bereits dargestellt, um diese Anforderung sichtbar zu machen.
     """
     * value MS
       * ^definition = "Numerischer Wert für eine gemessene Größe, eine Zahl mit optionalen Dezimalstellen."
@@ -364,7 +398,6 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
   * high MS
     * ^definition = """
     Die obere Richtgrenze ist eine quantitative Grenze. Datentyp und Einheit entsprechen denen beim quantitativen Messergebnis. Unter Eigenschaften sind mögliche Werte gelistet, die in dieses Feld hineinpassen könnten, beispielsweise ein Grenzwert aus dem LDT. Bei diesen Beispielen aus dem LDT gilt es zu beachten, dass die Grenzwerte nur für eine Richtgrenze vom Typ \"normal\" gelten.\n
-    Disclaimer: FHIR® definiert aktuell nur inklusive Richtgrenzen. Für die Praxistauglichkeit besteht aber die Anforderung, auch exklusive Richtgrenzen abbilden zu können. Diese Thematik wurde schon bei HL7® FHIR® platziert, es gibt aber noch keine abschließende Festlegung dazu. Im Informationsmodell sind beide Optionen bereits dargestellt, um diese Anforderung sichtbar zu machen.
     """
     * value MS
       * ^definition = "Numerischer Wert für eine gemessene Größe, eine Zahl mit optionalen Dezimalstellen."

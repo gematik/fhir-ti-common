@@ -64,4 +64,4 @@ Disclaimer: Da das Element BodyStructure.morphology auf eine Kardinalität von 0
   * ^definition = "In diesem Element werden ergänzende Freitext-Angaben zur Körperstruktur gemacht.\n
   Die Notwendigkeit ergänzender Angaben zur Körperstruktur ergibt sich unter anderem aus der Anforderung, weitere morphologische Erscheinungen zu dokumentieren.\n\n
   Disclaimer: Da das Element BodyStructure.morphology auf eine Kardinalität von 0..1 beschränkt ist, können mehrere morphologische Erscheinungen nicht in strukturierter Form angegeben werden."
-* insert SubjectEu(patient)
+* insert PatientEu

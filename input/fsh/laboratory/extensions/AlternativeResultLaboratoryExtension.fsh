@@ -56,17 +56,22 @@ Context: Observation
       * system 1..
       * code 1..
 * extension[referenceRange]
-  * value[x] only Range
-  * valueRange 1..
-    * low
+  * extension contains low 0..1 and high 0..1
+  * extension[low]
+    * value[x] only Quantity
+    * valueQuantity 1..
       * ^patternQuantity.system = $cs-ucum
       * value 1..
+      * comparator from ReferenceRangeLowComparator (required)
       * unit 1..
       * system 1..
       * code 1..
-    * high
+  * extension[high]
+    * value[x] only Quantity
+    * valueQuantity 1..
       * ^patternQuantity.system = $cs-ucum
       * value 1..
+      * comparator from ReferenceRangeHighComparator (required)
       * unit 1..
       * system 1..
       * code 1..
