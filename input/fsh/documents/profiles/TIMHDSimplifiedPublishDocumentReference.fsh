@@ -97,11 +97,11 @@ Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentRef
   * ^definition = "Sprache, in der das Dokument abgefasst ist (DocumentEntry.languageCode)"
   * ^comment = "n/a"
 * content.attachment.data 1..1 MS
-* content.attachment.size 1..1 MS
+* content.attachment.size 0..1 MS
   * ^short = "Größe des Dokuments in Bytes"
   * ^definition = "Größe des Dokuments in Bytes (DocumentEntry.size)"
   * ^comment = "n/a"
-* content.attachment.hash 1..1 MS
+* content.attachment.hash 0..1 MS
   * ^short = "Kryptographische Prüfsumme des Dokuments"
   * ^definition = "Kryptographische Prüfsumme des Dokuments (DocumentEntry.hash)"
   * ^comment = "n/a"
