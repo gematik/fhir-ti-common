@@ -7,13 +7,18 @@ Die folgenden Abschnitte beschreiben eine gemeinsame Vorgehensweise für FHIR-ba
 
 ### Package-Abhängigkeiten und Validierungsgrundlage
 
-Die in einem Implementation Guide direkt deklarierten FHIR-Package-Abhängigkeiten legen fest, welche Versionen externer FHIR-Artefakte für den jeweiligen Implementation Guide maßgeblich sind.
+Die in einem Implementation Guide (IG) direkt deklarierten FHIR-Package-Abhängigkeiten legen fest, welche Versionen externer FHIR-Artefakte für diesen IG maßgeblich sind.
 
-Abhängigkeiten, die ausschließlich transitiv über ein anderes FHIR-Package eingebunden werden, gelten nicht als verbindliche Grundlage für die Definition der Profile dieses Implementation Guides. Werden Artefakte eines solchen Packages unmittelbar verwendet, ist das betreffende Package zusätzlich als direkte Dependency mit der vorgesehenen Version zu deklarieren.
+Ausschließlich transitive Abhängigkeiten gelten nicht als verbindliche Grundlage für die Definition der Profile dieses IG. Verwendet der IG Artefakte aus einem solchen Package direkt, deklariert er das Package mit der vorgesehenen Version als direkte Abhängigkeit.
 
-Die direkt deklarierten Package-Abhängigkeiten bilden zugleich die Grundlage für die Validierung von FHIR-Daten. Für die Validierung sind die dort festgelegten Package-Versionen und die darin enthaltenen Profile, Extensions, Terminologien und weiteren FHIR-Artefakte heranzuziehen.
+Für die Validierung gilt die IG-Version, nach der der FHIR Data Service die Instanz an der jeweiligen Schnittstelle verarbeitet. Unterstützt der Dienst mehrere IGs oder mehrere Versionen eines IG parallel, verwendet er für jede Kombination aus IG und Version einen eigenen Validierungskontext. Die in <i>meta.profile</i> angegebenen Profile löst der Dienst innerhalb des maßgeblichen Kontexts auf und prüft die Instanz gegen diese Profile.
+
+Pro Validierungskontext wird jedes Package in genau einer Version verwendet. Die im IG direkt deklarierte Version hat Vorrang vor abweichenden Versionen aus transitiven Abhängigkeiten. Ist ein Package ausschließlich transitiv in mehreren Versionen eingebunden, deklariert der IG die vorgesehene Version als direkte Abhängigkeit. Die Auflösung der Package-Abhängigkeiten wird vor der Veröffentlichung geprüft.
+
+Für die bereitzustellenden Terminologiepakete gilt die jeweils festgelegte Mindestversion.
 
 Durch die explizite Deklaration der verwendeten Packages und ihrer Versionen wird sichergestellt, dass sowohl bei der Implementierung als auch bei der Validierung ein einheitlicher und reproduzierbarer Stand der zugrunde liegenden FHIR-Artefakte verwendet wird.
+
 
 
 #### Beispiel: Verwendung von Artefakten aus einer transitiven Abhängigkeit
@@ -38,9 +43,7 @@ Package A deklariert Package B und Package C mit den jeweils vorgesehenen Versio
 - `Package A → Package B`
 - `Package A → Package C`
 
-Bei der Validierung von FHIR-Ressourcen bilden Package A sowie die dort direkt deklarierten Package-Abhängigkeiten mit ihren jeweiligen Versionen den maßgeblichen Validierungskontext. Dadurch wird sichergestellt, dass insbesondere die Profile, Extensions, Terminologien und weiteren FHIR-Artefakte in den Versionen verwendet werden, die der Definition von Package A zugrunde liegen.
-
-Eine abweichende Version von Package B oder Package C, die beispielsweise über eine transitive Abhängigkeit eines anderen Packages verfügbar ist, soll nicht anstelle der in Package A direkt deklarierten Version als Validierungsgrundlage verwendet werden.
+Bei der Validierung von FHIR-Ressourcen nach dem IG von Package A werden Package B und Package C in den dort direkt deklarierten Versionen verwendet. Verweist Package B auf eine andere Version von Package C, gilt für die Validierung weiterhin die Version von Package C, die Package A direkt deklariert.
 
 ### Strukturierte Dosierinformationen
 
