@@ -37,10 +37,13 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
 * status from $ti-vs-observation-status (required)
 * category MS
   * ^definition = """
-  Zur jeweiligen Gruppe kann es (optional) gruppenbezogene fachliche Bezeichner geben, abgebildet in der vorliegenden Struktur \"Fachliches Gruppierungsmerkmal\". Für die gruppierte Darstellung von Laborergebnissen im Laborgesamtbefund können solche fachlichen Gruppierungsmerkmale als Gruppenüberschrift dienen. Mögliche Gruppenüberschriften sind:\n
-  * \"Laborbereich\" (z.B. Klinische Chemie)
-  * \"Laborbereich\" mit \"Test-Profil\" kombiniert
-  """
+  Zur jeweiligen Gruppe kann es gruppenbezogene fachliche Bezeichner geben. Für die gruppierte Darstellung von Laborergebnissen im Laborgesamtbefund können solche fachlichen Gruppierungsmerkmale als Gruppenüberschrift dienen. Mögliche Gruppenüberschriften sind:
+  - \"Laborbereich\" (z.B. Klinische Chemie)
+  - \"Test-Profil\" (z.B. \"Elektrolyte\")
+  - \"Laborbereich\" mit \"Test-Profil\" kombiniert
+
+Für im \"Katalog priorisierter Untersuchungsgruppen und Analysen\" gelistete Untersuchungen gilt, dass die im Katalog jeweils vorgegebene Gruppenbezeichnung als Test-Profil (ObservationLaboratoryStudyGroupdgLP.extension:testProfile.valueCodeableConcept.coding) zur Anzeige kommen muss. Nicht im Katalog aufgeführte Laboruntersuchungen können je nach fachlichem Kontext in die Gruppen einsortiert oder unterhalb bzw. außerhalb der sortierten Liste eingeordnet werden.
+"""
   * ^short = "Fachliche Bezeichnung für eine Untersuchungsgruppe"
 * category[laboratory] MS
   * coding MS
