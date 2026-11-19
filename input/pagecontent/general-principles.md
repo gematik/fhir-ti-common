@@ -75,7 +75,7 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
 
 ### Versionierung
 
-Jede Änderung an einer FHIR-Instanz führt zu einer neuen Version dieser Instanz, wobei jede Version eine eindeutige <i>Meta.versionId</i> und ein <i>Meta.lastUpdated</i> erhält. Auch eine neu erstellte FHIR-Instanz wird vom FHIR Data Service mit diesen Metadaten versehen. Dadurch kann der vollständige Änderungsverlauf einer Instanz nachvollzogen werden. Der FHIR Data Service speichert und stellt die Historie aller Versionen einer FHIR-Instanz bereit. Dies umfasst auch die Möglichkeit, frühere Versionen einer Instanz über die FHIR API unter Verwendung der <i>Meta.versionId</i> abzurufen. Falls eine FHIR-Instanz gleichzeitig aktualisiert wird, erkennt der FHIR Data Service potenzielle Konflikte und verarbeitet diese entsprechend.
+Jede Änderung an einer FHIR-Instanz führt zu einer neuen Version dieser Instanz, wobei jede Version eine eindeutige <i>Meta.versionId</i> und ein <i>Meta.lastUpdated</i> erhält. Auch eine neu erstellte FHIR-Instanz wird vom FHIR Data Service mit diesen Metadaten versehen. Dadurch kann der vollständige Änderungsverlauf einer Instanz nachvollzogen werden. Der FHIR Data Service speichert und stellt die Historie aller Versionen einer FHIR-Instanz bereit. Dies umfasst auch die Möglichkeit, frühere Versionen einer Instanz über die FHIR API unter Verwendung der <i>Meta.versionId</i> abzurufen. Bei einer versionsbewussten Aktualisierung über die FHIR-Interaktion <i>update</i> gibt der Client im HTTP-Header `If-Match` den ETag der Version an, auf der seine Änderung beruht. Weicht diese Version von der aktuellen Version ab, lehnt der FHIR Data Service die Aktualisierung mit HTTP <i>412 Precondition Failed</i> ab. Der Client kann die aktuelle Version abrufen, die beabsichtigte Änderung auf dieser Grundlage prüfen und sie gegebenenfalls mit dem aktuellen ETag erneut übermitteln. Für schreibende FHIR-Operationen legt der jeweilige Implementation Guide fest, wie konkurrierende Änderungen behandelt werden.
 
 Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt, bleibt die aktuelle Version der Instanz unverändert. Der FHIR Data Service erstellt in diesem Fall keine neue Version und behält den bestehenden Wert in _Meta.versionId_ sowie das Datum in _Meta.lastUpdated_ bei.
 
@@ -119,6 +119,22 @@ Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen 
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt, die aktuelle Version unverändert bleibt. In diesem Fall wird keine neue Version erstellt und die bestehende <i>Meta.versionId</i> sowie das <i>Meta.lastUpdated-Datum</i> bleiben erhalten.
+</requirement>
+
+<requirement conformance="SHALL" key="IG-TI49672E0E" title="Versionsprüfung bei der FHIR-Interaktion update" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service MUSS bei einer <i>update</i>-Anfrage mit <i>If-Match</i> die im Header angegebene Version mit der zum Zeitpunkt der Aktualisierung aktuellen Version der FHIR-Instanz vergleichen. Bei einer Abweichung MUSS er die Anfrage mit HTTP <i>412 Precondition Failed</i> ablehnen und die Instanz unverändert lassen. Dies gilt auch für inhaltsgleiche Aktualisierungen.
+</requirement>
+
+<requirement conformance="SHALL" key="IG-TI07958NQU" title="Ablehnung von update ohne If-Match bei versioned-update" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service MUSS eine <i>update</i>-Anfrage ohne den HTTP-Header <i>If-Match</i> mit HTTP <i>400 Bad Request</i> ablehnen, wenn er für den betroffenen Ressourcentyp im CapabilityStatement den Wert <i>versioned-update</i> angibt.
 </requirement>
 
 

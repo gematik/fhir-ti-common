@@ -1,0 +1,21 @@
+actor:
+- EPA-MHD-Service
+conformance: SHALL
+content_hash: c951b7f8c8042a3df37785221af0c53bae9127f507752fe6385471a69cde40ea
+created: '2026-11-19T15:11:01.775953'
+date: '2026-11-19T15:11:01.775966'
+key: IG-TI49672E0E
+modified: '2026-11-19T15:11:01.775964'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-MHD-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS bei einer <i>update</i>-Anfrage mit <i>If-Match</i>
+  die im Header angegebene Version mit der zum Zeitpunkt der Aktualisierung aktuellen
+  Version der FHIR-Instanz vergleichen. Bei einer Abweichung MUSS er die Anfrage mit
+  HTTP <i>412 Precondition Failed</i> ablehnen und die Instanz unverändert lassen.
+  Dies gilt auch für inhaltsgleiche Aktualisierungen.
+title: Versionsprüfung bei der FHIR-Interaktion update
+version: 0

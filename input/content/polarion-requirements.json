@@ -473,6 +473,30 @@
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/query-api-paging.html#IG-TI07252NTV-01"
         },
         {
+            "key": "IG-TI07958NQU",
+            "title": "Ablehnung von update ohne If-Match bei versioned-update",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Der FHIR Data Service MUSS eine <i>update</i>-Anfrage ohne den HTTP-Header <i>If-Match</i> mit HTTP <i>400 Bad Request</i> ablehnen, wenn er für den betroffenen Ressourcentyp im CapabilityStatement den Wert <i>versioned-update</i> angibt.",
+            "conformance": "SHALL",
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                }
+            ],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI07958NQU"
+        },
+        {
             "key": "IG-TI08134XQ4",
             "title": "Verarbeitung von referenzierten Ressourcen in Include-Suchen",
             "version": 0,
@@ -2149,6 +2173,30 @@
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI47719G19"
+        },
+        {
+            "key": "IG-TI49672E0E",
+            "title": "Versionsprüfung bei der FHIR-Interaktion update",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Der FHIR Data Service MUSS bei einer <i>update</i>-Anfrage mit <i>If-Match</i> die im Header angegebene Version mit der zum Zeitpunkt der Aktualisierung aktuellen Version der FHIR-Instanz vergleichen. Bei einer Abweichung MUSS er die Anfrage mit HTTP <i>412 Precondition Failed</i> ablehnen und die Instanz unverändert lassen. Dies gilt auch für inhaltsgleiche Aktualisierungen.",
+            "conformance": "SHALL",
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                }
+            ],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI49672E0E"
         },
         {
             "key": "IG-TI52070SA6",

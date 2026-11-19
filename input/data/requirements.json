@@ -292,6 +292,30 @@
         "release": "1.5.0"
     },
     {
+        "key": "IG-TI07958NQU",
+        "title": "Ablehnung von update ohne If-Match bei versioned-update",
+        "actor": [
+            "EPA-MHD-Service"
+        ],
+        "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS eine <i>update</i>-Anfrage ohne den HTTP-Header <i>If-Match</i> mit HTTP <i>400 Bad Request</i> ablehnen, wenn er für den betroffenen Ressourcentyp im CapabilityStatement den Wert <i>versioned-update</i> angibt.",
+        "conformance": "SHALL",
+        "created": "2026-11-19T15:11:01.776204",
+        "modified": "2026-11-19T15:11:01.776206",
+        "date": "2026-11-19T15:11:01.776206",
+        "content_hash": "a0d2efe08a948d4111de3541058e42f2ec4e2db1637221280fe12789e9e8ed4a",
+        "path": "general-principles.html",
+        "release": "1.5.0"
+    },
+    {
         "key": "IG-TI08134XQ4",
         "title": "Verarbeitung von referenzierten Ressourcen in Include-Suchen",
         "actor": [
@@ -1336,6 +1360,30 @@
         "modified": "2025-03-12T12:47:19.483901",
         "date": "2025-11-18T11:03:10.875984",
         "content_hash": "405da05f6d1ffc830c03bdf6022f2ba8c72b6116a190b168011b6a540aac0adb",
+        "path": "general-principles.html",
+        "release": "1.5.0"
+    },
+    {
+        "key": "IG-TI49672E0E",
+        "title": "Versionsprüfung bei der FHIR-Interaktion update",
+        "actor": [
+            "EPA-MHD-Service"
+        ],
+        "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS bei einer <i>update</i>-Anfrage mit <i>If-Match</i> die im Header angegebene Version mit der zum Zeitpunkt der Aktualisierung aktuellen Version der FHIR-Instanz vergleichen. Bei einer Abweichung MUSS er die Anfrage mit HTTP <i>412 Precondition Failed</i> ablehnen und die Instanz unverändert lassen. Dies gilt auch für inhaltsgleiche Aktualisierungen.",
+        "conformance": "SHALL",
+        "created": "2026-11-19T15:11:01.775953",
+        "modified": "2026-11-19T15:11:01.775964",
+        "date": "2026-11-19T15:11:01.775966",
+        "content_hash": "c951b7f8c8042a3df37785221af0c53bae9127f507752fe6385471a69cde40ea",
         "path": "general-principles.html",
         "release": "1.5.0"
     },
