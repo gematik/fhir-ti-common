@@ -26,8 +26,6 @@ publisher:
 
 dependencies:
   hl7.fhir.uv.xver-r5.r4: latest
-  # Temporary dependency required to resolve a preferred binding to an IPS ValueSet referenced by EU Core.
-  hl7.fhir.uv.ips: 2.0.1
   de.basisprofil.r4: 1.6.0
   de.fhir.medication: 2.0.0-ballot
   ihe.iti.mhd: 4.2.5
