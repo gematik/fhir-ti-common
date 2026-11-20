@@ -37,6 +37,7 @@ Alias: $icd-10-gm = http://fhir.de/CodeSystem/bfarm/icd-10-gm
 
 // Schlüsseltabellen CS
 Alias: $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM
+Alias: $KBV_VS_SFHIR_KBV_DARREICHUNGSFORM = https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_DARREICHUNGSFORM
 Alias: $cs-kbv-narcotics = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_NARCOTIC_LABEL
 
 // Schlüsseltabellen VS
@@ -47,6 +48,7 @@ Alias: $vs-kbv-medication-darreichungsform = https://fhir.kbv.de/ValueSet/KBV_VS
 
 // IFA CS
 Alias: $cs-ifa-medication-darreichungsform = https://fhir.ifaffm.de/CodeSystem/IFA_DARREICHUNGSFORM 
+Alias: $vs-ifa-medication-darreichungsform = https://fhir.ifaffm.de/ValueSet/IFA_DARREICHUNGSFORM
 
 // TI CS
 Alias: $epa-drug-category-cs = https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs
