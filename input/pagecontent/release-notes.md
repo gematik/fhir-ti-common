@@ -43,6 +43,15 @@ Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr ben�
 
 {% include release-notes.html version="1.5.0" diff_to="1.4.0" with_links=true %}
 
+### Version 1.4.1
+
+#### Medikationsprozess (dgMP)
+
+- Update der Abhängigkeit zu de.fhir.medication 1.0.8
+- Korrektur des Bindings für TIMedicationDgMP.form von CodeSystem zu ValueSet
+- Anpassung der Kardinalität der Slices von TIMedicationDgMP.form auf jeweils 0..*
+- Referenzierung des Profils DosageDgMP in TIMedicationDispenseDgMP
+
 ### Version 1.4.0
 
 - Eine neue Seite zur Validierung strukturierter Dosierungen wurde ergänzt, die die Vorgaben für FHIR Data Services zur Erzeugung und Prüfung der textuellen Repräsentation von Dosierinformationen beschreibt.
@@ -55,6 +64,14 @@ Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr ben�
 
 - Ergänzung der dgMP-spezifischen Medikationsprofile, einschließlich TIMedicationDgMP, TIMedicationRequestDgMP, TIMedicationDispenseDgMP und TIMedicationStatementDgMP.
 - Mit TIMedicationPZNIngredientDgMP und TIMedicationPharmaceuticalProductDgMP wurden zwei neue Profile für die Abbildung von PZN-Bestandteilen in Rezepturen sowie von pharmazeutischen Produkten innerhalb von Kombipackungen ergänzt.
+
+##### Übernahme und Versionierung der ePA-Medication-Artefakte
+
+- TI Common 1.4.0 hat 21 Artefakte aus `de.gematik.epa.medication` 1.3.5 unter ihren bisherigen Canonical-URLs übernommen. 
+- Änderungen an Must Support betreffen die Unterstützung von Elementen durch Implementierungen. Sie ändern die Gültigkeit von Instanzen nicht.
+- Die `context-extension` bindet an das inhaltsgleiche ValueSet `https://gematik.de/fhir/ti/ValueSet/context-code`. Das CodeSystem `context-code` verweist ebenfalls auf dieses ValueSet.
+- In der `rx-prescription-process-identifier-extension` macht `value[x]` mit `1..1` explizit, was die FHIR-Invariante `ext-1` bei ausgeschlossenen Unter-Extensions bereits in `de.gematik.epa.medication` 1.3.5 verlangte. Eine Extension ohne Wert war damit bereits ungültig.
+
 
 #### Systemverhalten
 

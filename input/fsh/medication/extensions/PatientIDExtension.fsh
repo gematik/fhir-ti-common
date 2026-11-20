@@ -3,9 +3,8 @@ Id: patient-id-extension
 Description: "Patienten-ID, welche bei der Verordnung bestimmter Arzneimittel angegeben werden kann."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/patient-id-extension"
-// preserve the version
-* ^version = "1.3.0"
-* ^date = "2025-12-15"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * value[x] 1.. MS

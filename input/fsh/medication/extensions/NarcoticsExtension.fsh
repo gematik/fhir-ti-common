@@ -3,9 +3,8 @@ Id: narcotics-extension
 Description: "Abbildung der Angaben zur Verordnung eines Betäubungsmittels im Sinne des Betäubungsmittelgesetzes (BtMG)"
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/narcotics-extension"
-// preserve the version
-* ^version = "1.3.1"
-* ^date = "2026-03-20"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * value[x] 0..0

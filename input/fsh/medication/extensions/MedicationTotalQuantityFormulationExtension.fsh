@@ -3,9 +3,8 @@ Id: medication-total-quantity-formulation-extension
 Description: "Total quantity of the formulation (without the unit)."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension"
-// preserve the version
-* ^version = "1.3.0"
-* ^date = "2025-12-15"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * value[x] only string

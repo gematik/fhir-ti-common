@@ -3,9 +3,8 @@ Id: indicator-ser-extension
 Description: "Kennzeichnung, ob diese Verordnung mit Bezug zum Sozialen Entschädigungsrecht nach SGB XIV (SER) erfolgt"
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension"
-// preserve the version
-* ^version = "1.3.0"
-* ^date = "2025-12-15"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * value[x] only boolean
