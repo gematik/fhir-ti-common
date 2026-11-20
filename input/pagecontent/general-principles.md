@@ -126,7 +126,7 @@ Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen 
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    Der FHIR Data Service MUSS bei einer <i>update</i>-Anfrage mit <i>If-Match</i> die im Header angegebene Version mit der zum Zeitpunkt der Aktualisierung aktuellen Version der FHIR-Instanz vergleichen. Bei einer Abweichung MUSS er die Anfrage mit HTTP <i>412 Precondition Failed</i> ablehnen und die Instanz unverändert lassen. Dies gilt auch für inhaltsgleiche Aktualisierungen.
+    Der FHIR Data Service MUSS bei einer <i>update</i>-Anfrage mit <i>If-Match</i> die im Header angegebene Version mit der zum Zeitpunkt der Aktualisierung aktuellen Version der FHIR-Instanz vergleichen. Bei einer Abweichung MUSS er die Anfrage mit HTTP <i>412 Precondition Failed</i> ablehnen und die Instanz unverändert lassen.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI07958NQU" title="Ablehnung von update ohne If-Match bei versioned-update" version="0">

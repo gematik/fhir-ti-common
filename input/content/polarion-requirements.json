@@ -2179,7 +2179,7 @@
             "title": "Versionsprüfung bei der FHIR-Interaktion update",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS bei einer <i>update</i>-Anfrage mit <i>If-Match</i> die im Header angegebene Version mit der zum Zeitpunkt der Aktualisierung aktuellen Version der FHIR-Instanz vergleichen. Bei einer Abweichung MUSS er die Anfrage mit HTTP <i>412 Precondition Failed</i> ablehnen und die Instanz unverändert lassen. Dies gilt auch für inhaltsgleiche Aktualisierungen.",
+            "text": "Der FHIR Data Service MUSS bei einer <i>update</i>-Anfrage mit <i>If-Match</i> die im Header angegebene Version mit der zum Zeitpunkt der Aktualisierung aktuellen Version der FHIR-Instanz vergleichen. Bei einer Abweichung MUSS er die Anfrage mit HTTP <i>412 Precondition Failed</i> ablehnen und die Instanz unverändert lassen.",
             "conformance": "SHALL",
             "characteristics": [
                 {
