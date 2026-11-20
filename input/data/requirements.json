@@ -1522,18 +1522,24 @@
     {
         "key": "IG-TI58182JX4",
         "title": "ETag je Instanzversion im _history-Bundle",
-        "actor": [],
-        "test_procedures": {},
+        "actor": [
+            "EPA-MHD-Service"
+        ],
+        "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ]
+        },
         "version": 0,
         "release_status": "NEW",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle für jede Version einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/\"&lt;versionId&gt;\"</i>, z. B. <i>W/\"2\"</i>) ausweisen.",
+        "text": "Der FHIR Data Service KANN innerhalb des <i>_history</i> Bundle für jede Version einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/\"&lt;versionId&gt;\"</i>, z. B. <i>W/\"2\"</i>) ausweisen.",
         "conformance": "MAY",
         "created": "2026-11-19T15:51:29.580754",
-        "modified": "2026-11-19T15:51:29.580775",
-        "date": "2026-11-19T15:51:29.580777",
-        "content_hash": "a311d0c4af3c7f355468f7e0f6743e25b5bb211316c38225cbc99c0613b29010",
+        "modified": "2026-11-20T10:20:22.545856",
+        "date": "2026-11-20T10:20:22.545856",
+        "content_hash": "134d9a5a57a6d3258d8a0ddb08091a6e6d45a5968966edb3729daedf725d7566",
         "path": "general-principles.html",
         "release": "1.5.0"
     },

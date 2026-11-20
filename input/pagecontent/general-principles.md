@@ -300,7 +300,10 @@ Funktionalität und Verhalten:
 </requirement>
 
 <requirement conformance="MAY" key="IG-TI58182JX4" title="ETag je Instanzversion im _history-Bundle" version="0">
-    Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle für jede Version einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/"&lt;versionId&gt;"</i>, z. B. <i>W/"2"</i>) ausweisen.
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service KANN innerhalb des <i>_history</i> Bundle für jede Version einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/"&lt;versionId&gt;"</i>, z. B. <i>W/"2"</i>) ausweisen.
 </requirement>
 
 **Hinweis:**

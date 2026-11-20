@@ -104,7 +104,9 @@
                 {
                     "title": "ETag je Instanzversion im _history-Bundle",
                     "key": "IG-TI58182JX4",
-                    "actor": [],
+                    "actor": [
+                        "EPA-MHD-Service"
+                    ],
                     "version": 0,
                     "release_status": "NEW",
                     "status": "ACTIVE",

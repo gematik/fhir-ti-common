@@ -2416,9 +2416,23 @@
             "title": "ETag je Instanzversion im _history-Bundle",
             "version": 0,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> Bundle für jede Version einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/\"&lt;versionId&gt;\"</i>, z. B. <i>W/\"2\"</i>) ausweisen.",
+            "text": "Der FHIR Data Service KANN innerhalb des <i>_history</i> Bundle für jede Version einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/\"&lt;versionId&gt;\"</i>, z. B. <i>W/\"2\"</i>) ausweisen.",
             "conformance": "MAY",
-            "characteristics": [],
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                }
+            ],
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI58182JX4"
         },
         {
