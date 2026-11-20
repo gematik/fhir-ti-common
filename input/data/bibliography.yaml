@@ -22,7 +22,7 @@ entries:
   - key: "Medication IG DE"
     author: "HL7 Deutschland"
     title: "FHIR Implementation Guide für medikationsbezogene Anwendungsfälle im deutschen Gesundheitswesen"
-    link: "https://ig.fhir.de/igs/medication/2.0.0-ballot/"
+    link: "https://ig.fhir.de/igs/medication/2.0.0/"
   - key: "FHIR Search Include"
     author: "HL7"
     title: "FHIR R4 Spezifikation für das Einbeziehen weiterer Ressourcen in das Suchergebnis"

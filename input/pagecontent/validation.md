@@ -53,7 +53,7 @@ In diesem IG wurden Festlegungen getroffen wie diese Dosierungen anzugeben und z
 
 Client-Systeme können Dosierinformationen strukturiert oder als Freitext an einen FHIR Data Service übertragen. Für die Dosierinformation wird in einer dafür vorgesehenen Extension eine textuelle Repräsentation bereitgestellt. Bei strukturierten Dosierinformationen wird diese aus den strukturierten Angaben generiert; bei einer Dosierung als Freitext wird die textuelle Angabe entsprechend übernommen. Der FHIR Data Service prüft diese textuelle Repräsentation anschließend nach den Vorgaben des Algorithmus.
 
-Die HL7 DE hat für die Erzeugung des gerenderten Dosiertextes eine [dgMP-DosageTextgenerierung-Spezifikation] bereitgestellt, die normativ vorgibt, wie eine Textgenerierung von strukturierten Dosierinformationen zu erfolgen hat. Dieser Algorithmus ist normativ vom FHIR Data Service umzusetzen.
+Für die Erzeugung und Validierung des Dosiertextes gilt die [dgMP-DosageTextgenerierung-Spezifikation] von HL7 Deutschland in der jeweils maßgeblichen Algorithmusversion. Das [dgMP-DosageTextgenerierung-Skript] ist eine Beispielimplementierung. Bei Abweichungen gilt die Spezifikation.
 
 #### Umsetzung für Clients
 Client-Systeme, die strukturierte Dosierinformationen schreiben, müssen neben dieser eine textuelle Repräsentation erzeugen und in der Instanz angeben. Fehlende Angaben der textuellen Repräsentation, sowie deren Metadaten, werden vom FHIR Data Service als invalide abgewiesen.
@@ -63,20 +63,20 @@ Client-Systeme, die strukturierte Dosierinformationen lesen, müssen in der Lage
 Im Verordnungsdatensatz und der Dispensierinformation für ein Arzneimittel können Angaben zur Dosierung gemacht werden. Im Kontext des digital gestützten Medikationsprozesses (dgMP) gibt es hierfür einen übergreifenden FHIR Implementation Guide [Medication IG DE] von HL7 Deutschland e.V., der entsprechende Vorgaben dazu macht. Hierzu muss u.a. für jede Angabe der Dosierung eine textuelle Darstellung nach [dgMP-DosageTextgenerierung-Spezifikation] erzeugt und im Datensatz angegeben werden.
 
 #### Umsetzung für den FHIR Data Service
-Der FHIR Data Service muss eingehende Instanzen zunächst gemäß FHIR validieren und nachfolgend überprüfen, ob die textuelle Repräsentation der Dosierung dem Ergebnis des Algorithmus, der im [dgMP-DosageTextgenerierung-Spezifikation] definiert ist, entspricht. Falls das Client-System keinen korrekten Text erzeugt und übermittelt hat, wird die Instanz mit einem entsprechenden Fehler abgewiesen und überträgt auch die erwartete textuelle Repräsentation der Dosierung. Eine Auflistung an Beispielen ist hier zu finden: [Medication IG - Beispiele](https://ig.fhir.de/igs/medication/2.0.0-ballot/dosierung-beispiele.html).
+Der FHIR Data Service muss eingehende Instanzen zunächst gemäß FHIR validieren und nachfolgend überprüfen, ob die textuelle Repräsentation der Dosierung dem Ergebnis des Algorithmus, der im [dgMP-DosageTextgenerierung-Spezifikation] definiert ist, entspricht. Falls das Client-System keinen korrekten Text erzeugt und übermittelt hat, wird die Instanz mit einem entsprechenden Fehler abgewiesen und überträgt auch die erwartete textuelle Repräsentation der Dosierung. Eine Auflistung an Beispielen ist hier zu finden: [Medication IG - Beispiele](https://ig.fhir.de/igs/medication/2.0.0/dosierung-beispiele.html).
 
 #### Validierung von strukturierten Dosierungen
 
 In FHIR-Ressourcen ist es möglich, strukturierte Dosierinformationen anzugeben. Diese Angaben sind im komplexen FHIR-Datentyp _Dosage_ definiert. Beispielsweise bieten die FHIR-Ressourcen _MedicationRequest_ und _MedicationDispense_ die Möglichkeit, diese Angaben unter _dosagelnstruction_ zu vermerken. Der [Medication IG DE] legt für den dgMP fest, dass diese strukturierten Dosierinformationen zusätzlich als textuelle Repräsentation von erzeugenden Systemen bereitgestellt und von entgegennehmenden zentralen Diensten validiert werden müssen. Der FHIR Data Service ist daher verpflichtet, über die strukturelle FHIR-Validierung hinaus sicherzustellen, dass die textuelle Repräsentation mit den strukturierten Dosierinformationen übereinstimmt.
 
-Zu diesem Zweck stellt HL7 Deutschland e.V. das [dgMP-DosageTextgenerierung-Skript] zur Verfügung. Dieses Skript implementiert einen Algorithmus, der die FHIR-Ressourcen _MedicationRequest_, -_Dispense_ und -_Statement_ mit Dosierinformationen in einen menschlesbaren Text (Zeichenkette) umwandelt. Der FHIR Data Service muss in der Lage sein, zu überprüfen, ob die angegebene textuelle Repräsentation dem Ergebnis des im Referenzskript implementierten Algorithmus entspricht.
+Der FHIR Data Service vergleicht den übermittelten Dosiertext mit dem Ergebnis nach der [dgMP-DosageTextgenerierung-Spezifikation] für die angegebene Algorithmusversion und Sprache. Das Ausgabeformat kann sich zwischen Hauptversionen ändern.
 
-Das Referenzskript enthält eine Versionsnummer und eine Information zur Sprache, die in FHIR-Ressourcen unter `extension: generatedDosageInstructionsMeta`
+Algorithmusversion und Sprache stehen in der Extension `generatedDosageInstructionsMeta` unter
 
 - `.extension:language`
 - `.extension: algorithmVersion`
 
-angegeben sind. Diese Werte werden bei der Validierung berücksichtigt, sodass nur Repräsentationen entsprechend einer gültigen Version und Sprache im FHIR Data Service eingestellt werden können.
+Diese Werte werden bei der Validierung berücksichtigt, sodass nur Repräsentationen entsprechend einer gültigen Version und Sprache im FHIR Data Service eingestellt werden können.
 
 Die Validierung von Dosierungen gilt jeweils für freitextliche Dosierinformationen (_.dosagelnstruction.text_), sowie für strukturierte Dosierinformationen (_.dosagelnstruction.timing_ und _.dosagelnstruction.doseAndRate_). Eine unstrukturierte Freitextangabe der Dosierung ist weiterhin möglich. Hierzu ist unter _extension[renderedDosagelnstruction]_ der identische Text wie in _.dosagelnstruction.text_ anzugeben.
 
@@ -176,10 +176,10 @@ angegebene String den Vorgaben der Validierung von strukturierten Dosierungen en
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-     Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in <i>OperationOutcome.extension[expectedDosageText].valueMarkdown</i> einsetzen.
+     Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in <i>OperationOutcome.issue.extension:expectedDosageText.valueMarkdown</i> einsetzen.
 </requirement>
 
-**Ein Beispiel für eine OperationOutcome mit erwartetem Dosierungstext:**
+**Beispiel für ein OperationOutcome mit erwartetem Dosierungstext nach Algorithmusversion `2.0.0`**
 <div class="gem-ig-example" data-title="OperationOutcome (JSON)">
     {% fragment OperationOutcome/5ab6bca4-fbdf-49c3-a693-a065187cffd6 JSON %}
 </div>

@@ -122,11 +122,11 @@ Usage: #example
 
 Instance: ExpTIOperationOutcomeDosageInvalidRenderedInstructionWithText
 InstanceOf: TIOperationOutcome
-Description: "The provided rendered dosage instruction is invalid"
+Description: "The provided rendered dosage instruction is invalid. The expected text uses algorithm version 2.0.0."
 Usage: #example
 * id = "5ab6bca4-fbdf-49c3-a693-a065187cffd6"
 * issue
-  * extension[expectedDosageText].valueMarkdown = "täglich: 08:00 Uhr — je 1 Stück; 18:00 Uhr — je 3 Stück"
+  * extension[expectedDosageText].valueMarkdown = "täglich: 08:00 Uhr — je 1 Stück, 18:00 Uhr — je 3 Stück"
   * severity = #error
   * code = #invalid
   * details = TIOperationOutcomeDetailsCS#SVC_DOSAGE_INVALID_RENDERED_INSTRUCTION "The provided rendered dosage instruction is invalid"
