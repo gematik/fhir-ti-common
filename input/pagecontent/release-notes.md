@@ -1,3 +1,12 @@
+### Version 1.4.1
+
+#### Medikationsprozess (dgMP)
+
+- Update der Abhängigkeit zu de.fhir.medication 1.0.8
+- Korrektur des Bindings für TIMedicationDgMP.form von CodeSystem zu ValueSet
+- Anpassung der Kardinalität der Slices von TIMedicationDgMP.form auf jeweils 0..*
+- Referenzierung des Profils DosageDgMP in TIMedicationDispenseDgMP
+
 ### Version 1.4.0
 
 - Eine neue Seite zur Validierung strukturierter Dosierungen wurde ergänzt, die die Vorgaben für FHIR Data Services zur Erzeugung und Prüfung der textuellen Repräsentation von Dosierinformationen beschreibt.

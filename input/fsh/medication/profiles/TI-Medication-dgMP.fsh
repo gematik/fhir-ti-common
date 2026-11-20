@@ -112,8 +112,8 @@ RuleSet: TIMedicationElements
   * coding contains
       // edqm 0.. and
       // snomed 0.. and
-      kbvDarreichungsform 0..1 MS and
-      ifaDarreichungsform 0..1 MS
+      kbvDarreichungsform 0..* MS and
+      ifaDarreichungsform 0..* MS
   // * coding[edqm] from $vs-edqm-doseform (preferred)
   //   * ^patternCoding.system = $cs-edqm
   //   * system 1..1 MS
