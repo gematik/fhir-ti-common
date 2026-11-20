@@ -3,9 +3,8 @@ Id: indicator-bvg-extension
 Description: "Indicator of whether this regulation is made in reference to the 'Bundesentschädigungsgesetz' or the 'Bundesversorgungsgesetz'."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-bvg-extension"
-// preserve the version
-* ^version = "1.3.0"
-* ^date = "2025-12-15"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * value[x] only boolean

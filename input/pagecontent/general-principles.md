@@ -75,7 +75,7 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
 
 ### Versionierung
 
-Jede Änderung an einer FHIR-Instanz führt zu einer neuen Version dieser Instanz, wobei jede Version eine eindeutige <i>Meta.versionId</i> und ein <i>Meta.lastUpdated</i> erhält. Auch eine neu erstellte FHIR-Instanz wird vom FHIR Data Service mit diesen Metadaten versehen. Dadurch kann der vollständige Änderungsverlauf einer Instanz nachvollzogen werden. Der FHIR Data Service speichert und stellt die Historie aller Versionen einer FHIR-Instanz bereit. Dies umfasst auch die Möglichkeit, frühere Versionen einer Instanz über die FHIR API unter Verwendung der <i>Meta.versionId</i> abzurufen. Falls eine FHIR-Instanz gleichzeitig aktualisiert wird, erkennt der FHIR Data Service potenzielle Konflikte und verarbeitet diese entsprechend.
+Jede Änderung an einer FHIR-Instanz führt zu einer neuen Version dieser Instanz, wobei jede Version eine eindeutige <i>Meta.versionId</i> und ein <i>Meta.lastUpdated</i> erhält. Auch eine neu erstellte FHIR-Instanz wird vom FHIR Data Service mit diesen Metadaten versehen. Dadurch kann der vollständige Änderungsverlauf einer Instanz nachvollzogen werden. Der FHIR Data Service speichert und stellt die Historie aller Versionen einer FHIR-Instanz bereit. Dies umfasst auch die Möglichkeit, frühere Versionen einer Instanz über die FHIR API unter Verwendung der <i>Meta.versionId</i> abzurufen. Bei einer versionsbewussten Aktualisierung über die FHIR-Interaktion <i>update</i> gibt der Client im HTTP-Header `If-Match` den ETag der Version an, auf der seine Änderung beruht. Weicht diese Version von der aktuellen Version ab, lehnt der FHIR Data Service die Aktualisierung mit HTTP <i>412 Precondition Failed</i> ab. Der Client kann die aktuelle Version abrufen, die beabsichtigte Änderung auf dieser Grundlage prüfen und sie gegebenenfalls mit dem aktuellen ETag erneut übermitteln. Für schreibende FHIR-Operationen legt der jeweilige Implementation Guide fest, wie konkurrierende Änderungen behandelt werden.
 
 Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt, bleibt die aktuelle Version der Instanz unverändert. Der FHIR Data Service erstellt in diesem Fall keine neue Version und behält den bestehenden Wert in _Meta.versionId_ sowie das Datum in _Meta.lastUpdated_ bei.
 
@@ -121,6 +121,22 @@ Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen 
     Der FHIR Data Service MUSS sicherstellen, dass bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt, die aktuelle Version unverändert bleibt. In diesem Fall wird keine neue Version erstellt und die bestehende <i>Meta.versionId</i> sowie das <i>Meta.lastUpdated-Datum</i> bleiben erhalten.
 </requirement>
 
+<requirement conformance="SHALL" key="IG-TI49672E0E" title="Versionsprüfung bei der FHIR-Interaktion update" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service MUSS bei einer <i>update</i>-Anfrage mit <i>If-Match</i> die im Header angegebene Version mit der zum Zeitpunkt der Aktualisierung aktuellen Version der FHIR-Instanz vergleichen. Bei einer Abweichung MUSS er die Anfrage mit HTTP <i>412 Precondition Failed</i> ablehnen und die Instanz unverändert lassen.
+</requirement>
+
+<requirement conformance="SHALL" key="IG-TI07958NQU" title="Ablehnung von update ohne If-Match bei versioned-update" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service MUSS eine <i>update</i>-Anfrage ohne den HTTP-Header <i>If-Match</i> mit HTTP <i>400 Bad Request</i> ablehnen, wenn er für den betroffenen Ressourcentyp im CapabilityStatement den Wert <i>versioned-update</i> angibt.
+</requirement>
+
 
 #### Format für Resource.meta.versionId
 
@@ -148,6 +164,9 @@ Das Metadatenattribut `Resource.meta.versionId` gibt die Versionsnummer einer FH
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS sicherstellen, dass die <i>versionId</i> einer FHIR-Instanz bei jeder neuen Version um genau 1 erhöht wird. Die erste Version einer FHIR-Instanz erhält die <i>versionId</i> 1, die nächste Version 2, und so weiter. Beispiel: 1 → 2 → 3 →
 </requirement>
 
@@ -157,6 +176,9 @@ Das Metadatenattribut `Resource.meta.versionId` gibt die Versionsnummer einer FH
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS sicherstellen, dass die <i>Resource.meta.versionId</i> innerhalb einer spezifischen FHIR-Instanz eindeutig ist. Die Versionsnummer darf nicht zurückgesetzt oder übersprungen werden. Jede Instanz besitzt eine eigene fortlaufende Versionsnummer, die bei jeder Änderung der FHIR-Instanz aufsteigt.
@@ -218,6 +240,9 @@ Funktionalität und Verhalten:
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS die <i>_history</i>-Abfrage gemäß der HL7 FHIR Spezifikation [FHIR History Interaction] implementieren, um die Versionshistorie einer FHIR-Instanz abrufbar zu machen.
 </requirement>
 
@@ -227,6 +252,9 @@ Funktionalität und Verhalten:
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie aller Instanzen eines bestimmten Ressourcentyps über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/_history</i>.
@@ -240,6 +268,9 @@ Funktionalität und Verhalten:
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie einer FHIR-Instanz über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/[id]/_history</i>.
 </requirement>
 
@@ -251,6 +282,9 @@ Funktionalität und Verhalten:
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS als Antwort auf eine <i>_history</i>-Abfrage ein Bundle mit dem Typ <i>history</i> zurückgeben, das die Versionen der angeforderten FHIR-Instanz enthält.
 </requirement>
 
@@ -260,6 +294,9 @@ Funktionalität und Verhalten:
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> für jede Version einer FHIR-Instanz die zugehörigen <i>entry.request</i>- und <i>entry.response</i>-Elemente bereitstellen.
@@ -281,6 +318,13 @@ Funktionalität und Verhalten:
             <i>Bundle.entry.response.location</i> enthält die vollständige versionsspezifische Ressourcen-URL (z. B. <i>ResourceType/{id}/_history/{versionId}</i>), sofern die entsprechende Version der Ressourceinstanz einzeln abrufbar ist.
         </li>
     </ul>
+</requirement>
+
+<requirement conformance="MAY" key="IG-TI58182JX4" title="ETag je Instanzversion im _history-Bundle" version="0">
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service KANN innerhalb des <i>_history</i> Bundle für jede Version einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/"&lt;versionId&gt;"</i>, z. B. <i>W/"2"</i>) ausweisen.
 </requirement>
 
 **Hinweis:**
@@ -317,6 +361,9 @@ GET [base]/epa/medication/api/v1/fhir/MedicationStatement/391fc0c6-e045-48d9-8af
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS das Lesen spezifischer Versionen von FHIR-Instanzen gemäß der HL7 FHIR Spezifikation [FHIR Version Read] implementieren. Dabei MUSS eine angeforderte Version einer Instanz über eine GET-Anfrage der Form <i>[base]/[resourceType]/[id]/_history/[versionId]</i> bereitgestellt werden. Die Antwort MUSS die angeforderte Version der Instanz enthalten, einschließlich der zugehörigen Metadaten (<i>meta.versionId</i>, <i>meta.lastUpdated</i>).
 </requirement>
 
@@ -328,6 +375,9 @@ GET [base]/epa/medication/api/v1/fhir/MedicationStatement/391fc0c6-e045-48d9-8af
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
     Der FHIR Data Service MUSS sicherstellen, dass eine spezifische Version einer Ressource über die <i>Meta.versionId</i> eindeutig identifiziert und abgerufen werden kann. Die <i>versionId</i> dient dabei zur referenzgenauen Anforderung einer bestimmten historischen Version einer Ressource.
 </requirement>
 
@@ -337,6 +387,9 @@ GET [base]/epa/medication/api/v1/fhir/MedicationStatement/391fc0c6-e045-48d9-8af
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     <actor name="EPA-Patient-Service" description="EPA-Patient-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
     Der FHIR Data Service MUSS bei einem HTTP GET-Request auf eine spezifische Version einer FHIR-Instanz den HTTP Status Code <i>404 (Not Found)</i> zurückgeben, wenn die angeforderte Version nicht existiert.

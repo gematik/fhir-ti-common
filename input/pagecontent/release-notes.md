@@ -7,10 +7,11 @@
 
 #### Allgemein (Common)
 
-- _TIPatient_ ist nun konform zum Patient EU Core-Profil. Die Konformität wird über imposeProfile festgelegt. Zur Kompatibilität mit EU Core wurde die Kardinalität von _name[Name]_ auf 0..1 gesetzt, sodass auch Patient.name ohne HumanName.use zulässig bleibt.
-- _TIOrganization_ ist nun konform zum Organization EU Core-Profil. Die Konformität wird über imposeProfile festgelegt. Dadurch wird für Organization.address das EU-Core-Profil Address EU verwendet.
-- _TIPractitioner_ ist nun konform zum Practitioner EU Core-Profil. Die Konformität wird über imposeProfile festgelegt. Im Zuge der Anpassung wurden die Constraints für die Abbildung des Namens an EU Core angeglichen. Insbesondere sind _Practitioner.name.text_ und _Practitioner.name.family_ nicht mehr verpflichtend und können optional angegeben werden.
-- _TIPractitionerRole_ ist nun konform zum PractitionerRole EU Core-Profil. Die Konformität wird über imposeProfile festgelegt.
+- _TIPatient_, _TIPractitioner_, _TIPractitionerRole_ und _TIOrganization_ werden direkt von den jeweiligen EU-Core-Profilen abgeleitet. Die Paketabhängigkeit `hl7.fhir.eu.base#2.0.1` legt die Version der Basisprofile fest. Gegenüber TI Common 1.3.1 ergeben sich je Profil folgende Änderungen.
+  - _TIPatient_ übernimmt die Invariante `eu-pat-1`, das Adressprofil _AddressEu_ und die EU-Core-Slices für Geburtsort, Geburtszeit, klinisches Geschlecht, Geschlechtsidentität, Pronomen, Staatsbürgerschaft und Nationalität. Mindestens ein Name und das Geburtsdatum bleiben Pflicht. Der Slice `name[Name]` ist optional, sodass auch ein Name ohne `HumanName.use` die Kardinalität von `Patient.name` erfüllen kann.
+  - _TIPractitioner_ übernimmt _AddressEu_ für Adressen. Mindestens ein Name bleibt Pflicht. `HumanName.text` und `HumanName.family` sind optional. Die Invariante `ti-practitioner-name-1` verlangt für jeden Namen mindestens eines der Elemente `family`, `given`, `text` oder die Extension `data-absent-reason`. Fehlt `HumanName.text`, setzt das anzeigende System den Namen aus den vorhandenen Bestandteilen `prefix`, `given` und `family` in dieser Reihenfolge zusammen.
+  - _TIPractitionerRole_ schränkt `practitioner` und `organization` bei Angabe auf Referenzen auf _TIPractitioner_ bzw. _TIOrganization_ ein. Beide Zielprofile sind von den entsprechenden EU-Core-Profilen abgeleitet.
+  - _TIOrganization_ übernimmt _AddressEu_ für Adressen.
 - Die neuen Datentyp-Profile _TIHumanName_ und _TIBirthName_ wurden zur Abbildung offizieller Namen und Geburtsnamen ergänzt.
 - Als gemeinsame Profile wurden _TIConditionDiagnosis_, _TIRelatedPerson_, _TIBodyStructure_ und _TIAppendixDocumentReference_ für Diagnosen, Kontakt- und Bezugspersonen, Körperstrukturen und Dokumentanhänge hinzugefügt. _TIConditionDiagnosis_ leitet von _ConditionEuCore_ und _TIBodyStructure_ von _BodyStructureEuCore_ ab. Damit übernehmen auch diese beiden Profile die Vorgaben ihrer jeweiligen EU-Core-Basisprofile.
 - Für Probenbehälter und außerkörperliche Probenquellen wurden die Profile _TIDeviceSpecimenContainer_, _TIDeviceDefinitionSpecimenContainer_ und _TIDeviceDefinitionSpecimenSubject_ ergänzt.
@@ -33,6 +34,12 @@
 - Die Profile _TIMedicationRequestDgMP_, _TIMedicationDispenseDgMP_ und _TIMedicationStatementDgMP_ tragen nun die Constraints `ExtRequiresDosage-MR`, `ExtRequiresDosage-MD` bzw. `ExtRequiresDosage-MS` aus dem Medication IG DE (DosageExtensionsRequireDosage). Liegt die Dosierungs-Extension _renderedDosageInstruction_ oder _generatedDosageInstructionsMeta_ vor, müssen den Profilen entsprechende Instanzen mindestens eine Dosierung enthalten.
 - In _TIMedicationDispenseDgMP_ wird die Dosierung nun als _DosageDgMP_ statt als _DosageDE_ abgebildet. Damit gelten für die Abgabe dieselben Dosierungs-Vorgaben des Medication IG DE wie für Verordnung und Medikationsinformation.
 
+#### Paketabhängigkeiten
+
+- IHE MHD ist auf `ihe.iti.mhd#4.2.5` festgelegt. Diese Version bindet `ihe.formatcode.fhir#1.6.0` als feste transitive Abhängigkeit ein.
+- Als bekannte Einschränkung bindet `hl7.fhir.eu.base#2.0.1` weiterhin den Kommentarstand `ihe.pharm.mpd.r4#1.0.0-comment-2` ein. Die Abhängigkeit ergibt sich aus dem Paket von HL7 Europe Base.
+- Die Veröffentlichung von TI Common 1.5.0 setzt die Umstellung auf das finale Paket `de.fhir.medication#2.0.0` voraus.
+
 #### Systemverhalten
 
 - Dem CodeSystem _TIOperationOutcomeDetailsCS_ und dem ValueSet _TIOperationOutcomeDetailsVS_ wurde der Code _SVC_DANGLING_REFERENCE_ hinzugefügt. Er wird verwendet, wenn eine schreibende Anfrage abgelehnt wird, weil sie zu hängenden literalen Referenzen führen würde (siehe Abschnitt "Referentielle Integrität" unter [Generelle Prinzipien](general-principles.html)).
@@ -42,6 +49,15 @@
 Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr benötigte gelöscht. Die folgenden Release Notes geben einen detaillierten Überblick über alle Anpassungen.
 
 {% include release-notes.html version="1.5.0" diff_to="1.4.0" with_links=true %}
+
+### Version 1.4.1
+
+#### Medikationsprozess (dgMP)
+
+- Update der Abhängigkeit zu de.fhir.medication 1.0.8
+- Korrektur des Bindings für TIMedicationDgMP.form von CodeSystem zu ValueSet
+- Anpassung der Kardinalität der Slices von TIMedicationDgMP.form auf jeweils 0..*
+- Referenzierung des Profils DosageDgMP in TIMedicationDispenseDgMP
 
 ### Version 1.4.0
 
@@ -55,6 +71,14 @@ Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr ben�
 
 - Ergänzung der dgMP-spezifischen Medikationsprofile, einschließlich TIMedicationDgMP, TIMedicationRequestDgMP, TIMedicationDispenseDgMP und TIMedicationStatementDgMP.
 - Mit TIMedicationPZNIngredientDgMP und TIMedicationPharmaceuticalProductDgMP wurden zwei neue Profile für die Abbildung von PZN-Bestandteilen in Rezepturen sowie von pharmazeutischen Produkten innerhalb von Kombipackungen ergänzt.
+
+##### Übernahme und Versionierung der ePA-Medication-Artefakte
+
+- TI Common 1.4.0 hat 21 Artefakte aus `de.gematik.epa.medication` 1.3.5 unter ihren bisherigen Canonical-URLs übernommen. 
+- Änderungen an Must Support betreffen die Unterstützung von Elementen durch Implementierungen. Sie ändern die Gültigkeit von Instanzen nicht.
+- Die `context-extension` bindet an das inhaltsgleiche ValueSet `https://gematik.de/fhir/ti/ValueSet/context-code`. Das CodeSystem `context-code` verweist ebenfalls auf dieses ValueSet.
+- In der `rx-prescription-process-identifier-extension` macht `value[x]` mit `1..1` explizit, was die FHIR-Invariante `ext-1` bei ausgeschlossenen Unter-Extensions bereits in `de.gematik.epa.medication` 1.3.5 verlangte. Eine Extension ohne Wert war damit bereits ungültig.
+
 
 #### Systemverhalten
 

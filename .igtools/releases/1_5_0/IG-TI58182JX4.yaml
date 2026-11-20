@@ -1,0 +1,19 @@
+actor:
+- EPA-MHD-Service
+conformance: MAY
+content_hash: 134d9a5a57a6d3258d8a0ddb08091a6e6d45a5968966edb3729daedf725d7566
+created: '2026-11-19T15:51:29.580754'
+date: '2026-11-20T10:20:22.545856'
+key: IG-TI58182JX4
+modified: '2026-11-20T10:20:22.545856'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-MHD-Service:
+  - Produkttest
+text: Der FHIR Data Service KANN innerhalb des <i>_history</i> Bundle für jede Version
+  einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/"&lt;versionId&gt;"</i>,
+  z. B. <i>W/"2"</i>) ausweisen.
+title: ETag je Instanzversion im _history-Bundle
+version: 0

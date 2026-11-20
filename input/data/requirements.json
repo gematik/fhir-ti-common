@@ -99,10 +99,14 @@
         "key": "IG-TI06008V22",
         "title": "Abruf einer spezifischen Ressourcenversion über die FHIR API",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -118,7 +122,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.422356",
         "modified": "2025-05-27T09:33:08.791114",
-        "date": "2025-11-18T11:03:10.874162",
+        "date": "2026-11-20T13:40:19.565676",
         "content_hash": "1cb3d53aecd5dd7f465cb20b5252ace66b0be593f7df850e0096c8d1f5470193",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -127,10 +131,14 @@
         "key": "IG-TI06069XBQ",
         "title": "Aufsteigende Sequenz der Resource.meta.versionId",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -146,7 +154,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.421523",
         "modified": "2025-03-12T12:47:19.482020",
-        "date": "2025-11-18T11:03:10.872638",
+        "date": "2026-11-20T13:40:19.562261",
         "content_hash": "dfd974c7382e205f82e7e483f3fa24af1305a74ab74270142ac4702f40120563",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -227,10 +235,14 @@
         "key": "IG-TI06872YZP",
         "title": "404 Not Found Antwort für nicht existierende spezifische Versionen",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -246,7 +258,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.422662",
         "modified": "2025-03-17T14:32:05.768193",
-        "date": "2025-11-18T11:03:10.874627",
+        "date": "2026-11-20T13:40:19.566512",
         "content_hash": "c5ba980dc0f109ed5e83a76ed110b5a224a08167628cc9ed44e73710ba89196a",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -289,6 +301,30 @@
         "date": "2026-09-30T16:28:38.300444",
         "content_hash": "ddc91e95a7f135e8b944d81d2b83687882ed46a58d57164399b5cf4fa560be29",
         "path": "query-api-paging.html",
+        "release": "1.5.0"
+    },
+    {
+        "key": "IG-TI07958NQU",
+        "title": "Ablehnung von update ohne If-Match bei versioned-update",
+        "actor": [
+            "EPA-MHD-Service"
+        ],
+        "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS eine <i>update</i>-Anfrage ohne den HTTP-Header <i>If-Match</i> mit HTTP <i>400 Bad Request</i> ablehnen, wenn er für den betroffenen Ressourcentyp im CapabilityStatement den Wert <i>versioned-update</i> angibt.",
+        "conformance": "SHALL",
+        "created": "2026-11-19T15:11:01.776204",
+        "modified": "2026-11-19T15:11:01.776206",
+        "date": "2026-11-19T15:11:01.776206",
+        "content_hash": "a0d2efe08a948d4111de3541058e42f2ec4e2db1637221280fe12789e9e8ed4a",
+        "path": "general-principles.html",
         "release": "1.5.0"
     },
     {
@@ -471,10 +507,14 @@
         "key": "IG-TI16747WFN",
         "title": "Implementierung der _history-Abfrage gemäß HL7 FHIR Spezifikation",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -490,7 +530,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.421747",
         "modified": "2025-05-27T09:33:08.790570",
-        "date": "2025-11-18T11:03:10.873019",
+        "date": "2026-11-20T13:40:19.563054",
         "content_hash": "678a55a83c4b0980b45eea128ead70ef81884a0f8fce8e7013da95aeb532335a",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -650,12 +690,12 @@
         "release_status": "STABLE",
         "status": "ACTIVE",
         "source": "input/pagecontent/validation.md",
-        "text": "Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in <i>OperationOutcome.extension[expectedDosageText].valueMarkdown</i> einsetzen.",
+        "text": "Der FHIR Data Service MUSS im Falle einer fehlerhaften Instanz den erwarteten Dosierungstext unformatiert in <i>OperationOutcome.issue.extension:expectedDosageText.valueMarkdown</i> einsetzen.",
         "conformance": "SHALL",
         "created": "2026-09-07T09:54:53.423699",
         "modified": "2026-09-07T10:21:43.138526",
-        "date": "2026-09-07T10:21:43.138526",
-        "content_hash": "f6dcaa13173359212887193e5df9832164818350c13e1c897f4abf458e412642",
+        "date": "2026-11-20T15:48:26.010662",
+        "content_hash": "01316028b0ae8d5c8a3460317b632ee9a3df69790ccdbacdbfd59a1127c5e744",
         "path": "validation.html",
         "release": "1.5.0"
     },
@@ -1231,10 +1271,14 @@
         "key": "IG-TI44024J5L",
         "title": "Eindeutigkeit der Resource.meta.versionId pro FHIR-Instanz",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -1250,7 +1294,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.421680",
         "modified": "2025-03-12T12:47:19.482104",
-        "date": "2025-11-18T11:03:10.872838",
+        "date": "2026-11-20T13:40:19.562703",
         "content_hash": "30ea9e0df96c5d3f2a8baca39669dfee1a23fa14efc5c8d945a05c1bc64b0ede",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -1340,13 +1384,41 @@
         "release": "1.5.0"
     },
     {
+        "key": "IG-TI49672E0E",
+        "title": "Versionsprüfung bei der FHIR-Interaktion update",
+        "actor": [
+            "EPA-MHD-Service"
+        ],
+        "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS bei einer <i>update</i>-Anfrage mit <i>If-Match</i> die im Header angegebene Version mit der zum Zeitpunkt der Aktualisierung aktuellen Version der FHIR-Instanz vergleichen. Bei einer Abweichung MUSS er die Anfrage mit HTTP <i>412 Precondition Failed</i> ablehnen und die Instanz unverändert lassen.",
+        "conformance": "SHALL",
+        "created": "2026-11-19T15:11:01.775953",
+        "modified": "2026-11-20T10:17:22.324270",
+        "date": "2026-11-20T10:17:22.324270",
+        "content_hash": "5593ae042675ef26b68d5e5cbdf78064dae04ae63a486c80f6ffc2149f34bfb1",
+        "path": "general-principles.html",
+        "release": "1.5.0"
+    },
+    {
         "key": "IG-TI52070SA6",
         "title": "Bundle.entry.request und Bundle.entry.response innerhalb des _history Bundles",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -1362,7 +1434,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.422187",
         "modified": "2025-12-02T13:01:10.399502",
-        "date": "2025-12-02T13:01:10.399508",
+        "date": "2026-11-20T13:40:19.564729",
         "content_hash": "4d8cdedc77d705e7395316c64d329b286d7d43efe148dbdd8d72e06c934b166b",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -1472,6 +1544,30 @@
         "release": "1.5.0"
     },
     {
+        "key": "IG-TI58182JX4",
+        "title": "ETag je Instanzversion im _history-Bundle",
+        "actor": [
+            "EPA-MHD-Service"
+        ],
+        "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service KANN innerhalb des <i>_history</i> Bundle für jede Version einer FHIR-Instanz das zugehörige ETag im Format des HTTP-ETag-Headers (<i>W/\"&lt;versionId&gt;\"</i>, z. B. <i>W/\"2\"</i>) ausweisen.",
+        "conformance": "MAY",
+        "created": "2026-11-19T15:51:29.580754",
+        "modified": "2026-11-20T10:20:22.545856",
+        "date": "2026-11-20T10:20:22.545856",
+        "content_hash": "134d9a5a57a6d3258d8a0ddb08091a6e6d45a5968966edb3729daedf725d7566",
+        "path": "general-principles.html",
+        "release": "1.5.0"
+    },
+    {
         "key": "IG-TI59271UPX",
         "title": "FHIR-Formatunterstützung JSON",
         "actor": [
@@ -1547,10 +1643,14 @@
         "key": "IG-TI60515LXY",
         "title": "Abruf der Versionshistorie aller Instanzen eines ResourceType",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -1566,7 +1666,7 @@
         "conformance": "SHALL",
         "created": "2025-03-14T10:33:08.467442",
         "modified": "2025-03-14T10:33:08.467447",
-        "date": "2025-11-18T11:03:10.873189",
+        "date": "2026-11-20T13:40:19.563399",
         "content_hash": "29cb2b6bf8dc38a837f517e5f89d32e7251d970ceae101d89c9b75c0f6982132",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -1815,10 +1915,14 @@
         "key": "IG-TI66923Q9F",
         "title": "Identifikation der Ressourcenversion durch Meta.versionId",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -1834,7 +1938,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.422458",
         "modified": "2025-03-12T12:47:19.482833",
-        "date": "2025-11-18T11:03:10.874375",
+        "date": "2026-11-20T13:40:19.566059",
         "content_hash": "d8828d33d06e9d89170a385bcb8fbd94f44bcecd45e3064918e8aca848230509",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -1963,10 +2067,14 @@
         "key": "IG-TI78384PEX",
         "title": "Abruf der Versionshistorie einer FHIR-Instanz",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -1982,7 +2090,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.421837",
         "modified": "2025-03-17T14:32:05.767307",
-        "date": "2025-11-18T11:03:10.873378",
+        "date": "2026-11-20T13:40:19.563728",
         "content_hash": "5faaaaab304240a71aecb909ec4698f6b4bf2b9baf704036ec96a68f15bca48a",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -2215,10 +2323,14 @@
         "key": "IG-TI94321ZRC",
         "title": "Bereitstellung eines Bundles mit dem Typ history als Antwort",
         "actor": [
+            "EPA-MHD-Service",
             "EPA-Medication-Service",
             "EPA-Patient-Service"
         ],
         "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ],
             "EPA-Medication-Service": [
                 "Produkttest"
             ],
@@ -2234,7 +2346,7 @@
         "conformance": "SHALL",
         "created": "2025-03-10T12:54:11.421936",
         "modified": "2025-03-12T12:47:19.482337",
-        "date": "2025-11-18T11:03:10.873567",
+        "date": "2026-11-20T13:40:19.564068",
         "content_hash": "98d16272d12811dadca3520640bff985e86772f2410bda194e66eb28164cc0e2",
         "path": "general-principles.html",
         "release": "1.5.0"

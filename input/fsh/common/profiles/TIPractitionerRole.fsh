@@ -1,6 +1,5 @@
 Profile: TIPractitionerRole
-// Parent: PractitionerRoleEuCore
-Parent: PractitionerRole
+Parent: PractitionerRoleEuCore
 Id: ti-practitioner-role
 Title: "TI PractitionerRole"
 Description: """
@@ -11,10 +10,6 @@ Dieses Profil beschreibt die Verwendung der FHIR-Ressource PractitionerRole in d
 * ^version = "1.5.0"
 * ^date = "2026-12-08"
 * ^status = #active
-
-//-------- EU --------
-* insert ImposeProfile(PractitionerRoleEuCore, 0)
-//--------------------
 
 * id MS
 * practitioner only Reference (TIPractitioner)

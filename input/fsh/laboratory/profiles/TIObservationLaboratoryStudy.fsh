@@ -171,8 +171,8 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
     * ^definition = "Benennung des labormedizinischen Bereiches als Freitext."
 * code MS
   * ^definition = "Hier wird die konkrete einzelne Laboruntersuchung spezifiziert."
-  * extension contains $data-absent-reason named data-absent-reason 0..1 MS
-  * extension[data-absent-reason]
+  * extension contains $data-absent-reason named dataAbsentReason 0..1 MS
+  * extension[dataAbsentReason]
     * ^definition = "Begründung für die Nicht-Vergabe eines Codes zur Laboruntersuchung"
     * ^short = "Grund für das Nichtvorhandensein eines Codes"
     * valueCode MS

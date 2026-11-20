@@ -6,8 +6,8 @@ Description: "Defines the medication resource for the Medication Service in the 
 //TODO: copy Ruleset contents into this resource as soon as the issue: https://github.com/hapifhir/org.hl7.fhir.core/issues/1670 is resolved
 * insert TIMedicationElements
 // preserve the version
-* ^version = "1.4.0"
-* ^date = "2026-09-23"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * contained MS

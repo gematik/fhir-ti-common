@@ -27,6 +27,19 @@
                     }
                 },
                 {
+                    "title": "Ablehnung von update ohne If-Match bei versioned-update",
+                    "key": "IG-TI07958NQU",
+                    "actor": [
+                        "EPA-MHD-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html",
+                    "diff": {}
+                },
+                {
                     "title": "Unterstützung des :not-Modifikators",
                     "key": "IG-TI08247KW8",
                     "actor": [
@@ -73,6 +86,32 @@
                     "status": "ACTIVE",
                     "conformance": "SHALL",
                     "path": "validation.html",
+                    "diff": {}
+                },
+                {
+                    "title": "Versionsprüfung bei der FHIR-Interaktion update",
+                    "key": "IG-TI49672E0E",
+                    "actor": [
+                        "EPA-MHD-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html",
+                    "diff": {}
+                },
+                {
+                    "title": "ETag je Instanzversion im _history-Bundle",
+                    "key": "IG-TI58182JX4",
+                    "actor": [
+                        "EPA-MHD-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "MAY",
+                    "path": "general-principles.html",
                     "diff": {}
                 },
                 {

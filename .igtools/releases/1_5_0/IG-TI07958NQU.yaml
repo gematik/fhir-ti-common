@@ -1,0 +1,19 @@
+actor:
+- EPA-MHD-Service
+conformance: SHALL
+content_hash: a0d2efe08a948d4111de3541058e42f2ec4e2db1637221280fe12789e9e8ed4a
+created: '2026-11-19T15:11:01.776204'
+date: '2026-11-19T15:11:01.776206'
+key: IG-TI07958NQU
+modified: '2026-11-19T15:11:01.776206'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-MHD-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS eine <i>update</i>-Anfrage ohne den HTTP-Header <i>If-Match</i>
+  mit HTTP <i>400 Bad Request</i> ablehnen, wenn er für den betroffenen Ressourcentyp
+  im CapabilityStatement den Wert <i>versioned-update</i> angibt.
+title: Ablehnung von update ohne If-Match bei versioned-update
+version: 0
