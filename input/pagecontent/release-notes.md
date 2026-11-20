@@ -33,6 +33,12 @@
 - Die Profile _TIMedicationRequestDgMP_, _TIMedicationDispenseDgMP_ und _TIMedicationStatementDgMP_ tragen nun die Constraints `ExtRequiresDosage-MR`, `ExtRequiresDosage-MD` bzw. `ExtRequiresDosage-MS` aus dem Medication IG DE (DosageExtensionsRequireDosage). Liegt die Dosierungs-Extension _renderedDosageInstruction_ oder _generatedDosageInstructionsMeta_ vor, müssen den Profilen entsprechende Instanzen mindestens eine Dosierung enthalten.
 - In _TIMedicationDispenseDgMP_ wird die Dosierung nun als _DosageDgMP_ statt als _DosageDE_ abgebildet. Damit gelten für die Abgabe dieselben Dosierungs-Vorgaben des Medication IG DE wie für Verordnung und Medikationsinformation.
 
+#### Paketabhängigkeiten
+
+- IHE MHD ist auf `ihe.iti.mhd#4.2.5` festgelegt. Diese Version bindet `ihe.formatcode.fhir#1.6.0` als feste transitive Abhängigkeit ein.
+- Als bekannte Einschränkung bindet `hl7.fhir.eu.base#2.0.1` weiterhin den Kommentarstand `ihe.pharm.mpd.r4#1.0.0-comment-2` ein. Die Abhängigkeit ergibt sich aus dem Paket von HL7 Europe Base.
+- Die Veröffentlichung von TI Common 1.5.0 setzt die Umstellung auf das finale Paket `de.fhir.medication#2.0.0` voraus.
+
 #### Systemverhalten
 
 - Dem CodeSystem _TIOperationOutcomeDetailsCS_ und dem ValueSet _TIOperationOutcomeDetailsVS_ wurde der Code _SVC_DANGLING_REFERENCE_ hinzugefügt. Er wird verwendet, wenn eine schreibende Anfrage abgelehnt wird, weil sie zu hängenden literalen Referenzen führen würde (siehe Abschnitt "Referentielle Integrität" unter [Generelle Prinzipien](general-principles.html)).
