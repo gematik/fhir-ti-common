@@ -55,8 +55,7 @@ Description: "Dieses Profil definiert die Repräsentation eines Geburtsnamens in
 
 Profile: TIPatient
 Id: ti-patient
-// Parent: PatientEuCore
-Parent: Patient
+Parent: PatientEuCore
 Title: "TI Patient"
 Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data Services"
 * insert Meta
@@ -64,20 +63,6 @@ Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data 
 * ^version = "1.5.0"
 * ^date = "2026-12-08"
 * ^status = #active
-
-//-------- EU --------
-* insert ImposeProfile(PatientEuCore, 0)
-* extension contains
-    $patient-birthPlace named birthPlace 0..1 and
-    $sexForClinicalUse named sex-for-clinical-use 0..* and // from Lab Report
-    $individual-genderIdentity named gender-identity 0..* and
-    $individual-pronouns named pronouns 0..* and
-    $patient-citizenship named patient-citizenship 0..* and
-    $patient-nationality named patient-nationality 0..* and
-    $patient-birthTime named birthTime 0..1
-* extension[birthPlace].valueAddress only AddressEu
-//-------------------- 
-
 
 * obeys pat-de-1
 * obeys pat-de-2
@@ -95,10 +80,16 @@ Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data 
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
   * ^comment = """
+        Wenn für einen Namen weder `family` noch `given` noch `text` vorliegt, MUSS die Extension [Data Absent Reason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) an `Patient.name.extension` den Grund für das Fehlen angeben. Dies entspricht der geerbten Invariante `eu-pat-1`.
+
         Um die Unterscheidung der Namensbestandteile gemäß dem VSDM-Datensatz beizubehalten oder Präfixe als akademische Titel zu qualifizieren, können Anbieter die im deutschen HumanName-Basisprofil spezifizierten Erweiterungen unterstützen: [HumanName DE Basis](https://simplifier.net/basisprofil-de-r4/humannamedebasis).
 
         Dies ist jedoch nicht verpflichtend im Rahmen dieser Spezifikation.
         """
+* name.extension contains $data-absent-reason named dataAbsentReason 0..*
+* name.extension[dataAbsentReason]
+  * ^short = "Grund für fehlende Namensangaben"
+  * ^definition = "Gibt an, warum für diesen Patientennamen weder family noch given noch text vorliegt. Fehlen alle drei Angaben, muss diese Extension gemäß eu-pat-1 vorhanden sein."
 * name contains
     Name 0..1 MS and
     Geburtsname 0..1 MS

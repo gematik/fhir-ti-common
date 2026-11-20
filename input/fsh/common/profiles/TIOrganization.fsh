@@ -1,7 +1,6 @@
 Profile: TIOrganization
 Id: ti-organization
-// Parent: OrganizationEuCore
-Parent: Organization
+Parent: OrganizationEuCore
 Title: "TI Organization"
 Description: "Definiert die Datenstruktur für medizinische, regulatorische und technische Organisationen"
 * insert Meta-With-Versioning
@@ -9,11 +8,6 @@ Description: "Definiert die Datenstruktur für medizinische, regulatorische und 
 * ^version = "1.5.0"
 * ^date = "2026-12-08"
 * ^status = #active
-
-//-------- EU --------
-* insert ImposeProfile(OrganizationEuCore, 0)
-* address only AddressEu
-//--------------------
 
 * extension MS
 * extension contains

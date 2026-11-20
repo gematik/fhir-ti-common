@@ -7,10 +7,11 @@
 
 #### Allgemein (Common)
 
-- _TIPatient_ ist nun konform zum Patient EU Core-Profil. Die Konformität wird über imposeProfile festgelegt. Zur Kompatibilität mit EU Core wurde die Kardinalität von _name[Name]_ auf 0..1 gesetzt, sodass auch Patient.name ohne HumanName.use zulässig bleibt.
-- _TIOrganization_ ist nun konform zum Organization EU Core-Profil. Die Konformität wird über imposeProfile festgelegt. Dadurch wird für Organization.address das EU-Core-Profil Address EU verwendet.
-- _TIPractitioner_ ist nun konform zum Practitioner EU Core-Profil. Die Konformität wird über imposeProfile festgelegt. Im Zuge der Anpassung wurden die Constraints für die Abbildung des Namens an EU Core angeglichen. Insbesondere sind _Practitioner.name.text_ und _Practitioner.name.family_ nicht mehr verpflichtend und können optional angegeben werden.
-- _TIPractitionerRole_ ist nun konform zum PractitionerRole EU Core-Profil. Die Konformität wird über imposeProfile festgelegt.
+- _TIPatient_, _TIPractitioner_, _TIPractitionerRole_ und _TIOrganization_ werden direkt von den jeweiligen EU-Core-Profilen abgeleitet. Die Paketabhängigkeit `hl7.fhir.eu.base#2.0.1` legt die Version der Basisprofile fest. Gegenüber TI Common 1.3.1 ergeben sich je Profil folgende Änderungen.
+  - _TIPatient_ übernimmt die Invariante `eu-pat-1`, das Adressprofil _AddressEu_ und die EU-Core-Slices für Geburtsort, Geburtszeit, klinisches Geschlecht, Geschlechtsidentität, Pronomen, Staatsbürgerschaft und Nationalität. Mindestens ein Name und das Geburtsdatum bleiben Pflicht. Der Slice `name[Name]` ist optional, sodass auch ein Name ohne `HumanName.use` die Kardinalität von `Patient.name` erfüllen kann.
+  - _TIPractitioner_ übernimmt _AddressEu_ für Adressen. Mindestens ein Name bleibt Pflicht. `HumanName.text` und `HumanName.family` sind optional. Die Invariante `ti-practitioner-name-1` verlangt für jeden Namen mindestens eines der Elemente `family`, `given`, `text` oder die Extension `data-absent-reason`. Fehlt `HumanName.text`, setzt das anzeigende System den Namen aus den vorhandenen Bestandteilen `prefix`, `given` und `family` in dieser Reihenfolge zusammen.
+  - _TIPractitionerRole_ schränkt `practitioner` und `organization` bei Angabe auf Referenzen auf _TIPractitioner_ bzw. _TIOrganization_ ein. Beide Zielprofile sind von den entsprechenden EU-Core-Profilen abgeleitet.
+  - _TIOrganization_ übernimmt _AddressEu_ für Adressen.
 - Die neuen Datentyp-Profile _TIHumanName_ und _TIBirthName_ wurden zur Abbildung offizieller Namen und Geburtsnamen ergänzt.
 - Als gemeinsame Profile wurden _TIConditionDiagnosis_, _TIRelatedPerson_, _TIBodyStructure_ und _TIAppendixDocumentReference_ für Diagnosen, Kontakt- und Bezugspersonen, Körperstrukturen und Dokumentanhänge hinzugefügt. _TIConditionDiagnosis_ leitet von _ConditionEuCore_ und _TIBodyStructure_ von _BodyStructureEuCore_ ab. Damit übernehmen auch diese beiden Profile die Vorgaben ihrer jeweiligen EU-Core-Basisprofile.
 - Für Probenbehälter und außerkörperliche Probenquellen wurden die Profile _TIDeviceSpecimenContainer_, _TIDeviceDefinitionSpecimenContainer_ und _TIDeviceDefinitionSpecimenSubject_ ergänzt.
