@@ -1,16 +1,19 @@
 actor:
+- EPA-MHD-Service
 - EPA-Medication-Service
 - EPA-Patient-Service
 conformance: SHALL
 content_hash: 98d16272d12811dadca3520640bff985e86772f2410bda194e66eb28164cc0e2
 created: '2025-03-10T12:54:11.421936'
-date: '2025-11-18T11:03:10.873567'
+date: '2026-11-20T13:40:19.564068'
 key: IG-TI94321ZRC
 modified: '2025-03-12T12:47:19.482337'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
+  EPA-MHD-Service:
+  - Produkttest
   EPA-Medication-Service:
   - Produkttest
   EPA-Patient-Service:

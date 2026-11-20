@@ -169,6 +169,19 @@
             "characteristics": [
                 {
                     "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
@@ -204,6 +217,19 @@
             "text": "Der FHIR Data Service MUSS sicherstellen, dass die <i>versionId</i> einer FHIR-Instanz bei jeder neuen Version um genau 1 erhöht wird. Die erste Version einer FHIR-Instanz erhält die <i>versionId</i> 1, die nächste Version 2, und so weiter. Beispiel: 1 → 2 → 3 →",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "EPA-Medication-Service",
@@ -367,6 +393,19 @@
             "text": "Der FHIR Data Service MUSS bei einem HTTP GET-Request auf eine spezifische Version einer FHIR-Instanz den HTTP Status Code <i>404 (Not Found)</i> zurückgeben, wenn die angeforderte Version nicht existiert.\n <br/><br/>\n Die Response MUSS eine <i>OperationOutcome</i>-Ressource enthalten mit folgenden Eigenschaften:\n <ul>\n <li><i>OperationOutcome.issue.code</i> auf <i>not-found</i> gesetzt.</li>\n <li><i>OperationOutcome.issue.diagnostics</i> mit einer Meldung, dass die angeforderte Version nicht existiert.</li>\n </ul>",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "EPA-Medication-Service",
@@ -752,6 +791,19 @@
             "text": "Der FHIR Data Service MUSS die <i>_history</i>-Abfrage gemäß der HL7 FHIR Spezifikation [FHIR History Interaction] implementieren, um die Versionshistorie einer FHIR-Instanz abrufbar zu machen.",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "EPA-Medication-Service",
@@ -2036,6 +2088,19 @@
             "characteristics": [
                 {
                     "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
@@ -2206,6 +2271,19 @@
             "text": "Der FHIR Data Service MUSS innerhalb des <i>_history</i> <i>Bundle</i> für jede Version einer FHIR-Instanz die zugehörigen <i>entry.request</i>- und <i>entry.response</i>-Elemente bereitstellen.\n <br/><br/>\n <ul>\n <li>\n <i>Bundle.entry.request.method</i> gibt die HTTP-äquivalente Aktion an, die zur Entstehung der jeweiligen Version der Ressourceinstanz geführt hat. <i>POST</i> für das Anlegen, <i>PUT</i> für eine Aktualisierung, <i>DELETE</i> für das Löschen der Ressourceinstanz.\n </li>\n <li>\n <i>Bundle.entry.request.url</i> enthält die äquivalente Ressourcen-URL relativ zum FHIR-Endpunkt, aus der die versionsspezifische Abruf-URL <i>ResourceType/{id}/_history/{versionId}</i> abgeleitet werden kann.\n </li>\n <li>\n <i>Bundle.entry.response.status</i> enthält den HTTP-ähnlichen Status der internen Verarbeitung (z. B. <i>201 Created</i> oder <i>200 OK</i>).\n </li>\n <li>\n <i>Bundle.entry.response.lastModified</i> gibt das Datum und die Uhrzeit der letzten Änderung der jeweiligen Version der Ressourceinstanz an und stimmt mit <i>meta.lastUpdated</i> überein, sofern <i>Bundle.entry.resource</i> vorhanden ist.\n </li>\n <li>\n <i>Bundle.entry.response.location</i> enthält die vollständige versionsspezifische Ressourcen-URL (z. B. <i>ResourceType/{id}/_history/{versionId}</i>), sofern die entsprechende Version der Ressourceinstanz einzeln abrufbar ist.\n </li>\n </ul>",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "EPA-Medication-Service",
@@ -2569,6 +2647,19 @@
             "text": "Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie aller Instanzen eines bestimmten Ressourcentyps über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/_history</i>.",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "EPA-Medication-Service",
@@ -3010,6 +3101,19 @@
             "characteristics": [
                 {
                     "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "EPA-Medication-Service",
                         "id": "productType161",
                         "description": "EPA-Medication-Service"
@@ -3219,6 +3323,19 @@
             "text": "Der FHIR Data Service MUSS es ermöglichen, die Versionshistorie einer FHIR-Instanz über eine HTTP GET-Anfrage an folgende URL abzurufen: <i>[base]/[ResourceType]/[id]/_history</i>.",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "EPA-Medication-Service",
@@ -3606,6 +3723,19 @@
             "text": "Der FHIR Data Service MUSS als Antwort auf eine <i>_history</i>-Abfrage ein Bundle mit dem Typ <i>history</i> zurückgeben, das die Versionen der angeforderten FHIR-Instanz enthält.",
             "conformance": "SHALL",
             "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
                 {
                     "product_type": {
                         "name": "EPA-Medication-Service",
