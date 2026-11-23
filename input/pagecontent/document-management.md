@@ -1,6 +1,6 @@
 Für die Referenzierung, Verwaltung und den Austausch von Dokumenten über FHIR-basierte Schnittstellen innerhalb der Telematikinfrastruktur wird ein einheitliches Dokumentenmodell auf Basis des IHE-Profils _Mobile access to Health Documents [IHE ITI MHD]_ verwendet. IHE MHD definiert auf Basis von HL7 FHIR ein standardisiertes Modell für den dokumentenbasierten Austausch. Zentrale Ressource für die Beschreibung eines Dokuments ist `DocumentReference`. Sie enthält die Dokumentmetadaten und verweist über `DocumentReference.content.attachment` auf den eigentlichen Dokumenteninhalt.
 
-Die hier im IG definierten Profile basieren auf den entsprechenden IHE-MHD-Profilen und bilden die gemeinsame Grundlage für die Verwendung von Dokumenten über FHIR-basierte Schnittstellen innerhalb der TI. FHIR-basierte TI-Fachdienste und FHIR Data Services können diese Profile unmittelbar verwenden oder für ihre jeweiligen fachlichen Anforderungen weiter einschränken.
+Die in diesem Abschnitt beschriebenen TI-MHD-Profile basieren auf den entsprechenden IHE-MHD-Profilen und bilden die gemeinsame Grundlage für die Verwendung von Dokumenten über FHIR-basierte Schnittstellen innerhalb der TI. FHIR-basierte TI-Fachdienste und FHIR Data Services können diese Profile unmittelbar verwenden oder für ihre jeweiligen fachlichen Anforderungen weiter einschränken.
 
 Ziel ist es, dass Client-Systeme Dokumente gegenüber unterschiedlichen FHIR-basierten TI-Fachdiensten und FHIR Data Services nach demselben grundlegenden Modell verarbeiten können. Einmal implementierte FHIR-Profile und Mechanismen zur Verarbeitung von Dokumenten können dadurch in unterschiedlichen fachlichen Kontexten wiederverwendet werden.
 
@@ -43,6 +43,12 @@ StructureDefinition/ti-document-location-extension,
 {% include artifacts-table-generator.html render=document-profiles %}
 
 Für Client-Systeme, wie beispielsweise Primärsysteme oder Frontends der Versicherten bedeutet dies, dass dieselben grundlegenden FHIR-Strukturen und Verarbeitungsmechanismen für Dokumente aus unterschiedlichen Diensten wiederverwendet werden können. Dies ist insbesondere für die dienstübergreifende Verwendung von `DocumentReference` relevant. Ist ein dienstspezifisches `DocumentReference`-Profil von einem gemeinsamen TI-Common-MHD-Profil abgeleitet, kann die Ressourceninstanz auch in einem anderen fachlichen Kontext verwendet werden, sofern dieser ebenfalls auf derselben gemeinsamen Profilbasis aufbaut.
+
+### Anhänge innerhalb eines FHIR-Dokuments
+
+Das Profil [_TI Appendix Document Reference_](./StructureDefinition-ti-appendix-document-reference.html) bildet einen eingebetteten PDF-Anhang innerhalb eines FHIR-Dokuments ab. Ein Beispiel ist ein ergänzendes PDF in einem dgLP-Laborbefund, auf das der `DiagnosticReport` über eine Extension an `media.link` verweist.
+
+Der Anhang ist Bestandteil des FHIR-Dokuments. Er wird nicht als eigenständiges Dokument eingestellt oder über _Find Document References [ITI-67]_ gefunden. Für verwaltete Dokumente gilt das Profil [_TI MHD DocumentReference_](./StructureDefinition-ti-mhd-document-reference.html). In der ePA werden je dgLP-Laborbefund der Befund selbst und das daraus extrahierte PDF als eigenständige Dokumente bereitgestellt (siehe gemIG_ePA_Laboratory, Stellungnahme GKV-SV_02).
 
 ### Dokumentmetadaten und Dokumenteninhalt
 
