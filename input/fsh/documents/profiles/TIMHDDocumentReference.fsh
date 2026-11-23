@@ -202,7 +202,7 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 * context.sourcePatientInfo.reference MS
   * ^short = "Demographische Daten zum Patienten im Quellsystem"
   * ^definition = "Demographische Daten zum Patienten im Quellsystem (DocumentEntry.sourcePatientInfo)"
-  * ^comment = "n/a"
+  * ^comment = "Bei Verwendung dieses TI-Profils soll diese Referenz nicht auf eine in der DocumentReference enthaltene Patient-Ressource (contained) verweisen."
 * context.related 0..* MS
   * ^short = "Liste von IDs, mit denen das Dokument assoziiert wird"
   * ^definition = "Liste von IDs, mit denen das Dokument assoziiert wird (DocumentEntry.referenceIdList)"
