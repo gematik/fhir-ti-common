@@ -108,7 +108,6 @@ Alias: $epa-xds-format-code-vs = https://gematik.de/fhir/terminology/ValueSet/ep
 Alias: $epa-xds-event-code-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-event-code-vs
 Alias: $epa-xds-healthcare-facility-type-code-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-healthcare-facility-type-code-vs
 Alias: $epa-xds-practice-setting-code-vs = https://gematik.de/fhir/terminology/ValueSet/epa-xds-practice-setting-code-vs
-Alias: $epa-mhd-document-relationship-type-vs = https://gematik.de/fhir/terminology/ValueSet/epa-mhd-document-relationship-type-vs
 Alias: $epa-xds-confidentiality-code-vs-url = https://gematik.de/fhir/terminology/ValueSet/epa-xds-confidentiality-code-vs
 Alias: $ti-vs-expansion-deprecated = https://gematik.de/fhir/terminology/StructureDefinition/valueset-expansion-deprecated
 Alias: $epa-data-category-other-vs = https://gematik.de/fhir/terminology/ValueSet/epa-data-category-other-vs

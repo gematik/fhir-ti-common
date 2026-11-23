@@ -71,7 +71,6 @@ Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentRef
 // FIXME: Add support for authorSpecialty and authorTelecommunication
 * relatesTo 0..* MS
   * code MS
-  * code from $epa-mhd-document-relationship-type-vs (required)
   * target MS
     * identifier 0..1 MS
     * identifier only IHE.MHD.EntryUUID.Identifier

@@ -93,7 +93,6 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 * relatesTo 0..* MS
   * ^comment = "Logical Reference unter Nutzung der entryUUID"
   * code MS
-  * code from $epa-mhd-document-relationship-type-vs (required)
   * target MS
     * identifier 0..1 MS
     * identifier only IHE.MHD.EntryUUID.Identifier

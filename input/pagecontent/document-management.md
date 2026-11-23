@@ -89,6 +89,8 @@ Die Beziehung zwischen der alten und neuen `DocumentReference`-Instanz wird übe
     </figcaption>
 </figure>
 
+Welche Dokumentbeziehungen ein FHIR-basierter TI-Fachdienst oder FHIR Data Service verarbeitet, hängt vom jeweiligen Dokumenttyp und den Vorgaben des Dienstes ab. Der dienstspezifische IG kann festlegen, welche Codes in `DocumentReference.relatesTo.code` für einen Dokumenttyp zulässig sind und mit welcher Fehlerantwort der Dienst unzulässige Codes abweist.
+
 <br/>
 
 Die Verweise aus anderen FHIR-Ressourcen sind nur potenziell von der Versionierung betroffen. Jeder Service regelt im Detail, wie referenzierende Ressourcen bei einer Dokumentersetzung zu behandeln sind und insbesondere, ob bestehende Verweise auf die abgelöste Version bestehen bleiben dürfen oder zwingend auf die neue Dokumentversion umgestellt werden müssen. Das folgende Beispiel zeigt eine mögliche Ausgestaltung aus dem `Task`-Bereich: Wird ein Dokument durch eine neue Version ersetzt, verweist eine bestehende Referenz weiterhin auf die abgelöste `DocumentReference` mit `status = superseded` und muss daher im Zuge der Dokumentersetzung von der Geschäftslogik des Dienstes auf die neue `DocumentReference` mit `status = current` umgestellt werden.
