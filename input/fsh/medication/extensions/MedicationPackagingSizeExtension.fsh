@@ -6,6 +6,8 @@ Description: "Specification of the package size according to divided quantity (e
 * ^version = "1.5.0"
 * ^date = "2026-12-08"
 * ^status = #active
+* ^context[+].type = #element
+* ^context[=].expression = "Medication.amount.numerator"
 
 * value[x] only string
 * valueString 1.. MS

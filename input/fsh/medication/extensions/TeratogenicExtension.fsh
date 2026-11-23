@@ -7,6 +7,8 @@ Description: "Abbildung der Angaben zur Verordnung eines teratogenen Arzneimitte
 * ^version = "1.5.0"
 * ^date = "2026-12-08"
 * ^status = #active
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationRequest"
 
 * value[x] 0..0
 * url MS

@@ -1,7 +1,7 @@
 versions:
   FSH Sushi: 3.21.1
   IG Publisher: 3.0.5
-  Java: 21.0.13.0.3
+  Java: 21.0.13.1
   PlantUML: 1.2025.2
   Python: 3.12.16
   fhirscripts: 0.32.1

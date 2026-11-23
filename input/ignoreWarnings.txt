@@ -25,6 +25,7 @@ The html source does not contain the publish box; this is recommended for publis
 %MSG_EXTERNAL_FAIL%
 %Extensions sollten nicht den Kontext Element haben%
 %Das sich wiederholende Element hat ein pattern%
+The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 %uses system 'https://gematik.de/fhir/epa-medication/CodeSystem/context-code' without a version%
 %multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'%
 %OID assigned%
@@ -47,6 +48,7 @@ The ImplementationGuide uses package ihe.iti.mhd#4.2.5-comment released on 2026-
 %html source has duplicate element ids: docref_v2-to-docref_v1,entity_docref_v1,entity_docref_v2,link_docref_v2_docref_v1%
 %html source is not well formed: Found "</a>" expecting "</img>"%
 %package ihe.iti.mhd#4.2.5-comment released on 2026-06-16, but the most recent appropriate version is 5.0.0%
+%http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.4.0 is deprecated%
 
 # Ignoring Warnings: We are using a custom template of our own
 %publish box%
@@ -155,6 +157,8 @@ URL-Wert 'http://goodcare.org/devices/id' löst nicht auf
 %URL-Wert 'http://testsystem.de' löst nicht auf%
 %http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder%
 %http://ihe-d.de/CodeSystems/IHEXDSclassCode%
+%urn:oid:1.3.6.1.4.1.19376.3.276.1.5.9%
+%urn:oid:1.3.6.1.4.1.19376.3.276.1.5.8%
 
 # German language is not resolved for the SNOMED CT code system.
 %the code system http://snomed.info/sct has no Display Names for the language de%
@@ -172,3 +176,6 @@ Canonical URL 'http://hl7.org/fhir/uv/ips/ValueSet/results-microorganism-snomed-
 
 # Additional Bindings with no key
 %ext-ab-1%
+
+# Leading whitespace in the inherited CapabilityStatement invariant cpb-15 (FHIR R4 4.0.1)
+value should not start or finish with whitespace ' not(f:kind/@value='instance') or (not(exists(f:implementation)) and exists(f:software))'

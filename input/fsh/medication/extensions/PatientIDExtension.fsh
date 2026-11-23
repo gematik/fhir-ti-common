@@ -6,6 +6,9 @@ Description: "Patienten-ID, welche bei der Verordnung bestimmter Arzneimittel an
 * ^version = "1.5.0"
 * ^date = "2026-12-08"
 * ^status = #active
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationRequest"
+
 
 * value[x] 1.. MS
 * value[x] only Identifier

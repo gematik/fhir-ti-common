@@ -7,6 +7,8 @@ Description: "This FHIR Extension for multiple prescriptions adds details such a
 * ^version = "1.5.0"
 * ^date = "2026-12-08"
 * ^status = #active
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationRequest"
 
 * extension ^slicing.rules = #closed
 * extension contains

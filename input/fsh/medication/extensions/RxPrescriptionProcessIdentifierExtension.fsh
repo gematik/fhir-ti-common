@@ -6,6 +6,12 @@ Description: "This extension is used to track medication prescription transactio
 * ^version = "1.5.0"
 * ^date = "2026-12-08"
 * ^status = #active
+* ^context[+].type = #element
+* ^context[=].expression = "Medication"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationStatement"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationDispense"
 
 * value[x] only Identifier
 * valueIdentifier 1..1
