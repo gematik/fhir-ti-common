@@ -114,6 +114,7 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
     * display 1.. MS
 * content MS
 * content.attachment MS
+* content.attachment.extension contains TIDocumentFileName named fileName 0..1
 * content.attachment.contentType 1..1 MS
 * content.attachment.contentType from $epa-xds-mime-type-vs (required)
 * content.attachment.language 1..1 MS
@@ -122,9 +123,10 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
   * ^definition = "Sprache, in der das Dokument abgefasst ist (DocumentEntry.languageCode)"
   * ^comment = "n/a"
 * content.attachment.url 1..1 MS
-  * ^short = "URI für das Dokument"
-  * ^definition = "URI für das Dokument (DocumentEntry.URI)"
-  * ^comment = "Dateiname mit Extension ohne Pfadangabe"
+  * ^short = "Abruf-URL des Dokuments"
+  * ^definition = "URL, über die der Dokumenteninhalt abgerufen werden kann."
+  * ^comment = "Der jeweilige Dienst legt fest, wie das Element bei Schreibtransaktionen belegt wird und wie der Dokumenteninhalt über die URL abgerufen wird."
+  * ^mapping[0].map = "DocumentEntry.repositoryUniqueId+DocumentEntry.uniqueId or DocumentEntry.URI (if URI is a retrieval URL)"
 * content.attachment.size 0..1 MS
   * ^short = "Größe des Dokuments in Bytes"
   * ^definition = "Größe des Dokuments in Bytes (DocumentEntry.size)"

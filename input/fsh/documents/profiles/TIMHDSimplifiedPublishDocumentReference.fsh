@@ -88,6 +88,7 @@ Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentRef
     * display 1.. MS
 * content MS
 * content.attachment 1..1 MS
+* content.attachment.extension contains TIDocumentFileName named fileName 0..1
 * content.attachment.contentType 1..1 MS
 * content.attachment.contentType from $epa-xds-mime-type-vs (required)
 * content.attachment.language 1..1 MS

@@ -13,6 +13,7 @@ StructureDefinition/ti-mhd-document-reference,
 ### Extensions
 
 {% capture document-extensions %}
+StructureDefinition/ti-document-file-name-extension,
 StructureDefinition/ti-document-storage-location-extension,
 {% endcapture %}
 {% include artifacts-table-generator.html render=document-extensions %}

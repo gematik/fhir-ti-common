@@ -49,6 +49,10 @@ Für Client-Systeme, wie beispielsweise Primärsysteme oder Frontends der Versic
 Dokumentmetadaten und Dokumenteninhalt werden getrennt voneinander verwaltet. Die `DocumentReference` beschreibt das Dokument und enthält die für dessen Verwaltung erforderlichen Metadaten. Der eigentliche Dokumenteninhalt wird über `DocumentReference.content.attachment` beschrieben und kann über die in `DocumentReference.content.attachment.url` angegebene URL abgerufen werden. Der Dokumenteninhalt kann dabei durch denselben FHIR-basierten TI-Fachdienst oder FHIR Data Service bereitgestellt werden oder sich in einem anderen Dienst befinden. Diese Trennung ermöglicht es, eine `DocumentReference` unabhängig vom Speicherort des Dokumenteninhalts in unterschiedlichen fachlichen Kontexten zu verwenden.
 
 
+Der jeweilige FHIR-basierte TI-Fachdienst oder FHIR Data Service legt fest, wie Clients den Dokumenteninhalt über die in `DocumentReference.content.attachment.url` angegebene URL abrufen und wie die Attachment-Elemente bei Schreibtransaktionen belegt werden. Die URL kann beispielsweise auf eine FHIR-`Binary`-Ressource verweisen. In der ePA erfolgt der Abruf über _Retrieve Document [ITI-68]_.
+
+Wenn `DocumentEntry.URI` einen Dateinamen enthält, wie in der ePA, wird dieser einschließlich Dateiendung und ohne Pfadangabe in der optionalen Extension [_TI Document File Name_](./StructureDefinition-ti-document-file-name-extension.html) am Attachment abgebildet. Die Extension steht auch im Profil _TI MHD Simplified Publish DocumentReference_ zur Verfügung. `DocumentReference.content.attachment.title` enthält den Dokumenttitel (`DocumentEntry.title`).
+
 ### Dienstübergreifende Referenzierung von Dokumenten
 
 Ein wesentliches Ziel der gemeinsamen TI-MHD-Profile ist die dienstübergreifende Referenzierung und Wiederverwendung von Dokumenten.
