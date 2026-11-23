@@ -11,13 +11,13 @@ Description: "Dieses Profil erweitert IHE MHD SubmissionSet Minimal."
 * ^status = #active
 
 * identifier[entryUUID]
-  * ^short = "Intern verwendete, aktenweit eindeutige Kennung für das SubmissionSet"
-  * ^definition = "Der intern verwendete, aktenweit eindeutige Identifikator des SubmissionSet, der dem Element SubmissionSet.entryUUID in XDS entspricht."
-  * ^comment = "Beim Einstellen eines SubissionSet wird dieser Wert vom Service generiert. Beim Lesen ist dieser Wert immer gesetzt."
+  * ^short = "Intern verwendete, eindeutige Kennung für das SubmissionSet"
+  * ^definition = "Der intern verwendete, eindeutige Identifikator des SubmissionSet, der dem Element SubmissionSet.entryUUID in XDS entspricht."
+  * ^comment = "Die entryUUID identifiziert den Eintrag des SubmissionSet im Dokumentenregister."
 * identifier[uniqueId]
-  * ^short = "Eindeutige aktenweite Kennung für das SubmissionSet"
-  * ^definition = "Der aktenweit eindeutige Identifikator des SubmissionSet, der dem Element SubmissionSet.uniqueId in XDS entspricht."
-  * ^comment = "Beim Einstellen eines SubissionSet wird dieser Wert vom Service generiert. Beim Lesen ist dieser Wert immer gesetzt."
+  * ^short = "Eindeutige Kennung für das SubmissionSet"
+  * ^definition = "Der eindeutige Identifikator des SubmissionSet, der dem Element SubmissionSet.uniqueId in XDS entspricht."
+  * ^comment = "Die uniqueId dient der Identifikation über Systemgrenzen hinweg."
 * status MS
   * ^short = "Status des SubmissionSet"
   * ^definition = "Status des SubmissionSet, welches dem Element SubmissionSet.availabilityStatus in XDS entspricht."
@@ -36,19 +36,17 @@ Description: "Dieses Profil erweitert IHE MHD SubmissionSet Minimal."
 * date MS
   * ^short = "Erstellungszeitpunkt des SubmissionSet"
   * ^definition = "Erstellungszeitpunkt des SubmissionSet"
-  * ^comment = "Dieser Zeitpunkt wird vom Service überschrieben."  
+  * ^comment = "Die Angabe bezieht sich auf die Erstellung des SubmissionSets."
 * source.extension[authorOrg] MS
-  * ^short = "Person oder Institution, welche(s) das SubmissionSet erstellt hat"
-  * ^definition = "Person oder System, welche(s) das SubmissionSet erstellt hat"
-  * ^comment = "Der Service setzt die Referenz auf die deduplizierte Instanz, die im X-Requesting-Organization Header übergeben wurde bzw. bei Versichertenzugriff auf die logische Referenz aus Element .subject. Beim Lesen ist diese Referenz immer gesetzt."
+  * ^short = "Erstellende Organisation des SubmissionSet"
+  * ^definition = "Organisation, die das SubmissionSet erstellt hat."
 * extension[sourceId] MS
   * ^short = "Eindeutige Kennung der Quelle des SubmissionSet"
   * ^definition = "Eindeutige Kennung der Quelle des SubmissionSet"
-  * ^comment = "Telematik-ID der Institution bzw. KVNR, die das SubmissionSet erstellt hat."
+  * ^comment = "Die Kennung identifiziert die Quelle, von der das SubmissionSet stammt."
 
-// Hinweis: Brauchen wir auch Folder, die eingestellt werden können? Nein, da dynamische MIOs (d.h. Mutterpass und DiGA) nur im XDS Document Service verarbeitet werden 
 * entry.item 1..1 MS
-  * ^short = "logische Referenz auf die Dokumente im SubmissionSet mittels Datentyp identifier:entryUUID aus der erzeugten EPAMHDDocumentReference-Instanz"
+  * ^short = "Logische Referenz auf die Dokumente im SubmissionSet über deren entryUUID"
   * ^definition = "Referenz auf die Dokumente im SubmissionSet, welche dem Element SubmissionSet.entry.item in XDS entspricht."
-    * identifier 0..1 MS
-    * identifier only IHE.MHD.EntryUUID.Identifier
+  * identifier 0..1 MS
+  * identifier only IHE.MHD.EntryUUID.Identifier
