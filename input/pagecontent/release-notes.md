@@ -17,6 +17,10 @@
 - Für Probenbehälter und außerkörperliche Probenquellen wurden die Profile _TIDeviceSpecimenContainer_, _TIDeviceDefinitionSpecimenContainer_ und _TIDeviceDefinitionSpecimenSubject_ ergänzt.
 - Die gemeinsamen Extensions _CriticalResultExtension_, _PseudonymizedReportExtension_, _SecondaryStatusExtension_, _OrderEntryTimeExtension_, _SortingNumberExtension_, _ExternalServiceExtension_ und _SourceReferenceRangeExtension_ wurden ergänzt.
 
+#### Medikationsprozess (dgMP)
+
+- Update der Abhängigkeit zu de.fhir.medication 2.0.0
+
 #### Laborprozess
 
 - Für Laboraufträge, Laboruntersuchungen, Untersuchungsgruppen, ergänzende Abbildungen und Proben wurden die Profile _TIServiceRequestLaboratory_, _TIObservationLaboratoryStudy_, _TIObservationLaboratoryStudyGroup_, _TIObservationLaboratoryImageAttachment_ und _TISpecimenLaboratory_ hinzugefügt. Ergänzend wurden _TISpecimenAdditiveSubstanceLaboratory_, _TIDeviceLaboratoryAnalyzer_, _TIDeviceDefinitionLaboratoryAnalyzer_ und _TIDeviceLaboratorySpecimenSubject_ für Probenzusätze, Analysegeräte und außerkörperliche Probenquellen eingeführt.
@@ -28,11 +32,6 @@
 
 - Dem IG wurde die Seite [IHE MHD-basiertes Dokumentenmanagement in der TI](document-management.html) hinzugefügt. Sie beschreibt das gemeinsame Dokumentenmodell und das an IHE MHD orientierte Verhalten für die Referenzierung, Verwaltung und den Austausch von Dokumenten in der TI.
 - Für das TI-weite Dokumentenmanagement wurden die Profile _TIMHDDocumentReference_, _TIMHDSimplifiedPublishDocumentReference_, _TIMHDSubmissionSet_ und _TIMHDFolder_ hinzugefügt. Die Profile orientieren sich an den Konzepten von IHE MHD und stellen eine gemeinsame Grundlage für die Verwaltung und Referenzierung von Dokumenten in der Telematikinfrastruktur bereit. Ergänzt wurden außerdem die Extension _TIDocumentStorageLocation_, das CodeSystem _TIDocumentStorageLocationCS_ sowie die ValueSets _TIDocumentStorageLocationVS_ und _TIMHDDataCategoryVS_.
-
-#### Medikationsprozess (dgMP)
-
-- Die Profile _TIMedicationRequestDgMP_, _TIMedicationDispenseDgMP_ und _TIMedicationStatementDgMP_ tragen nun die Constraints `ExtRequiresDosage-MR`, `ExtRequiresDosage-MD` bzw. `ExtRequiresDosage-MS` aus dem Medication IG DE (DosageExtensionsRequireDosage). Liegt die Dosierungs-Extension _renderedDosageInstruction_ oder _generatedDosageInstructionsMeta_ vor, müssen den Profilen entsprechende Instanzen mindestens eine Dosierung enthalten.
-- In _TIMedicationDispenseDgMP_ wird die Dosierung nun als _DosageDgMP_ statt als _DosageDE_ abgebildet. Damit gelten für die Abgabe dieselben Dosierungs-Vorgaben des Medication IG DE wie für Verordnung und Medikationsinformation.
 
 #### Paketabhängigkeiten
 
@@ -58,6 +57,8 @@ Neue Anforderungen wurden hinzugefügt, bestehende geändert und nicht mehr ben�
 - Korrektur des Bindings für TIMedicationDgMP.form von CodeSystem zu ValueSet
 - Anpassung der Kardinalität der Slices von TIMedicationDgMP.form auf jeweils 0..*
 - Referenzierung des Profils DosageDgMP in TIMedicationDispenseDgMP
+- Die Profile _TIMedicationRequestDgMP_, _TIMedicationDispenseDgMP_ und _TIMedicationStatementDgMP_ tragen nun die Constraints `ExtRequiresDosage-MR`, `ExtRequiresDosage-MD` bzw. `ExtRequiresDosage-MS` aus dem Medication IG DE (DosageExtensionsRequireDosage). Liegt die Dosierungs-Extension _renderedDosageInstruction_ oder _generatedDosageInstructionsMeta_ vor, müssen den Profilen entsprechende Instanzen mindestens eine Dosierung enthalten.
+- In _TIMedicationDispenseDgMP_ wird die Dosierung nun als _DosageDgMP_ statt als _DosageDE_ abgebildet. Damit gelten für die Abgabe dieselben Dosierungs-Vorgaben des Medication IG DE wie für Verordnung und Medikationsinformation.
 
 ### Version 1.4.0
 
