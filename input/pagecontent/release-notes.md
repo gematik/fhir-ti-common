@@ -6,6 +6,8 @@
 - Korrektur des Bindings für TIMedicationDgMP.form von CodeSystem zu ValueSet
 - Anpassung der Kardinalität der Slices von TIMedicationDgMP.form auf jeweils 0..*
 - Referenzierung des Profils DosageDgMP in TIMedicationDispenseDgMP
+- Die Profile _TIMedicationRequestDgMP_, _TIMedicationDispenseDgMP_ und _TIMedicationStatementDgMP_ tragen nun die Constraints `ExtRequiresDosage-MR`, `ExtRequiresDosage-MD` bzw. `ExtRequiresDosage-MS` aus dem Medication IG DE (DosageExtensionsRequireDosage). Liegt die Dosierungs-Extension _renderedDosageInstruction_ oder _generatedDosageInstructionsMeta_ vor, müssen den Profilen entsprechende Instanzen mindestens eine Dosierung enthalten.
+- In _TIMedicationDispenseDgMP_ wird die Dosierung nun als _DosageDgMP_ statt als _DosageDE_ abgebildet. Damit gelten für die Abgabe dieselben Dosierungs-Vorgaben des Medication IG DE wie für Verordnung und Medikationsinformation.
 
 ### Version 1.4.0
 

@@ -118,6 +118,8 @@ Description: "Defines the medication request resource for the Medication Service
   * text ^short = "Dispensing Note"
   * text ^definition = "Instructions to the pharmacy that go beyond the dosage information"
 
+* obeys ExtRequiresDosage-MR
+
 * dosageInstruction MS
 * dosageInstruction only DosageDgMP
   * ^short = "Hier werden Informationen zur Dosierung angegeben."

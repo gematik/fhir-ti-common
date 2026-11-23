@@ -40,6 +40,8 @@ Description: "Hält die Medikationsinformationen eines Patienten."
   * end 0..1 MS
     * obeys epa-datetime
 
+* obeys ExtRequiresDosage-MS
+
 * dosage MS
 * dosage only DosageDgMP
   * ^short = "Strukturierte Dosierung/Gebrauchsanweisung"
