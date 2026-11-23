@@ -1,7 +1,8 @@
 Diese Seite stellt Vergleiche mit vorherigen Versionen bereit:
 
-* [1.3.1](comparison-v1.3.1/index.html)
-* [1.3.0](comparison-v1.3.0/index.html)
-* [1.2.0](comparison-v1.2.0/index.html)
-* [1.1.1](comparison-v1.1.1/index.html)
-* [1.0.1](comparison-v1.0.1/index.html)
+* [1.4.0](../comparison-v1.4.0/index.html)
+* [1.3.1](../comparison-v1.3.1/index.html)
+* [1.3.0](../comparison-v1.3.0/index.html)
+* [1.2.0](../comparison-v1.2.0/index.html)
+* [1.1.1](../comparison-v1.1.1/index.html)
+* [1.0.1](../comparison-v1.0.1/index.html)

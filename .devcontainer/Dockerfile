@@ -1,86 +1,77 @@
-FROM mcr.microsoft.com/devcontainers/base:alpine-3.20
+FROM mcr.microsoft.com/devcontainers/base:alpine
 
+# ENV CLOUD_SDK_VERSION=464.0.0
+# ENV JAVA_VALIDATOR_VERSION=6.3.25
 
-# Setzen der Umgebungsvariablen
-ENV CLOUD_SDK_VERSION=464.0.0
-ENV FIRELY_TERMINAL_VERSION=3.3.2
-ENV JAVA_VALIDATOR_VERSION=6.3.25
-ENV SUSHI_VERSION=3.16.4
+ARG TARGETPLATFORM
 
-# Google Cloud SDK herunterladen und installieren
-RUN curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-${CLOUD_SDK_VERSION}-linux-x86_64.tar.gz && \
-  tar -xf google-cloud-cli-${CLOUD_SDK_VERSION}-linux-x86_64.tar.gz && \
-  ./google-cloud-sdk/install.sh --quiet && \
-  rm google-cloud-cli-${CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
+# Backup if a specific version will be needed again
+# google-cloud-cli-${CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
 
-# Installieren der notwendige Tools
-# Add Microsoft's .NET SDK repository and install .NET SDK
-RUN apk add --no-cache dotnet8-sdk
+# Download and install gCloud CLI
+# This tries to use the architecture specific version
+RUN if [ "$TARGETPLATFORM" = "linux/arm64" ]; then \
+    curl -Lo google-cloud-cli-linux.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-arm.tar.gz; \
+    elif [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
+    curl -Lo google-cloud-cli-linux.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz; \
+    else \
+    curl -Lo google-cloud-cli-linux.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86.tar.gz; \
+    fi \
+    && tar -xf google-cloud-cli-linux.tar.gz \
+    && ./google-cloud-sdk/install.sh --quiet \
+    && rm google-cloud-cli-linux.tar.gz
 
-# Install ICU libraries
-RUN apk add --no-cache icu-libs
+RUN apk add --no-cache \
+    # .NET SDK for Firely Terminal
+    dotnet10-sdk \
+    # icu-libs \
+    # Node.js and NPM for FSH Sushi
+    nodejs npm \
+    # Java (OpenJDK) and Jeykll for IG Publisher
+    openjdk21 jekyll \
+    # Additional dependencies
+    # jq findutils curl ca-certificates \
+    # PlantUML
+    graphviz fontconfig
 
-# Install Node.js and npm
-RUN apk add --no-cache nodejs npm
-
-# Install Java (OpenJDK)
-RUN apk add --no-cache openjdk17
-
-# Install jekyll
-RUN apk add --no-cache jekyll
-
-# Install py-pip
-RUN apk add --no-cache py-pip py3-yaml pipx
-
-# Install Firely Terminal as vscode user
 # Switch to the vscode user
 USER vscode
 
-RUN pipx install gsutil
+# Setup for FHIR Validator
+RUN mkdir -p /home/vscode/.fhir/validators
+RUN if [ -z ${JAVA_VALIDATOR_VERSION+x} ]; then \
+    curl -Lo /home/vscode/.fhir/validators/validator_cli.jar https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar; \
+    else \
+    curl -Lo /home/vscode/.fhir/validators/validator_cli.jar https://github.com/hapifhir/org.hl7.fhir.core/releases/download/$JAVA_VALIDATOR_VERSION/validator_cli.jar; \
+    fi
+
+# Add gcloud to user path
 ENV PATH="/google-cloud-sdk/bin:${PATH}"
 
-# Install Firely Terminal
-RUN dotnet tool install --global Firely.Terminal --version $FIRELY_TERMINAL_VERSION
+# Install UV for Python environments
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+ENV PATH="/home/vscode/.local/bin:${PATH}"
 
-# Add .NET tools to PATH for vscode user
+WORKDIR /home/vscode
+RUN uv tool install git+https://github.com/gematik/fhir-scripts.git && \
+    fhirscripts install \
+    --sushi \
+    --firely-terminal
+WORKDIR /
+
+# Add Firely Terminal to user path
 ENV PATH="/home/vscode/.dotnet/tools:${PATH}"
 
-# Add fhirscripts
-RUN pipx install -f git+https://github.com/gematik/fhir-scripts.git
+###########################
+# Labels
+###########################
 
-# Switch back to root user to perform remaining installations
-USER root
+ARG COMMIT_HASH=FromEnvironment
+ARG VERSION=FromEnvironment
 
-RUN npm install -g fsh-sushi@$SUSHI_VERSION
-
-# Static webserver for local development
-RUN npm install -g http-server
-
-# Installieren der zusätzliche Abhängigkeiten
-RUN apk update && apk add --no-cache jq findutils curl ca-certificates
-
-# Setup for FHIR Validator
-RUN mkdir -p /home/vscode/.fhir/validators/
-RUN wget -q https://github.com/hapifhir/org.hl7.fhir.core/releases/download/$JAVA_VALIDATOR_VERSION/validator_cli.jar -O /home/vscode/.fhir/validators/validator_cli.jar
-
-# Set ownership
-RUN mkdir -p /home/vscode/.fhir/packages && \
-  chown -R vscode:vscode /home/vscode/.fhir/packages
-
-RUN mkdir -p /home/vscode/.fhir/settings/
-COPY codfsh-config.yaml /home/vscode/.fhir/settings/codfsh-config.yaml
-
-# Installing PlantUML...
-RUN apk add curl graphviz fontconfig
-
-# Setup scripts
-RUN mkdir /scripts
-RUN curl -L https://raw.githubusercontent.com/gematik/fhir-scripts/refs/heads/main/scripts/fhir_scripts.sh -o /scripts/fhir_scripts.sh && chmod +x /scripts/fhir_scripts.sh
-RUN /scripts/fhir_scripts.sh pytools
-
-# Setzen des Arbeitsverzeichnis
-WORKDIR /workspace
-
-COPY . /workspace
-
-CMD [ "/bin/bash" ]
+LABEL de.gematik.commit-sha=$COMMIT_HASH \
+      de.gematik.version=$VERSION \
+      de.gematik.vendor="gematik GmbH" \
+      maintainer="patientteam@gematik.de" \
+      de.gematik.app="FHIR Scripts DevContainer" \
+      de.gematik.git-repo-name="https://github.com/gematik/fhir-scripts"

@@ -1,6 +1,7 @@
 Instance: ExampleTIPatient
 InstanceOf: TIPatient
-Title: "Example Patient"
+Title: "Beispiel Patient"
+Description: "Beispiel einer Patient-Ressource, die dem TIPatient-Profil entspricht."
 Usage: #example
 * identifier[KVNR].system = $sid-identifier-kvid-10
 * identifier[KVNR].value = "G995030566"

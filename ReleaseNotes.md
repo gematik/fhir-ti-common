@@ -3,12 +3,15 @@
 
 # Release Notes: FHIR Implementation Guide Telematikinfrastruktur (TI) Common
 
-### Version 1.4.0-ballot.2
+### Version 1.4.1
+- Update der Abhängigkeit zu de.fhir.medication 1.0.8
+- Korrektur des Bindings für TIMedicationDgMP.form von CodeSystem zu ValueSet
+- Anpassung der Kardinalität der Slices von TIMedicationDgMP.form auf jeweils 0..*
+- Referenzierung des Profils DosageDgMP in TIMedicationDispenseDgMP
+
+### Version 1.4.0
 
 - Mit TIMedicationPZNIngredientDgMP und TIMedicationPharmaceuticalProductDgMP wurden zwei neue Profile für die Abbildung von PZN-Bestandteilen in Rezepturen sowie von pharmazeutischen Produkten innerhalb von Kombipackungen ergänzt.
-
-### Version 1.4.0-ballot.1
-
 - Hinzugefügt wurde das Profil für den TIFlow AccessCode und das Profil für das TIFlow Secret.
 - Ergänzung der dgMP-spezifischen Medikationsprofile, einschließlich TIMedicationDgMP, TIMedicationRequestDgMP, TIMedicationDispenseDgMP und TIMedicationStatementDgMP.
 

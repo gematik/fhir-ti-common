@@ -1,7 +1,7 @@
 {
   "package-id": "de.gematik.ti",
   "version": "1.4.1",
-  "path": "https://gematik.de/fhir/ti/1.4.0",
+  "path": "https://gematik.de/fhir/ti/1.4.1",
   "status": "release",
   "first": false,
   "mode": "milestone",

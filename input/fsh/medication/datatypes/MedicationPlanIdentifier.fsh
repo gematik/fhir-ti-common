@@ -7,8 +7,8 @@ Definiert die Struktur des Identifikators für einen Eintrag im elektronischen M
 """
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
+* ^version = "1.4.1"
+* ^date = "2026-11-24"
 * ^status = #active
 
 * use = #official (exactly)
