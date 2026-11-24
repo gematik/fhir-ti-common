@@ -17,6 +17,8 @@ Pro Validierungskontext wird jedes Package in genau einer Version verwendet. Die
 
 Für die bereitzustellenden Terminologiepakete gilt die jeweils festgelegte Mindestversion.
 
+Bei versionierten Terminologiereferenzen ist die angegebene Version für die Validierung maßgeblich. Dies gilt auch, wenn ein Backport-Paket ein Terminologieartefakt mit derselben Canonical-URL in einer anderen Version enthält.
+
 Durch die explizite Deklaration der verwendeten Packages und ihrer Versionen wird sichergestellt, dass sowohl bei der Implementierung als auch bei der Validierung ein einheitlicher und reproduzierbarer Stand der zugrunde liegenden FHIR-Artefakte verwendet wird.
 
 
