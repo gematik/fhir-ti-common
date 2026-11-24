@@ -1,6 +1,7 @@
 Extension: ContextExtension
 Id: context-extension
-Description: "Extension for indicating the context."
+Title: "TI Extension: Medikationskontext"
+Description: "Gibt an, in welchem Medikationskontext die Ressourceninstanz verwendet wird."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/context-extension"
 * ^version = "1.5.0"
@@ -16,5 +17,6 @@ Description: "Extension for indicating the context."
 
 * value[x] only code
 * valueCode 1..1 MS
-  * ^short = "Context of the resource"
+  * ^short = "Medikationskontext der Ressourceninstanz"
+  * ^definition = "Code für die Zuordnung der Ressourceninstanz zu einer Verschreibung, einem Nachtrag oder dem elektronischen Medikationsplan (eMP)."
 * valueCode from ContextCodeVS (required)

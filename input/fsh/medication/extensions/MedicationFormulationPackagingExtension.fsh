@@ -1,6 +1,7 @@
 Extension: MedicationFormulationPackagingExtension
 Id: medication-formulation-packaging-extension
-Description: "Information on the packaging of a formulation."
+Title: "TI Extension: Verpackung der Rezeptur"
+Description: "Enthält Angaben zur Verpackung einer Rezeptur."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-formulation-packaging-extension"
 * ^version = "1.5.0"
@@ -11,6 +12,6 @@ Description: "Information on the packaging of a formulation."
 
 * value[x] only string
 * valueString 1.. MS
-  * ^short = "Packaging of a formulation."
-  * ^definition = "Information on transport containers or packaging for a formulation."
+  * ^short = "Verpackung der Rezeptur"
+  * ^definition = "Angaben zu Transportbehältnissen oder zur Verpackung einer Rezeptur."
   * ^maxLength = 90

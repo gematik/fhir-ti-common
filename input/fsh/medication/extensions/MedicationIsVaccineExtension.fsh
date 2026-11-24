@@ -1,6 +1,7 @@
 Extension: MedicationIsVaccineExtension
 Id: medication-is-vaccine-extension
-Description: "Indicator of whether this is a vaccine."
+Title: "TI Extension: Impfstoffkennzeichen"
+Description: "Kennzeichnet, ob es sich um einen Impfstoff handelt."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension"
 * ^version = "1.5.0"
@@ -11,9 +12,5 @@ Description: "Indicator of whether this is a vaccine."
 
 * value[x] only boolean
 * valueBoolean 1.. MS
-* valueBoolean ^short = "Vaccine Indicator"
-* valueBoolean ^definition = """
-    Indicator of whether this is a vaccine..
-    \r\n\r\nfalse - no vaccine (default value)
-    \r\ntrue - vaccine
-"""
+* valueBoolean ^short = "Impfstoffkennzeichen"
+* valueBoolean ^definition = "Gibt an, ob es sich um einen Impfstoff handelt."

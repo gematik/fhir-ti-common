@@ -1,5 +1,6 @@
 Extension: NarcoticsExtension
 Id: narcotics-extension
+Title: "TI Extension: Betäubungsmittelverordnung"
 Description: "Abbildung der Angaben zur Verordnung eines Betäubungsmittels im Sinne des Betäubungsmittelgesetzes (BtMG)"
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/narcotics-extension"

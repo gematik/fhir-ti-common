@@ -1,6 +1,7 @@
 Extension: DrugCategoryExtension
 Id: drug-category-extension
-Description: "Extension for indicating the medication category."
+Title: "TI Extension: Arzneimittelkategorie"
+Description: "Gibt die Kategorie des Arzneimittels an."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension"
 * ^version = "1.5.0"
@@ -13,5 +14,5 @@ Description: "Extension for indicating the medication category."
 * valueCoding 1.. MS
 * valueCoding only Coding
 * valueCoding from $ti-drug-category-vs (required)
-  * code ^short = "Category"
-  * code ^definition = "Drug Category"
+  * code ^short = "Kategorie"
+  * code ^definition = "Kategorie des Arzneimittels."

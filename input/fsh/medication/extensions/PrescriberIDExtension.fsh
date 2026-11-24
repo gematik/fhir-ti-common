@@ -1,5 +1,6 @@
 Extension: PrescriberIDExtension
 Id: prescriber-id-extension
+Title: "TI Extension: Verschreiber-ID"
 Description: "Verschreiber-ID, welche bei der Verordnung bestimmter Präparate anzugeben ist, damit die Apotheke das Rezept beliefern darf."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/prescriber-id-extension"

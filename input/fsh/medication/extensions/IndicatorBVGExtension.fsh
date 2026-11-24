@@ -1,6 +1,7 @@
 Extension: IndicatorBVGExtension
 Id: indicator-bvg-extension
-Description: "Indicator of whether this regulation is made in reference to the 'Bundesentschädigungsgesetz' or the 'Bundesversorgungsgesetz'."
+Title: "TI Extension: Kennzeichen für BEG oder BVG"
+Description: "Kennzeichnet, ob die Verordnung mit Bezug zum Bundesentschädigungsgesetz (BEG) oder zum Bundesversorgungsgesetz (BVG) erfolgt."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-bvg-extension"
 * ^version = "1.5.0"
@@ -11,9 +12,5 @@ Description: "Indicator of whether this regulation is made in reference to the '
 
 * value[x] only boolean
 * valueBoolean 1.. MS
-* valueBoolean ^short = "BVG"
-* valueBoolean ^definition = """
-    Indicator of whether this regulation applies to claimants under the 'Bundesentschädigungsgesetz' (BEG) or to claimants under the 'Bundesversorgungsgesetz' (BVG).
-    \r\n\r\nfalse - not BVG (default value)
-    \r\ntrue - BVG
-"""
+* valueBoolean ^short = "Kennzeichen für BEG oder BVG"
+* valueBoolean ^definition = "Gibt an, ob die Verordnung mit Bezug zum Bundesentschädigungsgesetz (BEG) oder Bundesversorgungsgesetz (BVG) erfolgt."
