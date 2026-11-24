@@ -709,6 +709,12 @@ Das folgende Beispiel zeigt die erwartete Antwort auf eine schreibende Anfrage, 
 
 ### Verwendung von Codes im Status inactive
 
+Der FHIR Data Service prüft beim Speichern neuer FHIR-Instanzen und bei Aktualisierungen die Codes aus den CodeSystems des für den Dienst maßgeblichen Terminologiepakets. Ein Code gilt als inaktiv, wenn seine Konzepteigenschaft `status` in der verwendeten Paketversion den Wert `inactive` hat. Codes mit dem Status `deprecated` bleiben zulässig. CodeSystems außerhalb des Pakets, etwa SNOMED CT und LOINC, sind von dieser Prüfung ausgenommen.
+
+Bei einer Aktualisierung erstreckt sich die Prüfung auf die gesamte neue Instanzversion. Das einstellende System ersetzt darin enthaltene inaktive Codes in den von ihm befüllten Elementen. Elemente, deren Wert der Dienst selbst setzt, etwa die Datenkategorie, führen bei dieser Prüfung zu keiner Ablehnung.
+
+Beim Lesen liefert der Dienst bereits gespeicherte Instanzen unverändert und ohne erneute Prüfung auf inaktive Codes aus. Codes, die zum Zeitpunkt der Erstellung aktiv waren, bleiben auch nach einer späteren Statusänderung in diesen Bestandsdaten gültig.
+
 <requirement conformance="SHALL" key="IG-TI97619U65" title="Keine Registrierung bei Nutzung inaktiver Codes" version="0">
     <meta lockversion="false"/>
     <actor name="EPA-Audit-Service" description="EPA-Audit-Service">
