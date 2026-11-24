@@ -14,7 +14,7 @@
   - _TIOrganization_ übernimmt _AddressEu_ für Adressen.
 - Die neuen Datentyp-Profile _TIHumanName_ und _TIBirthName_ wurden zur Abbildung offizieller Namen und Geburtsnamen ergänzt.
 - Als gemeinsame Profile wurden _TIConditionDiagnosis_, _TIRelatedPerson_, _TIBodyStructure_ und _TIAppendixDocumentReference_ für Diagnosen, Kontakt- und Bezugspersonen, Körperstrukturen und Dokumentanhänge hinzugefügt. _TIConditionDiagnosis_ leitet von _ConditionEuCore_ und _TIBodyStructure_ von _BodyStructureEuCore_ ab. Damit übernehmen auch diese beiden Profile die Vorgaben ihrer jeweiligen EU-Core-Basisprofile.
-- Für Probenbehälter und außerkörperliche Probenquellen wurden die Profile _TIDeviceSpecimenContainer_, _TIDeviceDefinitionSpecimenContainer_ und _TIDeviceDefinitionSpecimenSubject_ ergänzt.
+- Für Probenbehälter wurde das Profil _TIDeviceSpecimenContainer_ ergänzt.
 - Die gemeinsamen Extensions _CriticalResultExtension_, _PseudonymizedReportExtension_, _SecondaryStatusExtension_, _OrderEntryTimeExtension_, _SortingNumberExtension_, _ExternalServiceExtension_ und _SourceReferenceRangeExtension_ wurden ergänzt.
 
 #### Medikationsprozess (dgMP)
@@ -24,7 +24,7 @@
 
 #### Laborprozess
 
-- Für Laboraufträge, Laboruntersuchungen, Untersuchungsgruppen, ergänzende Abbildungen und Proben wurden die Profile _TIServiceRequestLaboratory_, _TIObservationLaboratoryStudy_, _TIObservationLaboratoryStudyGroup_, _TIObservationLaboratoryImageAttachment_ und _TISpecimenLaboratory_ hinzugefügt. Ergänzend wurden _TISpecimenAdditiveSubstanceLaboratory_, _TIDeviceLaboratoryAnalyzer_, _TIDeviceDefinitionLaboratoryAnalyzer_ und _TIDeviceLaboratorySpecimenSubject_ für Probenzusätze, Analysegeräte und außerkörperliche Probenquellen eingeführt.
+- Für Laboraufträge, Laboruntersuchungen, Untersuchungsgruppen, ergänzende Abbildungen und Proben wurden die Profile _TIServiceRequestLaboratory_, _TIObservationLaboratoryStudy_, _TIObservationLaboratoryStudyGroup_, _TIObservationLaboratoryImageAttachment_ und _TISpecimenLaboratory_ hinzugefügt. Ergänzend wurden _TISpecimenAdditiveSubstanceLaboratory_, _TIDeviceLaboratoryAnalyzer_ und _TIDeviceLaboratorySpecimenSubject_ für Probenzusätze, Analysegeräte und außerkörperliche Probenquellen eingeführt.
 - Die folgenden Laborprofile bauen auf den europäischen Profilen aus HL7 Europe Laboratory auf und übernehmen deren Vorgaben: _TIServiceRequestLaboratory_ leitet von _ServiceRequestLabEu_ ab; _TIObservationLaboratoryStudy_, _TIObservationLaboratoryStudyGroup_ und _TIObservationLaboratoryImageAttachment_ leiten von _ObservationResultsLaboratoryEu_ ab.
 - _TISpecimenLaboratory_ leitet von _SpecimenEu_, _TISpecimenAdditiveSubstanceLaboratory_ von _SpecimenAdditiveSubstance_, _TIDeviceLaboratoryAnalyzer_ von _DeviceMeasuringLabReportEu_ und _TIDeviceLaboratorySpecimenSubject_ von _DeviceSpecimenLabReportEu_ ab. Auch diese Profile übernehmen damit die Vorgaben ihrer europäischen Basisprofile.
 - Für die Labordiagnostik wurden die Extensions _ReasonTypeLaboratoryExtension_, _TestProfileLaboratoryExtension_, _ZlogLaboratoryExtension_, _AssociationServiceLaboratoryExtension_, _NoLinearReferenceRangeLaboratoryExtension_ und _AlternativeResultLaboratoryExtension_ hinzugefügt.
