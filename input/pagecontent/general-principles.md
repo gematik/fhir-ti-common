@@ -75,7 +75,7 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
     <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    Das Client-System MUSS die Must-Support-Elemente eines von ihm implementierten FHIR-Profils für die jeweilige Zielgruppe verständlich anzeigen, wenn eine Anforderung die Anzeige der Inhalte verlangt. Rein technische Elemente wie <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i> sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann Anzeigeumfang und Darstellungsform festlegen oder einschränken.
+    Das Client-System MUSS die Must-Support-Elemente eines von ihm implementierten FHIR-Profils für die jeweilige Zielgruppe verständlich anzeigen, wenn eine Anforderung die Anzeige der Inhalte verlangt. Rein technische Elemente wie <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i> sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann Anzeigeumfang und Darstellungsform festlegen oder einschränken. Die Darstellung darf von der Kodierung in der FHIR-Instanz abweichen, etwa durch einen Anzeigetext für einen Code oder ein lokales Datumsformat. Dabei bleibt der Inhalt des jeweiligen Werts unverändert und alle wesentlichen Informationen bleiben sichtbar.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI33807JR0" title="Anzeigetexte für codierte Must-Support-Elemente" version="0">
