@@ -163,16 +163,12 @@
         "key": "IG-TI06089XAH",
         "title": "Anzeige für Must Support",
         "actor": [
-            "EPA-CS-KTR",
             "EPA-CS-Ombudsstelle",
             "EPA-FdV",
             "EPA-PS",
             "VSDM-Client"
         ],
         "test_procedures": {
-            "EPA-CS-KTR": [
-                "Konformitätsbestätigung"
-            ],
             "EPA-CS-Ombudsstelle": [
                 "Konformitätsbestätigung"
             ],
@@ -186,16 +182,16 @@
                 "Konformitätsbestätigung"
             ]
         },
-        "version": 0,
-        "release_status": "STABLE",
+        "version": 1,
+        "release_status": "MODIFIED",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für die menschliche Nutzung anzeigen. Es muss dabei nicht jeden Wert genauso darstellen, wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen ausblenden.",
+        "text": "Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das Client-System die als Must Support gekennzeichneten Elemente für die menschliche Nutzung anzeigen. Elemente, die ausschließlich der technischen Verarbeitung dienen (z. B. <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i>), sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann den Anzeigeumfang festlegen oder einschränken. Die Werte dürfen in einer für Menschen verständlichen Form dargestellt werden.",
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.321313",
-        "modified": "2025-03-17T13:35:52.637533",
-        "date": "2025-11-18T11:03:10.871638",
-        "content_hash": "607135b9861ab96c628cd75ddb5d1ccc620b95b3c6f2e7a64158afee0114a76d",
+        "modified": "2026-11-24T07:28:36.776482",
+        "date": "2026-11-24T07:28:36.776482",
+        "content_hash": "d4a51c7c9c1e1ef642c291973e57de6d80c1047c3f59d5ec8599e89dbb1b4b6c",
         "path": "general-principles.html",
         "release": "1.5.0"
     },
@@ -391,14 +387,26 @@
         "key": "IG-TI09377BM6",
         "title": "Verarbeitung für Must Support",
         "actor": [
+            "EPA-CS-KTR",
+            "EPA-CS-Ombudsstelle",
             "EPA-FdV",
-            "EPA-PS"
+            "EPA-PS",
+            "VSDM-Client"
         ],
         "test_procedures": {
+            "EPA-CS-KTR": [
+                "Konformitätsbestätigung"
+            ],
+            "EPA-CS-Ombudsstelle": [
+                "Konformitätsbestätigung"
+            ],
             "EPA-FdV": [
                 "Produkttest"
             ],
             "EPA-PS": [
+                "Konformitätsbestätigung"
+            ],
+            "VSDM-Client": [
                 "Konformitätsbestätigung"
             ]
         },
@@ -410,7 +418,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.321306",
         "modified": "2025-05-27T09:33:08.789868",
-        "date": "2025-11-18T11:03:10.871391",
+        "date": "2026-11-24T07:28:36.775990",
         "content_hash": "7c20974774525900465f04a892b07afb7b94ccfb30d9d9ddd2abfc4b54a8a443",
         "path": "general-principles.html",
         "release": "1.5.0"

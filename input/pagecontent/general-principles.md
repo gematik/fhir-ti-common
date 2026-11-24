@@ -41,18 +41,7 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
     Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service implementiert, MUSS jedes als Must Support gekennzeichnete Element gemäß der dazugehörigen Kardinalitätsangabe befüllen. Das heißt auch, dass in optionalen Elementen (z.B. Kardinalität "0..1", "0..*") der Elementwert leer bleiben darf, sofern dem Client-System kein Wert zur Verfügung steht.
 </requirement>
 
-<requirement actor="EPA-PS, EPA-FdV" conformance="SHALL" key="IG-TI09377BM6" title="Verarbeitung für Must Support" version="2">
-    <meta lockversion="false"/>
-    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
-        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
-    </actor>
-    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
-        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
-    </actor>
-    Das Client-System, das lesend ein FHIR-Profil des FHIR Data Service implementiert, MUSS in der Lage sein, alle Must-Support-Elemente in FHIR-Instanzen zu verarbeiten. Das Client-System MUSS auch Must-Support-Elemente ohne Wert verarbeiten können, ohne mit einem Fehler abzubrechen oder die Anwendung abstürzen zu lassen.
-</requirement>
-
-<requirement actor="EPA-PS, EPA-FdV, EPA-CS-KTR, EPA-CS-Ombudsstelle, VSDM-Client" conformance="SHALL" key="IG-TI06089XAH" title="Anzeige für Must Support" version="0">
+<requirement actor="EPA-PS, EPA-FdV, EPA-CS-KTR, EPA-CS-Ombudsstelle, VSDM-Client" conformance="SHALL" key="IG-TI09377BM6" title="Verarbeitung für Must Support" version="2">
     <meta lockversion="false"/>
     <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
@@ -69,7 +58,24 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
     <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für die menschliche Nutzung anzeigen. Es muss dabei nicht jeden Wert genauso darstellen, wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen ausblenden.
+    Das Client-System, das lesend ein FHIR-Profil des FHIR Data Service implementiert, MUSS in der Lage sein, alle Must-Support-Elemente in FHIR-Instanzen zu verarbeiten. Das Client-System MUSS auch Must-Support-Elemente ohne Wert verarbeiten können, ohne mit einem Fehler abzubrechen oder die Anwendung abstürzen zu lassen.
+</requirement>
+
+<requirement actor="EPA-PS, EPA-FdV, EPA-CS-Ombudsstelle, VSDM-Client" conformance="SHALL" key="IG-TI06089XAH" title="Anzeige für Must Support" version="1">
+    <meta lockversion="false"/>
+    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-CS-Ombudsstelle" description="Clientsystem-Schnittstelle ePA: Ombudsstelle">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das Client-System die als Must Support gekennzeichneten Elemente für die menschliche Nutzung anzeigen. Elemente, die ausschließlich der technischen Verarbeitung dienen (z. B. <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i>), sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann den Anzeigeumfang festlegen oder einschränken. Die Werte dürfen in einer für Menschen verständlichen Form dargestellt werden.
 </requirement>
 
 

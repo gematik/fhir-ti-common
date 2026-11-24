@@ -262,24 +262,11 @@
         {
             "key": "IG-TI06089XAH",
             "title": "Anzeige für Must Support",
-            "version": 0,
+            "version": 1,
             "status": "ACTIVE",
-            "text": "Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für die menschliche Nutzung anzeigen. Es muss dabei nicht jeden Wert genauso darstellen, wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen ausblenden.",
+            "text": "Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das Client-System die als Must Support gekennzeichneten Elemente für die menschliche Nutzung anzeigen. Elemente, die ausschließlich der technischen Verarbeitung dienen (z. B. <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i>), sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann den Anzeigeumfang festlegen oder einschränken. Die Werte dürfen in einer für Menschen verständlichen Form dargestellt werden.",
             "conformance": "SHALL",
             "characteristics": [
-                {
-                    "product_type": {
-                        "name": "CS_ePA_KTR",
-                        "id": "productType128",
-                        "description": "Clientsystem-Schnittstelle ePA: Kostenträger"
-                    },
-                    "test_procedure": [
-                        {
-                            "id": "testProcedurePT28",
-                            "name": "funkt. Eignung: Konformitätsbestätigung"
-                        }
-                    ]
-                },
                 {
                     "product_type": {
                         "name": "CS_ePA_Ombudsstelle",
@@ -333,7 +320,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI06089XAH"
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI06089XAH-01"
         },
         {
             "key": "IG-TI06315TQ1",
@@ -632,6 +619,32 @@
             "characteristics": [
                 {
                     "product_type": {
+                        "name": "CS_ePA_KTR",
+                        "id": "productType128",
+                        "description": "Clientsystem-Schnittstelle ePA: Kostenträger"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "CS_ePA_Ombudsstelle",
+                        "id": "productType129",
+                        "description": "Clientsystem-Schnittstelle ePA: Ombudsstelle"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "Frontend_Vers_ePA",
                         "id": "productType80",
                         "description": "ePA - Frontend des Versicherten"
@@ -648,6 +661,19 @@
                         "name": "PS_ePA",
                         "id": "productType109",
                         "description": "ePA-Schnittstelle eines PS"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "CS_VSDM_2",
+                        "id": "productType147",
+                        "description": "CS-Schnittstelle für VSDM 2"
                     },
                     "test_procedure": [
                         {

@@ -1,19 +1,28 @@
 actor:
+- EPA-CS-KTR
+- EPA-CS-Ombudsstelle
 - EPA-FdV
 - EPA-PS
+- VSDM-Client
 conformance: SHALL
 content_hash: 7c20974774525900465f04a892b07afb7b94ccfb30d9d9ddd2abfc4b54a8a443
 created: '2025-02-26T10:59:21.321306'
-date: '2025-11-18T11:03:10.871391'
+date: '2026-11-24T07:28:36.775990'
 key: IG-TI09377BM6
 modified: '2025-05-27T09:33:08.789868'
 release_status: STABLE
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
+  EPA-CS-KTR:
+  - Konformitätsbestätigung
+  EPA-CS-Ombudsstelle:
+  - Konformitätsbestätigung
   EPA-FdV:
   - Produkttest
   EPA-PS:
+  - Konformitätsbestätigung
+  VSDM-Client:
   - Konformitätsbestätigung
 text: Das Client-System, das lesend ein FHIR-Profil des FHIR Data Service implementiert,
   MUSS in der Lage sein, alle Must-Support-Elemente in FHIR-Instanzen zu verarbeiten.

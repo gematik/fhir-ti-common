@@ -4,6 +4,28 @@
             "version": "1.5.0",
             "requirements": [
                 {
+                    "title": "Anzeige für Must Support",
+                    "key": "IG-TI06089XAH",
+                    "actor": [
+                        "EPA-CS-Ombudsstelle",
+                        "EPA-FdV",
+                        "EPA-PS",
+                        "VSDM-Client"
+                    ],
+                    "version": 1,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html",
+                    "diff": {
+                        "1.4.0": {
+                            "text": "--- text.old\n+++ text.new\n@@ -1 +1 @@\n-Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für die menschliche Nutzung anzeigen. Es muss dabei nicht jeden Wert genauso darstellen, wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen ausblenden.\n+Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das Client-System die als Must Support gekennzeichneten Elemente für die menschliche Nutzung anzeigen. Elemente, die ausschließlich der technischen Verarbeitung dienen (z. B. <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i>), sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann den Anzeigeumfang festlegen oder einschränken. Die Werte dürfen in einer für Menschen verständlichen Form dargestellt werden.",
+                            "title": "",
+                            "conformance": ""
+                        }
+                    }
+                },
+                {
                     "title": "Unterstützung URL-Parameter für Paginierungsfunktion",
                     "key": "IG-TI07252NTV",
                     "actor": [
