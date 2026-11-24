@@ -85,7 +85,7 @@ In beiden Fällen wird dasselbe gemeinsame MHD-basierte Dokumentenmodell verwend
 
 ### Versionierung von Dokumenten
 
-Dokumente werden unveränderlich gespeichert. Zu jedem Dokument werden zusätzlich Dokumentmetadaten in der `DocumentReference` abgelegt. Wenn ein Dokument geändert werden soll, wird einerseits das neue, geänderte Dokument gespeichert und dazu eine neue `DocumentReference`-Instanz erstellt. Das heißt, durch das Ersetzen eines Dokuments durch eine neue Version ensteht keine neue Version der bestehenden `DocumentReference`-Instanz, sondern es entsteht eine neue, die auf die alte verweist.
+Der Inhalt eines gespeicherten Dokuments bleibt unverändert. Soll der Inhalt geändert werden, speichert der Dienst die neue Fassung als eigenes Dokument und registriert sie mit einer neuen `DocumentReference`-Instanz.
 
 Die Beziehung zwischen der alten und neuen `DocumentReference`-Instanz wird über `DocumentReference.relatesTo` mit dem Beziehungstyp `replaces` in der ersetzenden Instanz modelliert. Dieses Vorgehen orientiert sich an dem aus IHE MHD/XDS bekannten Prinzip der Dokumentersetzung. Die neu erstellte `DocumentReference`-Instanz erhält den Status `current` und verweist über `relatesTo.code = replaces` auf die vorherige Version. Die `DocumentReference`-Instanz der ersetzten Dokumentversion wird auf den Status `superseded` gesetzt. Frühere Dokumentenversionen bleiben standardmäßig mit ihren Metadaten erhalten und können weiterhin für Nachweis- und Revisionszwecke herangezogen werden. Üblicherweise ist die aktuelle Fassung die einzig fachlich gültige. Die genaue Ausgestaltung unterliegt jedoch den konkreten Services.
 
