@@ -15,7 +15,7 @@ Für die Validierung gilt die IG-Version, nach der der FHIR Data Service die Ins
 
 Pro Validierungskontext wird jedes Package in genau einer Version verwendet. Die im IG direkt deklarierte Version hat Vorrang vor abweichenden Versionen aus transitiven Abhängigkeiten. Ist ein Package ausschließlich transitiv in mehreren Versionen eingebunden, deklariert der IG die vorgesehene Version als direkte Abhängigkeit. Die Auflösung der Package-Abhängigkeiten wird vor der Veröffentlichung geprüft.
 
-Für die bereitzustellenden Terminologiepakete gilt die jeweils festgelegte Mindestversion.
+Für die bereitzustellenden Terminologiepakete gilt die jeweils festgelegte Mindestversion. Für die Validierung der betreffenden Bindings sind das KBV-Paket `kbv.all.st` und das TI-Terminologiepaket `de.gematik.terminology` separat bereitzustellen. Eine Offline-Prüfung von Codes aus `IFA_DARREICHUNGSFORM` setzt voraus, dass dem Validator die IFA-Codeliste vorliegt.
 
 Bei versionierten Terminologiereferenzen ist die angegebene Version für die Validierung maßgeblich. Dies gilt auch, wenn ein Backport-Paket ein Terminologieartefakt mit derselben Canonical-URL in einer anderen Version enthält.
 

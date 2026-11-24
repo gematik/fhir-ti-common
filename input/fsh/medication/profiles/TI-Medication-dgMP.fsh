@@ -126,14 +126,13 @@ RuleSet: TIMedicationElements
   //   * code 1..1 MS
   //   * version MS
   //   * display MS
-  * coding[kbvDarreichungsform]
-    * ^comment = "KBV updates its \"Schüsseltabellen\" package more often than ePA versions get released. However, the eRezept clients and eRezept service take over new KBV package versions quickly after release and thus hands them over to the ePA Medication Service. Since the Medication Service is potentially fixed onto an older version of the KBV package, it would reject the forwarded eRezept data. In the future, the Medication Service will be enabled to update to the latest KBV package versions without the need for a new ePA release.
-    Since the eRezept *does* check the codes against the latest KBV package version, the Medication Service will not receive any \"invalid\" codes and clients can rely on the Medication Service data conforming to the latest KBV package."
+  * coding[kbvDarreichungsform] from $KBV_VS_SFHIR_KBV_DARREICHUNGSFORM (required)
+    * ^comment = "Die KBV aktualisiert ihr Paket mit den Schlüsseltabellen häufiger, als neue ePA-Versionen veröffentlicht werden. E-Rezept-Clients und der E-Rezept-Fachdienst übernehmen neue Paketversionen zeitnah. Dadurch kann es vorkommen, dass der ePA Medication Service einen bereits im E-Rezept geprüften Code ablehnt, weil er noch eine ältere Paketversion verwendet. Künftig soll der ePA Medication Service neue KBV-Paketversionen unabhängig von einer ePA-Veröffentlichung übernehmen können. Da der E-Rezept-Fachdienst die Codes bereits gegen die aktuelle KBV-Paketversion prüft, können sich Clients bei den aus dem E-Rezept übernommenen Codes auf diese Prüfung verlassen."
     * ^patternCoding.system = $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM
     * system 1..1 MS
     * code 1..1 MS
     * display MS
-  * coding[ifaDarreichungsform]
+  * coding[ifaDarreichungsform] from $vs-ifa-medication-darreichungsform (required)
     * ^patternCoding.system = $cs-ifa-medication-darreichungsform
     * system 1..1 MS
     * code 1..1 MS
