@@ -122,7 +122,6 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
   * ^short = "Abruf-URL des Dokuments"
   * ^definition = "URL, über die der Dokumenteninhalt abgerufen werden kann."
   * ^comment = "Der jeweilige Dienst legt fest, wie das Element bei Schreibtransaktionen belegt wird und wie der Dokumenteninhalt über die URL abgerufen wird."
-  * ^mapping[0].map = "DocumentEntry.repositoryUniqueId+DocumentEntry.uniqueId or DocumentEntry.URI (if URI is a retrieval URL)"
 * content.attachment.size 0..1 MS
   * ^short = "Größe des Dokuments in Bytes"
   * ^definition = "Größe des Dokuments in Bytes (DocumentEntry.size)"
