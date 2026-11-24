@@ -1,0 +1,31 @@
+actor:
+- EPA-CS-Ombudsstelle
+- EPA-FdV
+- EPA-PS
+- VSDM-Client
+conformance: SHALL
+content_hash: 145707b708f9cc6e2f09f9e4e6df0806868fcc494e99875c33a6f6a21477f74f
+created: '2026-11-24T09:43:55.925592'
+date: '2026-11-24T09:43:55.925595'
+key: IG-TI33807JR0
+modified: '2026-11-24T09:43:55.925593'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-CS-Ombudsstelle:
+  - Konformitätsbestätigung
+  EPA-FdV:
+  - Produkttest
+  EPA-PS:
+  - Konformitätsbestätigung
+  VSDM-Client:
+  - Konformitätsbestätigung
+text: Das Client-System MUSS den ersten verfügbaren Anzeigetext verwenden, wenn eine
+  Anforderung die Anzeige codierter Must-Support-Elemente eines von ihm implementierten
+  FHIR-Profils verlangt. Die Quellen sind in dieser Reihenfolge auszuwerten <i>CodeableConcept.text</i>,
+  <i>Coding.display</i>, Anzeigetext des Codes aus dem zugehörigen CodeSystem im Terminologiepaket.
+  Fehlt ein Anzeigetext aus allen drei Quellen, zeigt das Client-System einen Hinweis
+  an, dass der Wert nicht als Text verfügbar ist.
+title: Anzeigetexte für codierte Must-Support-Elemente
+version: 0

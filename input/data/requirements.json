@@ -186,12 +186,12 @@
         "release_status": "MODIFIED",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das Client-System die als Must Support gekennzeichneten Elemente für die menschliche Nutzung anzeigen. Elemente, die ausschließlich der technischen Verarbeitung dienen (z. B. <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i>), sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann den Anzeigeumfang festlegen oder einschränken. Die Werte dürfen in einer für Menschen verständlichen Form dargestellt werden.",
+        "text": "Das Client-System MUSS die Must-Support-Elemente eines von ihm implementierten FHIR-Profils für die jeweilige Zielgruppe verständlich anzeigen, wenn eine Anforderung die Anzeige der Inhalte verlangt. Rein technische Elemente wie <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i> sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann Anzeigeumfang und Darstellungsform festlegen oder einschränken.",
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.321313",
-        "modified": "2026-11-24T07:28:36.776482",
-        "date": "2026-11-24T07:28:36.776482",
-        "content_hash": "d4a51c7c9c1e1ef642c291973e57de6d80c1047c3f59d5ec8599e89dbb1b4b6c",
+        "modified": "2026-11-24T09:43:55.925130",
+        "date": "2026-11-24T09:43:55.925130",
+        "content_hash": "c16b3bea0f9405cf006e979172f85b510f051ace2be0521dfd34190428ec42a2",
         "path": "general-principles.html",
         "release": "1.5.0"
     },
@@ -961,6 +961,42 @@
         "date": "2026-09-30T16:35:53.239810",
         "content_hash": "e77343f82a5b7370a34c36dcee2cf2d39930fc895a4939d2310086cc5640e0eb",
         "path": "query-api-search.html",
+        "release": "1.5.0"
+    },
+    {
+        "key": "IG-TI33807JR0",
+        "title": "Anzeigetexte für codierte Must-Support-Elemente",
+        "actor": [
+            "EPA-CS-Ombudsstelle",
+            "EPA-FdV",
+            "EPA-PS",
+            "VSDM-Client"
+        ],
+        "test_procedures": {
+            "EPA-CS-Ombudsstelle": [
+                "Konformitätsbestätigung"
+            ],
+            "EPA-FdV": [
+                "Produkttest"
+            ],
+            "EPA-PS": [
+                "Konformitätsbestätigung"
+            ],
+            "VSDM-Client": [
+                "Konformitätsbestätigung"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Das Client-System MUSS den ersten verfügbaren Anzeigetext verwenden, wenn eine Anforderung die Anzeige codierter Must-Support-Elemente eines von ihm implementierten FHIR-Profils verlangt. Die Quellen sind in dieser Reihenfolge auszuwerten <i>CodeableConcept.text</i>, <i>Coding.display</i>, Anzeigetext des Codes aus dem zugehörigen CodeSystem im Terminologiepaket. Fehlt ein Anzeigetext aus allen drei Quellen, zeigt das Client-System einen Hinweis an, dass der Wert nicht als Text verfügbar ist.",
+        "conformance": "SHALL",
+        "created": "2026-11-24T09:43:55.925592",
+        "modified": "2026-11-24T09:43:55.925593",
+        "date": "2026-11-24T09:43:55.925595",
+        "content_hash": "145707b708f9cc6e2f09f9e4e6df0806868fcc494e99875c33a6f6a21477f74f",
+        "path": "general-principles.html",
         "release": "1.5.0"
     },
     {

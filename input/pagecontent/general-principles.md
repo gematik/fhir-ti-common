@@ -75,7 +75,24 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
     <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das Client-System die als Must Support gekennzeichneten Elemente für die menschliche Nutzung anzeigen. Elemente, die ausschließlich der technischen Verarbeitung dienen (z. B. <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i>), sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann den Anzeigeumfang festlegen oder einschränken. Die Werte dürfen in einer für Menschen verständlichen Form dargestellt werden.
+    Das Client-System MUSS die Must-Support-Elemente eines von ihm implementierten FHIR-Profils für die jeweilige Zielgruppe verständlich anzeigen, wenn eine Anforderung die Anzeige der Inhalte verlangt. Rein technische Elemente wie <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i> sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann Anzeigeumfang und Darstellungsform festlegen oder einschränken.
+</requirement>
+
+<requirement conformance="SHALL" key="IG-TI33807JR0" title="Anzeigetexte für codierte Must-Support-Elemente" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-CS-Ombudsstelle" description="Clientsystem-Schnittstelle ePA: Ombudsstelle">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    Das Client-System MUSS den ersten verfügbaren Anzeigetext verwenden, wenn eine Anforderung die Anzeige codierter Must-Support-Elemente eines von ihm implementierten FHIR-Profils verlangt. Die Quellen sind in dieser Reihenfolge auszuwerten <i>CodeableConcept.text</i>, <i>Coding.display</i>, Anzeigetext des Codes aus dem zugehörigen CodeSystem im Terminologiepaket. Fehlt ein Anzeigetext aus allen drei Quellen, zeigt das Client-System einen Hinweis an, dass der Wert nicht als Text verfügbar ist.
 </requirement>
 
 

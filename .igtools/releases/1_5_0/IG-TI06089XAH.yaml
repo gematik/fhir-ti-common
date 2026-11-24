@@ -4,11 +4,11 @@ actor:
 - EPA-PS
 - VSDM-Client
 conformance: SHALL
-content_hash: d4a51c7c9c1e1ef642c291973e57de6d80c1047c3f59d5ec8599e89dbb1b4b6c
+content_hash: c16b3bea0f9405cf006e979172f85b510f051ace2be0521dfd34190428ec42a2
 created: '2025-02-26T10:59:21.321313'
-date: '2026-11-24T07:28:36.776482'
+date: '2026-11-24T09:43:55.925130'
 key: IG-TI06089XAH
-modified: '2026-11-24T07:28:36.776482'
+modified: '2026-11-24T09:43:55.925130'
 release_status: MODIFIED
 source: input/pagecontent/general-principles.md
 status: ACTIVE
@@ -21,13 +21,11 @@ test_procedures:
   - Konformitätsbestätigung
   VSDM-Client:
   - Konformitätsbestätigung
-text: Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer
-  Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System
-  implementiert, MUSS das Client-System die als Must Support gekennzeichneten Elemente
-  für die menschliche Nutzung anzeigen. Elemente, die ausschließlich der technischen
-  Verarbeitung dienen (z. B. <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>,
-  Extension-URLs und <i>meta</i>), sind von der Anzeigepflicht ausgenommen. Der jeweilige
-  Fach-IG kann den Anzeigeumfang festlegen oder einschränken. Die Werte dürfen in
-  einer für Menschen verständlichen Form dargestellt werden.
+text: Das Client-System MUSS die Must-Support-Elemente eines von ihm implementierten
+  FHIR-Profils für die jeweilige Zielgruppe verständlich anzeigen, wenn eine Anforderung
+  die Anzeige der Inhalte verlangt. Rein technische Elemente wie <i>Coding.system</i>,
+  <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i>
+  sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann Anzeigeumfang
+  und Darstellungsform festlegen oder einschränken.
 title: Anzeige für Must Support
 version: 1
