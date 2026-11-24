@@ -85,10 +85,6 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
   * ^comment = "Logical Reference unter Nutzung der Telematik-ID"
   * identifier 0..1 MS
   * identifier only $identifier-telematik-id
-* custodian 0..0
-  * ^short = "n/a"
-  * ^definition = "n/a"
-  * ^comment = "n/a"
 // MS @ child elements with 1:1 set, since IHE defined already MS @ parent
 * relatesTo 0..* MS
   * ^comment = "Logical Reference unter Nutzung der entryUUID"
@@ -149,7 +145,6 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
   * ^comment = "Das Attribut 'formatCode' spezifiziert das Format des Dokumentes. Zusammen mit dem typeCode (und ggf. mit dem mimeType) soll der formatCode für hinreichende Information sorgen, um einem Dokument-Konsumenten die Entscheidung zu ermöglichen, ob und wie er das Dokumentenformat verarbeiten kann."
 * content.format from $epa-xds-format-code-vs (required)
 * context MS
-* context.encounter 0..0
 * context.event 0..* MS
   * ^short = "Ereignisse, die zur Erstellung des Dokuments geführt haben"
   * ^definition = "Ereignisse, die zur Erstellung des Dokuments geführt haben (DocumentEntry.eventCodeList)"
