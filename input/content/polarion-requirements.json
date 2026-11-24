@@ -1123,6 +1123,30 @@
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/validation.html#IG-TI20681JNN"
         },
         {
+            "key": "IG-TI21752KTQ",
+            "title": "ETag in HTTP-Antworten auf FHIR-Interaktionen",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Der FHIR Data Service MUSS bei erfolgreichen <i>read</i>-, <i>vread</i>-, <i>create</i>- und <i>update</i>-Interaktionen den HTTP-Antwortheader <i>ETag</i> zurückgeben. Der Header enthält die <i>Meta.versionId</i> der jeweiligen FHIR-Instanz als schwachen ETag im Format <i>W/\"&lt;versionId&gt;\"</i>, beispielsweise <i>W/\"2\"</i>.",
+            "conformance": "SHALL",
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                }
+            ],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI21752KTQ"
+        },
+        {
             "key": "IG-TI22824X01",
             "title": "Unterstützung von JSON Content Type für FHIR-Data-Schnittstellen",
             "version": 2,

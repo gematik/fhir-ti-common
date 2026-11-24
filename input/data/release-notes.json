@@ -97,6 +97,19 @@
                     }
                 },
                 {
+                    "title": "ETag in HTTP-Antworten auf FHIR-Interaktionen",
+                    "key": "IG-TI21752KTQ",
+                    "actor": [
+                        "EPA-MHD-Service"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html",
+                    "diff": {}
+                },
+                {
                     "title": "Anzeigetexte für codierte Must-Support-Elemente",
                     "key": "IG-TI33807JR0",
                     "actor": [

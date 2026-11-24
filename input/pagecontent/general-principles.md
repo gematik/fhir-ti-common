@@ -102,6 +102,14 @@ Jede Änderung an einer FHIR-Instanz führt zu einer neuen Version dieser Instan
 
 Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt, bleibt die aktuelle Version der Instanz unverändert. Der FHIR Data Service erstellt in diesem Fall keine neue Version und behält den bestehenden Wert in _Meta.versionId_ sowie das Datum in _Meta.lastUpdated_ bei.
 
+<requirement conformance="SHALL" key="IG-TI21752KTQ" title="ETag in HTTP-Antworten auf FHIR-Interaktionen" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service MUSS bei erfolgreichen <i>read</i>-, <i>vread</i>-, <i>create</i>- und <i>update</i>-Interaktionen den HTTP-Antwortheader <i>ETag</i> zurückgeben. Der Header enthält die <i>Meta.versionId</i> der jeweiligen FHIR-Instanz als schwachen ETag im Format <i>W/"&lt;versionId&gt;"</i>, beispielsweise <i>W/"2"</i>.
+</requirement>
+
 <requirement actor="EPA-Medication-Service, EPA-Patient-Service" conformance="SHALL" key="IG-TI59347HCY" title="Initiale Versionierung neu erstellter oder hinzugefügter FHIR-Instanzen" version="0">
     <meta lockversion="false"/>
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">

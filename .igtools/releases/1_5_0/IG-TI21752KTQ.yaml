@@ -1,0 +1,20 @@
+actor:
+- EPA-MHD-Service
+conformance: SHALL
+content_hash: c6f8a9b9a6a0d6ed9a2185228dde570cc16589303bf84a565d6fdbbfa72a004e
+created: '2026-11-24T13:20:02.332994'
+date: '2026-11-24T13:20:02.333003'
+key: IG-TI21752KTQ
+modified: '2026-11-24T13:20:02.333001'
+release_status: NEW
+source: input/pagecontent/general-principles.md
+status: ACTIVE
+test_procedures:
+  EPA-MHD-Service:
+  - Produkttest
+text: Der FHIR Data Service MUSS bei erfolgreichen <i>read</i>-, <i>vread</i>-, <i>create</i>-
+  und <i>update</i>-Interaktionen den HTTP-Antwortheader <i>ETag</i> zurückgeben.
+  Der Header enthält die <i>Meta.versionId</i> der jeweiligen FHIR-Instanz als schwachen
+  ETag im Format <i>W/"&lt;versionId&gt;"</i>, beispielsweise <i>W/"2"</i>.
+title: ETag in HTTP-Antworten auf FHIR-Interaktionen
+version: 0
