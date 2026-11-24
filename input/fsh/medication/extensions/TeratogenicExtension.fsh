@@ -1,5 +1,6 @@
 Extension: TeratogenicExtension
 Id: teratogenic-extension
+Title: "TI Extension: Verordnung teratogener Arzneimittel"
 Description: "Abbildung der Angaben zur Verordnung eines teratogenen Arzneimittels (T-Rezept)"
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/teratogenic-extension"

@@ -2,9 +2,9 @@ Profile: TIAppendixDocumentReference
 Parent: DocumentReference
 Id: ti-appendix-document-reference
 Title: "TI Appendix Document Reference"
-Description: "Hier wird ein Dokumentanhang abgebildet."
+Description: "Dieses Profil bildet einen eingebetteten PDF-Anhang innerhalb eines FHIR-Dokuments ab. Der Anhang ist Bestandteil des FHIR-Dokuments und wird nicht als eigenständiges Dokument eingestellt oder über Find Document References [ITI-67] gefunden. Für verwaltete Dokumente gilt das Profil TIMHDDocumentReference."
 * insert Meta-With-Versioning
-* . ^definition = "Hier wird ein Dokumentanhang abgebildet."
+* . ^definition = "Dieses Profil bildet einen eingebetteten PDF-Anhang innerhalb eines FHIR-Dokuments ab. Der Anhang ist Bestandteil des FHIR-Dokuments und wird nicht als eigenständiges Dokument eingestellt oder über Find Document References [ITI-67] gefunden. Für verwaltete Dokumente gilt das Profil TIMHDDocumentReference."
 // preserve the version
 * ^version = "1.5.0"
 * ^date = "2026-12-08"

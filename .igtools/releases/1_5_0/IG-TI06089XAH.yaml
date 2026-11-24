@@ -1,21 +1,18 @@
 actor:
-- EPA-CS-KTR
 - EPA-CS-Ombudsstelle
 - EPA-FdV
 - EPA-PS
 - VSDM-Client
 conformance: SHALL
-content_hash: 607135b9861ab96c628cd75ddb5d1ccc620b95b3c6f2e7a64158afee0114a76d
+content_hash: df9d9815357aa39b7d2e2930e34fb1830a6dc77490740fac5d1008a427d91690
 created: '2025-02-26T10:59:21.321313'
-date: '2025-11-18T11:03:10.871638'
+date: '2026-11-24T14:08:41.797907'
 key: IG-TI06089XAH
-modified: '2025-03-17T13:35:52.637533'
-release_status: STABLE
+modified: '2026-11-24T14:08:41.797907'
+release_status: MODIFIED
 source: input/pagecontent/general-principles.md
 status: ACTIVE
 test_procedures:
-  EPA-CS-KTR:
-  - Konformitätsbestätigung
   EPA-CS-Ombudsstelle:
   - Konformitätsbestätigung
   EPA-FdV:
@@ -24,11 +21,14 @@ test_procedures:
   - Konformitätsbestätigung
   VSDM-Client:
   - Konformitätsbestätigung
-text: Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer
-  Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System
-  implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für
-  die menschliche Nutzung anzeigen. Es muss dabei nicht jeden Wert genauso darstellen,
-  wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen
-  ausblenden.
+text: Das Client-System MUSS die Must-Support-Elemente eines von ihm implementierten
+  FHIR-Profils für die jeweilige Zielgruppe verständlich anzeigen, wenn eine Anforderung
+  die Anzeige der Inhalte verlangt. Rein technische Elemente wie <i>Coding.system</i>,
+  <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i>
+  sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann Anzeigeumfang
+  und Darstellungsform festlegen oder einschränken. Die Darstellung darf von der Kodierung
+  in der FHIR-Instanz abweichen, etwa durch einen Anzeigetext für einen Code oder
+  ein lokales Datumsformat. Dabei bleibt der Inhalt des jeweiligen Werts unverändert
+  und alle wesentlichen Informationen bleiben sichtbar.
 title: Anzeige für Must Support
-version: 0
+version: 1

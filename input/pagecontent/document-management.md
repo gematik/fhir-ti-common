@@ -1,6 +1,6 @@
 Für die Referenzierung, Verwaltung und den Austausch von Dokumenten über FHIR-basierte Schnittstellen innerhalb der Telematikinfrastruktur wird ein einheitliches Dokumentenmodell auf Basis des IHE-Profils _Mobile access to Health Documents [IHE ITI MHD]_ verwendet. IHE MHD definiert auf Basis von HL7 FHIR ein standardisiertes Modell für den dokumentenbasierten Austausch. Zentrale Ressource für die Beschreibung eines Dokuments ist `DocumentReference`. Sie enthält die Dokumentmetadaten und verweist über `DocumentReference.content.attachment` auf den eigentlichen Dokumenteninhalt.
 
-Die hier im IG definierten Profile basieren auf den entsprechenden IHE-MHD-Profilen und bilden die gemeinsame Grundlage für die Verwendung von Dokumenten über FHIR-basierte Schnittstellen innerhalb der TI. FHIR-basierte TI-Fachdienste und FHIR Data Services können diese Profile unmittelbar verwenden oder für ihre jeweiligen fachlichen Anforderungen weiter einschränken.
+Die in diesem Abschnitt beschriebenen TI-MHD-Profile basieren auf den entsprechenden IHE-MHD-Profilen und bilden die gemeinsame Grundlage für die Verwendung von Dokumenten über FHIR-basierte Schnittstellen innerhalb der TI. FHIR-basierte TI-Fachdienste und FHIR Data Services können diese Profile unmittelbar verwenden oder für ihre jeweiligen fachlichen Anforderungen weiter einschränken.
 
 Ziel ist es, dass Client-Systeme Dokumente gegenüber unterschiedlichen FHIR-basierten TI-Fachdiensten und FHIR Data Services nach demselben grundlegenden Modell verarbeiten können. Einmal implementierte FHIR-Profile und Mechanismen zur Verarbeitung von Dokumenten können dadurch in unterschiedlichen fachlichen Kontexten wiederverwendet werden.
 
@@ -44,10 +44,20 @@ StructureDefinition/ti-document-location-extension,
 
 Für Client-Systeme, wie beispielsweise Primärsysteme oder Frontends der Versicherten bedeutet dies, dass dieselben grundlegenden FHIR-Strukturen und Verarbeitungsmechanismen für Dokumente aus unterschiedlichen Diensten wiederverwendet werden können. Dies ist insbesondere für die dienstübergreifende Verwendung von `DocumentReference` relevant. Ist ein dienstspezifisches `DocumentReference`-Profil von einem gemeinsamen TI-Common-MHD-Profil abgeleitet, kann die Ressourceninstanz auch in einem anderen fachlichen Kontext verwendet werden, sofern dieser ebenfalls auf derselben gemeinsamen Profilbasis aufbaut.
 
+### Anhänge innerhalb eines FHIR-Dokuments
+
+Das Profil [_TI Appendix Document Reference_](./StructureDefinition-ti-appendix-document-reference.html) bildet einen eingebetteten PDF-Anhang innerhalb eines FHIR-Dokuments ab. Ein Beispiel ist ein ergänzendes PDF in einem dgLP-Laborbefund, auf das der `DiagnosticReport` über eine Extension an `media.link` verweist.
+
+Der Anhang ist Bestandteil des FHIR-Dokuments. Er wird nicht als eigenständiges Dokument eingestellt oder über _Find Document References [ITI-67]_ gefunden. Für verwaltete Dokumente gilt das Profil [_TI MHD DocumentReference_](./StructureDefinition-ti-mhd-document-reference.html). In der ePA werden je dgLP-Laborbefund der Befund selbst und das daraus extrahierte PDF als eigenständige Dokumente bereitgestellt (siehe gemIG_ePA_Laboratory, Stellungnahme GKV-SV_02).
+
 ### Dokumentmetadaten und Dokumenteninhalt
 
 Dokumentmetadaten und Dokumenteninhalt werden getrennt voneinander verwaltet. Die `DocumentReference` beschreibt das Dokument und enthält die für dessen Verwaltung erforderlichen Metadaten. Der eigentliche Dokumenteninhalt wird über `DocumentReference.content.attachment` beschrieben und kann über die in `DocumentReference.content.attachment.url` angegebene URL abgerufen werden. Der Dokumenteninhalt kann dabei durch denselben FHIR-basierten TI-Fachdienst oder FHIR Data Service bereitgestellt werden oder sich in einem anderen Dienst befinden. Diese Trennung ermöglicht es, eine `DocumentReference` unabhängig vom Speicherort des Dokumenteninhalts in unterschiedlichen fachlichen Kontexten zu verwenden.
 
+
+Der jeweilige FHIR-basierte TI-Fachdienst oder FHIR Data Service legt fest, wie Clients den Dokumenteninhalt über die in `DocumentReference.content.attachment.url` angegebene URL abrufen und wie die Attachment-Elemente bei Schreibtransaktionen belegt werden. Die URL kann beispielsweise auf eine FHIR-`Binary`-Ressource verweisen. In der ePA erfolgt der Abruf über _Retrieve Document [ITI-68]_.
+
+Wenn `DocumentEntry.URI` einen Dateinamen enthält, wie in der ePA, wird dieser einschließlich Dateiendung und ohne Pfadangabe in der optionalen Extension [_TI Document File Name_](./StructureDefinition-ti-document-file-name-extension.html) am Attachment abgebildet. Die Extension steht auch im Profil _TI MHD Simplified Publish DocumentReference_ zur Verfügung. `DocumentReference.content.attachment.title` enthält den Dokumenttitel (`DocumentEntry.title`).
 
 ### Dienstübergreifende Referenzierung von Dokumenten
 
@@ -75,7 +85,7 @@ In beiden Fällen wird dasselbe gemeinsame MHD-basierte Dokumentenmodell verwend
 
 ### Versionierung von Dokumenten
 
-Dokumente werden unveränderlich gespeichert. Zu jedem Dokument werden zusätzlich Dokumentmetadaten in der `DocumentReference` abgelegt. Wenn ein Dokument geändert werden soll, wird einerseits das neue, geänderte Dokument gespeichert und dazu eine neue `DocumentReference`-Instanz erstellt. Das heißt, durch das Ersetzen eines Dokuments durch eine neue Version ensteht keine neue Version der bestehenden `DocumentReference`-Instanz, sondern es entsteht eine neue, die auf die alte verweist.
+Der Inhalt eines gespeicherten Dokuments bleibt unverändert. Soll der Inhalt geändert werden, speichert der Dienst die neue Fassung als eigenes Dokument und registriert sie mit einer neuen `DocumentReference`-Instanz.
 
 Die Beziehung zwischen der alten und neuen `DocumentReference`-Instanz wird über `DocumentReference.relatesTo` mit dem Beziehungstyp `replaces` in der ersetzenden Instanz modelliert. Dieses Vorgehen orientiert sich an dem aus IHE MHD/XDS bekannten Prinzip der Dokumentersetzung. Die neu erstellte `DocumentReference`-Instanz erhält den Status `current` und verweist über `relatesTo.code = replaces` auf die vorherige Version. Die `DocumentReference`-Instanz der ersetzten Dokumentversion wird auf den Status `superseded` gesetzt. Frühere Dokumentenversionen bleiben standardmäßig mit ihren Metadaten erhalten und können weiterhin für Nachweis- und Revisionszwecke herangezogen werden. Üblicherweise ist die aktuelle Fassung die einzig fachlich gültige. Die genaue Ausgestaltung unterliegt jedoch den konkreten Services.
 
@@ -88,6 +98,8 @@ Die Beziehung zwischen der alten und neuen `DocumentReference`-Instanz wird übe
         <strong>Abbildung:</strong> Ersetzung eines Dokuments durch eine neue Version
     </figcaption>
 </figure>
+
+Welche Dokumentbeziehungen ein FHIR-basierter TI-Fachdienst oder FHIR Data Service verarbeitet, hängt vom jeweiligen Dokumenttyp und den Vorgaben des Dienstes ab. Der dienstspezifische IG kann festlegen, welche Codes in `DocumentReference.relatesTo.code` für einen Dokumenttyp zulässig sind und mit welcher Fehlerantwort der Dienst unzulässige Codes abweist.
 
 <br/>
 

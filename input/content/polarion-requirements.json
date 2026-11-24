@@ -262,24 +262,11 @@
         {
             "key": "IG-TI06089XAH",
             "title": "Anzeige für Must Support",
-            "version": 0,
+            "version": 1,
             "status": "ACTIVE",
-            "text": "Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für die menschliche Nutzung anzeigen. Es muss dabei nicht jeden Wert genauso darstellen, wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen ausblenden.",
+            "text": "Das Client-System MUSS die Must-Support-Elemente eines von ihm implementierten FHIR-Profils für die jeweilige Zielgruppe verständlich anzeigen, wenn eine Anforderung die Anzeige der Inhalte verlangt. Rein technische Elemente wie <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i> sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann Anzeigeumfang und Darstellungsform festlegen oder einschränken. Die Darstellung darf von der Kodierung in der FHIR-Instanz abweichen, etwa durch einen Anzeigetext für einen Code oder ein lokales Datumsformat. Dabei bleibt der Inhalt des jeweiligen Werts unverändert und alle wesentlichen Informationen bleiben sichtbar.",
             "conformance": "SHALL",
             "characteristics": [
-                {
-                    "product_type": {
-                        "name": "CS_ePA_KTR",
-                        "id": "productType128",
-                        "description": "Clientsystem-Schnittstelle ePA: Kostenträger"
-                    },
-                    "test_procedure": [
-                        {
-                            "id": "testProcedurePT28",
-                            "name": "funkt. Eignung: Konformitätsbestätigung"
-                        }
-                    ]
-                },
                 {
                     "product_type": {
                         "name": "CS_ePA_Ombudsstelle",
@@ -333,7 +320,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI06089XAH"
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI06089XAH-01"
         },
         {
             "key": "IG-TI06315TQ1",
@@ -632,6 +619,32 @@
             "characteristics": [
                 {
                     "product_type": {
+                        "name": "CS_ePA_KTR",
+                        "id": "productType128",
+                        "description": "Clientsystem-Schnittstelle ePA: Kostenträger"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "CS_ePA_Ombudsstelle",
+                        "id": "productType129",
+                        "description": "Clientsystem-Schnittstelle ePA: Ombudsstelle"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "Frontend_Vers_ePA",
                         "id": "productType80",
                         "description": "ePA - Frontend des Versicherten"
@@ -648,6 +661,19 @@
                         "name": "PS_ePA",
                         "id": "productType109",
                         "description": "ePA-Schnittstelle eines PS"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "CS_VSDM_2",
+                        "id": "productType147",
+                        "description": "CS-Schnittstelle für VSDM 2"
                     },
                     "test_procedure": [
                         {
@@ -1095,6 +1121,30 @@
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/validation.html#IG-TI20681JNN"
+        },
+        {
+            "key": "IG-TI21752KTQ",
+            "title": "ETag in HTTP-Antworten auf FHIR-Interaktionen",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Der FHIR Data Service MUSS bei erfolgreichen <i>read</i>-, <i>vread</i>-, <i>create</i>- und <i>update</i>-Interaktionen den HTTP-Antwortheader <i>ETag</i> zurückgeben. Der Header enthält die <i>Meta.versionId</i> der jeweiligen FHIR-Instanz als schwachen ETag im Format <i>W/\"&lt;versionId&gt;\"</i>, beispielsweise <i>W/\"2\"</i>.",
+            "conformance": "SHALL",
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "EPA-MHD-Service",
+                        "id": "productType163",
+                        "description": "EPA-MHD-Service"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                }
+            ],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI21752KTQ"
         },
         {
             "key": "IG-TI22824X01",
@@ -1549,6 +1599,69 @@
                 }
             ],
             "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/query-api-search.html#IG-TI31988JEY"
+        },
+        {
+            "key": "IG-TI33807JR0",
+            "title": "Anzeigetexte für codierte Must-Support-Elemente",
+            "version": 0,
+            "status": "ACTIVE",
+            "text": "Das Client-System MUSS den ersten verfügbaren Anzeigetext verwenden, wenn eine Anforderung die Anzeige codierter Must-Support-Elemente eines von ihm implementierten FHIR-Profils verlangt. Die Quellen sind in dieser Reihenfolge auszuwerten <i>CodeableConcept.text</i>, <i>Coding.display</i>, Anzeigetext des Codes aus dem zugehörigen CodeSystem im Terminologiepaket. Fehlt ein Anzeigetext aus allen drei Quellen, zeigt das Client-System einen Hinweis an, dass der Wert nicht als Text verfügbar ist.",
+            "conformance": "SHALL",
+            "characteristics": [
+                {
+                    "product_type": {
+                        "name": "CS_ePA_Ombudsstelle",
+                        "id": "productType129",
+                        "description": "Clientsystem-Schnittstelle ePA: Ombudsstelle"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "Frontend_Vers_ePA",
+                        "id": "productType80",
+                        "description": "ePA - Frontend des Versicherten"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT03",
+                            "name": "funkt. Eignung: Test Produkt/FA"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "PS_ePA",
+                        "id": "productType109",
+                        "description": "ePA-Schnittstelle eines PS"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "CS_VSDM_2",
+                        "id": "productType147",
+                        "description": "CS-Schnittstelle für VSDM 2"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                }
+            ],
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI33807JR0"
         },
         {
             "key": "IG-TI36210TD1",

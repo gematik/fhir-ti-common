@@ -15,7 +15,15 @@ Für die Validierung gilt die IG-Version, nach der der FHIR Data Service die Ins
 
 Pro Validierungskontext wird jedes Package in genau einer Version verwendet. Die im IG direkt deklarierte Version hat Vorrang vor abweichenden Versionen aus transitiven Abhängigkeiten. Ist ein Package ausschließlich transitiv in mehreren Versionen eingebunden, deklariert der IG die vorgesehene Version als direkte Abhängigkeit. Die Auflösung der Package-Abhängigkeiten wird vor der Veröffentlichung geprüft.
 
-Für die bereitzustellenden Terminologiepakete gilt die jeweils festgelegte Mindestversion.
+Zur Validierungsgrundlage gehören neben den deklarierten Paketabhängigkeiten auch die separat bereitzustellenden Terminologiepakete. Dazu zählen für die betreffenden Bindings das KBV-Paket `kbv.all.st` und das TI-Terminologiepaket `de.gematik.terminology`. Für jedes dieser Pakete gilt die jeweils festgelegte Mindestversion.
+
+Für das TI-Terminologiepaket gilt mindestens die zum Veröffentlichungsstand dieses IG aktuelle Version des FHIR-Pakets aus gemIG_TI_Terminology. Produkttypsteckbriefe können eine neuere Mindestversion festlegen. Diese Regel gilt auch für Implementation Guides, die auf TI Common aufbauen.
+
+Implementierungen können die Versionen der separat bereitzustellenden Terminologiepakete über ihre Konfiguration festlegen oder zur Laufzeit aktualisieren. Dadurch lässt sich beispielsweise eine neuere Version der KBV-Schlüsseltabellen oder der TI-Terminologie einbinden, ohne das TI-Common-Paket oder einen darauf aufbauenden IG erneut zu veröffentlichen. Dabei gelten weiterhin die für den jeweiligen Validierungskontext vorgegebenen Mindestversionen und expliziten Versionsreferenzen. Pro Validierungskontext wird auch nach einer Aktualisierung genau eine Version je Paket verwendet.
+
+Eine Offline-Prüfung von Codes aus `IFA_DARREICHUNGSFORM` setzt voraus, dass dem Validator die IFA-Codeliste vorliegt.
+
+Bei versionierten Terminologiereferenzen ist die angegebene Version für die Validierung maßgeblich. Dies gilt auch, wenn ein Backport-Paket ein Terminologieartefakt mit derselben Canonical-URL in einer anderen Version enthält.
 
 Durch die explizite Deklaration der verwendeten Packages und ihrer Versionen wird sichergestellt, dass sowohl bei der Implementierung als auch bei der Validierung ein einheitlicher und reproduzierbarer Stand der zugrunde liegenden FHIR-Artefakte verwendet wird.
 

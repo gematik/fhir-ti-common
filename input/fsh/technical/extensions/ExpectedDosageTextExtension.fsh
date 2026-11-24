@@ -1,6 +1,8 @@
 Extension: ExpectedDosageTextExtension
 Id: expected-dosage-text
-Description: "This extension is used in an Operation Outcome to state the expected Dosage Instruction in the rendered-dosagetext-extension."
+Title: "TI Extension für den erwarteten Dosierungstext"
+Description: "Diese Extension gibt in einer OperationOutcome-Ressource den erwarteten Text für renderedDosageInstruction an."
+Context: OperationOutcome.issue
 * insert Meta
 
 // preserve the version
@@ -10,3 +12,5 @@ Description: "This extension is used in an Operation Outcome to state the expect
 
 * value[x] only markdown
 * valueMarkdown 1..1
+  * ^short = "Erwarteter Dosierungstext"
+  * ^definition = "Erwarteter Text für renderedDosageInstruction."

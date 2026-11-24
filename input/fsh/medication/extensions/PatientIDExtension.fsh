@@ -1,5 +1,6 @@
 Extension: PatientIDExtension
 Id: patient-id-extension
+Title: "TI Extension: Patienten-ID"
 Description: "Patienten-ID, welche bei der Verordnung bestimmter Arzneimittel angegeben werden kann."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/patient-id-extension"

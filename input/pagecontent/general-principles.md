@@ -41,18 +41,7 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
     Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service implementiert, MUSS jedes als Must Support gekennzeichnete Element gemäß der dazugehörigen Kardinalitätsangabe befüllen. Das heißt auch, dass in optionalen Elementen (z.B. Kardinalität "0..1", "0..*") der Elementwert leer bleiben darf, sofern dem Client-System kein Wert zur Verfügung steht.
 </requirement>
 
-<requirement actor="EPA-PS, EPA-FdV" conformance="SHALL" key="IG-TI09377BM6" title="Verarbeitung für Must Support" version="2">
-    <meta lockversion="false"/>
-    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
-        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
-    </actor>
-    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
-        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
-    </actor>
-    Das Client-System, das lesend ein FHIR-Profil des FHIR Data Service implementiert, MUSS in der Lage sein, alle Must-Support-Elemente in FHIR-Instanzen zu verarbeiten. Das Client-System MUSS auch Must-Support-Elemente ohne Wert verarbeiten können, ohne mit einem Fehler abzubrechen oder die Anwendung abstürzen zu lassen.
-</requirement>
-
-<requirement actor="EPA-PS, EPA-FdV, EPA-CS-KTR, EPA-CS-Ombudsstelle, VSDM-Client" conformance="SHALL" key="IG-TI06089XAH" title="Anzeige für Must Support" version="0">
+<requirement actor="EPA-PS, EPA-FdV, EPA-CS-KTR, EPA-CS-Ombudsstelle, VSDM-Client" conformance="SHALL" key="IG-TI09377BM6" title="Verarbeitung für Must Support" version="2">
     <meta lockversion="false"/>
     <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
@@ -69,7 +58,41 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
     <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
-    Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für die menschliche Nutzung anzeigen. Es muss dabei nicht jeden Wert genauso darstellen, wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen ausblenden.
+    Das Client-System, das lesend ein FHIR-Profil des FHIR Data Service implementiert, MUSS in der Lage sein, alle Must-Support-Elemente in FHIR-Instanzen zu verarbeiten. Das Client-System MUSS auch Must-Support-Elemente ohne Wert verarbeiten können, ohne mit einem Fehler abzubrechen oder die Anwendung abstürzen zu lassen.
+</requirement>
+
+<requirement actor="EPA-PS, EPA-FdV, EPA-CS-Ombudsstelle, VSDM-Client" conformance="SHALL" key="IG-TI06089XAH" title="Anzeige für Must Support" version="1">
+    <meta lockversion="false"/>
+    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-CS-Ombudsstelle" description="Clientsystem-Schnittstelle ePA: Ombudsstelle">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    Das Client-System MUSS die Must-Support-Elemente eines von ihm implementierten FHIR-Profils für die jeweilige Zielgruppe verständlich anzeigen, wenn eine Anforderung die Anzeige der Inhalte verlangt. Rein technische Elemente wie <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i> sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann Anzeigeumfang und Darstellungsform festlegen oder einschränken. Die Darstellung darf von der Kodierung in der FHIR-Instanz abweichen, etwa durch einen Anzeigetext für einen Code oder ein lokales Datumsformat. Dabei bleibt der Inhalt des jeweiligen Werts unverändert und alle wesentlichen Informationen bleiben sichtbar.
+</requirement>
+
+<requirement conformance="SHALL" key="IG-TI33807JR0" title="Anzeigetexte für codierte Must-Support-Elemente" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    <actor name="EPA-CS-Ombudsstelle" description="Clientsystem-Schnittstelle ePA: Ombudsstelle">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    Das Client-System MUSS den ersten verfügbaren Anzeigetext verwenden, wenn eine Anforderung die Anzeige codierter Must-Support-Elemente eines von ihm implementierten FHIR-Profils verlangt. Die Quellen sind in dieser Reihenfolge auszuwerten <i>CodeableConcept.text</i>, <i>Coding.display</i>, Anzeigetext des Codes aus dem zugehörigen CodeSystem im Terminologiepaket. Fehlt ein Anzeigetext aus allen drei Quellen, zeigt das Client-System einen Hinweis an, dass der Wert nicht als Text verfügbar ist.
 </requirement>
 
 
@@ -78,6 +101,14 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
 Jede Änderung an einer FHIR-Instanz führt zu einer neuen Version dieser Instanz, wobei jede Version eine eindeutige <i>Meta.versionId</i> und ein <i>Meta.lastUpdated</i> erhält. Auch eine neu erstellte FHIR-Instanz wird vom FHIR Data Service mit diesen Metadaten versehen. Dadurch kann der vollständige Änderungsverlauf einer Instanz nachvollzogen werden. Der FHIR Data Service speichert und stellt die Historie aller Versionen einer FHIR-Instanz bereit. Dies umfasst auch die Möglichkeit, frühere Versionen einer Instanz über die FHIR API unter Verwendung der <i>Meta.versionId</i> abzurufen. Bei einer versionsbewussten Aktualisierung über die FHIR-Interaktion <i>update</i> gibt der Client im HTTP-Header `If-Match` den ETag der Version an, auf der seine Änderung beruht. Weicht diese Version von der aktuellen Version ab, lehnt der FHIR Data Service die Aktualisierung mit HTTP <i>412 Precondition Failed</i> ab. Der Client kann die aktuelle Version abrufen, die beabsichtigte Änderung auf dieser Grundlage prüfen und sie gegebenenfalls mit dem aktuellen ETag erneut übermitteln. Für schreibende FHIR-Operationen legt der jeweilige Implementation Guide fest, wie konkurrierende Änderungen behandelt werden.
 
 Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen an den bestehenden Werten vornimmt, bleibt die aktuelle Version der Instanz unverändert. Der FHIR Data Service erstellt in diesem Fall keine neue Version und behält den bestehenden Wert in _Meta.versionId_ sowie das Datum in _Meta.lastUpdated_ bei.
+
+<requirement conformance="SHALL" key="IG-TI21752KTQ" title="ETag in HTTP-Antworten auf FHIR-Interaktionen" version="0">
+    <meta lockversion="false"/>
+    <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
+        <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
+    </actor>
+    Der FHIR Data Service MUSS bei erfolgreichen <i>read</i>-, <i>vread</i>-, <i>create</i>- und <i>update</i>-Interaktionen den HTTP-Antwortheader <i>ETag</i> zurückgeben. Der Header enthält die <i>Meta.versionId</i> der jeweiligen FHIR-Instanz als schwachen ETag im Format <i>W/"&lt;versionId&gt;"</i>, beispielsweise <i>W/"2"</i>.
+</requirement>
 
 <requirement actor="EPA-Medication-Service, EPA-Patient-Service" conformance="SHALL" key="IG-TI59347HCY" title="Initiale Versionierung neu erstellter oder hinzugefügter FHIR-Instanzen" version="0">
     <meta lockversion="false"/>
@@ -677,6 +708,12 @@ Das folgende Beispiel zeigt die erwartete Antwort auf eine schreibende Anfrage, 
 </requirement>
 
 ### Verwendung von Codes im Status inactive
+
+Der FHIR Data Service prüft beim Speichern neuer FHIR-Instanzen und bei Aktualisierungen die Codes aus den CodeSystems des für den Dienst maßgeblichen Terminologiepakets. Ein Code gilt als inaktiv, wenn seine Konzepteigenschaft `status` in der verwendeten Paketversion den Wert `inactive` hat. Codes mit dem Status `deprecated` bleiben zulässig. CodeSystems außerhalb des Pakets, etwa SNOMED CT und LOINC, sind von dieser Prüfung ausgenommen.
+
+Bei einer Aktualisierung erstreckt sich die Prüfung auf die gesamte neue Instanzversion. Das einstellende System ersetzt darin enthaltene inaktive Codes in den von ihm befüllten Elementen. Elemente, deren Wert der Dienst selbst setzt, etwa die Datenkategorie, führen bei dieser Prüfung zu keiner Ablehnung.
+
+Beim Lesen liefert der Dienst bereits gespeicherte Instanzen unverändert und ohne erneute Prüfung auf inaktive Codes aus. Codes, die zum Zeitpunkt der Erstellung aktiv waren, bleiben auch nach einer späteren Statusänderung in diesen Bestandsdaten gültig.
 
 <requirement conformance="SHALL" key="IG-TI97619U65" title="Keine Registrierung bei Nutzung inaktiver Codes" version="0">
     <meta lockversion="false"/>

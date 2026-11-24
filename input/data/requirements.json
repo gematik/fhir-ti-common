@@ -163,16 +163,12 @@
         "key": "IG-TI06089XAH",
         "title": "Anzeige für Must Support",
         "actor": [
-            "EPA-CS-KTR",
             "EPA-CS-Ombudsstelle",
             "EPA-FdV",
             "EPA-PS",
             "VSDM-Client"
         ],
         "test_procedures": {
-            "EPA-CS-KTR": [
-                "Konformitätsbestätigung"
-            ],
             "EPA-CS-Ombudsstelle": [
                 "Konformitätsbestätigung"
             ],
@@ -186,16 +182,16 @@
                 "Konformitätsbestätigung"
             ]
         },
-        "version": 0,
-        "release_status": "STABLE",
+        "version": 1,
+        "release_status": "MODIFIED",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Wenn eine Anforderung vom Client-System verlangt, Inhalte einer oder mehrerer Instanzen von FHIR-Profilen des FHIR Data Service anzuzeigen, die das Client-System implementiert, MUSS das entsprechende Client-System alle Must-Support-Elemente für die menschliche Nutzung anzeigen. Es muss dabei nicht jeden Wert genauso darstellen, wie er in der Instanz kodiert ist, darf aber auch keine wesentlichen Informationen ausblenden.",
+        "text": "Das Client-System MUSS die Must-Support-Elemente eines von ihm implementierten FHIR-Profils für die jeweilige Zielgruppe verständlich anzeigen, wenn eine Anforderung die Anzeige der Inhalte verlangt. Rein technische Elemente wie <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i> sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann Anzeigeumfang und Darstellungsform festlegen oder einschränken. Die Darstellung darf von der Kodierung in der FHIR-Instanz abweichen, etwa durch einen Anzeigetext für einen Code oder ein lokales Datumsformat. Dabei bleibt der Inhalt des jeweiligen Werts unverändert und alle wesentlichen Informationen bleiben sichtbar.",
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.321313",
-        "modified": "2025-03-17T13:35:52.637533",
-        "date": "2025-11-18T11:03:10.871638",
-        "content_hash": "607135b9861ab96c628cd75ddb5d1ccc620b95b3c6f2e7a64158afee0114a76d",
+        "modified": "2026-11-24T14:08:41.797907",
+        "date": "2026-11-24T14:08:41.797907",
+        "content_hash": "df9d9815357aa39b7d2e2930e34fb1830a6dc77490740fac5d1008a427d91690",
         "path": "general-principles.html",
         "release": "1.5.0"
     },
@@ -391,14 +387,26 @@
         "key": "IG-TI09377BM6",
         "title": "Verarbeitung für Must Support",
         "actor": [
+            "EPA-CS-KTR",
+            "EPA-CS-Ombudsstelle",
             "EPA-FdV",
-            "EPA-PS"
+            "EPA-PS",
+            "VSDM-Client"
         ],
         "test_procedures": {
+            "EPA-CS-KTR": [
+                "Konformitätsbestätigung"
+            ],
+            "EPA-CS-Ombudsstelle": [
+                "Konformitätsbestätigung"
+            ],
             "EPA-FdV": [
                 "Produkttest"
             ],
             "EPA-PS": [
+                "Konformitätsbestätigung"
+            ],
+            "VSDM-Client": [
                 "Konformitätsbestätigung"
             ]
         },
@@ -410,7 +418,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.321306",
         "modified": "2025-05-27T09:33:08.789868",
-        "date": "2025-11-18T11:03:10.871391",
+        "date": "2026-11-24T07:28:36.775990",
         "content_hash": "7c20974774525900465f04a892b07afb7b94ccfb30d9d9ddd2abfc4b54a8a443",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -700,6 +708,30 @@
         "release": "1.5.0"
     },
     {
+        "key": "IG-TI21752KTQ",
+        "title": "ETag in HTTP-Antworten auf FHIR-Interaktionen",
+        "actor": [
+            "EPA-MHD-Service"
+        ],
+        "test_procedures": {
+            "EPA-MHD-Service": [
+                "Produkttest"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Der FHIR Data Service MUSS bei erfolgreichen <i>read</i>-, <i>vread</i>-, <i>create</i>- und <i>update</i>-Interaktionen den HTTP-Antwortheader <i>ETag</i> zurückgeben. Der Header enthält die <i>Meta.versionId</i> der jeweiligen FHIR-Instanz als schwachen ETag im Format <i>W/\"&lt;versionId&gt;\"</i>, beispielsweise <i>W/\"2\"</i>.",
+        "conformance": "SHALL",
+        "created": "2026-11-24T13:20:02.332994",
+        "modified": "2026-11-24T13:20:02.333001",
+        "date": "2026-11-24T13:20:02.333003",
+        "content_hash": "c6f8a9b9a6a0d6ed9a2185228dde570cc16589303bf84a565d6fdbbfa72a004e",
+        "path": "general-principles.html",
+        "release": "1.5.0"
+    },
+    {
         "key": "IG-TI22824X01",
         "title": "Unterstützung von JSON Content Type für FHIR-Data-Schnittstellen",
         "actor": [
@@ -953,6 +985,42 @@
         "date": "2026-09-30T16:35:53.239810",
         "content_hash": "e77343f82a5b7370a34c36dcee2cf2d39930fc895a4939d2310086cc5640e0eb",
         "path": "query-api-search.html",
+        "release": "1.5.0"
+    },
+    {
+        "key": "IG-TI33807JR0",
+        "title": "Anzeigetexte für codierte Must-Support-Elemente",
+        "actor": [
+            "EPA-CS-Ombudsstelle",
+            "EPA-FdV",
+            "EPA-PS",
+            "VSDM-Client"
+        ],
+        "test_procedures": {
+            "EPA-CS-Ombudsstelle": [
+                "Konformitätsbestätigung"
+            ],
+            "EPA-FdV": [
+                "Produkttest"
+            ],
+            "EPA-PS": [
+                "Konformitätsbestätigung"
+            ],
+            "VSDM-Client": [
+                "Konformitätsbestätigung"
+            ]
+        },
+        "version": 0,
+        "release_status": "NEW",
+        "status": "ACTIVE",
+        "source": "input/pagecontent/general-principles.md",
+        "text": "Das Client-System MUSS den ersten verfügbaren Anzeigetext verwenden, wenn eine Anforderung die Anzeige codierter Must-Support-Elemente eines von ihm implementierten FHIR-Profils verlangt. Die Quellen sind in dieser Reihenfolge auszuwerten <i>CodeableConcept.text</i>, <i>Coding.display</i>, Anzeigetext des Codes aus dem zugehörigen CodeSystem im Terminologiepaket. Fehlt ein Anzeigetext aus allen drei Quellen, zeigt das Client-System einen Hinweis an, dass der Wert nicht als Text verfügbar ist.",
+        "conformance": "SHALL",
+        "created": "2026-11-24T09:43:55.925592",
+        "modified": "2026-11-24T09:43:55.925593",
+        "date": "2026-11-24T09:43:55.925595",
+        "content_hash": "145707b708f9cc6e2f09f9e4e6df0806868fcc494e99875c33a6f6a21477f74f",
+        "path": "general-principles.html",
         "release": "1.5.0"
     },
     {

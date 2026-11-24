@@ -85,15 +85,10 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
   * ^comment = "Logical Reference unter Nutzung der Telematik-ID"
   * identifier 0..1 MS
   * identifier only $identifier-telematik-id
-* custodian 0..0
-  * ^short = "n/a"
-  * ^definition = "n/a"
-  * ^comment = "n/a"
 // MS @ child elements with 1:1 set, since IHE defined already MS @ parent
 * relatesTo 0..* MS
   * ^comment = "Logical Reference unter Nutzung der entryUUID"
   * code MS
-  * code from $epa-mhd-document-relationship-type-vs (required)
   * target MS
     * identifier 0..1 MS
     * identifier only IHE.MHD.EntryUUID.Identifier
@@ -115,6 +110,7 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
     * display 1.. MS
 * content MS
 * content.attachment MS
+* content.attachment.extension contains TIDocumentFileName named fileName 0..1
 * content.attachment.contentType 1..1 MS
 * content.attachment.contentType from $epa-xds-mime-type-vs (required)
 * content.attachment.language 1..1 MS
@@ -123,9 +119,9 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
   * ^definition = "Sprache, in der das Dokument abgefasst ist (DocumentEntry.languageCode)"
   * ^comment = "n/a"
 * content.attachment.url 1..1 MS
-  * ^short = "URI für das Dokument"
-  * ^definition = "URI für das Dokument (DocumentEntry.URI)"
-  * ^comment = "Dateiname mit Extension ohne Pfadangabe"
+  * ^short = "Abruf-URL des Dokuments"
+  * ^definition = "URL, über die der Dokumenteninhalt abgerufen werden kann."
+  * ^comment = "Der jeweilige Dienst legt fest, wie das Element bei Schreibtransaktionen belegt wird und wie der Dokumenteninhalt über die URL abgerufen wird."
 * content.attachment.size 0..1 MS
   * ^short = "Größe des Dokuments in Bytes"
   * ^definition = "Größe des Dokuments in Bytes (DocumentEntry.size)"
@@ -148,7 +144,6 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
   * ^comment = "Das Attribut 'formatCode' spezifiziert das Format des Dokumentes. Zusammen mit dem typeCode (und ggf. mit dem mimeType) soll der formatCode für hinreichende Information sorgen, um einem Dokument-Konsumenten die Entscheidung zu ermöglichen, ob und wie er das Dokumentenformat verarbeiten kann."
 * content.format from $epa-xds-format-code-vs (required)
 * context MS
-* context.encounter 0..0
 * context.event 0..* MS
   * ^short = "Ereignisse, die zur Erstellung des Dokuments geführt haben"
   * ^definition = "Ereignisse, die zur Erstellung des Dokuments geführt haben (DocumentEntry.eventCodeList)"
@@ -201,7 +196,7 @@ Description: "Dieses Profil erweitert die IHE MHD Minimal DocumentReference-Ress
 * context.sourcePatientInfo.reference MS
   * ^short = "Demographische Daten zum Patienten im Quellsystem"
   * ^definition = "Demographische Daten zum Patienten im Quellsystem (DocumentEntry.sourcePatientInfo)"
-  * ^comment = "n/a"
+  * ^comment = "Bei Verwendung dieses TI-Profils soll diese Referenz nicht auf eine in der DocumentReference enthaltene Patient-Ressource (contained) verweisen."
 * context.related 0..* MS
   * ^short = "Liste von IDs, mit denen das Dokument assoziiert wird"
   * ^definition = "Liste von IDs, mit denen das Dokument assoziiert wird (DocumentEntry.referenceIdList)"

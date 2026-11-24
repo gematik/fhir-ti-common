@@ -71,7 +71,6 @@ Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentRef
 // FIXME: Add support for authorSpecialty and authorTelecommunication
 * relatesTo 0..* MS
   * code MS
-  * code from $epa-mhd-document-relationship-type-vs (required)
   * target MS
     * identifier 0..1 MS
     * identifier only IHE.MHD.EntryUUID.Identifier
@@ -89,6 +88,7 @@ Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentRef
     * display 1.. MS
 * content MS
 * content.attachment 1..1 MS
+* content.attachment.extension contains TIDocumentFileName named fileName 0..1
 * content.attachment.contentType 1..1 MS
 * content.attachment.contentType from $epa-xds-mime-type-vs (required)
 * content.attachment.language 1..1 MS
@@ -159,4 +159,4 @@ Description: "Dieses Profil erweitert die IHE MHD Simplified Publish DocumentRef
 * context.sourcePatientInfo.reference MS
   * ^short = "Demographische Daten zum Patienten im Quellsystem"
   * ^definition = "Demographische Daten zum Patienten im Quellsystem (DocumentEntry.sourcePatientInfo)"
-  * ^comment = "n/a"
+  * ^comment = "Bei Verwendung dieses TI-Profils soll diese Referenz nicht auf eine in der DocumentReference enthaltene Patient-Ressource (contained) verweisen."

@@ -1,6 +1,7 @@
 Extension: MedicationTotalQuantityFormulationExtension
 Id: medication-total-quantity-formulation-extension
-Description: "Total quantity of the formulation (without the unit)."
+Title: "TI Extension: Gesamtmenge der Rezeptur"
+Description: "Gibt die Gesamtmenge der Rezeptur ohne Einheit an."
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension"
 * ^version = "1.5.0"
@@ -11,6 +12,6 @@ Description: "Total quantity of the formulation (without the unit)."
 
 * value[x] only string
 * valueString 1.. MS
-  * ^short = "Total quantity of the formulation."
-  * ^definition = "Total quantity of the formulation (without the unit)."
+  * ^short = "Gesamtmenge der Rezeptur"
+  * ^definition = "Gesamtmenge der Rezeptur ohne Einheit."
   * ^maxLength = 7

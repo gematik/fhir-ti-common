@@ -1,7 +1,7 @@
 Extension: EPAMedicationTypeExtension
 Id: epa-medication-type-extension
-Title: "Medication Type"
-Description: "Extension for EPAMedication types"
+Title: "TI Extension: Arzneimitteltyp"
+Description: "Gibt den Arzneimitteltyp für die Verarbeitung von Medikationsdaten in der ePA an."
 Context: Medication
 * insert Meta
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension"
@@ -12,4 +12,6 @@ Context: Medication
 
 * value[x] only Coding
 * valueCoding 1.. MS
+  * ^short = "Codierter Arzneimitteltyp"
+  * ^definition = "Codierte Angabe zum Arzneimitteltyp der Medication-Ressource."
 * valueCoding from $ti-medication-type-vs
