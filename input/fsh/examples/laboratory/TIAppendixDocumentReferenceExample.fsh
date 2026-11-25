@@ -9,10 +9,10 @@ Description: "Maximale Beispielinstanz für das Profil TIAppendixDocumentReferen
 //   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>John Doe</div>"
 * status = #current
 * type
-  * coding[xds] = urn:oid:1.3.6.1.4.1.19376.3.276.1.5.9|4.0.0#PATI "Patienteninformationen"
+  * coding[xds] = urn:oid:1.3.6.1.4.1.19376.3.276.1.5.9|4.0.0#BEFU "Ergebnisse Diagnostik"
   * text = "test"
-* category
-  * coding[xds] = urn:oid:1.3.6.1.4.1.19376.3.276.1.5.8|4.0.0#ADM "Administratives Dokument"
+* category[xds]
+  * coding = urn:oid:1.3.6.1.4.1.19376.3.276.1.5.8|4.0.0#BEF "Befundbericht"
   * text = "test"
 * subject = Reference(ExampleTIPatient)
   * identifier
