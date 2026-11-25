@@ -80,7 +80,7 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=5
 API-Anfrage nur für die Gesamtanzahl der Einträge:
 
 ```
-GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0_total=accurate
+GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0&_total=accurate
 ```
 
 <br/>
@@ -146,6 +146,10 @@ GET [base]/epa/audit/api/v1/fhir/AuditEvent?_count=0_total=accurate
   <br/>
   Jeder Link MUSS eine URL enthalten, um das entsprechende Ergebnis-Set abzurufen, das dynamisch basierend auf der Suchanfrage und den Paginierungsparametern wie <i>_count</i> und <i>_offset</i> generiert wird. Diese Links vereinfachen die Navigation eines Client-Systems durch große Suchergebnisse, indem sie die Notwendigkeit manueller Anpassungen der Abfrageparameter ausräumt.
 </requirement>
+
+**Hinweis:**
+
+Die Anforderung an die Links <code>next</code> und <code>previous</code> gilt nur, sofern eine folgende bzw. vorhergehende Ergebnisseite existiert. Auf der letzten Seite entfällt <code>next</code>, auf der ersten Seite <code>previous</code>.
 
 <requirement conformance="MAY" key="IG-TI78112H2T" title="Verwendung relativer URLs bei der Paginierung von FHIR Bundles" version="3">
     <meta lockversion="false"/>
