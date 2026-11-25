@@ -22,6 +22,7 @@
 
 - Mit TI Common 1.4.0 wurden 21 Artefakte aus dem Namensraum `epa-medication` unter ihren bisherigen Canonical-URLs übernommen. In TI Common 1.5.0 tragen diese Artefakte die Version `1.5.0`. Dazu gehören die Identifier-Profile _RxPrescriptionProcessIdentifier_ und _RxOriginatorProcessIdentifier_, 18 Extensions und ein CodeSystem.
 - Mit der Umstellung auf das finale Paket `de.fhir.medication#2.0.0` gilt für Dosierungsangaben in _TIMedicationRequestDgMP_, _TIMedicationDispenseDgMP_ und _TIMedicationStatementDgMP_ die Fassung von _DosageDgMP_ aus diesem Paket.
+- In _TIMedicationDgMP_, _TIMedicationPZNIngredientDgMP_ und _TIMedicationPharmaceuticalProductDgMP_ ist der Zweck der Extension `data-absent-reason` an `Medication.form` beschrieben.
 
 #### Laborprozess
 
