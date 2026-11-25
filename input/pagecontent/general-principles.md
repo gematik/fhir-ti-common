@@ -124,7 +124,7 @@ Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen 
     Der FHIR Data Service MUSS jede neu erstellte oder neu hinzugefügte FHIR-Instanz mit einer <i>Meta.versionId</i> und einem <i>Meta.lastUpdated</i> versehen, um die Versionierung sicherzustellen.
 </requirement>
 
-<requirement conformance="SHALL" key="IG-TI94882PRF" title="Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung" version="0">
+<requirement conformance="SHALL" key="IG-TI94882PRF" title="Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung" version="1">
     <meta lockversion="false"/>
     <actor name="EPA-Medication-Service" description="EPA-Medication-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
@@ -135,7 +135,7 @@ Bei einer Aktualisierung einer FHIR-Instanz, die keine inhaltlichen Änderungen 
     <actor name="EPA-MHD-Service" description="EPA-MHD-Service">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
-    Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS auf den Zeitpunkt der Aktualisierung gesetzt werden.
+    Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz, die deren Inhalt ändert, die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS dabei auf den Zeitpunkt der Aktualisierung gesetzt werden.
 </requirement>
 
 <requirement conformance="SHALL" key="IG-TI52895H8W" title="Keine neue Version bei inhaltsgleichen Aktualisierungen" version="0">

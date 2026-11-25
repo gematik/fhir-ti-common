@@ -2502,16 +2502,16 @@
                 "Produkttest"
             ]
         },
-        "version": 0,
-        "release_status": "STABLE",
+        "version": 1,
+        "release_status": "MODIFIED",
         "status": "ACTIVE",
         "source": "input/pagecontent/general-principles.md",
-        "text": "Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS auf den Zeitpunkt der Aktualisierung gesetzt werden.",
+        "text": "Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz, die deren Inhalt ändert, die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS dabei auf den Zeitpunkt der Aktualisierung gesetzt werden.",
         "conformance": "SHALL",
         "created": "2025-03-10T17:01:48.083983",
-        "modified": "2025-03-12T12:47:19.481709",
-        "date": "2026-08-11T12:49:11.659102",
-        "content_hash": "b30f3869c3b1d34d18d4657c70025a64faf7f84f6f9c4f8a3fa6db83397157f8",
+        "modified": "2026-11-25T07:22:52.424985",
+        "date": "2026-11-25T07:22:52.424985",
+        "content_hash": "3c85fc43b913a861b6622df88e37fa6ae5bb98ec62cd1dd9c0670d960d0e5055",
         "path": "general-principles.html",
         "release": "1.5.0"
     },

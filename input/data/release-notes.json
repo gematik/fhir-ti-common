@@ -236,6 +236,27 @@
                     "conformance": "SHALL",
                     "path": "general-principles.html",
                     "diff": {}
+                },
+                {
+                    "title": "Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung",
+                    "key": "IG-TI94882PRF",
+                    "actor": [
+                        "EPA-MHD-Service",
+                        "EPA-Medication-Service",
+                        "EPA-Patient-Service"
+                    ],
+                    "version": 1,
+                    "release_status": "MODIFIED",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "general-principles.html",
+                    "diff": {
+                        "1.4.0": {
+                            "text": "--- text.old\n+++ text.new\n@@ -1 +1 @@\n-Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS auf den Zeitpunkt der Aktualisierung gesetzt werden.\n+Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz, die deren Inhalt ändert, die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS dabei auf den Zeitpunkt der Aktualisierung gesetzt werden.",
+                            "title": "",
+                            "conformance": ""
+                        }
+                    }
                 }
             ]
         },
