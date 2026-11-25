@@ -8,7 +8,7 @@
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
     "de.basisprofil.r4": "1.6.0",
-    "de.fhir.medication": "1.0.7",
+    "de.fhir.medication": "1.0.8",
     "hl7.fhir.uv.xver-r5.r4": "latest"
   }
 }

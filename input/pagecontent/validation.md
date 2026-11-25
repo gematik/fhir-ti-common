@@ -62,7 +62,7 @@ Hierzu muss u.a. für jede Angabe der Dosierung eine gerenderte textuelle Darste
 Der FHIR Data Service muss eingehende Instanzen zunächst FHIR-validieren und nachfolgend überprüfen, ob die textuelle Repräsentation der Dosierung dem Output des Algorithmus, der im [dgMP-DosageTextgenerierung-Skript] definiert ist, entspricht. Falls der Client keinen korrekten String übermittelt hat, wird die Instanz mit entsprechendem Fehler abgewiesen.
 
 Im Fehlerfall gibt der FHIR Data Service eine entsprechende Fehlermeldung an den Client zurück und überträgt auch die erwartete textuelle Repräsentation der Dosierung.
-Eine Auflistung an Beispielen ist hier zu finden: [Medication IG - Beispiele](https://ig.fhir.de/igs/medication/1.0.7/dosierung-beispiele.html).
+Eine Auflistung an Beispielen ist hier zu finden: [Medication IG - Beispiele](https://ig.fhir.de/igs/medication/1.0.8/dosierung-beispiele.html).
 
 #### Validierung von strukturierten Dosierungen
 
