@@ -5,7 +5,7 @@ Description: "Dosage form of an ingredient in a formulation."
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-darreichungsform-extension"
 // preserve the version
 * ^version = "1.4.1"
-* ^date = "2026-11-24"
+* ^date = "2026-11-25"
 * ^status = #active
 * ^context[+].type = #element
 * ^context[=].expression = "Medication.ingredient"

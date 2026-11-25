@@ -5,7 +5,7 @@ Description: "Abbildung der Angaben zur Verordnung eines teratogenen Arzneimitte
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/teratogenic-extension"
 // preserve the version
 * ^version = "1.4.1"
-* ^date = "2026-11-24"
+* ^date = "2026-11-25"
 * ^status = #active
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationRequest"

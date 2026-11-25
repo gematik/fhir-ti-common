@@ -8,7 +8,7 @@ Description: "Die E-Rezept-ID ist eine generierte und nicht veränderbare Zahlen
 * insert Meta
 // preserve the version of this resource
 * ^version = "1.4.1"
-* ^date = "2026-11-24"
+* ^date = "2026-11-25"
 * ^status = #active
 
 * use = #official (exactly)

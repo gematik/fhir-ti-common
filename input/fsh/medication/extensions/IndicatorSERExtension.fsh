@@ -5,7 +5,7 @@ Description: "Kennzeichnung, ob diese Verordnung mit Bezug zum Sozialen Entschä
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension"
 // preserve the version
 * ^version = "1.4.1"
-* ^date = "2026-11-24"
+* ^date = "2026-11-25"
 * ^status = #active
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationRequest"

@@ -5,7 +5,7 @@ Description: "Information on the packaging of a formulation."
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-formulation-packaging-extension"
 // preserve the version
 * ^version = "1.4.1"
-* ^date = "2026-11-24"
+* ^date = "2026-11-25"
 * ^status = #active
 * ^context[+].type = #element
 * ^context[=].expression = "Medication"

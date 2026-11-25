@@ -9,7 +9,7 @@ license: Apache-2.0
 experimental: false
 status: active # draft | active | retired | unknown
 version: 1.4.1
-date: 2026-11-24
+date: 2026-11-25
 
 copyrightYear: 2026+
 copyright: gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.

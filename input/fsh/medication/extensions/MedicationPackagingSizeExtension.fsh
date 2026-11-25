@@ -5,7 +5,7 @@ Description: "Specification of the package size according to divided quantity (e
 * ^url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-packaging-size-extension"
 // preserve the version
 * ^version = "1.4.1"
-* ^date = "2026-11-24"
+* ^date = "2026-11-25"
 * ^status = #active
 * ^context[+].type = #element
 * ^context[=].expression = "Medication.amount.numerator"
