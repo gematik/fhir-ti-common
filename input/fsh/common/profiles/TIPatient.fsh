@@ -96,6 +96,7 @@ Description: "Das Patient-Profil für die Telematikinfrastruktur (TI) FHIR Data 
 
 * name[Name] only TIHumanName
 * name[Name] ^patternHumanName.use = #official
+* name[Name] ^comment = "Liegt der amtliche Name vor (z. B. aus den Versichertenstammdaten), MUSS er in diesem Slice angegeben werden."
 
 * name[Geburtsname] only TIBirthName
 * name[Geburtsname] ^patternHumanName.use = #maiden
