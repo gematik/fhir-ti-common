@@ -30,6 +30,7 @@
 - Die folgenden Laborprofile bauen auf den europäischen Profilen aus HL7 Europe Laboratory auf und übernehmen deren Vorgaben: _TIServiceRequestLaboratory_ leitet von _ServiceRequestLabEu_ ab; _TIObservationLaboratoryStudy_, _TIObservationLaboratoryStudyGroup_ und _TIObservationLaboratoryImageAttachment_ leiten von _ObservationResultsLaboratoryEu_ ab.
 - _TISpecimenLaboratory_ leitet von _SpecimenEu_, _TISpecimenAdditiveSubstanceLaboratory_ von _SpecimenAdditiveSubstance_, _TIDeviceLaboratoryAnalyzer_ von _DeviceMeasuringLabReportEu_ und _TIDeviceLaboratorySpecimenSubject_ von _DeviceSpecimenLabReportEu_ ab. Auch diese Profile übernehmen damit die Vorgaben ihrer europäischen Basisprofile.
 - Für die Labordiagnostik wurden die Extensions _ReasonTypeLaboratoryExtension_, _TestProfileLaboratoryExtension_, _ZlogLaboratoryExtension_, _AssociationServiceLaboratoryExtension_, _NoLinearReferenceRangeLaboratoryExtension_ und _AlternativeResultLaboratoryExtension_ hinzugefügt.
+- Die Definitionen der Kennzeichen Kritischer Befund, Fremdleistung, Verbundleistung und Nicht-linearer Wertebereich legen fest, was `true`, `false` und eine fehlende Extension bedeuten.
 
 #### Dokumentenmanagement
 
@@ -46,6 +47,7 @@
 
 - Dem CodeSystem _TIOperationOutcomeDetailsCS_ und dem ValueSet _TIOperationOutcomeDetailsVS_ wurde der Code _SVC_DANGLING_REFERENCE_ hinzugefügt. Er wird verwendet, wenn eine schreibende Anfrage abgelehnt wird, weil sie zu hängenden literalen Referenzen führen würde (siehe Abschnitt "Referentielle Integrität" unter [Generelle Prinzipien](general-principles.html)).
 - Zur Paginierung ist ergänzt, dass die Links `next` und `previous` nur angegeben werden, wenn eine folgende bzw. vorhergehende Ergebnisseite existiert.
+- Für die booleschen Angaben `required` (_HTTPHeader_) und `retryable` (_HttpResponseInfo_) ist festgelegt, was `true` und `false` bedeuten.
 
 #### Anforderungen
 

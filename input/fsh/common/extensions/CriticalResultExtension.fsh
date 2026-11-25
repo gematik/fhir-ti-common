@@ -13,3 +13,5 @@ Context: DiagnosticReport
 
 * value[x] only boolean
 * valueBoolean 1..1
+* valueBoolean ^short = "Kennzeichen Kritischer Befund"
+* valueBoolean ^definition = "true: Der Befund wurde von der Labormedizinerin bzw. dem Labormediziner aktiv als medizinisch kritisch gekennzeichnet. false: Der Befund ist nicht als kritisch gekennzeichnet. Fehlt die Extension, ist der Befund ebenfalls nicht als kritisch gekennzeichnet."

@@ -12,3 +12,5 @@ Context: Observation
 
 * value[x] only boolean
 * valueBoolean 1..1
+* valueBoolean ^short = "Kennzeichen Fremdleistung"
+* valueBoolean ^definition = "true: Die Laboruntersuchung wurde von einem anderen Labor durchgeführt (Fremdleistung). false: Die Laboruntersuchung wurde vom befundenden Labor selbst durchgeführt. Fehlt die Extension, gilt dasselbe wie bei false."
