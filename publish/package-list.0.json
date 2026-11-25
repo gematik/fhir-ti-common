@@ -6,7 +6,7 @@
     "list": [
         {
             "version": "1.0.0",
-            "desc": "TI Common IG 1.0.0",
+            "desc": "TI Common Version 1.0.0",
             "path": "https://gematik.de/fhir/ti/1.0.0",
             "status": "release",
             "current": false,
