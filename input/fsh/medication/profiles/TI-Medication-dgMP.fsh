@@ -106,6 +106,9 @@ RuleSet: TIMedicationElements
   * ^short = "Form of Dispensing"
   * extension MS
   * extension contains $data-absent-reason named dataAbsentReason 0..1 MS
+  * extension[dataAbsentReason]
+    * ^short = "Grund für fehlende Darreichungsform"
+    * ^definition = "Kennzeichnet ausdrücklich, dass die Darreichungsform nicht bekannt ist, wenn weder eine KBV- noch eine IFA-Darreichungsform angegeben werden kann, statt Medication.form leer zu lassen."
   * coding MS
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
