@@ -4,6 +4,8 @@ Id: ti-practitioner-role
 Title: "TI PractitionerRole"
 Description: """
 Dieses Profil beschreibt die Verwendung der FHIR-Ressource PractitionerRole in der Telematikinfrastruktur (TI). Es wird verwendet, um die Rolle und Funktion einer Gesundheitsfachperson innerhalb einer Organisation zu definieren.
+
+Die Bindungen von `PractitionerRole.code` (example) und `PractitionerRole.specialty` (preferred) sind bewusst offen, weil das Profil dienstübergreifend und für alle Berufsgruppen verwendet wird. Deutsche Kodierungen können verwendet werden.
 """
 * insert Meta-With-Versioning
 // preserve the version of this resource
@@ -22,3 +24,5 @@ Dieses Profil beschreibt die Verwendung der FHIR-Ressource PractitionerRole in d
   * system MS
   * value MS
   * use MS
+* specialty MS
+  * insert CodeableConceptMS
