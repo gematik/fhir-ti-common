@@ -3981,9 +3981,9 @@
         {
             "key": "IG-TI94882PRF",
             "title": "Aktualisierung von Meta.versionId und Meta.lastUpdated bei einer Änderung",
-            "version": 0,
+            "version": 1,
             "status": "ACTIVE",
-            "text": "Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS auf den Zeitpunkt der Aktualisierung gesetzt werden.",
+            "text": "Der FHIR Data Service MUSS sicherstellen, dass bei jeder Aktualisierung einer FHIR-Instanz, die deren Inhalt ändert, die <i>Meta.versionId</i> angepasst wird. Das Element <i>Meta.lastUpdated</i> MUSS dabei auf den Zeitpunkt der Aktualisierung gesetzt werden.",
             "conformance": "SHALL",
             "characteristics": [
                 {
@@ -4026,7 +4026,7 @@
                     ]
                 }
             ],
-            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI94882PRF"
+            "link": "https://gematik.de/fhir/ti/1.5.0-ballot.2/general-principles.html#IG-TI94882PRF-01"
         },
         {
             "key": "IG-TI95143N18",
