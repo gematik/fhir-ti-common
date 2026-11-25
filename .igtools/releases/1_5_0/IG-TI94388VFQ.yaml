@@ -1,11 +1,11 @@
 actor:
 - EPA-Query-Responder
 conformance: SHALL
-content_hash: f4d4d791fc64a14fbebd440d3383068aaff06c03f693a26209a8fa943d9b957e
+content_hash: 4babe43d23633784c2c0d19f691111f0fa7154d461bb419449b811e1a6d7c32a
 created: '2026-09-17T06:49:27.055588'
-date: '2026-09-17T13:41:04.642198'
+date: '2026-11-25T13:21:21.878109'
 key: IG-TI94388VFQ
-modified: '2026-09-17T13:41:04.642198'
+modified: '2026-11-25T13:21:21.878109'
 release_status: NEW
 source: input/pagecontent/general-principles.md
 status: ACTIVE
@@ -14,14 +14,15 @@ test_procedures:
   - Produkttest
 text: "Der FHIR Data Service MUSS in den Interaktionen <i>history-instance</i> und\
   \ <i>history-type</i> den FHIR-Suchparameter <i>_at</i> gemäß [FHIR History Interaction]\
-  \ verarbeiten. Der Wert von <i>_at</i> wird dabei als vollständiges <i>dateTime</i>\
-  \ (YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz) erwartet.<br/>\n Das Ergebnis MUSS auf\
-  \ diejenigen Versionen eingeschränkt werden, die zum angegebenen Zeitpunkt gültig\
-  \ waren. Das Ergebnis MUSS dabei ebenfalls als FHIR-<i>Bundle</i> mit <i>Bundle.type\
-  \ = history</i> zurückgegeben werden.<br/>\n Bei einem Wert von <i>_at</i>, der\
-  \ nicht dem erwarteten Format (vollständiges <i>dateTime</i>) entspricht, MUSS der\
-  \ FHIR Data Service mit einem HTTP Status Code <code>400</code> <i>\"Bad Request\"\
-  </i> sowie einer <i>OperationOutcome</i>-Ressource und Wert <i>MSG_BAD_SYNTAX</i>\
-  \ im Element <i>.issue.details.coding.code</i> antworten."
+  \ verarbeiten. Der Wert von <i>_at</i> wird dabei als vollständiges Datum (YYYY-MM-DD)\
+  \ oder als <i>dateTime</i> mit Uhrzeit einschließlich Sekunden und Zeitzone (z.\
+  \ B. YYYY-MM-DDThh:mm:ss+zz:zz) erwartet und nach seiner Präzision ausgelegt.<br/>\n\
+  \ Das Ergebnis MUSS auf diejenigen Versionen eingeschränkt werden, die zum angegebenen\
+  \ Zeitpunkt oder, bei einem Datum, im Laufe dieses Tages gültig waren. Das Ergebnis\
+  \ MUSS dabei ebenfalls als FHIR-<i>Bundle</i> mit <i>Bundle.type = history</i> zurückgegeben\
+  \ werden.<br/>\n Bei einem Wert von <i>_at</i>, der keinem dieser beiden Formate\
+  \ entspricht, MUSS der FHIR Data Service mit einem HTTP Status Code <code>400</code>\
+  \ <i>\"Bad Request\"</i> sowie einer <i>OperationOutcome</i>-Ressource und Wert\
+  \ <i>MSG_BAD_SYNTAX</i> im Element <i>.issue.details.coding.code</i> antworten."
 title: Zeitpunktbezogener Abruf der Versionshistorie mit _at
 version: 0
