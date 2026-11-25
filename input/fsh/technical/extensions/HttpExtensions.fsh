@@ -70,6 +70,7 @@ Description: "Ermöglicht die Angabe global oder spezifisch geforderter HTTP Hea
 
 * extension[required].value[x] only boolean
 * extension[required] ^short = "Gibt an, ob der Header verpflichtend ist (true/false)"
+* extension[required].valueBoolean ^definition = "true: Der Header muss bei der jeweiligen Interaktion angegeben werden. false: Die Angabe des Headers ist optional. Die Angabe ist verpflichtend (1..1) und kann daher nicht fehlen."
 
 * extension[interaction].value[x] only code
 * extension[interaction].valueCode from TIRestfulInteractionVS (required)
@@ -122,6 +123,7 @@ Description: "Definiert Informationen zu HTTP-Antworten für FHIR-Interaktionen,
 
 * extension[retryable].value[x] only boolean
 * extension[retryable] ^short = "Gibt an, ob die Antwort auf einen temporären Fehler hinweist und ein erneuter Versuch möglich ist"
+* extension[retryable].valueBoolean ^definition = "true: Die Antwort weist auf einen temporären Fehler hin; der Client kann die Anfrage später erneut senden. false: Die Antwort weist nicht auf einen temporären Fehler hin; ein erneuter Versuch mit unveränderter Anfrage ist nicht vorgesehen. Fehlt die Angabe, ist keine Aussage zur Wiederholbarkeit getroffen."
 
 * extension[responseType].value[x] only string
 * extension[responseType] ^short = "Der erwartete Response-Typ oder Medientyp, z.B. OperationOutcome, application/json"

@@ -12,3 +12,5 @@ Context: Observation.referenceRange
 
 * value[x] only boolean
 * valueBoolean 1..1
+* valueBoolean ^short = "Kennzeichen Nicht-linearer Wertebereich"
+* valueBoolean ^definition = "true: Das numerische Ergebnis stammt aus einem nicht-linearen Wertebereich, z. B. einem ganzzahligen Score oder einer Titerstufe. false: Der Wertebereich ist linear. Fehlt die Extension, ist der Wertebereich nicht als nicht-linear gekennzeichnet; ein Hinweis kann sich weiterhin aus dem LOINC-Code ergeben (Scale = SemiQn)."
