@@ -22,6 +22,7 @@ Berechnete Laborergebnisse können auf Messungen basieren, z.B. kann die berechn
 
 
 * obeys obs-alt-result-1
+* obeys obs-alt-result-2
 * extension MS
 * extension contains
   TestProfileLaboratoryExtension named testProfile 0..1 MS and
@@ -123,7 +124,7 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
         * system MS
         * code MS
   * extension[referenceRange] MS
-    * ^definition = "Richtgrenzen für das quantitative Ergebnis mit Alternativeinheit."
+    * ^definition = "Richtgrenzen für das quantitative Ergebnis mit Alternativeinheit. Sind sie angegeben, ist höchstens ein Referenzbereich (Observation.referenceRange) zulässig; Typ, Geltungsbereich und Text dieses Referenzbereichs gelten auch für die Alternativeinheit."
     * ^short = "Richtgrenzen für Alternativeinheit"
     * extension[low] MS
       * valueQuantity MS
