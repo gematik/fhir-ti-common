@@ -37,7 +37,7 @@ StructureDefinition/ti-specimen-additive-substance-laboratory,
 StructureDefinition/reason-type-laboratory-extension,
 StructureDefinition/alternative-result-laboratory-extension,
 StructureDefinition/association-service-laboratory-extension,
-StructureDefinition/no-linear-reference-range-laboratory-extension,
+StructureDefinition/non-linear-reference-range-laboratory-extension,
 StructureDefinition/test-profile-laboratory-extension,
 StructureDefinition/zlog-laboratory-extension,
 {% endcapture %}
