@@ -6,8 +6,8 @@ Context: OperationOutcome.issue
 * insert Meta
 
 // preserve the version
-* ^version = "1.4.0"
-* ^date = "2026-09-23"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * value[x] only markdown

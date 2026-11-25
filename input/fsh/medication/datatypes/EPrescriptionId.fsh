@@ -7,8 +7,8 @@ Title: "Identifikator Profil für E-Rezept-IDs"
 Description: "Die E-Rezept-ID ist eine generierte und nicht veränderbare Zahlenfolge, die durch Punkte getrennt ist. Die ersten drei Ziffern definieren die Art der Verordnung. Die nächsten zwölf Ziffern stellen die generierte, eindeutige und fortlaufende Sequenz der Verordnung dar. Die letzten beiden Ziffern sind Prüfziffern gemäß ISO 7064."
 * insert Meta
 // preserve the version of this resource
-* ^version = "1.1.1"
-* ^date = "2025-09-12"
+* ^version = "1.5.0"
+* ^date = "2026-12-08"
 * ^status = #active
 
 * use = #official (exactly)
