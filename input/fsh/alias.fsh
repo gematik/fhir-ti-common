@@ -121,7 +121,6 @@ Alias: $ti-vs-laboratory-analyzer = https://gematik.de/fhir/terminology/ValueSet
 Alias: $ti-vs-extracorporal-device = https://gematik.de/fhir/terminology/ValueSet/extracorporal-device
 Alias: $ti-vs-diagram-type =  https://gematik.de/fhir/terminology/ValueSet/diagram-type
 Alias: $ti-vs-laboruntersuchungsgruppe = https://gematik.de/fhir/terminology/ValueSet/laboruntersuchungsgruppe
-Alias: $ti-vs-data-absent-reason-laboratory = https://gematik.de/fhir/terminology/ValueSet/data-absent-reason-laboratory
 Alias: $ti-vs-observation-methods = https://gematik.de/fhir/terminology/ValueSet/observation-methods
 Alias: $ti-vs-reference-range-applies-to = https://gematik.de/fhir/terminology/ValueSet/reference-range-applies-to
 Alias: $ti-vs-specimen-identifier-type = https://gematik.de/fhir/terminology/ValueSet/specimen-identifier-type
@@ -136,7 +135,6 @@ Alias: $ti-vs-laboratory-study-types-extended = https://gematik.de/fhir/terminol
 /// CodeSystems
 Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
 Alias: $epa-data-category-medical-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs
-Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
 Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
 
 Alias: $ti-cs-laboratory-test-profile = https://gematik.de/fhir/terminology/CodeSystem/laboratory-test-profile
