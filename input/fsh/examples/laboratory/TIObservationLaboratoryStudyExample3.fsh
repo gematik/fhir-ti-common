@@ -9,7 +9,7 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
 //   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboruntersuchung</div>"
 * extension[accredited].valueBoolean = true
 * extension[testProfile]
-  * valueCodeableConcept.coding = $ti-laboratory-test-profile-cs#haemato "Hämatologie"
+  * valueCodeableConcept.coding = $ti-cs-laboratory-test-profile#haemato "Hämatologie"
   * valueCodeableConcept.text = "Hämatologie"
 * extension[externalService].valueBoolean = true
 * extension[associationService].valueBoolean = true
@@ -31,7 +31,7 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
 * category[laboratory]
   * coding = $cs-observation-category|2.0.0#laboratory "Laboratory"
 * category[studyType]
-  * coding = $loinc#18717-9 "Blood bank studies (set)"
+  * coding = $loinc#18717-9 "Blutbank-Untersuchungen"
   * text = "test"
 * code
   * coding = $loinc-2.82#14933-6 "Harnsäure [Mol/Volumen] in Serum oder Plasma"
