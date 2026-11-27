@@ -37,27 +37,51 @@ Untersuchungsgruppen, deren Sortierreihenfolge und die Sortierreihenfolge der ei
 * status from $ti-vs-observation-status (required)
 * category MS
   * ^definition = """
-  Zur jeweiligen Gruppe kann es gruppenbezogene fachliche Bezeichner geben. Für die gruppierte Darstellung von Laborergebnissen im Laborgesamtbefund können solche fachlichen Gruppierungsmerkmale als Gruppenüberschrift dienen. Mögliche Gruppenüberschriften sind:
-  - \"Laborbereich\" (z.B. Klinische Chemie)
-  - \"Test-Profil\" (z.B. \"Elektrolyte\")
-  - \"Laborbereich\" mit \"Test-Profil\" kombiniert
+  Hier wird die fachspezifische Eingrenzung innerhalb der Laboratoriumsmedizin anhand entsprechender Kategorie-Begriffe für den Laborbereich angegeben. Beispiele für eine fachspezifische Eingrenzung sind: \"Klinische Chemie\", \"Hämatologie\", \"Toxikologie\".
 
-Für im \"Katalog priorisierter Untersuchungsgruppen und Analysen\" gelistete Untersuchungen gilt, dass die im Katalog jeweils vorgegebene Gruppenbezeichnung als Test-Profil (ObservationLaboratoryStudyGroupdgLP.extension:testProfile.valueCodeableConcept.coding) zur Anzeige kommen muss. Nicht im Katalog aufgeführte Laboruntersuchungen können je nach fachlichem Kontext in die Gruppen einsortiert oder unterhalb bzw. außerhalb der sortierten Liste eingeordnet werden.
-"""
-  * ^short = "Fachliche Bezeichnung für eine Untersuchungsgruppe"
+  Es besteht grundsätzlich die Möglichkeit, eine allgemeine Kategorie für \"Laboruntersuchungen\" zu vergeben. Ein Beispiel: für \"Humangenetische Diagnostik\" ist noch kein entsprechender Code verfügbar. Hier wird ersatzweise der LOINC®-Code 26436-6 Laboruntersuchungen gesetzt und als Bezeichnung \"Humangenetische Diagnostik\" vergeben.
+  """
+  * ^short = "Bezeichnung für Fachbereich, unter dem Laboruntersuchungen gruppiert werden"
+* category contains studyTypeExtended 0.. MS
 * category[laboratory] MS
   * coding MS
     * insert CodingMS
 * category[studyType] MS
   * ^definition = """
-  Hier kann die fachspezifische Eingrenzung innerhalb der Laboratoriumsmedizin anhand entsprechender Kategorie-Codes angegeben werden. Beispiele für eine fachspezifische Eingrenzung sind: \"Klinische Chemie\", \"Hämatologie\", \"Toxikologie\". Es besteht auch die Option, eine allgemeine Kategorie für \"Labor\" zu vergeben.
+  Hier wird der LOINC®-Code für den Fachbereich/ das Spezialgebiet der Labormedizin angegeben.
+  Das ValueSet folgt dem EU Profil: https://hl7.eu/fhir/laboratory/ValueSet-lab-studyType-eu-lab.html. Wenn aus diesem EU-Valueset keine ausreichend spezifische LOINC®-Kodierung zugeordnet werden kann, kann das ergänzende Valueset am Element \"LOINC®-Code erweitert\" verwendet werden.
+  Zusätzlich oder alternativ kann die Bezeichnung den zu benennenden Begriff präzisieren.
   """
-  * ^short = "Bezeichnung für Fachbereich, unter dem Laboruntersuchungen gruppiert werden"
+  * ^short = "Laborbereich, EU-Werteliste"
   * coding MS
     * ^definition = "Benennung des labormedizinischen Bereiches als Code."
     * insert CodingMS
   * text MS
-    * ^definition = "Benennung des labormedizinischen Bereiches als Freitext."
+    * ^definition = """
+    Benennung des labormedizinischen Bereiches als Freitext. Hier gibt es zwei Möglichkeiten:
+
+    - Die Bezeichnung kann der zugeordneten Kodierung äquivalent sein.
+    - Wenn keine ausreichend spezifische Kodierung zugeordnet werden kann, präzisiert die Bezeichnung den zu benennenden Begriff.
+
+    Ein Beispiel: für \"Humangenetische Diagnostik\" ist noch kein entsprechender Code verfügbar. Hier wird ersatzweise der LOINC®-Code 26436-6 Laboruntersuchungen gesetzt und als Bezeichnung \"Humangenetische Diagnostik\" vergeben.
+    """
+* category[studyTypeExtended] from $ti-vs-laboratory-study-types-extended (required)
+  * ^definition = """
+  Wenn der labormedizinische Bereich nicht ausreichend spezifisch durch das Element \"LOINC®-Code EU\" kodiert werden kann, offeriert dieses Element ergänzende LOINC®-Codes.
+  Dieses ValueSet ist eine Ergänzung zum limitierten EU ValueSet \"Laboratory Study Types\" (https://hl7.eu/fhir/laboratory/ValueSet-lab-studyType-eu-lab.html).
+  Weitere LOINC®-Codes werden beantragt, um dieses ergänzende ValueSet zu erweitern. Wenn auch hier keine ausreichend spezifische LOINC®-Kodierung zugeordnet werden kann, kann die Bezeichnung den zu benennenden Begriff präzisieren.
+  """
+  * ^short = "Laborbereich, erweiterete Werteliste"
+  * coding MS
+    * ^definition = "Benennung des labormedizinischen Bereiches als Code."
+    * insert CodingMS
+  * text MS
+    * ^definition = """
+    Benennung des labormedizinischen Bereiches als Freitext. Hier gibt es zwei Möglichkeiten:
+
+    - Die Bezeichnung kann der zugeordneten Kodierung äquivalent sein.
+    - Wenn keine ausreichend spezifische Kodierung zugeordnet werden kann, präzisiert die Bezeichnung den zu benennenden Begriff.
+    """
 * code 1..1 MS
   * ^definition = "Dieses Element ist vorhanden, um die Datenstruktur \"Laboruntersuchungsgruppe\" FHIR-konform mit einem klassifizierenden Code abzubilden."
   * coding 1..1

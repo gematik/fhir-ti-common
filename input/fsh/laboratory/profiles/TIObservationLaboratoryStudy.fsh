@@ -71,6 +71,8 @@ zlog = (log(x) –(log(UG)+log(OG))/2)*3,92/(log(OG)–log(UG))\n
 Interpretation des zlog-Wertes:
 * Sein Referenzintervall liegt methodenunabhängig stets zwischen – 1,96 und + 1,96
 * Stark erniedrigte oder erhöhte Laborergebnisse führen zu zlog-Werten um – 5 bzw. + 5.
+
+Quellenangabe: \"Der zlog-Wert als Basis für die Standardisierung von Laborwerten\" 2017 (Georg Hoffmann, Frank Klawonn, Ralf Lichtinghagen, Matthias Orth), LaboratoriumsMedizin, vol. 41, no. 1, 2017, pp. 23-32. https://doi.org/10.1515/labmed-2016-0087
 """
   * valueDecimal MS
 * extension[alternativeResult] ^definition = "Hier werden auf eine alternative Einheit umgerechnete Messergebnisse mitgeführt.\n
@@ -158,26 +160,48 @@ Dies betrifft das quantitative Messergebnis, sowie die Richtgrenzenwerte und die
 * category MS
   * ^definition = "Zur einzelnen Laboruntersuchung wird das \"fachliche Gruppierungsmerkmal\" REDUNDANT abgebildet, der Inhalt entspricht exakt dem fachlichen Gruppierungsmerkmal der zugehörigen Untersuchungsgruppe. Dies ermöglicht bei datenbankbasierten Abfragen von Einzeluntersuchungen (z.B. in der ePA) eine direkte Zuordnung zur fachlichen Gruppierung. Das fachliche Gruppierungsmerkmal der Untersuchungsgruppe ist grundsätzlich führend!"
   * ^short = "Fachliche Bezeichnung für die zugehörige Untersuchungsgruppe, Inhalt identisch zu TIObservationLaboratoryStudyGroup.category"
+* category contains studyTypeExtended 0.. MS
 * category[laboratory] MS
   * coding MS
     * insert CodingMS
-  * text MS
 * category[studyType] MS
-  * ^definition = "Hier kann die fachspezifische Eingrenzung innerhalb der Laboratoriumsmedizin anhand entsprechender Kategorie-Codes angegeben werden. Beispiele für eine fachspezifische Eingrenzung sind: \"Klinische Chemie\", \"Hämatologie\", \"Toxikologie\". Es besteht auch die Option, eine allgemeine Kategorie für \"Labor\" zu vergeben."
-  * ^short = "Bezeichnung für Fachbereich, unter dem Laboruntersuchungen gruppiert werden, Inhalt identisch zu TIObservationLaboratoryStudyGroup.category:studyType"
+  * ^definition = """
+  Hier wird der LOINC®-Code für den Fachbereich/ das Spezialgebiet der Labormedizin angegeben.
+  Das ValueSet folgt dem EU Profil: https://hl7.eu/fhir/laboratory/ValueSet-lab-studyType-eu-lab.html. Wenn aus diesem EU-Valueset keine ausreichend spezifische LOINC®-Kodierung zugeordnet werden kann, kann das ergänzende Valueset am Element \"LOINC®-Code erweitert\" verwendet werden.
+  Zusätzlich oder alternativ kann die Bezeichnung den zu benennenden Begriff präzisieren.
+  """
+  * ^short = "Laborbereich, EU-Werteliste"
   * coding MS
     * ^definition = "Benennung des labormedizinischen Bereiches als Code."
     * insert CodingMS
   * text MS
-    * ^definition = "Benennung des labormedizinischen Bereiches als Freitext."
+    * ^definition = """
+    Benennung des labormedizinischen Bereiches als Freitext. Hier gibt es zwei Möglichkeiten:
+
+    - Die Bezeichnung kann der zugeordneten Kodierung äquivalent sein.
+    - Wenn keine ausreichend spezifische Kodierung zugeordnet werden kann, präzisiert die Bezeichnung den zu benennenden Begriff.
+
+    Ein Beispiel: für \"Humangenetische Diagnostik\" ist noch kein entsprechender Code verfügbar. Hier wird ersatzweise der LOINC®-Code 26436-6 Laboruntersuchungen gesetzt und als Bezeichnung \"Humangenetische Diagnostik\" vergeben.
+    """
+* category[studyTypeExtended] from $ti-vs-laboratory-study-types-extended (required)
+  * ^definition = """
+  Wenn der labormedizinische Bereich nicht ausreichend spezifisch durch das Element \"LOINC®-Code EU\" kodiert werden kann, offeriert dieses Element ergänzende LOINC®-Codes.
+  Dieses ValueSet ist eine Ergänzung zum limitierten EU ValueSet \"Laboratory Study Types\" (https://hl7.eu/fhir/laboratory/ValueSet-lab-studyType-eu-lab.html).
+  Weitere LOINC®-Codes werden beantragt, um dieses ergänzende ValueSet zu erweitern. Wenn auch hier keine ausreichend spezifische LOINC®-Kodierung zugeordnet werden kann, kann die Bezeichnung den zu benennenden Begriff präzisieren.
+  """
+  * ^short = "Laborbereich, erweiterete Werteliste"
+  * coding MS
+    * ^definition = "Benennung des labormedizinischen Bereiches als Code."
+    * insert CodingMS
+  * text MS
+    * ^definition = """
+    Benennung des labormedizinischen Bereiches als Freitext. Hier gibt es zwei Möglichkeiten:
+
+    - Die Bezeichnung kann der zugeordneten Kodierung äquivalent sein.
+    - Wenn keine ausreichend spezifische Kodierung zugeordnet werden kann, präzisiert die Bezeichnung den zu benennenden Begriff.
+    """
 * code MS
   * ^definition = "Hier wird die konkrete einzelne Laboruntersuchung spezifiziert."
-  * extension contains $data-absent-reason named dataAbsentReason 0..1 MS
-  * extension[dataAbsentReason]
-    * ^definition = "Begründung für die Nicht-Vergabe eines Codes zur Laboruntersuchung"
-    * ^short = "Grund für das Nichtvorhandensein eines Codes"
-    * valueCode MS
-    * valueCode from $ti-vs-data-absent-reason-laboratory (required)
   * coding MS
     * ^definition = "In diesem Element wird ein Code für die Laboruntersuchung angegeben."
     * insert CodingMS

@@ -1,0 +1,17 @@
+{
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "displayLanguage",
+            "valueCode": "en, de-DE"
+        },
+        {
+            "name": "system-version",
+            "valueUri": "http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20260515"
+        },
+        {
+            "name": "system-version",
+            "valueUri": "http://loinc.org|2.82"
+        }
+    ]
+}

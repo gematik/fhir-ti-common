@@ -8,23 +8,23 @@ Description: "Maximale Beispielinstanz für das Profil TIBodyStructure"
 //   * status = #extensions
 //   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>John Doe</div>"
 * morphology
-  * coding = $cs-sct-de-20260515#248708004 "Fragile blood vessel"
+  * coding = $cs-sct-de-20261115#248708004 "Fragile blood vessel"
   * text = "test"
 * extension[includedStructure]
   * extension[structure].valueCodeableConcept
-    * coding = $cs-sct-de-20260515#90432007 "Structure of mucous membrane of nasopharynx"
+    * coding = $cs-sct-de-20261115#90432007 "Structure of mucous membrane of nasopharynx"
     * text = "test"
   * extension[laterality].valueCodeableConcept
-    * coding = $cs-sct-de-20260515#7771000 "Links"
+    * coding = $cs-sct-de-20261115#7771000 "Links"
     * text = "test"
   * extension[bodyLandmarkOrientation].extension[clockFacePosition].valueCodeableConcept
-    * coding = $cs-sct-de-20260515#260330005 "3 o'clock position"
+    * coding = $cs-sct-de-20261115#260330005 "3 o'clock position"
     * text = "test"
   * extension[qualifier].valueCodeableConcept
-    * coding = $cs-sct-de-20260515#46053002 "Distal"
+    * coding = $cs-sct-de-20261115#46053002 "Distal"
     * text = "test"
 * morphology
-  * coding = $cs-sct-de-20260515#75910000 "Congenital hypersegmentation"
+  * coding = $cs-sct-de-20261115#75910000 "Congenital hypersegmentation"
   * text = "test"
 * description = "test"
 * patient = Reference(ExampleTIPatient)

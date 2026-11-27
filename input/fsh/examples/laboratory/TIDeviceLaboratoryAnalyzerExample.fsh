@@ -27,7 +27,7 @@ Usage: #example
   * type = #model-name
 * modelNumber = "123456789"
 * type
-  * coding[snomed] = $cs-sct-de-20260515#30234008 "Medical laboratory analyzer"
+  * coding[snomed] = $cs-sct-de-20261115#30234008 "Medical laboratory analyzer"
   * text = "Medizinisches Laboranalysegerät"
 * version.value = "v1"
 * note.text = "test"

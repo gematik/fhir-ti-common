@@ -11,8 +11,6 @@ Description: "Dieses Profil bildet einen eingebetteten PDF-Anhang innerhalb eine
 * ^status = #active
 
 * masterIdentifier MS
-* status MS
-  * ^definition = "Hier wird der Status des Anhanges angegeben."
 * type MS
   * ^definition = "In diesem Element werden Angaben zum Typ des Dokuments gemacht. Diese werden als codierte Information und/oder als Freitext angegeben."
   * coding MS
@@ -24,23 +22,21 @@ Description: "Dieses Profil bildet einen eingebetteten PDF-Anhang innerhalb eine
   * coding[xds] from $epa-xds-type-code-vs (required)
   * coding[xds] MS
     * ^definition = "Hier wird der Dokumenttyp gem. IHE-De-Terminologie in codierter Form angeben."
+    * insert CodingMS
   * text MS
     * ^definition = "Hier wird ein Freitext eingetragen."
-* insert Coding(type.coding[xds])
 * category MS
   * ^definition = "In diesem Element werden Angaben zur Kategorie des Dokuments gemacht. Diese werden als codierte Information und/oder als Freitext angegeben."
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+* category contains xds 0..1
+* category[xds] from $epa-xds-class-code-vs (required)
+  * ^definition = "Hier wird die Kategorie des Dokuments gem. IHE-De-Terminologie in codierter Form angeben."
   * coding MS
-    * ^definition = "Hier wird ein Code aus einem geeigneten Code-System angegeben."
-    * ^slicing.discriminator.type = #value
-    * ^slicing.discriminator.path = "$this"
-    * ^slicing.rules = #open
-  * coding contains xds 0..1
-  * coding[xds] from $epa-xds-class-code-vs (required)
-  * coding[xds]
-    * ^definition = "Hier wird die Kategorie des Dokuments gem. IHE-De-Terminologie in codierter Form angeben."
+    * insert CodingMS
   * text MS
     * ^definition = "Hier wird ein Freitext eingetragen."
-* insert Coding(category.coding[xds])
 * subject 1..1 MS
 * subject only Reference(TIPatient or Group or Device)
   * insert ReferenceMS

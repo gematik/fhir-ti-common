@@ -169,6 +169,7 @@ parameters:
   path-resource:
     - fsh-generated/resources
     - extracted/resources
+  path-expansion-params: ../../input/expansion_parameters/expansion_parameter.json
   path-pages:
     - input/intro-notes
     - input/content

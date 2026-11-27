@@ -14,7 +14,7 @@ Description: "Maximale Beispielinstanz für das Profil TISpecimenLaboratory"
   * value = "Test Specimen identifier"
 * status = #available
 * type
-  * coding[snomed] = $cs-sct-de-20260515#119376003 "Gewebeprobe"
+  * coding[snomed] = $cs-sct-de-20261115#119376003 "Gewebeprobe"
   * text = "test"
 * subject = Reference(ExampleTIPatient)
   * identifier
@@ -37,7 +37,7 @@ Description: "Maximale Beispielinstanz für das Profil TISpecimenLaboratory"
     * system = "http://unitsofmeasure.org"
     * code = #ms
   * method
-    * coding[snomed] = $cs-sct-de-20260515#1048003 "Sammlung von kapillärer Blutprobe"
+    * coding[snomed] = $cs-sct-de-20261115#1048003 "Sammlung von kapillärer Blutprobe"
     * text = "test"
   * fastingStatusDuration
     * value = 8
@@ -45,9 +45,6 @@ Description: "Maximale Beispielinstanz für das Profil TISpecimenLaboratory"
     * unit = "hour"
     * system = "http://unitsofmeasure.org"
     * code = #h
-//    * fastingStatusCodeableConcept
-//      * coding = $cs-sct-de-20260515#160244002 "Fasting (finding)"
-//      * text = "test"
 * processing
   * description = "test"
   * procedure
@@ -55,9 +52,6 @@ Description: "Maximale Beispielinstanz für das Profil TISpecimenLaboratory"
     * text = "test"
   * additive = Reference(Substance/a4b533d4-0a3c-4701-b411-fd9666bf3d03)
   * timeDateTime = "2023-05-03"
-//  * timePeriod
-//    * start = "2023-05-03T16:55:00+01:00"
-//    * end = "2023-08-03T16:55:00+01:00"
 * container
   * extension[device].valueReference = Reference(Device/05146497-2ca3-488e-96cb-c27c77ab6a3c)
   * specimenQuantity

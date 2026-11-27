@@ -8,13 +8,13 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
 //   * status = #extensions
 //   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Laboruntersuchungsgruppe</div>"
 * extension[testProfile]
-  * valueCodeableConcept.coding = $ti-laboratory-test-profile-cs#haemato "Hämatologie"
+  * valueCodeableConcept.coding = $ti-cs-laboratory-test-profile#haemato "Hämatologie"
   * valueCodeableConcept.text = "Hämatologie"
 * status = #final
 * category[laboratory]
   * coding = $cs-observation-category|2.0.0#laboratory "Laboratory"
 * category[studyType]
-  * coding = $loinc#18717-9 "Blood bank studies (set)"
+  * coding = $loinc-2.83#18717-9 "Blutbank-Untersuchungen"
   * text = "test"
 * code.coding = $ti-cs-laboratory-study-group#laboruntersuchungsgruppe "Laboruntersuchungsgruppe"
 * subject = Reference(ExampleTIPatient)
@@ -30,7 +30,7 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
     * code = #D
     * version = "4.0.0"
     * display = "Significant change down"
-  * coding[snomed] = $cs-sct-de-20260515#281300000 "Below reference range (qualifier value)"
+  * coding[snomed] = $cs-sct-de-20261115#281300000 "Unterhalb Referenzbereich"
   * text = "test"
 * note.text = "test"
 * hasMember = Reference(Observation/035761c3-8934-499f-bf34-3963979afb56)

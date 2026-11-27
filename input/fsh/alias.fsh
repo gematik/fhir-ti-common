@@ -26,9 +26,9 @@ Alias: $sid-medication-plan-identifier = https://gematik.de/fhir/sid/emp-identif
 Alias: $cs-operation-outcome = http://terminology.hl7.org/CodeSystem/operation-outcome
 Alias: $cs-ucum = http://unitsofmeasure.org
 Alias: $loinc = http://loinc.org
-Alias: $loinc-2.82 = http://loinc.org|2.82
+Alias: $loinc-2.83 = http://loinc.org|2.83
 Alias: $cs-sct = http://snomed.info/sct
-Alias: $cs-sct-de-20260515 = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20260515
+Alias: $cs-sct-de-20261115 = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20261115
 Alias: $cs-orphanet = http://www.orpha.net
 Alias: $cs-alpha-id = http://fhir.de/CodeSystem/bfarm/alpha-id
 
@@ -121,7 +121,6 @@ Alias: $ti-vs-laboratory-analyzer = https://gematik.de/fhir/terminology/ValueSet
 Alias: $ti-vs-extracorporal-device = https://gematik.de/fhir/terminology/ValueSet/extracorporal-device
 Alias: $ti-vs-diagram-type =  https://gematik.de/fhir/terminology/ValueSet/diagram-type
 Alias: $ti-vs-laboruntersuchungsgruppe = https://gematik.de/fhir/terminology/ValueSet/laboruntersuchungsgruppe
-Alias: $ti-vs-data-absent-reason-laboratory = https://gematik.de/fhir/terminology/ValueSet/data-absent-reason-laboratory
 Alias: $ti-vs-observation-methods = https://gematik.de/fhir/terminology/ValueSet/observation-methods
 Alias: $ti-vs-reference-range-applies-to = https://gematik.de/fhir/terminology/ValueSet/reference-range-applies-to
 Alias: $ti-vs-specimen-identifier-type = https://gematik.de/fhir/terminology/ValueSet/specimen-identifier-type
@@ -131,24 +130,17 @@ Alias: $ti-vs-specimen-condition = https://gematik.de/fhir/terminology/ValueSet/
 Alias: $ti-vs-secondary-status = https://gematik.de/fhir/terminology/ValueSet/secondary-status
 Alias: $ti-vs-laboratory-study-value = https://gematik.de/fhir/terminology/ValueSet/laboratory-study-value
 Alias: $ti-vs-observation-status = https://gematik.de/fhir/terminology/ValueSet/observation-status
+Alias: $ti-vs-laboratory-study-types-extended = https://gematik.de/fhir/terminology/ValueSet/laboratory-study-types-extended
 
+/// CodeSystems
+Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
+Alias: $epa-data-category-medical-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs
+Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
+
+Alias: $ti-cs-laboratory-test-profile = https://gematik.de/fhir/terminology/CodeSystem/laboratory-test-profile
 Alias: $ti-cs-laboratory-study-group = https://gematik.de/fhir/terminology/CodeSystem/laboratory-study-group
 Alias: $ti-cs-laboratory-identificator = https://gematik.de/fhir/terminology/CodeSystem/laboratory-identificator
-
-
-Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
-/// CodeSystems
-Alias: $epa-data-category-medical-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs
-Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
-Alias: $ti-laboratory-test-profile-cs = https://gematik.de/fhir/terminology/CodeSystem/laboratory-test-profile
-
-
-/// CodeSystems
-Alias: $epa-data-category-other-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-other-cs
-Alias: $epa-data-category-medical-cs = https://gematik.de/fhir/terminology/CodeSystem/epa-data-category-medical-cs
-Alias: $epa-data-category-medical-cs-oid = urn:oid:1.2.276.0.76.5.511
-Alias: $ti-secondary-status = https://gematik.de/fhir/terminology/CodeSystem/secondary-status
-
+Alias: $ti-cs-secondary-status = https://gematik.de/fhir/terminology/CodeSystem/secondary-status
 
 //// Extensions
 

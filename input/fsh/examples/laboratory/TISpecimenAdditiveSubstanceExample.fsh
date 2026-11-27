@@ -8,5 +8,5 @@ Description: "Maximale Beispielinstanz für das Profil TISpecimenAdditiveSubstan
 //   * status = #extensions
 //   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Substanz</div>"
 * code
-  * coding = $cs-sct-de-20260515#69519002 "Edetic acid"
+  * coding = $cs-sct-de-20261115#69519002 "Edetic acid"
   * text = "test"

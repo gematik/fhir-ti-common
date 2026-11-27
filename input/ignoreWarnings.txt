@@ -104,6 +104,7 @@ Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://g
 %https://gematik.de/fhir/terminology/ValueSet/observation-methods%
 %https://gematik.de/fhir/terminology/ValueSet/reference-range-applies-to%
 %https://gematik.de/fhir/terminology/ValueSet/observation-status%
+%https://gematik.de/fhir/terminology/ValueSet/laboratory-study-types-extended%
 %keinem bekannten Slicedefined in the profile https://gematik.de/fhir/ti/StructureDefinition/ti-organization%
 %https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID%
 %https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR%
@@ -119,9 +120,14 @@ URL-Wert 'http://goodcare.org/devices/id' löst nicht auf
 %http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder%
 %urn:oid:1.3.6.1.4.1.19376.3.276.1.5.9%
 %urn:oid:1.3.6.1.4.1.19376.3.276.1.5.8%
+A definition for CodeSystem 'http://npu-terminology.org' could not be found, so the code cannot be validated
 
 # German language is not resolved for the SNOMED CT code system.
 %the code system http://snomed.info/sct has no Display Names for the language de%
+
+# Terminology server show warnings even though SNOMED CT Germany Edtion is available on tx.fhir.de
+The code cannot be checked because codeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/11000274103/version/20261115' is not supported (The server does not support this code system)
+Unable to check whether the code is in the value set 'http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab|2.1.0' because the code system http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20261115 was not found
 
 # This expansion is done manually, so there are no parameters and identifiers
 This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
