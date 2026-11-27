@@ -15,7 +15,7 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
 * extension[associationService].valueBoolean = true
 * extension[zlogValue].valueDecimal = 2.00
 * extension[alternativeResult]
-  * extension[code].valueCodeableConcept = $loinc-2.82#3084-1 "Harnsäure [Masse/Volumen] in Serum oder Plasma"
+  * extension[code].valueCodeableConcept = $loinc-2.83#3084-1 "Harnsäure [Masse/Volumen] in Serum oder Plasma"
   * extension[value].valueRatio
     * numerator = 6.5 $cs-ucum#mg/dL "mg/dL"
     * denominator = 8.5 $cs-ucum#mg/dL "mg/dL"
@@ -31,10 +31,10 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
 * category[laboratory]
   * coding = $cs-observation-category|2.0.0#laboratory "Laboratory"
 * category[studyType]
-  * coding = $loinc#18717-9 "Blutbank-Untersuchungen"
+  * coding = $loinc-2.83#18717-9 "Blutbank-Untersuchungen"
   * text = "test"
 * code
-  * coding = $loinc-2.82#14933-6 "Harnsäure [Mol/Volumen] in Serum oder Plasma"
+  * coding = $loinc-2.83#14933-6 "Harnsäure [Mol/Volumen] in Serum oder Plasma"
   * text = "test"
 * subject = Reference(ExampleTIPatient)
   * identifier
@@ -53,16 +53,16 @@ Description: "Maximale Beispielinstanz für das Profil TIObservationLaboratorySt
     * version = "4.0.0"
     * code = #CAR
     * display = "Carrier"
-  * coding[snomed] = $cs-sct-de-20260515#371152001 "Assisted (qualifier value)"
+  * coding[snomed] = $cs-sct-de-20261115#371152001 "Assisted"
   * text = "test"
 * note.text = "test"
-* method.coding = $cs-sct-de-20260515#4241000179101 "Laboratory report (record artifact)"
+* method.coding = $cs-sct-de-20261115#4241000179101 "Laboratory report"
 * method.text = "Blutgruppe"
 * specimen = Reference(Specimen/4f47fe9c-d92e-46f4-ad6d-85740aaa467b)
 * device = Reference(Device/18a30aa6-3b2d-4738-9ca9-125a452d14e0)
 * referenceRange
   * extension[sourceReferenceRange].valueCodeableConcept
-    * coding = $cs-sct-de-20260515#260394003 "Normal limits (qualifier value)"
+    * coding = $cs-sct-de-20261115#260394003 "Normal limits"
     * text = "note"
   * extension[nonLinearReferenceRange].valueBoolean = true
   * low = 3.0 $cs-ucum#mg/dL "mg/dL"

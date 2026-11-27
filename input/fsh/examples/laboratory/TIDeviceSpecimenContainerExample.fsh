@@ -21,6 +21,6 @@ Usage: #example
 * modelNumber = "56789"
 * lotNumber = "12345"
 * type
-  * coding[snomed] = $cs-sct-de-20260515#434711009 "Specimen container"
+  * coding[snomed] = $cs-sct-de-20261115#434711009 "Specimen container"
   * text = "Probenbehälter"
 * note.text = "test"

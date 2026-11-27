@@ -21,7 +21,7 @@ Usage: #example
 * serialNumber = "9654537"
 * modelNumber = "123456789"
 * type
-  * coding[snomed] = $cs-sct-de-20260515#8407004	"Bile collection bag"
+  * coding[snomed] = $cs-sct-de-20261115#8407004	"Bile collection bag"
   * text = "Medizinisches Laboranalysegerät"
 * version.value = "v1"
 * patient = Reference(ExampleTIPatient)

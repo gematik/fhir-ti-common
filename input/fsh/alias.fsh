@@ -26,9 +26,9 @@ Alias: $sid-medication-plan-identifier = https://gematik.de/fhir/sid/emp-identif
 Alias: $cs-operation-outcome = http://terminology.hl7.org/CodeSystem/operation-outcome
 Alias: $cs-ucum = http://unitsofmeasure.org
 Alias: $loinc = http://loinc.org
-Alias: $loinc-2.82 = http://loinc.org|2.82
+Alias: $loinc-2.83 = http://loinc.org|2.83
 Alias: $cs-sct = http://snomed.info/sct
-Alias: $cs-sct-de-20260515 = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20260515
+Alias: $cs-sct-de-20261115 = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20261115
 Alias: $cs-orphanet = http://www.orpha.net
 Alias: $cs-alpha-id = http://fhir.de/CodeSystem/bfarm/alpha-id
 

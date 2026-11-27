@@ -14,7 +14,7 @@ Usage: #example
     * extension[Diagnosesicherheit].valueCoding = $KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT|1.00#V "Verdacht auf / zum Ausschluss von"
   * coding[orphanet] = $cs-orphanet|2025#173 "Cholera"
   * coding[alphaId] = $cs-alpha-id|2020#I30919 "Klassische Cholera"
-  * coding[snomed] = $cs-sct-de-20260515#63650001 "Cholera"
+  * coding[snomed] = $cs-sct-de-20261115#63650001 "Cholera"
   * text = "Beispielkrankheit"
 * subject = Reference(ExampleTIPatient)
   * identifier

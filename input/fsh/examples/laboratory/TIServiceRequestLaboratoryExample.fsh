@@ -19,7 +19,7 @@ Description: "Maximale Beispielinstanz für das Profil TIServiceRequestLaborator
 * status = #completed
 * intent = #order
 * priority = #routine
-* code.coding = $cs-sct-de-20260515#721965002 "Laboratory order"
+* code.coding = $cs-sct-de-20261115#721965002 "Laboratory order"
 * orderDetail.text = "Beispieltext"
 * subject = Reference(ExampleTIPatient)
   * identifier
