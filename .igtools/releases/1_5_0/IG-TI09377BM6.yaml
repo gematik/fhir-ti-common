@@ -3,11 +3,13 @@ actor:
 - EPA-CS-Ombudsstelle
 - EPA-FdV
 - EPA-PS
+- PS_ePA_LabReport_Consumer
+- PS_ePA_LabReport_Creator
 - VSDM-Client
 conformance: SHALL
 content_hash: 7c20974774525900465f04a892b07afb7b94ccfb30d9d9ddd2abfc4b54a8a443
 created: '2025-02-26T10:59:21.321306'
-date: '2026-11-24T07:28:36.775990'
+date: '2026-11-27T11:09:17.441352'
 key: IG-TI09377BM6
 modified: '2025-05-27T09:33:08.789868'
 release_status: STABLE
@@ -21,6 +23,10 @@ test_procedures:
   EPA-FdV:
   - Produkttest
   EPA-PS:
+  - Konformitätsbestätigung
+  PS_ePA_LabReport_Consumer:
+  - Konformitätsbestätigung
+  PS_ePA_LabReport_Creator:
   - Konformitätsbestätigung
   VSDM-Client:
   - Konformitätsbestätigung

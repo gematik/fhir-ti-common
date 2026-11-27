@@ -2,10 +2,11 @@ actor:
 - EPA-CS-KTR
 - EPA-FdV
 - EPA-PS
+- PS_ePA_LabReport_Creator
 conformance: SHALL
 content_hash: 777a34849024057245ca44fae44716427f9370c2c07145ebde8371efe0a1e852
 created: '2025-02-26T10:59:21.321299'
-date: '2025-11-18T11:03:10.871121'
+date: '2026-11-27T11:09:17.440747'
 key: IG-TI87140VUU
 modified: '2025-05-27T09:33:08.789772'
 release_status: STABLE
@@ -17,6 +18,8 @@ test_procedures:
   EPA-FdV:
   - Produkttest
   EPA-PS:
+  - Konformitätsbestätigung
+  PS_ePA_LabReport_Creator:
   - Konformitätsbestätigung
 text: Ein Client-System, das schreibend ein FHIR-Profil des FHIR Data Service implementiert,
   MUSS jedes als Must Support gekennzeichnete Element gemäß der dazugehörigen Kardinalitätsangabe

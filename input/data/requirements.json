@@ -166,6 +166,8 @@
             "EPA-CS-Ombudsstelle",
             "EPA-FdV",
             "EPA-PS",
+            "PS_ePA_LabReport_Consumer",
+            "PS_ePA_LabReport_Creator",
             "VSDM-Client"
         ],
         "test_procedures": {
@@ -176,6 +178,12 @@
                 "Produkttest"
             ],
             "EPA-PS": [
+                "Konformitätsbestätigung"
+            ],
+            "PS_ePA_LabReport_Consumer": [
+                "Konformitätsbestätigung"
+            ],
+            "PS_ePA_LabReport_Creator": [
                 "Konformitätsbestätigung"
             ],
             "VSDM-Client": [
@@ -190,7 +198,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.321313",
         "modified": "2026-11-24T14:08:41.797907",
-        "date": "2026-11-24T14:08:41.797907",
+        "date": "2026-11-27T11:09:17.441950",
         "content_hash": "df9d9815357aa39b7d2e2930e34fb1830a6dc77490740fac5d1008a427d91690",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -391,6 +399,8 @@
             "EPA-CS-Ombudsstelle",
             "EPA-FdV",
             "EPA-PS",
+            "PS_ePA_LabReport_Consumer",
+            "PS_ePA_LabReport_Creator",
             "VSDM-Client"
         ],
         "test_procedures": {
@@ -406,6 +416,12 @@
             "EPA-PS": [
                 "Konformitätsbestätigung"
             ],
+            "PS_ePA_LabReport_Consumer": [
+                "Konformitätsbestätigung"
+            ],
+            "PS_ePA_LabReport_Creator": [
+                "Konformitätsbestätigung"
+            ],
             "VSDM-Client": [
                 "Konformitätsbestätigung"
             ]
@@ -418,7 +434,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.321306",
         "modified": "2025-05-27T09:33:08.789868",
-        "date": "2026-11-24T07:28:36.775990",
+        "date": "2026-11-27T11:09:17.441352",
         "content_hash": "7c20974774525900465f04a892b07afb7b94ccfb30d9d9ddd2abfc4b54a8a443",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -994,6 +1010,8 @@
             "EPA-CS-Ombudsstelle",
             "EPA-FdV",
             "EPA-PS",
+            "PS_ePA_LabReport_Consumer",
+            "PS_ePA_LabReport_Creator",
             "VSDM-Client"
         ],
         "test_procedures": {
@@ -1004,6 +1022,12 @@
                 "Produkttest"
             ],
             "EPA-PS": [
+                "Konformitätsbestätigung"
+            ],
+            "PS_ePA_LabReport_Consumer": [
+                "Konformitätsbestätigung"
+            ],
+            "PS_ePA_LabReport_Creator": [
                 "Konformitätsbestätigung"
             ],
             "VSDM-Client": [
@@ -1018,7 +1042,7 @@
         "conformance": "SHALL",
         "created": "2026-11-24T09:43:55.925592",
         "modified": "2026-11-24T09:43:55.925593",
-        "date": "2026-11-24T09:43:55.925595",
+        "date": "2026-11-27T11:09:17.442570",
         "content_hash": "145707b708f9cc6e2f09f9e4e6df0806868fcc494e99875c33a6f6a21477f74f",
         "path": "general-principles.html",
         "release": "1.5.0"
@@ -2277,7 +2301,8 @@
         "actor": [
             "EPA-CS-KTR",
             "EPA-FdV",
-            "EPA-PS"
+            "EPA-PS",
+            "PS_ePA_LabReport_Creator"
         ],
         "test_procedures": {
             "EPA-CS-KTR": [
@@ -2287,6 +2312,9 @@
                 "Produkttest"
             ],
             "EPA-PS": [
+                "Konformitätsbestätigung"
+            ],
+            "PS_ePA_LabReport_Creator": [
                 "Konformitätsbestätigung"
             ]
         },
@@ -2298,7 +2326,7 @@
         "conformance": "SHALL",
         "created": "2025-02-26T10:59:21.321299",
         "modified": "2025-05-27T09:33:08.789772",
-        "date": "2025-11-18T11:03:10.871121",
+        "date": "2026-11-27T11:09:17.440747",
         "content_hash": "777a34849024057245ca44fae44716427f9370c2c07145ebde8371efe0a1e852",
         "path": "general-principles.html",
         "release": "1.5.0"

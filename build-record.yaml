@@ -1,11 +1,11 @@
 versions:
   FSH Sushi: 3.21.1
-  IG Publisher: 3.0.6
-  Java: 21.0.13.0.3
+  IG Publisher: 3.0.8
+  Java: 21.0.13.1
   PlantUML: 1.2025.2
   Python: 3.12.16
-  fhirscripts: 0.32.1
+  fhirscripts: 0.32.2
   gCloud SDK: 464.0.0
-  igtools: 1.0.2
+  igtools: 1.0.3
   npm: 11.11.0
   publishtools: 0.4.0

@@ -8,7 +8,7 @@
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
     "de.basisprofil.r4": "1.6.0",
-    "de.fhir.medication": "2.0.0-ballot",
+    "de.fhir.medication": "2.0.0",
     "ihe.iti.mhd": "4.2.5",
     "hl7.fhir.eu.base": "2.0.1",
     "hl7.fhir.eu.laboratory": "2.1.0"

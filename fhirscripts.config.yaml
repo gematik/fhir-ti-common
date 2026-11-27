@@ -12,7 +12,6 @@ build:
   builtin:
     igtools: true
   pipeline:
-    - shell: ./trust-ig-template.sh https://github.com/gematik/fhir2-ig-template
     - requirements
     - shell: reqtools polarion ./input/content
     - shell: ./scripts/generate-heading-links-js.sh

@@ -42,11 +42,14 @@ Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://g
 %html source is not well formed: Found "</a>" expecting "</img>"%
 %http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.4.0 is deprecated%
 
+
 # Ignoring Warnings: We are using a custom template of our own
+The IG's repository has a script or program in sub-folders: scripts/generate-heading-links-js.sh. The IG Publisher doesn't run them, but they arrive with every pull: don't run them unless you know what they do. Scripts and programs don't belong in an IG's repository
 %publish box%
 %Illegal HTML: Illegal HTML element: requirement%
 %ig-0%
 %html source has duplicate element ids%
+%HTML fragment 'expansion-params.xhtml' is not included%
 
 # Known Warning: Expected behavior
 %Element stimmt mit keinem bekannten Slicedefined in the profile https://gematik.de/fhir/ti/StructureDefinition/ti-patient%
@@ -55,6 +58,7 @@ Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://g
 %http://hl7.org/fhir/StructureDefinition/regex%
 %'pattern' is deprecated in R5%
 %http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0%
+%http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.4.1%
 
 # Ignore Notice: Potential Embedded HTML Warning
 %HTML-Tags%

@@ -32,6 +32,9 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
     <actor name="EPA-PS" description="ePA-Schnittstelle eines PS">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
+    <actor name="PS_ePA_LabReport_Creator" description="PS-Schnittstelle für ePA: Laborbefund erzeugende Systeme">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
     <actor name="EPA-FdV" description="ePA - Frontend des Versicherten">
         <testProcedure id="Produkttest">funkt. Eignung: Test Produkt/FA</testProcedure>
     </actor>
@@ -58,6 +61,12 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
     <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
+    <actor name="PS_ePA_LabReport_Creator" description="PS-Schnittstelle für ePA: Laborbefund erzeugende Systeme">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="PS_ePA_LabReport_Consumer" description="PS-Schnittstelle für ePA: Laborbefund verarbeitende Systeme">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
     Das Client-System, das lesend ein FHIR-Profil des FHIR Data Service implementiert, MUSS in der Lage sein, alle Must-Support-Elemente in FHIR-Instanzen zu verarbeiten. Das Client-System MUSS auch Must-Support-Elemente ohne Wert verarbeiten können, ohne mit einem Fehler abzubrechen oder die Anwendung abstürzen zu lassen.
 </requirement>
 
@@ -75,6 +84,12 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
     <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
+    <actor name="PS_ePA_LabReport_Creator" description="PS-Schnittstelle für ePA: Laborbefund erzeugende Systeme">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="PS_ePA_LabReport_Consumer" description="PS-Schnittstelle für ePA: Laborbefund verarbeitende Systeme">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
     Das Client-System MUSS die Must-Support-Elemente eines von ihm implementierten FHIR-Profils für die jeweilige Zielgruppe verständlich anzeigen, wenn eine Anforderung die Anzeige der Inhalte verlangt. Rein technische Elemente wie <i>Coding.system</i>, <i>Coding.version</i>, <i>Identifier.system</i>, Extension-URLs und <i>meta</i> sind von der Anzeigepflicht ausgenommen. Der jeweilige Fach-IG kann Anzeigeumfang und Darstellungsform festlegen oder einschränken. Die Darstellung darf von der Kodierung in der FHIR-Instanz abweichen, etwa durch einen Anzeigetext für einen Code oder ein lokales Datumsformat. Dabei bleibt der Inhalt des jeweiligen Werts unverändert und alle wesentlichen Informationen bleiben sichtbar.
 </requirement>
 
@@ -90,6 +105,12 @@ Die Deklarierung als Must Support wird in der Anzeige der FHIR-Profile durch ein
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
     <actor name="VSDM-Client" description="CS-Schnittstelle für VSDM 2">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="PS_ePA_LabReport_Creator" description="PS-Schnittstelle für ePA: Laborbefund erzeugende Systeme">
+        <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
+    </actor>
+    <actor name="PS_ePA_LabReport_Consumer" description="PS-Schnittstelle für ePA: Laborbefund verarbeitende Systeme">
         <testProcedure id="Konformitätsbestätigung">funkt. Eignung: Konformitätsbestätigung</testProcedure>
     </actor>
     Das Client-System MUSS den ersten verfügbaren Anzeigetext verwenden, wenn eine Anforderung die Anzeige codierter Must-Support-Elemente eines von ihm implementierten FHIR-Profils verlangt. Die Quellen sind in dieser Reihenfolge auszuwerten <i>CodeableConcept.text</i>, <i>Coding.display</i>, Anzeigetext des Codes aus dem zugehörigen CodeSystem im Terminologiepaket. Fehlt ein Anzeigetext aus allen drei Quellen, zeigt das Client-System einen Hinweis an, dass der Wert nicht als Text verfügbar ist.

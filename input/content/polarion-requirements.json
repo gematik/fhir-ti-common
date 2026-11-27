@@ -308,6 +308,32 @@
                 },
                 {
                     "product_type": {
+                        "name": "PS_ePA_LabReport_Consumer",
+                        "id": "productType185",
+                        "description": "PS-Schnittstelle für ePA: Laborbefund verarbeitende Systeme"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "PS_ePA_LabReport_Creator",
+                        "id": "productType184",
+                        "description": "PS-Schnittstelle für ePA: Laborbefund erzeugende Systeme"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
                         "name": "CS_VSDM_2",
                         "id": "productType147",
                         "description": "CS-Schnittstelle für VSDM 2"
@@ -661,6 +687,32 @@
                         "name": "PS_ePA",
                         "id": "productType109",
                         "description": "ePA-Schnittstelle eines PS"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "PS_ePA_LabReport_Consumer",
+                        "id": "productType185",
+                        "description": "PS-Schnittstelle für ePA: Laborbefund verarbeitende Systeme"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "PS_ePA_LabReport_Creator",
+                        "id": "productType184",
+                        "description": "PS-Schnittstelle für ePA: Laborbefund erzeugende Systeme"
                     },
                     "test_procedure": [
                         {
@@ -1639,6 +1691,32 @@
                         "name": "PS_ePA",
                         "id": "productType109",
                         "description": "ePA-Schnittstelle eines PS"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "PS_ePA_LabReport_Consumer",
+                        "id": "productType185",
+                        "description": "PS-Schnittstelle für ePA: Laborbefund verarbeitende Systeme"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "PS_ePA_LabReport_Creator",
+                        "id": "productType184",
+                        "description": "PS-Schnittstelle für ePA: Laborbefund erzeugende Systeme"
                     },
                     "test_procedure": [
                         {
@@ -3706,6 +3784,19 @@
                         "name": "PS_ePA",
                         "id": "productType109",
                         "description": "ePA-Schnittstelle eines PS"
+                    },
+                    "test_procedure": [
+                        {
+                            "id": "testProcedurePT28",
+                            "name": "funkt. Eignung: Konformitätsbestätigung"
+                        }
+                    ]
+                },
+                {
+                    "product_type": {
+                        "name": "PS_ePA_LabReport_Creator",
+                        "id": "productType184",
+                        "description": "PS-Schnittstelle für ePA: Laborbefund erzeugende Systeme"
                     },
                     "test_procedure": [
                         {
