@@ -5,7 +5,7 @@ versions:
   PlantUML: 1.2025.2
   Python: 3.12.16
   fhirscripts: 0.32.2
-  gCloud SDK: 464.0.0
+  gCloud SDK: 582.0.0
   igtools: 1.0.3
   npm: 11.11.0
   publishtools: 0.4.0

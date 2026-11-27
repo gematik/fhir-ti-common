@@ -44,7 +44,7 @@ Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://g
 
 
 # Ignoring Warnings: We are using a custom template of our own
-The IG's repository has a script or program in sub-folders: scripts/generate-heading-links-js.sh. The IG Publisher doesn't run them, but they arrive with every pull: don't run them unless you know what they do. Scripts and programs don't belong in an IG's repository
+%scripts or programs in sub-folders: scripts%
 %publish box%
 %Illegal HTML: Illegal HTML element: requirement%
 %ig-0%

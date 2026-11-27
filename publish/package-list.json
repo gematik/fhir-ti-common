@@ -119,7 +119,7 @@
             "desc": "TI Common Version 1.5.0-ballot.2",
             "path": "https://gematik.de/fhir/ti/1.5.0-ballot.2",
             "status": "ballot",
-            "current": true,
+            "current": false,
             "date": "2026-12-08",
             "sequence": "TI",
             "fhirversion": "4.0.1"
@@ -131,6 +131,16 @@
             "status": "release",
             "current": false,
             "date": "2026-11-25",
+            "sequence": "TI",
+            "fhirversion": "4.0.1"
+        },
+        {
+            "version": "1.5.0",
+            "desc": "TI Common Version 1.5.0",
+            "path": "https://gematik.de/fhir/ti/1.5.0",
+            "status": "release",
+            "current": true,
+            "date": "2026-12-08",
             "sequence": "TI",
             "fhirversion": "4.0.1"
         }
